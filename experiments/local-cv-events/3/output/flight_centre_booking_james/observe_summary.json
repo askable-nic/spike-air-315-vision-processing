@@ -1,0 +1,544 @@
+{
+  "frames_analysed": 1769,
+  "cursor_detection_rate": 0.4771,
+  "cursor_detections": 844,
+  "template_match_counts": {
+    "hand": 843,
+    "arrow": 1
+  },
+  "flow_windows": 588,
+  "local_events_total": 58,
+  "local_events_by_type": {
+    "dwell": 7,
+    "click": 46,
+    "hover": 4,
+    "hesitate": 1
+  },
+  "local_events_needing_enrichment": 58,
+  "roi_rects": 388,
+  "processing_time_ms": 90566.5,
+  "local_events": [
+    {
+      "type": "dwell",
+      "time_start_ms": 0.0,
+      "time_end_ms": 39600.0,
+      "confidence": 0.7,
+      "synthesis_method": "cursor_stationary_extended",
+      "description": "Extended pause (39600ms) near (984, 73)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 39500.0,
+      "time_end_ms": 39600.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (984, 73)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 39600.0,
+      "time_end_ms": 39600.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (984, 73)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "dwell",
+      "time_start_ms": 42200.0,
+      "time_end_ms": 56300.0,
+      "confidence": 0.7,
+      "synthesis_method": "cursor_stationary_extended",
+      "description": "Extended pause (14100ms) near (841, 397)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 56000.0,
+      "time_end_ms": 56100.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (841, 397)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 56100.0,
+      "time_end_ms": 56100.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (841, 397)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 56200.0,
+      "time_end_ms": 56200.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (842, 385)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 56300.0,
+      "time_end_ms": 56300.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (841, 397)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "dwell",
+      "time_start_ms": 56400.0,
+      "time_end_ms": 61300.0,
+      "confidence": 0.7,
+      "synthesis_method": "cursor_stationary_extended",
+      "description": "Extended pause (4900ms) near (846, 337)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 56400.0,
+      "time_end_ms": 56400.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (846, 337)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 56500.0,
+      "time_end_ms": 56500.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (845, 349)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 61200.0,
+      "time_end_ms": 61300.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (846, 337)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 61300.0,
+      "time_end_ms": 61300.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (846, 337)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "dwell",
+      "time_start_ms": 66500.0,
+      "time_end_ms": 71200.0,
+      "confidence": 0.7,
+      "synthesis_method": "cursor_stationary_extended",
+      "description": "Extended pause (4700ms) near (841, 397)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 71100.0,
+      "time_end_ms": 71200.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (841, 397)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 71200.0,
+      "time_end_ms": 71200.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (841, 397)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 71300.0,
+      "time_end_ms": 71300.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (880, 384)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 71400.0,
+      "time_end_ms": 71400.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (841, 397)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 71500.0,
+      "time_end_ms": 71500.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1037, 331)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 71600.0,
+      "time_end_ms": 71600.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (998, 344)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "dwell",
+      "time_start_ms": 71700.0,
+      "time_end_ms": 87700.0,
+      "confidence": 0.7,
+      "synthesis_method": "cursor_stationary_extended",
+      "description": "Extended pause (16000ms) near (1037, 331)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 71700.0,
+      "time_end_ms": 71700.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1037, 331)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 71800.0,
+      "time_end_ms": 71800.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1029, 334)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 75300.0,
+      "time_end_ms": 75400.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1037, 331)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 75400.0,
+      "time_end_ms": 75400.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1037, 331)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 87600.0,
+      "time_end_ms": 87700.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1021, 337)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 87700.0,
+      "time_end_ms": 87700.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1024, 337)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 132200.0,
+      "time_end_ms": 132200.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (111, 277)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 132800.0,
+      "time_end_ms": 132800.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (658, 307)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "hover",
+      "time_start_ms": 135300.0,
+      "time_end_ms": 137000.0,
+      "confidence": 0.6,
+      "synthesis_method": "cursor_stationary",
+      "description": "Cursor stationary for 1700ms near (127, 207)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 136900.0,
+      "time_end_ms": 137000.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (127, 207)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 137000.0,
+      "time_end_ms": 137000.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (127, 207)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "dwell",
+      "time_start_ms": 162600.0,
+      "time_end_ms": 167700.0,
+      "confidence": 0.7,
+      "synthesis_method": "cursor_stationary_extended",
+      "description": "Extended pause (5100ms) near (984, 73)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 167300.0,
+      "time_end_ms": 167400.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (984, 73)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 167400.0,
+      "time_end_ms": 167400.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (984, 73)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 167500.0,
+      "time_end_ms": 167500.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (981, 69)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 167600.0,
+      "time_end_ms": 167600.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (978, 65)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "hover",
+      "time_start_ms": 167700.0,
+      "time_end_ms": 168200.0,
+      "confidence": 0.6,
+      "synthesis_method": "cursor_stationary",
+      "description": "Cursor stationary for 500ms near (974, 59)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 167700.0,
+      "time_end_ms": 167800.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (974, 59)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 167900.0,
+      "time_end_ms": 168000.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (972, 56)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 168000.0,
+      "time_end_ms": 168000.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (974, 59)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 168100.0,
+      "time_end_ms": 168100.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (977, 63)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "hesitate",
+      "time_start_ms": 168200.0,
+      "time_end_ms": 169400.0,
+      "confidence": 0.5,
+      "synthesis_method": "pause_before_action",
+      "description": "Hesitation (1200ms) near (981, 68) before action",
+      "needs_enrichment": true
+    },
+    {
+      "type": "hover",
+      "time_start_ms": 168300.0,
+      "time_end_ms": 169400.0,
+      "confidence": 0.6,
+      "synthesis_method": "cursor_stationary",
+      "description": "Cursor stationary for 1100ms near (982, 70)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 169000.0,
+      "time_end_ms": 169100.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (984, 73)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 169100.0,
+      "time_end_ms": 169100.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (984, 73)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 169200.0,
+      "time_end_ms": 169200.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (981, 69)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 169300.0,
+      "time_end_ms": 169400.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (978, 65)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 169400.0,
+      "time_end_ms": 169400.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (977, 64)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 169500.0,
+      "time_end_ms": 169500.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (971, 56)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 169600.0,
+      "time_end_ms": 169600.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (984, 73)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "hover",
+      "time_start_ms": 169700.0,
+      "time_end_ms": 171500.0,
+      "confidence": 0.6,
+      "synthesis_method": "cursor_stationary",
+      "description": "Cursor stationary for 1800ms near (973, 59)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 171100.0,
+      "time_end_ms": 171200.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (971, 55)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 171200.0,
+      "time_end_ms": 171200.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (971, 55)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 171300.0,
+      "time_end_ms": 171300.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (973, 58)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 171400.0,
+      "time_end_ms": 171400.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (977, 63)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 171500.0,
+      "time_end_ms": 171600.0,
+      "confidence": 0.35,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (980, 68)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "dwell",
+      "time_start_ms": 171700.0,
+      "time_end_ms": 176800.0,
+      "confidence": 0.7,
+      "synthesis_method": "cursor_stationary_extended",
+      "description": "Extended pause (5100ms) near (983, 71)",
+      "needs_enrichment": true
+    }
+  ]
+}

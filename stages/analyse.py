@@ -9,9 +9,11 @@ from typing import Any
 from google.genai import types
 
 from src.gemini import create_client, estimate_tokens, make_request
+from src.log import log
 from src.models import (
     AnalyseResult,
     FrameRef,
+    ObserveResult,
     PipelineConfig,
     RawEvent,
     SegmentAnalysisResult,
@@ -20,7 +22,7 @@ from src.models import (
     TriageSegment,
 )
 from src.prompts import fill_template, resolve_prompt
-from src.video import encode_jpeg, extract_frames
+from src.video import crop_frame, encode_jpeg, extract_frames
 
 
 # Flat response schema for Gemini structured output (avoids $defs issues)
@@ -65,6 +67,7 @@ async def run_analyse(
     iteration: int = 1,
     base_dir: Path = Path("."),
     output_dir: Path | None = None,
+    observe_result: ObserveResult | None = None,
 ) -> AnalyseResult:
     """Run analysis on all triage segments using Gemini API."""
     t0 = time.monotonic()
@@ -91,6 +94,7 @@ async def run_analyse(
                 base_dir=base_dir,
                 semaphore=semaphore,
                 output_dir=output_dir,
+                observe_result=observe_result,
             )
         )
 
@@ -151,6 +155,7 @@ async def _analyse_segment(
     base_dir: Path,
     semaphore: asyncio.Semaphore,
     output_dir: Path | None = None,
+    observe_result: ObserveResult | None = None,
 ) -> SegmentAnalysisResult:
     """Analyse a single segment: extract frames, call Gemini, parse response."""
     async with semaphore:
@@ -201,6 +206,13 @@ async def _analyse_segment(
             all_frames.append((ts, frame))
             idx += 1
 
+        # ROI cropping when observe_result has ROI rects
+        roi_by_ts: dict[float, Any] = {}
+        if observe_result is not None and observe_result.roi_rects:
+            from stages.observe import _lookup_cursor_at_timestamp
+            for roi in observe_result.roi_rects:
+                roi_by_ts[roi.timestamp_ms] = roi
+
         # Save frame JPEGs as debug artifacts
         segment_frames_dir = None
         if output_dir is not None:
@@ -208,8 +220,38 @@ async def _analyse_segment(
             segment_frames_dir.mkdir(parents=True, exist_ok=True)
 
         jpeg_cache: list[bytes] = []
+        cursor_labels: dict[int, str] = {}
         for ref, (ts, frame) in zip(frame_refs, all_frames):
-            jpeg_bytes = encode_jpeg(frame, ac.jpeg_quality)
+            frame_to_encode = frame
+
+            # Apply ROI crop if available (find nearest ROI within 200ms)
+            if roi_by_ts and not ref.is_context:
+                nearest_roi = None
+                best_dist = 200.0
+                for roi_ts, roi in roi_by_ts.items():
+                    dist = abs(roi_ts - ts)
+                    if dist < best_dist:
+                        nearest_roi = roi
+                        best_dist = dist
+
+                if nearest_roi is not None:
+                    frame_to_encode = crop_frame(
+                        frame, nearest_roi.x, nearest_roi.y, nearest_roi.width, nearest_roi.height,
+                    )
+                    cursor_labels[ref.frame_index_in_request] = (
+                        f"cursor at ({nearest_roi.cursor_x:.0f}, {nearest_roi.cursor_y:.0f})"
+                    )
+
+            # Add cursor label from observe trajectory even without ROI
+            if ref.frame_index_in_request not in cursor_labels and observe_result is not None:
+                from stages.observe import _lookup_cursor_at_timestamp
+                detection = _lookup_cursor_at_timestamp(observe_result.cursor_trajectory, ts)
+                if detection is not None:
+                    cursor_labels[ref.frame_index_in_request] = (
+                        f"cursor at ({detection.x:.0f}, {detection.y:.0f})"
+                    )
+
+            jpeg_bytes = encode_jpeg(frame_to_encode, ac.jpeg_quality)
             jpeg_cache.append(jpeg_bytes)
 
             if segment_frames_dir is not None:
@@ -240,6 +282,14 @@ async def _analyse_segment(
         if context_note:
             context_note += "Do NOT report events from context frames."
 
+        # Format local events for prompt injection
+        local_events_text = ""
+        if observe_result is not None and observe_result.local_events:
+            from stages.observe import format_local_events_for_prompt
+            local_events_text = format_local_events_for_prompt(
+                observe_result.local_events, segment.start_ms, segment.end_ms,
+            )
+
         user_prompt = fill_template(user_template, {
             "segment_index": segment.segment_index,
             "start_time": f"{segment.start_ms / 1000:.1f}s",
@@ -248,6 +298,7 @@ async def _analyse_segment(
             "tier": segment.tier,
             "frame_count": len(all_frames),
             "context_note": context_note,
+            "local_events": local_events_text,
         })
 
         # Save prompt as debug artifact
@@ -261,6 +312,9 @@ async def _analyse_segment(
             label = f"[Frame {ref.frame_index_in_request} | {ts:.0f}ms"
             if ref.is_context:
                 label += " | CONTEXT"
+            cursor_info = cursor_labels.get(ref.frame_index_in_request)
+            if cursor_info:
+                label += f" | {cursor_info}"
             label += "]"
             content_parts.append(label)
             content_parts.append(types.Part.from_bytes(data=jpeg_bytes, mime_type="image/jpeg"))
@@ -268,7 +322,7 @@ async def _analyse_segment(
         content_parts.append(user_prompt)
 
         # Call Gemini
-        print(f"  Analysing segment {segment.segment_index} ({segment.tier}, {len(all_frames)} frames, {effective_fps:.1f} fps)...")
+        log(f"  Analysing segment {segment.segment_index} ({segment.tier}, {len(all_frames)} frames, {effective_fps:.1f} fps)...")
 
         response = await make_request(
             client=client,
@@ -300,7 +354,7 @@ def _parse_events(response_text: str) -> tuple[RawEvent, ...]:
     try:
         data = json.loads(response_text)
     except json.JSONDecodeError:
-        print(f"  Warning: Failed to parse Gemini response as JSON")
+        log(f"  Warning: Failed to parse Gemini response as JSON")
         return ()
 
     if not isinstance(data, list):
@@ -321,6 +375,6 @@ def _parse_events(response_text: str) -> tuple[RawEvent, ...]:
                 frame_description=item.get("frame_description"),
             ))
         except (KeyError, ValueError) as e:
-            print(f"  Warning: Skipping malformed event: {e}")
+            log(f"  Warning: Skipping malformed event: {e}")
 
     return tuple(events)

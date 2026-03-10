@@ -9,9 +9,11 @@ from pathlib import Path
 from typing import Any, Callable
 
 from src.config import resolve_config
+from src.log import log
 from src.manifest import load_manifest, resolve_video_path
 from src.models import (
     AnalyseResult,
+    ObserveResult,
     PipelineConfig,
     RunMetadata,
     SessionManifest,
@@ -32,7 +34,7 @@ def run_iteration(
     started_at = datetime.now(timezone.utc).isoformat()
 
     config = resolve_config(branch, iteration, cli_overrides, base_dir)
-    print(f"Config resolved for {branch}/{iteration}")
+    log(f"Config resolved for {branch}/{iteration}")
 
     input_dir = base_dir / "input_data"
     manifest = load_manifest(input_dir / "manifest.json")
@@ -41,7 +43,7 @@ def run_iteration(
         manifest = tuple(s for s in manifest if s.identifier in sessions)
 
     if not manifest:
-        print("No sessions to process.")
+        log("No sessions to process.")
         return
 
     output_dir = base_dir / "experiments" / branch / str(iteration) / "output"
@@ -51,18 +53,18 @@ def run_iteration(
     errors: list[str] = []
 
     for session in manifest:
-        print(f"\nProcessing session: {session.identifier}")
+        log(f"Processing session: {session.identifier}")
         try:
             output = _process_session(
                 session, config, input_dir, output_dir, stages, branch, iteration, base_dir, force,
             )
             write_output(output_dir, output)
             all_outputs.append(output)
-            print(f"  Done: {output.event_count} events detected")
+            log(f"  Done: {output.event_count} events detected")
         except Exception as e:
             error_msg = f"{session.identifier}: {e}"
             errors.append(error_msg)
-            print(f"  Error: {e}")
+            log(f"  Error: {e}")
 
     completed_at = datetime.now(timezone.utc).isoformat()
 
@@ -83,9 +85,9 @@ def run_iteration(
     with open(output_dir / "metadata.json", "w") as f:
         json.dump(metadata.model_dump(), f, indent=2)
 
-    print(f"\nRun complete: {len(all_outputs)} sessions, {metadata.total_events} total events")
+    log(f"Run complete: {len(all_outputs)} sessions, {metadata.total_events} total events")
     if errors:
-        print(f"Errors: {len(errors)}")
+        log(f"Errors: {len(errors)}")
 
 
 def _load_stage_json(path: Path, model_cls: type) -> Any | None:
@@ -104,6 +106,50 @@ def _save_stage_json(path: Path, model: Any) -> None:
         json.dump(model.model_dump(), f, indent=2)
 
 
+def _save_observe_artifacts(session_dir: Path, observe_result: ObserveResult) -> None:
+    """Save debug artifacts for the observe stage."""
+    session_dir.mkdir(parents=True, exist_ok=True)
+
+    # Human-readable summary
+    detected = [d for d in observe_result.cursor_trajectory if d.detected]
+    template_counts: dict[str, int] = {}
+    for d in detected:
+        template_counts[d.template_id] = template_counts.get(d.template_id, 0) + 1
+
+    event_counts: dict[str, int] = {}
+    for e in observe_result.local_events:
+        event_counts[e.type] = event_counts.get(e.type, 0) + 1
+
+    summary = {
+        "frames_analysed": observe_result.frames_analysed,
+        "cursor_detection_rate": round(observe_result.cursor_detection_rate, 4),
+        "cursor_detections": len(detected),
+        "template_match_counts": template_counts,
+        "flow_windows": len(observe_result.flow_summary),
+        "local_events_total": len(observe_result.local_events),
+        "local_events_by_type": event_counts,
+        "local_events_needing_enrichment": sum(
+            1 for e in observe_result.local_events if e.needs_enrichment
+        ),
+        "roi_rects": len(observe_result.roi_rects),
+        "processing_time_ms": round(observe_result.processing_time_ms, 1),
+        "local_events": [
+            {
+                "type": e.type,
+                "time_start_ms": e.time_start_ms,
+                "time_end_ms": e.time_end_ms,
+                "confidence": e.confidence,
+                "synthesis_method": e.synthesis_method,
+                "description": e.description,
+                "needs_enrichment": e.needs_enrichment,
+            }
+            for e in observe_result.local_events
+        ],
+    }
+    with open(session_dir / "observe_summary.json", "w") as f:
+        json.dump(summary, f, indent=2)
+
+
 def _process_session(
     session: SessionManifest,
     config: PipelineConfig,
@@ -120,11 +166,14 @@ def _process_session(
     session_dir = output_dir / session.identifier
 
     run_triage = stages.get("triage")
+    run_observe = stages.get("observe")
     run_analyse = stages.get("analyse")
     run_merge = stages.get("merge")
 
     if run_triage is None:
         from stages.triage import run_triage
+    if run_observe is None:
+        from stages.observe import run_observe
     if run_analyse is None:
         from stages.analyse import run_analyse
     if run_merge is None:
@@ -137,13 +186,36 @@ def _process_session(
     if not force:
         triage_result = _load_stage_json(triage_path, TriageResult)
         if triage_result is not None:
-            print(f"  Triage: loaded from cache ({len(triage_result.segments)} segments)")
+            log(f"  Triage: loaded from cache ({len(triage_result.segments)} segments)")
 
     if triage_result is None:
-        print(f"  Triage...")
+        log(f"  Triage...")
         triage_result = run_triage(session, config, video_path)
         _save_stage_json(triage_path, triage_result)
-        print(f"  Triage: {len(triage_result.segments)} segments ({triage_result.processing_time_ms:.0f}ms)")
+        log(f"  Triage: {len(triage_result.segments)} segments ({triage_result.processing_time_ms:.0f}ms)")
+
+    # --- Observe ---
+    observe_result: ObserveResult | None = None
+
+    if config.observe.enabled:
+        observe_path = session_dir / "observe.json"
+
+        if not force:
+            observe_result = _load_stage_json(observe_path, ObserveResult)
+            if observe_result is not None:
+                log(f"  Observe: loaded from cache ({observe_result.cursor_detection_rate:.1%} detection rate)")
+
+        if observe_result is None:
+            log(f"  Observe...")
+            observe_result = run_observe(session, config, triage_result, video_path, base_dir)
+            _save_stage_json(observe_path, observe_result)
+            _save_observe_artifacts(session_dir, observe_result)
+
+            log(
+                f"  Observe: {len(observe_result.local_events)} local events, "
+                f"{observe_result.cursor_detection_rate:.1%} cursor detection "
+                f"({observe_result.processing_time_ms:.0f}ms)"
+            )
 
     # --- Analyse ---
     analysis_path = session_dir / "analysis.json"
@@ -152,22 +224,25 @@ def _process_session(
     if not force:
         analyse_result = _load_stage_json(analysis_path, AnalyseResult)
         if analyse_result is not None:
-            print(f"  Analyse: loaded from cache ({analyse_result.total_input_tokens} input tokens)")
+            log(f"  Analyse: loaded from cache ({analyse_result.total_input_tokens} input tokens)")
 
     if analyse_result is None:
-        print(f"  Analyse...")
+        log(f"  Analyse...")
         analyse_result = asyncio.run(
             run_analyse(
                 session, config, triage_result, video_path,
                 branch, iteration, base_dir, output_dir=output_dir,
+                observe_result=observe_result,
             )
         )
         _save_stage_json(analysis_path, analyse_result)
-        print(f"  Analyse: {analyse_result.total_input_tokens} input tokens ({analyse_result.processing_time_ms:.0f}ms)")
+        log(f"  Analyse: {analyse_result.total_input_tokens} input tokens ({analyse_result.processing_time_ms:.0f}ms)")
 
     # --- Merge ---
-    print(f"  Merge...")
-    session_output: SessionOutput = run_merge(session, config, analyse_result, triage_result)
+    log(f"  Merge...")
+    session_output: SessionOutput = run_merge(
+        session, config, analyse_result, triage_result, observe_result=observe_result,
+    )
 
     return session_output
 
@@ -190,7 +265,7 @@ def load_custom_stages(
     spec.loader.exec_module(module)
 
     stages: dict[str, Callable] = {}
-    for name in ("run_triage", "run_analyse", "run_merge"):
+    for name in ("run_triage", "run_observe", "run_analyse", "run_merge"):
         func = getattr(module, name, None)
         if func is not None:
             stage_name = name.replace("run_", "")

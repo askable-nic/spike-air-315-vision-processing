@@ -1,0 +1,43 @@
+# Iteration 3: Aggressive local detection + small ROI
+# Push local event synthesis to handle more events without the LLM.
+# Smaller ROI crops for maximum token savings.
+# Stricter match threshold to reduce false cursor detections.
+
+observe:
+  tracking_fps: 10.0
+  resolution_height: 720
+  match_threshold: 0.7
+  early_exit_threshold: 0.92
+  max_interpolation_gap_ms: 300
+  smooth_window: 5
+  smooth_displacement_threshold: 30.0
+  # Dense flow for precise scroll and motion detection
+  flow_fps: 5.0
+  flow_grid_step: 12
+  flow_window_size_ms: 600
+  flow_window_step_ms: 300
+  # Tight event thresholds — prefer precision over recall
+  hover_min_ms: 350
+  hover_max_ms: 1800
+  hover_radius_px: 12.0
+  dwell_min_ms: 2500
+  dwell_radius_px: 18.0
+  thrash_min_direction_changes: 5
+  thrash_min_speed_px_per_sec: 600.0
+  thrash_angle_threshold_deg: 80.0
+  click_stop_max_ms: 150
+  click_stop_radius_px: 4.0
+  click_min_confidence: 0.35
+  scroll_min_flow_uniformity: 0.7
+  scroll_min_magnitude: 4.0
+  hesitation_min_ms: 600
+  hesitation_max_ms: 1500
+  hesitation_radius_px: 8.0
+  # Tight ROI — 384+48 padding = 480px crops
+  roi_size: 384
+  roi_padding: 48
+
+analyse:
+  tokens_per_frame: 258
+  # Reduce token budget since crops are smaller
+  token_budget_per_segment: 30000

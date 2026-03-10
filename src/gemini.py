@@ -6,6 +6,8 @@ import time
 from typing import Any
 
 from dotenv import load_dotenv
+
+from src.log import log
 from google import genai
 from google.genai import types
 
@@ -65,7 +67,7 @@ async def make_request(
             last_error = e
             if attempt < max_retries - 1:
                 wait = 2 ** (attempt + 1)
-                print(f"  Gemini request failed (attempt {attempt + 1}/{max_retries}): {e}. Retrying in {wait}s...")
+                log(f"  Gemini request failed (attempt {attempt + 1}/{max_retries}): {e}. Retrying in {wait}s...")
                 await asyncio.sleep(wait)
 
     raise RuntimeError(f"Gemini request failed after {max_retries} attempts: {last_error}")

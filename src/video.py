@@ -54,6 +54,9 @@ def extract_frames(
 ) -> tuple[tuple[float, np.ndarray], ...]:
     """Extract frames from a video at given FPS within a time range.
 
+    Uses sequential grab/retrieve to avoid expensive keyframe seeks on
+    codecs like VP8/VP9 (webm).  Only decodes frames at the target interval.
+
     Returns a tuple of (timestamp_ms, frame_array) pairs.
     """
     cap = cv2.VideoCapture(str(path))
@@ -66,17 +69,24 @@ def extract_frames(
         end_frame = int(end_sec * source_fps)
         frame_interval = max(1, int(source_fps / fps))
 
-        cap.set(cv2.CAP_PROP_POS_FRAMES, start_frame)
+        # Seek to start (single seek is fine)
+        if start_frame > 0:
+            cap.set(cv2.CAP_PROP_POS_FRAMES, start_frame)
 
         frames: list[tuple[float, np.ndarray]] = []
         current_frame = start_frame
 
         while current_frame <= end_frame:
-            ret, frame = cap.read()
+            ret = cap.grab()
             if not ret:
                 break
 
             if (current_frame - start_frame) % frame_interval == 0:
+                ret2, frame = cap.retrieve()
+                if not ret2:
+                    current_frame += 1
+                    continue
+
                 timestamp_ms = (current_frame / source_fps) * 1000
 
                 if scale_height is not None and frame.shape[0] != scale_height:
@@ -124,3 +134,56 @@ def encode_jpeg(frame: np.ndarray, quality: int = 85) -> bytes:
     if not success:
         raise ValueError("Failed to encode frame as JPEG")
     return bytes(buffer)
+
+
+def compute_optical_flow(
+    frame_a: np.ndarray,
+    frame_b: np.ndarray,
+    grid_step: int = 20,
+) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """Sparse Lucas-Kanade optical flow on a regular grid.
+
+    Returns (points, displacements, status) where:
+    - points: Nx2 array of grid point coordinates
+    - displacements: Nx2 array of (dx, dy) displacements
+    - status: Nx1 array of tracking status (1=found, 0=lost)
+    """
+    gray_a = cv2.cvtColor(frame_a, cv2.COLOR_BGR2GRAY) if len(frame_a.shape) == 3 else frame_a
+    gray_b = cv2.cvtColor(frame_b, cv2.COLOR_BGR2GRAY) if len(frame_b.shape) == 3 else frame_b
+
+    h, w = gray_a.shape[:2]
+    ys = np.arange(grid_step // 2, h, grid_step)
+    xs = np.arange(grid_step // 2, w, grid_step)
+    grid = np.array([(x, y) for y in ys for x in xs], dtype=np.float32).reshape(-1, 1, 2)
+
+    if len(grid) == 0:
+        empty = np.empty((0, 2), dtype=np.float32)
+        return empty, empty, np.empty((0, 1), dtype=np.uint8)
+
+    lk_params = dict(
+        winSize=(15, 15),
+        maxLevel=2,
+        criteria=(cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10, 0.03),
+    )
+
+    next_pts, status, _err = cv2.calcOpticalFlowPyrLK(gray_a, gray_b, grid, None, **lk_params)
+
+    points = grid.reshape(-1, 2)
+    displacements = (next_pts.reshape(-1, 2) - points)
+    return points, displacements, status.reshape(-1, 1)
+
+
+def crop_frame(
+    frame: np.ndarray,
+    x: int,
+    y: int,
+    width: int,
+    height: int,
+) -> np.ndarray:
+    """Crop a frame with boundary clamping."""
+    h, w = frame.shape[:2]
+    x0 = max(0, min(x, w - 1))
+    y0 = max(0, min(y, h - 1))
+    x1 = max(0, min(x + width, w))
+    y1 = max(0, min(y + height, h))
+    return frame[y0:y1, x0:x1]

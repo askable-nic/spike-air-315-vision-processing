@@ -1,0 +1,88 @@
+{
+  "branch": "local-cv-events",
+  "iteration": 3,
+  "started_at": "2026-03-10T06:31:05.065641+00:00",
+  "completed_at": "2026-03-10T06:34:43.340083+00:00",
+  "config": {
+    "triage": {
+      "enabled": true,
+      "sample_fps": 5.0,
+      "resolution_height": 480,
+      "window_size_ms": 3000,
+      "window_step_ms": 1000,
+      "min_segment_duration_ms": 5000,
+      "thresholds": {
+        "idle": 0.005,
+        "low": 0.02,
+        "medium": 0.08
+      },
+      "fps_mapping": {
+        "idle": 0.5,
+        "low": 2.0,
+        "medium": 4.0,
+        "high": 10.0
+      }
+    },
+    "analyse": {
+      "model": "gemini-3-flash-preview",
+      "temperature": 0.1,
+      "max_concurrent": 5,
+      "token_budget_per_segment": 30000,
+      "tokens_per_frame": 258,
+      "context_frames": 2,
+      "jpeg_quality": 85,
+      "source": "unmod_website_test_video"
+    },
+    "merge": {
+      "time_tolerance_ms": 2000,
+      "similarity_threshold": 0.7,
+      "discard_context_events": true
+    },
+    "observe": {
+      "enabled": true,
+      "tracking_fps": 10.0,
+      "resolution_height": 720,
+      "template_scales": [
+        0.8,
+        1.0,
+        1.25,
+        1.5
+      ],
+      "match_threshold": 0.7,
+      "early_exit_threshold": 0.92,
+      "max_interpolation_gap_ms": 300,
+      "smooth_window": 5,
+      "smooth_displacement_threshold": 30.0,
+      "flow_fps": 5.0,
+      "flow_grid_step": 12,
+      "flow_window_size_ms": 600,
+      "flow_window_step_ms": 300,
+      "hover_min_ms": 350,
+      "hover_max_ms": 1800,
+      "hover_radius_px": 12.0,
+      "dwell_min_ms": 2500,
+      "dwell_radius_px": 18.0,
+      "thrash_window_ms": 1000,
+      "thrash_min_direction_changes": 5,
+      "thrash_min_speed_px_per_sec": 600.0,
+      "thrash_angle_threshold_deg": 80.0,
+      "click_stop_max_ms": 150,
+      "click_stop_radius_px": 4.0,
+      "click_min_confidence": 0.35,
+      "scroll_min_flow_uniformity": 0.7,
+      "scroll_min_magnitude": 4.0,
+      "hesitation_min_ms": 600,
+      "hesitation_max_ms": 1500,
+      "hesitation_radius_px": 8.0,
+      "roi_size": 384,
+      "roi_padding": 48
+    }
+  },
+  "sessions_processed": [
+    "flight_centre_booking_james"
+  ],
+  "total_events": 75,
+  "total_input_tokens": 593155,
+  "total_output_tokens": 8732,
+  "errors": []
+}

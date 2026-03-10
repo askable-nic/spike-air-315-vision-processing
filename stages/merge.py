@@ -4,6 +4,7 @@ import time
 
 from src.models import (
     AnalyseResult,
+    ObserveResult,
     PipelineConfig,
     ResolvedEvent,
     SessionManifest,
@@ -19,6 +20,7 @@ def run_merge(
     config: PipelineConfig,
     analyse_result: AnalyseResult,
     triage_result: TriageResult,
+    observe_result: ObserveResult | None = None,
 ) -> SessionOutput:
     """Merge analysis results: resolve timestamps, discard context events, deduplicate."""
     t0 = time.monotonic()
@@ -84,6 +86,28 @@ def run_merge(
                 study_id=session.studyId,
             ))
 
+    # Add local events that don't need enrichment (e.g. scroll, thrash)
+    if observe_result is not None:
+        offset = session.screenTrackStartOffset
+        for local_event in observe_result.local_events:
+            if not local_event.needs_enrichment:
+                cursor_dict = None
+                if local_event.cursor_positions:
+                    p = local_event.cursor_positions[0]
+                    cursor_dict = {"x": p.x, "y": p.y}
+
+                resolved.append(ResolvedEvent(
+                    type=local_event.type,
+                    source=config.analyse.source,
+                    time_start=local_event.time_start_ms + offset,
+                    time_end=local_event.time_end_ms + offset,
+                    description=local_event.description,
+                    confidence=local_event.confidence,
+                    cursor_position=cursor_dict,
+                    transcript_id=session.roomId,
+                    study_id=session.studyId,
+                ))
+
     # Sort by start time
     resolved.sort(key=lambda e: e.time_start)
 
@@ -92,6 +116,13 @@ def run_merge(
 
     elapsed = (time.monotonic() - t0) * 1000
 
+    observe_metrics = StageMetrics()
+    if observe_result is not None:
+        observe_metrics = StageMetrics(
+            duration_ms=observe_result.processing_time_ms,
+            artifacts_created=len(observe_result.local_events),
+        )
+
     return SessionOutput(
         recording_id=session.identifier,
         session=session,
@@ -99,6 +130,7 @@ def run_merge(
             duration_ms=triage_result.processing_time_ms,
             artifacts_created=len(triage_result.segments),
         ),
+        observe_metrics=observe_metrics,
         analyse_metrics=StageMetrics(
             duration_ms=analyse_result.processing_time_ms,
             artifacts_created=sum(len(s.events) for s in analyse_result.segments),

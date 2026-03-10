@@ -78,10 +78,55 @@ class MergeConfig(BaseModel, frozen=True):
     discard_context_events: bool = True
 
 
+class ObserveConfig(BaseModel, frozen=True):
+    enabled: bool = False
+    # Cursor tracking
+    tracking_fps: float = 5.0
+    resolution_height: int = 720
+    template_scales: tuple[float, ...] = (0.8, 1.0, 1.25, 1.5)
+    match_threshold: float = 0.6
+    early_exit_threshold: float = 0.9
+    max_interpolation_gap_ms: int = 500
+    smooth_window: int = 3
+    smooth_displacement_threshold: float = 50.0
+    # Optical flow
+    flow_fps: float = 2.0
+    flow_grid_step: int = 20
+    flow_window_size_ms: int = 1000
+    flow_window_step_ms: int = 500
+    # Event synthesis — hover
+    hover_min_ms: int = 300
+    hover_max_ms: int = 2000
+    hover_radius_px: float = 15.0
+    # Event synthesis — dwell
+    dwell_min_ms: int = 2000
+    dwell_radius_px: float = 20.0
+    # Event synthesis — thrash
+    thrash_window_ms: int = 1000
+    thrash_min_direction_changes: int = 4
+    thrash_min_speed_px_per_sec: float = 500.0
+    thrash_angle_threshold_deg: float = 90.0
+    # Event synthesis — click candidate
+    click_stop_max_ms: int = 200
+    click_stop_radius_px: float = 5.0
+    click_min_confidence: float = 0.3
+    # Event synthesis — scroll
+    scroll_min_flow_uniformity: float = 0.6
+    scroll_min_magnitude: float = 3.0
+    # Event synthesis — hesitation
+    hesitation_min_ms: int = 500
+    hesitation_max_ms: int = 2000
+    hesitation_radius_px: float = 10.0
+    # ROI
+    roi_size: int = 512
+    roi_padding: int = 64
+
+
 class PipelineConfig(BaseModel, frozen=True):
     triage: TriageConfig = TriageConfig()
     analyse: AnalyseConfig = AnalyseConfig()
     merge: MergeConfig = MergeConfig()
+    observe: ObserveConfig = ObserveConfig()
 
 
 # --- Video ---
@@ -146,6 +191,45 @@ class CursorPosition(BaseModel, frozen=True):
     y: float
 
 
+class CursorDetection(BaseModel, frozen=True):
+    timestamp_ms: float
+    x: float
+    y: float
+    confidence: float
+    template_id: str = ""
+    detected: bool = True
+
+
+class FlowWindow(BaseModel, frozen=True):
+    start_ms: float
+    end_ms: float
+    mean_flow_magnitude: float
+    dominant_direction: str = ""
+    flow_uniformity: float = 0.0
+    cursor_flow_divergence: float = 0.0
+
+
+class LocalEvent(BaseModel, frozen=True):
+    type: EventType
+    time_start_ms: float
+    time_end_ms: float
+    cursor_positions: tuple[CursorPosition, ...] = ()
+    confidence: float = 0.5
+    synthesis_method: str = ""
+    description: str = ""
+    needs_enrichment: bool = True
+
+
+class ROIRect(BaseModel, frozen=True):
+    timestamp_ms: float
+    x: int
+    y: int
+    width: int
+    height: int
+    cursor_x: float = 0.0
+    cursor_y: float = 0.0
+
+
 class RawEvent(BaseModel, frozen=True):
     frame_index_start: int
     frame_index_end: int
@@ -174,6 +258,19 @@ class AnalyseResult(BaseModel, frozen=True):
     total_input_tokens: int = 0
     total_output_tokens: int = 0
     processing_time_ms: float = 0
+
+
+# --- Observe ---
+
+class ObserveResult(BaseModel, frozen=True):
+    recording_id: str
+    cursor_trajectory: tuple[CursorDetection, ...] = ()
+    flow_summary: tuple[FlowWindow, ...] = ()
+    local_events: tuple[LocalEvent, ...] = ()
+    roi_rects: tuple[ROIRect, ...] = ()
+    processing_time_ms: float = 0
+    frames_analysed: int = 0
+    cursor_detection_rate: float = 0.0
 
 
 # --- Merge / Final Output ---
@@ -205,6 +302,7 @@ class SessionOutput(BaseModel, frozen=True):
     recording_id: str
     session: SessionManifest
     triage_metrics: StageMetrics = StageMetrics()
+    observe_metrics: StageMetrics = StageMetrics()
     analyse_metrics: StageMetrics = StageMetrics()
     merge_metrics: StageMetrics = StageMetrics()
     events: tuple[ResolvedEvent, ...]

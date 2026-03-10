@@ -39,3 +39,12 @@ Optional fields (include when identifiable):
 5. Prefer higher confidence for clearly visible interactions, lower for inferred ones
 6. If no events are detectable, return an empty array []
 7. Be specific in descriptions — mention the actual button labels, page names, or form fields visible
+
+## Local Event Candidates
+
+When local event candidates are provided (detected from cursor tracking and optical flow analysis), you should:
+- **Confirm** a candidate by including it in your output with an updated description and higher confidence if the frames support it
+- **Reject** a candidate by omitting it — do not include events you cannot verify from the frames
+- **Modify** a candidate by adjusting its type, timing, or description based on what you observe
+- Candidates marked as click may actually be hovers, selects, or other interactions — use the frames to determine the correct type
+- Use cursor position information from candidates to focus your attention on the relevant screen area

@@ -1,0 +1,32 @@
+# Iteration 1: Cursor tracking baseline
+# Default observe settings — measure cursor detection rate and trajectory quality.
+# No ROI cropping (full frames sent to analyse) so we can compare token usage later.
+# Relaxed thresholds to capture as many events as possible for review.
+
+observe:
+  tracking_fps: 5.0
+  resolution_height: 720
+  match_threshold: 0.5
+  early_exit_threshold: 0.85
+  max_interpolation_gap_ms: 750
+  smooth_window: 3
+  smooth_displacement_threshold: 60.0
+  # Relaxed event synthesis thresholds
+  hover_min_ms: 250
+  hover_max_ms: 2500
+  hover_radius_px: 20.0
+  dwell_min_ms: 1500
+  dwell_radius_px: 25.0
+  thrash_min_direction_changes: 3
+  thrash_min_speed_px_per_sec: 400.0
+  click_stop_max_ms: 300
+  click_stop_radius_px: 8.0
+  click_min_confidence: 0.2
+  scroll_min_flow_uniformity: 0.5
+  scroll_min_magnitude: 2.0
+  hesitation_min_ms: 400
+  hesitation_max_ms: 2500
+  hesitation_radius_px: 15.0
+  # No ROI cropping — full frames to establish baseline token usage
+  roi_size: 4096
+  roi_padding: 0
