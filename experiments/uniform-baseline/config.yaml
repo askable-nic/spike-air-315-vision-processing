@@ -1,0 +1,17 @@
+triage:
+  enabled: false
+
+analyse:
+  model: gemini-3-flash-preview
+  temperature: 0.1
+  max_concurrent: 5
+  token_budget_per_segment: 50000
+  tokens_per_frame: 1548
+  context_frames: 0
+  jpeg_quality: 85
+  source: unmod_website_test_video
+
+merge:
+  time_tolerance_ms: 2000
+  similarity_threshold: 0.7
+  discard_context_events: true
