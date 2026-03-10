@@ -1,0 +1,38 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 4,
+    "type": "change_ui_state",
+    "description": "A loading overlay with the message 'Thanks for confirming your flights' is displayed while the next page loads.",
+    "confidence": 0.95,
+    "frame_description": "Loading screen with a spinner and confirmation message."
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 10,
+    "type": "navigate",
+    "description": "The page navigates from the flight confirmation loading state to the 'Travellers' details entry page.",
+    "confidence": 1.0,
+    "page_title": "Travellers",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eW2/passenger",
+    "frame_description": "Transition from a blank screen to the fully loaded Travellers form page."
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 12,
+    "type": "dwell",
+    "description": "The user pauses on the 'Travellers' page, likely reading the 'Heads up!' warning message regarding personal details.",
+    "confidence": 0.85,
+    "page_title": "Travellers",
+    "frame_description": "The user is looking at the traveller information form."
+  },
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 14,
+    "type": "hover",
+    "description": "The cursor moves to the top of the browser window, hovering over the active tab.",
+    "confidence": 0.9,
+    "interaction_target": "Browser tab",
+    "frame_description": "Cursor positioned over the browser tab area."
+  }
+]

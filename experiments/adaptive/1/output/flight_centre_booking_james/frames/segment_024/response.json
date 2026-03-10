@@ -1,0 +1,53 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 11,
+    "type": "dwell",
+    "description": "User pauses on the add-ons page, likely reviewing the 'Online Captain's Pack' and seat selection options.",
+    "confidence": 0.85,
+    "page_title": "Flight Centre",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eW2/results#baggage"
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 17,
+    "type": "scroll",
+    "description": "User scrolls up to review the trip summary and then scrolls back down to the bottom of the page.",
+    "confidence": 0.9,
+    "frame_description": "The page content shifts vertically as the user reviews the 'Review trip' section before returning to the add-ons."
+  },
+  {
+    "frame_index_start": 18,
+    "frame_index_end": 19,
+    "type": "hover",
+    "description": "User hovers the cursor over the 'CONTINUE' button.",
+    "confidence": 0.9,
+    "interaction_target": "CONTINUE button"
+  },
+  {
+    "frame_index_start": 20,
+    "frame_index_end": 22,
+    "type": "click",
+    "description": "User clicks the 'CONTINUE' button to proceed with the booking.",
+    "confidence": 0.95,
+    "interaction_target": "CONTINUE button"
+  },
+  {
+    "frame_index_start": 23,
+    "frame_index_end": 32,
+    "type": "change_ui_state",
+    "description": "A loading overlay appears with the message 'Thanks for confirming your flights' and a progress spinner.",
+    "confidence": 0.95,
+    "frame_description": "The screen is dimmed by a white overlay with a central loading animation."
+  },
+  {
+    "frame_index_start": 33,
+    "frame_index_end": 36,
+    "type": "navigate",
+    "description": "The page navigates from the baggage selection to the 'Travellers' details entry screen.",
+    "confidence": 0.95,
+    "page_title": "Flight Centre",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eW2/passenger",
+    "frame_description": "The loading overlay disappears and the new 'Travellers' page content is rendered."
+  }
+]

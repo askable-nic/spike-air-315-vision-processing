@@ -1,0 +1,64 @@
+[
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 7,
+    "type": "click",
+    "description": "User clicks the 'From $127' button for the 6:10am Virgin Australia flight to expand fare options",
+    "confidence": 0.95,
+    "interaction_target": "From $127 button",
+    "page_title": "Select Departing Flight",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eWZ/results",
+    "frame_description": "The user clicks on the price button for a specific flight, causing the fare type selection area to expand below the flight row."
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 12,
+    "type": "hover",
+    "description": "User hovers over the different fare types (Lite, Choice, Flex) to review the inclusions",
+    "confidence": 0.85,
+    "interaction_target": "Fare type options",
+    "page_title": "Select Departing Flight",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eWZ/results",
+    "frame_description": "The cursor moves across the 'Select Departing Fare Type' section, lingering over the Flex and Lite options."
+  },
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 14,
+    "type": "click",
+    "description": "User clicks the 'SELECT' button for the 'Lite' fare option",
+    "confidence": 0.98,
+    "interaction_target": "SELECT button (Lite fare)",
+    "page_title": "Select Departing Flight",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eWZ/results",
+    "frame_description": "The user selects the $127 Lite fare, and the button visual state changes to a green checkmark."
+  },
+  {
+    "frame_index_start": 16,
+    "frame_index_end": 17,
+    "type": "change_ui_state",
+    "description": "A loading overlay appears with the message 'Good choice! It's time to choose your flight for your return journey...'",
+    "confidence": 0.95,
+    "page_title": "Select Departing Flight",
+    "frame_description": "A white loading screen with a spinner and text appears over the flight results."
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 18,
+    "type": "navigate",
+    "description": "The page transitions from departing flight selection to return flight selection",
+    "confidence": 0.95,
+    "page_title": "Select Return Flight",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eWZ/results#inbound",
+    "frame_description": "The URL changes and the page content updates to show 'Select Return Flight' for Melbourne to Adelaide."
+  },
+  {
+    "frame_index_start": 18,
+    "frame_index_end": 26,
+    "type": "dwell",
+    "description": "User examines the available return flight options",
+    "confidence": 0.8,
+    "page_title": "Select Return Flight",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eWZ/results#inbound",
+    "frame_description": "The user remains on the return flight selection page, likely reading the flight times and prices."
+  }
+]

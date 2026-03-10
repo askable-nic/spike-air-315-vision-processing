@@ -19,8 +19,9 @@ def main():
 @click.option("--iteration", "-i", required=True, type=int, help="Iteration number")
 @click.option("--session", "-s", multiple=True, help="Session ID(s) to process (default: all)")
 @click.option("--override", "-o", multiple=True, help="Config override as dotted.key=value")
+@click.option("--force", "-f", is_flag=True, default=False, help="Re-run all stages, ignoring cached outputs")
 @click.option("--base-dir", type=click.Path(exists=True, path_type=Path), default=".", help="Project base directory")
-def run(branch: str, iteration: int, session: tuple[str, ...], override: tuple[str, ...], base_dir: Path):
+def run(branch: str, iteration: int, session: tuple[str, ...], override: tuple[str, ...], force: bool, base_dir: Path):
     """Run a pipeline iteration."""
     sessions = session if session else None
     run_iteration(
@@ -29,6 +30,7 @@ def run(branch: str, iteration: int, session: tuple[str, ...], override: tuple[s
         sessions=sessions,
         cli_overrides=override,
         base_dir=base_dir,
+        force=force,
     )
 
 

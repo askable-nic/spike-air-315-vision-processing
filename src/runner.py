@@ -11,12 +11,12 @@ from typing import Any, Callable
 from src.config import resolve_config
 from src.manifest import load_manifest, resolve_video_path
 from src.models import (
+    AnalyseResult,
     PipelineConfig,
     RunMetadata,
     SessionManifest,
     SessionOutput,
     TriageResult,
-    AnalyseResult,
 )
 
 
@@ -26,6 +26,7 @@ def run_iteration(
     sessions: tuple[str, ...] | None = None,
     cli_overrides: tuple[str, ...] = (),
     base_dir: Path = Path("."),
+    force: bool = False,
 ) -> None:
     """Main entry point: resolve config, run pipeline for each session, write output."""
     started_at = datetime.now(timezone.utc).isoformat()
@@ -52,7 +53,9 @@ def run_iteration(
     for session in manifest:
         print(f"\nProcessing session: {session.identifier}")
         try:
-            output = _process_session(session, config, input_dir, stages, branch, iteration, base_dir)
+            output = _process_session(
+                session, config, input_dir, output_dir, stages, branch, iteration, base_dir, force,
+            )
             write_output(output_dir, output)
             all_outputs.append(output)
             print(f"  Done: {output.event_count} events detected")
@@ -85,17 +88,36 @@ def run_iteration(
         print(f"Errors: {len(errors)}")
 
 
+def _load_stage_json(path: Path, model_cls: type) -> Any | None:
+    """Load a stage output JSON file and validate it against a pydantic model."""
+    if not path.exists():
+        return None
+    with open(path) as f:
+        data = json.load(f)
+    return model_cls.model_validate(data)
+
+
+def _save_stage_json(path: Path, model: Any) -> None:
+    """Save a pydantic model to a JSON file."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w") as f:
+        json.dump(model.model_dump(), f, indent=2)
+
+
 def _process_session(
     session: SessionManifest,
     config: PipelineConfig,
     input_dir: Path,
+    output_dir: Path,
     stages: dict[str, Callable],
     branch: str,
     iteration: int,
     base_dir: Path,
+    force: bool,
 ) -> SessionOutput:
-    """Run the full pipeline for a single session."""
+    """Run the full pipeline for a single session, resuming from cached stage outputs."""
     video_path = resolve_video_path(session, input_dir)
+    session_dir = output_dir / session.identifier
 
     run_triage = stages.get("triage")
     run_analyse = stages.get("analyse")
@@ -108,19 +130,42 @@ def _process_session(
     if run_merge is None:
         from stages.merge import run_merge
 
-    # Triage
-    print(f"  Triage...")
-    triage_result: TriageResult = run_triage(session, config, video_path)
-    print(f"  Triage: {len(triage_result.segments)} segments ({triage_result.processing_time_ms:.0f}ms)")
+    # --- Triage ---
+    triage_path = session_dir / "triage.json"
+    triage_result: TriageResult | None = None
 
-    # Analyse (async)
-    print(f"  Analyse...")
-    analyse_result: AnalyseResult = asyncio.run(
-        run_analyse(session, config, triage_result, video_path, branch, iteration, base_dir)
-    )
-    print(f"  Analyse: {analyse_result.total_input_tokens} input tokens ({analyse_result.processing_time_ms:.0f}ms)")
+    if not force:
+        triage_result = _load_stage_json(triage_path, TriageResult)
+        if triage_result is not None:
+            print(f"  Triage: loaded from cache ({len(triage_result.segments)} segments)")
 
-    # Merge
+    if triage_result is None:
+        print(f"  Triage...")
+        triage_result = run_triage(session, config, video_path)
+        _save_stage_json(triage_path, triage_result)
+        print(f"  Triage: {len(triage_result.segments)} segments ({triage_result.processing_time_ms:.0f}ms)")
+
+    # --- Analyse ---
+    analysis_path = session_dir / "analysis.json"
+    analyse_result: AnalyseResult | None = None
+
+    if not force:
+        analyse_result = _load_stage_json(analysis_path, AnalyseResult)
+        if analyse_result is not None:
+            print(f"  Analyse: loaded from cache ({analyse_result.total_input_tokens} input tokens)")
+
+    if analyse_result is None:
+        print(f"  Analyse...")
+        analyse_result = asyncio.run(
+            run_analyse(
+                session, config, triage_result, video_path,
+                branch, iteration, base_dir, output_dir=output_dir,
+            )
+        )
+        _save_stage_json(analysis_path, analyse_result)
+        print(f"  Analyse: {analyse_result.total_input_tokens} input tokens ({analyse_result.processing_time_ms:.0f}ms)")
+
+    # --- Merge ---
     print(f"  Merge...")
     session_output: SessionOutput = run_merge(session, config, analyse_result, triage_result)
 
@@ -155,7 +200,7 @@ def load_custom_stages(
 
 
 def write_output(output_dir: Path, session_output: SessionOutput) -> None:
-    """Write JSON output files for a session."""
+    """Write final JSON output files for a session."""
     session_dir = output_dir / session_output.recording_id
     session_dir.mkdir(parents=True, exist_ok=True)
 

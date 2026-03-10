@@ -64,6 +64,7 @@ async def run_analyse(
     branch: str = "",
     iteration: int = 1,
     base_dir: Path = Path("."),
+    output_dir: Path | None = None,
 ) -> AnalyseResult:
     """Run analysis on all triage segments using Gemini API."""
     t0 = time.monotonic()
@@ -89,6 +90,7 @@ async def run_analyse(
                 iteration=iteration,
                 base_dir=base_dir,
                 semaphore=semaphore,
+                output_dir=output_dir,
             )
         )
 
@@ -148,6 +150,7 @@ async def _analyse_segment(
     iteration: int,
     base_dir: Path,
     semaphore: asyncio.Semaphore,
+    output_dir: Path | None = None,
 ) -> SegmentAnalysisResult:
     """Analyse a single segment: extract frames, call Gemini, parse response."""
     async with semaphore:
@@ -198,6 +201,22 @@ async def _analyse_segment(
             all_frames.append((ts, frame))
             idx += 1
 
+        # Save frame JPEGs as debug artifacts
+        segment_frames_dir = None
+        if output_dir is not None:
+            segment_frames_dir = output_dir / session.identifier / "frames" / f"segment_{segment.segment_index:03d}"
+            segment_frames_dir.mkdir(parents=True, exist_ok=True)
+
+        jpeg_cache: list[bytes] = []
+        for ref, (ts, frame) in zip(frame_refs, all_frames):
+            jpeg_bytes = encode_jpeg(frame, ac.jpeg_quality)
+            jpeg_cache.append(jpeg_bytes)
+
+            if segment_frames_dir is not None:
+                suffix = "_ctx" if ref.is_context else ""
+                filename = f"frame_{ref.frame_index_in_request:03d}_{int(ts)}ms{suffix}.jpg"
+                (segment_frames_dir / filename).write_bytes(jpeg_bytes)
+
         if not all_frames:
             return SegmentAnalysisResult(
                 segment_index=segment.segment_index,
@@ -231,15 +250,19 @@ async def _analyse_segment(
             "context_note": context_note,
         })
 
+        # Save prompt as debug artifact
+        if segment_frames_dir is not None:
+            (segment_frames_dir / "prompt.txt").write_text(user_prompt)
+
         # Build content parts: interleaved frame labels + images
         content_parts: list[Any] = []
-        for ref, (ts, frame) in zip(frame_refs, all_frames):
+        for ref, jpeg_bytes in zip(frame_refs, jpeg_cache):
+            ts = ref.timestamp_ms
             label = f"[Frame {ref.frame_index_in_request} | {ts:.0f}ms"
             if ref.is_context:
                 label += " | CONTEXT"
             label += "]"
             content_parts.append(label)
-            jpeg_bytes = encode_jpeg(frame, ac.jpeg_quality)
             content_parts.append(types.Part.from_bytes(data=jpeg_bytes, mime_type="image/jpeg"))
 
         content_parts.append(user_prompt)
@@ -255,6 +278,10 @@ async def _analyse_segment(
             response_schema=_RESPONSE_SCHEMA,
             temperature=ac.temperature,
         )
+
+        # Save raw response as debug artifact
+        if segment_frames_dir is not None:
+            (segment_frames_dir / "response.json").write_text(response["text"])
 
         # Parse events
         events = _parse_events(response["text"])

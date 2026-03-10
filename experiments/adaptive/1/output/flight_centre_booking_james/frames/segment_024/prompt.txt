@@ -1,0 +1,14 @@
+Analyse the following screen recording frames for user interaction events.
+
+**Segment 24** | Time range: 150.2s - 158.2s | FPS: 4.0 | Activity tier: medium | Frames: 39
+
+Frames 0-1 are CONTEXT frames from the previous segment. Frames 37-38 are CONTEXT frames from the next segment. Do NOT report events from context frames.
+
+Examine each frame carefully and identify all user interactions that occurred during this segment. Pay attention to:
+- Cursor position changes between frames
+- UI elements that appear selected or focused
+- Page content changes that indicate navigation or scrolling
+- Text appearing in form fields
+- Visual state changes (modals, dropdowns, loading states)
+
+Return the events as a JSON array.

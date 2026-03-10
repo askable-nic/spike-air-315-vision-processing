@@ -1,0 +1,49 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "change_ui_state",
+    "description": "The flight search bar finishes loading, replacing grey placeholders with interactive input fields.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Your centre for travel.",
+    "page_location": "https://www.flightcentre.com.au",
+    "frame_description": "The homepage search widget transitions from a loading state to a ready state."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "click",
+    "description": "User clicks on the 'Where to?' destination input field to open the search dropdown.",
+    "confidence": 0.9,
+    "interaction_target": "Where to? input field",
+    "page_title": "Flight Centre | Your centre for travel.",
+    "page_location": "https://www.flightcentre.com.au"
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 5,
+    "type": "hover",
+    "description": "User hovers the cursor over the 'Sydney, Australia' option within the popular destinations dropdown.",
+    "confidence": 0.8,
+    "interaction_target": "Sydney, Australia option",
+    "page_title": "Flight Centre | Your centre for travel."
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 6,
+    "type": "select",
+    "description": "User selects 'Melbourne, Australia' from the destination dropdown menu.",
+    "confidence": 0.95,
+    "interaction_target": "Melbourne, Australia option",
+    "page_title": "Flight Centre | Your centre for travel."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 6,
+    "type": "change_ui_state",
+    "description": "A 'Honey Gold' browser extension rewards popup appears on the right side of the screen.",
+    "confidence": 1.0,
+    "interaction_target": "Honey Gold rewards popup",
+    "frame_description": "The destination is now set to Melbourne and a rewards notification has appeared."
+  }
+]

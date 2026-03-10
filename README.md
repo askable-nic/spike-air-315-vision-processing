@@ -124,3 +124,4 @@ stages/
   analyse.py      Gemini API calls per segment
   merge.py        Timestamp resolution + dedup
 ```
+
