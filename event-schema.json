@@ -1,0 +1,127 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "type",
+    "source",
+    "time_start",
+    "time_end",
+    "description",
+    "confidence",
+    "transcript_id"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "click",
+        "hover",
+        "navigate",
+        "input_text",
+        "select",
+        "dwell",
+        "cursor_thrash",
+        "scroll",
+        "drag",
+        "hesitate",
+        "change_ui_state"
+      ]
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "unmod_website_test_video",
+        "ai_mod_website_test_video",
+        "moderated_screen_recording",
+        "unmod_figma_prototype_test",
+        "unmod_tree_test",
+        "unmod_card_sort"
+      ]
+    },
+    "time_start": {
+      "type": "number",
+      "description": "The time the user action started in milliseconds, relative to the start of the transcript."
+    },
+    "time_end": {
+      "type": "number",
+      "description": "The time the user action ended in milliseconds, relative to the start of the transcript."
+    },
+    "description": {
+      "type": "string",
+      "description": "A description of the user action (e.g. \"User clicked on the home button\")"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "The confidence that the user action occurred"
+    },
+    "interaction_target": {
+      "type": "string",
+      "description": "Description of the element that was interacted with (eg. a button label)"
+    },
+    "interaction_region_of_interest": {
+      "type": "object",
+      "description": "The region of interest in the video where the user action occurred (if applicable)",
+      "properties": {
+        "x": {
+          "type": "number",
+          "description": "The x-coordinate of the region of interest in the video"
+        },
+        "y": {
+          "type": "number",
+          "description": "The y-coordinate of the region of interest in the video"
+        },
+        "width": {
+          "type": "number",
+          "description": "The width of the region of interest in the video"
+        },
+        "height": {
+          "type": "number",
+          "description": "The height of the region of interest in the video"
+        }
+      },
+      "additionalProperties": false
+    },
+    "cursor_position": {
+      "type": "object",
+      "description": "The position of the cursor in the video (if applicable)",
+      "properties": {
+        "x": {
+          "type": "number",
+          "description": "The x-coordinate of the cursor position in the video"
+        },
+        "y": {
+          "type": "number",
+          "description": "The y-coordinate of the cursor position in the video"
+        }
+      },
+      "additionalProperties": false
+    },
+    "page_title": {
+      "type": "string",
+      "description": "The title of the page/screen/section the user action occurred on"
+    },
+    "page_location": {
+      "type": "string",
+      "description": "The URL/path/title of the page/screen/section the user action occurred on"
+    },
+    "frame_description": {
+      "type": "string",
+      "description": "Description of the visual information associated with the action (eg. what's on the page)"
+    },
+    "transcript_id": {
+      "type": "string",
+      "description": "The ID of the transcript where the user action occurred"
+    },
+    "study_id": {
+      "type": "string",
+      "description": "The ID of the study where the user action occurred"
+    },
+    "task_id": {
+      "type": "string",
+      "description": "The ID of the task where the user action occurred"
+    }
+  },
+  "additionalProperties": false
+}
