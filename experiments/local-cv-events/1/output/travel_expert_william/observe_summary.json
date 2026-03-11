@@ -1,0 +1,27 @@
+{
+  "frames_analysed": 16,
+  "cursor_detection_rate": 1.0,
+  "cursor_detections": 16,
+  "template_match_counts": {
+    "hand": 16
+  },
+  "flow_windows": 6,
+  "local_events_total": 1,
+  "local_events_by_type": {
+    "dwell": 1
+  },
+  "local_events_needing_enrichment": 1,
+  "roi_rects": 2,
+  "processing_time_ms": 1353.8,
+  "local_events": [
+    {
+      "type": "dwell",
+      "time_start_ms": 0.0,
+      "time_end_ms": 3000.0,
+      "confidence": 0.7,
+      "synthesis_method": "cursor_stationary_extended",
+      "description": "Extended pause (3000ms) near (812, 64)",
+      "needs_enrichment": true
+    }
+  ]
+}

@@ -1,0 +1,1865 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start": 200.0,
+    "time_end": 700.0,
+    "description": "The screen transitions from a black state to displaying the task instructions modal.",
+    "confidence": 0.8,
+    "frame_description": "Initial loading or transition to the task interface."
+  },
+  {
+    "type": "dwell",
+    "time_start": 700.0,
+    "time_end": 3200.0,
+    "description": "User is reading the task instructions on the overlay modal regarding home loan research.",
+    "confidence": 0.9,
+    "interaction_target": "Task instructions modal",
+    "cursor_position": {
+      "x": 284.4,
+      "y": 229.2
+    },
+    "page_title": "Google",
+    "frame_description": "A modal overlay with task instructions is displayed over the Google homepage."
+  },
+  {
+    "type": "click",
+    "time_start": 15200.0,
+    "time_end": 17200.0,
+    "description": "User clicks the 'Start task' button to dismiss the instructions and begin the session.",
+    "confidence": 0.95,
+    "interaction_target": "Start task button",
+    "cursor_position": {
+      "x": 284.4,
+      "y": 229.19999999999249
+    }
+  },
+  {
+    "type": "input_text",
+    "time_start": 17200.0,
+    "time_end": 21200.0,
+    "description": "User begins typing 'home' into the Google search bar, triggering search suggestions for home loans.",
+    "confidence": 0.95,
+    "interaction_target": "Search bar",
+    "page_title": "Google"
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 17200.0,
+    "time_end": 18200.0,
+    "description": "Rapid cursor movement with 6 direction changes at 569px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 96.73782690909091,
+      "y": 624.0846894545456
+    }
+  },
+  {
+    "type": "dwell",
+    "time_start": 19200.0,
+    "time_end": 20200.0,
+    "description": "User views trending searches before starting a new search.",
+    "confidence": 0.7,
+    "cursor_position": {
+      "x": 22.401630103430755,
+      "y": 667.199678534294
+    },
+    "page_title": "Search",
+    "frame_description": "The screen displays a list of trending searches with a keyboard visible at the bottom."
+  },
+  {
+    "type": "input_text",
+    "time_start": 20700.0,
+    "time_end": 27700.0,
+    "description": "User types 'home loan australia bank st george' into the search bar, with suggestions updating dynamically.",
+    "confidence": 0.95,
+    "interaction_target": "Search bar",
+    "frame_description": "Text is being entered into the search field, and the list of suggestions changes as the user types."
+  },
+  {
+    "type": "click",
+    "time_start": 28200.0,
+    "time_end": 28200.0,
+    "description": "User clicks on a search suggestion for St. George Bank home loans.",
+    "confidence": 0.8,
+    "interaction_target": "Search suggestion",
+    "cursor_position": {
+      "x": 286.4,
+      "y": 561.2
+    },
+    "frame_description": "The cursor is positioned over a specific search suggestion in the list."
+  },
+  {
+    "type": "navigate",
+    "time_start": 28200.0,
+    "time_end": 28700.0,
+    "description": "The browser navigates to the Google search results page.",
+    "confidence": 0.95,
+    "page_title": "Google Search",
+    "page_location": "google.com",
+    "frame_description": "The screen transitions from the search input interface to a Google search results page."
+  },
+  {
+    "type": "dwell",
+    "time_start": 29200.0,
+    "time_end": 32200.000000000004,
+    "description": "User dwells on the search results page, likely reading the sponsored results from ubank and Suncorp Bank.",
+    "confidence": 0.85,
+    "page_title": "Google Search",
+    "page_location": "google.com",
+    "frame_description": "The user is looking at the search results page without further interaction."
+  },
+  {
+    "type": "dwell",
+    "time_start": 30200.0,
+    "time_end": 32766.666666666664,
+    "description": "User pauses to examine the initial search results, specifically the ubank sponsored advertisement.",
+    "confidence": 0.85,
+    "interaction_target": "Search results",
+    "page_title": "homelone australia bank st george - Google Search",
+    "frame_description": "Google search results page showing sponsored ads for home loans."
+  },
+  {
+    "type": "scroll",
+    "time_start": 33000.0,
+    "time_end": 41166.666666666664,
+    "description": "User scrolls down the search results page, passing the 'People also search for' section and several other bank advertisements.",
+    "confidence": 0.95,
+    "page_title": "homelone australia bank st george - Google Search",
+    "frame_description": "The page content moves upwards as the user scrolls down to view more search results."
+  },
+  {
+    "type": "dwell",
+    "time_start": 39200.0,
+    "time_end": 41533.33333333333,
+    "description": "User examines Google search results for home loans, lingering on the Aussie.com.au result.",
+    "confidence": 0.85,
+    "page_title": "home loan - Google Search",
+    "page_location": "https://www.google.com.au/search?q=home+loan",
+    "frame_description": "Google search results page showing sponsored results for home loans."
+  },
+  {
+    "type": "click",
+    "time_start": 41766.666666666664,
+    "time_end": 41766.666666666664,
+    "description": "User clicks on the aussie.com.au search result titled 'Top 15 Home Loan Rates'.",
+    "confidence": 0.95,
+    "interaction_target": "Top 15 Home Loan Rates link",
+    "cursor_position": {
+      "x": 249.0,
+      "y": 242.0
+    },
+    "page_title": "home loan - Google Search",
+    "page_location": "https://www.google.com.au/search?q=home+loan"
+  },
+  {
+    "type": "navigate",
+    "time_start": 41766.666666666664,
+    "time_end": 42000.0,
+    "description": "Page navigates from Google search results to the Aussie home page.",
+    "confidence": 1.0,
+    "page_location": "https://www.aussie.com.au/home-loan"
+  },
+  {
+    "type": "hesitate",
+    "time_start": 42000.0,
+    "time_end": 45266.666666666664,
+    "description": "User pauses on the Aussie landing page, hovering over the 'I want to refinance' option before selecting it.",
+    "confidence": 0.8,
+    "interaction_target": "I want to refinance button",
+    "page_title": "Compare low home loan rates | Aussie",
+    "page_location": "https://www.aussie.com.au/home-loan"
+  },
+  {
+    "type": "click",
+    "time_start": 45500.0,
+    "time_end": 45500.0,
+    "description": "User clicks the 'I want to refinance' button.",
+    "confidence": 0.95,
+    "interaction_target": "I want to refinance button",
+    "cursor_position": {
+      "x": 214.88,
+      "y": 253.04000000000002
+    },
+    "page_title": "Compare low home loan rates | Aussie",
+    "page_location": "https://www.aussie.com.au/home-loan"
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 45733.333333333336,
+    "time_end": 46200.0,
+    "description": "A loading screen with a spinner and the text 'Loading... You're moving along nicely.' appears.",
+    "confidence": 1.0,
+    "frame_description": "White loading screen with a purple animated logo and progress text."
+  },
+  {
+    "type": "navigate",
+    "time_start": 46200.0,
+    "time_end": 46433.33333333333,
+    "description": "Page navigates to the first step of the refinance flow.",
+    "confidence": 1.0,
+    "page_title": "Aussie - Refinance",
+    "page_location": "https://www.aussie.com.au/refinance/step1"
+  },
+  {
+    "type": "dwell",
+    "time_start": 46433.33333333333,
+    "time_end": 47833.333333333336,
+    "description": "User reads the question 'What is your current loan balance?'.",
+    "confidence": 0.85,
+    "cursor_position": {
+      "x": 252.82,
+      "y": 534.54
+    },
+    "page_title": "Aussie - Refinance",
+    "page_location": "https://www.aussie.com.au/refinance/step1",
+    "frame_description": "Form page asking for the user's current loan balance."
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 47700.0,
+    "time_end": 48700.0,
+    "description": "Rapid cursor movement with 4 direction changes at 650px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 223.41762551272885,
+      "y": 545.9854630294157
+    }
+  },
+  {
+    "type": "click",
+    "time_start": 48066.66666666667,
+    "time_end": 48066.66666666667,
+    "description": "User clicks on the text input field to enter their loan balance, triggering the on-screen keyboard.",
+    "confidence": 0.95,
+    "interaction_target": "What is your current loan balance? input field",
+    "cursor_position": {
+      "x": 220.19972229853207,
+      "y": 541.5200042350987
+    },
+    "page_title": "Aussie - Refinance",
+    "page_location": "https://www.aussie.com.au/refinance/step1"
+  },
+  {
+    "type": "input_text",
+    "time_start": 48300.0,
+    "time_end": 52033.33333333333,
+    "description": "User types '1000000' into the loan balance input field using the on-screen keyboard.",
+    "confidence": 0.95,
+    "interaction_target": "On-screen keyboard",
+    "page_title": "Aussie - Refinance",
+    "page_location": "https://www.aussie.com.au/refinance/step1"
+  },
+  {
+    "type": "input_text",
+    "time_start": 50200.0,
+    "time_end": 51133.333333333336,
+    "description": "User enters '1,000,000' into the 'What is your current loan balance?' input field",
+    "confidence": 1.0,
+    "interaction_target": "What is your current loan balance? input field",
+    "page_title": "What is your current loan balance?",
+    "frame_description": "The user types a loan amount into the text field using the on-screen keyboard."
+  },
+  {
+    "type": "click",
+    "time_start": 52066.66666666667,
+    "time_end": 52300.0,
+    "description": "User clicks the 'NEXT' button to proceed to the next step of the loan application",
+    "confidence": 0.9,
+    "interaction_target": "NEXT button",
+    "page_title": "What is your current loan balance?",
+    "frame_description": "The user finishes entering the amount and taps the purple 'NEXT' button."
+  },
+  {
+    "type": "navigate",
+    "time_start": 52300.0,
+    "time_end": 52300.0,
+    "description": "The application navigates to the next screen: 'Please tell us more about your current loan.'",
+    "confidence": 1.0,
+    "page_title": "Please tell us more about your current loan.",
+    "frame_description": "The screen transitions to a new form asking for interest rate and fixed rate details."
+  },
+  {
+    "type": "click",
+    "time_start": 53466.66666666667,
+    "time_end": 53700.0,
+    "description": "User clicks on the 'Estimate interest rate' input field to focus it",
+    "confidence": 0.95,
+    "interaction_target": "Estimate interest rate input field",
+    "cursor_position": {
+      "x": 254.4,
+      "y": 649.2
+    },
+    "page_title": "Please tell us more about your current loan.",
+    "frame_description": "The cursor moves to the interest rate field, and the field gains a blue focus border while the keyboard appears."
+  },
+  {
+    "type": "dwell",
+    "time_start": 53933.33333333333,
+    "time_end": 57200.0,
+    "description": "User pauses on the page after focusing the interest rate field, likely considering the value to enter",
+    "confidence": 0.9,
+    "cursor_position": {
+      "x": 68.8,
+      "y": 654.4
+    },
+    "page_title": "Please tell us more about your current loan.",
+    "frame_description": "The user remains on the screen with the keyboard open but does not type any characters for several seconds."
+  },
+  {
+    "type": "dwell",
+    "time_start": 55200.0,
+    "time_end": 57200.0,
+    "description": "User pauses on the 'current loan' page with the keyboard open, likely considering the interest rate input.",
+    "confidence": 0.9,
+    "cursor_position": {
+      "x": 22.4092320825344,
+      "y": 667.1985729093633
+    },
+    "page_title": "Please tell us more about your current loan.",
+    "frame_description": "The user is on a form page with an input field for 'Estimate interest rate' focused and the numeric keyboard visible."
+  },
+  {
+    "type": "select",
+    "time_start": 57200.0,
+    "time_end": 57700.0,
+    "description": "User selects the 'I don't know, skip' toggle, which dismisses the keyboard and reveals the rest of the form.",
+    "confidence": 0.8,
+    "interaction_target": "I don't know, skip toggle",
+    "page_title": "Please tell us more about your current loan.",
+    "frame_description": "The keyboard disappears and the 'I don't know, skip' toggle state changes to active (purple)."
+  },
+  {
+    "type": "hesitate",
+    "time_start": 57700.0,
+    "time_end": 60700.0,
+    "description": "User pauses briefly before selecting an option for the fixed rate question.",
+    "confidence": 0.7,
+    "page_title": "Please tell us more about your current loan.",
+    "frame_description": "The cursor lingers near the center of the screen while the user decides on the next action."
+  },
+  {
+    "type": "select",
+    "time_start": 60700.0,
+    "time_end": 61200.0,
+    "description": "User selects 'No' in response to 'Are you currently on a fixed rate?'.",
+    "confidence": 0.9,
+    "interaction_target": "No radio button",
+    "page_title": "Please tell us more about your current loan.",
+    "frame_description": "The 'No' option is highlighted with a purple selection indicator."
+  },
+  {
+    "type": "navigate",
+    "time_start": 61200.0,
+    "time_end": 61700.0,
+    "description": "The application automatically navigates to the next step after the selection.",
+    "confidence": 1.0,
+    "page_title": "Who is your current lender",
+    "frame_description": "The screen transitions from the loan details form to a lender search screen."
+  },
+  {
+    "type": "click",
+    "time_start": 62700.0,
+    "time_end": 63200.0,
+    "description": "User clicks on the search input field to begin searching for their lender.",
+    "confidence": 0.9,
+    "interaction_target": "Search for your lender input",
+    "page_title": "Who is your current lender",
+    "frame_description": "The search bar becomes focused with a blue border and the keyboard appears."
+  },
+  {
+    "type": "input_text",
+    "time_start": 63200.0,
+    "time_end": 64200.0,
+    "description": "User types 'St' into the lender search field.",
+    "confidence": 1.0,
+    "interaction_target": "Search for your lender input",
+    "page_title": "Who is your current lender",
+    "frame_description": "Characters 'S' and then 't' appear in the search bar as the user interacts with the keyboard."
+  },
+  {
+    "type": "select",
+    "time_start": 66200.0,
+    "time_end": 66700.0,
+    "description": "User selects the 'St George' suggestion from the dropdown list.",
+    "confidence": 0.9,
+    "interaction_target": "St George suggestion",
+    "page_title": "Aussie - Who is your current lender",
+    "frame_description": "The user taps the 'St George' suggestion, which populates the field and dismisses the keyboard."
+  },
+  {
+    "type": "click",
+    "time_start": 66200.0,
+    "time_end": 66200.0,
+    "description": "User clicks on the 'St George' suggestion in the lender search field.",
+    "confidence": 0.9,
+    "interaction_target": "St George suggestion",
+    "cursor_position": {
+      "x": 22.4,
+      "y": 667.2
+    },
+    "page_title": "Who is your current lender",
+    "frame_description": "The user selects the suggested lender from the dropdown list."
+  },
+  {
+    "type": "navigate",
+    "time_start": 66433.33333333334,
+    "time_end": 66900.0,
+    "description": "The page navigates from the lender selection to the property worth question.",
+    "confidence": 1.0,
+    "page_title": "How much do you think your property is worth?",
+    "frame_description": "The UI transitions to the next step of the form after the lender is selected."
+  },
+  {
+    "type": "click",
+    "time_start": 66700.0,
+    "time_end": 66700.0,
+    "description": "User clicks the 'NEXT' button to proceed.",
+    "confidence": 0.85,
+    "interaction_target": "NEXT button",
+    "page_title": "Aussie - Who is your current lender",
+    "frame_description": "The cursor is positioned over the purple 'NEXT' button as the user initiates the transition to the next screen."
+  },
+  {
+    "type": "navigate",
+    "time_start": 66700.0,
+    "time_end": 67200.0,
+    "description": "The page navigates to the next question regarding property value.",
+    "confidence": 0.95,
+    "page_title": "Aussie - How much do you think your property is worth?",
+    "frame_description": "The screen content changes from the lender selection to the property value input screen."
+  },
+  {
+    "type": "click",
+    "time_start": 68533.33333333333,
+    "time_end": 68766.66666666667,
+    "description": "User clicks on the property worth input field to focus it and bring up the keyboard.",
+    "confidence": 0.9,
+    "interaction_target": "Property worth input field",
+    "cursor_position": {
+      "x": 96.0,
+      "y": 608.4
+    },
+    "page_title": "How much do you think your property is worth?",
+    "frame_description": "The cursor moves to the input box and the mobile keyboard appears."
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 68600.0,
+    "time_end": 69600.0,
+    "description": "Rapid cursor movement with 6 direction changes at 1108px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 164.05454545454543,
+      "y": 590.4
+    }
+  },
+  {
+    "type": "input_text",
+    "time_start": 69200.0,
+    "time_end": 75200.0,
+    "description": "User enters the estimated property value into the input field, typing '1,100,000' using the on-screen keyboard.",
+    "confidence": 0.95,
+    "interaction_target": "How much do you think your property is worth? input field",
+    "page_title": "Aussie",
+    "frame_description": "The user is interacting with a property valuation form, entering numerical data into a text field while the mobile keyboard is active."
+  },
+  {
+    "type": "input_text",
+    "time_start": 69700.0,
+    "time_end": 71100.0,
+    "description": "User types '1.10' into the property worth input field using the on-screen keyboard.",
+    "confidence": 0.95,
+    "interaction_target": "Property worth input field",
+    "page_title": "How much do you think your property is worth?",
+    "frame_description": "The user interacts with the numeric keyboard to enter a value."
+  },
+  {
+    "type": "input_text",
+    "time_start": 74200.0,
+    "time_end": 76200.0,
+    "description": "User enters property value into the input field",
+    "confidence": 0.9,
+    "interaction_target": "Property value input field",
+    "page_title": "How much do you think your property is worth?"
+  },
+  {
+    "type": "click",
+    "time_start": 76200.0,
+    "time_end": 76200.0,
+    "description": "User clicks to proceed to the next step, likely by tapping a button or the keyboard's return key",
+    "confidence": 0.8,
+    "interaction_target": "NEXT button",
+    "cursor_position": {
+      "x": 26.0,
+      "y": 662.4
+    }
+  },
+  {
+    "type": "navigate",
+    "time_start": 76200.0,
+    "time_end": 76700.0,
+    "description": "Navigation to 'What's your refinancing goal?' page",
+    "confidence": 1.0,
+    "page_title": "What's your refinancing goal?"
+  },
+  {
+    "type": "dwell",
+    "time_start": 76700.0,
+    "time_end": 79200.0,
+    "description": "User reads the options on the 'What's your refinancing goal?' page",
+    "confidence": 0.9,
+    "page_title": "What's your refinancing goal?"
+  },
+  {
+    "type": "click",
+    "time_start": 77200.0,
+    "time_end": 79200.0,
+    "description": "User clicks 'Pay off loan faster' on the refinancing goal screen",
+    "confidence": 0.9,
+    "interaction_target": "Pay off loan faster",
+    "page_title": "What's your refinancing goal?"
+  },
+  {
+    "type": "navigate",
+    "time_start": 79200.0,
+    "time_end": 81200.0,
+    "description": "Navigation to the property usage screen",
+    "confidence": 0.9,
+    "page_title": "How will this property be used?"
+  },
+  {
+    "type": "click",
+    "time_start": 81200.0,
+    "time_end": 81200.0,
+    "description": "User clicks 'I will live there' on the property usage screen",
+    "confidence": 0.8,
+    "interaction_target": "I will live there",
+    "page_title": "How will this property be used?"
+  },
+  {
+    "type": "select",
+    "time_start": 83200.0,
+    "time_end": 87200.0,
+    "description": "User selects 'Major lender' as an important feature",
+    "confidence": 0.9,
+    "interaction_target": "Major lender",
+    "page_title": "Are any of the following important to you when choosing a lender?"
+  },
+  {
+    "type": "select",
+    "time_start": 86200.0,
+    "time_end": 87200.0,
+    "description": "User selects the 'Major lender' option on the lender features screen",
+    "confidence": 0.95,
+    "interaction_target": "Major lender",
+    "page_title": "Are any of the following important to you when choosing a lender?",
+    "frame_description": "The 'Major lender' icon is highlighted and then selected with a purple border."
+  },
+  {
+    "type": "select",
+    "time_start": 87700.0,
+    "time_end": 88200.0,
+    "description": "User selects the 'Offset/Redraw' option",
+    "confidence": 0.9,
+    "interaction_target": "Offset/Redraw",
+    "page_title": "Are any of the following important to you when choosing a lender?",
+    "frame_description": "The 'Offset/Redraw' icon shows a grey highlight indicating interaction."
+  },
+  {
+    "type": "navigate",
+    "time_start": 88700.0,
+    "time_end": 89200.0,
+    "description": "The page transitions from the lender features screen to the credit history question",
+    "confidence": 0.95,
+    "page_title": "What do you think your credit history is?",
+    "frame_description": "The screen scrolls or transitions to a new question about credit history."
+  },
+  {
+    "type": "select",
+    "time_start": 89200.0,
+    "time_end": 89700.0,
+    "description": "User selects 'Excellent - No Issues' from the credit history options",
+    "confidence": 0.95,
+    "interaction_target": "Excellent - No Issues",
+    "page_title": "What do you think your credit history is?",
+    "frame_description": "The 'Excellent - No Issues' button is selected with a purple border."
+  },
+  {
+    "type": "dwell",
+    "time_start": 90200.0,
+    "time_end": 91700.0,
+    "description": "User pauses briefly after selecting their credit history",
+    "confidence": 0.85,
+    "page_title": "What do you think your credit history is?",
+    "frame_description": "The cursor remains stationary on the selected credit history option."
+  },
+  {
+    "type": "navigate",
+    "time_start": 91700.0,
+    "time_end": 92200.0,
+    "description": "The page transitions to the income source question",
+    "confidence": 0.95,
+    "page_title": "How do you earn your income?",
+    "frame_description": "The screen transitions to show income earning options."
+  },
+  {
+    "type": "select",
+    "time_start": 92200.0,
+    "time_end": 93200.0,
+    "description": "User selects 'Other' as their income source",
+    "confidence": 0.95,
+    "interaction_target": "Other",
+    "page_title": "How do you earn your income?",
+    "frame_description": "The 'Other' button is highlighted and then selected."
+  },
+  {
+    "type": "dwell",
+    "time_start": 93200.0,
+    "time_end": 93666.66666666667,
+    "description": "User pauses on the income selection screen with the cursor over the 'I run my own business' option.",
+    "confidence": 0.8,
+    "interaction_target": "I run my own business",
+    "cursor_position": {
+      "x": 246.0,
+      "y": 458.4
+    },
+    "page_title": "Aussie Home Loans",
+    "frame_description": "The screen displays a question 'How do you earn your income?' with three selectable options."
+  },
+  {
+    "type": "navigate",
+    "time_start": 93700.0,
+    "time_end": 94200.0,
+    "description": "The page transitions to the final name input screen",
+    "confidence": 0.95,
+    "page_title": "One last thing, what's your first name?",
+    "frame_description": "The screen transitions to the final step of the form."
+  },
+  {
+    "type": "navigate",
+    "time_start": 93900.0,
+    "time_end": 94133.33333333334,
+    "description": "The page navigates back from the income selection screen to the first name input screen.",
+    "confidence": 0.9,
+    "page_title": "Aussie Home Loans",
+    "frame_description": "The UI transitions from the income question back to the 'One last thing, what's your first name?' screen."
+  },
+  {
+    "type": "dwell",
+    "time_start": 94133.33333333334,
+    "time_end": 95300.0,
+    "description": "User pauses on the name input screen, with the cursor lingering near the 'GET MY HOME LOAN MATCHES' button.",
+    "confidence": 0.8,
+    "interaction_target": "GET MY HOME LOAN MATCHES",
+    "cursor_position": {
+      "x": 92.0,
+      "y": 495.36
+    },
+    "page_title": "Aussie Home Loans",
+    "frame_description": "The screen shows a text input field for the user's first name and a large purple action button."
+  },
+  {
+    "type": "dwell",
+    "time_start": 94700.0,
+    "time_end": 95200.0,
+    "description": "User pauses on the name input screen before typing",
+    "confidence": 0.8,
+    "interaction_target": "Type your first name here",
+    "cursor_position": {
+      "x": 81.211904,
+      "y": 497.94914304
+    },
+    "page_title": "One last thing, what's your first name?",
+    "frame_description": "The cursor is positioned near the name input field."
+  },
+  {
+    "type": "click",
+    "time_start": 95533.33333333333,
+    "time_end": 95766.66666666667,
+    "description": "User clicks on the 'Type your first name here' input field to activate it for text entry.",
+    "confidence": 0.9,
+    "interaction_target": "Type your first name here",
+    "page_title": "Aussie Home Loans",
+    "frame_description": "The cursor moves to the input field, which then gains a blue focus border."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 95766.66666666667,
+    "time_end": 95766.66666666667,
+    "description": "The mobile on-screen keyboard appears as the input field is focused.",
+    "confidence": 1.0,
+    "interaction_target": "Type your first name here",
+    "page_title": "Aussie Home Loans",
+    "frame_description": "A standard iOS-style keyboard slides up from the bottom of the screen."
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 95800.0,
+    "time_end": 96800.0,
+    "description": "Rapid cursor movement with 6 direction changes at 562px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 87.59896436363637,
+      "y": 631.4736756363637
+    }
+  },
+  {
+    "type": "dwell",
+    "time_start": 96000.0,
+    "time_end": 98100.0,
+    "description": "User pauses with the keyboard open, moving the cursor over the keyboard area without entering text yet.",
+    "confidence": 0.7,
+    "cursor_position": {
+      "x": 254.4,
+      "y": 593.2
+    },
+    "page_title": "Aussie Home Loans",
+    "frame_description": "The keyboard remains visible at the bottom of the screen while the input field remains empty."
+  },
+  {
+    "type": "input_text",
+    "time_start": 98200.0,
+    "time_end": 102200.0,
+    "description": "User types 'JANE DO' into the first name input field",
+    "confidence": 1.0,
+    "interaction_target": "Type your first name here",
+    "page_title": "One last thing, what's your first name?",
+    "frame_description": "The user enters their name using the mobile keyboard."
+  },
+  {
+    "type": "input_text",
+    "time_start": 100200.0,
+    "time_end": 102066.66666666666,
+    "description": "User finishes entering their first name 'JANE DO' into the input field",
+    "confidence": 0.9,
+    "interaction_target": "First name input field",
+    "page_title": "One last thing, what's your first name?",
+    "frame_description": "The user is typing their name into the text box while the mobile keyboard is visible."
+  },
+  {
+    "type": "click",
+    "time_start": 102066.66666666666,
+    "time_end": 102300.0,
+    "description": "User clicks the 'GET MY HOME LOAN MATCHES' button",
+    "confidence": 0.8,
+    "interaction_target": "GET MY HOME LOAN MATCHES button",
+    "cursor_position": {
+      "x": 24.22400000000002,
+      "y": 662.592
+    },
+    "page_title": "One last thing, what's your first name?",
+    "frame_description": "The cursor moves towards the purple action button and the screen begins to transition."
+  },
+  {
+    "type": "navigate",
+    "time_start": 102300.0,
+    "time_end": 103000.0,
+    "description": "Page navigates from the name entry screen to the phone number verification screen",
+    "confidence": 0.9,
+    "page_title": "Your home loan options await!",
+    "frame_description": "The screen transitions through a white loading state to a new page."
+  },
+  {
+    "type": "dwell",
+    "time_start": 103233.33333333333,
+    "time_end": 106033.33333333333,
+    "description": "User pauses on the phone number verification screen, likely reading the requirement for an Australian mobile number",
+    "confidence": 0.9,
+    "cursor_position": {
+      "x": 129.248,
+      "y": 479.488
+    },
+    "page_title": "Your home loan options await!",
+    "frame_description": "The user remains on the new screen where a phone number input and an error message are visible."
+  },
+  {
+    "type": "dwell",
+    "time_start": 104200.0,
+    "time_end": 106200.0,
+    "description": "User pauses on the screen, likely reading the error message 'Please provide an Australian mobile phone number'.",
+    "confidence": 0.9,
+    "cursor_position": {
+      "x": 137.5761050304512,
+      "y": 469.6282894467073
+    },
+    "page_title": "Your home loan options await!",
+    "frame_description": "The screen shows a mobile number input field with an error message and a disabled 'PROTECT MY ACCOUNT' button."
+  },
+  {
+    "type": "click",
+    "time_start": 106700.0,
+    "time_end": 106700.0,
+    "description": "User clicks on the mobile number input field to begin entry.",
+    "confidence": 0.9,
+    "interaction_target": "Mobile number input field",
+    "cursor_position": {
+      "x": 137.5999999860061,
+      "y": 469.6000000165675
+    },
+    "frame_description": "The input field gains a blue focus border and the numeric keypad appears at the bottom of the screen."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 106700.0,
+    "time_end": 106700.0,
+    "description": "The numeric keypad and a suggested phone number appear after the input field is focused.",
+    "confidence": 0.95,
+    "frame_description": "A numeric keyboard and a suggested phone number '0490 024 490' are now visible."
+  },
+  {
+    "type": "input_text",
+    "time_start": 107200.0,
+    "time_end": 117200.0,
+    "description": "User enters and corrects their mobile phone number in the input field using the on-screen numeric keypad.",
+    "confidence": 1.0,
+    "interaction_target": "Mobile phone number input field",
+    "page_title": "Aussie - Your home loan options await!",
+    "frame_description": "The user is typing into the phone number field. The input changes from empty to a long string, then is corrected to '04422388' across the sequence."
+  },
+  {
+    "type": "hover",
+    "time_start": 108700.0,
+    "time_end": 108700.0,
+    "description": "User moves the cursor over the suggested phone number '0490 024 490' above the keypad.",
+    "confidence": 0.8,
+    "interaction_target": "Suggested phone number",
+    "cursor_position": {
+      "x": 268.4,
+      "y": 619.2
+    },
+    "frame_description": "The cursor is positioned directly over the auto-fill suggestion for the phone number."
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 109000.0,
+    "time_end": 110000.0,
+    "description": "Rapid cursor movement with 4 direction changes at 756px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 128.33333333333334,
+      "y": 556.5333333333333
+    }
+  },
+  {
+    "type": "input_text",
+    "time_start": 116200.0,
+    "time_end": 118300.0,
+    "description": "User finishes entering their mobile phone number into the input field",
+    "confidence": 1.0,
+    "interaction_target": "Mobile phone number input field",
+    "page_title": "Your home loan options await!",
+    "frame_description": "The user types the remaining digits of their phone number, causing the error message to disappear and the submit button to become enabled."
+  },
+  {
+    "type": "click",
+    "time_start": 118300.0,
+    "time_end": 118300.0,
+    "description": "User clicks the 'PROTECT MY ACCOUNT' button",
+    "confidence": 0.9,
+    "interaction_target": "PROTECT MY ACCOUNT button",
+    "page_title": "Your home loan options await!",
+    "frame_description": "The cursor is positioned over the purple 'PROTECT MY ACCOUNT' button just before it transitions to a loading state."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 118533.33333333333,
+    "time_end": 119000.0,
+    "description": "A loading spinner appears on the 'PROTECT MY ACCOUNT' button",
+    "confidence": 0.9,
+    "frame_description": "The button turns grey and displays a white loading spinner, indicating the request is being processed."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 119233.33333333333,
+    "time_end": 119233.33333333333,
+    "description": "An error message 'Something Went Wrong' appears on the screen",
+    "confidence": 1.0,
+    "frame_description": "A red error box appears above the button stating 'Something Went Wrong. Please try again shortly or contact us for further assistance.'"
+  },
+  {
+    "type": "dwell",
+    "time_start": 119233.33333333333,
+    "time_end": 120633.33333333334,
+    "description": "User pauses to read the error message",
+    "confidence": 0.8,
+    "frame_description": "The screen remains static as the user likely reads the newly appeared error message."
+  },
+  {
+    "type": "click",
+    "time_start": 120866.66666666666,
+    "time_end": 120866.66666666666,
+    "description": "User clicks the 'PROTECT MY ACCOUNT' button again after the error",
+    "confidence": 0.9,
+    "interaction_target": "PROTECT MY ACCOUNT button",
+    "page_title": "Your home loan options await!",
+    "frame_description": "The user attempts to submit the form again by clicking the enabled purple button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 121100.0,
+    "time_end": 125300.0,
+    "description": "Loading spinner appears on the button again",
+    "confidence": 0.9,
+    "frame_description": "The button returns to a loading state for an extended period."
+  },
+  {
+    "type": "navigate",
+    "time_start": 125533.33333333333,
+    "time_end": 128100.0,
+    "description": "The page transitions to a loading screen for the next step of the process",
+    "confidence": 1.0,
+    "page_title": "Aussie - TALK TO A BROKER",
+    "frame_description": "The previous form disappears, replaced by a loading screen with a house icon and the text 'Loading.... You're moving along nicely.'"
+  },
+  {
+    "type": "navigate",
+    "time_start": 129000.0,
+    "time_end": 129233.33333333331,
+    "description": "Page navigates from the loading screen to the Aussie home loan rates page",
+    "confidence": 0.9,
+    "page_title": "home loan rates",
+    "page_location": "aussie.com.au",
+    "frame_description": "The screen transitions from a loading animation to the Aussie home loan rates landing page."
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 129100.0,
+    "time_end": 129600.0,
+    "description": "Rapid cursor movement with 4 direction changes at 568px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 230.58333333333334,
+      "y": 220.5666666666667
+    }
+  },
+  {
+    "type": "navigate",
+    "time_start": 129466.66666666667,
+    "time_end": 129699.99999999999,
+    "description": "User navigates back to the Google search results page",
+    "confidence": 0.9,
+    "page_title": "Google Search",
+    "page_location": "google.com",
+    "frame_description": "The view switches from the Aussie website back to a list of Google search results for home loans."
+  },
+  {
+    "type": "scroll",
+    "time_start": 129699.99999999999,
+    "time_end": 133900.0,
+    "description": "User scrolls through the Google search results for home loans",
+    "confidence": 0.8,
+    "interaction_target": "Search results list",
+    "frame_description": "The user scrolls vertically through various bank and lender search results on Google."
+  },
+  {
+    "type": "navigate",
+    "time_start": 133900.0,
+    "time_end": 134133.3333333333,
+    "description": "User navigates from the search results to the ubank home loans page",
+    "confidence": 0.9,
+    "page_title": "Home loans",
+    "page_location": "ubank.com.au",
+    "frame_description": "The page transitions from Google search results to the ubank home loans landing page."
+  },
+  {
+    "type": "dwell",
+    "time_start": 134133.3333333333,
+    "time_end": 136933.33333333334,
+    "description": "User dwells on the ubank home loans page, with the cursor hovering near the 'Apply now' button",
+    "confidence": 0.8,
+    "interaction_target": "Apply now button",
+    "cursor_position": {
+      "x": 154.0,
+      "y": 460.4
+    },
+    "page_title": "Home loans",
+    "frame_description": "The user remains stationary on the top section of the ubank page, likely reading the interest rate information."
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 136500.0,
+    "time_end": 137500.0,
+    "description": "Rapid cursor movement with 4 direction changes at 818px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 156.9090909090909,
+      "y": 406.5818501808284
+    }
+  },
+  {
+    "type": "scroll",
+    "time_start": 137166.66666666666,
+    "time_end": 138800.0,
+    "description": "User scrolls down the ubank home loans page to view more content",
+    "confidence": 0.8,
+    "frame_description": "The user scrolls down to reveal more information and options on the ubank home loans page."
+  },
+  {
+    "type": "dwell",
+    "time_start": 139033.33333333334,
+    "time_end": 140200.0,
+    "description": "User pauses to examine the lower section of the ubank home loans page",
+    "confidence": 0.7,
+    "frame_description": "The user stops scrolling to read content in the middle section of the ubank page."
+  },
+  {
+    "type": "hover",
+    "time_start": 139200.0,
+    "time_end": 141200.0,
+    "description": "User hovers over the 'I'm refinancing' tile on the ubank home page",
+    "confidence": 0.85,
+    "interaction_target": "I'm refinancing",
+    "page_title": "ubank",
+    "frame_description": "The cursor stays positioned over the 'I'm refinancing' option before the user clicks."
+  },
+  {
+    "type": "click",
+    "time_start": 141200.0,
+    "time_end": 141200.0,
+    "description": "User clicks the 'I'm refinancing' button to view refinance options",
+    "confidence": 0.9,
+    "interaction_target": "I'm refinancing",
+    "page_title": "ubank"
+  },
+  {
+    "type": "navigate",
+    "time_start": 141200.0,
+    "time_end": 141700.0,
+    "description": "The application navigates to the 'Refinance your home loan' page",
+    "confidence": 1.0,
+    "page_title": "Refinance your home loan",
+    "page_location": "Refinance your home loan"
+  },
+  {
+    "type": "scroll",
+    "time_start": 141433.33333333334,
+    "time_end": 141666.66666666666,
+    "description": "User scrolls down the page to the refinance section.",
+    "confidence": 0.9,
+    "page_title": "ubank - Home loans"
+  },
+  {
+    "type": "hover",
+    "time_start": 141666.66666666666,
+    "time_end": 142833.33333333334,
+    "description": "User hovers the cursor over the 'Book an appointment' button.",
+    "confidence": 0.8,
+    "interaction_target": "Book an appointment button",
+    "cursor_position": {
+      "x": 232.0,
+      "y": 566.4
+    },
+    "page_title": "ubank - Home loans"
+  },
+  {
+    "type": "scroll",
+    "time_start": 144700.0,
+    "time_end": 145633.3333333333,
+    "description": "User scrolls down past the main call-to-action buttons.",
+    "confidence": 0.9,
+    "page_title": "ubank - Home loans"
+  },
+  {
+    "type": "scroll",
+    "time_start": 146100.0,
+    "time_end": 146333.33333333334,
+    "description": "User scrolls down to the 'Perks of refinancing' section.",
+    "confidence": 0.9,
+    "page_title": "ubank - Home loans"
+  },
+  {
+    "type": "dwell",
+    "time_start": 146800.0,
+    "time_end": 147733.3333333333,
+    "description": "User pauses to read the 'Perks of refinancing your home loan' section.",
+    "confidence": 0.7,
+    "interaction_target": "Perks of refinancing section",
+    "page_title": "ubank - Home loans"
+  },
+  {
+    "type": "scroll",
+    "time_start": 149600.0,
+    "time_end": 149833.33333333334,
+    "description": "User scrolls down to the eligibility section.",
+    "confidence": 0.9,
+    "page_title": "ubank - Home loans"
+  },
+  {
+    "type": "dwell",
+    "time_start": 151466.66666666666,
+    "time_end": 152633.3333333333,
+    "description": "User reads the 'Home loan eligibility' criteria.",
+    "confidence": 0.7,
+    "interaction_target": "Home loan eligibility section",
+    "page_title": "ubank - Home loans"
+  },
+  {
+    "type": "scroll",
+    "time_start": 152633.3333333333,
+    "time_end": 153100.0,
+    "description": "User scrolls down to the 'How to refinance' section.",
+    "confidence": 0.9,
+    "page_title": "ubank - Home loans"
+  },
+  {
+    "type": "dwell",
+    "time_start": 153333.33333333334,
+    "time_end": 153800.0,
+    "description": "User reads the steps in the 'How to refinance with us' section.",
+    "confidence": 0.7,
+    "interaction_target": "How to refinance section",
+    "page_title": "ubank - Home loans"
+  },
+  {
+    "type": "scroll",
+    "time_start": 153800.0,
+    "time_end": 154266.6666666667,
+    "description": "User scrolls down to the savings calculator.",
+    "confidence": 0.9,
+    "page_title": "ubank - Home loans"
+  },
+  {
+    "type": "dwell",
+    "time_start": 155200.0,
+    "time_end": 157300.0,
+    "description": "User examines the 'Calculate your savings' section and calculator inputs.",
+    "confidence": 0.8,
+    "interaction_target": "Calculate your savings section",
+    "cursor_position": {
+      "x": 281.8,
+      "y": 240.0
+    },
+    "page_title": "ubank - Home loans"
+  },
+  {
+    "type": "dwell",
+    "time_start": 156200.0,
+    "time_end": 156900.0,
+    "description": "User dwells on the home loan calculator page, with the cursor positioned over the 'An investment' property type button.",
+    "confidence": 0.8,
+    "interaction_target": "An investment button",
+    "cursor_position": {
+      "x": 281.99932214271996,
+      "y": 240.0
+    },
+    "page_title": "ubank home loan calculator",
+    "frame_description": "The user is viewing the 'Your current home loan' section of the ubank calculator."
+  },
+  {
+    "type": "scroll",
+    "time_start": 157300.0,
+    "time_end": 158000.0,
+    "description": "User scrolls back up the page.",
+    "confidence": 0.9,
+    "page_title": "ubank - Home loans"
+  },
+  {
+    "type": "navigate",
+    "time_start": 157366.6666666667,
+    "time_end": 157600.0,
+    "description": "User navigates from the home loan calculator back to the ubank home page.",
+    "confidence": 0.9,
+    "page_title": "ubank",
+    "frame_description": "The screen transitions from the calculator back to the main landing page."
+  },
+  {
+    "type": "dwell",
+    "time_start": 157600.0,
+    "time_end": 158766.6666666667,
+    "description": "User pauses on the ubank home page, cursor near the top left logo area.",
+    "confidence": 0.8,
+    "cursor_position": {
+      "x": 80.4,
+      "y": 157.2
+    },
+    "page_title": "ubank",
+    "frame_description": "The user is on the ubank home page showing various loan options like 'I'm buying' and 'I'm refinancing'."
+  },
+  {
+    "type": "hover",
+    "time_start": 158000.0,
+    "time_end": 158000.0,
+    "description": "User pauses the cursor after scrolling up.",
+    "confidence": 0.6,
+    "cursor_position": {
+      "x": 81.109632,
+      "y": 157.491456
+    },
+    "page_title": "ubank - Home loans"
+  },
+  {
+    "type": "navigate",
+    "time_start": 158766.6666666667,
+    "time_end": 159000.0,
+    "description": "User navigates from the ubank home page to Google search results for 'home loan australia bank st george'.",
+    "confidence": 1.0,
+    "page_title": "Google Search Results",
+    "frame_description": "The browser transitions to a Google search results page."
+  },
+  {
+    "type": "scroll",
+    "time_start": 160166.66666666666,
+    "time_end": 164133.3333333333,
+    "description": "User scrolls down the Google search results page, passing sponsored results from ubank, Suncorp Bank, and Bendigo Bank.",
+    "confidence": 1.0,
+    "page_title": "Google Search Results",
+    "frame_description": "The user is scrolling through search results for home loans in Australia."
+  },
+  {
+    "type": "scroll",
+    "time_start": 162200.0,
+    "time_end": 164700.0,
+    "description": "User scrolls down through the sponsored search results, passing Bendigo Bank and Aussie Home Loans.",
+    "confidence": 0.9,
+    "page_title": "Google Search Results"
+  },
+  {
+    "type": "navigate",
+    "time_start": 164700.0,
+    "time_end": 165200.0,
+    "description": "User navigates from the search results to the St. George Bank Home Loans landing page.",
+    "confidence": 0.9,
+    "page_title": "Home Loans - St.George Bank"
+  },
+  {
+    "type": "dwell",
+    "time_start": 165200.0,
+    "time_end": 168200.0,
+    "description": "User dwells on the St. George Bank Home Loans page, with the cursor positioned over the 'Apply online' call-to-action button.",
+    "confidence": 0.9,
+    "interaction_target": "Apply online button",
+    "cursor_position": {
+      "x": 249.0,
+      "y": 212.0
+    },
+    "page_title": "Home Loans - St.George Bank"
+  },
+  {
+    "type": "dwell",
+    "time_start": 166200.0,
+    "time_end": 172200.0,
+    "description": "User dwells on the Home Loans landing page, likely reviewing the available options such as 'Apply online', 'Book appointment', and 'Calculators and tools'.",
+    "confidence": 0.9,
+    "interaction_target": "Home Loans page",
+    "cursor_position": {
+      "x": 247.17536,
+      "y": 212.0
+    },
+    "page_title": "Home Loans",
+    "frame_description": "The user is viewing the main Home Loans page which features a green banner and several navigation icons."
+  },
+  {
+    "type": "navigate",
+    "time_start": 172200.0,
+    "time_end": 174200.0,
+    "description": "User navigates from the Home Loans landing page to the 'calculators and tools' section.",
+    "confidence": 1.0,
+    "interaction_target": "Calculators and tools",
+    "page_title": "calculators and tools",
+    "frame_description": "The screen transitions to show the 'calculators and tools' page header and introductory text."
+  },
+  {
+    "type": "click",
+    "time_start": 172200.0,
+    "time_end": 173133.3333333333,
+    "description": "User clicks on the 'Calculators and tools' tile on the Home Loans page.",
+    "confidence": 0.95,
+    "interaction_target": "Calculators and tools",
+    "cursor_position": {
+      "x": 247.0,
+      "y": 212.0
+    },
+    "page_title": "Home Loans"
+  },
+  {
+    "type": "scroll",
+    "time_start": 174533.33333333334,
+    "time_end": 176400.0,
+    "description": "User scrolls down through the list of home loan calculators.",
+    "confidence": 1.0,
+    "page_title": "Home loan calculators and tools"
+  },
+  {
+    "type": "dwell",
+    "time_start": 176633.3333333333,
+    "time_end": 177100.0,
+    "description": "User pauses to examine the 'Stamp duty calculator' section.",
+    "confidence": 0.8,
+    "interaction_target": "Stamp duty calculator",
+    "cursor_position": {
+      "x": 238.4,
+      "y": 311.2
+    },
+    "page_title": "Home loan calculators and tools"
+  },
+  {
+    "type": "scroll",
+    "time_start": 177333.33333333334,
+    "time_end": 179200.0,
+    "description": "User continues scrolling down the page to view more calculators.",
+    "confidence": 1.0,
+    "page_title": "Home loan calculators and tools"
+  },
+  {
+    "type": "click",
+    "time_start": 179066.66666666666,
+    "time_end": 179300.0,
+    "description": "User clicks on the 'Estimate refinance savings' link",
+    "confidence": 0.95,
+    "interaction_target": "Estimate refinance savings",
+    "page_title": "Home loans",
+    "frame_description": "A grey selection highlight appears on the 'Estimate refinance savings' link before the page transitions."
+  },
+  {
+    "type": "navigate",
+    "time_start": 179300.0,
+    "time_end": 179533.33333333334,
+    "description": "Page navigates to the Refinance Calculator tool",
+    "confidence": 1.0,
+    "page_title": "Refinance calculator",
+    "frame_description": "The screen transitions from the home loan overview to the specific refinance calculator page."
+  },
+  {
+    "type": "scroll",
+    "time_start": 179533.33333333334,
+    "time_end": 180933.33333333334,
+    "description": "User scrolls down to view the calculator inputs and initial results",
+    "confidence": 0.9,
+    "page_title": "Refinance calculator",
+    "frame_description": "The user scrolls through the 'My current loan' section to see the calculated monthly repayment."
+  },
+  {
+    "type": "dwell",
+    "time_start": 181166.66666666666,
+    "time_end": 183266.6666666667,
+    "description": "User pauses to review the calculated monthly repayment amount of $3,196",
+    "confidence": 0.85,
+    "page_title": "Refinance calculator",
+    "frame_description": "The screen remains static as the user examines the 'Current repayment' result."
+  },
+  {
+    "type": "hover",
+    "time_start": 183500.0,
+    "time_end": 183733.3333333333,
+    "description": "User hovers over the information icon next to 'My current rate'",
+    "confidence": 0.7,
+    "interaction_target": "My current rate info icon",
+    "cursor_position": {
+      "x": 294.0,
+      "y": 594.4
+    },
+    "page_title": "Refinance calculator",
+    "frame_description": "The cursor moves briefly to the '?' icon next to the interest rate field, suggesting interest in more details."
+  },
+  {
+    "type": "click",
+    "time_start": 183700.0,
+    "time_end": 183700.0,
+    "description": "User clicks the help icon next to the 'My current rate' field.",
+    "confidence": 0.7,
+    "interaction_target": "My current rate help icon",
+    "cursor_position": {
+      "x": 294.0,
+      "y": 594.4
+    },
+    "page_title": "Home loan repayment calculator",
+    "frame_description": "The cursor is positioned over the question mark icon next to the interest rate input."
+  },
+  {
+    "type": "select",
+    "time_start": 185700.0,
+    "time_end": 189700.0,
+    "description": "User opens the 'Loan term left' dropdown and selects '25' years, confirming the selection with a tap at the top of the screen.",
+    "confidence": 0.9,
+    "interaction_target": "Loan term left dropdown",
+    "page_title": "Home loan repayment calculator",
+    "frame_description": "A scrollable selection menu appears for the loan term, and the user interacts with it to change the value from 20 to 25."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 190200.0,
+    "time_end": 190200.0,
+    "description": "The 'Loan term left' value updates to 25, the monthly repayment amount recalculates to $2,515, and a 'Need help?' chat modal appears.",
+    "confidence": 0.9,
+    "interaction_target": "Need help? modal",
+    "page_title": "Home loan repayment calculator",
+    "frame_description": "A green pop-up modal with the text 'Need help?' and a 'Chat now' button appears over the calculator form."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 191200.0,
+    "time_end": 191666.66666666666,
+    "description": "A 'Need help?' chat invitation modal is visible on the screen.",
+    "confidence": 0.9,
+    "interaction_target": "Need help? modal",
+    "page_title": "Home loan calculator - St.George Bank"
+  },
+  {
+    "type": "dwell",
+    "time_start": 191900.0,
+    "time_end": 192833.33333333334,
+    "description": "User dwells on the home loan calculator page after the help modal is dismissed.",
+    "confidence": 0.8,
+    "page_title": "Home loan calculator - St.George Bank"
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 192200.0,
+    "time_end": 192200.0,
+    "description": "The 'Need help?' modal is dismissed, leaving a small 'Chat now' tab visible on the right edge of the screen.",
+    "confidence": 0.8,
+    "interaction_target": "Need help? modal",
+    "page_title": "Home loan repayment calculator",
+    "frame_description": "The large green modal disappears, revealing the updated calculator results underneath."
+  },
+  {
+    "type": "scroll",
+    "time_start": 192833.33333333334,
+    "time_end": 193066.66666666666,
+    "description": "User scrolls down the page, shifting the view from 'Amount left to pay' to 'Loan type'.",
+    "confidence": 0.9,
+    "interaction_target": "Home loan calculator page",
+    "page_title": "Home loan calculator - St.George Bank"
+  },
+  {
+    "type": "dwell",
+    "time_start": 193066.66666666666,
+    "time_end": 195633.3333333333,
+    "description": "User pauses to read the loan type and term information.",
+    "confidence": 0.8,
+    "page_title": "Home loan calculator - St.George Bank"
+  },
+  {
+    "type": "dwell",
+    "time_start": 194200.0,
+    "time_end": 198200.0,
+    "description": "User dwells on the mortgage calculator results, reviewing the current loan term and interest rate.",
+    "confidence": 0.9,
+    "interaction_target": "Loan details section",
+    "page_title": "St.George Bank - Home loan repayment calculator",
+    "frame_description": "The user is looking at the input fields for loan term (25 years) and current rate (5.74%)."
+  },
+  {
+    "type": "scroll",
+    "time_start": 195633.3333333333,
+    "time_end": 195866.6666666667,
+    "description": "User scrolls further down, bringing 'Loan term left' to the top of the view.",
+    "confidence": 0.9,
+    "interaction_target": "Home loan calculator page",
+    "page_title": "Home loan calculator - St.George Bank"
+  },
+  {
+    "type": "dwell",
+    "time_start": 195866.6666666667,
+    "time_end": 196100.0,
+    "description": "User continues reading the updated loan information.",
+    "confidence": 0.8,
+    "page_title": "Home loan calculator - St.George Bank"
+  },
+  {
+    "type": "dwell",
+    "time_start": 197200.0,
+    "time_end": 200000.0,
+    "description": "User dwells on the savings summary section, likely reading the calculated monthly savings ($49) and repayments ($2,466).",
+    "confidence": 0.9,
+    "interaction_target": "Savings summary",
+    "page_title": "Home Loan Repayment Calculator",
+    "frame_description": "The screen displays a summary of potential savings and new repayments when switching to St.George."
+  },
+  {
+    "type": "scroll",
+    "time_start": 198200.0,
+    "time_end": 199200.0,
+    "description": "User scrolls down to view the potential savings and new repayment amounts calculated by the tool.",
+    "confidence": 1.0,
+    "interaction_target": "Page",
+    "page_title": "St.George Bank - Home loan repayment calculator",
+    "frame_description": "The page content scrolls upwards, bringing the 'Switching to St.George' results into view."
+  },
+  {
+    "type": "scroll",
+    "time_start": 200000.0,
+    "time_end": 200700.0,
+    "description": "User scrolls down the page to view more details of the home loan offer.",
+    "confidence": 0.8,
+    "page_title": "Home Loan Repayment Calculator",
+    "frame_description": "The page content moves upwards, revealing interest rate details."
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 200300.0,
+    "time_end": 201300.0,
+    "description": "Rapid cursor movement with 7 direction changes at 614px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 130.96926254545454,
+      "y": 534.0055505454546
+    }
+  },
+  {
+    "type": "dwell",
+    "time_start": 200933.33333333334,
+    "time_end": 203033.33333333334,
+    "description": "User pauses to examine the interest rate (5.54% p.a.) and comparison rate (5.55% p.a.) details for the Basic Variable Rate Home Loan.",
+    "confidence": 0.8,
+    "interaction_target": "Interest rate details",
+    "cursor_position": {
+      "x": 51.6,
+      "y": 593.6
+    },
+    "page_title": "Home Loan Repayment Calculator",
+    "frame_description": "The cursor is stationary over the interest rate information section."
+  },
+  {
+    "type": "scroll",
+    "time_start": 203033.33333333334,
+    "time_end": 205133.3333333333,
+    "description": "User scrolls further down to the bottom of the calculator results.",
+    "confidence": 0.8,
+    "page_title": "Home Loan Repayment Calculator",
+    "frame_description": "The page scrolls down to show the 'Extra monthly repayments' section."
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 203900.0,
+    "time_end": 204900.0,
+    "description": "Rapid cursor movement with 5 direction changes at 636px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 56.24616727272728,
+      "y": 443.6157672727273
+    }
+  },
+  {
+    "type": "click",
+    "time_start": 205200.0,
+    "time_end": 207066.66666666666,
+    "description": "User clicks an option within the 'Jump to' dropdown menu on the St. George bank website",
+    "confidence": 0.9,
+    "interaction_target": "Jump to menu item",
+    "cursor_position": {
+      "x": 51.6,
+      "y": 321.6
+    },
+    "page_title": "Home Loans - St.George Bank",
+    "frame_description": "The user interacts with a dropdown menu at the top of the page."
+  },
+  {
+    "type": "dwell",
+    "time_start": 205366.6666666667,
+    "time_end": 207000.0,
+    "description": "User dwells on the 'Want to pay off your home loan sooner?' section, near the extra monthly repayments input field.",
+    "confidence": 0.8,
+    "interaction_target": "Extra monthly repayments section",
+    "cursor_position": {
+      "x": 51.6,
+      "y": 303.28000000000003
+    },
+    "page_title": "Home Loan Repayment Calculator",
+    "frame_description": "The cursor lingers near the input field for extra monthly repayments at the bottom of the calculator."
+  },
+  {
+    "type": "navigate",
+    "time_start": 207300.0,
+    "time_end": 207300.0,
+    "description": "The page navigates to 'Home loan calculators and tools'",
+    "confidence": 1.0,
+    "page_title": "Home loan calculators and tools",
+    "frame_description": "A new page loads showing various home loan calculation tools."
+  },
+  {
+    "type": "click",
+    "time_start": 207533.33333333334,
+    "time_end": 208233.3333333333,
+    "description": "User clicks the browser's back button to return to search results",
+    "confidence": 0.8,
+    "interaction_target": "Browser back button",
+    "cursor_position": {
+      "x": 199.65,
+      "y": 200.4
+    },
+    "frame_description": "The cursor moves towards the top left of the screen before the page transitions."
+  },
+  {
+    "type": "navigate",
+    "time_start": 208466.66666666666,
+    "time_end": 208466.66666666666,
+    "description": "The page navigates back to the Google search results for 'homelone australia bank st george'",
+    "confidence": 1.0,
+    "page_title": "homelone australia bank st george - Google Search",
+    "frame_description": "The browser returns to the previous Google search results page."
+  },
+  {
+    "type": "scroll",
+    "time_start": 208466.66666666666,
+    "time_end": 211500.0,
+    "description": "User scrolls down through the Google search results",
+    "confidence": 0.9,
+    "frame_description": "The user is reviewing different bank options in the search results."
+  },
+  {
+    "type": "click",
+    "time_start": 211733.3333333333,
+    "time_end": 211733.3333333333,
+    "description": "User clicks on the search bar to modify the search query",
+    "confidence": 0.9,
+    "interaction_target": "Google search bar",
+    "cursor_position": {
+      "x": 203.0,
+      "y": 68.0
+    },
+    "frame_description": "The cursor is positioned over the search input field."
+  },
+  {
+    "type": "input_text",
+    "time_start": 214533.33333333334,
+    "time_end": 217566.66666666666,
+    "description": "User modifies the search query to 'homelone australia banks'",
+    "confidence": 0.9,
+    "interaction_target": "Google search bar",
+    "frame_description": "The keyboard is visible and the text in the search bar changes."
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 217000.0,
+    "time_end": 218000.0,
+    "description": "Rapid cursor movement with 4 direction changes at 1038px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 145.06691860081978,
+      "y": 440.65890671343146
+    }
+  },
+  {
+    "type": "click",
+    "time_start": 217800.0,
+    "time_end": 217800.0,
+    "description": "User clicks the search button to execute the new query",
+    "confidence": 0.9,
+    "interaction_target": "Search button",
+    "cursor_position": {
+      "x": 277.0,
+      "y": 24.0
+    },
+    "frame_description": "The user triggers a new search."
+  },
+  {
+    "type": "navigate",
+    "time_start": 218033.33333333334,
+    "time_end": 218033.33333333334,
+    "description": "The page navigates to the new search results for 'homelone australia banks'",
+    "confidence": 1.0,
+    "page_title": "homelone australia banks - Google Search",
+    "frame_description": "New search results appear on the screen."
+  },
+  {
+    "type": "dwell",
+    "time_start": 218033.33333333334,
+    "time_end": 219666.66666666666,
+    "description": "User pauses to examine the updated search results",
+    "confidence": 0.8,
+    "cursor_position": {
+      "x": 277.456,
+      "y": 26.607999999999997
+    },
+    "frame_description": "The cursor remains relatively stationary as the user reads the new results."
+  },
+  {
+    "type": "dwell",
+    "time_start": 218200.0,
+    "time_end": 219200.0,
+    "description": "User pauses on the Google search results page, examining the current search query 'homelone australia banks'.",
+    "confidence": 0.8,
+    "cursor_position": {
+      "x": 277.20064,
+      "y": 25.14752
+    },
+    "page_title": "homelone australia banks - Google Search"
+  },
+  {
+    "type": "click",
+    "time_start": 219900.0,
+    "time_end": 220133.3333333333,
+    "description": "User clicks back into the search bar",
+    "confidence": 0.9,
+    "interaction_target": "Google search bar",
+    "cursor_position": {
+      "x": 151.5,
+      "y": 350.2
+    },
+    "frame_description": "The search suggestions overlay reappears after the user clicks the search bar."
+  },
+  {
+    "type": "input_text",
+    "time_start": 220200.0,
+    "time_end": 225200.0,
+    "description": "User edits the search query using the on-screen keyboard, changing the focus from 'homelone' to 'refinancing'.",
+    "confidence": 0.9,
+    "interaction_target": "Search input field",
+    "frame_description": "Keyboard is visible and search suggestions update as the user types."
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 221100.0,
+    "time_end": 222100.0,
+    "description": "Rapid cursor movement with 4 direction changes at 779px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 251.22041260255418,
+      "y": 511.5555093422825
+    }
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 221700.0,
+    "time_end": 221700.0,
+    "description": "A text selection context menu (Cut, Copy, Paste, etc.) appears over the search suggestions.",
+    "confidence": 0.8
+  },
+  {
+    "type": "dwell",
+    "time_start": 223200.0,
+    "time_end": 224700.0,
+    "description": "User pauses to review search suggestions for bank refinancing in Australia",
+    "confidence": 0.8,
+    "cursor_position": {
+      "x": 291.88603648,
+      "y": 534.171273216
+    },
+    "page_title": "Google Search Suggestions"
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 224600.0,
+    "time_end": 225600.0,
+    "description": "Rapid cursor movement with 4 direction changes at 919px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 287.9090841302537,
+      "y": 395.1999863947547
+    }
+  },
+  {
+    "type": "click",
+    "time_start": 225200.0,
+    "time_end": 225200.0,
+    "description": "User selects a search suggestion for 'refinancing australia banks'",
+    "confidence": 0.7,
+    "interaction_target": "Search suggestion",
+    "cursor_position": {
+      "x": 288.99999898577846,
+      "y": 432.3199979644396
+    }
+  },
+  {
+    "type": "navigate",
+    "time_start": 225700.0,
+    "time_end": 225700.0,
+    "description": "Page navigates to Google search results for 'refinanching australia banks'",
+    "confidence": 0.9,
+    "page_title": "refinanching australia banks - Google Search",
+    "page_location": "https://www.google.com/search?q=refinanching+australia+banks"
+  },
+  {
+    "type": "dwell",
+    "time_start": 226200.0,
+    "time_end": 229200.0,
+    "description": "User examines the search results, specifically the sponsored link for Macquarie Bank",
+    "confidence": 0.8,
+    "cursor_position": {
+      "x": 277.018432,
+      "y": 24.62717952
+    },
+    "page_title": "refinanching australia banks - Google Search"
+  },
+  {
+    "type": "click",
+    "time_start": 229833.33333333334,
+    "time_end": 230066.66666666666,
+    "description": "User clicks on the Macquarie Bank search result link",
+    "confidence": 0.9,
+    "interaction_target": "Macquarie Bank Home Loan Refinance",
+    "cursor_position": {
+      "x": 277.0000000000153,
+      "y": 24.00000000051866
+    },
+    "page_title": "refinancing australia banks - Google Search",
+    "page_location": "google.com"
+  },
+  {
+    "type": "navigate",
+    "time_start": 230300.0,
+    "time_end": 230300.0,
+    "description": "Page navigates to the Macquarie Bank home loan refinance page",
+    "confidence": 1.0,
+    "page_title": "Refinance your home loan | Macquarie",
+    "page_location": "macquarie.com.au"
+  },
+  {
+    "type": "dwell",
+    "time_start": 230300.0,
+    "time_end": 232866.6666666667,
+    "description": "User examines the content on the Macquarie Bank refinance page, specifically looking at interest rates",
+    "confidence": 0.85,
+    "page_title": "Refinance your home loan | Macquarie",
+    "frame_description": "The user is viewing variable and comparison rates for home loan refinancing."
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 232200.0,
+    "time_end": 233200.0,
+    "description": "Rapid cursor movement with 4 direction changes at 769px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 144.14545454545453,
+      "y": 162.91636363636363
+    }
+  },
+  {
+    "type": "navigate",
+    "time_start": 233100.0,
+    "time_end": 233100.0,
+    "description": "User navigates back to the Google search results page",
+    "confidence": 0.95,
+    "page_title": "refinancing australia banks - Google Search"
+  },
+  {
+    "type": "scroll",
+    "time_start": 233333.33333333334,
+    "time_end": 238233.3333333333,
+    "description": "User scrolls down through the Google search results to view more options",
+    "confidence": 0.9,
+    "frame_description": "Scrolling past results for ubank, Heritage Bank, and ANZ."
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 237800.0,
+    "time_end": 238800.0,
+    "description": "Rapid cursor movement with 4 direction changes at 614px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 108.48,
+      "y": 428.1381818028763
+    }
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 238466.66666666666,
+    "time_end": 238466.66666666666,
+    "description": "A task instruction modal appears, overlaying the search results",
+    "confidence": 1.0,
+    "interaction_target": "Task Instructions Modal"
+  },
+  {
+    "type": "dwell",
+    "time_start": 238700.0,
+    "time_end": 239633.3333333333,
+    "description": "User pauses to read the newly appeared task instructions",
+    "confidence": 0.9,
+    "cursor_position": {
+      "x": 243.4,
+      "y": 584.0
+    },
+    "frame_description": "The user is reading the 'Part 1: Starting Point' section of the task instructions."
+  }
+]

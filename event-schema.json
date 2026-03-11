@@ -60,32 +60,9 @@
       "type": "string",
       "description": "Description of the element that was interacted with (eg. a button label)"
     },
-    "interaction_region_of_interest": {
-      "type": "object",
-      "description": "The region of interest in the video where the user action occurred (if applicable)",
-      "properties": {
-        "x": {
-          "type": "number",
-          "description": "The x-coordinate of the region of interest in the video"
-        },
-        "y": {
-          "type": "number",
-          "description": "The y-coordinate of the region of interest in the video"
-        },
-        "width": {
-          "type": "number",
-          "description": "The width of the region of interest in the video"
-        },
-        "height": {
-          "type": "number",
-          "description": "The height of the region of interest in the video"
-        }
-      },
-      "additionalProperties": false
-    },
     "cursor_position": {
       "type": "object",
-      "description": "The position of the cursor in the video (if applicable)",
+      "description": "The position of the cursor in the video",
       "properties": {
         "x": {
           "type": "number",
@@ -123,5 +100,15 @@
       "description": "The ID of the task where the user action occurred"
     }
   },
-  "additionalProperties": false
+  "additionalProperties": false,
+  "if": {
+    "properties": {
+      "type": {
+        "enum": ["click", "hover", "dwell", "cursor_thrash"]
+      }
+    }
+  },
+  "then": {
+    "required": ["cursor_position"]
+  }
 }

@@ -1,0 +1,2761 @@
+{
+  "frames_analysed": 467,
+  "cursor_detection_rate": 0.5931,
+  "cursor_detections": 277,
+  "template_match_counts": {
+    "wait": 8,
+    "arrow": 53,
+    "hand": 215,
+    "ibeam": 1
+  },
+  "flow_windows": 136,
+  "local_events_total": 304,
+  "local_events_by_type": {
+    "click": 277,
+    "cursor_thrash": 18,
+    "hover": 5,
+    "hesitate": 2,
+    "dwell": 2
+  },
+  "local_events_needing_enrichment": 286,
+  "roi_rects": 236,
+  "processing_time_ms": 24172.3,
+  "local_events": [
+    {
+      "type": "click",
+      "time_start_ms": 116.78333333333333,
+      "time_end_ms": 116.78333333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1791, 492)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 233.56666666666666,
+      "time_end_ms": 233.56666666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1791, 651)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 817.4833333333333,
+      "time_end_ms": 817.4833333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1276, 854)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 934.2666666666667,
+      "time_end_ms": 934.2666666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1245, 936)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 1051.05,
+      "time_end_ms": 1051.05,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1106, 879)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 1167.8333333333333,
+      "time_end_ms": 1167.8333333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (966, 822)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 1284.6166666666668,
+      "time_end_ms": 1284.6166666666668,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (826, 765)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 1401.4,
+      "time_end_ms": 1518.1833333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (687, 709)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 1518.1833333333334,
+      "time_end_ms": 1518.1833333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (687, 709)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 2102.1,
+      "time_end_ms": 2218.883333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1276, 854)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 2218.883333333333,
+      "time_end_ms": 2218.883333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1276, 854)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 3386.7166666666667,
+      "time_end_ms": 3386.7166666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (862, 812)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 3503.5000000000005,
+      "time_end_ms": 3503.5000000000005,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (636, 748)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 3620.2833333333333,
+      "time_end_ms": 3620.2833333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (961, 794)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "cursor_thrash",
+      "time_start_ms": 3620.2833333333333,
+      "time_end_ms": 4554.55,
+      "confidence": 0.65,
+      "synthesis_method": "direction_change_density",
+      "description": "Rapid cursor movement with 4 direction changes at 1835px/s",
+      "needs_enrichment": false
+    },
+    {
+      "type": "click",
+      "time_start_ms": 3737.0666666666666,
+      "time_end_ms": 3737.0666666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1287, 841)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 3853.85,
+      "time_end_ms": 3853.85,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1216, 838)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 3970.633333333333,
+      "time_end_ms": 4087.416666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1276, 854)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 4087.416666666667,
+      "time_end_ms": 4087.416666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1276, 854)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 4204.2,
+      "time_end_ms": 4204.2,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1028, 806)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 4320.983333333334,
+      "time_end_ms": 4320.983333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (781, 758)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 4437.766666666666,
+      "time_end_ms": 4437.766666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1438, 875)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 4554.55,
+      "time_end_ms": 4554.55,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1357, 863)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 4671.333333333333,
+      "time_end_ms": 4671.333333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1276, 851)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 4788.116666666667,
+      "time_end_ms": 4788.116666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (696, 745)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 4904.900000000001,
+      "time_end_ms": 4904.900000000001,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (889, 781)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 5021.683333333333,
+      "time_end_ms": 5021.683333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1082, 817)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 5138.466666666667,
+      "time_end_ms": 5255.25,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1276, 854)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "cursor_thrash",
+      "time_start_ms": 5138.466666666667,
+      "time_end_ms": 6072.733333333334,
+      "confidence": 0.65,
+      "synthesis_method": "direction_change_density",
+      "description": "Rapid cursor movement with 4 direction changes at 803px/s",
+      "needs_enrichment": false
+    },
+    {
+      "type": "click",
+      "time_start_ms": 5255.25,
+      "time_end_ms": 5255.25,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1276, 854)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 5372.033333333334,
+      "time_end_ms": 5372.033333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1028, 806)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 5488.816666666667,
+      "time_end_ms": 5488.816666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (781, 758)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 5605.6,
+      "time_end_ms": 5605.6,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (830, 767)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 5722.383333333333,
+      "time_end_ms": 5722.383333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (781, 758)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 5839.166666666666,
+      "time_end_ms": 5839.166666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (767, 758)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 5955.950000000001,
+      "time_end_ms": 5955.950000000001,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (781, 758)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 6072.733333333334,
+      "time_end_ms": 6072.733333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (663, 747)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 6189.516666666667,
+      "time_end_ms": 6189.516666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (546, 737)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 6306.3,
+      "time_end_ms": 6306.3,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (429, 727)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 6423.083333333333,
+      "time_end_ms": 6423.083333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1276, 854)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 7007.000000000001,
+      "time_end_ms": 7123.783333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (781, 758)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 7123.783333333334,
+      "time_end_ms": 7123.783333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (781, 758)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 7240.566666666667,
+      "time_end_ms": 7357.35,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1445, 896)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 7357.35,
+      "time_end_ms": 7357.35,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1445, 896)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 7474.133333333333,
+      "time_end_ms": 7474.133333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (636, 757)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 7590.916666666667,
+      "time_end_ms": 7590.916666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (396, 823)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 7707.7,
+      "time_end_ms": 7707.7,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (455, 803)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 7824.483333333334,
+      "time_end_ms": 7824.483333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (515, 784)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 7941.266666666666,
+      "time_end_ms": 7941.266666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (574, 764)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "hover",
+      "time_start_ms": 8058.049999999999,
+      "time_end_ms": 8525.183333333332,
+      "confidence": 0.6,
+      "synthesis_method": "cursor_stationary",
+      "description": "Cursor stationary for 467ms near (633, 745)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 8058.049999999999,
+      "time_end_ms": 8058.049999999999,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (633, 745)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 8174.833333333334,
+      "time_end_ms": 8174.833333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (621, 748)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 8291.616666666667,
+      "time_end_ms": 8291.616666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (631, 745)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 8408.4,
+      "time_end_ms": 8408.4,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (638, 746)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 8525.183333333332,
+      "time_end_ms": 8525.183333333332,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (633, 745)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 8641.966666666667,
+      "time_end_ms": 8641.966666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (674, 748)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 8758.750000000002,
+      "time_end_ms": 8758.750000000002,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (714, 752)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 8875.533333333333,
+      "time_end_ms": 8875.533333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (754, 756)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 8992.316666666668,
+      "time_end_ms": 8992.316666666668,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (795, 760)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 9109.1,
+      "time_end_ms": 9109.1,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (636, 745)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 10276.933333333334,
+      "time_end_ms": 10276.933333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1678, 974)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 10393.716666666667,
+      "time_end_ms": 10393.716666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1184, 830)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 10510.5,
+      "time_end_ms": 10510.5,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (690, 687)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 10627.283333333333,
+      "time_end_ms": 10744.066666666668,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (636, 745)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 10744.066666666668,
+      "time_end_ms": 10744.066666666668,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (636, 745)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 11444.766666666666,
+      "time_end_ms": 11444.766666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1664, 89)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 12612.6,
+      "time_end_ms": 12729.383333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (781, 758)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 12729.383333333333,
+      "time_end_ms": 12729.383333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (781, 758)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 13897.216666666667,
+      "time_end_ms": 14014.000000000002,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1245, 960)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 14014.000000000002,
+      "time_end_ms": 14014.000000000002,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1245, 960)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 15065.05,
+      "time_end_ms": 15065.05,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (637, 962)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 15765.75,
+      "time_end_ms": 15765.75,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (636, 712)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 16816.8,
+      "time_end_ms": 16816.8,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (873, 262)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "cursor_thrash",
+      "time_start_ms": 16816.8,
+      "time_end_ms": 17751.066666666666,
+      "confidence": 0.65,
+      "synthesis_method": "direction_change_density",
+      "description": "Rapid cursor movement with 4 direction changes at 1350px/s",
+      "needs_enrichment": false
+    },
+    {
+      "type": "click",
+      "time_start_ms": 16933.583333333336,
+      "time_end_ms": 16933.583333333336,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (931, 394)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 17050.366666666665,
+      "time_end_ms": 17050.366666666665,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (988, 527)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 17167.149999999998,
+      "time_end_ms": 17167.149999999998,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1046, 660)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 17283.933333333334,
+      "time_end_ms": 17283.933333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1104, 793)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 17400.716666666667,
+      "time_end_ms": 17400.716666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (633, 745)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 17517.500000000004,
+      "time_end_ms": 17517.500000000004,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (727, 749)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 17634.283333333333,
+      "time_end_ms": 17634.283333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (633, 736)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 17751.066666666666,
+      "time_end_ms": 17751.066666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (652, 733)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 17984.633333333335,
+      "time_end_ms": 17984.633333333335,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (639, 729)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 18101.416666666664,
+      "time_end_ms": 18101.416666666664,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (633, 727)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 18685.333333333332,
+      "time_end_ms": 18685.333333333332,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (489, 793)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 18802.116666666665,
+      "time_end_ms": 18802.116666666665,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1438, 884)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 19386.033333333333,
+      "time_end_ms": 19386.033333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (636, 751)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 19502.81666666667,
+      "time_end_ms": 19619.600000000002,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1534, 917)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 19619.600000000002,
+      "time_end_ms": 19619.600000000002,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1534, 917)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 19736.38333333333,
+      "time_end_ms": 19736.38333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1228, 902)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 19853.166666666668,
+      "time_end_ms": 19853.166666666668,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (636, 754)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 19969.95,
+      "time_end_ms": 19969.95,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (687, 781)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 20086.733333333334,
+      "time_end_ms": 20086.733333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (636, 745)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 20203.516666666666,
+      "time_end_ms": 20203.516666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (300, 757)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 20320.3,
+      "time_end_ms": 20320.3,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (441, 775)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 20437.083333333332,
+      "time_end_ms": 20437.083333333332,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (723, 801)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "cursor_thrash",
+      "time_start_ms": 20437.083333333332,
+      "time_end_ms": 21371.35,
+      "confidence": 0.65,
+      "synthesis_method": "direction_change_density",
+      "description": "Rapid cursor movement with 4 direction changes at 1645px/s",
+      "needs_enrichment": false
+    },
+    {
+      "type": "click",
+      "time_start_ms": 20553.86666666667,
+      "time_end_ms": 20553.86666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1005, 827)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 20670.65,
+      "time_end_ms": 20670.65,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1287, 853)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 20787.433333333334,
+      "time_end_ms": 20904.216666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (888, 856)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 20904.216666666667,
+      "time_end_ms": 20904.216666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (888, 856)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 21021.0,
+      "time_end_ms": 21021.0,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (493, 824)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 21137.783333333336,
+      "time_end_ms": 21137.783333333336,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (572, 830)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 21254.566666666666,
+      "time_end_ms": 21254.566666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (493, 824)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "hover",
+      "time_start_ms": 21371.35,
+      "time_end_ms": 21721.7,
+      "confidence": 0.6,
+      "synthesis_method": "cursor_stationary",
+      "description": "Cursor stationary for 350ms near (508, 825)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 21371.35,
+      "time_end_ms": 21371.35,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (508, 825)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 21721.7,
+      "time_end_ms": 21838.483333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (494, 824)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 21838.483333333334,
+      "time_end_ms": 21838.483333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (493, 824)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 22422.4,
+      "time_end_ms": 22422.4,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (621, 697)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 22539.183333333334,
+      "time_end_ms": 22539.183333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (637, 761)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 22655.966666666667,
+      "time_end_ms": 22655.966666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (956, 807)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "cursor_thrash",
+      "time_start_ms": 22655.966666666667,
+      "time_end_ms": 23590.233333333334,
+      "confidence": 0.65,
+      "synthesis_method": "direction_change_density",
+      "description": "Rapid cursor movement with 4 direction changes at 1603px/s",
+      "needs_enrichment": false
+    },
+    {
+      "type": "click",
+      "time_start_ms": 22772.750000000004,
+      "time_end_ms": 22772.750000000004,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1276, 854)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 22889.533333333333,
+      "time_end_ms": 22889.533333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1100, 818)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 23006.316666666666,
+      "time_end_ms": 23006.316666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1276, 854)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 23123.100000000002,
+      "time_end_ms": 23123.100000000002,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (718, 722)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 23239.883333333335,
+      "time_end_ms": 23239.883333333335,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (689, 729)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 23356.666666666664,
+      "time_end_ms": 23356.666666666664,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (661, 737)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 23473.45,
+      "time_end_ms": 23473.45,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (633, 745)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 23590.233333333334,
+      "time_end_ms": 23590.233333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (788, 761)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 23707.016666666666,
+      "time_end_ms": 23707.016666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (943, 777)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 23823.800000000003,
+      "time_end_ms": 23940.583333333332,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1098, 793)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 23940.583333333332,
+      "time_end_ms": 23940.583333333332,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1101, 793)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 24057.36666666667,
+      "time_end_ms": 24174.15,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (633, 745)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 24174.15,
+      "time_end_ms": 24174.15,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (633, 745)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 24290.933333333334,
+      "time_end_ms": 24290.933333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1101, 793)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "hover",
+      "time_start_ms": 24874.850000000002,
+      "time_end_ms": 25225.2,
+      "confidence": 0.6,
+      "synthesis_method": "cursor_stationary",
+      "description": "Cursor stationary for 350ms near (633, 727)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 25108.416666666668,
+      "time_end_ms": 25225.2,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (633, 727)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 25225.2,
+      "time_end_ms": 25225.2,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (633, 727)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 26276.25,
+      "time_end_ms": 26276.25,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (636, 745)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "cursor_thrash",
+      "time_start_ms": 26276.25,
+      "time_end_ms": 27210.516666666666,
+      "confidence": 0.65,
+      "synthesis_method": "direction_change_density",
+      "description": "Rapid cursor movement with 6 direction changes at 2956px/s",
+      "needs_enrichment": false
+    },
+    {
+      "type": "click",
+      "time_start_ms": 26393.033333333336,
+      "time_end_ms": 26393.033333333336,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (430, 802)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 26509.816666666666,
+      "time_end_ms": 26509.816666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (225, 859)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 26626.6,
+      "time_end_ms": 26626.6,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (267, 847)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 26743.383333333335,
+      "time_end_ms": 26743.383333333335,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (228, 859)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 26860.166666666668,
+      "time_end_ms": 26860.166666666668,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (422, 865)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 26976.95,
+      "time_end_ms": 26976.95,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (228, 859)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 27093.733333333334,
+      "time_end_ms": 27093.733333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1158, 904)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 27210.516666666666,
+      "time_end_ms": 27210.516666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (228, 859)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 27327.3,
+      "time_end_ms": 27327.3,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (621, 874)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "cursor_thrash",
+      "time_start_ms": 27327.3,
+      "time_end_ms": 28261.566666666666,
+      "confidence": 0.65,
+      "synthesis_method": "direction_change_density",
+      "description": "Rapid cursor movement with 6 direction changes at 2985px/s",
+      "needs_enrichment": false
+    },
+    {
+      "type": "click",
+      "time_start_ms": 27444.083333333336,
+      "time_end_ms": 27444.083333333336,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (228, 859)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 27560.866666666665,
+      "time_end_ms": 27560.866666666665,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1263, 889)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 27677.65,
+      "time_end_ms": 27677.65,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (891, 823)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 27794.433333333334,
+      "time_end_ms": 27794.433333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (225, 859)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 27911.216666666667,
+      "time_end_ms": 27911.216666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (360, 851)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 28028.000000000004,
+      "time_end_ms": 28028.000000000004,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (228, 859)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 28144.783333333333,
+      "time_end_ms": 28144.783333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (254, 857)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 28261.566666666666,
+      "time_end_ms": 28261.566666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (233, 858)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 28378.350000000002,
+      "time_end_ms": 28378.350000000002,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (199, 723)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "cursor_thrash",
+      "time_start_ms": 28378.350000000002,
+      "time_end_ms": 29312.61666666667,
+      "confidence": 0.65,
+      "synthesis_method": "direction_change_density",
+      "description": "Rapid cursor movement with 7 direction changes at 1260px/s",
+      "needs_enrichment": false
+    },
+    {
+      "type": "click",
+      "time_start_ms": 28495.133333333335,
+      "time_end_ms": 28495.133333333335,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (228, 859)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 28611.916666666664,
+      "time_end_ms": 28611.916666666664,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (51, 180)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 28728.7,
+      "time_end_ms": 28728.7,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (86, 316)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 28845.483333333334,
+      "time_end_ms": 28845.483333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (51, 180)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 28962.266666666666,
+      "time_end_ms": 28962.266666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (58, 207)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "hover",
+      "time_start_ms": 29079.050000000003,
+      "time_end_ms": 29779.75,
+      "confidence": 0.6,
+      "synthesis_method": "cursor_stationary",
+      "description": "Cursor stationary for 701ms near (52, 185)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "hesitate",
+      "time_start_ms": 29079.050000000003,
+      "time_end_ms": 29779.75,
+      "confidence": 0.5,
+      "synthesis_method": "pause_before_action",
+      "description": "Hesitation (701ms) near (52, 185) before action",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 29662.966666666667,
+      "time_end_ms": 29779.75,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (51, 181)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "cursor_thrash",
+      "time_start_ms": 29662.966666666667,
+      "time_end_ms": 30597.233333333334,
+      "confidence": 0.65,
+      "synthesis_method": "direction_change_density",
+      "description": "Rapid cursor movement with 4 direction changes at 5108px/s",
+      "needs_enrichment": false
+    },
+    {
+      "type": "click",
+      "time_start_ms": 29779.75,
+      "time_end_ms": 29779.75,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (51, 180)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 29896.533333333333,
+      "time_end_ms": 29896.533333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (390, 213)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 30013.31666666667,
+      "time_end_ms": 30013.31666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (51, 180)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 30130.1,
+      "time_end_ms": 30246.88333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1748, 342)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 30246.88333333333,
+      "time_end_ms": 30246.88333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1748, 342)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 30363.666666666668,
+      "time_end_ms": 30363.666666666668,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (51, 180)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 30480.45,
+      "time_end_ms": 30480.45,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (390, 212)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 30597.233333333334,
+      "time_end_ms": 30714.016666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (51, 180)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 30714.016666666666,
+      "time_end_ms": 30714.016666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (51, 180)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "cursor_thrash",
+      "time_start_ms": 30714.016666666666,
+      "time_end_ms": 31648.283333333336,
+      "confidence": 0.65,
+      "synthesis_method": "direction_change_density",
+      "description": "Rapid cursor movement with 5 direction changes at 6814px/s",
+      "needs_enrichment": false
+    },
+    {
+      "type": "click",
+      "time_start_ms": 30830.8,
+      "time_end_ms": 30830.8,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1748, 342)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 30947.583333333336,
+      "time_end_ms": 30947.583333333336,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (51, 180)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 31064.36666666667,
+      "time_end_ms": 31064.36666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (390, 212)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 31181.149999999998,
+      "time_end_ms": 31297.933333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (51, 180)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 31297.933333333334,
+      "time_end_ms": 31297.933333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (51, 180)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 31414.716666666667,
+      "time_end_ms": 31414.716666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1542, 826)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 31531.5,
+      "time_end_ms": 31531.5,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1245, 693)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 31648.283333333336,
+      "time_end_ms": 31765.066666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1545, 820)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 31765.066666666666,
+      "time_end_ms": 31765.066666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1545, 817)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "cursor_thrash",
+      "time_start_ms": 31765.066666666666,
+      "time_end_ms": 32699.333333333336,
+      "confidence": 0.65,
+      "synthesis_method": "direction_change_density",
+      "description": "Rapid cursor movement with 5 direction changes at 8984px/s",
+      "needs_enrichment": false
+    },
+    {
+      "type": "click",
+      "time_start_ms": 31881.85,
+      "time_end_ms": 31881.85,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (51, 180)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 31998.633333333335,
+      "time_end_ms": 31998.633333333335,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (689, 340)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 32115.416666666668,
+      "time_end_ms": 32115.416666666668,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (51, 180)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 32232.199999999997,
+      "time_end_ms": 32232.199999999997,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1748, 342)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 32348.983333333337,
+      "time_end_ms": 32465.766666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (51, 180)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 32465.766666666666,
+      "time_end_ms": 32465.766666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (51, 180)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 32582.55,
+      "time_end_ms": 32582.55,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1748, 342)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 32699.333333333336,
+      "time_end_ms": 32699.333333333336,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1408, 310)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 32816.11666666667,
+      "time_end_ms": 32816.11666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1748, 342)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 32932.9,
+      "time_end_ms": 32932.9,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1680, 336)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "dwell",
+      "time_start_ms": 33049.683333333334,
+      "time_end_ms": 36086.05,
+      "confidence": 0.7,
+      "synthesis_method": "cursor_stationary_extended",
+      "description": "Extended pause (3036ms) near (1748, 342)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 33049.683333333334,
+      "time_end_ms": 33049.683333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1748, 342)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 33166.46666666667,
+      "time_end_ms": 33166.46666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1734, 341)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 35735.700000000004,
+      "time_end_ms": 35852.48333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1747, 342)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 35852.48333333333,
+      "time_end_ms": 35852.48333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1747, 342)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 35969.26666666667,
+      "time_end_ms": 35969.26666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1739, 349)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 36086.05,
+      "time_end_ms": 36086.05,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1748, 342)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 36202.83333333333,
+      "time_end_ms": 36202.83333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1707, 378)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 36319.61666666667,
+      "time_end_ms": 36319.61666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1710, 363)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 39239.200000000004,
+      "time_end_ms": 39239.200000000004,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1371, 841)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "cursor_thrash",
+      "time_start_ms": 39239.200000000004,
+      "time_end_ms": 40173.46666666667,
+      "confidence": 0.65,
+      "synthesis_method": "direction_change_density",
+      "description": "Rapid cursor movement with 7 direction changes at 4307px/s",
+      "needs_enrichment": false
+    },
+    {
+      "type": "click",
+      "time_start_ms": 39355.98333333334,
+      "time_end_ms": 39355.98333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1707, 480)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 39472.76666666666,
+      "time_end_ms": 39472.76666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1640, 552)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 39589.55,
+      "time_end_ms": 39589.55,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1707, 480)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 39706.333333333336,
+      "time_end_ms": 39706.333333333336,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1463, 573)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 39823.11666666666,
+      "time_end_ms": 39823.11666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1707, 480)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 39939.9,
+      "time_end_ms": 39939.9,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (552, 871)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 40056.683333333334,
+      "time_end_ms": 40056.683333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1707, 480)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 40173.46666666667,
+      "time_end_ms": 40173.46666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1335, 495)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 40290.25,
+      "time_end_ms": 40290.25,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1707, 480)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 40407.03333333333,
+      "time_end_ms": 40407.03333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1002, 166)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 40523.816666666666,
+      "time_end_ms": 40523.816666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1126, 310)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 40640.6,
+      "time_end_ms": 40640.6,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1250, 454)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 40757.38333333334,
+      "time_end_ms": 40757.38333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1374, 598)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 40874.166666666664,
+      "time_end_ms": 40874.166666666664,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1342, 562)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 40990.95,
+      "time_end_ms": 40990.95,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1371, 598)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 41574.86666666667,
+      "time_end_ms": 41574.86666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1748, 189)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "cursor_thrash",
+      "time_start_ms": 41574.86666666667,
+      "time_end_ms": 42509.13333333333,
+      "confidence": 0.65,
+      "synthesis_method": "direction_change_density",
+      "description": "Rapid cursor movement with 7 direction changes at 10187px/s",
+      "needs_enrichment": false
+    },
+    {
+      "type": "click",
+      "time_start_ms": 41691.65,
+      "time_end_ms": 41691.65,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (60, 43)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 41808.433333333334,
+      "time_end_ms": 41808.433333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1748, 189)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 41925.21666666667,
+      "time_end_ms": 41925.21666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1071, 128)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 42042.0,
+      "time_end_ms": 42042.0,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1748, 189)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 42158.78333333333,
+      "time_end_ms": 42158.78333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (51, 30)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 42275.56666666667,
+      "time_end_ms": 42275.56666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1748, 189)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 42392.35,
+      "time_end_ms": 42392.35,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1069, 125)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 42509.13333333333,
+      "time_end_ms": 42509.13333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1748, 189)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 42625.91666666667,
+      "time_end_ms": 42625.91666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (51, 30)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "cursor_thrash",
+      "time_start_ms": 42625.91666666667,
+      "time_end_ms": 43560.183333333334,
+      "confidence": 0.65,
+      "synthesis_method": "direction_change_density",
+      "description": "Rapid cursor movement with 7 direction changes at 2726px/s",
+      "needs_enrichment": false
+    },
+    {
+      "type": "click",
+      "time_start_ms": 42742.7,
+      "time_end_ms": 42742.7,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1748, 189)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 42859.48333333334,
+      "time_end_ms": 42859.48333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1408, 157)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 42976.26666666667,
+      "time_end_ms": 42976.26666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1748, 189)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 43093.049999999996,
+      "time_end_ms": 43093.049999999996,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1680, 183)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "dwell",
+      "time_start_ms": 43209.833333333336,
+      "time_end_ms": 45895.850000000006,
+      "confidence": 0.7,
+      "synthesis_method": "cursor_stationary_extended",
+      "description": "Extended pause (2686ms) near (1748, 189)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 43209.833333333336,
+      "time_end_ms": 43209.833333333336,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1748, 189)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 43326.61666666667,
+      "time_end_ms": 43326.61666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1734, 188)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 45779.066666666666,
+      "time_end_ms": 45895.850000000006,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1747, 189)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 45895.850000000006,
+      "time_end_ms": 45895.850000000006,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1747, 189)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 46012.63333333333,
+      "time_end_ms": 46012.63333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1703, 230)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 46129.416666666664,
+      "time_end_ms": 46129.416666666664,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1748, 189)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 46246.200000000004,
+      "time_end_ms": 46246.200000000004,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1525, 395)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 46362.98333333333,
+      "time_end_ms": 46362.98333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1303, 601)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 46479.76666666667,
+      "time_end_ms": 46479.76666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1080, 808)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 46596.55,
+      "time_end_ms": 46596.55,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1113, 808)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 46713.33333333333,
+      "time_end_ms": 46713.33333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1146, 808)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 46830.11666666667,
+      "time_end_ms": 46830.11666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1179, 808)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 46946.9,
+      "time_end_ms": 46946.9,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (670, 622)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 47063.683333333334,
+      "time_end_ms": 47063.683333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (162, 436)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 47647.600000000006,
+      "time_end_ms": 47647.600000000006,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1462, 974)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 47764.38333333333,
+      "time_end_ms": 47764.38333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1350, 845)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 47881.166666666664,
+      "time_end_ms": 47881.166666666664,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1238, 716)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 47997.950000000004,
+      "time_end_ms": 48114.73333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1475, 1010)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "cursor_thrash",
+      "time_start_ms": 47997.950000000004,
+      "time_end_ms": 48932.21666666667,
+      "confidence": 0.65,
+      "synthesis_method": "direction_change_density",
+      "description": "Rapid cursor movement with 4 direction changes at 5349px/s",
+      "needs_enrichment": false
+    },
+    {
+      "type": "click",
+      "time_start_ms": 48114.73333333334,
+      "time_end_ms": 48114.73333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1475, 1010)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 48231.51666666666,
+      "time_end_ms": 48231.51666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1004, 688)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 48348.3,
+      "time_end_ms": 48348.3,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (532, 365)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 48465.083333333336,
+      "time_end_ms": 48465.083333333336,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (60, 43)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 48581.86666666667,
+      "time_end_ms": 48581.86666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1748, 189)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 48698.65,
+      "time_end_ms": 48698.65,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1284, 124)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 48815.433333333334,
+      "time_end_ms": 48815.433333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1748, 189)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 48932.21666666667,
+      "time_end_ms": 48932.21666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1119, 10)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 49049.0,
+      "time_end_ms": 49049.0,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1464, 447)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "cursor_thrash",
+      "time_start_ms": 49049.0,
+      "time_end_ms": 49983.26666666666,
+      "confidence": 0.65,
+      "synthesis_method": "direction_change_density",
+      "description": "Rapid cursor movement with 6 direction changes at 712px/s",
+      "needs_enrichment": false
+    },
+    {
+      "type": "click",
+      "time_start_ms": 49165.78333333334,
+      "time_end_ms": 49165.78333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1346, 354)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 49282.566666666666,
+      "time_end_ms": 49282.566666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1464, 447)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 49399.35,
+      "time_end_ms": 49399.35,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1218, 421)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 49516.13333333334,
+      "time_end_ms": 49516.13333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1267, 426)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "hover",
+      "time_start_ms": 49632.916666666664,
+      "time_end_ms": 50216.833333333336,
+      "confidence": 0.6,
+      "synthesis_method": "cursor_stationary",
+      "description": "Cursor stationary for 584ms near (1218, 421)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 49632.916666666664,
+      "time_end_ms": 49632.916666666664,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1218, 421)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "hesitate",
+      "time_start_ms": 49632.916666666664,
+      "time_end_ms": 50216.833333333336,
+      "confidence": 0.5,
+      "synthesis_method": "pause_before_action",
+      "description": "Hesitation (584ms) near (1218, 421) before action",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 49749.700000000004,
+      "time_end_ms": 49749.700000000004,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1228, 422)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 50100.05,
+      "time_end_ms": 50216.833333333336,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1219, 421)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "cursor_thrash",
+      "time_start_ms": 50100.05,
+      "time_end_ms": 51034.316666666666,
+      "confidence": 0.65,
+      "synthesis_method": "direction_change_density",
+      "description": "Rapid cursor movement with 4 direction changes at 1573px/s",
+      "needs_enrichment": false
+    },
+    {
+      "type": "click",
+      "time_start_ms": 50216.833333333336,
+      "time_end_ms": 50216.833333333336,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1219, 421)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 50333.61666666666,
+      "time_end_ms": 50333.61666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1144, 445)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 50450.4,
+      "time_end_ms": 50450.4,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1218, 421)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 50567.183333333334,
+      "time_end_ms": 50567.183333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (847, 542)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 50683.96666666667,
+      "time_end_ms": 50800.75,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (847, 239)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 50800.75,
+      "time_end_ms": 50800.75,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (847, 239)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 50917.53333333333,
+      "time_end_ms": 50917.53333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (847, 659)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 51034.316666666666,
+      "time_end_ms": 51034.316666666666,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (769, 476)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 51151.1,
+      "time_end_ms": 51151.1,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (847, 632)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "cursor_thrash",
+      "time_start_ms": 51151.1,
+      "time_end_ms": 52085.36666666667,
+      "confidence": 0.65,
+      "synthesis_method": "direction_change_density",
+      "description": "Rapid cursor movement with 5 direction changes at 5359px/s",
+      "needs_enrichment": false
+    },
+    {
+      "type": "click",
+      "time_start_ms": 51267.88333333334,
+      "time_end_ms": 51267.88333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (459, 199)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 51384.666666666664,
+      "time_end_ms": 51384.666666666664,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1416, 679)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 51501.45,
+      "time_end_ms": 51501.45,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (750, 160)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 51618.23333333334,
+      "time_end_ms": 51735.01666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1419, 85)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 51735.01666666667,
+      "time_end_ms": 51735.01666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1419, 85)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 51851.8,
+      "time_end_ms": 51851.8,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (429, 85)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 51968.583333333336,
+      "time_end_ms": 51968.583333333336,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (847, 653)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 52085.36666666667,
+      "time_end_ms": 52085.36666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (763, 537)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 52202.15,
+      "time_end_ms": 52318.933333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (847, 650)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 52318.933333333334,
+      "time_end_ms": 52318.933333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (847, 650)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 52435.71666666667,
+      "time_end_ms": 52435.71666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (910, 685)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 52552.5,
+      "time_end_ms": 52552.5,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (974, 721)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 52669.28333333333,
+      "time_end_ms": 52669.28333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1037, 757)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 52786.06666666667,
+      "time_end_ms": 52786.06666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1101, 793)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 52902.85,
+      "time_end_ms": 52902.85,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1085, 794)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 53019.63333333333,
+      "time_end_ms": 53019.63333333333,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1092, 811)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 53136.41666666667,
+      "time_end_ms": 53136.41666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1086, 824)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 53253.2,
+      "time_end_ms": 53253.2,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1085, 835)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 53369.98333333334,
+      "time_end_ms": 53369.98333333334,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1082, 843)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 53486.76666666667,
+      "time_end_ms": 53486.76666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1101, 863)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 53603.549999999996,
+      "time_end_ms": 53603.549999999996,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1080, 853)",
+      "needs_enrichment": true
+    },
+    {
+      "type": "click",
+      "time_start_ms": 53720.333333333336,
+      "time_end_ms": 53837.11666666667,
+      "confidence": 0.3,
+      "synthesis_method": "brief_stop_pattern",
+      "description": "Possible click at (1180, 932)",
+      "needs_enrichment": true
+    }
+  ]
+}

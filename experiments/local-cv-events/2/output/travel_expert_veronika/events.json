@@ -1,0 +1,347 @@
+[
+  {
+    "type": "dwell",
+    "time_start": 33625.51666666667,
+    "time_end": 42818.03333333333,
+    "description": "User reads the task instructions as they appear on the screen.",
+    "confidence": 0.9,
+    "cursor_position": {
+      "x": 1791.0,
+      "y": 651.0
+    },
+    "page_title": "Task Instructions"
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 37062.28333333333,
+    "time_end": 37996.55,
+    "description": "Rapid cursor movement with 4 direction changes at 1835px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 1179.8666666666666,
+      "y": 831.2666666666667
+    }
+  },
+  {
+    "type": "click",
+    "time_start": 43301.85,
+    "time_end": 43301.85,
+    "description": "User clicks the 'Open' button to start the task.",
+    "confidence": 0.9,
+    "interaction_target": "Open button",
+    "page_title": "Task Instructions"
+  },
+  {
+    "type": "navigate",
+    "time_start": 44269.48333333334,
+    "time_end": 44753.3,
+    "description": "User switches to the Google search page.",
+    "confidence": 0.9,
+    "page_title": "Google",
+    "page_location": "google.com"
+  },
+  {
+    "type": "navigate",
+    "time_start": 44753.3,
+    "time_end": 45237.11666666667,
+    "description": "User switches back to the task instructions tab.",
+    "confidence": 0.9,
+    "page_title": "Task Instructions"
+  },
+  {
+    "type": "navigate",
+    "time_start": 49107.65,
+    "time_end": 49591.46666666667,
+    "description": "User switches back to the Google search page.",
+    "confidence": 0.9,
+    "page_title": "Google",
+    "page_location": "google.com"
+  },
+  {
+    "type": "navigate",
+    "time_start": 50609.149999999994,
+    "time_end": 51092.96666666667,
+    "description": "User navigates from Google search results to a Skyscanner flight deals page.",
+    "confidence": 0.95,
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "Transition from Google search to Skyscanner flight deals."
+  },
+  {
+    "type": "navigate",
+    "time_start": 51092.96666666667,
+    "time_end": 51576.78333333334,
+    "description": "User navigates to the task instruction screen.",
+    "confidence": 0.95,
+    "frame_description": "Transition from Skyscanner to a dark task instruction screen."
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 50258.8,
+    "time_end": 51193.066666666666,
+    "description": "Rapid cursor movement with 4 direction changes at 1350px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 843.06,
+      "y": 621.9266666666664
+    }
+  },
+  {
+    "type": "dwell",
+    "time_start": 51576.78333333334,
+    "time_end": 60769.3,
+    "description": "User spends time reading the task instructions regarding planning a holiday to London.",
+    "confidence": 0.85,
+    "cursor_position": {
+      "x": 633.0,
+      "y": 726.5999999999999
+    },
+    "frame_description": "User is on the task instruction screen with a dark background and white text."
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 53879.08333333333,
+    "time_end": 54813.35,
+    "description": "Rapid cursor movement with 4 direction changes at 1645px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 761.8106666666667,
+      "y": 832.648
+    }
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 59718.25,
+    "time_end": 60652.51666666666,
+    "description": "Rapid cursor movement with 6 direction changes at 2956px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 424.7399999999991,
+      "y": 844.0800000000002
+    }
+  },
+  {
+    "type": "navigate",
+    "time_start": 60769.3,
+    "time_end": 61253.11666666667,
+    "description": "User navigates from the instructions to the Skyscanner flight search homepage.",
+    "confidence": 0.95,
+    "page_title": "Skyscanner | Flights, Hotels, Cars",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "Transition from instructions back to the Skyscanner homepage."
+  },
+  {
+    "type": "select",
+    "time_start": 61253.11666666667,
+    "time_end": 61736.933333333334,
+    "description": "User selects 'Sunshine Coast (MCY)' as the departure airport from the origin dropdown.",
+    "confidence": 0.9,
+    "interaction_target": "From input field",
+    "page_title": "Skyscanner",
+    "frame_description": "The origin dropdown is open with 'Sunshine Coast (MCY)' highlighted."
+  },
+  {
+    "type": "input_text",
+    "time_start": 61736.933333333334,
+    "time_end": 62704.566666666666,
+    "description": "User types 'London' into the destination field.",
+    "confidence": 0.95,
+    "interaction_target": "To input field",
+    "page_title": "Skyscanner",
+    "frame_description": "The destination field shows 'londo' being typed."
+  },
+  {
+    "type": "navigate",
+    "time_start": 62704.566666666666,
+    "time_end": 63188.38333333333,
+    "description": "User initiates a search for flights from Sunshine Coast to London, navigating to the results page.",
+    "confidence": 0.95,
+    "page_title": "Skyscanner | Search Results",
+    "frame_description": "Transition from the search form to the flight results page."
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 63104.96666666667,
+    "time_end": 64039.23333333334,
+    "description": "Rapid cursor movement with 4 direction changes at 5108px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 503.42762219519994,
+      "y": 223.30590068736
+    }
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 63188.38333333333,
+    "time_end": 64639.833333333336,
+    "description": "The page displays a loading spinner while searching for flight results from various providers.",
+    "confidence": 0.9,
+    "interaction_target": "Searching spinner",
+    "frame_description": "The search results page shows a 'Searching' status with a loading animation."
+  },
+  {
+    "type": "dwell",
+    "time_start": 65123.65,
+    "time_end": 68510.36666666667,
+    "description": "User examines the flight search results and an advertisement for 'Visit the USA'.",
+    "confidence": 0.85,
+    "cursor_position": {
+      "x": 1545.0,
+      "y": 819.5999999999999
+    },
+    "page_title": "Skyscanner | Search Results",
+    "frame_description": "Flight search results are visible alongside a large vertical advertisement."
+  },
+  {
+    "type": "dwell",
+    "time_start": 66625.15,
+    "time_end": 69194.38333333333,
+    "description": "User pauses the cursor over the advertisement section on the right side of the flight results page.",
+    "confidence": 0.9,
+    "interaction_target": "Advertisement section",
+    "cursor_position": {
+      "x": 1733.9279999999999,
+      "y": 340.704
+    },
+    "page_title": "Skyscanner - Search Flights"
+  },
+  {
+    "type": "scroll",
+    "time_start": 69895.08333333333,
+    "time_end": 70595.78333333334,
+    "description": "The page view transitions and scrolls down to focus on specific flight results from Virgin Australia and Qantas.",
+    "confidence": 0.8,
+    "interaction_target": "Flight results list",
+    "page_title": "Skyscanner - Search Flights"
+  },
+  {
+    "type": "dwell",
+    "time_start": 70595.78333333334,
+    "time_end": 72464.31666666667,
+    "description": "User examines the details of the flight results, including departure times and prices for the displayed flights.",
+    "confidence": 0.9,
+    "interaction_target": "Flight results details",
+    "page_title": "Skyscanner - Search Flights"
+  },
+  {
+    "type": "dwell",
+    "time_start": 70612.46666666667,
+    "time_end": 72481.0,
+    "description": "User pauses cursor over flight search results, likely reviewing options.",
+    "confidence": 0.8,
+    "interaction_target": "flight search results",
+    "page_title": "Skyscanner",
+    "frame_description": "Flight search results page showing various flight options from MCY to LHR."
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 72681.20000000001,
+    "time_end": 73615.46666666667,
+    "description": "Rapid cursor movement with 7 direction changes at 4307px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 1465.3733333333334,
+      "y": 583.4559999999999
+    }
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 76067.91666666667,
+    "time_end": 77002.18333333333,
+    "description": "Rapid cursor movement with 7 direction changes at 2726px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 1511.58848,
+      "y": 166.88981333333334
+    }
+  },
+  {
+    "type": "dwell",
+    "time_start": 76685.20000000001,
+    "time_end": 79488.0,
+    "description": "User dwells on the 'America the Beautiful' advertisement on the right side of the page.",
+    "confidence": 0.9,
+    "interaction_target": "America the Beautiful advertisement",
+    "cursor_position": {
+      "x": 1747.5,
+      "y": 189.0
+    },
+    "page_title": "Skyscanner",
+    "frame_description": "Promotional advertisement for 'Visit the USA' on the right sidebar."
+  },
+  {
+    "type": "dwell",
+    "time_start": 78620.46666666667,
+    "time_end": 79371.21666666667,
+    "description": "User dwells on the flight search results page, likely reviewing the options.",
+    "confidence": 0.9,
+    "cursor_position": {
+      "x": 1747.4992639228687,
+      "y": 188.99993101310707
+    },
+    "page_title": "Skyscanner | Search Results",
+    "frame_description": "The user is looking at a list of flight deals from Sunshine Coast to London."
+  },
+  {
+    "type": "navigate",
+    "time_start": 80705.88333333333,
+    "time_end": 80789.3,
+    "description": "User navigates to a Jira workspace page.",
+    "confidence": 1.0,
+    "page_title": "Veronika Scislowski's workspace | Jira",
+    "frame_description": "The screen transitions from a white loading state to a Jira workspace dashboard."
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 81439.95000000001,
+    "time_end": 82374.21666666667,
+    "description": "Rapid cursor movement with 4 direction changes at 5349px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 1160.5000000000032,
+      "y": 403.09333333333564
+    }
+  },
+  {
+    "type": "navigate",
+    "time_start": 83375.21666666667,
+    "time_end": 83458.63333333333,
+    "description": "User navigates to the Booking.com homepage.",
+    "confidence": 1.0,
+    "page_title": "Booking.com | Official site | The best hotels & accommodation",
+    "frame_description": "The screen transitions from a white loading state to the Booking.com homepage with a promotional modal visible."
+  },
+  {
+    "type": "click",
+    "time_start": 83625.46666666667,
+    "time_end": 83708.88333333333,
+    "description": "User clicks the close button ('X') on the 'Genius' membership modal on Booking.com.",
+    "confidence": 0.9,
+    "interaction_target": "Close button ('X')",
+    "cursor_position": {
+      "x": 1218.645504,
+      "y": 420.6692736
+    },
+    "page_title": "Booking.com | Official site | The best hotels & accommodation",
+    "frame_description": "The cursor is positioned over the close icon of the modal, and in the subsequent frame, the modal is no longer visible."
+  },
+  {
+    "type": "cursor_thrash",
+    "time_start": 84593.1,
+    "time_end": 85527.36666666667,
+    "description": "Rapid cursor movement with 5 direction changes at 5359px/s",
+    "confidence": 0.65,
+    "cursor_position": {
+      "x": 927.5866666666666,
+      "y": 345.84
+    }
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 86795.3,
+    "time_end": 86795.3,
+    "description": "A task instruction overlay appears on the screen.",
+    "confidence": 0.9,
+    "frame_description": "A dark overlay with task-related options like 'Open' and 'Repeat the task instructions' appears over the current page."
+  }
+]
