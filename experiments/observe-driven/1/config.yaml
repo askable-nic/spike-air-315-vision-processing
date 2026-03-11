@@ -1,0 +1,42 @@
+# Iteration 1: Baseline observe-driven flow
+# Default adaptive tracking params — measure detection rate vs local-cv-events.
+# Relaxed event synthesis to capture more candidates for frame selection.
+# Visual change detection at 1 FPS in gaps, threshold 0.03.
+
+observe:
+  # Adaptive two-pass tracking
+  tracking_base_fps: 2.0
+  tracking_peak_fps: 15.0
+  tracking_displacement_threshold_px: 30.0
+  tracking_active_padding_ms: 500
+  resolution_height: 720
+  match_threshold: 0.5
+  early_exit_threshold: 0.85
+  max_interpolation_gap_ms: 750
+  smooth_window: 3
+  smooth_displacement_threshold: 60.0
+  # Relaxed event synthesis — capture more candidates for LLM review
+  hover_min_ms: 250
+  hover_max_ms: 2500
+  hover_radius_px: 20.0
+  dwell_min_ms: 1500
+  dwell_radius_px: 25.0
+  thrash_min_direction_changes: 3
+  thrash_min_speed_px_per_sec: 400.0
+  click_stop_max_ms: 300
+  click_stop_radius_px: 8.0
+  click_min_confidence: 0.2
+  scroll_min_flow_uniformity: 0.5
+  scroll_min_magnitude: 2.0
+  hesitation_min_ms: 400
+  hesitation_max_ms: 2500
+  hesitation_radius_px: 15.0
+  # ROI cropping for event frames
+  roi_size: 512
+  roi_padding: 64
+  # Frame selection
+  visual_scan_gap_ms: 3000
+  visual_scan_fps: 1.0
+  visual_change_threshold: 0.03
+  baseline_max_gap_ms: 5000
+  frame_dedup_ms: 200

@@ -38,10 +38,22 @@ Override config values from the CLI:
 vex run -b adaptive -i 1 -o triage.sample_fps=3 -o analyse.temperature=0.2
 ```
 
-Enable the observe stage:
+Enable the observe stage (triage-driven, with ROI cropping):
 
 ```bash
 vex run -b adaptive -i 1 -o observe.enabled=true
+```
+
+Run observe-driven mode (triage disabled, adaptive frame selection):
+
+```bash
+vex run -b observe-driven -i 1
+```
+
+Or enable it ad-hoc on any branch:
+
+```bash
+vex run -b adaptive -i 1 -o triage.enabled=false -o observe.enabled=true
 ```
 
 ### List experiments
@@ -60,18 +72,40 @@ vex compare --branch adaptive --iterations 1,2 --session travel_expert_lisa
 
 ## Pipeline
 
-Four stages run per session (observe is opt-in):
+Two pipeline modes are available:
+
+### Triage-driven (default)
+
+The original path. Triage segments the video by activity level, analyse samples frames uniformly per segment.
 
 1. **Triage** — Samples frames from the screen track, computes frame-to-frame diffs, classifies segments by activity level (idle/low/medium/high), and assigns per-segment FPS. No API calls.
-2. **Observe** *(optional)* — Tracks the cursor via multi-scale template matching, computes sparse optical flow, synthesizes local events (hover, dwell, scroll, thrash, click candidates, hesitation), and produces ROI crop coordinates for the analyse stage. No API calls. Disabled by default; enable with `observe.enabled=true`.
+2. **Observe** *(optional)* — Tracks the cursor via multi-scale template matching, computes sparse optical flow, synthesizes local events (hover, dwell, scroll, thrash, click candidates, hesitation), and produces ROI crop coordinates for the analyse stage. No API calls. Enable with `observe.enabled=true`.
 3. **Analyse** — Extracts frames at the assigned FPS, sends them to Gemini with interleaved labels and images, parses structured event responses. Context frames from adjacent segments provide continuity. When observe is enabled, frames are ROI-cropped around the cursor (~6x token reduction), frame labels include cursor coordinates, and local event candidates are injected into the prompt for LLM confirmation/rejection.
 4. **Merge** — Resolves frame-indexed events to absolute millisecond timestamps (offset by `screenTrackStartOffset`), discards context-only events, deduplicates overlapping events, and writes final output. When observe is enabled, high-confidence local events (scroll, thrash) are added directly to the event pool before dedup.
+
+### Observe-driven (adaptive)
+
+Event-driven path. Triage is disabled; observe selects only the frames the LLM needs. Enable with `triage.enabled=false` and `observe.enabled=true`.
+
+```
+observe (adaptive FPS)  →  frame selection  →  analyse (event-driven batches)  →  merge
+```
+
+1. **Observe** — Adaptive two-pass cursor tracking: a coarse pass at `tracking_base_fps` (default 2) across the full video identifies active regions where cursor displacement exceeds a threshold, then a fine pass at `tracking_peak_fps` (default 15) fills in detail within those regions. Optical flow and local event synthesis run as before. After event synthesis, `select_frames_for_analysis()` picks frames using four rules:
+   - **Event frames** — start/end (or midpoint for dwells) of each local event, ROI-cropped around the cursor
+   - **Visual change frames** — in gaps between events longer than `visual_scan_gap_ms`, extract at `visual_scan_fps` and select frames where `compute_frame_diff()` exceeds `visual_change_threshold` (full frame, no ROI — these are where navigate and change_ui_state events are discovered)
+   - **Baseline frames** — one frame at the midpoint of any remaining gap longer than `baseline_max_gap_ms`, ensuring temporal coverage
+   - **Deduplication** — frames within `frame_dedup_ms` of each other are merged, keeping higher-priority frames (event > visual_change > baseline)
+2. **Analyse** — `run_analyse_from_observe()` groups selected frames into batches by time proximity (`batch_gap_ms`) and token budget. Each batch is sent to Gemini with frame annotations explaining the non-uniform sampling (reason, cursor position). The `observe_driven.txt` prompt instructs the LLM to confirm/reject cursor events, identify navigate/change_ui_state at visual transitions, and note anything in baseline frames.
+3. **Merge** — Same as triage-driven, but `triage_result` is `None`. Triage metrics fall back to empty defaults.
+
+See `experiments/observe-driven/` for a ready-to-run experiment using this mode.
 
 ## Experiment Structure
 
 ```
 experiments/
-  adaptive/                      # branch
+  adaptive/                      # branch (triage-driven)
     config.yaml                  # branch-level defaults
     prompts/                     # branch-level prompt overrides (optional)
     1/                           # iteration
@@ -79,6 +113,11 @@ experiments/
       prompts/                   # iteration prompt overrides (optional)
       pipeline.py                # custom stage functions (optional)
       output/{session_id}/       # triage.json, events.json, session.json
+  observe-driven/                # branch (observe-driven, triage disabled)
+    config.yaml
+    1/
+      config.yaml
+      output/{session_id}/       # observe.json, analysis.json, events.json, session.json
 ```
 
 ### Config precedence
@@ -105,8 +144,9 @@ Per-session output in `experiments/{branch}/{iteration}/output/{session_id}/`:
 
 - `events.json` — final events matching `event-schema.json`
 - `session.json` — full session output with per-stage metrics and token usage
-- `observe.json` — observe stage result with cursor trajectory, flow summary, local events, and ROI rects (only when observe is enabled; used for cache/resume)
-- `observe_summary.json` — human-readable summary: detection rate, template match counts, event counts by type, event details (only when observe is enabled)
+- `triage.json` — triage segments (only when triage is enabled)
+- `observe.json` — observe stage result with cursor trajectory, flow summary, local events, selected frames, and ROI rects (only when observe is enabled; used for cache/resume)
+- `observe_summary.json` — human-readable summary: detection rate, template match counts, event counts by type, selected frame counts by reason, event details (only when observe is enabled)
 
 Run-level metadata in `experiments/{branch}/{iteration}/output/metadata.json`.
 
@@ -171,7 +211,11 @@ Disabled by default. Enable with `observe.enabled=true`.
 | Key | Type | Default | Description |
 |---|---|---|---|
 | `enabled` | bool | `false` | Enable the observe stage |
-| `tracking_fps` | float | `5.0` | Frame rate for cursor tracking |
+| `tracking_fps` | float | `5.0` | Legacy single-pass FPS (used when not using adaptive two-pass) |
+| `tracking_base_fps` | float | `2.0` | Coarse pass FPS for adaptive tracking |
+| `tracking_peak_fps` | float | `15.0` | Fine pass FPS within active regions |
+| `tracking_displacement_threshold_px` | float | `30.0` | Cursor displacement (px) between coarse frames to mark region as active |
+| `tracking_active_padding_ms` | int | `500` | Padding (ms) added to each side of active regions |
 | `resolution_height` | int | `720` | Scale frames to this height for template matching |
 | `template_scales` | list | `[0.8, 1.0, 1.25, 1.5]` | Scales to try during multi-scale template matching |
 | `match_threshold` | float | `0.6` | Minimum confidence to accept a cursor match |
@@ -243,6 +287,16 @@ Disabled by default. Enable with `observe.enabled=true`.
 | `roi_size` | int | `512` | Base ROI crop size (px) |
 | `roi_padding` | int | `64` | Padding added around the ROI |
 
+**Frame selection** (observe-driven mode)
+
+| Key | Type | Default | Description |
+|---|---|---|---|
+| `visual_scan_gap_ms` | int | `3000` | Min gap (ms) between event frames to trigger visual change scanning |
+| `visual_scan_fps` | float | `1.0` | FPS for extracting frames during visual change scanning |
+| `visual_change_threshold` | float | `0.03` | Min frame diff magnitude (0–1) to flag a visual transition |
+| `baseline_max_gap_ms` | int | `5000` | Max gap (ms) before inserting a baseline frame at midpoint |
+| `frame_dedup_ms` | int | `200` | Frames within this many ms are deduplicated (keep highest priority) |
+
 ### `analyse`
 
 | Key | Type | Default | Description |
@@ -255,6 +309,7 @@ Disabled by default. Enable with `observe.enabled=true`.
 | `context_frames` | int | `2` | Frames to include from adjacent segments |
 | `jpeg_quality` | int | `85` | JPEG encoding quality |
 | `source` | string | `"unmod_website_test_video"` | Source type tag written to events |
+| `batch_gap_ms` | int | `5000` | Max time gap (ms) between selected frames before starting a new batch (observe-driven mode) |
 
 ### `merge`
 
@@ -284,8 +339,8 @@ src/
 
 stages/
   triage.py       Activity signal → segment classification
-  observe.py      Cursor tracking, optical flow, local event synthesis, ROI
-  analyse.py      Gemini API calls per segment
+  observe.py      Cursor tracking, optical flow, local event synthesis, frame selection
+  analyse.py      Gemini API calls per segment (triage-driven) or per batch (observe-driven)
   merge.py        Timestamp resolution + dedup
 
 cursor_templates/

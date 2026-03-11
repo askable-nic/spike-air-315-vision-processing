@@ -587,11 +587,26 @@ def synthesize_local_events(
     click_candidates = _detect_click_candidates(detected, oc)
     thrash = _detect_thrash(detected, oc)
     scrolls = _detect_scrolls(flow_summary, oc)
-    hesitations = _detect_hesitations(detected, click_candidates, oc)
+
+    # Suppress click candidates whose time range falls within a hover or dwell —
+    # a stationary cursor should not also be reported as a click.
+    stationary_intervals = (
+        [(h.time_start_ms, h.time_end_ms) for h in filtered_hovers]
+        + dwell_intervals
+    )
+    filtered_clicks = tuple(
+        c for c in click_candidates
+        if not any(
+            s <= c.time_start_ms and e >= c.time_end_ms
+            for s, e in stationary_intervals
+        )
+    )
+
+    hesitations = _detect_hesitations(detected, filtered_clicks, oc)
 
     events.extend(filtered_hovers)
     events.extend(dwells)
-    events.extend(click_candidates)
+    events.extend(filtered_clicks)
     events.extend(thrash)
     events.extend(scrolls)
     events.extend(hesitations)
@@ -764,12 +779,17 @@ def _detect_click_candidates(
     trajectory: tuple[CursorDetection, ...],
     oc: ObserveConfig,
 ) -> tuple[LocalEvent, ...]:
-    """Detect click candidates: brief cursor stop preceded/followed by movement."""
+    """Detect click candidates: brief cursor stop preceded/followed by movement.
+
+    Advances past each detected stop window to avoid emitting duplicate
+    click events from overlapping sub-windows of the same stationary period.
+    """
     events: list[LocalEvent] = []
     n = len(trajectory)
+    i = 1
 
-    for i in range(1, n - 1):
-        # Find brief stops
+    while i < n - 1:
+        # Find the maximal brief stop starting at i
         stop_start = i
         stop_end = i
         while stop_end + 1 < n:
@@ -781,6 +801,7 @@ def _detect_click_candidates(
 
         stop_duration = trajectory[stop_end].timestamp_ms - trajectory[stop_start].timestamp_ms
         if stop_duration > oc.click_stop_max_ms or stop_duration < 0:
+            i += 1
             continue
 
         # Check for movement before and after
@@ -808,6 +829,10 @@ def _detect_click_candidates(
                 description=f"Possible click at ({trajectory[stop_start].x:.0f}, {trajectory[stop_start].y:.0f})",
                 needs_enrichment=True,
             ))
+            # Skip past this stop window to avoid duplicates
+            i = stop_end + 1
+        else:
+            i += 1
 
     return tuple(events)
 

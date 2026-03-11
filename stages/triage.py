@@ -194,6 +194,14 @@ def merge_windows_to_segments(
                 "magnitudes": [w.mean_magnitude],
             })
 
+    # Snap segment boundaries so adjacent segments don't overlap.
+    # Sliding windows (window_size > step) create overlaps at tier transitions.
+    for i in range(1, len(merged)):
+        if merged[i]["start_ms"] < merged[i - 1]["end_ms"]:
+            boundary = (merged[i]["start_ms"] + merged[i - 1]["end_ms"]) / 2
+            merged[i - 1]["end_ms"] = boundary
+            merged[i]["start_ms"] = boundary
+
     # Absorb short segments into neighbours
     absorbed: list[dict] = []
     for seg in merged:

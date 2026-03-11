@@ -22,14 +22,23 @@ This spec adds a new **observe** stage that runs between triage and analyse. It 
 
 ## Pipeline Position
 
+Two modes are supported:
+
+**Triage-driven (original):**
 ```
 triage → observe → analyse → merge
 ```
 
-The observe stage receives the triage result (segments with tiers) and the video path. It produces an `ObserveResult` that is consumed by both analyse and merge.
+**Observe-driven (adaptive):** Triage is disabled. Observe gets video duration from `get_video_metadata()` directly.
+```
+observe (adaptive FPS) → frame selection → analyse (event-driven batches) → merge
+```
 
-- **Analyse** uses observe data for: ROI crop coordinates per frame, local event context in prompts, cursor position annotations on frame labels.
-- **Merge** uses observe data for: local events added to the event pool before dedup.
+The observe stage receives either a `TriageResult` or `None` (when triage is disabled). When `triage_result` is `None`, observe uses `get_video_metadata(video_path).duration_ms` for the total recording duration.
+
+- **Analyse (triage-driven)** uses observe data for: ROI crop coordinates per frame, local event context in prompts, cursor position annotations on frame labels.
+- **Analyse (observe-driven)** uses `ObserveResult.selected_frames` to extract only the frames needed. `run_analyse_from_observe()` batches frames by time proximity and sends them to Gemini with per-frame annotations explaining the non-uniform sampling.
+- **Merge** uses observe data for: local events added to the event pool before dedup. When `triage_result` is `None`, triage metrics fall back to empty defaults.
 
 ---
 
@@ -39,7 +48,7 @@ The observe stage receives the triage result (segments with tiers) and the video
 
 - `SessionManifest` — session metadata
 - `PipelineConfig` — observe config section
-- `TriageResult` — segments with tiers and time ranges
+- `TriageResult | None` — segments with tiers and time ranges (None when triage is disabled)
 - `video_path` — path to screen track video
 
 ### Output
@@ -50,7 +59,8 @@ The observe stage receives the triage result (segments with tiers) and the video
 - `cursor_trajectory: tuple[CursorDetection, ...]` — per-frame cursor positions across the entire video
 - `flow_summary: tuple[FlowWindow, ...]` — optical flow summaries per time window
 - `local_events: tuple[LocalEvent, ...]` — synthesized events
-- `roi_rects: tuple[ROIRect, ...]` — crop rectangles per analysis frame timestamp
+- `roi_rects: tuple[ROIRect, ...]` — crop rectangles per analysis frame timestamp (legacy, for triage-driven mode)
+- `selected_frames: tuple[SelectedFrame, ...]` — frames selected for observe-driven analysis
 - `processing_time_ms: float`
 - `frames_analysed: int`
 - `cursor_detection_rate: float` — fraction of frames where cursor was found (0–1)
@@ -122,6 +132,23 @@ cursor_x: float                     # cursor position within the crop
 cursor_y: float
 ```
 
+### SelectedFrame
+
+A frame selected for observe-driven LLM analysis.
+
+```
+timestamp_ms: float
+reason: str                     # "event_start", "event_end", "event_mid", "visual_change", "baseline"
+event_index: int | None         # index into local_events (None for visual_change/baseline)
+roi: ROIRect | None             # ROI crop for event frames (None for visual_change/baseline)
+```
+
+Frame selection rules:
+- **Event frames**: start/end (or midpoint for dwells) of each local event. ROI-cropped for cursor events, full-frame for scroll.
+- **Visual change frames**: in gaps >visual_scan_gap_ms, frames where compute_frame_diff() exceeds visual_change_threshold. Full-frame. Used to discover navigate and change_ui_state events.
+- **Baseline frames**: midpoint of any remaining gap >baseline_max_gap_ms. Full-frame.
+- **Deduplication**: within frame_dedup_ms, keep highest priority (event > visual_change > baseline).
+
 ### ObserveConfig
 
 New section in `PipelineConfig`.
@@ -167,6 +194,23 @@ roi_fallback: str = "full"          # "full" | "center" — what to do when curs
 ---
 
 ## Cursor Tracking
+
+### Adaptive Two-Pass Approach
+
+Cursor tracking uses an adaptive two-pass strategy to balance speed and temporal precision:
+
+1. **Pass 1 (coarse):** Extract frames at `tracking_base_fps` (default 2) across the full video. Template match every frame. Produces a coarse trajectory.
+2. **Identify active regions:** Scan consecutive detected frames. Where Euclidean displacement exceeds `tracking_displacement_threshold_px` (default 30), mark the interval as active. Merge overlapping intervals and pad each side by `tracking_active_padding_ms` (default 500ms).
+3. **Pass 2 (fine):** For each active region, extract frames at `tracking_peak_fps` (default 15). Template match. Produces fine detections.
+4. **Merge:** In active regions, replace pass-1 detections with pass-2 detections. Sort by timestamp.
+5. **Interpolate + smooth:** Apply existing `interpolate_trajectory()` and `smooth_trajectory()`.
+
+This avoids wasting computation on idle regions (mouse not moving) while achieving high temporal resolution during cursor activity. A 10-minute recording might have 1200 coarse frames and ~2000 fine frames in active regions, compared to 3000 frames at a fixed 5 FPS.
+
+Key functions:
+- `_match_frames()` — extracted template-matching loop, reused by both passes
+- `_identify_active_regions()` — scans detections for displacement above threshold, returns merged/padded intervals
+- `track_cursor()` — orchestrates the two-pass flow
 
 ### Template Matching
 
@@ -330,6 +374,47 @@ The analyse stage must adjust `tokens_per_frame` in its budget calculation when 
 
 ---
 
+## Event-Driven Frame Selection
+
+When triage is disabled, `select_frames_for_analysis()` replaces the uniform sampling approach with targeted frame selection based on observe results.
+
+### Selection rules
+
+**A. Event frames** — for each `LocalEvent`:
+
+| Event type | Frames selected | ROI crop? |
+|---|---|---|
+| `click` | start, end | Yes |
+| `hover` | start, end | Yes |
+| `hesitate` | start, end | Yes |
+| `dwell` | midpoint | Yes |
+| `cursor_thrash` | start, end | Yes |
+| `scroll` | start, end | No (full frame) |
+
+ROI computation reuses `compute_roi_rects()` / `_lookup_cursor_at_timestamp()`.
+
+**B. Visual change frames** — scan gaps between event frames longer than `visual_scan_gap_ms` (default 3000ms):
+- Extract frames in gap at `visual_scan_fps` (default 1.0 FPS)
+- Compute pairwise `compute_frame_diff()`
+- Where magnitude exceeds `visual_change_threshold` (default 0.03): select frame before and after transition, full frame (no ROI)
+- These are where the LLM discovers `navigate` and `change_ui_state` events
+
+**C. Baseline frames** — after A+B, if any remaining gap exceeds `baseline_max_gap_ms` (default 5000ms), insert one frame at midpoint. Ensures LLM always has temporal context.
+
+**D. Deduplication** — frames within `frame_dedup_ms` (default 200ms) of each other: keep highest-priority (event > visual_change > baseline).
+
+### Observe-driven analyse path
+
+`run_analyse_from_observe()` in `stages/analyse.py` processes selected frames:
+
+1. **Batching** — `_batch_selected_frames()` groups frames by time proximity. New batch when gap > `batch_gap_ms` (default 5000ms) or frame count × `tokens_per_frame` exceeds `token_budget_per_segment`.
+2. **Frame extraction** — `extract_frames_at_timestamps()` in `src/video.py` decodes only at target timestamps using sequential grab/retrieve with seek optimization.
+3. **ROI cropping** — frames with `roi` set are cropped; visual_change and baseline frames are sent full-frame.
+4. **Prompt** — `observe_driven.txt` template with variables: `{batch_index}`, `{start_time}`, `{end_time}`, `{frame_count}`, `{frame_annotations}`, `{local_events}`. Frame labels include reason and cursor position. Local events filtered to batch time range.
+5. **Response** — same `_RESPONSE_SCHEMA` and `_parse_events()` as the triage-driven path.
+
+---
+
 ## LLM Enrichment Flow
 
 Local events marked with `needs_enrichment = True` are candidates for LLM confirmation. Rather than making separate API calls per local event, the enrichment happens within the existing analyse stage:
@@ -362,15 +447,19 @@ Gemini's structured response already includes event type, frame indices, and des
 
 ### Runner Changes
 
-`_process_session` in `src/runner.py` adds the observe stage between triage and analyse:
+`_process_session` in `src/runner.py` supports both pipeline modes:
 
-```
-triage → observe → analyse → merge
-```
+**Triage-driven:** `triage → observe → analyse → merge`
 
-With the same cache/resume pattern: check for `observe.json`, load if exists and not `--force`, otherwise run and save.
+**Observe-driven:** `observe → analyse_from_observe → merge` (triage skipped)
 
-The observe result is passed to both `run_analyse` and `run_merge`.
+Logic:
+1. If `config.triage.enabled`: run triage as before. Otherwise: `triage_result = None`.
+2. If `config.observe.enabled`: run observe (passing `triage_result`, which may be `None`).
+3. If `observe_result.selected_frames` is non-empty: use `run_analyse_from_observe()`. Otherwise: use `run_analyse()` (requires `triage_result`).
+4. `run_merge()` accepts `triage_result: TriageResult | None`.
+
+Same cache/resume pattern for all stages.
 
 ### Analyse Changes
 
@@ -414,17 +503,18 @@ observe_trajectory.json   Cursor trajectory only (compact, for visualisation too
 
 | File | Change |
 |---|---|
-| `src/models.py` | Add `CursorDetection`, `FlowWindow`, `LocalEvent`, `ROIRect`, `ObserveResult`, `ObserveConfig`. Add `observe` field to `PipelineConfig`. Add `observe_metrics` to `SessionOutput`. |
-| `src/config.py` | Add `observe` section to `DEFAULTS`. |
-| `src/video.py` | Add `compute_optical_flow(frame_a, frame_b, grid_step) -> FlowField`. Add `crop_frame(frame, roi) -> ndarray`. |
-| `stages/observe.py` | **New file.** `run_observe(session, config, triage_result, video_path) -> ObserveResult` + all helper functions. |
-| `stages/analyse.py` | Accept optional `ObserveResult`. Use ROI crops when available. Inject local events into prompt. Add cursor annotations to frame labels. |
-| `stages/merge.py` | Accept optional `ObserveResult`. Add high-confidence local events to event pool before dedup. |
-| `src/runner.py` | Add observe stage between triage and analyse. Cache/resume `observe.json`. Pass observe result to analyse and merge. |
+| `src/models.py` | Add `CursorDetection`, `FlowWindow`, `LocalEvent`, `ROIRect`, `SelectedFrame`, `ObserveResult`, `ObserveConfig`. Add `observe` field to `PipelineConfig`. Add `observe_metrics` to `SessionOutput`. Add `selected_frames` to `ObserveResult`. Add `batch_gap_ms` to `AnalyseConfig`. Add adaptive tracking + frame selection fields to `ObserveConfig`. |
+| `src/config.py` | Add `observe` section to `DEFAULTS`. Add `batch_gap_ms` to analyse defaults. Add adaptive tracking + frame selection defaults. |
+| `src/video.py` | Add `compute_optical_flow(frame_a, frame_b, grid_step)`. Add `crop_frame(frame, roi)`. Add `extract_frames_at_timestamps(path, timestamps_ms)` for targeted frame extraction. |
+| `stages/observe.py` | Adaptive two-pass cursor tracking (`_match_frames`, `_identify_active_regions`). `select_frames_for_analysis()` with event/visual_change/baseline/dedup rules. `triage_result` optional throughout. |
+| `stages/analyse.py` | Accept optional `ObserveResult`. Use ROI crops when available. Inject local events into prompt. Add `run_analyse_from_observe()` and `_batch_selected_frames()` for observe-driven path. |
+| `stages/merge.py` | Accept optional `ObserveResult`. Accept optional `TriageResult`. Add high-confidence local events to event pool before dedup. |
+| `src/runner.py` | Conditional triage. Choose analyse path based on `selected_frames`. Pass `triage_result=None` when skipped. |
 | `prompts/system.txt` | Add instructions for handling local event candidates. |
 | `prompts/user.txt` | Add `{local_events}` placeholder. |
-| `cursor_templates/` | **New directory.** Built-in cursor template PNGs + `templates.json` metadata (hotspot offsets). |
-| Experiment configs | Add `observe` section. |
+| `prompts/observe_driven.txt` | **New file.** Prompt template for event-driven batches with non-uniform sampling. |
+| `cursor_templates/` | Built-in cursor template PNGs + `templates.json` metadata (hotspot offsets). |
+| `experiments/observe-driven/` | **New experiment branch.** Triage disabled, observe-driven flow. |
 
 ---
 

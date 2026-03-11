@@ -54,8 +54,9 @@ def extract_frames(
 ) -> tuple[tuple[float, np.ndarray], ...]:
     """Extract frames from a video at given FPS within a time range.
 
-    Uses sequential grab/retrieve to avoid expensive keyframe seeks on
-    codecs like VP8/VP9 (webm).  Only decodes frames at the target interval.
+    Uses container PTS timestamps (CAP_PROP_POS_MSEC) so that returned
+    timestamps are correct even for variable-frame-rate files like VP8/WebM.
+    Decodes one frame per ``1000/fps`` ms interval within the range.
 
     Returns a tuple of (timestamp_ms, frame_array) pairs.
     """
@@ -64,39 +65,38 @@ def extract_frames(
         raise ValueError(f"Cannot open video: {path}")
 
     try:
-        source_fps = cap.get(cv2.CAP_PROP_FPS) or 30.0
-        start_frame = int(start_sec * source_fps)
-        end_frame = int(end_sec * source_fps)
-        frame_interval = max(1, int(source_fps / fps))
+        start_ms = start_sec * 1000
+        end_ms = end_sec * 1000
+        interval_ms = 1000.0 / fps
 
-        # Seek to start (single seek is fine)
-        if start_frame > 0:
-            cap.set(cv2.CAP_PROP_POS_FRAMES, start_frame)
-
+        # No seek — walk from the start so PTS-based timing is correct even
+        # for variable-frame-rate containers (VP8/WebM).  For typical screen
+        # recordings (~3 000 frames) the sequential grab is negligible.
         frames: list[tuple[float, np.ndarray]] = []
-        current_frame = start_frame
+        next_capture_ms = start_ms
 
-        while current_frame <= end_frame:
+        while True:
             ret = cap.grab()
             if not ret:
                 break
 
-            if (current_frame - start_frame) % frame_interval == 0:
+            current_ms = cap.get(cv2.CAP_PROP_POS_MSEC)
+
+            if current_ms > end_ms:
+                break
+
+            if current_ms >= next_capture_ms:
                 ret2, frame = cap.retrieve()
                 if not ret2:
-                    current_frame += 1
                     continue
-
-                timestamp_ms = (current_frame / source_fps) * 1000
 
                 if scale_height is not None and frame.shape[0] != scale_height:
                     aspect = frame.shape[1] / frame.shape[0]
                     new_width = int(scale_height * aspect)
                     frame = cv2.resize(frame, (new_width, scale_height))
 
-                frames.append((timestamp_ms, frame))
-
-            current_frame += 1
+                frames.append((current_ms, frame))
+                next_capture_ms = current_ms + interval_ms
 
         return tuple(frames)
     finally:
@@ -110,9 +110,9 @@ def extract_frames_at_timestamps(
 ) -> tuple[tuple[float, np.ndarray], ...]:
     """Extract frames at specific timestamps (ms) from a video.
 
-    Uses sequential grab/retrieve — walks forward through the video and decodes
-    only when the current frame is within half-frame tolerance of a target timestamp.
-    Timestamps must be non-negative; they are processed in sorted order.
+    Uses container PTS (CAP_PROP_POS_MSEC) for positioning, so timestamps
+    are correct even for variable-frame-rate files.  Walks forward through
+    the video and decodes when PTS is within tolerance of a target.
     """
     if not timestamps_ms:
         return ()
@@ -124,60 +124,63 @@ def extract_frames_at_timestamps(
         raise ValueError(f"Cannot open video: {path}")
 
     try:
-        source_fps = cap.get(cv2.CAP_PROP_FPS) or 30.0
-        half_frame_ms = (1000.0 / source_fps) / 2.0
-        total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-
+        # Walk from the start (no seek — unreliable for VFR/WebM) and decode
+        # the frame closest to each target.  Sequential grab is fast (~3k
+        # frames for a 5-min screen recording).
         frames: list[tuple[float, np.ndarray]] = []
         target_idx = 0
-        current_frame = 0
+        prev_ms: float = -1.0
+        prev_frame: np.ndarray | None = None
 
-        while current_frame < total_frames and target_idx < len(sorted_targets):
-            current_ms = (current_frame / source_fps) * 1000.0
-
-            # Skip ahead if we're far before the next target
-            if current_ms < sorted_targets[target_idx] - half_frame_ms:
-                # Jump closer if gap is large
-                target_frame = int(sorted_targets[target_idx] / 1000.0 * source_fps)
-                skip_to = max(current_frame + 1, target_frame - 1)
-                if skip_to > current_frame + 1:
-                    cap.set(cv2.CAP_PROP_POS_FRAMES, skip_to)
-                    current_frame = skip_to
-                    continue
-                ret = cap.grab()
-                if not ret:
-                    break
-                current_frame += 1
-                continue
-
-            # Advance past already-passed targets
-            while (
-                target_idx < len(sorted_targets)
-                and sorted_targets[target_idx] < current_ms - half_frame_ms
-            ):
-                target_idx += 1
-            if target_idx >= len(sorted_targets):
+        while target_idx < len(sorted_targets):
+            ret = cap.grab()
+            if not ret:
+                # End of video — emit previous frame for remaining target
+                if prev_frame is not None:
+                    frames.append((sorted_targets[target_idx], prev_frame))
                 break
 
-            # Check if current frame matches any target(s)
-            if abs(current_ms - sorted_targets[target_idx]) <= half_frame_ms:
-                ret = cap.grab()
-                if not ret:
-                    break
+            current_ms = cap.get(cv2.CAP_PROP_POS_MSEC)
+            target_ms = sorted_targets[target_idx]
+
+            if current_ms < target_ms:
+                # Haven't reached target yet — snapshot this frame as candidate
                 ret2, frame = cap.retrieve()
                 if ret2:
                     if scale_height is not None and frame.shape[0] != scale_height:
                         aspect = frame.shape[1] / frame.shape[0]
                         new_width = int(scale_height * aspect)
                         frame = cv2.resize(frame, (new_width, scale_height))
-                    frames.append((sorted_targets[target_idx], frame))
-                target_idx += 1
-                current_frame += 1
+                    prev_ms = current_ms
+                    prev_frame = frame
+                continue
+
+            # current_ms >= target_ms — pick the closer of prev and current
+            ret2, frame = cap.retrieve()
+            if ret2:
+                if scale_height is not None and frame.shape[0] != scale_height:
+                    aspect = frame.shape[1] / frame.shape[0]
+                    new_width = int(scale_height * aspect)
+                    frame = cv2.resize(frame, (new_width, scale_height))
             else:
-                ret = cap.grab()
-                if not ret:
-                    break
-                current_frame += 1
+                frame = prev_frame
+
+            if prev_frame is not None and abs(prev_ms - target_ms) < abs(current_ms - target_ms):
+                chosen = prev_frame
+            else:
+                chosen = frame
+
+            if chosen is not None:
+                frames.append((target_ms, chosen))
+
+            target_idx += 1
+            prev_ms = current_ms
+            prev_frame = frame
+
+            # Handle consecutive targets that this same frame covers
+            while target_idx < len(sorted_targets) and current_ms >= sorted_targets[target_idx]:
+                frames.append((sorted_targets[target_idx], frame))
+                target_idx += 1
 
         return tuple(frames)
     finally:
