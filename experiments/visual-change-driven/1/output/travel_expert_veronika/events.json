@@ -1,0 +1,325 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start": 33442.0,
+    "time_end": 35055.0,
+    "description": "Instruction text begins to appear on the screen, prompting the user to start the session.",
+    "confidence": 0.9,
+    "frame_description": "A dark screen with white text appearing at the bottom."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 46259.0,
+    "time_end": 48093.0,
+    "description": "Instruction text updates to provide a specific scenario: planning a holiday from the Sunshine Coast to London.",
+    "confidence": 0.9,
+    "frame_description": "The text on screen changes to describe the travel planning task."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 53459.0,
+    "time_end": 74147.0,
+    "description": "Instruction text continues to reveal details about the task, including exploring flights, dates, and comparing routes.",
+    "confidence": 0.9,
+    "frame_description": "The instruction text progressively reveals more details about the research task."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 74780.0,
+    "time_end": 76946.0,
+    "description": "An 'Open' button appears in the top right corner, signaling the next step in the process.",
+    "confidence": 0.9,
+    "interaction_target": "Open button",
+    "frame_description": "A circular 'Open' button appears at the top right of the screen."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 83436.0,
+    "time_end": 97597.0,
+    "description": "Task instructions text updates dynamically on the screen, guiding the user through the session requirements.",
+    "confidence": 0.8,
+    "page_title": "Task Instructions",
+    "frame_description": "A dark overlay displaying sequential text instructions and a 'Repeat the task instructions' button."
+  },
+  {
+    "type": "hover",
+    "time_start": 90863.0,
+    "time_end": 92430.0,
+    "description": "User hovers the cursor over the 'Repeat the task instructions' button.",
+    "confidence": 0.9,
+    "interaction_target": "Repeat the task instructions button",
+    "cursor_position": {
+      "x": 592.5,
+      "y": 774.5999999999999
+    },
+    "page_title": "Task Instructions"
+  },
+  {
+    "type": "navigate",
+    "time_start": 97597.0,
+    "time_end": 101742.0,
+    "description": "User navigates from the task instructions overlay to the Google homepage.",
+    "confidence": 1.0,
+    "page_title": "Google",
+    "page_location": "https://www.google.com"
+  },
+  {
+    "type": "input_text",
+    "time_start": 101742.0,
+    "time_end": 103019.0,
+    "description": "User types 'sky' into the Google search bar, triggering search suggestions.",
+    "confidence": 1.0,
+    "interaction_target": "Google search bar",
+    "page_title": "Google"
+  },
+  {
+    "type": "navigate",
+    "time_start": 103606.0,
+    "time_end": 105198.0,
+    "description": "User navigates to the Google search results page for 'skyscanner'.",
+    "confidence": 1.0,
+    "page_title": "skyscanner - Google Search",
+    "page_location": "https://www.google.com/search?q=skyscanner"
+  },
+  {
+    "type": "hover",
+    "time_start": 110863.0,
+    "time_end": 112164.00000000001,
+    "description": "User hovers over the 'Repeat task instructions' button.",
+    "confidence": 0.9,
+    "interaction_target": "Repeat task instructions button",
+    "page_title": "Task Instructions",
+    "frame_description": "The cursor is positioned over the button to repeat instructions."
+  },
+  {
+    "type": "dwell",
+    "time_start": 112730.0,
+    "time_end": 116964.0,
+    "description": "User dwells on the instruction text while reading the task details.",
+    "confidence": 0.9,
+    "interaction_target": "Task instructions text",
+    "page_title": "Task Instructions",
+    "frame_description": "The cursor rests over the body text of the task instructions."
+  },
+  {
+    "type": "hover",
+    "time_start": 117530.00000000001,
+    "time_end": 120164.00000000001,
+    "description": "User hovers over the 'Open' button, preparing to proceed with the task.",
+    "confidence": 0.9,
+    "interaction_target": "Open button",
+    "page_title": "Task Instructions",
+    "frame_description": "The cursor is centered on the 'Open' button which likely launches the test site."
+  },
+  {
+    "type": "scroll",
+    "time_start": 120447.0,
+    "time_end": 122847.0,
+    "description": "Scroll E (magnitude: 9.5, uniformity: 0.76)",
+    "confidence": 0.8,
+    "page_title": "Task Instructions"
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 126192.0,
+    "time_end": 126992.0,
+    "description": "The screen transitions from detailed task instructions to a confirmation prompt 'Yes, please' with an 'Open' button.",
+    "confidence": 0.9,
+    "interaction_target": "Task Instructions Screen",
+    "page_title": "Task Instructions"
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 127864.0,
+    "time_end": 128898.0,
+    "description": "The instruction text updates to include the prompt 'please think aloud as you go.'",
+    "confidence": 0.9,
+    "page_title": "Task Instructions"
+  },
+  {
+    "type": "scroll",
+    "time_start": 129230.0,
+    "time_end": 130030.00000000001,
+    "description": "Scroll E (magnitude: 21.1, uniformity: 0.62)",
+    "confidence": 0.8,
+    "page_title": "Task Instructions"
+  },
+  {
+    "type": "dwell",
+    "time_start": 132624.0,
+    "time_end": 144580.0,
+    "description": "User pauses on the screen, moving the cursor around the 'Repeat the task instructions' button area while reading.",
+    "confidence": 0.7,
+    "interaction_target": "Repeat the task instructions button",
+    "page_title": "Task Instructions"
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 144613.0,
+    "time_end": 145915.0,
+    "description": "The instruction text updates to ask 'What are you looking at right now?'",
+    "confidence": 0.9,
+    "page_title": "Task Instructions"
+  },
+  {
+    "type": "input_text",
+    "time_start": 173832.00000000003,
+    "time_end": 176999.00000000003,
+    "description": "User types \"sunsh\" into the \"From\" input field",
+    "confidence": 0.9,
+    "interaction_target": "From input field",
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au"
+  },
+  {
+    "type": "select",
+    "time_start": 177332.00000000003,
+    "time_end": 178325.0,
+    "description": "User selects \"Sunshine Coast (MCY)\" from the autocomplete suggestions",
+    "confidence": 0.9,
+    "interaction_target": "Sunshine Coast (MCY) suggestion",
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au"
+  },
+  {
+    "type": "input_text",
+    "time_start": 181399.0,
+    "time_end": 186549.0,
+    "description": "User types \"lond\" into the \"To\" input field",
+    "confidence": 0.9,
+    "interaction_target": "To input field",
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au"
+  },
+  {
+    "type": "navigate",
+    "time_start": 186549.0,
+    "time_end": 193330.0,
+    "description": "User initiates search and navigates to the results page",
+    "confidence": 0.8,
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au"
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 193330.0,
+    "time_end": 200364.0,
+    "description": "Search results page loads and updates as flight data is retrieved from providers",
+    "confidence": 0.9,
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au"
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 212597.0,
+    "time_end": 213637.0,
+    "description": "The flight search results finished loading, updating from 'Checked 25 of 26 providers' to '997 results sorted by Best'.",
+    "confidence": 0.95,
+    "interaction_target": "Search results status",
+    "page_title": "Skyscanner Search Results",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "The loading indicator for flight providers disappears and is replaced by the total number of results found."
+  },
+  {
+    "type": "dwell",
+    "time_start": 231695.0,
+    "time_end": 232481.00000000003,
+    "description": "User pauses to examine the flight search results, specifically the details for an Emirates and Qantas flight from London Gatwick to Maroochydore.",
+    "confidence": 0.8,
+    "interaction_target": "Flight search result card",
+    "page_title": "Skyscanner Search Results",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "The screen shows flight search results on Skyscanner, specifically an Emirates + Qantas flight and a Qatar Airways flight."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 237510.0,
+    "time_end": 238781.0,
+    "description": "The UI transitions from displaying flight search results to a 'no flights' message accompanied by 'London hotel deals', likely due to a filter update or a temporary loading state.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner Search Results",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "The screen changes from showing Virgin Australia and Qantas flight options to a message stating no flights match the filters, showing hotel deals instead."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 239097.0,
+    "time_end": 239968.0,
+    "description": "The UI state reverts from the 'no flights' message back to displaying the flight search results.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner Search Results",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "The flight search results (Virgin Australia, Qantas) reappear on the screen."
+  },
+  {
+    "type": "hover",
+    "time_start": 253844.00000000003,
+    "time_end": 254681.0,
+    "description": "User hovers over the 'Book Direct with Virgin Australia' information box, causing the cursor to change to a pointer",
+    "confidence": 0.9,
+    "interaction_target": "Book Direct with Virgin Australia",
+    "cursor_position": {
+      "x": 1747.5,
+      "y": 189.0
+    },
+    "page_title": "Skyscanner Search Results",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "The flight search results page showing a Virgin Australia booking option."
+  },
+  {
+    "type": "scroll",
+    "time_start": 254681.0,
+    "time_end": 257245.0,
+    "description": "The page scrolls upwards, bringing the flight category summary tabs (Best, Cheapest, Fastest) into view",
+    "confidence": 0.9,
+    "page_title": "Skyscanner Search Results",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "The view shifts from the flight details to the summary tabs at the top of the results list."
+  },
+  {
+    "type": "hover",
+    "time_start": 257245.0,
+    "time_end": 258131.0,
+    "description": "User hovers over the 'Best' flight category tab, which displays a price of $2,693",
+    "confidence": 0.9,
+    "interaction_target": "Best tab",
+    "cursor_position": {
+      "x": 1747.5,
+      "y": 189.0
+    },
+    "page_title": "Skyscanner Search Results",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "The cursor is positioned over the 'Best' tab at the top of the search results."
+  },
+  {
+    "type": "input_text",
+    "time_start": 304759.0,
+    "time_end": 306648.0,
+    "description": "User types 'london' into the destination search field",
+    "confidence": 0.9,
+    "interaction_target": "Destination input field",
+    "page_title": "Booking.com",
+    "page_location": "booking.com",
+    "frame_description": "The user is entering the destination 'london' into the search input field."
+  },
+  {
+    "type": "select",
+    "time_start": 307758.00000000006,
+    "time_end": 307758.00000000006,
+    "description": "User selects 'London, Greater London, United Kingdom' from the search suggestions",
+    "confidence": 0.9,
+    "interaction_target": "Destination search suggestion",
+    "page_title": "Booking.com",
+    "page_location": "booking.com",
+    "frame_description": "The input field is updated with the full location name from the autocomplete dropdown."
+  },
+  {
+    "type": "dwell",
+    "time_start": 346759.0,
+    "time_end": 348425.0,
+    "description": "User pauses to read the task instructions presented on the dark overlay screen.",
+    "confidence": 0.7,
+    "page_title": "Task Instructions",
+    "frame_description": "A dark overlay screen is visible, which according to the context contains task instructions."
+  }
+]

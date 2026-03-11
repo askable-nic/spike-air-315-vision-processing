@@ -130,36 +130,72 @@ def _save_observe_artifacts(session_dir: Path, observe_result: ObserveResult) ->
     for e in observe_result.local_events:
         event_counts[e.type] = event_counts.get(e.type, 0) + 1
 
-    summary = {
+    summary: dict = {
         "frames_analysed": observe_result.frames_analysed,
         "cursor_detection_rate": round(observe_result.cursor_detection_rate, 4),
         "cursor_detections": len(detected),
         "template_match_counts": template_counts,
         "flow_windows": len(observe_result.flow_summary),
-        "local_events_total": len(observe_result.local_events),
-        "local_events_by_type": event_counts,
-        "local_events_needing_enrichment": sum(
-            1 for e in observe_result.local_events if e.needs_enrichment
-        ),
-        "roi_rects": len(observe_result.roi_rects),
-        "selected_frames_total": len(observe_result.selected_frames),
-        "selected_frames_by_reason": _count_by(
-            observe_result.selected_frames, lambda f: f.reason
-        ),
         "processing_time_ms": round(observe_result.processing_time_ms, 1),
-        "local_events": [
-            {
-                "type": e.type,
-                "time_start_ms": e.time_start_ms,
-                "time_end_ms": e.time_end_ms,
-                "confidence": e.confidence,
-                "synthesis_method": e.synthesis_method,
-                "description": e.description,
-                "needs_enrichment": e.needs_enrichment,
-            }
-            for e in observe_result.local_events
-        ],
     }
+
+    # Visual-change-driven summary
+    if observe_result.moments:
+        moment_counts: dict[str, int] = {}
+        for m in observe_result.moments:
+            moment_counts[m.category] = moment_counts.get(m.category, 0) + 1
+        budget = observe_result.token_budget
+        used = observe_result.token_budget_used
+        usage_pct = round(used / budget * 100, 1) if budget > 0 else 0.0
+        summary.update({
+            "visual_change_events": len(observe_result.visual_changes),
+            "flow_events": len(observe_result.flow_events),
+            "moments_total": len(observe_result.moments),
+            "moments_by_category": moment_counts,
+            "token_budget": budget,
+            "token_budget_used": used,
+            "token_budget_usage_pct": usage_pct,
+            "moments": [
+                {
+                    "category": m.category,
+                    "time_start_ms": m.time_start_ms,
+                    "time_end_ms": m.time_end_ms,
+                    "priority": m.priority,
+                    "estimated_tokens": m.estimated_tokens,
+                    "cursor_associated": m.cursor_associated,
+                    "has_visual_change": m.visual_change is not None,
+                    "has_flow_event": m.flow_event is not None,
+                }
+                for m in observe_result.moments
+            ],
+        })
+    else:
+        # Legacy observe-driven summary
+        summary.update({
+            "local_events_total": len(observe_result.local_events),
+            "local_events_by_type": event_counts,
+            "local_events_needing_enrichment": sum(
+                1 for e in observe_result.local_events if e.needs_enrichment
+            ),
+            "roi_rects": len(observe_result.roi_rects),
+            "selected_frames_total": len(observe_result.selected_frames),
+            "selected_frames_by_reason": _count_by(
+                observe_result.selected_frames, lambda f: f.reason
+            ),
+            "local_events": [
+                {
+                    "type": e.type,
+                    "time_start_ms": e.time_start_ms,
+                    "time_end_ms": e.time_end_ms,
+                    "confidence": e.confidence,
+                    "synthesis_method": e.synthesis_method,
+                    "description": e.description,
+                    "needs_enrichment": e.needs_enrichment,
+                }
+                for e in observe_result.local_events
+            ],
+        })
+
     with open(session_dir / "observe_summary.json", "w") as f:
         json.dump(summary, f, indent=2)
 
@@ -244,8 +280,30 @@ def _process_session(
             log(f"  Analyse: loaded from cache ({analyse_result.total_input_tokens} input tokens)")
 
     if analyse_result is None:
-        # Choose analyse path: observe-driven when selected_frames available, else triage-based
-        if observe_result is not None and observe_result.selected_frames:
+        # Choose analyse path: visual-change-driven → observe-driven → triage-based
+        if observe_result is not None and observe_result.moments:
+            log(f"  Analyse (visual-change-driven): Pass 1 — scene descriptions...")
+            from stages.analyse import run_scene_description_pass, run_interaction_analysis
+            observe_path = session_dir / "observe.json"
+
+            scene_descriptions = asyncio.run(
+                run_scene_description_pass(
+                    observe_result.moments, video_path, config, session,
+                    branch, iteration, base_dir, output_dir=output_dir,
+                )
+            )
+            observe_result = observe_result.model_copy(update={"scene_descriptions": scene_descriptions})
+            _save_stage_json(observe_path, observe_result)
+
+            log(f"  Analyse (visual-change-driven): Pass 2 — interaction analysis...")
+            analyse_result = asyncio.run(
+                run_interaction_analysis(
+                    observe_result.moments, scene_descriptions, observe_result,
+                    video_path, config, session,
+                    branch, iteration, base_dir, output_dir=output_dir,
+                )
+            )
+        elif observe_result is not None and observe_result.selected_frames:
             log(f"  Analyse (observe-driven)...")
             from stages.analyse import run_analyse_from_observe
             analyse_result = asyncio.run(

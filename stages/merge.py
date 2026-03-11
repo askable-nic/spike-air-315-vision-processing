@@ -7,9 +7,11 @@ from src.models import (
     AnalyseResult,
     CursorDetection,
     EventType,
+    Moment,
     ObserveResult,
     PipelineConfig,
     ResolvedEvent,
+    SceneDescription,
     SessionManifest,
     SessionOutput,
     StageMetrics,
@@ -17,6 +19,19 @@ from src.models import (
 )
 from src.similarity import events_are_duplicates
 from stages.observe import _lookup_cursor_at_timestamp
+
+
+def _find_moment_scene_context(
+    timestamp_ms: float,
+    scene_descriptions: tuple[SceneDescription, ...],
+) -> SceneDescription | None:
+    """Find the most recent scene description before the given timestamp."""
+    best: SceneDescription | None = None
+    for sd in scene_descriptions:
+        if sd.timestamp_ms <= timestamp_ms:
+            if best is None or sd.timestamp_ms > best.timestamp_ms:
+                best = sd
+    return best
 
 
 def _resolve_cursor_position(
@@ -137,6 +152,28 @@ def run_merge(
                     cursor_position=cursor_dict,
                 ))
 
+    # Add scroll moments from visual-change-driven pipeline
+    if observe_result is not None and observe_result.moments:
+        offset = session.screenTrackStartOffset
+        for moment in observe_result.moments:
+            if moment.category == "scroll" and moment.flow_event is not None:
+                fe = moment.flow_event
+                direction = "down" if fe.dominant_direction == "S" else "up" if fe.dominant_direction == "N" else fe.dominant_direction
+                # Find scene context for page_title
+                page_title = None
+                scene_ctx = _find_moment_scene_context(moment.time_start_ms, observe_result.scene_descriptions)
+                if scene_ctx is not None:
+                    page_title = scene_ctx.page_title
+
+                resolved.append(ResolvedEvent(
+                    type="scroll",
+                    time_start=moment.time_start_ms + offset,
+                    time_end=moment.time_end_ms + offset,
+                    description=f"Scroll {direction} (magnitude: {fe.mean_magnitude:.1f}, uniformity: {fe.flow_uniformity:.2f})",
+                    confidence=0.8,
+                    page_title=page_title,
+                ))
+
     # Sort by start time
     resolved.sort(key=lambda e: e.time_start)
 
@@ -147,9 +184,10 @@ def run_merge(
 
     observe_metrics = StageMetrics()
     if observe_result is not None:
+        artifacts = len(observe_result.moments) if observe_result.moments else len(observe_result.local_events)
         observe_metrics = StageMetrics(
             duration_ms=observe_result.processing_time_ms,
-            artifacts_created=len(observe_result.local_events),
+            artifacts_created=artifacts,
         )
 
     return SessionOutput(

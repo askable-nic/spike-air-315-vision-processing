@@ -50,10 +50,22 @@ Run observe-driven mode (triage disabled, adaptive frame selection):
 vex run -b observe-driven -i 1
 ```
 
+Run visual-change-driven mode (screen content changes as primary signal):
+
+```bash
+vex run -b visual-change-driven -i 1
+```
+
 Or enable it ad-hoc on any branch:
 
 ```bash
 vex run -b adaptive -i 1 -o triage.enabled=false -o observe.enabled=true
+```
+
+Enable visual-change-driven ad-hoc:
+
+```bash
+vex run -b adaptive -i 1 -o triage.enabled=false -o observe.enabled=true -o observe.visual_change_driven=true
 ```
 
 ### List experiments
@@ -66,13 +78,16 @@ vex list --branch adaptive
 ### Compare iterations
 
 ```bash
-vex compare --branch adaptive --iterations 1,2
-vex compare --branch adaptive --iterations 1,2 --session travel_expert_lisa
+vex compare                                        # all branches and iterations
+vex compare --branch adaptive                      # all iterations in a branch
+vex compare --branch adaptive --iterations 1,2     # specific iterations
+vex compare --iterations 1                         # iteration 1 across all branches
+vex compare -b adaptive -i 1,2 -s travel_expert_lisa  # with session detail
 ```
 
 ## Pipeline
 
-Two pipeline modes are available:
+Three pipeline modes are available:
 
 ### Triage-driven (default)
 
@@ -101,6 +116,25 @@ observe (adaptive FPS)  →  frame selection  →  analyse (event-driven batches
 
 See `experiments/observe-driven/` for a ready-to-run experiment using this mode.
 
+### Visual-change-driven
+
+Uses screen content changes as the primary signal instead of cursor motion. Sends ~30-60 high-signal moments to the LLM instead of 500+ low-signal frames. Token usage drops from ~750k to ~33k-67k per 5-minute session. Enable with `observe.visual_change_driven=true` (triage disabled, observe enabled).
+
+```
+observe (visual change + flow + cursor)  →  moment detection  →  Pass 1 (scenes)  →  Pass 2 (interactions)  →  merge
+```
+
+1. **Observe** — Runs three detection passes in local compute (no API calls):
+   - **Visual change detection** — Extracts frames at `change_detect_fps` (default 4), computes per-pair absdiff → blur → threshold → morphological close → connected components. Clusters contiguous change frames into `VisualChangeEvent`s classified as `scene_change` (≥30% of frame changed), `local_change` (small, short), or `continuous_change` (long duration, stable area).
+   - **Flow event detection** — Converts existing `FlowWindow` summaries into discrete `FlowEvent`s (scroll, pan, mixed) by finding runs of 2+ consecutive windows with high uniformity and magnitude.
+   - **Cursor tracking** — Same adaptive two-pass tracking as observe-driven (optional, controlled by `cursor_tracking_enabled`). Cursor stops (stationary ≥ `cursor_stop_min_ms`) are detected separately. Dwells and thrashes reuse existing detectors.
+   - **Moment detection** — Combines the three timelines into `Moment`s via a 9-step algorithm: visual changes become candidates → scrolls are subtracted (visual changes overlapping flow events) → remaining classified by category → cursor context attached → cursor stops added (not overlapping visual changes) → dwells/thrashes added → adjacent moments merged → budget-based selection by priority → baseline moments inserted in gaps.
+2. **Pass 1 (Scene Descriptions)** — Scene change, scroll, continuous, and baseline moments each get one full frame sent to Gemini. Returns `SceneDescription`s (page title, location, description, interactive elements) that serve as reusable text context for Pass 2.
+3. **Pass 2 (Interaction Analysis)** — Interaction, cursor_stop, and cursor_only moments are batched by time proximity. Each batch includes ROI-cropped before/after frames (for interactions) or a single cursor-centered frame (for stops), plus the most recent scene description as a text preamble (not an image). Returns `RawEvent`s in the same format as other modes.
+4. **Merge** — Same as other modes. Scroll moments from the visual-change-driven pipeline are injected directly as `ResolvedEvent`s (self-describing, no LLM needed) with page title from scene descriptions.
+
+See `experiments/visual-change-driven/` for a ready-to-run experiment using this mode. See `VISUAL_CHANGE_SPEC.md` for the full technical design.
+
 ## Experiment Structure
 
 ```
@@ -114,6 +148,11 @@ experiments/
       pipeline.py                # custom stage functions (optional)
       output/{session_id}/       # triage.json, events.json, session.json
   observe-driven/                # branch (observe-driven, triage disabled)
+    config.yaml
+    1/
+      config.yaml
+      output/{session_id}/       # observe.json, analysis.json, events.json, session.json
+  visual-change-driven/          # branch (visual-change-driven, triage disabled)
     config.yaml
     1/
       config.yaml
@@ -145,8 +184,8 @@ Per-session output in `experiments/{branch}/{iteration}/output/{session_id}/`:
 - `events.json` — final events matching `event-schema.json`
 - `session.json` — full session output with per-stage metrics and token usage
 - `triage.json` — triage segments (only when triage is enabled)
-- `observe.json` — observe stage result with cursor trajectory, flow summary, local events, selected frames, and ROI rects (only when observe is enabled; used for cache/resume)
-- `observe_summary.json` — human-readable summary: detection rate, template match counts, event counts by type, selected frame counts by reason, event details (only when observe is enabled)
+- `observe.json` — observe stage result (only when observe is enabled; used for cache/resume). In observe-driven mode: cursor trajectory, flow summary, local events, selected frames, ROI rects. In visual-change-driven mode: cursor trajectory, visual change events, flow events, moments, and scene descriptions (populated after Pass 1).
+- `observe_summary.json` — human-readable summary (only when observe is enabled). In observe-driven mode: detection rate, template match counts, event counts by type, selected frame counts by reason. In visual-change-driven mode: moment counts by category, visual change event count, flow event count, estimated tokens, and per-moment details.
 
 Run-level metadata in `experiments/{branch}/{iteration}/output/metadata.json`.
 
@@ -176,12 +215,12 @@ List experiment branches and iterations.
 
 ### `vex compare`
 
-Compare event counts between iterations.
+Compare event counts between iterations. With no flags, compares all branches and iterations that have output.
 
 | Flag | Short | Type | Default | Description |
 |---|---|---|---|---|
-| `--branch` | `-b` | string | *required* | Branch name |
-| `--iterations` | | string | *required* | Comma-separated iteration numbers |
+| `--branch` | `-b` | string | all | Branch name |
+| `--iterations` | | string | all | Comma-separated iteration numbers |
 | `--session` | `-s` | string | all | Filter by session ID |
 | `--base-dir` | | path | `.` | Project base directory |
 
@@ -206,11 +245,43 @@ All options can be set in `config.yaml` or via CLI overrides (`-o triage.sample_
 
 Disabled by default. Enable with `observe.enabled=true`.
 
-**Cursor tracking**
+**Pipeline mode**
 
 | Key | Type | Default | Description |
 |---|---|---|---|
 | `enabled` | bool | `false` | Enable the observe stage |
+| `visual_change_driven` | bool | `false` | Use visual-change-driven pipeline (screen content changes as primary signal) |
+| `cursor_tracking_enabled` | bool | `true` | Enable cursor tracking (can be disabled for recordings without a visible cursor) |
+
+**Visual change detection** (visual-change-driven mode)
+
+| Key | Type | Default | Description |
+|---|---|---|---|
+| `change_detect_fps` | float | `4.0` | Frame rate for visual change detection |
+| `change_pixel_threshold` | int | `20` | Absdiff threshold (0–255) for change detection |
+| `change_min_area_px` | int | `1000` | Minimum connected component area (px) to qualify as a change |
+| `change_blur_kernel` | int | `5` | Gaussian blur kernel size for noise suppression |
+| `change_morph_kernel` | int | `5` | Morphological close kernel size for merging nearby pixels |
+| `scene_change_area_threshold` | float | `0.3` | Fraction of frame area to classify as scene_change vs local_change |
+| `continuous_change_max_duration_ms` | int | `3000` | Duration beyond which a sustained change is classified as continuous |
+
+**Moment detection** (visual-change-driven mode)
+
+| Key | Type | Default | Description |
+|---|---|---|---|
+| `cursor_stop_min_ms` | int | `300` | Minimum stationary duration (ms) for cursor stop detection |
+| `cursor_stop_radius_px` | float | `15.0` | Max cursor drift (px) during a stop |
+| `moment_merge_gap_ms` | int | `500` | Adjacent moments within this gap are merged |
+| `token_budget_per_minute` | int | `50000` | Token budget per minute of screen track for moment selection |
+| `tokens_full_frame` | int | `1600` | Estimated tokens per full-frame moment (scene_change, scroll, continuous, baseline) |
+| `tokens_roi_pair` | int | `750` | Estimated tokens per ROI before/after pair (interaction moments) |
+| `tokens_roi_single` | int | `300` | Estimated tokens per single ROI crop (cursor_stop, cursor_only moments) |
+| `roi_min_size` | int | `256` | Minimum ROI crop size (px) for Pass 2 frames |
+
+**Cursor tracking**
+
+| Key | Type | Default | Description |
+|---|---|---|---|
 | `tracking_fps` | float | `5.0` | Legacy single-pass FPS (used when not using adaptive two-pass) |
 | `tracking_base_fps` | float | `2.0` | Coarse pass FPS for adaptive tracking |
 | `tracking_peak_fps` | float | `15.0` | Fine pass FPS within active regions |
@@ -330,7 +401,7 @@ src/
   models.py       Pydantic data models (all frozen)
   config.py       Config loading, deep merge, defaults
   manifest.py     Manifest parser
-  video.py        OpenCV frame extraction, diffs, optical flow, cropping
+  video.py        OpenCV frame extraction, diffs, optical flow, cropping, visual change detection
   gemini.py       Gemini API client wrapper
   prompts.py      Prompt resolution + template filling
   similarity.py   String similarity for dedup
@@ -339,9 +410,11 @@ src/
 
 stages/
   triage.py       Activity signal → segment classification
-  observe.py      Cursor tracking, optical flow, local event synthesis, frame selection
-  analyse.py      Gemini API calls per segment (triage-driven) or per batch (observe-driven)
-  merge.py        Timestamp resolution + dedup
+  observe.py      Cursor tracking, optical flow, local event synthesis, frame selection,
+                  visual change detection, flow events, cursor stops, moment detection
+  analyse.py      Gemini API calls per segment (triage-driven), per batch (observe-driven),
+                  or per moment (visual-change-driven: Pass 1 scenes + Pass 2 interactions)
+  merge.py        Timestamp resolution + dedup + scroll moment injection
 
 cursor_templates/
   templates.json  Cursor template metadata (template_id, file, hotspot)

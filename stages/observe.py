@@ -12,10 +12,13 @@ import numpy as np
 
 from src.log import log
 from src.models import (
+    ChangeRegion,
     CursorDetection,
     CursorPosition,
+    FlowEvent,
     FlowWindow,
     LocalEvent,
+    Moment,
     ObserveConfig,
     ObserveResult,
     PipelineConfig,
@@ -23,10 +26,14 @@ from src.models import (
     SelectedFrame,
     SessionManifest,
     TriageResult,
+    VideoMetadata,
+    VisualChangeEvent,
+    VisualChangeFrame,
 )
 from src.video import (
     compute_frame_diff,
     compute_optical_flow,
+    detect_visual_changes,
     extract_frames,
     extract_frames_at_timestamps,
     get_video_metadata,
@@ -1187,6 +1194,469 @@ def format_local_events_for_prompt(
 
 
 # ---------------------------------------------------------------------------
+# Visual-change-driven pipeline
+# ---------------------------------------------------------------------------
+
+
+def _bbox_iou(
+    a: tuple[int, int, int, int],
+    b: tuple[int, int, int, int],
+) -> float:
+    """Compute IoU between two (x, y, w, h) bounding boxes."""
+    ax0, ay0, aw, ah = a
+    bx0, by0, bw, bh = b
+    ax1, ay1 = ax0 + aw, ay0 + ah
+    bx1, by1 = bx0 + bw, by0 + bh
+
+    ix0 = max(ax0, bx0)
+    iy0 = max(ay0, by0)
+    ix1 = min(ax1, bx1)
+    iy1 = min(ay1, by1)
+
+    if ix1 <= ix0 or iy1 <= iy0:
+        return 0.0
+
+    inter = (ix1 - ix0) * (iy1 - iy0)
+    union = aw * ah + bw * bh - inter
+    return inter / union if union > 0 else 0.0
+
+
+def _union_bbox(
+    boxes: list[tuple[int, int, int, int]],
+) -> tuple[int, int, int, int]:
+    """Compute the union bounding box of a list of (x, y, w, h) boxes."""
+    if not boxes:
+        return (0, 0, 0, 0)
+    x0 = min(b[0] for b in boxes)
+    y0 = min(b[1] for b in boxes)
+    x1 = max(b[0] + b[2] for b in boxes)
+    y1 = max(b[1] + b[3] for b in boxes)
+    return (x0, y0, x1 - x0, y1 - y0)
+
+
+def detect_visual_change_events(
+    change_frames: tuple[VisualChangeFrame, ...],
+    frame_width: int,
+    frame_height: int,
+    oc: ObserveConfig,
+) -> tuple[VisualChangeEvent, ...]:
+    """Cluster contiguous VisualChangeFrames into VisualChangeEvents.
+
+    Two consecutive change frames are contiguous if:
+    - Adjacent in time (no gap at extraction FPS), AND
+    - Spatial overlap (IoU > 0) between any region pair, OR
+    - Both exceed scene_change_area_threshold
+    """
+    if not change_frames:
+        return ()
+
+    interval_ms = 1000.0 / oc.change_detect_fps
+    max_gap_ms = interval_ms * 1.5  # allow small timing jitter
+
+    clusters: list[list[VisualChangeFrame]] = [[change_frames[0]]]
+
+    for i in range(1, len(change_frames)):
+        prev = change_frames[i - 1]
+        curr = change_frames[i]
+
+        # Check temporal adjacency
+        time_gap = curr.timestamp_a_ms - prev.timestamp_b_ms
+        if time_gap > max_gap_ms:
+            clusters.append([curr])
+            continue
+
+        # Check spatial overlap or both scene-level
+        both_large = (
+            prev.frame_area_fraction >= oc.scene_change_area_threshold
+            and curr.frame_area_fraction >= oc.scene_change_area_threshold
+        )
+
+        has_overlap = False
+        if not both_large:
+            for r_prev in prev.regions:
+                for r_curr in curr.regions:
+                    iou = _bbox_iou(
+                        (r_prev.x, r_prev.y, r_prev.width, r_prev.height),
+                        (r_curr.x, r_curr.y, r_curr.width, r_curr.height),
+                    )
+                    if iou > 0:
+                        has_overlap = True
+                        break
+                if has_overlap:
+                    break
+
+        if both_large or has_overlap:
+            clusters[-1].append(curr)
+        else:
+            clusters.append([curr])
+
+    events: list[VisualChangeEvent] = []
+    for cluster in clusters:
+        time_start = cluster[0].timestamp_a_ms
+        time_end = cluster[-1].timestamp_b_ms
+        duration = time_end - time_start
+        peak_fraction = max(f.frame_area_fraction for f in cluster)
+
+        all_boxes = [
+            (r.x, r.y, r.width, r.height)
+            for f in cluster for r in f.regions
+        ]
+        bbox = _union_bbox(all_boxes)
+
+        # Classify
+        if duration > oc.continuous_change_max_duration_ms:
+            # Check area stability for continuous vs load
+            fractions = [f.frame_area_fraction for f in cluster]
+            mean_frac = sum(fractions) / len(fractions)
+            variance = sum((x - mean_frac) ** 2 for x in fractions) / len(fractions)
+            std_frac = math.sqrt(variance)
+            # Stable area → continuous; growing area → treat as scene_change
+            if std_frac < mean_frac * 0.5:
+                category = "continuous_change"
+            else:
+                category = "scene_change"
+        elif peak_fraction >= oc.scene_change_area_threshold:
+            category = "scene_change"
+        else:
+            category = "local_change"
+
+        events.append(VisualChangeEvent(
+            time_start_ms=time_start,
+            time_end_ms=time_end,
+            frames=tuple(cluster),
+            peak_changed_area_fraction=peak_fraction,
+            bounding_box=bbox,
+            category=category,
+        ))
+
+    return tuple(events)
+
+
+def detect_flow_events(
+    flow_summary: tuple[FlowWindow, ...],
+    oc: ObserveConfig,
+) -> tuple[FlowEvent, ...]:
+    """Convert flow windows into discrete FlowEvents.
+
+    Scan consecutive windows where uniformity >= threshold and magnitude >= threshold
+    persist across 2+ windows. Merge contiguous events with same direction.
+    """
+    if len(flow_summary) < 2:
+        return ()
+
+    events: list[FlowEvent] = []
+    vertical = {"N", "S"}
+    horizontal = {"E", "W"}
+
+    i = 0
+    while i < len(flow_summary):
+        fw = flow_summary[i]
+        if (
+            fw.flow_uniformity >= oc.scroll_min_flow_uniformity
+            and fw.mean_flow_magnitude >= oc.scroll_min_magnitude
+        ):
+            # Start of a potential flow event — extend while condition holds
+            run = [fw]
+            j = i + 1
+            while j < len(flow_summary):
+                nxt = flow_summary[j]
+                if (
+                    nxt.flow_uniformity >= oc.scroll_min_flow_uniformity
+                    and nxt.mean_flow_magnitude >= oc.scroll_min_magnitude
+                ):
+                    run.append(nxt)
+                    j += 1
+                else:
+                    break
+
+            if len(run) >= 2:
+                mean_mag = sum(w.mean_flow_magnitude for w in run) / len(run)
+                mean_uni = sum(w.flow_uniformity for w in run) / len(run)
+
+                # Dominant direction: most common across run
+                dir_counts: dict[str, int] = {}
+                for w in run:
+                    dir_counts[w.dominant_direction] = dir_counts.get(w.dominant_direction, 0) + 1
+                dominant = max(dir_counts, key=lambda d: dir_counts[d])
+
+                if dominant in vertical and mean_uni >= oc.scroll_min_flow_uniformity:
+                    cat = "scroll"
+                elif dominant in horizontal and mean_uni >= oc.scroll_min_flow_uniformity:
+                    cat = "pan"
+                else:
+                    cat = "mixed"
+
+                events.append(FlowEvent(
+                    time_start_ms=run[0].start_ms,
+                    time_end_ms=run[-1].end_ms,
+                    dominant_direction=dominant,
+                    mean_magnitude=mean_mag,
+                    flow_uniformity=mean_uni,
+                    category=cat,
+                ))
+                i = j
+                continue
+        i += 1
+
+    # Merge contiguous events with same direction
+    if len(events) < 2:
+        return tuple(events)
+
+    merged: list[FlowEvent] = [events[0]]
+    for ev in events[1:]:
+        prev = merged[-1]
+        if ev.dominant_direction == prev.dominant_direction and ev.category == prev.category:
+            gap = ev.time_start_ms - prev.time_end_ms
+            if gap <= oc.flow_window_step_ms * 1.5:
+                total_dur = ev.time_end_ms - prev.time_start_ms
+                prev_dur = prev.time_end_ms - prev.time_start_ms
+                ev_dur = ev.time_end_ms - ev.time_start_ms
+                merged[-1] = FlowEvent(
+                    time_start_ms=prev.time_start_ms,
+                    time_end_ms=ev.time_end_ms,
+                    dominant_direction=prev.dominant_direction,
+                    mean_magnitude=(prev.mean_magnitude * prev_dur + ev.mean_magnitude * ev_dur) / total_dur if total_dur > 0 else prev.mean_magnitude,
+                    flow_uniformity=(prev.flow_uniformity + ev.flow_uniformity) / 2,
+                    category=prev.category,
+                )
+                continue
+        merged.append(ev)
+
+    return tuple(merged)
+
+
+def detect_cursor_stops(
+    trajectory: tuple[CursorDetection, ...],
+    oc: ObserveConfig,
+) -> tuple[tuple[float, float, float, float], ...]:
+    """Detect significant cursor stops: stationary for >= cursor_stop_min_ms.
+
+    Returns (start_ms, end_ms, x, y) tuples.
+    """
+    detected = tuple(d for d in trajectory if d.detected or d.confidence > 0)
+    if not detected:
+        return ()
+
+    windows = _detect_stationary_windows(detected, oc.cursor_stop_radius_px)
+    stops: list[tuple[float, float, float, float]] = []
+
+    for start_idx, end_idx in windows:
+        duration = detected[end_idx].timestamp_ms - detected[start_idx].timestamp_ms
+        if duration >= oc.cursor_stop_min_ms:
+            stops.append((
+                detected[start_idx].timestamp_ms,
+                detected[end_idx].timestamp_ms,
+                detected[start_idx].x,
+                detected[start_idx].y,
+            ))
+
+    return tuple(stops)
+
+
+def _time_ranges_overlap(
+    a_start: float, a_end: float,
+    b_start: float, b_end: float,
+) -> bool:
+    """Check if two time ranges overlap."""
+    return a_start < b_end and b_start < a_end
+
+
+def detect_moments(
+    visual_changes: tuple[VisualChangeEvent, ...],
+    flow_events: tuple[FlowEvent, ...],
+    cursor_stops: tuple[tuple[float, float, float, float], ...],
+    dwells: tuple[LocalEvent, ...],
+    thrashes: tuple[LocalEvent, ...],
+    trajectory: tuple[CursorDetection, ...],
+    oc: ObserveConfig,
+    frame_width: int,
+    frame_height: int,
+    duration_ms: float,
+) -> tuple[Moment, ...]:
+    """Combine timelines into moments and apply budget-based selection.
+
+    Implements spec steps 1-9.
+    """
+    candidates: list[Moment] = []
+    used_time_ranges: list[tuple[float, float]] = []
+
+    # Step 1-3: Visual change events → moment candidates, subtract scrolls
+    for vc in visual_changes:
+        # Step 2: Check if overlapping with a flow event (scroll)
+        overlapping_flow = None
+        for fe in flow_events:
+            if _time_ranges_overlap(vc.time_start_ms, vc.time_end_ms, fe.time_start_ms, fe.time_end_ms):
+                overlapping_flow = fe
+                break
+
+        if overlapping_flow is not None:
+            # Scroll moment — self-describing
+            candidates.append(Moment(
+                time_start_ms=vc.time_start_ms,
+                time_end_ms=vc.time_end_ms,
+                visual_change=vc,
+                flow_event=overlapping_flow,
+                category="scroll",
+                priority=2,
+                estimated_tokens=oc.tokens_full_frame,
+            ))
+            used_time_ranges.append((vc.time_start_ms, vc.time_end_ms))
+            continue
+
+        # Step 3: Classify by VisualChangeEvent.category
+        cursor_before = None
+        cursor_after = None
+        cursor_associated = False
+
+        # Step 4: Attach cursor context
+        if trajectory:
+            det_before = _lookup_cursor_at_timestamp(trajectory, vc.time_start_ms - 500, tolerance_ms=600)
+            det_after = _lookup_cursor_at_timestamp(trajectory, vc.time_end_ms, tolerance_ms=600)
+            if det_before is not None:
+                cursor_before = CursorPosition(x=det_before.x, y=det_before.y)
+            if det_after is not None:
+                cursor_after = CursorPosition(x=det_after.x, y=det_after.y)
+
+            # Check if cursor is near the change region
+            bbox_x, bbox_y, bbox_w, bbox_h = vc.bounding_box
+            padding = oc.roi_padding
+            for det in (det_before, det_after):
+                if det is not None:
+                    if (bbox_x - padding <= det.x <= bbox_x + bbox_w + padding and
+                            bbox_y - padding <= det.y <= bbox_y + bbox_h + padding):
+                        cursor_associated = True
+                        break
+
+        if vc.category == "scene_change":
+            cat, pri = "scene_change", 0
+            est_tokens = oc.tokens_full_frame
+        elif vc.category == "continuous_change":
+            cat, pri = "continuous", 2
+            est_tokens = oc.tokens_full_frame
+        else:  # local_change
+            cat, pri = "interaction", 1
+            est_tokens = oc.tokens_roi_pair
+
+        candidates.append(Moment(
+            time_start_ms=vc.time_start_ms,
+            time_end_ms=vc.time_end_ms,
+            visual_change=vc,
+            cursor_before=cursor_before,
+            cursor_after=cursor_after,
+            cursor_associated=cursor_associated,
+            category=cat,
+            priority=pri,
+            estimated_tokens=est_tokens,
+        ))
+        used_time_ranges.append((vc.time_start_ms, vc.time_end_ms))
+
+    # Step 5: Add cursor_stop moments not overlapping existing
+    for start_ms, end_ms, cx, cy in cursor_stops:
+        overlaps = any(
+            _time_ranges_overlap(start_ms, end_ms, ur[0], ur[1])
+            for ur in used_time_ranges
+        )
+        if not overlaps:
+            candidates.append(Moment(
+                time_start_ms=start_ms,
+                time_end_ms=end_ms,
+                cursor_before=CursorPosition(x=cx, y=cy),
+                cursor_associated=True,
+                category="cursor_stop",
+                priority=3,
+                estimated_tokens=oc.tokens_roi_single,
+            ))
+            used_time_ranges.append((start_ms, end_ms))
+
+    # Step 6: Add cursor-only moments from dwells/thrashes
+    for event in (*dwells, *thrashes):
+        overlaps = any(
+            _time_ranges_overlap(event.time_start_ms, event.time_end_ms, ur[0], ur[1])
+            for ur in used_time_ranges
+        )
+        if not overlaps:
+            cursor_pos = None
+            if event.cursor_positions:
+                p = event.cursor_positions[0]
+                cursor_pos = CursorPosition(x=p.x, y=p.y)
+            candidates.append(Moment(
+                time_start_ms=event.time_start_ms,
+                time_end_ms=event.time_end_ms,
+                cursor_before=cursor_pos,
+                cursor_associated=cursor_pos is not None,
+                category="cursor_only",
+                priority=4,
+                estimated_tokens=oc.tokens_roi_single,
+            ))
+            used_time_ranges.append((event.time_start_ms, event.time_end_ms))
+
+    # Step 7: Merge adjacent candidates
+    candidates.sort(key=lambda m: m.time_start_ms)
+    merged: list[Moment] = []
+    for m in candidates:
+        if merged and (m.time_start_ms - merged[-1].time_end_ms) <= oc.moment_merge_gap_ms:
+            prev = merged[-1]
+            # Keep higher priority (lower number)
+            best_pri = min(prev.priority, m.priority)
+            best_cat = prev.category if prev.priority <= m.priority else m.category
+            merged[-1] = Moment(
+                time_start_ms=prev.time_start_ms,
+                time_end_ms=max(prev.time_end_ms, m.time_end_ms),
+                visual_change=prev.visual_change or m.visual_change,
+                flow_event=prev.flow_event or m.flow_event,
+                cursor_before=prev.cursor_before or m.cursor_before,
+                cursor_after=m.cursor_after or prev.cursor_after,
+                cursor_associated=prev.cursor_associated or m.cursor_associated,
+                category=best_cat,
+                priority=best_pri,
+                estimated_tokens=prev.estimated_tokens + m.estimated_tokens,
+            )
+        else:
+            merged.append(m)
+
+    # Step 8: Budget-based selection
+    budget = (duration_ms / 60000.0) * oc.token_budget_per_minute
+
+    # Scene changes always included
+    selected: list[Moment] = [m for m in merged if m.category == "scene_change"]
+    remaining = [m for m in merged if m.category != "scene_change"]
+    used_budget = sum(m.estimated_tokens for m in selected)
+
+    # Fill by priority order
+    remaining.sort(key=lambda m: (m.priority, m.time_start_ms))
+    for m in remaining:
+        if used_budget + m.estimated_tokens <= budget:
+            selected.append(m)
+            used_budget += m.estimated_tokens
+
+    # Step 9: Add baseline moments in gaps > baseline_max_gap_ms
+    selected.sort(key=lambda m: m.time_start_ms)
+    all_times = [0.0] + [m.time_start_ms for m in selected] + [m.time_end_ms for m in selected] + [duration_ms]
+    all_times.sort()
+
+    baselines: list[Moment] = []
+    for i in range(len(all_times) - 1):
+        gap = all_times[i + 1] - all_times[i]
+        if gap > oc.baseline_max_gap_ms:
+            mid = (all_times[i] + all_times[i + 1]) / 2.0
+            baseline = Moment(
+                time_start_ms=mid,
+                time_end_ms=mid,
+                category="baseline",
+                priority=5,
+                estimated_tokens=oc.tokens_full_frame,
+            )
+            if used_budget + oc.tokens_full_frame <= budget:
+                baselines.append(baseline)
+                used_budget += oc.tokens_full_frame
+
+    selected.extend(baselines)
+    selected.sort(key=lambda m: m.time_start_ms)
+
+    return tuple(selected)
+
+
+# ---------------------------------------------------------------------------
 # Top-level orchestrator
 # ---------------------------------------------------------------------------
 
@@ -1205,6 +1675,12 @@ def run_observe(
     total_duration_ms = (
         triage_result.total_duration_ms if triage_result is not None else meta.duration_ms
     )
+
+    if oc.visual_change_driven:
+        return _run_observe_visual_change(
+            session, config, triage_result, video_path, base_dir,
+            oc, meta, total_duration_ms, t0,
+        )
 
     log(f"  Observe: tracking cursor (adaptive 2-pass)...")
     t_step = time.monotonic()
@@ -1255,5 +1731,109 @@ def run_observe(
         selected_frames=selected_frames,
         processing_time_ms=elapsed,
         frames_analysed=len(cursor_trajectory),
+        cursor_detection_rate=detection_rate,
+    )
+
+
+def _run_observe_visual_change(
+    session: SessionManifest,
+    config: PipelineConfig,
+    triage_result: TriageResult | None,
+    video_path: Path,
+    base_dir: Path,
+    oc: ObserveConfig,
+    meta: VideoMetadata,
+    total_duration_ms: float,
+    t0: float,
+) -> ObserveResult:
+    """Visual-change-driven observe path."""
+    # Cursor tracking (optional)
+    cursor_trajectory: tuple[CursorDetection, ...] = ()
+    detection_rate = 0.0
+
+    if oc.cursor_tracking_enabled:
+        log(f"  Observe (visual-change): tracking cursor...")
+        t_step = time.monotonic()
+        cursor_trajectory = track_cursor(video_path, triage_result, oc, base_dir, total_duration_ms)
+        t_track = (time.monotonic() - t_step) * 1000
+        detected_count = sum(1 for d in cursor_trajectory if d.detected)
+        detection_rate = detected_count / len(cursor_trajectory) if cursor_trajectory else 0.0
+        log(f"  Observe (visual-change): cursor {detected_count}/{len(cursor_trajectory)} ({detection_rate:.1%}) [{t_track:.0f}ms]")
+    else:
+        log(f"  Observe (visual-change): cursor tracking disabled")
+
+    # Visual change detection
+    log(f"  Observe (visual-change): detecting visual changes at {oc.change_detect_fps} FPS...")
+    t_step = time.monotonic()
+    change_frames = detect_visual_changes(
+        video_path,
+        fps=oc.change_detect_fps,
+        pixel_threshold=oc.change_pixel_threshold,
+        min_area_px=oc.change_min_area_px,
+        blur_kernel=oc.change_blur_kernel,
+        morph_kernel=oc.change_morph_kernel,
+        scale_height=oc.resolution_height,
+    )
+    t_vc = (time.monotonic() - t_step) * 1000
+    log(f"  Observe (visual-change): {len(change_frames)} change frames [{t_vc:.0f}ms]")
+
+    visual_changes = detect_visual_change_events(
+        change_frames, meta.width, meta.height, oc,
+    )
+    log(f"  Observe (visual-change): {len(visual_changes)} visual change events")
+
+    # Optical flow
+    log(f"  Observe (visual-change): computing optical flow...")
+    t_step = time.monotonic()
+    flow_summary = compute_flow_summaries(video_path, triage_result, cursor_trajectory, oc, total_duration_ms)
+    t_flow = (time.monotonic() - t_step) * 1000
+    log(f"  Observe (visual-change): {len(flow_summary)} flow windows [{t_flow:.0f}ms]")
+
+    flow_evts = detect_flow_events(flow_summary, oc)
+    log(f"  Observe (visual-change): {len(flow_evts)} flow events")
+
+    # Cursor stops
+    cursor_stops = detect_cursor_stops(cursor_trajectory, oc)
+    log(f"  Observe (visual-change): {len(cursor_stops)} cursor stops")
+
+    # Dwells and thrashes (reuse existing detectors)
+    detected_traj = tuple(d for d in cursor_trajectory if d.detected or d.confidence > 0)
+    dwells = _detect_dwells(detected_traj, oc) if detected_traj else ()
+    thrashes = _detect_thrash(detected_traj, oc) if detected_traj else ()
+
+    # Moment detection
+    t_step = time.monotonic()
+    moments = detect_moments(
+        visual_changes, flow_evts, cursor_stops, dwells, thrashes,
+        cursor_trajectory, oc, meta.width, meta.height, total_duration_ms,
+    )
+    t_moments = (time.monotonic() - t_step) * 1000
+    log(f"  Observe (visual-change): {len(moments)} moments [{t_moments:.0f}ms]")
+
+    # Budget tracking
+    token_budget = int((total_duration_ms / 60000.0) * oc.token_budget_per_minute)
+    token_budget_used = sum(m.estimated_tokens for m in moments)
+
+    # Log moment breakdown
+    cat_counts: dict[str, int] = {}
+    for m in moments:
+        cat_counts[m.category] = cat_counts.get(m.category, 0) + 1
+    usage_pct = (token_budget_used / token_budget * 100) if token_budget > 0 else 0.0
+    log(f"  Observe (visual-change): moment breakdown: {cat_counts}")
+    log(f"  Observe (visual-change): token budget {token_budget_used:,}/{token_budget:,} ({usage_pct:.1f}%)")
+
+    elapsed = (time.monotonic() - t0) * 1000
+
+    return ObserveResult(
+        recording_id=session.identifier,
+        cursor_trajectory=cursor_trajectory,
+        flow_summary=flow_summary,
+        visual_changes=visual_changes,
+        flow_events=flow_evts,
+        moments=moments,
+        token_budget=token_budget,
+        token_budget_used=token_budget_used,
+        processing_time_ms=elapsed,
+        frames_analysed=len(cursor_trajectory) if cursor_trajectory else len(change_frames),
         cursor_detection_rate=detection_rate,
     )

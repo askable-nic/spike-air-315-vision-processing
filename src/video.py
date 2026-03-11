@@ -7,7 +7,7 @@ from pathlib import Path
 import cv2
 import numpy as np
 
-from src.models import VideoMetadata
+from src.models import ChangeRegion, VideoMetadata, VisualChangeFrame
 
 
 def get_video_metadata(path: Path) -> VideoMetadata:
@@ -271,3 +271,82 @@ def crop_frame(
     x1 = max(0, min(x + width, w))
     y1 = max(0, min(y + height, h))
     return frame[y0:y1, x0:x1]
+
+
+def detect_visual_changes(
+    path: Path,
+    fps: float,
+    pixel_threshold: int = 20,
+    min_area_px: int = 1000,
+    blur_kernel: int = 5,
+    morph_kernel: int = 5,
+    scale_height: int | None = None,
+) -> tuple[VisualChangeFrame, ...]:
+    """Detect visual changes between consecutive frames extracted at the given FPS.
+
+    For each consecutive frame pair:
+    - Grayscale → absdiff → GaussianBlur → threshold → morphological close
+    - connectedComponentsWithStats to find change regions
+    - Emit VisualChangeFrame for pairs with qualifying regions (area >= min_area_px)
+    """
+    meta = get_video_metadata(path)
+    total_end = meta.duration_ms / 1000.0
+    frames = extract_frames(path, 0.0, total_end, fps, scale_height=scale_height)
+
+    if len(frames) < 2:
+        return ()
+
+    frame_h, frame_w = frames[0][1].shape[:2]
+    frame_area = frame_w * frame_h
+
+    results: list[VisualChangeFrame] = []
+
+    for i in range(len(frames) - 1):
+        ts_a, frame_a = frames[i]
+        ts_b, frame_b = frames[i + 1]
+
+        gray_a = cv2.cvtColor(frame_a, cv2.COLOR_BGR2GRAY) if len(frame_a.shape) == 3 else frame_a
+        gray_b = cv2.cvtColor(frame_b, cv2.COLOR_BGR2GRAY) if len(frame_b.shape) == 3 else frame_b
+
+        diff = cv2.absdiff(gray_a, gray_b)
+        blurred = cv2.GaussianBlur(diff, (blur_kernel, blur_kernel), 0)
+        _, binary = cv2.threshold(blurred, pixel_threshold, 255, cv2.THRESH_BINARY)
+        kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (morph_kernel, morph_kernel))
+        closed = cv2.morphologyEx(binary, cv2.MORPH_CLOSE, kernel)
+
+        num_labels, labels, stats, _centroids = cv2.connectedComponentsWithStats(closed)
+
+        regions: list[ChangeRegion] = []
+        total_changed = 0
+
+        # Label 0 is background, skip it
+        for label_idx in range(1, num_labels):
+            area = int(stats[label_idx, cv2.CC_STAT_AREA])
+            if area < min_area_px:
+                continue
+
+            x = int(stats[label_idx, cv2.CC_STAT_LEFT])
+            y = int(stats[label_idx, cv2.CC_STAT_TOP])
+            w = int(stats[label_idx, cv2.CC_STAT_WIDTH])
+            h = int(stats[label_idx, cv2.CC_STAT_HEIGHT])
+
+            # Mean magnitude within the component
+            component_mask = (labels == label_idx).astype(np.uint8)
+            mean_mag = float(cv2.mean(diff, mask=component_mask)[0])
+
+            regions.append(ChangeRegion(
+                x=x, y=y, width=w, height=h,
+                area_px=area, mean_magnitude=mean_mag,
+            ))
+            total_changed += area
+
+        if regions:
+            results.append(VisualChangeFrame(
+                timestamp_a_ms=ts_a,
+                timestamp_b_ms=ts_b,
+                regions=tuple(regions),
+                total_changed_area_px=total_changed,
+                frame_area_fraction=total_changed / frame_area if frame_area > 0 else 0.0,
+            ))
+
+    return tuple(results)

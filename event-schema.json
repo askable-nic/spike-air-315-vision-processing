@@ -83,6 +83,14 @@
       "type": "string",
       "description": "The URL/path/title of the page/screen/section the user action occurred on"
     },
+    "viewport_width": {
+      "type": "integer",
+      "description": "The width of the viewport in pixels at the time of the event"
+    },
+    "viewport_height": {
+      "type": "integer",
+      "description": "The height of the viewport in pixels at the time of the event"
+    },
     "frame_description": {
       "type": "string",
       "description": "Description of the visual information associated with the action (eg. what's on the page)"

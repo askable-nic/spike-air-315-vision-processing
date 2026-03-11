@@ -81,6 +81,27 @@ class MergeConfig(BaseModel, frozen=True):
 
 class ObserveConfig(BaseModel, frozen=True):
     enabled: bool = False
+    # Visual-change-driven pipeline
+    visual_change_driven: bool = False
+    cursor_tracking_enabled: bool = True
+    # Visual change detection
+    change_detect_fps: float = 4.0
+    change_pixel_threshold: int = 20
+    change_min_area_px: int = 1000
+    change_blur_kernel: int = 5
+    change_morph_kernel: int = 5
+    scene_change_area_threshold: float = 0.3
+    continuous_change_max_duration_ms: int = 3000
+    # Cursor stop detection
+    cursor_stop_min_ms: int = 300
+    cursor_stop_radius_px: float = 15.0
+    # Moment detection
+    moment_merge_gap_ms: int = 500
+    token_budget_per_minute: int = 50000
+    tokens_full_frame: int = 1600
+    tokens_roi_pair: int = 750
+    tokens_roi_single: int = 300
+    roi_min_size: int = 256
     # Cursor tracking — adaptive two-pass
     tracking_fps: float = 5.0  # legacy single-pass FPS
     tracking_base_fps: float = 2.0
@@ -220,6 +241,69 @@ class FlowWindow(BaseModel, frozen=True):
     cursor_flow_divergence: float = 0.0
 
 
+class ChangeRegion(BaseModel, frozen=True):
+    x: int
+    y: int
+    width: int
+    height: int
+    area_px: int
+    mean_magnitude: float
+
+
+class VisualChangeFrame(BaseModel, frozen=True):
+    timestamp_a_ms: float
+    timestamp_b_ms: float
+    regions: tuple[ChangeRegion, ...]
+    total_changed_area_px: int
+    frame_area_fraction: float
+
+
+class VisualChangeEvent(BaseModel, frozen=True):
+    time_start_ms: float
+    time_end_ms: float
+    frames: tuple[VisualChangeFrame, ...]
+    peak_changed_area_fraction: float
+    bounding_box: tuple[int, int, int, int]
+    category: str  # "scene_change", "local_change", "continuous_change"
+
+
+class FlowEvent(BaseModel, frozen=True):
+    time_start_ms: float
+    time_end_ms: float
+    dominant_direction: str
+    mean_magnitude: float
+    flow_uniformity: float
+    category: str  # "scroll", "pan", "mixed"
+
+
+MomentCategory = Literal[
+    "scene_change", "interaction", "scroll",
+    "continuous", "cursor_stop", "cursor_only", "baseline",
+]
+
+
+class Moment(BaseModel, frozen=True):
+    time_start_ms: float
+    time_end_ms: float
+    visual_change: VisualChangeEvent | None = None
+    flow_event: FlowEvent | None = None
+    cursor_before: CursorPosition | None = None
+    cursor_after: CursorPosition | None = None
+    cursor_associated: bool = False
+    category: MomentCategory = "baseline"
+    priority: int = 5
+    estimated_tokens: int = 1600
+
+
+class SceneDescription(BaseModel, frozen=True):
+    frame_index: int
+    timestamp_ms: float
+    page_title: str = ""
+    page_location: str = ""
+    page_description: str = ""
+    visible_interactive_elements: tuple[str, ...] = ()
+
+
 class LocalEvent(BaseModel, frozen=True):
     type: EventType
     time_start_ms: float
@@ -252,6 +336,8 @@ class RawEvent(BaseModel, frozen=True):
     cursor_position: CursorPosition | None = None
     page_title: str | None = None
     page_location: str | None = None
+    viewport_width: int | None = None
+    viewport_height: int | None = None
     frame_description: str | None = None
 
 
@@ -287,6 +373,13 @@ class ObserveResult(BaseModel, frozen=True):
     local_events: tuple[LocalEvent, ...] = ()
     roi_rects: tuple[ROIRect, ...] = ()
     selected_frames: tuple[SelectedFrame, ...] = ()
+    # Visual-change-driven fields
+    visual_changes: tuple[VisualChangeEvent, ...] = ()
+    flow_events: tuple[FlowEvent, ...] = ()
+    moments: tuple[Moment, ...] = ()
+    scene_descriptions: tuple[SceneDescription, ...] = ()
+    token_budget: int = 0
+    token_budget_used: int = 0
     processing_time_ms: float = 0
     frames_analysed: int = 0
     cursor_detection_rate: float = 0.0
@@ -304,6 +397,8 @@ class ResolvedEvent(BaseModel, frozen=True):
     cursor_position: dict | None = None
     page_title: str | None = None
     page_location: str | None = None
+    viewport_width: int | None = None
+    viewport_height: int | None = None
     frame_description: str | None = None
     task_id: str | None = None
 

@@ -66,20 +66,57 @@ def list_experiments(branch: str | None, base_dir: Path):
 
 
 @main.command()
-@click.option("--branch", "-b", required=True, help="Branch name")
-@click.option("--iterations", required=True, help="Comma-separated iteration numbers to compare")
+@click.option("--branch", "-b", default=None, help="Branch name (default: all branches)")
+@click.option("--iterations", default=None, help="Comma-separated iteration numbers (default: all iterations)")
 @click.option("--session", "-s", default=None, help="Filter by session ID")
 @click.option("--base-dir", type=click.Path(exists=True, path_type=Path), default=".", help="Project base directory")
-def compare(branch: str, iterations: str, session: str | None, base_dir: Path):
-    """Compare event counts between iterations."""
-    iter_nums = [int(x.strip()) for x in iterations.split(",")]
-    experiments_dir = base_dir / "experiments" / branch
+def compare(branch: str | None, iterations: str | None, session: str | None, base_dir: Path):
+    """Compare event counts between iterations.
 
-    for iter_num in iter_nums:
-        output_dir = experiments_dir / str(iter_num) / "output"
+    When called with no flags, compares all branches and iterations that have output.
+    """
+    experiments_dir = base_dir / "experiments"
+    if not experiments_dir.exists():
+        click.echo("No experiments directory found.")
+        return
+
+    # Discover branch/iteration pairs to compare
+    pairs: list[tuple[str, int]] = []
+
+    if branch is not None and iterations is not None:
+        iter_nums = [int(x.strip()) for x in iterations.split(",")]
+        pairs = [(branch, n) for n in iter_nums]
+    elif branch is not None:
+        branch_dir = experiments_dir / branch
+        if branch_dir.is_dir():
+            pairs = [
+                (branch, int(item.name))
+                for item in sorted(branch_dir.iterdir())
+                if item.is_dir() and item.name.isdigit()
+            ]
+    else:
+        for branch_dir in sorted(experiments_dir.iterdir()):
+            if not branch_dir.is_dir() or branch_dir.name.startswith("."):
+                continue
+            iter_nums_for_branch = [
+                int(item.name)
+                for item in sorted(branch_dir.iterdir())
+                if item.is_dir() and item.name.isdigit()
+            ]
+            if iterations is not None:
+                requested = {int(x.strip()) for x in iterations.split(",")}
+                iter_nums_for_branch = [n for n in iter_nums_for_branch if n in requested]
+            pairs.extend((branch_dir.name, n) for n in iter_nums_for_branch)
+
+    if not pairs:
+        click.echo("No iterations found to compare.")
+        return
+
+    for branch_name, iter_num in pairs:
+        output_dir = experiments_dir / branch_name / str(iter_num) / "output"
         metadata_path = output_dir / "metadata.json"
 
-        click.echo(f"\n--- {branch}/{iter_num} ---")
+        click.echo(f"\n--- {branch_name}/{iter_num} ---")
 
         if not metadata_path.exists():
             click.echo("  No output found.")
