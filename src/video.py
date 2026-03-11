@@ -103,6 +103,87 @@ def extract_frames(
         cap.release()
 
 
+def extract_frames_at_timestamps(
+    path: Path,
+    timestamps_ms: tuple[float, ...],
+    scale_height: int | None = None,
+) -> tuple[tuple[float, np.ndarray], ...]:
+    """Extract frames at specific timestamps (ms) from a video.
+
+    Uses sequential grab/retrieve — walks forward through the video and decodes
+    only when the current frame is within half-frame tolerance of a target timestamp.
+    Timestamps must be non-negative; they are processed in sorted order.
+    """
+    if not timestamps_ms:
+        return ()
+
+    sorted_targets = sorted(timestamps_ms)
+
+    cap = cv2.VideoCapture(str(path))
+    if not cap.isOpened():
+        raise ValueError(f"Cannot open video: {path}")
+
+    try:
+        source_fps = cap.get(cv2.CAP_PROP_FPS) or 30.0
+        half_frame_ms = (1000.0 / source_fps) / 2.0
+        total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+
+        frames: list[tuple[float, np.ndarray]] = []
+        target_idx = 0
+        current_frame = 0
+
+        while current_frame < total_frames and target_idx < len(sorted_targets):
+            current_ms = (current_frame / source_fps) * 1000.0
+
+            # Skip ahead if we're far before the next target
+            if current_ms < sorted_targets[target_idx] - half_frame_ms:
+                # Jump closer if gap is large
+                target_frame = int(sorted_targets[target_idx] / 1000.0 * source_fps)
+                skip_to = max(current_frame + 1, target_frame - 1)
+                if skip_to > current_frame + 1:
+                    cap.set(cv2.CAP_PROP_POS_FRAMES, skip_to)
+                    current_frame = skip_to
+                    continue
+                ret = cap.grab()
+                if not ret:
+                    break
+                current_frame += 1
+                continue
+
+            # Advance past already-passed targets
+            while (
+                target_idx < len(sorted_targets)
+                and sorted_targets[target_idx] < current_ms - half_frame_ms
+            ):
+                target_idx += 1
+            if target_idx >= len(sorted_targets):
+                break
+
+            # Check if current frame matches any target(s)
+            if abs(current_ms - sorted_targets[target_idx]) <= half_frame_ms:
+                ret = cap.grab()
+                if not ret:
+                    break
+                ret2, frame = cap.retrieve()
+                if ret2:
+                    if scale_height is not None and frame.shape[0] != scale_height:
+                        aspect = frame.shape[1] / frame.shape[0]
+                        new_width = int(scale_height * aspect)
+                        frame = cv2.resize(frame, (new_width, scale_height))
+                    frames.append((sorted_targets[target_idx], frame))
+                target_idx += 1
+                current_frame += 1
+            else:
+                ret = cap.grab()
+                if not ret:
+                    break
+                current_frame += 1
+
+        return tuple(frames)
+    finally:
+        cap.release()
+
+
 def compute_frame_diff(
     frame_a: np.ndarray,
     frame_b: np.ndarray,

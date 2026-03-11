@@ -20,10 +20,17 @@ from src.models import (
     ObserveResult,
     PipelineConfig,
     ROIRect,
+    SelectedFrame,
     SessionManifest,
     TriageResult,
 )
-from src.video import compute_optical_flow, extract_frames, get_video_metadata
+from src.video import (
+    compute_frame_diff,
+    compute_optical_flow,
+    extract_frames,
+    extract_frames_at_timestamps,
+    get_video_metadata,
+)
 
 
 # ---------------------------------------------------------------------------
@@ -164,47 +171,16 @@ def match_cursor_in_frame(
 _MATCH_HEIGHT = 360  # Internal resolution for template matching (speed vs accuracy)
 
 
-def track_cursor(
-    video_path: Path,
-    triage_result: TriageResult,
+def _match_frames(
+    raw_frames: tuple[tuple[float, np.ndarray], ...],
+    all_prescaled: tuple[_PrescaledEntry, ...],
     oc: ObserveConfig,
-    base_dir: Path = Path("."),
-) -> tuple[CursorDetection, ...]:
-    """Track cursor across the full recording at tracking_fps.
-
-    Frames are extracted at oc.resolution_height but downscaled to _MATCH_HEIGHT
-    for template matching.  Detected coordinates are mapped back to source resolution.
-    """
-    templates = load_templates(base_dir / "cursor_templates", base_dir)
-    if not templates:
-        return ()
-
-    meta = get_video_metadata(video_path)
-
-    total_start = 0.0
-    total_end = triage_result.total_duration_ms / 1000.0
-
-    raw_frames = extract_frames(
-        video_path,
-        total_start,
-        total_end,
-        oc.tracking_fps,
-        scale_height=_MATCH_HEIGHT,
-    )
-
-    # Scale factor: from match resolution back to source
-    scale_factor = meta.height / _MATCH_HEIGHT if _MATCH_HEIGHT > 0 else 1.0
-
-    total_frames = len(raw_frames)
-    log(f"  Observe: matching {total_frames} frames against {len(templates)} templates × {len(oc.template_scales)} scales at {_MATCH_HEIGHT}p...")
-
-    # Pre-scale templates once
-    all_prescaled = _prescale_templates(templates, oc.template_scales)
-
+    scale_factor: float,
+) -> list[CursorDetection]:
+    """Run template matching on a batch of frames, returning detections."""
     detections: list[CursorDetection] = []
+    total_frames = len(raw_frames)
     log_interval = max(1, total_frames // 10)
-
-    # Temporal coherence: try last-matched template+scale first
     last_match_id: str | None = None
 
     for idx, (ts_ms, frame) in enumerate(raw_frames):
@@ -214,7 +190,6 @@ def track_cursor(
 
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) if len(frame.shape) == 3 else frame
 
-        # Try last-matched template first for speed
         match: MatchResult | None = None
         if last_match_id is not None:
             priority = tuple(e for e in all_prescaled if e.template.template_id == last_match_id)
@@ -223,7 +198,6 @@ def track_cursor(
                     gray, priority, oc.match_threshold, oc.early_exit_threshold,
                 )
 
-        # Fall back to full search
         if match is None:
             match = match_cursor_in_frame(
                 gray, all_prescaled, oc.match_threshold, oc.early_exit_threshold,
@@ -250,7 +224,121 @@ def track_cursor(
                 detected=False,
             ))
 
-    interpolated = interpolate_trajectory(tuple(detections), oc.max_interpolation_gap_ms)
+    return detections
+
+
+def _identify_active_regions(
+    detections: tuple[CursorDetection, ...],
+    displacement_threshold_px: float,
+    padding_ms: float,
+) -> tuple[tuple[float, float], ...]:
+    """Scan consecutive detected frames; where displacement exceeds threshold, mark as active.
+
+    Merges overlapping intervals and pads each side by padding_ms.
+    Returns sorted, non-overlapping (start_ms, end_ms) tuples.
+    """
+    detected = [d for d in detections if d.detected]
+    if len(detected) < 2:
+        return ()
+
+    raw_intervals: list[tuple[float, float]] = []
+    for i in range(1, len(detected)):
+        dx = detected[i].x - detected[i - 1].x
+        dy = detected[i].y - detected[i - 1].y
+        dist = math.sqrt(dx * dx + dy * dy)
+        if dist > displacement_threshold_px:
+            start = detected[i - 1].timestamp_ms - padding_ms
+            end = detected[i].timestamp_ms + padding_ms
+            raw_intervals.append((max(0.0, start), end))
+
+    if not raw_intervals:
+        return ()
+
+    # Sort and merge overlapping
+    raw_intervals.sort()
+    merged: list[tuple[float, float]] = [raw_intervals[0]]
+    for start, end in raw_intervals[1:]:
+        prev_start, prev_end = merged[-1]
+        if start <= prev_end:
+            merged[-1] = (prev_start, max(prev_end, end))
+        else:
+            merged.append((start, end))
+
+    return tuple(merged)
+
+
+def track_cursor(
+    video_path: Path,
+    triage_result: TriageResult | None,
+    oc: ObserveConfig,
+    base_dir: Path = Path("."),
+    total_duration_ms: float | None = None,
+) -> tuple[CursorDetection, ...]:
+    """Track cursor via adaptive two-pass approach.
+
+    Pass 1: coarse scan at tracking_base_fps across the full video.
+    Identify active regions where cursor displacement exceeds threshold.
+    Pass 2: fine scan at tracking_peak_fps within active regions only.
+    Merge, interpolate, and smooth.
+    """
+    templates = load_templates(base_dir / "cursor_templates", base_dir)
+    if not templates:
+        return ()
+
+    meta = get_video_metadata(video_path)
+
+    duration_ms = (
+        triage_result.total_duration_ms if triage_result is not None
+        else (total_duration_ms if total_duration_ms is not None else meta.duration_ms)
+    )
+    total_end = duration_ms / 1000.0
+
+    scale_factor = meta.height / _MATCH_HEIGHT if _MATCH_HEIGHT > 0 else 1.0
+    all_prescaled = _prescale_templates(templates, oc.template_scales)
+
+    # --- Pass 1: coarse ---
+    coarse_frames = extract_frames(
+        video_path, 0.0, total_end, oc.tracking_base_fps, scale_height=_MATCH_HEIGHT,
+    )
+    log(
+        f"  Observe: pass 1 — matching {len(coarse_frames)} frames at {oc.tracking_base_fps} FPS "
+        f"against {len(templates)} templates × {len(oc.template_scales)} scales at {_MATCH_HEIGHT}p..."
+    )
+    coarse_detections = _match_frames(coarse_frames, all_prescaled, oc, scale_factor)
+
+    # --- Identify active regions ---
+    active_regions = _identify_active_regions(
+        tuple(coarse_detections),
+        oc.tracking_displacement_threshold_px,
+        oc.tracking_active_padding_ms,
+    )
+    log(f"  Observe: {len(active_regions)} active regions identified")
+
+    # --- Pass 2: fine scan within active regions ---
+    fine_detections: list[CursorDetection] = []
+    for region_start, region_end in active_regions:
+        region_frames = extract_frames(
+            video_path,
+            region_start / 1000.0,
+            region_end / 1000.0,
+            oc.tracking_peak_fps,
+            scale_height=_MATCH_HEIGHT,
+        )
+        if region_frames:
+            log(f"  Observe: pass 2 — {len(region_frames)} frames at {oc.tracking_peak_fps} FPS [{region_start:.0f}ms-{region_end:.0f}ms]")
+            fine_detections.extend(_match_frames(region_frames, all_prescaled, oc, scale_factor))
+
+    # --- Merge: in active regions, replace coarse with fine ---
+    def _in_active_region(ts_ms: float) -> bool:
+        return any(s <= ts_ms <= e for s, e in active_regions)
+
+    merged: list[CursorDetection] = [d for d in coarse_detections if not _in_active_region(d.timestamp_ms)]
+    merged.extend(fine_detections)
+    merged.sort(key=lambda d: d.timestamp_ms)
+
+    log(f"  Observe: merged {len(merged)} detections ({sum(1 for d in merged if d.detected)} detected)")
+
+    interpolated = interpolate_trajectory(tuple(merged), oc.max_interpolation_gap_ms)
     smoothed = smooth_trajectory(interpolated, oc.smooth_window, oc.smooth_displacement_threshold)
     return smoothed
 
@@ -362,12 +450,17 @@ def _angle_to_direction(angle_rad: float) -> str:
 
 def compute_flow_summaries(
     video_path: Path,
-    triage_result: TriageResult,
+    triage_result: TriageResult | None,
     cursor_trajectory: tuple[CursorDetection, ...],
     oc: ObserveConfig,
+    total_duration_ms: float | None = None,
 ) -> tuple[FlowWindow, ...]:
     """Compute optical flow summaries in sliding windows across the recording."""
-    total_end = triage_result.total_duration_ms / 1000.0
+    duration_ms = (
+        triage_result.total_duration_ms if triage_result is not None
+        else (total_duration_ms if total_duration_ms is not None else 0.0)
+    )
+    total_end = duration_ms / 1000.0
     frames = extract_frames(video_path, 0.0, total_end, oc.flow_fps, scale_height=oc.resolution_height)
 
     if len(frames) < 2:
@@ -387,7 +480,7 @@ def compute_flow_summaries(
     windows: list[FlowWindow] = []
     window_ms = oc.flow_window_size_ms
     step_ms = oc.flow_window_step_ms
-    total_ms = triage_result.total_duration_ms
+    total_ms = duration_ms
 
     t = 0.0
     while t + window_ms <= total_ms:
@@ -890,6 +983,143 @@ def compute_roi_rects(
 
 
 # ---------------------------------------------------------------------------
+# Event-driven frame selection
+# ---------------------------------------------------------------------------
+
+_EVENT_FRAME_RULES: dict[str, tuple[str, ...]] = {
+    "click": ("event_start", "event_end"),
+    "hover": ("event_start", "event_end"),
+    "hesitate": ("event_start", "event_end"),
+    "dwell": ("event_mid",),
+    "cursor_thrash": ("event_start", "event_end"),
+    "scroll": ("event_start", "event_end"),
+}
+
+_FULL_FRAME_EVENT_TYPES = frozenset({"scroll"})
+
+
+def select_frames_for_analysis(
+    local_events: tuple[LocalEvent, ...],
+    flow_summary: tuple[FlowWindow, ...],
+    cursor_trajectory: tuple[CursorDetection, ...],
+    video_path: Path,
+    oc: ObserveConfig,
+    frame_width: int,
+    frame_height: int,
+    total_duration_ms: float,
+) -> tuple[SelectedFrame, ...]:
+    """Select frames for LLM analysis based on events, visual changes, and baselines."""
+    candidates: list[SelectedFrame] = []
+
+    # --- A. Event frames ---
+    for event_idx, event in enumerate(local_events):
+        rules = _EVENT_FRAME_RULES.get(event.type, ("event_start", "event_end"))
+        use_roi = event.type not in _FULL_FRAME_EVENT_TYPES
+
+        for reason in rules:
+            if reason == "event_start":
+                ts = event.time_start_ms
+            elif reason == "event_end":
+                ts = event.time_end_ms
+            elif reason == "event_mid":
+                ts = (event.time_start_ms + event.time_end_ms) / 2.0
+            else:
+                continue
+
+            roi = None
+            if use_roi:
+                roi_rects = compute_roi_rects(
+                    cursor_trajectory, (ts,), oc, frame_width, frame_height,
+                )
+                if roi_rects:
+                    roi = roi_rects[0]
+
+            candidates.append(SelectedFrame(
+                timestamp_ms=ts,
+                reason=reason,
+                event_index=event_idx,
+                roi=roi,
+            ))
+
+    # --- B. Visual change frames ---
+    event_timestamps = sorted(c.timestamp_ms for c in candidates)
+    gaps = _find_gaps(event_timestamps, total_duration_ms, oc.visual_scan_gap_ms)
+
+    for gap_start, gap_end in gaps:
+        gap_frames = extract_frames(
+            video_path,
+            gap_start / 1000.0,
+            gap_end / 1000.0,
+            oc.visual_scan_fps,
+        )
+        if len(gap_frames) < 2:
+            continue
+        for i in range(len(gap_frames) - 1):
+            ts_a, frame_a = gap_frames[i]
+            ts_b, frame_b = gap_frames[i + 1]
+            magnitude, _ = compute_frame_diff(frame_a, frame_b)
+            if magnitude > oc.visual_change_threshold:
+                candidates.append(SelectedFrame(timestamp_ms=ts_a, reason="visual_change"))
+                candidates.append(SelectedFrame(timestamp_ms=ts_b, reason="visual_change"))
+
+    # --- C. Baseline frames ---
+    all_timestamps = sorted(c.timestamp_ms for c in candidates)
+    baseline_gaps = _find_gaps(all_timestamps, total_duration_ms, oc.baseline_max_gap_ms)
+    for gap_start, gap_end in baseline_gaps:
+        mid = (gap_start + gap_end) / 2.0
+        candidates.append(SelectedFrame(timestamp_ms=mid, reason="baseline"))
+
+    # --- D. Deduplication ---
+    candidates.sort(key=lambda f: f.timestamp_ms)
+    deduped = _deduplicate_frames(candidates, oc.frame_dedup_ms)
+
+    return tuple(deduped)
+
+
+_FRAME_PRIORITY = {"event_start": 0, "event_end": 0, "event_mid": 0, "visual_change": 1, "baseline": 2}
+
+
+def _deduplicate_frames(
+    frames: list[SelectedFrame],
+    dedup_ms: float,
+) -> list[SelectedFrame]:
+    """Remove frames within dedup_ms of each other, keeping highest priority."""
+    if not frames:
+        return []
+
+    result: list[SelectedFrame] = []
+    for frame in frames:
+        merged = False
+        for i, existing in enumerate(result):
+            if abs(frame.timestamp_ms - existing.timestamp_ms) <= dedup_ms:
+                # Keep higher priority (lower number)
+                frame_pri = _FRAME_PRIORITY.get(frame.reason, 2)
+                existing_pri = _FRAME_PRIORITY.get(existing.reason, 2)
+                if frame_pri < existing_pri:
+                    result[i] = frame
+                merged = True
+                break
+        if not merged:
+            result.append(frame)
+    return result
+
+
+def _find_gaps(
+    timestamps: list[float],
+    total_duration_ms: float,
+    min_gap_ms: float,
+) -> list[tuple[float, float]]:
+    """Find gaps in a sorted list of timestamps that exceed min_gap_ms."""
+    gaps: list[tuple[float, float]] = []
+    boundaries = [0.0] + sorted(timestamps) + [total_duration_ms]
+    for i in range(len(boundaries) - 1):
+        gap = boundaries[i + 1] - boundaries[i]
+        if gap > min_gap_ms:
+            gaps.append((boundaries[i], boundaries[i + 1]))
+    return gaps
+
+
+# ---------------------------------------------------------------------------
 # Prompt formatting
 # ---------------------------------------------------------------------------
 
@@ -938,19 +1168,22 @@ def format_local_events_for_prompt(
 def run_observe(
     session: SessionManifest,
     config: PipelineConfig,
-    triage_result: TriageResult,
+    triage_result: TriageResult | None,
     video_path: Path,
     base_dir: Path = Path("."),
 ) -> ObserveResult:
-    """Run the observe stage: cursor tracking, optical flow, event synthesis, ROI computation."""
+    """Run the observe stage: cursor tracking, optical flow, event synthesis, frame selection."""
     t0 = time.monotonic()
 
     oc = config.observe
     meta = get_video_metadata(video_path)
+    total_duration_ms = (
+        triage_result.total_duration_ms if triage_result is not None else meta.duration_ms
+    )
 
-    log(f"  Observe: tracking cursor...")
+    log(f"  Observe: tracking cursor (adaptive 2-pass)...")
     t_step = time.monotonic()
-    cursor_trajectory = track_cursor(video_path, triage_result, oc, base_dir)
+    cursor_trajectory = track_cursor(video_path, triage_result, oc, base_dir, total_duration_ms)
     t_track = (time.monotonic() - t_step) * 1000
 
     detected_count = sum(1 for d in cursor_trajectory if d.detected)
@@ -959,7 +1192,7 @@ def run_observe(
 
     log(f"  Observe: computing optical flow...")
     t_step = time.monotonic()
-    flow_summary = compute_flow_summaries(video_path, triage_result, cursor_trajectory, oc)
+    flow_summary = compute_flow_summaries(video_path, triage_result, cursor_trajectory, oc, total_duration_ms)
     t_flow = (time.monotonic() - t_step) * 1000
     log(f"  Observe: {len(flow_summary)} flow windows [{t_flow:.0f}ms]")
 
@@ -968,16 +1201,25 @@ def run_observe(
     t_synth = (time.monotonic() - t_step) * 1000
     log(f"  Observe: {len(local_events)} local events synthesized [{t_synth:.0f}ms]")
 
+    # Frame selection (replaces _compute_analyse_timestamps + compute_roi_rects)
     t_step = time.monotonic()
-    analyse_timestamps = _compute_analyse_timestamps(triage_result, config)
-    roi_rects = compute_roi_rects(
-        cursor_trajectory, analyse_timestamps, oc, meta.width, meta.height,
+    selected_frames = select_frames_for_analysis(
+        local_events, flow_summary, cursor_trajectory,
+        video_path, oc, meta.width, meta.height, total_duration_ms,
     )
-    t_roi = (time.monotonic() - t_step) * 1000
-    log(f"  Observe: {len(roi_rects)} ROI rects [{t_roi:.0f}ms]")
+    t_select = (time.monotonic() - t_step) * 1000
+    log(f"  Observe: {len(selected_frames)} frames selected [{t_select:.0f}ms]")
+
+    # Legacy ROI rects for backward compatibility with triage-based analyse
+    roi_rects: tuple[ROIRect, ...] = ()
+    if triage_result is not None:
+        analyse_timestamps = _compute_analyse_timestamps(triage_result, config)
+        roi_rects = compute_roi_rects(
+            cursor_trajectory, analyse_timestamps, oc, meta.width, meta.height,
+        )
 
     elapsed = (time.monotonic() - t0) * 1000
-    log(f"  Observe: total {elapsed:.0f}ms (track={t_track:.0f} flow={t_flow:.0f} synth={t_synth:.0f} roi={t_roi:.0f})")
+    log(f"  Observe: total {elapsed:.0f}ms (track={t_track:.0f} flow={t_flow:.0f} synth={t_synth:.0f} select={t_select:.0f})")
 
     return ObserveResult(
         recording_id=session.identifier,
@@ -985,6 +1227,7 @@ def run_observe(
         flow_summary=flow_summary,
         local_events=local_events,
         roi_rects=roi_rects,
+        selected_frames=selected_frames,
         processing_time_ms=elapsed,
         frames_analysed=len(cursor_trajectory),
         cursor_detection_rate=detection_rate,

@@ -20,6 +20,7 @@ from src.models import (
     SessionOutput,
     TriageResult,
 )
+from src.video import get_video_metadata
 
 
 def run_iteration(
@@ -106,6 +107,15 @@ def _save_stage_json(path: Path, model: Any) -> None:
         json.dump(model.model_dump(), f, indent=2)
 
 
+def _count_by(items: tuple, key_fn: Callable) -> dict[str, int]:
+    """Count items by a key function."""
+    counts: dict[str, int] = {}
+    for item in items:
+        k = key_fn(item)
+        counts[k] = counts.get(k, 0) + 1
+    return counts
+
+
 def _save_observe_artifacts(session_dir: Path, observe_result: ObserveResult) -> None:
     """Save debug artifacts for the observe stage."""
     session_dir.mkdir(parents=True, exist_ok=True)
@@ -132,6 +142,10 @@ def _save_observe_artifacts(session_dir: Path, observe_result: ObserveResult) ->
             1 for e in observe_result.local_events if e.needs_enrichment
         ),
         "roi_rects": len(observe_result.roi_rects),
+        "selected_frames_total": len(observe_result.selected_frames),
+        "selected_frames_by_reason": _count_by(
+            observe_result.selected_frames, lambda f: f.reason
+        ),
         "processing_time_ms": round(observe_result.processing_time_ms, 1),
         "local_events": [
             {
@@ -165,34 +179,37 @@ def _process_session(
     video_path = resolve_video_path(session, input_dir)
     session_dir = output_dir / session.identifier
 
-    run_triage = stages.get("triage")
-    run_observe = stages.get("observe")
-    run_analyse = stages.get("analyse")
-    run_merge = stages.get("merge")
+    run_triage_fn = stages.get("triage")
+    run_observe_fn = stages.get("observe")
+    run_analyse_fn = stages.get("analyse")
+    run_merge_fn = stages.get("merge")
 
-    if run_triage is None:
-        from stages.triage import run_triage
-    if run_observe is None:
-        from stages.observe import run_observe
-    if run_analyse is None:
-        from stages.analyse import run_analyse
-    if run_merge is None:
-        from stages.merge import run_merge
+    if run_triage_fn is None:
+        from stages.triage import run_triage as run_triage_fn
+    if run_observe_fn is None:
+        from stages.observe import run_observe as run_observe_fn
+    if run_analyse_fn is None:
+        from stages.analyse import run_analyse as run_analyse_fn
+    if run_merge_fn is None:
+        from stages.merge import run_merge as run_merge_fn
 
-    # --- Triage ---
+    # --- Triage (optional) ---
     triage_path = session_dir / "triage.json"
     triage_result: TriageResult | None = None
 
-    if not force:
-        triage_result = _load_stage_json(triage_path, TriageResult)
-        if triage_result is not None:
-            log(f"  Triage: loaded from cache ({len(triage_result.segments)} segments)")
+    if config.triage.enabled:
+        if not force:
+            triage_result = _load_stage_json(triage_path, TriageResult)
+            if triage_result is not None:
+                log(f"  Triage: loaded from cache ({len(triage_result.segments)} segments)")
 
-    if triage_result is None:
-        log(f"  Triage...")
-        triage_result = run_triage(session, config, video_path)
-        _save_stage_json(triage_path, triage_result)
-        log(f"  Triage: {len(triage_result.segments)} segments ({triage_result.processing_time_ms:.0f}ms)")
+        if triage_result is None:
+            log(f"  Triage...")
+            triage_result = run_triage_fn(session, config, video_path)
+            _save_stage_json(triage_path, triage_result)
+            log(f"  Triage: {len(triage_result.segments)} segments ({triage_result.processing_time_ms:.0f}ms)")
+    else:
+        log(f"  Triage: skipped (disabled)")
 
     # --- Observe ---
     observe_result: ObserveResult | None = None
@@ -207,7 +224,7 @@ def _process_session(
 
         if observe_result is None:
             log(f"  Observe...")
-            observe_result = run_observe(session, config, triage_result, video_path, base_dir)
+            observe_result = run_observe_fn(session, config, triage_result, video_path, base_dir)
             _save_stage_json(observe_path, observe_result)
             _save_observe_artifacts(session_dir, observe_result)
 
@@ -227,20 +244,36 @@ def _process_session(
             log(f"  Analyse: loaded from cache ({analyse_result.total_input_tokens} input tokens)")
 
     if analyse_result is None:
-        log(f"  Analyse...")
-        analyse_result = asyncio.run(
-            run_analyse(
-                session, config, triage_result, video_path,
-                branch, iteration, base_dir, output_dir=output_dir,
-                observe_result=observe_result,
+        # Choose analyse path: observe-driven when selected_frames available, else triage-based
+        if observe_result is not None and observe_result.selected_frames:
+            log(f"  Analyse (observe-driven)...")
+            from stages.analyse import run_analyse_from_observe
+            analyse_result = asyncio.run(
+                run_analyse_from_observe(
+                    session, config, video_path, observe_result,
+                    branch, iteration, base_dir, output_dir=output_dir,
+                )
             )
-        )
+        else:
+            if triage_result is None:
+                raise RuntimeError(
+                    "Cannot run triage-based analyse without triage_result. "
+                    "Enable triage or observe with frame selection."
+                )
+            log(f"  Analyse...")
+            analyse_result = asyncio.run(
+                run_analyse_fn(
+                    session, config, triage_result, video_path,
+                    branch, iteration, base_dir, output_dir=output_dir,
+                    observe_result=observe_result,
+                )
+            )
         _save_stage_json(analysis_path, analyse_result)
         log(f"  Analyse: {analyse_result.total_input_tokens} input tokens ({analyse_result.processing_time_ms:.0f}ms)")
 
     # --- Merge ---
     log(f"  Merge...")
-    session_output: SessionOutput = run_merge(
+    session_output: SessionOutput = run_merge_fn(
         session, config, analyse_result, triage_result, observe_result=observe_result,
     )
 

@@ -11,18 +11,20 @@ from google.genai import types
 from src.gemini import create_client, estimate_tokens, make_request
 from src.log import log
 from src.models import (
+    AnalyseConfig,
     AnalyseResult,
     FrameRef,
     ObserveResult,
     PipelineConfig,
     RawEvent,
     SegmentAnalysisResult,
+    SelectedFrame,
     SessionManifest,
     TriageResult,
     TriageSegment,
 )
 from src.prompts import fill_template, resolve_prompt
-from src.video import crop_frame, encode_jpeg, extract_frames
+from src.video import crop_frame, encode_jpeg, extract_frames, extract_frames_at_timestamps
 
 
 # Flat response schema for Gemini structured output (avoids $defs issues)
@@ -378,3 +380,231 @@ def _parse_events(response_text: str) -> tuple[RawEvent, ...]:
             log(f"  Warning: Skipping malformed event: {e}")
 
     return tuple(events)
+
+
+# ---------------------------------------------------------------------------
+# Observe-driven analyse path
+# ---------------------------------------------------------------------------
+
+def _batch_selected_frames(
+    selected_frames: tuple[SelectedFrame, ...],
+    ac: AnalyseConfig,
+) -> tuple[tuple[SelectedFrame, ...], ...]:
+    """Group selected frames into LLM request batches by time proximity.
+
+    New batch when gap from previous frame > batch_gap_ms, or when estimated
+    tokens for the batch would exceed token_budget_per_segment.
+    """
+    if not selected_frames:
+        return ()
+
+    sorted_frames = tuple(sorted(selected_frames, key=lambda f: f.timestamp_ms))
+    max_frames_per_batch = ac.token_budget_per_segment // ac.tokens_per_frame
+
+    batches: list[list[SelectedFrame]] = [[sorted_frames[0]]]
+
+    for frame in sorted_frames[1:]:
+        current_batch = batches[-1]
+        gap = frame.timestamp_ms - current_batch[-1].timestamp_ms
+        if gap > ac.batch_gap_ms or len(current_batch) >= max_frames_per_batch:
+            batches.append([frame])
+        else:
+            current_batch.append(frame)
+
+    return tuple(tuple(b) for b in batches)
+
+
+async def run_analyse_from_observe(
+    session: SessionManifest,
+    config: PipelineConfig,
+    video_path: Path,
+    observe_result: ObserveResult,
+    branch: str = "",
+    iteration: int = 1,
+    base_dir: Path = Path("."),
+    output_dir: Path | None = None,
+) -> AnalyseResult:
+    """Run analysis driven by observe-selected frames instead of triage segments."""
+    t0 = time.monotonic()
+    client = create_client()
+    ac = config.analyse
+    semaphore = asyncio.Semaphore(ac.max_concurrent)
+
+    system_prompt = resolve_prompt("system", branch, iteration, base_dir)
+
+    batches = _batch_selected_frames(observe_result.selected_frames, ac)
+    log(f"  Analyse (observe-driven): {len(batches)} batches from {len(observe_result.selected_frames)} selected frames")
+
+    tasks = [
+        _analyse_observe_batch(
+            client=client,
+            session=session,
+            config=config,
+            batch=batch,
+            batch_index=batch_idx,
+            video_path=video_path,
+            system_prompt=system_prompt,
+            observe_result=observe_result,
+            branch=branch,
+            iteration=iteration,
+            base_dir=base_dir,
+            semaphore=semaphore,
+            output_dir=output_dir,
+        )
+        for batch_idx, batch in enumerate(batches)
+    ]
+
+    results = await asyncio.gather(*tasks)
+
+    total_in = sum(r.input_tokens for r in results)
+    total_out = sum(r.output_tokens for r in results)
+    elapsed = (time.monotonic() - t0) * 1000
+
+    return AnalyseResult(
+        recording_id=session.identifier,
+        segments=tuple(results),
+        total_input_tokens=total_in,
+        total_output_tokens=total_out,
+        processing_time_ms=elapsed,
+    )
+
+
+async def _analyse_observe_batch(
+    client: Any,
+    session: SessionManifest,
+    config: PipelineConfig,
+    batch: tuple[SelectedFrame, ...],
+    batch_index: int,
+    video_path: Path,
+    system_prompt: str,
+    observe_result: ObserveResult,
+    branch: str,
+    iteration: int,
+    base_dir: Path,
+    semaphore: asyncio.Semaphore,
+    output_dir: Path | None = None,
+) -> SegmentAnalysisResult:
+    """Analyse a single batch of observe-selected frames."""
+    async with semaphore:
+        ac = config.analyse
+        timestamps_ms = tuple(f.timestamp_ms for f in batch)
+
+        # Extract full frames at the selected timestamps
+        extracted = extract_frames_at_timestamps(video_path, timestamps_ms)
+        frame_by_ts: dict[float, Any] = {}
+        for ts, frame in extracted:
+            frame_by_ts[ts] = frame
+
+        # Build frame refs and encode
+        frame_refs: list[FrameRef] = []
+        jpeg_cache: list[bytes] = []
+        frame_annotations: list[str] = []
+
+        segment_frames_dir = None
+        if output_dir is not None:
+            segment_frames_dir = output_dir / session.identifier / "frames" / f"batch_{batch_index:03d}"
+            segment_frames_dir.mkdir(parents=True, exist_ok=True)
+
+        for idx, sel_frame in enumerate(batch):
+            raw_frame = frame_by_ts.get(sel_frame.timestamp_ms)
+            if raw_frame is None:
+                continue
+
+            frame_to_encode = raw_frame
+
+            # Apply ROI crop if specified
+            if sel_frame.roi is not None:
+                frame_to_encode = crop_frame(
+                    raw_frame,
+                    sel_frame.roi.x, sel_frame.roi.y,
+                    sel_frame.roi.width, sel_frame.roi.height,
+                )
+
+            frame_refs.append(FrameRef(
+                frame_index_in_request=idx,
+                timestamp_ms=sel_frame.timestamp_ms,
+                is_context=False,
+            ))
+
+            jpeg_bytes = encode_jpeg(frame_to_encode, ac.jpeg_quality)
+            jpeg_cache.append(jpeg_bytes)
+
+            # Build annotation label
+            label_parts = [
+                f"[Frame {idx}",
+                f"{sel_frame.timestamp_ms:.0f}ms",
+                sel_frame.reason.replace("_", " "),
+            ]
+            if sel_frame.roi is not None:
+                label_parts.append(f"cursor at ({sel_frame.roi.cursor_x:.0f}, {sel_frame.roi.cursor_y:.0f})")
+            label = " | ".join(label_parts) + "]"
+            frame_annotations.append(label)
+
+            if segment_frames_dir is not None:
+                filename = f"frame_{idx:03d}_{int(sel_frame.timestamp_ms)}ms_{sel_frame.reason}.jpg"
+                (segment_frames_dir / filename).write_bytes(jpeg_bytes)
+
+        if not frame_refs:
+            return SegmentAnalysisResult(
+                segment_index=batch_index,
+                events=(),
+                frame_refs=(),
+            )
+
+        start_time = batch[0].timestamp_ms
+        end_time = batch[-1].timestamp_ms
+
+        # Format local events for the batch time range
+        from stages.observe import format_local_events_for_prompt
+        local_events_text = format_local_events_for_prompt(
+            observe_result.local_events, start_time, end_time,
+        )
+
+        # Build prompt
+        try:
+            user_template = resolve_prompt("observe_driven", branch, iteration, base_dir)
+        except FileNotFoundError:
+            user_template = resolve_prompt("user", branch, iteration, base_dir)
+
+        user_prompt = fill_template(user_template, {
+            "batch_index": batch_index,
+            "start_time": f"{start_time / 1000:.1f}s",
+            "end_time": f"{end_time / 1000:.1f}s",
+            "frame_count": len(frame_refs),
+            "frame_annotations": "\n".join(frame_annotations),
+            "local_events": local_events_text,
+        })
+
+        if segment_frames_dir is not None:
+            (segment_frames_dir / "prompt.txt").write_text(user_prompt)
+
+        # Build content parts
+        content_parts: list[Any] = []
+        for label, jpeg_bytes in zip(frame_annotations, jpeg_cache):
+            content_parts.append(label)
+            content_parts.append(types.Part.from_bytes(data=jpeg_bytes, mime_type="image/jpeg"))
+        content_parts.append(user_prompt)
+
+        log(f"  Analysing batch {batch_index} ({len(frame_refs)} frames, {start_time:.0f}-{end_time:.0f}ms)...")
+
+        response = await make_request(
+            client=client,
+            model=ac.model,
+            system_prompt=system_prompt,
+            content_parts=content_parts,
+            response_schema=_RESPONSE_SCHEMA,
+            temperature=ac.temperature,
+        )
+
+        if segment_frames_dir is not None:
+            (segment_frames_dir / "response.json").write_text(response["text"])
+
+        events = _parse_events(response["text"])
+
+        return SegmentAnalysisResult(
+            segment_index=batch_index,
+            events=events,
+            frame_refs=tuple(frame_refs),
+            input_tokens=response.get("input_tokens", 0),
+            output_tokens=response.get("output_tokens", 0),
+        )

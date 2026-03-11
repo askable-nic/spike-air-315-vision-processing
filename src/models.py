@@ -70,6 +70,7 @@ class AnalyseConfig(BaseModel, frozen=True):
     context_frames: int = 2
     jpeg_quality: int = 85
     source: SourceType = "unmod_website_test_video"
+    batch_gap_ms: int = 5000
 
 
 class MergeConfig(BaseModel, frozen=True):
@@ -80,8 +81,12 @@ class MergeConfig(BaseModel, frozen=True):
 
 class ObserveConfig(BaseModel, frozen=True):
     enabled: bool = False
-    # Cursor tracking
-    tracking_fps: float = 5.0
+    # Cursor tracking — adaptive two-pass
+    tracking_fps: float = 5.0  # legacy single-pass FPS
+    tracking_base_fps: float = 2.0
+    tracking_peak_fps: float = 15.0
+    tracking_displacement_threshold_px: float = 30.0
+    tracking_active_padding_ms: int = 500
     resolution_height: int = 720
     template_scales: tuple[float, ...] = (0.8, 1.0, 1.25, 1.5)
     match_threshold: float = 0.6
@@ -120,6 +125,12 @@ class ObserveConfig(BaseModel, frozen=True):
     # ROI
     roi_size: int = 512
     roi_padding: int = 64
+    # Frame selection
+    visual_scan_gap_ms: int = 3000
+    visual_scan_fps: float = 1.0
+    visual_change_threshold: float = 0.03
+    baseline_max_gap_ms: int = 5000
+    frame_dedup_ms: int = 200
 
 
 class PipelineConfig(BaseModel, frozen=True):
@@ -262,12 +273,20 @@ class AnalyseResult(BaseModel, frozen=True):
 
 # --- Observe ---
 
+class SelectedFrame(BaseModel, frozen=True):
+    timestamp_ms: float
+    reason: str  # "event_start", "event_end", "event_mid", "visual_change", "baseline"
+    event_index: int | None = None
+    roi: ROIRect | None = None
+
+
 class ObserveResult(BaseModel, frozen=True):
     recording_id: str
     cursor_trajectory: tuple[CursorDetection, ...] = ()
     flow_summary: tuple[FlowWindow, ...] = ()
     local_events: tuple[LocalEvent, ...] = ()
     roi_rects: tuple[ROIRect, ...] = ()
+    selected_frames: tuple[SelectedFrame, ...] = ()
     processing_time_ms: float = 0
     frames_analysed: int = 0
     cursor_detection_rate: float = 0.0
@@ -277,19 +296,15 @@ class ObserveResult(BaseModel, frozen=True):
 
 class ResolvedEvent(BaseModel, frozen=True):
     type: EventType
-    source: SourceType
     time_start: float
     time_end: float
     description: str
     confidence: float
     interaction_target: str | None = None
-    interaction_region_of_interest: dict | None = None
     cursor_position: dict | None = None
     page_title: str | None = None
     page_location: str | None = None
     frame_description: str | None = None
-    transcript_id: str = ""
-    study_id: str | None = None
     task_id: str | None = None
 
 

@@ -28,6 +28,7 @@ DEFAULTS: dict[str, Any] = {
         "context_frames": 2,
         "jpeg_quality": 85,
         "source": "unmod_website_test_video",
+        "batch_gap_ms": 5000,
     },
     "merge": {
         "time_tolerance_ms": 2000,
@@ -37,6 +38,10 @@ DEFAULTS: dict[str, Any] = {
     "observe": {
         "enabled": False,
         "tracking_fps": 5.0,
+        "tracking_base_fps": 2.0,
+        "tracking_peak_fps": 15.0,
+        "tracking_displacement_threshold_px": 30.0,
+        "tracking_active_padding_ms": 500,
         "resolution_height": 720,
         "template_scales": [0.8, 1.0, 1.25, 1.5],
         "match_threshold": 0.6,
@@ -67,6 +72,11 @@ DEFAULTS: dict[str, Any] = {
         "hesitation_radius_px": 10.0,
         "roi_size": 512,
         "roi_padding": 64,
+        "visual_scan_gap_ms": 3000,
+        "visual_scan_fps": 1.0,
+        "visual_change_threshold": 0.03,
+        "baseline_max_gap_ms": 5000,
+        "frame_dedup_ms": 200,
     },
 }
 

@@ -1,0 +1,29 @@
+Analyse the following screen recording frames for user interaction events.
+
+**Batch {batch_index}** | Time range: {start_time} - {end_time} | Frames: {frame_count}
+
+## Frame sampling
+
+These frames are NOT uniformly sampled. Each frame was selected for a specific reason:
+- **event start / event end**: Frames at the start and end of a locally detected cursor event (click candidate, hover, hesitation, etc.). These are often cropped to a region of interest around the cursor position.
+- **event mid**: Midpoint of a detected dwell event, cropped to the cursor region.
+- **visual change**: Frames before and after a detected visual transition (possible navigation or UI state change). These are full-frame captures.
+- **baseline**: A frame inserted to ensure temporal coverage during gaps with no detected events. Full-frame capture.
+
+## Frame annotations
+
+{frame_annotations}
+
+{local_events}
+
+## Your task
+
+Examine each frame carefully and:
+
+1. **Confirm or reject cursor events**: For frames labelled as event candidates (start/end/mid), verify whether the event actually occurred based on what you see. Describe the interaction target and what happened.
+2. **Identify navigate and change_ui_state events**: For visual change frames, determine if a page navigation occurred (URL change, new page load) or if a UI state changed (modal appearing, loading state, dropdown opening).
+3. **Note any additional events**: For baseline frames, report any visible interactions or state changes.
+
+Use frame indices relative to this batch (starting from 0). For short interactions, frame_index_start and frame_index_end may be the same.
+
+Return the events as a JSON array.

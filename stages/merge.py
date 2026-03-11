@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 import time
+from bisect import bisect_left
 
 from src.models import (
     AnalyseResult,
+    CursorDetection,
+    EventType,
     ObserveResult,
     PipelineConfig,
     ResolvedEvent,
@@ -13,13 +16,49 @@ from src.models import (
     TriageResult,
 )
 from src.similarity import events_are_duplicates
+from stages.observe import _lookup_cursor_at_timestamp
+
+
+def _resolve_cursor_position(
+    event_type: EventType,
+    start_ms: float,
+    end_ms: float,
+    observe_result: ObserveResult | None,
+) -> dict | None:
+    """Look up cursor position from the observe trajectory for LLM-analysed events."""
+    if observe_result is None or not observe_result.cursor_trajectory:
+        return None
+
+    trajectory = observe_result.cursor_trajectory
+
+    if event_type in ("click", "hover", "dwell"):
+        detection = _lookup_cursor_at_timestamp(trajectory, start_ms)
+        if detection is not None:
+            return {"x": detection.x, "y": detection.y}
+        return None
+
+    if event_type == "cursor_thrash":
+        timestamps = [d.timestamp_ms for d in trajectory]
+        lo = bisect_left(timestamps, start_ms)
+        hi = bisect_left(timestamps, end_ms)
+        points: list[CursorDetection] = [
+            d for d in trajectory[lo:hi]
+            if d.detected or d.confidence > 0
+        ]
+        if not points:
+            return None
+        avg_x = sum(d.x for d in points) / len(points)
+        avg_y = sum(d.y for d in points) / len(points)
+        return {"x": avg_x, "y": avg_y}
+
+    return None
 
 
 def run_merge(
     session: SessionManifest,
     config: PipelineConfig,
     analyse_result: AnalyseResult,
-    triage_result: TriageResult,
+    triage_result: TriageResult | None = None,
     observe_result: ObserveResult | None = None,
 ) -> SessionOutput:
     """Merge analysis results: resolve timestamps, discard context events, deduplicate."""
@@ -53,37 +92,24 @@ def run_merge(
             abs_start = start_ref.timestamp_ms + session.screenTrackStartOffset
             abs_end = end_ref.timestamp_ms + session.screenTrackStartOffset
 
-            roi_dict = None
-            if event.region_of_interest is not None:
-                roi_dict = {
-                    "x": event.region_of_interest.x,
-                    "y": event.region_of_interest.y,
-                    "width": event.region_of_interest.width,
-                    "height": event.region_of_interest.height,
-                }
-
-            cursor_dict = None
-            if event.cursor_position is not None:
-                cursor_dict = {
-                    "x": event.cursor_position.x,
-                    "y": event.cursor_position.y,
-                }
+            cursor_dict = _resolve_cursor_position(
+                event.type,
+                start_ref.timestamp_ms,
+                end_ref.timestamp_ms,
+                observe_result,
+            )
 
             resolved.append(ResolvedEvent(
                 type=event.type,
-                source=config.analyse.source,
                 time_start=abs_start,
                 time_end=abs_end,
                 description=event.description,
                 confidence=event.confidence,
                 interaction_target=event.interaction_target,
-                interaction_region_of_interest=roi_dict,
                 cursor_position=cursor_dict,
                 page_title=event.page_title,
                 page_location=event.page_location,
                 frame_description=event.frame_description,
-                transcript_id=session.roomId,
-                study_id=session.studyId,
             ))
 
     # Add local events that don't need enrichment (e.g. scroll, thrash)
@@ -93,19 +119,22 @@ def run_merge(
             if not local_event.needs_enrichment:
                 cursor_dict = None
                 if local_event.cursor_positions:
-                    p = local_event.cursor_positions[0]
-                    cursor_dict = {"x": p.x, "y": p.y}
+                    if local_event.type == "cursor_thrash":
+                        positions = local_event.cursor_positions
+                        avg_x = sum(p.x for p in positions) / len(positions)
+                        avg_y = sum(p.y for p in positions) / len(positions)
+                        cursor_dict = {"x": avg_x, "y": avg_y}
+                    else:
+                        p = local_event.cursor_positions[0]
+                        cursor_dict = {"x": p.x, "y": p.y}
 
                 resolved.append(ResolvedEvent(
                     type=local_event.type,
-                    source=config.analyse.source,
                     time_start=local_event.time_start_ms + offset,
                     time_end=local_event.time_end_ms + offset,
                     description=local_event.description,
                     confidence=local_event.confidence,
                     cursor_position=cursor_dict,
-                    transcript_id=session.roomId,
-                    study_id=session.studyId,
                 ))
 
     # Sort by start time
@@ -126,9 +155,13 @@ def run_merge(
     return SessionOutput(
         recording_id=session.identifier,
         session=session,
-        triage_metrics=StageMetrics(
-            duration_ms=triage_result.processing_time_ms,
-            artifacts_created=len(triage_result.segments),
+        triage_metrics=(
+            StageMetrics(
+                duration_ms=triage_result.processing_time_ms,
+                artifacts_created=len(triage_result.segments),
+            )
+            if triage_result is not None
+            else StageMetrics()
         ),
         observe_metrics=observe_metrics,
         analyse_metrics=StageMetrics(
