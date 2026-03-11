@@ -1,0 +1,131 @@
+:root {
+  --bg: #0f1117;
+  --surface: #1a1d27;
+  --border: #2a2d3a;
+  --text: #e1e4ed;
+  --text-secondary: #8b8fa3;
+  --accent: #4c8dff;
+  --active-bg: rgba(76, 141, 255, 0.12);
+  --active-border: #4c8dff;
+  --hover-bg: rgba(255, 255, 255, 0.04);
+  --track-bg: #2a2d3a;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+.session-index {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 0 24px;
+}
+
+.session-index h1 {
+  font-size: 24px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.session-index ul {
+  list-style: none;
+}
+
+.session-index li {
+  margin-bottom: 8px;
+}
+
+.session-index a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  display: block;
+  border-radius: 6px;
+  text-transform: capitalize;
+}
+
+.session-index a:hover {
+  background: var(--hover-bg);
+}
+
+.session-index__back {
+  color: var(--text-secondary);
+  font-weight: 400;
+  display: inline;
+  padding: 0;
+}
+
+.session-index__back:hover {
+  color: var(--accent);
+  background: none;
+}
+
+.column-item__time {
+  display: block;
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 2px;
+}
+
+.column-item__text {
+  display: block;
+}
+
+.column-item__url {
+  display: block;
+  font-size: 11px;
+  color: var(--accent);
+  word-break: break-all;
+  margin-bottom: 2px;
+}
+
+.column-item__badge {
+  display: inline-block;
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+  text-transform: lowercase;
+}
+
+.column-item__signal {
+  display: block;
+  font-size: 11px;
+  color: var(--accent);
+  font-style: italic;
+  margin-top: 2px;
+}
