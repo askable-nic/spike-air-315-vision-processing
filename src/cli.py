@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import asyncio
 import json
 from pathlib import Path
 
@@ -145,6 +146,53 @@ def compare(branch: str | None, iterations: str | None, session: str | None, bas
                 click.echo(f"  Events for {session}:")
                 for t, c in sorted(type_counts.items()):
                     click.echo(f"    {t}: {c}")
+
+
+@main.command("describe-frame")
+@click.option("--session", "-s", required=True, help="Session identifier")
+@click.option("--timestamp", "-t", required=True, type=float, help="Timestamp in ms (relative to session start)")
+@click.option("--base-dir", type=click.Path(exists=True, path_type=Path), default=".", help="Project base directory")
+def describe_frame(session: str, timestamp: float, base_dir: Path):
+    """Describe the visual content of a video frame at a given timestamp."""
+    from src.gemini import create_client, make_request
+    from src.manifest import load_manifest, resolve_video_path
+    from src.video import extract_frames_at_timestamps, encode_jpeg
+
+    manifest = load_manifest(base_dir / "input_data" / "manifest.json")
+    session_manifest = next((s for s in manifest if s.identifier == session), None)
+    if session_manifest is None:
+        click.echo(json.dumps({"error": f"Session '{session}' not found in manifest"}))
+        raise SystemExit(1)
+
+    video_path = resolve_video_path(session_manifest, base_dir / "input_data")
+    video_relative_ms = timestamp - session_manifest.screenTrackStartOffset
+
+    if video_relative_ms < 0:
+        click.echo(json.dumps({"error": "Timestamp is before video start"}))
+        raise SystemExit(1)
+
+    frames = extract_frames_at_timestamps(video_path, (video_relative_ms,))
+    if not frames:
+        click.echo(json.dumps({"error": "Could not extract frame at timestamp"}))
+        raise SystemExit(1)
+
+    _, frame = frames[0]
+    jpeg_bytes = encode_jpeg(frame)
+
+    system_prompt = "Describe what is shown in this screenshot in a short paragraph. Focus on the page layout, content, and key UI elements visible."
+
+    client = create_client()
+    from google.genai import types
+    image_part = types.Part.from_bytes(data=jpeg_bytes, mime_type="image/jpeg")
+
+    result = asyncio.run(make_request(
+        client=client,
+        model="gemini-3-flash-preview",
+        system_prompt=system_prompt,
+        content_parts=[image_part],
+    ))
+
+    click.echo(json.dumps({"description": result["text"]}))
 
 
 if __name__ == "__main__":

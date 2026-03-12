@@ -40,6 +40,7 @@ export const ColumnsPanel = ({ columns, currentTime, duration, seekTo }: Columns
           return (
             <EventsColumn
               key={i}
+              title={col.title}
               events={col.events}
               currentTime={currentTime}
               duration={duration}

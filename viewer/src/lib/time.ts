@@ -1,5 +1,22 @@
 export const msToSeconds = (ms: number): number => ms / 1000;
 
+export const formatTimeMs = (ms: number): string => {
+  const totalSeconds = Math.floor(ms / 1000);
+  const m = Math.floor(totalSeconds / 60);
+  const s = totalSeconds % 60;
+  const remainder = Math.floor(ms % 1000);
+  return `${m}:${s.toString().padStart(2, "0")}.${remainder.toString().padStart(3, "0")}`;
+};
+
+export const videoMsToStoredMs = (videoMs: number, offset: number): number =>
+  Math.round(videoMs + offset);
+
+export const storedMsToVideoMs = (storedMs: number, offset: number): number =>
+  storedMs - offset;
+
+export const storedMsToVideoSeconds = (storedMs: number, offset: number): number =>
+  (storedMs - offset) / 1000;
+
 export const formatTime = (seconds: number): string => {
   const m = Math.floor(seconds / 60);
   const s = Math.floor(seconds % 60);

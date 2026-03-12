@@ -2,17 +2,20 @@ import { defineConfig, Plugin } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 import fs from "fs";
+import { execFile } from "child_process";
+import { IncomingMessage, ServerResponse } from "http";
 
 const projectRoot = path.resolve(__dirname, "..");
 const experimentsDir = path.join(projectRoot, "experiments");
 const inputDataDir = path.join(projectRoot, "input_data");
+const baselinesDir = path.join(projectRoot, "baselines");
 
 interface RawEvent {
   readonly type: string;
   readonly time_start: number;
-  readonly time_end: number;
+  readonly time_end: number | null;
   readonly description: string;
-  readonly confidence: number;
+  readonly confidence?: number;
   readonly frame_description?: string;
   readonly page_location?: string;
   readonly page_title?: string;
@@ -28,10 +31,10 @@ interface RawUtterance {
 
 const transformEvent = (e: RawEvent) => ({
   time_start: e.time_start / 1000,
-  time_end: e.time_end / 1000,
+  time_end: e.time_end != null ? e.time_end / 1000 : null,
   event_type: e.type,
   label: e.description,
-  confidence: e.confidence,
+  confidence: e.confidence ?? 0,
   frame_description: e.frame_description,
   url: e.page_location,
   page_title: e.page_title,
@@ -51,6 +54,44 @@ const groupTranscript = (utterances: readonly RawUtterance[]) => {
     title,
     utterances: utts,
   }));
+};
+
+const readBody = (req: IncomingMessage): Promise<string> =>
+  new Promise((resolve, reject) => {
+    const chunks: Buffer[] = [];
+    req.on("data", (chunk: Buffer) => chunks.push(chunk));
+    req.on("end", () => resolve(Buffer.concat(chunks).toString("utf-8")));
+    req.on("error", reject);
+  });
+
+const serveVideoFile = (
+  filePath: string,
+  req: IncomingMessage,
+  res: ServerResponse
+): void => {
+  const ext = path.extname(filePath).toLowerCase();
+  const mimeTypes: Record<string, string> = {
+    ".mp4": "video/mp4",
+    ".webm": "video/webm",
+  };
+  res.setHeader("Content-Type", mimeTypes[ext] || "application/octet-stream");
+
+  const stat = fs.statSync(filePath);
+  const range = req.headers.range;
+  if (range) {
+    const parts = range.replace(/bytes=/, "").split("-");
+    const start = parseInt(parts[0], 10);
+    const end = parts[1] ? parseInt(parts[1], 10) : stat.size - 1;
+    res.statusCode = 206;
+    res.setHeader("Content-Range", `bytes ${start}-${end}/${stat.size}`);
+    res.setHeader("Accept-Ranges", "bytes");
+    res.setHeader("Content-Length", end - start + 1);
+    fs.createReadStream(filePath, { start, end }).pipe(res);
+  } else {
+    res.setHeader("Content-Length", stat.size);
+    res.setHeader("Accept-Ranges", "bytes");
+    fs.createReadStream(filePath).pipe(res);
+  }
 };
 
 function dataServerPlugin(): Plugin {
@@ -126,7 +167,16 @@ function dataServerPlugin(): Plugin {
             ? groupTranscript(JSON.parse(fs.readFileSync(transcriptPath, "utf-8")))
             : [];
 
-          const columns = [...speakerColumns, { type: "events", events }];
+          const baselinePath = path.join(baselinesDir, key, "events.json");
+          const baselineColumn = fs.existsSync(baselinePath)
+            ? [{
+                type: "events" as const,
+                title: "Baseline",
+                events: (JSON.parse(fs.readFileSync(baselinePath, "utf-8")) as readonly RawEvent[]).map(transformEvent),
+              }]
+            : [];
+
+          const columns = [...speakerColumns, { type: "events", title: "Events", events }, ...baselineColumn];
 
           res.setHeader("Content-Type", "application/json");
           res.end(JSON.stringify(columns));
@@ -134,7 +184,7 @@ function dataServerPlugin(): Plugin {
         }
 
         // GET /video/:filename — serve video from input_data/full_sessions/
-        if (url.pathname.startsWith("/video/")) {
+        if (url.pathname.startsWith("/video/") && !url.pathname.startsWith("/video/normalized/")) {
           const filename = decodeURIComponent(url.pathname.slice("/video/".length));
           const filePath = path.join(inputDataDir, "full_sessions", filename);
 
@@ -149,32 +199,114 @@ function dataServerPlugin(): Plugin {
             return;
           }
 
-          const ext = path.extname(filePath).toLowerCase();
-          const mimeTypes: Record<string, string> = {
-            ".mp4": "video/mp4",
-            ".webm": "video/webm",
-          };
-          res.setHeader(
-            "Content-Type",
-            mimeTypes[ext] || "application/octet-stream"
-          );
+          serveVideoFile(filePath, req, res);
+          return;
+        }
 
-          const stat = fs.statSync(filePath);
-          const range = req.headers.range;
-          if (range) {
-            const parts = range.replace(/bytes=/, "").split("-");
-            const start = parseInt(parts[0], 10);
-            const end = parts[1] ? parseInt(parts[1], 10) : stat.size - 1;
-            res.statusCode = 206;
-            res.setHeader("Content-Range", `bytes ${start}-${end}/${stat.size}`);
-            res.setHeader("Accept-Ranges", "bytes");
-            res.setHeader("Content-Length", end - start + 1);
-            fs.createReadStream(filePath, { start, end }).pipe(res);
-          } else {
-            res.setHeader("Content-Length", stat.size);
-            res.setHeader("Accept-Ranges", "bytes");
-            fs.createReadStream(filePath).pipe(res);
+        // GET /video/normalized/:filename — serve from input_data/screen_tracks_normalized/
+        if (url.pathname.startsWith("/video/normalized/")) {
+          const filename = decodeURIComponent(url.pathname.slice("/video/normalized/".length));
+          const filePath = path.join(inputDataDir, "screen_tracks_normalized", filename);
+
+          if (!filePath.startsWith(path.join(inputDataDir, "screen_tracks_normalized"))) {
+            res.statusCode = 403;
+            res.end("Forbidden");
+            return;
           }
+
+          if (!fs.existsSync(filePath)) {
+            next();
+            return;
+          }
+
+          serveVideoFile(filePath, req, res);
+          return;
+        }
+
+        // GET /api/manifest — return manifest with hasBaseline per session
+        if (url.pathname === "/api/manifest") {
+          const manifestPath = path.join(inputDataDir, "manifest.json");
+          if (!fs.existsSync(manifestPath)) {
+            res.statusCode = 404;
+            res.setHeader("Content-Type", "application/json");
+            res.end(JSON.stringify({ error: "Manifest not found" }));
+            return;
+          }
+
+          const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
+          const withBaseline = manifest.map((session: { identifier: string }) => ({
+            ...session,
+            hasBaseline: fs.existsSync(
+              path.join(baselinesDir, session.identifier, "events.json")
+            ),
+          }));
+
+          res.setHeader("Content-Type", "application/json");
+          res.end(JSON.stringify(withBaseline));
+          return;
+        }
+
+        // GET/PUT /api/baselines/:sessionId
+        const baselinesMatch = url.pathname.match(/^\/api\/baselines\/([^/]+)$/);
+        if (baselinesMatch) {
+          const sessionId = decodeURIComponent(baselinesMatch[1]);
+          const eventsPath = path.join(baselinesDir, sessionId, "events.json");
+
+          if (req.method === "GET") {
+            if (!fs.existsSync(eventsPath)) {
+              res.statusCode = 404;
+              res.setHeader("Content-Type", "application/json");
+              res.end(JSON.stringify({ error: "Baseline not found" }));
+              return;
+            }
+            res.setHeader("Content-Type", "application/json");
+            res.end(fs.readFileSync(eventsPath, "utf-8"));
+            return;
+          }
+
+          if (req.method === "PUT") {
+            readBody(req).then((body) => {
+              const dir = path.join(baselinesDir, sessionId);
+              if (!fs.existsSync(dir)) {
+                fs.mkdirSync(dir, { recursive: true });
+              }
+              fs.writeFileSync(eventsPath, body, "utf-8");
+              res.setHeader("Content-Type", "application/json");
+              res.end(JSON.stringify({ ok: true }));
+            }).catch((err) => {
+              res.statusCode = 500;
+              res.setHeader("Content-Type", "application/json");
+              res.end(JSON.stringify({ error: String(err) }));
+            });
+            return;
+          }
+        }
+
+        // POST /api/describe-frame
+        if (url.pathname === "/api/describe-frame" && req.method === "POST") {
+          readBody(req).then((body) => {
+            const { sessionId, timestampMs } = JSON.parse(body);
+
+            execFile(
+              "python3",
+              ["-m", "src.cli", "describe-frame", "--session", sessionId, "--timestamp", String(timestampMs), "--base-dir", projectRoot],
+              { cwd: projectRoot, timeout: 30000 },
+              (error, stdout, stderr) => {
+                if (error) {
+                  res.statusCode = 500;
+                  res.setHeader("Content-Type", "application/json");
+                  res.end(JSON.stringify({ error: stderr || error.message }));
+                  return;
+                }
+                res.setHeader("Content-Type", "application/json");
+                res.end(stdout);
+              }
+            );
+          }).catch((err) => {
+            res.statusCode = 500;
+            res.setHeader("Content-Type", "application/json");
+            res.end(JSON.stringify({ error: String(err) }));
+          });
           return;
         }
 

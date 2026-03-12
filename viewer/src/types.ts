@@ -13,7 +13,7 @@ export interface Scene {
 
 export interface AnalysisEvent {
   readonly time_start: number; // seconds
-  readonly time_end: number;   // seconds
+  readonly time_end: number | null;   // seconds
   readonly event_type: string;
   readonly label: string;
   readonly confidence: number;
@@ -36,6 +36,7 @@ export interface ScenesColumn {
 
 export interface EventsColumn {
   readonly type: "events";
+  readonly title?: string;
   readonly events: readonly AnalysisEvent[];
 }
 

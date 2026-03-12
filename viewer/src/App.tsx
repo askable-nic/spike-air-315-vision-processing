@@ -2,7 +2,11 @@ import { Routes, Route, useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useSessionData } from "./hooks/useSessionData";
 import { fetchExperiments, fetchSessions, Experiment } from "./lib/dataLoaders";
+import { fetchManifest } from "./lib/annotationApi";
+import { ManifestSession } from "./annotationTypes";
 import { Layout } from "./components/Layout";
+import { SessionPicker } from "./components/annotation/SessionPicker";
+import { AnnotationLayout } from "./components/annotation/AnnotationLayout";
 import "./App.css";
 
 const ExperimentIndex = () => {
@@ -29,6 +33,9 @@ const ExperimentIndex = () => {
           </li>
         ))}
       </ul>
+      <h2 style={{ marginTop: 32 }}>
+        <Link to="/annotate">Annotate →</Link>
+      </h2>
     </div>
   );
 };
@@ -64,6 +71,33 @@ const SessionIndex = () => {
   );
 };
 
+const AnnotationWorkspace = () => {
+  const { sessionId } = useParams<{ sessionId: string }>();
+  const [manifest, setManifest] = useState<ManifestSession | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetchManifest()
+      .then((sessions) => {
+        const session = sessions.find((s) => s.identifier === sessionId);
+        if (session) {
+          setManifest(session);
+        } else {
+          setError(`Session "${sessionId}" not found in manifest`);
+        }
+      })
+      .catch((err) => setError(String(err)))
+      .finally(() => setLoading(false));
+  }, [sessionId]);
+
+  if (loading) return <div className="center">Loading…</div>;
+  if (error) return <div className="center error">{error}</div>;
+  if (!manifest) return null;
+
+  return <AnnotationLayout sessionId={sessionId!} manifest={manifest} />;
+};
+
 const SessionViewer = () => {
   const { branch, iteration, key } = useParams<{ branch: string; iteration: string; key: string }>();
   const { data, loading, error } = useSessionData(branch!, iteration!, key!);
@@ -78,6 +112,8 @@ const SessionViewer = () => {
 export const App = () => (
   <Routes>
     <Route path="/" element={<ExperimentIndex />} />
+    <Route path="/annotate" element={<SessionPicker />} />
+    <Route path="/annotate/:sessionId" element={<AnnotationWorkspace />} />
     <Route path="/:branch/:iteration" element={<SessionIndex />} />
     <Route path="/:branch/:iteration/:key" element={<SessionViewer />} />
   </Routes>

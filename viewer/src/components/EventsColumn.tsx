@@ -6,6 +6,7 @@ import { ColumnItem } from "./ColumnItem";
 import { GapPlaceholder } from "./GapPlaceholder";
 
 interface EventsColumnProps {
+  readonly title?: string;
   readonly events: readonly AnalysisEvent[];
   readonly currentTime: number;
   readonly duration: number;
@@ -16,14 +17,14 @@ type ListEntry =
   | { readonly kind: "event"; readonly event: AnalysisEvent }
   | { readonly kind: "gap"; readonly range: TimeRange };
 
-export const EventsColumn = ({ events, currentTime, duration, seekTo }: EventsColumnProps) => {
+export const EventsColumn = ({ title = "Events", events, currentTime, duration, seekTo }: EventsColumnProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   useAutoScroll(containerRef, ".column-item--active");
 
   const entries: readonly ListEntry[] = useMemo(() => {
     const ranges: readonly TimeRange[] = events.map((e) => ({
       start: e.time_start,
-      end: e.time_end,
+      end: e.time_end ?? e.time_start,
     }));
     const gaps = findGaps(ranges, { boundsEnd: duration });
 
@@ -45,7 +46,7 @@ export const EventsColumn = ({ events, currentTime, duration, seekTo }: EventsCo
 
   return (
     <div className="column">
-      <div className="column__header">Events</div>
+      <div className="column__header">{title}</div>
       <div className="column__body" ref={containerRef}>
         {entries.map((entry, i) =>
           entry.kind === "gap" ? (
@@ -59,12 +60,12 @@ export const EventsColumn = ({ events, currentTime, duration, seekTo }: EventsCo
           ) : (
             <ColumnItem
               key={i}
-              active={isInRange(currentTime, entry.event.time_start, entry.event.time_end)}
+              active={isInRange(currentTime, entry.event.time_start, entry.event.time_end ?? entry.event.time_start)}
               startTime={entry.event.time_start}
               onClick={() => seekTo(entry.event.time_start)}
             >
               <span className="column-item__time">
-                {formatTime(entry.event.time_start)}–{formatTime(entry.event.time_end)}
+                {formatTime(entry.event.time_start)}{entry.event.time_end != null ? `–${formatTime(entry.event.time_end)}` : ""}
               </span>
               <span className="column-item__badge">{entry.event.event_type}</span>
               {entry.event.page_title && (

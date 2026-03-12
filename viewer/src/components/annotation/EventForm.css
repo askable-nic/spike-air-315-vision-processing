@@ -1,0 +1,149 @@
+.event-form {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.event-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.event-form__field--grow {
+  flex: 1;
+}
+
+.event-form__field label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+}
+
+.event-form__row {
+  display: flex;
+  gap: 8px;
+}
+
+.event-form__input-row {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.event-form select,
+.event-form input[type="text"],
+.event-form input[type="number"],
+.event-form textarea {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  padding: 6px 8px;
+  font-size: 13px;
+  font-family: inherit;
+  width: 100%;
+}
+
+.event-form input[type="number"] {
+  width: 100%;
+  min-width: 0;
+}
+
+.event-form input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.event-form select:focus,
+.event-form input:focus,
+.event-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.event-form textarea {
+  resize: vertical;
+}
+
+.event-form__btn-sm {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--accent);
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.event-form__btn-sm:hover {
+  border-color: var(--accent);
+}
+
+.event-form__btn-sm:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.event-form__toggle {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 4px 0;
+  text-align: left;
+}
+
+.event-form__toggle:hover {
+  text-decoration: underline;
+}
+
+.event-form__actions {
+  display: flex;
+  gap: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.event-form__btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.event-form__btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.event-form__btn--danger {
+  color: #ff6b6b;
+}
+
+.event-form__btn--danger:hover {
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+}
+
+.event-form__bbox-label {
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+
+.event-form__bbox-label--empty {
+  color: var(--text-secondary);
+}

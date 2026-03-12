@@ -4,14 +4,17 @@ export interface VideoTimeState {
   readonly currentTime: number;
   readonly duration: number;
   readonly isPlaying: boolean;
+  readonly playbackRate: number;
   readonly seekTo: (seconds: number) => void;
   readonly togglePlay: () => void;
+  readonly setPlaybackRate: (rate: number) => void;
 }
 
 export const useVideoTime = (videoRef: RefObject<HTMLVideoElement | null>): VideoTimeState => {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [playbackRate, setPlaybackRateState] = useState(1);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -56,5 +59,16 @@ export const useVideoTime = (videoRef: RefObject<HTMLVideoElement | null>): Vide
     }
   }, [videoRef]);
 
-  return { currentTime, duration, isPlaying, seekTo, togglePlay };
+  const setPlaybackRate = useCallback(
+    (rate: number) => {
+      const clamped = Math.min(5, Math.max(0.25, rate));
+      const rounded = Math.round(clamped * 100) / 100;
+      const video = videoRef.current;
+      if (video) video.playbackRate = rounded;
+      setPlaybackRateState(rounded);
+    },
+    [videoRef]
+  );
+
+  return { currentTime, duration, isPlaying, playbackRate, seekTo, togglePlay, setPlaybackRate };
 };
