@@ -1,0 +1,99 @@
+{
+  "session": "ask_results_usability_brandon",
+  "timestamp": "2026-03-12T22:36:48.577890+00:00",
+  "config": {
+    "model": "gemini-3-flash-preview",
+    "temperature": 0.2,
+    "max_concurrent": 3,
+    "video_fps": 20,
+    "max_segment_duration_ms": 75000,
+    "segment_overlap_ms": 5000,
+    "source": "gemini_video_baseline",
+    "merge": {
+      "time_tolerance_ms": 2000,
+      "similarity_threshold": 0.6,
+      "discard_context_events": false
+    }
+  },
+  "video_duration_ms": 659000.0,
+  "video_path": "input_data/screen_tracks_normalized/ask_results_usability_brandon.mp4",
+  "segments": [
+    {
+      "index": 0,
+      "start_ms": 0.0,
+      "end_ms": 78222.22222222222,
+      "event_count": 31,
+      "input_tokens": 95552,
+      "output_tokens": 2860
+    },
+    {
+      "index": 1,
+      "start_ms": 68222.22222222222,
+      "end_ms": 151444.44444444444,
+      "event_count": 23,
+      "input_tokens": 101677,
+      "output_tokens": 3097
+    },
+    {
+      "index": 2,
+      "start_ms": 141444.44444444444,
+      "end_ms": 224666.66666666666,
+      "event_count": 104,
+      "input_tokens": 101618,
+      "output_tokens": 7363
+    },
+    {
+      "index": 3,
+      "start_ms": 214666.66666666666,
+      "end_ms": 297888.8888888889,
+      "event_count": 25,
+      "input_tokens": 101498,
+      "output_tokens": 2273
+    },
+    {
+      "index": 4,
+      "start_ms": 287888.8888888889,
+      "end_ms": 371111.1111111111,
+      "event_count": 20,
+      "input_tokens": 101618,
+      "output_tokens": 1772
+    },
+    {
+      "index": 5,
+      "start_ms": 361111.1111111111,
+      "end_ms": 444333.3333333333,
+      "event_count": 13,
+      "input_tokens": 101498,
+      "output_tokens": 1393
+    },
+    {
+      "index": 6,
+      "start_ms": 434333.3333333333,
+      "end_ms": 517555.5555555555,
+      "event_count": 29,
+      "input_tokens": 101558,
+      "output_tokens": 3569
+    },
+    {
+      "index": 7,
+      "start_ms": 507555.5555555555,
+      "end_ms": 590777.7777777778,
+      "event_count": 16,
+      "input_tokens": 101558,
+      "output_tokens": 3319
+    },
+    {
+      "index": 8,
+      "start_ms": 580777.7777777778,
+      "end_ms": 659000.0,
+      "event_count": 17,
+      "input_tokens": 95438,
+      "output_tokens": 2246
+    }
+  ],
+  "total_events_merged": 278,
+  "total_events_deduped": 196,
+  "total_input_tokens": 902015,
+  "total_output_tokens": 27892,
+  "analysis_time_ms": 417364.0
+}

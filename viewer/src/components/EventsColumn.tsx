@@ -6,7 +6,6 @@ import { ColumnItem } from "./ColumnItem";
 import { GapPlaceholder } from "./GapPlaceholder";
 
 interface EventsColumnProps {
-  readonly title?: string;
   readonly events: readonly AnalysisEvent[];
   readonly currentTime: number;
   readonly duration: number;
@@ -17,7 +16,7 @@ type ListEntry =
   | { readonly kind: "event"; readonly event: AnalysisEvent }
   | { readonly kind: "gap"; readonly range: TimeRange };
 
-export const EventsColumn = ({ title = "Events", events, currentTime, duration, seekTo }: EventsColumnProps) => {
+export const EventsColumn = ({ events, currentTime, duration, seekTo }: EventsColumnProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   useAutoScroll(containerRef, ".column-item--active");
 
@@ -45,9 +44,7 @@ export const EventsColumn = ({ title = "Events", events, currentTime, duration, 
   }, [events, duration]);
 
   return (
-    <div className="column">
-      <div className="column__header">{title}</div>
-      <div className="column__body" ref={containerRef}>
+    <div className="column__body" ref={containerRef}>
         {entries.map((entry, i) =>
           entry.kind === "gap" ? (
             <GapPlaceholder
@@ -78,7 +75,6 @@ export const EventsColumn = ({ title = "Events", events, currentTime, duration, 
             </ColumnItem>
           ),
         )}
-      </div>
     </div>
   );
 };

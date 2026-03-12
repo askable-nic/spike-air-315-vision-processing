@@ -1,0 +1,275 @@
+[
+  {
+    "type": "hover",
+    "time_start_ms": 11200,
+    "time_end_ms": 13800,
+    "description": "The user hovers over the browser tab bar area before opening a new tab.",
+    "confidence": 0.9,
+    "interaction_target": "Browser Tab Bar",
+    "page_title": "Italy travel advice | Smartraveller",
+    "page_location": "https://www.smartraveller.gov.au/destinations/europe/italy",
+    "frame_description": "The user is on the Smartraveller Italy page, looking at the Travel section."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 13800,
+    "time_end_ms": 13850,
+    "description": "The user clicks the 'New Tab' button in the browser.",
+    "confidence": 1.0,
+    "interaction_target": "New Tab Button",
+    "cursor_position_x": 965,
+    "cursor_position_y": 18,
+    "page_title": "Italy travel advice | Smartraveller",
+    "page_location": "https://www.smartraveller.gov.au/destinations/europe/italy",
+    "frame_description": "The cursor is at the top of the browser window on the new tab icon."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 13850,
+    "time_end_ms": 14150,
+    "description": "A new browser tab opens to the Google homepage.",
+    "confidence": 1.0,
+    "page_title": "New Tab",
+    "page_location": "chrome://newtab/",
+    "frame_description": "The screen transitions from the Smartraveller site to a blank Google search page."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 14300,
+    "time_end_ms": 15300,
+    "description": "The user types 'travel i' into the Google search bar.",
+    "confidence": 1.0,
+    "interaction_target": "Search bar",
+    "page_title": "Google",
+    "frame_description": "Text appears in the central search box as the user types."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 14300,
+    "time_end_ms": 14500,
+    "description": "Google search suggestions dropdown appears as the user starts typing.",
+    "confidence": 0.9,
+    "interaction_target": "Search suggestions dropdown",
+    "frame_description": "A list of autocomplete suggestions appears below the search bar."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 15350,
+    "time_end_ms": 17450,
+    "description": "The user continues typing 'nsurance.com' into the search bar.",
+    "confidence": 1.0,
+    "interaction_target": "Search bar",
+    "frame_description": "The search query is completed in the input field."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 17450,
+    "time_end_ms": 18600,
+    "description": "The user hovers over the 'travel insurance comparison australia' suggestion in the dropdown.",
+    "confidence": 0.9,
+    "interaction_target": "travel insurance comparison australia suggestion",
+    "cursor_position_x": 312,
+    "cursor_position_y": 182,
+    "frame_description": "The cursor pauses over one of the autocomplete options."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 18600,
+    "time_end_ms": 18650,
+    "description": "The user selects the 'travel insurance comparison australia' suggestion from the list.",
+    "confidence": 1.0,
+    "interaction_target": "travel insurance comparison australia suggestion",
+    "cursor_position_x": 312,
+    "cursor_position_y": 182,
+    "frame_description": "The user clicks the chosen suggestion to trigger a search."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 18650,
+    "time_end_ms": 19050,
+    "description": "The Google search results page begins to load.",
+    "confidence": 0.8,
+    "frame_description": "The screen goes white briefly as the browser requests the search results page."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 19050,
+    "time_end_ms": 19150,
+    "description": "The Google search results page for 'travel insurance comparison australia' is loaded.",
+    "confidence": 1.0,
+    "page_title": "travel insurance comparison australia - Google Search",
+    "page_location": "https://www.google.com/search?q=travel+insurance+comparison+australia",
+    "frame_description": "The search results page is visible with several sponsored links at the top."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 19150,
+    "time_end_ms": 20450,
+    "description": "The user hovers over the first sponsored result from Compare the Market.",
+    "confidence": 0.9,
+    "interaction_target": "Compare the Market - Travel Insurance Australia link",
+    "cursor_position_x": 215,
+    "cursor_position_y": 595,
+    "frame_description": "The cursor moves to and stays on the first search result link."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 20450,
+    "time_end_ms": 20500,
+    "description": "The user clicks on the Compare the Market travel insurance link.",
+    "confidence": 1.0,
+    "interaction_target": "Compare the Market - Travel Insurance Australia link",
+    "cursor_position_x": 215,
+    "cursor_position_y": 595,
+    "frame_description": "The link is activated, initiating navigation to the external site."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 20500,
+    "time_end_ms": 24600,
+    "description": "The Compare the Market website begins loading.",
+    "confidence": 0.9,
+    "frame_description": "A blank white screen is shown while the destination page loads."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 24600,
+    "time_end_ms": 24800,
+    "description": "The Compare the Market travel insurance landing page is fully loaded.",
+    "confidence": 1.0,
+    "page_title": "Compare Travel Insurance | Compare the Market",
+    "page_location": "https://www.comparethemarket.com.au/travel-insurance/",
+    "frame_description": "The landing page for Compare the Market travel insurance is visible, featuring a meerkat character."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 24800,
+    "time_end_ms": 30150,
+    "description": "The user hovers over the 'Compare now' button while reading the page.",
+    "confidence": 0.9,
+    "interaction_target": "Compare now button",
+    "cursor_position_x": 115,
+    "cursor_position_y": 372,
+    "frame_description": "The cursor rests on the primary call-to-action button."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 30150,
+    "time_end_ms": 33650,
+    "description": "The user scrolls down the page to view more information.",
+    "confidence": 1.0,
+    "frame_description": "The page content moves upwards as the user scrolls down."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 38350,
+    "time_end_ms": 41200,
+    "description": "The user scrolls further down the page.",
+    "confidence": 1.0,
+    "frame_description": "The user continues to explore the page content by scrolling."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 41200,
+    "time_end_ms": 44550,
+    "description": "The user scrolls back up slightly.",
+    "confidence": 1.0,
+    "frame_description": "The page content moves downwards as the user scrolls up."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 44550,
+    "time_end_ms": 46550,
+    "description": "The user scrolls down again.",
+    "confidence": 1.0,
+    "frame_description": "The user scrolls down to a lower section of the page."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 64550,
+    "time_end_ms": 66300,
+    "description": "The user scrolls back to the top of the page.",
+    "confidence": 1.0,
+    "frame_description": "The user returns to the top of the landing page."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 66300,
+    "time_end_ms": 72250,
+    "description": "The user hovers over the 'Compare now' button again before deciding to click.",
+    "confidence": 0.9,
+    "interaction_target": "Compare now button",
+    "cursor_position_x": 115,
+    "cursor_position_y": 372,
+    "frame_description": "The cursor is positioned over the yellow 'Compare now' button."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 72250,
+    "time_end_ms": 72300,
+    "description": "The user clicks the 'Compare now' button.",
+    "confidence": 1.0,
+    "interaction_target": "Compare now button",
+    "cursor_position_x": 115,
+    "cursor_position_y": 372,
+    "frame_description": "The button is clicked to start the insurance comparison process."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 72300,
+    "time_end_ms": 73200,
+    "description": "A loading screen with 'Loading application...' appears.",
+    "confidence": 0.9,
+    "frame_description": "A loading spinner and text indicate the application is initializing."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 73200,
+    "time_end_ms": 73400,
+    "description": "The first step of the comparison funnel loads.",
+    "confidence": 1.0,
+    "page_title": "Travel Insurance - Destinations",
+    "page_location": "https://www.comparethemarket.com.au/travel-insurance/destinations",
+    "frame_description": "The screen shows the first question: 'Where are you travelling to?'"
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 73400,
+    "time_end_ms": 74750,
+    "description": "The user hovers over the destination input field.",
+    "confidence": 0.9,
+    "interaction_target": "Destination input field",
+    "cursor_position_x": 510,
+    "cursor_position_y": 520,
+    "frame_description": "The cursor is over the text box that says 'Select or start typing countries.'"
+  },
+  {
+    "type": "click",
+    "time_start_ms": 74750,
+    "time_end_ms": 74800,
+    "description": "The user clicks into the destination input field.",
+    "confidence": 1.0,
+    "interaction_target": "Destination input field",
+    "cursor_position_x": 510,
+    "cursor_position_y": 520,
+    "frame_description": "The input field is focused."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 74800,
+    "time_end_ms": 75100,
+    "description": "A dropdown list of 'Popular Destinations' appears.",
+    "confidence": 0.9,
+    "interaction_target": "Popular Destinations dropdown",
+    "frame_description": "A large menu opens showing countries categorized by region (Pacific, Asia, Europe, Other)."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 75100,
+    "time_end_ms": 83900,
+    "description": "The user hovers over various destination options in the list.",
+    "confidence": 0.8,
+    "interaction_target": "Destination list items",
+    "frame_description": "The cursor moves across different country names in the dropdown menu."
+  }
+]

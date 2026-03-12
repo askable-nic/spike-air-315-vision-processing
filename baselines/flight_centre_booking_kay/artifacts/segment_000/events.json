@@ -1,0 +1,102 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 2250,
+    "time_end_ms": 31200,
+    "description": "Task instructions are typed out on the screen for the participant to read, detailing the domestic flight booking scenario.",
+    "confidence": 0.9,
+    "frame_description": "A black screen with white text being typed out line by line."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 31200,
+    "time_end_ms": 46200,
+    "description": "Further instructions regarding the 'think aloud' protocol and task completion criteria are displayed.",
+    "confidence": 0.9,
+    "frame_description": "A black screen with white text providing instructions on thinking aloud."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 46200,
+    "time_end_ms": 50650,
+    "description": "Instructions to open the website and the 'Open' button appear on the screen.",
+    "confidence": 0.9,
+    "interaction_target": "Open button",
+    "frame_description": "A black screen with a button labeled 'Open' in the center."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 50650,
+    "time_end_ms": 50800,
+    "description": "User clicks the 'Open' button to initiate the usability test on the Flight Centre website.",
+    "confidence": 1.0,
+    "interaction_target": "Open button",
+    "cursor_position_x": 960,
+    "cursor_position_y": 720,
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com",
+    "frame_description": "The cursor is positioned over the 'Open' button as it is clicked."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 51500,
+    "time_end_ms": 52550,
+    "description": "The browser opens a new tab and navigates to the Flight Centre Australia homepage.",
+    "confidence": 1.0,
+    "page_title": "Flight Centre Travel Deals",
+    "page_location": "https://www.flightcentre.com.au/",
+    "frame_description": "A new browser tab opens, initially showing a blank page before the Flight Centre URL loads."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 52550,
+    "time_end_ms": 53850,
+    "description": "The Flight Centre homepage begins to load, showing skeleton screens for the main content areas.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre Travel Deals",
+    "page_location": "https://www.flightcentre.com.au/",
+    "frame_description": "The Flight Centre homepage is visible with grey placeholder boxes (skeletons) where content is loading."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 53850,
+    "time_end_ms": 55500,
+    "description": "The main promotional banner for the 'UK & EUROPE SALE' loads at the top of the page.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre Travel Deals",
+    "page_location": "https://www.flightcentre.com.au/",
+    "frame_description": "A large red and white banner for a UK & Europe sale appears on the homepage."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 55500,
+    "time_end_ms": 61250,
+    "description": "Additional promotional content, including a 'QANTAS FLIGHTS SALE' billboard, loads further down the page.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre Travel Deals",
+    "page_location": "https://www.flightcentre.com.au/",
+    "frame_description": "The page content populates further, showing a Qantas sale banner below the main search widget."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 64700,
+    "time_end_ms": 66350,
+    "description": "The 'Travel dates' modal automatically appears, likely due to a default focus state or an automated trigger upon page load completion.",
+    "confidence": 0.9,
+    "interaction_target": "Travel dates modal",
+    "page_title": "Flight Centre Travel Deals",
+    "page_location": "https://www.flightcentre.com.au/",
+    "frame_description": "A calendar-style modal titled 'Travel dates' appears in the center of the screen."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 66350,
+    "time_end_ms": 70238,
+    "description": "A promotional overlay for the 'World360' loyalty program appears on top of the date picker modal.",
+    "confidence": 0.9,
+    "interaction_target": "World360 promotional overlay",
+    "page_title": "Flight Centre Travel Deals",
+    "page_location": "https://www.flightcentre.com.au/",
+    "frame_description": "A red promotional popup about earning points appears, partially obscuring the date picker modal."
+  }
+]

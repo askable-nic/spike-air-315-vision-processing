@@ -1,0 +1,205 @@
+[
+  {
+    "type": "click",
+    "time_start_ms": 3050,
+    "time_end_ms": 3100,
+    "description": "User clicks on the departure date input field to change the travel date.",
+    "confidence": 0.98,
+    "interaction_target": "Departure date input",
+    "cursor_position_x": 110,
+    "cursor_position_y": 365,
+    "page_title": "Rome to Palermo - Rome2Rio",
+    "page_location": "https://www.rome2rio.com/s/Rome/Palermo",
+    "frame_description": "The user is viewing a list of travel schedules from Rome to Palermo on Rome2Rio."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 3100,
+    "time_end_ms": 3500,
+    "description": "A date picker calendar modal appears on the screen.",
+    "confidence": 0.99,
+    "frame_description": "A calendar overlay is visible over the search results."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 4050,
+    "time_end_ms": 4950,
+    "description": "User hovers the cursor over February 13th in the date picker.",
+    "confidence": 0.9,
+    "interaction_target": "Date 13 Feb",
+    "cursor_position_x": 145,
+    "cursor_position_y": 580,
+    "frame_description": "The cursor is stationary over a specific date in the calendar modal."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 4950,
+    "time_end_ms": 5000,
+    "description": "User selects February 13th as the new departure date.",
+    "confidence": 0.98,
+    "interaction_target": "Date 13 Feb",
+    "cursor_position_x": 145,
+    "cursor_position_y": 580,
+    "frame_description": "The user clicks the date, and the calendar begins to close."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 5000,
+    "time_end_ms": 6950,
+    "description": "The date picker closes and the schedule list updates with new results for the selected date.",
+    "confidence": 0.95,
+    "frame_description": "The results list refreshes to show travel options for February 13th."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 7000,
+    "time_end_ms": 10000,
+    "description": "User hovers over the first schedule card in the results list.",
+    "confidence": 0.85,
+    "interaction_target": "First schedule card",
+    "cursor_position_x": 200,
+    "cursor_position_y": 680,
+    "frame_description": "The cursor lingers over the top travel option (11h 44m - Direct)."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 10000,
+    "time_end_ms": 10050,
+    "description": "User clicks on the first schedule card to view trip details.",
+    "confidence": 0.98,
+    "interaction_target": "First schedule card",
+    "cursor_position_x": 200,
+    "cursor_position_y": 680,
+    "frame_description": "The user activates the first travel option to see more information."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 10050,
+    "time_end_ms": 11000,
+    "description": "The UI transitions to show the specific segments and details of the selected trip.",
+    "confidence": 0.99,
+    "frame_description": "A detailed view of the trip segments (train/bus) appears."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 12000,
+    "time_end_ms": 16000,
+    "description": "User scrolls down and then back up through the trip details panel.",
+    "confidence": 0.9,
+    "frame_description": "The content in the left-hand details panel moves vertically."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 16950,
+    "time_end_ms": 17000,
+    "description": "User clicks the back arrow button to return to the search results list.",
+    "confidence": 0.98,
+    "interaction_target": "Back button",
+    "cursor_position_x": 35,
+    "cursor_position_y": 235,
+    "frame_description": "The user clicks the 'Back' icon at the top of the details panel."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 17000,
+    "time_end_ms": 18000,
+    "description": "The UI transitions back to the main list of all schedules.",
+    "confidence": 0.99,
+    "frame_description": "The detailed trip view disappears, replaced by the full results list."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 19150,
+    "time_end_ms": 21000,
+    "description": "User hovers over the second schedule card in the list.",
+    "confidence": 0.85,
+    "interaction_target": "Second schedule card",
+    "cursor_position_x": 200,
+    "cursor_position_y": 800,
+    "frame_description": "The cursor moves to and stays over the second travel option (11h 30m - 1 change)."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 21000,
+    "time_end_ms": 21050,
+    "description": "User clicks on the second schedule card to view its details.",
+    "confidence": 0.98,
+    "interaction_target": "Second schedule card",
+    "cursor_position_x": 200,
+    "cursor_position_y": 800,
+    "frame_description": "The user selects the second travel option."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 21050,
+    "time_end_ms": 22000,
+    "description": "UI updates to show details for the second trip option.",
+    "confidence": 0.99,
+    "frame_description": "The details panel updates with information for the second trip."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 23000,
+    "time_end_ms": 26000,
+    "description": "User scrolls through the details of the second trip.",
+    "confidence": 0.9,
+    "frame_description": "Vertical scrolling within the trip details section."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 27000,
+    "time_end_ms": 27050,
+    "description": "User clicks the back button to return to the results list.",
+    "confidence": 0.98,
+    "interaction_target": "Back button",
+    "cursor_position_x": 35,
+    "cursor_position_y": 235,
+    "frame_description": "The user navigates back to the main list."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 27050,
+    "time_end_ms": 28000,
+    "description": "UI returns to the main results list.",
+    "confidence": 0.99,
+    "frame_description": "The results list is visible again."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 29750,
+    "time_end_ms": 29800,
+    "description": "User clicks the departure date field again.",
+    "confidence": 0.98,
+    "interaction_target": "Departure date input",
+    "cursor_position_x": 110,
+    "cursor_position_y": 365,
+    "frame_description": "The user initiates another date change."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 29800,
+    "time_end_ms": 30200,
+    "description": "The calendar modal reappears.",
+    "confidence": 0.99,
+    "frame_description": "The date picker overlay is shown."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 30550,
+    "time_end_ms": 31550,
+    "description": "User clicks on another browser tab, navigating away from the Rome2Rio page.",
+    "confidence": 0.95,
+    "interaction_target": "Browser tab",
+    "cursor_position_x": 250,
+    "cursor_position_y": 15,
+    "frame_description": "The user clicks a tab at the top of the browser window."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 31600,
+    "time_end_ms": 32500,
+    "description": "The screen content changes to show the recording session interface.",
+    "confidence": 0.99,
+    "frame_description": "The view switches to the 'sessions.astable.com' tab, showing an infinite mirror effect of the screen recording."
+  }
+]

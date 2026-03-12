@@ -1,0 +1,140 @@
+[
+  {
+    "type": "click",
+    "time_start_ms": 6150,
+    "time_end_ms": 6150,
+    "description": "User clicks the 'CHANGE' button for the departing flight to view more details or options.",
+    "confidence": 0.95,
+    "interaction_target": "CHANGE button",
+    "cursor_position_x": 580,
+    "cursor_position_y": 390,
+    "page_title": "Flight Centre Australia | Domestic Booking Flow",
+    "page_location": "secure.flightcentre.com.au/AAky9kh1/results#baggage",
+    "frame_description": "The 'Review trip' page is displayed with flight details and price summary."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 6150,
+    "time_end_ms": 6950,
+    "description": "The departing flight details section expands to show specific flight times and aircraft information.",
+    "confidence": 0.9,
+    "frame_description": "The flight details section for the departing flight is now expanded."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 7050,
+    "time_end_ms": 13000,
+    "description": "User scrolls down the page to view the 'Add-ons' section, specifically looking at baggage and seat selection options.",
+    "confidence": 0.9,
+    "frame_description": "The page is being scrolled vertically downwards."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 18050,
+    "time_end_ms": 18050,
+    "description": "User clicks the 'SELECT SEATS' button in the Seats add-on section.",
+    "confidence": 0.95,
+    "interaction_target": "SELECT SEATS button",
+    "cursor_position_x": 920,
+    "cursor_position_y": 650,
+    "frame_description": "The cursor is positioned over the blue 'SELECT SEATS' button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 19650,
+    "time_end_ms": 22750,
+    "description": "A 'Loading seat selector' overlay appears, followed by the rendering of the seat map for the first flight (SYD to MEL).",
+    "confidence": 0.95,
+    "frame_description": "A loading spinner is visible, then the seat map for the aircraft appears."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 27500,
+    "time_end_ms": 28500,
+    "description": "User hovers the cursor over seat 4D while considering seat options.",
+    "confidence": 0.8,
+    "interaction_target": "Seat 4D",
+    "cursor_position_x": 480,
+    "cursor_position_y": 450,
+    "frame_description": "The seat map is visible with various seats available for selection."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 33000,
+    "time_end_ms": 34000,
+    "description": "User hovers the cursor over seat 5E.",
+    "confidence": 0.8,
+    "interaction_target": "Seat 5E",
+    "cursor_position_x": 550,
+    "cursor_position_y": 450,
+    "frame_description": "The cursor moves across the seat map."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 45000,
+    "time_end_ms": 46350,
+    "description": "User hovers over seat 5C before deciding to select it.",
+    "confidence": 0.8,
+    "interaction_target": "Seat 5C",
+    "cursor_position_x": 510,
+    "cursor_position_y": 450,
+    "frame_description": "The cursor lingers over seat 5C."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 46350,
+    "time_end_ms": 46350,
+    "description": "User clicks on seat 5C to select it.",
+    "confidence": 0.95,
+    "interaction_target": "Seat 5C",
+    "cursor_position_x": 510,
+    "cursor_position_y": 450,
+    "frame_description": "Seat 5C is clicked."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 61650,
+    "time_end_ms": 62000,
+    "description": "A 'Preferred Seat' modal appears, informing the user of the cost for selecting seat 5C.",
+    "confidence": 0.95,
+    "frame_description": "A modal window titled 'Preferred Seat' is now visible over the seat map."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 64350,
+    "time_end_ms": 64350,
+    "description": "User clicks the 'CONFIRM SEAT' button within the modal.",
+    "confidence": 0.95,
+    "interaction_target": "CONFIRM SEAT button",
+    "cursor_position_x": 750,
+    "cursor_position_y": 500,
+    "frame_description": "The cursor is over the blue 'CONFIRM SEAT' button in the modal."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 64350,
+    "time_end_ms": 65550,
+    "description": "The modal closes and seat 5C is now highlighted in green on the seat map, indicating it has been selected.",
+    "confidence": 0.9,
+    "frame_description": "The seat map is visible again with seat 5C selected."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 69100,
+    "time_end_ms": 69100,
+    "description": "User clicks the 'NEXT FLIGHT' button to proceed to seat selection for the returning flight.",
+    "confidence": 0.95,
+    "interaction_target": "NEXT FLIGHT button",
+    "cursor_position_x": 920,
+    "cursor_position_y": 680,
+    "frame_description": "The cursor is over the 'NEXT FLIGHT' button at the bottom right."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 69150,
+    "time_end_ms": 69400,
+    "description": "The seat selector view for the first flight closes and the UI returns to the review trip page, showing the updated seat selection status.",
+    "confidence": 0.9,
+    "frame_description": "The page returns to the 'Review trip' view."
+  }
+]

@@ -1,0 +1,201 @@
+[
+  {
+    "type": "hover",
+    "time_start_ms": 0,
+    "time_end_ms": 1000,
+    "description": "Cursor hovers over the survey card 'People who bought food on a delivery app recently'.",
+    "confidence": 0.9,
+    "interaction_target": "Survey card ($8)",
+    "cursor_position_x": 450,
+    "cursor_position_y": 450,
+    "page_title": "Explore",
+    "frame_description": "The Explore page is visible with a horizontal list of 'Short tasks & surveys' and a vertical list of 'Sessions to schedule'."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 1000,
+    "time_end_ms": 1400,
+    "description": "User scrolls horizontally to the right through the 'Short tasks & surveys' list.",
+    "confidence": 0.95,
+    "frame_description": "The horizontal list of survey cards moves to the left, revealing more options."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 1400,
+    "time_end_ms": 2350,
+    "description": "Cursor hovers over the survey card 'Share your thoughts on streaming service...'.",
+    "confidence": 0.9,
+    "interaction_target": "Survey card ($15)",
+    "cursor_position_x": 550,
+    "cursor_position_y": 450,
+    "frame_description": "The cursor is stationary over the yellow survey card."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 2350,
+    "time_end_ms": 2400,
+    "description": "User clicks on the survey card 'Share your thoughts on streaming service...'.",
+    "confidence": 0.98,
+    "interaction_target": "Survey card ($15)",
+    "cursor_position_x": 550,
+    "cursor_position_y": 450,
+    "frame_description": "The user activates the survey card."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 2400,
+    "time_end_ms": 2500,
+    "description": "The clicked card highlights, indicating selection.",
+    "confidence": 0.9,
+    "frame_description": "Visual feedback on the card confirms the click interaction."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 8300,
+    "time_end_ms": 9100,
+    "description": "User scrolls horizontally to the right through the 'Short tasks & surveys' list.",
+    "confidence": 0.95,
+    "frame_description": "The user continues exploring the horizontal list of tasks."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 9100,
+    "time_end_ms": 10750,
+    "description": "Cursor hovers over the survey card 'Review online grocery shopping experience'.",
+    "confidence": 0.9,
+    "interaction_target": "Survey card ($12)",
+    "cursor_position_x": 650,
+    "cursor_position_y": 450,
+    "frame_description": "The cursor lingers over a blue survey card."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 10800,
+    "time_end_ms": 11200,
+    "description": "User scrolls vertically down the 'Explore' page.",
+    "confidence": 0.95,
+    "frame_description": "The page content moves upward to reveal more sessions to schedule."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 11200,
+    "time_end_ms": 14500,
+    "description": "Cursor hovers over the video call session card 'Anyone who has a vehicle insurance on a personal car'.",
+    "confidence": 0.9,
+    "interaction_target": "Video Call card ($40)",
+    "cursor_position_x": 500,
+    "cursor_position_y": 700,
+    "frame_description": "The cursor is positioned over a pink session card in the lower half of the screen."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 14550,
+    "time_end_ms": 15600,
+    "description": "User scrolls vertically back up the 'Explore' page.",
+    "confidence": 0.95,
+    "frame_description": "The user returns to the top section of the page."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 16550,
+    "time_end_ms": 17150,
+    "description": "User scrolls horizontally to the left through the 'Short tasks & surveys' list.",
+    "confidence": 0.95,
+    "frame_description": "The user scrolls back through the horizontal list."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 17150,
+    "time_end_ms": 18200,
+    "description": "Cursor hovers over the 'AI Interview' card.",
+    "confidence": 0.9,
+    "interaction_target": "AI Interview card ($40)",
+    "cursor_position_x": 400,
+    "cursor_position_y": 450,
+    "frame_description": "The cursor pauses over a red AI Interview card."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 28150,
+    "time_end_ms": 28200,
+    "description": "User clicks on the survey card 'People who bought food on a delivery app recently'.",
+    "confidence": 0.98,
+    "interaction_target": "Survey card ($8)",
+    "cursor_position_x": 450,
+    "cursor_position_y": 450,
+    "frame_description": "The user selects the first survey card in the list."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 28200,
+    "time_end_ms": 28300,
+    "description": "The clicked card highlights.",
+    "confidence": 0.9,
+    "frame_description": "Visual feedback confirms the selection of the $8 survey card."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 30350,
+    "time_end_ms": 31300,
+    "description": "User scrolls horizontally to the right through the 'Short tasks & surveys' list.",
+    "confidence": 0.95,
+    "frame_description": "The user continues to browse the horizontal list."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 45900,
+    "time_end_ms": 46050,
+    "description": "User scrolls vertically down the 'Explore' page.",
+    "confidence": 0.95,
+    "frame_description": "The user scrolls down to view the sessions list again."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 49000,
+    "time_end_ms": 65600,
+    "description": "Cursor hovers over the 'AI Interview' card ($40) for an extended period, suggesting hesitation or reading.",
+    "confidence": 0.85,
+    "interaction_target": "AI Interview card ($40)",
+    "cursor_position_x": 400,
+    "cursor_position_y": 450,
+    "frame_description": "The cursor remains still over the red AI Interview card for several seconds."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 65650,
+    "time_end_ms": 65700,
+    "description": "User clicks on the 'AI Interview' card ($40).",
+    "confidence": 0.98,
+    "interaction_target": "AI Interview card ($40)",
+    "cursor_position_x": 400,
+    "cursor_position_y": 450,
+    "frame_description": "The user finally selects the AI Interview card after a long pause."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 65700,
+    "time_end_ms": 65800,
+    "description": "The clicked card highlights.",
+    "confidence": 0.9,
+    "frame_description": "Visual feedback confirms the click on the red card."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 68050,
+    "time_end_ms": 69450,
+    "description": "User scrolls vertically down the 'Explore' page.",
+    "confidence": 0.95,
+    "frame_description": "The user scrolls further down the page."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 69450,
+    "time_end_ms": 75400,
+    "description": "Cursor hovers over the diary study card 'Test some new train journey interactions'.",
+    "confidence": 0.9,
+    "interaction_target": "Diary Study card ($40)",
+    "cursor_position_x": 500,
+    "cursor_position_y": 850,
+    "frame_description": "The cursor lingers over an orange diary study card at the bottom of the list."
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "type": "click",
+    "time_start_ms": 38950,
+    "time_end_ms": 39000,
+    "description": "User clicks on the browser tab for the Sessions.us video call to switch away from the travel insurance form.",
+    "confidence": 0.95,
+    "interaction_target": "Sessions.us browser tab",
+    "cursor_position_x": 150,
+    "cursor_position_y": 20,
+    "page_title": "Your details | Compare the Market",
+    "page_location": "https://www.comparethemarket.com.au/travel/compare/v2/travel/contact-details",
+    "frame_description": "The cursor is at the top of the browser window, clicking on one of the open tabs."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 39000,
+    "time_end_ms": 39150,
+    "description": "The browser switches to the Sessions.us video call page.",
+    "confidence": 0.98,
+    "interaction_target": "Sessions.us room",
+    "page_title": "sessions.us/rooms/dot-bakv-6p6",
+    "page_location": "https://sessions.us/rooms/dot-bakv-6p6",
+    "frame_description": "The page content changes from the travel insurance form to the video conferencing interface."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 74650,
+    "time_end_ms": 75250,
+    "description": "User hovers the cursor over several application icons in the macOS dock at the bottom of the screen.",
+    "confidence": 0.9,
+    "interaction_target": "macOS Dock",
+    "page_title": "sessions.us/rooms/dot-bakv-6p6",
+    "frame_description": "The cursor moves horizontally across the bottom of the screen over the dock icons."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 74650,
+    "time_end_ms": 75250,
+    "description": "Tooltips for various applications (OneNote, Music, iPhone Mirroring, TV) appear sequentially as the user hovers over the dock icons.",
+    "confidence": 0.9,
+    "frame_description": "Text labels appear and disappear above the dock icons in response to cursor movement."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 78050,
+    "time_end_ms": 78100,
+    "description": "User clicks the 'Stop sharing' button in the Sessions.us control bar to end the screen sharing session.",
+    "confidence": 0.98,
+    "interaction_target": "Stop sharing button",
+    "cursor_position_x": 540,
+    "cursor_position_y": 750,
+    "page_title": "sessions.us/rooms/dot-bakv-6p6",
+    "frame_description": "The cursor is on the green 'Stop sharing' button at the bottom of the screen."
+  }
+]

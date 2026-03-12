@@ -1,0 +1,157 @@
+[
+  {
+    "type": "scroll",
+    "time_start_ms": 0,
+    "time_end_ms": 1000,
+    "description": "User scrolls down the page to review the hiring rules and pricing sections.",
+    "confidence": 0.9,
+    "page_title": "Bertha - Renault Trafic campervan for hire in London, UK",
+    "frame_description": "The user is viewing the 'Hiring rules' and 'Pricing' sections of the campervan listing page."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 2400,
+    "time_end_ms": 2450,
+    "description": "User clicks on the 'Read more' link in the Cancellations section to expand the policy details.",
+    "confidence": 0.9,
+    "interaction_target": "Read more",
+    "cursor_position_x": 128,
+    "cursor_position_y": 728,
+    "frame_description": "The cursor is positioned over the 'Read more' link under the 'Cancellations' heading."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 2450,
+    "time_end_ms": 2600,
+    "description": "The cancellation policy section expands, revealing additional text about the flexible cancellation terms.",
+    "confidence": 0.9,
+    "frame_description": "The text under 'Cancellations' has expanded to show the full policy."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 6800,
+    "time_end_ms": 8500,
+    "description": "The cursor hovers over the list of hiring rules, specifically near the insurance requirements.",
+    "confidence": 0.8,
+    "interaction_target": "Hiring rules list",
+    "frame_description": "The cursor is stationary over the bulleted list of hiring rules."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 11000,
+    "time_end_ms": 15000,
+    "description": "The cursor hovers over the pricing table, lingering on the hire fee and service fee details.",
+    "confidence": 0.8,
+    "interaction_target": "Pricing table",
+    "frame_description": "The cursor is positioned over the 'Pricing' section, which lists Hire Fee, Service fee, and Delivery fee."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 24400,
+    "time_end_ms": 27000,
+    "description": "User scrolls back up the page, passing the pricing, hiring rules, and additional information sections.",
+    "confidence": 0.9,
+    "frame_description": "The page content is moving downwards as the user scrolls up."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 28000,
+    "time_end_ms": 28050,
+    "description": "User clicks the 'Read more' link in the Amenities section to see the full list of features.",
+    "confidence": 0.9,
+    "interaction_target": "Read more",
+    "cursor_position_x": 128,
+    "cursor_position_y": 698,
+    "frame_description": "The cursor clicks on the 'Read more' link located under the 'Amenities' section."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 28050,
+    "time_end_ms": 28200,
+    "description": "The Amenities section expands to show a comprehensive list of campervan features like kitchenware and safety equipment.",
+    "confidence": 0.9,
+    "frame_description": "The amenities list has expanded, showing more items with checkmarks."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 28500,
+    "time_end_ms": 30000,
+    "description": "User scrolls to the very top of the page to view the main image gallery.",
+    "confidence": 0.9,
+    "frame_description": "The user has scrolled back to the top of the listing where the large images are displayed."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 30000,
+    "time_end_ms": 32000,
+    "description": "The cursor hovers over the main image gallery of the campervan.",
+    "confidence": 0.8,
+    "interaction_target": "Image gallery",
+    "frame_description": "The cursor is resting on the large interior photo of the campervan."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 32450,
+    "time_end_ms": 32500,
+    "description": "User clicks on the Campify logo in the header to return to the search results page.",
+    "confidence": 0.9,
+    "interaction_target": "Campify logo",
+    "cursor_position_x": 65,
+    "cursor_position_y": 270,
+    "frame_description": "The cursor is clicking the 'campify' logo in the top-left corner of the page."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 32500,
+    "time_end_ms": 33350,
+    "description": "The page navigates away from the individual listing back to the search results for London.",
+    "confidence": 0.9,
+    "page_location": "https://www.campify.co.uk/search?location=London",
+    "frame_description": "The screen transitions from the van details page to the search results grid."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 34000,
+    "time_end_ms": 38000,
+    "description": "The cursor hovers over the first search result card for 'Papillon'.",
+    "confidence": 0.8,
+    "interaction_target": "Search result card",
+    "frame_description": "The cursor is positioned over the first campervan card in the search results."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 44000,
+    "time_end_ms": 58000,
+    "description": "User scrolls down through the search results to browse other available campervans.",
+    "confidence": 0.9,
+    "frame_description": "The user is scrolling through the grid of campervan search results."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 80800,
+    "time_end_ms": 82000,
+    "description": "The cursor hovers over the location search input field at the top of the page.",
+    "confidence": 0.8,
+    "interaction_target": "Search input",
+    "frame_description": "The cursor is hovering over the search bar that currently says 'London'."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 82000,
+    "time_end_ms": 82100,
+    "description": "User clicks into the search input field to modify the search location.",
+    "confidence": 0.9,
+    "interaction_target": "Search input",
+    "cursor_position_x": 250,
+    "cursor_position_y": 300,
+    "frame_description": "The user clicks the search bar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 82100,
+    "time_end_ms": 82300,
+    "description": "The search input field gains focus, indicated by a cursor appearing in the text box.",
+    "confidence": 0.9,
+    "frame_description": "The search input field is now active and ready for text entry."
+  }
+]

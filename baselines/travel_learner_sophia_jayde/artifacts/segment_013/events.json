@@ -1,0 +1,167 @@
+[
+  {
+    "type": "hover",
+    "time_start_ms": 47450,
+    "time_end_ms": 47950,
+    "description": "User hovers over the 'New Tab' button in the browser.",
+    "confidence": 0.9,
+    "interaction_target": "New Tab button",
+    "cursor_position_x": 940,
+    "cursor_position_y": 15,
+    "page_title": "Hostels in London - Hostelworld",
+    "frame_description": "The user is on the Hostelworld search results page for London, looking at various hostel listings and a map."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 47950,
+    "time_end_ms": 47950,
+    "description": "User clicks the 'New Tab' button to open a new browser tab.",
+    "confidence": 1.0,
+    "interaction_target": "New Tab button",
+    "cursor_position_x": 940,
+    "cursor_position_y": 15,
+    "page_title": "Hostels in London - Hostelworld",
+    "frame_description": "The user clicks the plus icon to open a new tab."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 47950,
+    "time_end_ms": 48100,
+    "description": "The browser navigates to the Google homepage in a new tab.",
+    "confidence": 1.0,
+    "page_title": "New Tab",
+    "page_location": "https://www.google.com",
+    "frame_description": "A new tab opens and loads the Google search homepage."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 49700,
+    "time_end_ms": 49700,
+    "description": "User clicks on the Google search input field to begin typing.",
+    "confidence": 1.0,
+    "interaction_target": "Search input field",
+    "cursor_position_x": 485,
+    "cursor_position_y": 475,
+    "page_title": "Google",
+    "frame_description": "The user focuses the search bar on the Google homepage."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 49950,
+    "time_end_ms": 51300,
+    "description": "User types 'best place to stay in rome' into the search bar.",
+    "confidence": 0.9,
+    "interaction_target": "Search input field",
+    "page_title": "Google",
+    "frame_description": "Text appears in the search bar as the user types."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 50300,
+    "time_end_ms": 50500,
+    "description": "Google autocomplete suggestions dropdown appears in response to typing.",
+    "confidence": 1.0,
+    "interaction_target": "Autocomplete dropdown",
+    "page_title": "Google",
+    "frame_description": "A list of suggested search terms appears below the search bar."
+  },
+  {
+    "type": "hesitate",
+    "time_start_ms": 51300,
+    "time_end_ms": 52100,
+    "description": "User pauses typing and then deletes the previous query to change their search intent.",
+    "confidence": 0.8,
+    "page_title": "Google",
+    "frame_description": "The user stops typing 'rome' and clears the search bar."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 52100,
+    "time_end_ms": 53900,
+    "description": "User types 'best places to go london' into the search bar.",
+    "confidence": 1.0,
+    "interaction_target": "Search input field",
+    "page_title": "Google",
+    "frame_description": "The user enters a new search query for London attractions."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 53900,
+    "time_end_ms": 53900,
+    "description": "User triggers the search by clicking the search button or pressing Enter.",
+    "confidence": 0.9,
+    "interaction_target": "Google Search button",
+    "page_title": "Google",
+    "frame_description": "The search is initiated."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 53900,
+    "time_end_ms": 54300,
+    "description": "The browser navigates to the Google search results page for 'best places to go london'.",
+    "confidence": 1.0,
+    "page_title": "best places to go london - Google Search",
+    "page_location": "https://www.google.com/search?q=best+places+to+go+london",
+    "frame_description": "The search results page loads, showing an AI overview and various links."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 55800,
+    "time_end_ms": 79750,
+    "description": "User scrolls down the search results page to browse different articles and suggestions.",
+    "confidence": 1.0,
+    "page_title": "best places to go london - Google Search",
+    "frame_description": "The user moves down the page, passing sponsored tours and blog posts about London."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 79750,
+    "time_end_ms": 79750,
+    "description": "User clicks back into the search bar at the top of the results page.",
+    "confidence": 1.0,
+    "interaction_target": "Search input field",
+    "cursor_position_x": 450,
+    "cursor_position_y": 85,
+    "page_title": "best places to go london - Google Search",
+    "frame_description": "The user focuses the search bar again to refine their query."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 79750,
+    "time_end_ms": 81950,
+    "description": "User modifies the search query to 'best places to stay london'.",
+    "confidence": 1.0,
+    "interaction_target": "Search input field",
+    "page_title": "best places to go london - Google Search",
+    "frame_description": "The user changes 'go' to 'stay' in the search bar."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 81950,
+    "time_end_ms": 81950,
+    "description": "User triggers the refined search.",
+    "confidence": 0.9,
+    "interaction_target": "Search button",
+    "page_title": "best places to go london - Google Search",
+    "frame_description": "The user initiates the new search."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 81950,
+    "time_end_ms": 82550,
+    "description": "The browser navigates to the new search results page.",
+    "confidence": 1.0,
+    "page_title": "best places to stay london - Google Search",
+    "page_location": "https://www.google.com/search?q=best+places+to+stay+london",
+    "frame_description": "The page refreshes with results focused on accommodation in London."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 82550,
+    "time_end_ms": 84011,
+    "description": "User scrolls through the new search results.",
+    "confidence": 1.0,
+    "page_title": "best places to stay london - Google Search",
+    "frame_description": "The user scrolls down to see hotel and hostel recommendations."
+  }
+]

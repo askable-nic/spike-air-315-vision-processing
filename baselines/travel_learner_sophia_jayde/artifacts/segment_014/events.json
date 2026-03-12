@@ -1,0 +1,167 @@
+[
+  {
+    "type": "scroll",
+    "time_start_ms": 0,
+    "time_end_ms": 5700,
+    "description": "User scrolls through the initial Google search results for 'best places to go london'.",
+    "confidence": 0.9,
+    "page_title": "best places to go london - Google Search",
+    "frame_description": "Google search results page showing various travel articles about London."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 5700,
+    "time_end_ms": 5700,
+    "description": "User clicks into the search bar to modify their search query.",
+    "confidence": 1.0,
+    "interaction_target": "Search input field",
+    "cursor_position_x": 345,
+    "cursor_position_y": 110,
+    "page_title": "best places to go london - Google Search",
+    "frame_description": "The search bar is focused and the cursor is positioned inside the text area."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 5700,
+    "time_end_ms": 6700,
+    "description": "Google search autocomplete suggestions dropdown appears as the user interacts with the search bar.",
+    "confidence": 0.9,
+    "frame_description": "A list of suggested search terms appears below the search input field."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 6700,
+    "time_end_ms": 7900,
+    "description": "User types 'stay in london' into the search bar to refine their search.",
+    "confidence": 1.0,
+    "interaction_target": "Search input field",
+    "frame_description": "The text in the search bar updates to 'best places to stay in london'."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 7900,
+    "time_end_ms": 8550,
+    "description": "The page navigates to a new set of search results after the user submits the refined query.",
+    "confidence": 1.0,
+    "page_location": "https://www.google.com/search?q=best+places+to+stay+in+london",
+    "frame_description": "The screen refreshes and displays new search results focused on accommodation in London."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 8550,
+    "time_end_ms": 15000,
+    "description": "User scrolls down the new search results page to browse accommodation guides.",
+    "confidence": 0.9,
+    "page_title": "best places to stay in london - Google Search",
+    "frame_description": "The user is moving down the page, passing sponsored results and organic links."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 15000,
+    "time_end_ms": 16000,
+    "description": "The cursor hovers over a search result link from 'Destination Well Known'.",
+    "confidence": 0.8,
+    "interaction_target": "Where to Stay in London | Best Areas & Places to Stay",
+    "cursor_position_x": 300,
+    "cursor_position_y": 600,
+    "frame_description": "The cursor pauses over the blue link of the Destination Well Known search result."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 16000,
+    "time_end_ms": 18000,
+    "description": "User continues scrolling down the search results.",
+    "confidence": 0.9,
+    "frame_description": "The page content moves upwards as the user scrolls."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 21000,
+    "time_end_ms": 22000,
+    "description": "User scrolls back up the page, likely re-evaluating previous results.",
+    "confidence": 0.9,
+    "frame_description": "The page content moves downwards as the user scrolls up."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 22000,
+    "time_end_ms": 23000,
+    "description": "Cursor hovers over a search result by Janice Rothstein.",
+    "confidence": 0.8,
+    "interaction_target": "Where to Stay in London: The Best Neighborhoods & Hotels",
+    "cursor_position_x": 300,
+    "cursor_position_y": 450,
+    "frame_description": "The cursor is stationary over the Janice Rothstein search result link."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 34000,
+    "time_end_ms": 35000,
+    "description": "User scrolls down the page again.",
+    "confidence": 0.9,
+    "frame_description": "The user is browsing further down the list of search results."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 35000,
+    "time_end_ms": 40000,
+    "description": "User scrolls back up the page.",
+    "confidence": 0.9,
+    "frame_description": "The user returns to the middle section of the search results page."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 40000,
+    "time_end_ms": 41000,
+    "description": "Cursor hovers over a search result from 'A Lady in London'.",
+    "confidence": 0.8,
+    "interaction_target": "15 Places to Stay in London Based on Your Personal Style",
+    "cursor_position_x": 300,
+    "cursor_position_y": 750,
+    "frame_description": "The cursor lingers over the 'A Lady in London' search result."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 41000,
+    "time_end_ms": 44000,
+    "description": "User scrolls down the page.",
+    "confidence": 0.9,
+    "frame_description": "The user continues to explore the search results."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 44000,
+    "time_end_ms": 45000,
+    "description": "User scrolls back up the page.",
+    "confidence": 0.9,
+    "frame_description": "The user moves back up to a previous section of the results."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 45000,
+    "time_end_ms": 50000,
+    "description": "User scrolls down the page.",
+    "confidence": 0.9,
+    "frame_description": "The user scrolls towards the bottom of the first page of results."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 78500,
+    "time_end_ms": 78500,
+    "description": "User clicks on a different browser tab to switch to the Hostelworld website.",
+    "confidence": 1.0,
+    "interaction_target": "Hostels in London browser tab",
+    "cursor_position_x": 745,
+    "cursor_position_y": 15,
+    "frame_description": "The cursor is positioned over the Hostelworld tab in the browser's tab bar."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 78500,
+    "time_end_ms": 78900,
+    "description": "The browser switches to the Hostelworld tab, displaying a map and list of hostels.",
+    "confidence": 1.0,
+    "page_title": "Hostels in London - Hostelworld",
+    "frame_description": "The screen changes to show the Hostelworld interface with a map of London and hostel listings."
+  }
+]

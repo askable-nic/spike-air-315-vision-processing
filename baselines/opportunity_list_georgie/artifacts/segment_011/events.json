@@ -1,0 +1,153 @@
+[
+  {
+    "type": "scroll",
+    "time_start_ms": 0,
+    "time_end_ms": 2300,
+    "description": "User scrolls horizontally through the 'Short tasks & surveys' section to browse available tasks.",
+    "confidence": 1.0,
+    "interaction_target": "Short tasks & surveys list",
+    "page_title": "Explore",
+    "page_location": "/explore",
+    "frame_description": "Explore page showing a horizontal list of 'Short tasks & surveys' and a vertical list of 'Sessions to schedule'."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 2300,
+    "time_end_ms": 7050,
+    "description": "User scrolls vertically down the Explore page to view more session opportunities.",
+    "confidence": 1.0,
+    "interaction_target": "Explore page",
+    "page_title": "Explore",
+    "page_location": "/explore",
+    "frame_description": "The Explore page is scrolled down, revealing more session cards like 'Diary Study' and 'AI Interview'."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 7050,
+    "time_end_ms": 17000,
+    "description": "User scrolls vertically back up to the top of the Explore page.",
+    "confidence": 1.0,
+    "interaction_target": "Explore page",
+    "page_title": "Explore",
+    "page_location": "/explore",
+    "frame_description": "The Explore page is scrolled back to the top, returning to the 'Short tasks & surveys' section."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 17000,
+    "time_end_ms": 39000,
+    "description": "User scrolls horizontally through the 'Short tasks & surveys' section again, examining different task cards.",
+    "confidence": 1.0,
+    "interaction_target": "Short tasks & surveys list",
+    "page_title": "Explore",
+    "page_location": "/explore",
+    "frame_description": "The user is browsing the horizontal list of tasks at the top of the Explore page."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 39000,
+    "time_end_ms": 40250,
+    "description": "Cursor hovers over the filter icon in the top right corner of the screen.",
+    "confidence": 0.9,
+    "interaction_target": "Filter icon",
+    "cursor_position_x": 1132,
+    "cursor_position_y": 112,
+    "page_title": "Explore",
+    "page_location": "/explore",
+    "frame_description": "The cursor is positioned over the filter icon at the top right of the Explore page."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 40250,
+    "time_end_ms": 40250,
+    "description": "User clicks the filter icon to open the filter options.",
+    "confidence": 1.0,
+    "interaction_target": "Filter icon",
+    "cursor_position_x": 1132,
+    "cursor_position_y": 112,
+    "page_title": "Explore",
+    "page_location": "/explore",
+    "frame_description": "The filter icon is activated by a click."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 40250,
+    "time_end_ms": 40500,
+    "description": "The 'Filter Opportunities' modal appears, sliding up from the bottom of the screen.",
+    "confidence": 1.0,
+    "interaction_target": "Filter Opportunities modal",
+    "page_title": "Explore",
+    "page_location": "/explore",
+    "frame_description": "A modal overlay titled 'Filter Opportunities' appears over the Explore page."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 40500,
+    "time_end_ms": 49500,
+    "description": "User scrolls vertically through the filter options within the modal.",
+    "confidence": 1.0,
+    "interaction_target": "Filter Opportunities modal",
+    "page_title": "Explore",
+    "page_location": "/explore",
+    "frame_description": "The user is scrolling through various filter categories like Task Type, Duration, and Pay Rate inside the modal."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 50150,
+    "time_end_ms": 50150,
+    "description": "User clicks the 'X' close button to dismiss the filter modal.",
+    "confidence": 1.0,
+    "interaction_target": "Close button",
+    "cursor_position_x": 1132,
+    "cursor_position_y": 672,
+    "page_title": "Explore",
+    "page_location": "/explore",
+    "frame_description": "The close button in the top right of the filter modal is clicked."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 50150,
+    "time_end_ms": 50400,
+    "description": "The filter modal closes, returning the user to the Explore page.",
+    "confidence": 1.0,
+    "interaction_target": "Filter Opportunities modal",
+    "page_title": "Explore",
+    "page_location": "/explore",
+    "frame_description": "The filter modal disappears, revealing the Explore page again."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 50400,
+    "time_end_ms": 57700,
+    "description": "User scrolls vertically down the Explore page.",
+    "confidence": 1.0,
+    "interaction_target": "Explore page",
+    "page_title": "Explore",
+    "page_location": "/explore",
+    "frame_description": "The user is scrolling down the main content area of the Explore page."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 57700,
+    "time_end_ms": 78600,
+    "description": "User scrolls horizontally through the 'Short tasks & surveys' section for an extended period.",
+    "confidence": 1.0,
+    "interaction_target": "Short tasks & surveys list",
+    "page_title": "Explore",
+    "page_location": "/explore",
+    "frame_description": "The user is slowly swiping through the horizontal list of task cards at the top of the page."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 78600,
+    "time_end_ms": 82600,
+    "description": "Cursor hovers over the 'AI Interview' task card in the horizontal list.",
+    "confidence": 0.9,
+    "interaction_target": "AI Interview card",
+    "cursor_position_x": 900,
+    "cursor_position_y": 250,
+    "page_title": "Explore",
+    "page_location": "/explore",
+    "frame_description": "The cursor lingers over the 'AI Interview' card within the horizontal task list."
+  }
+]

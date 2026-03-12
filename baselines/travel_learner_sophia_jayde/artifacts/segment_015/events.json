@@ -1,0 +1,192 @@
+[
+  {
+    "type": "scroll",
+    "time_start_ms": 0,
+    "time_end_ms": 4200,
+    "description": "User scrolls through Google search results for 'best places to stay london', looking at various articles and guides.",
+    "confidence": 0.8,
+    "page_title": "best places to stay london - Google Search",
+    "frame_description": "The screen shows Google search results for 'best places to stay london'. The user is scrolling down the page."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 4200,
+    "time_end_ms": 4700,
+    "description": "User switches from the Google search tab to the Hostelworld tab.",
+    "confidence": 0.95,
+    "interaction_target": "Hostelworld tab",
+    "page_title": "Hostels in London, England - Hostelworld",
+    "frame_description": "The browser tab changes from Google Search to Hostelworld. The Hostelworld page for London is displayed with a map and list of properties."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 12600,
+    "time_end_ms": 12600,
+    "description": "User clicks on the 'Where do you want to go?' search input field on the Hostelworld page.",
+    "confidence": 0.95,
+    "interaction_target": "Where do you want to go? input",
+    "cursor_position_x": 280,
+    "cursor_position_y": 105,
+    "page_title": "Hostels in London, England - Hostelworld",
+    "frame_description": "The cursor is positioned over the search input field at the top of the Hostelworld page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 12600,
+    "time_end_ms": 13200,
+    "description": "A dropdown menu appears below the search input, showing 'Current Location' and 'Recent Searches'.",
+    "confidence": 0.9,
+    "frame_description": "A white dropdown menu has appeared below the search bar on the Hostelworld site."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 14300,
+    "time_end_ms": 17400,
+    "description": "User types 'canden' into the search field, intending to search for Camden.",
+    "confidence": 0.95,
+    "interaction_target": "Where do you want to go? input",
+    "frame_description": "The text 'canden' is being typed into the search input field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 17400,
+    "time_end_ms": 17400,
+    "description": "Autocomplete suggestions appear as the user types, including 'Camden, London, England'.",
+    "confidence": 0.9,
+    "frame_description": "The dropdown menu below the search bar updates to show location suggestions matching the typed text."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 18100,
+    "time_end_ms": 19500,
+    "description": "User hovers the cursor over the 'Camden, London, England' suggestion in the dropdown.",
+    "confidence": 0.8,
+    "interaction_target": "Camden, London, England suggestion",
+    "cursor_position_x": 280,
+    "cursor_position_y": 190,
+    "frame_description": "The cursor is hovering over the first suggestion in the search dropdown menu."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 19500,
+    "time_end_ms": 19500,
+    "description": "User clicks on the 'Camden, London, England' suggestion to select it.",
+    "confidence": 0.95,
+    "interaction_target": "Camden, London, England suggestion",
+    "cursor_position_x": 280,
+    "cursor_position_y": 190,
+    "frame_description": "The user clicks the Camden suggestion, and the dropdown menu begins to close."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 19500,
+    "time_end_ms": 19800,
+    "description": "The dropdown closes and the search input field is updated with the selected location.",
+    "confidence": 0.9,
+    "frame_description": "The search dropdown has disappeared, and the input field now contains 'Camden, London, England'."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 20100,
+    "time_end_ms": 20450,
+    "description": "User hovers over the 'Let's go!' search button.",
+    "confidence": 0.8,
+    "interaction_target": "Let's go! button",
+    "cursor_position_x": 745,
+    "cursor_position_y": 105,
+    "frame_description": "The cursor moves to and pauses over the orange 'Let's go!' button."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 20450,
+    "time_end_ms": 20450,
+    "description": "User clicks the 'Let's go!' button to initiate the search for hostels in Camden.",
+    "confidence": 0.95,
+    "interaction_target": "Let's go! button",
+    "cursor_position_x": 745,
+    "cursor_position_y": 105,
+    "frame_description": "The user clicks the 'Let's go!' button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 20450,
+    "time_end_ms": 21700,
+    "description": "The page displays a loading state with skeleton screens and a three-dot animation while fetching results.",
+    "confidence": 0.9,
+    "frame_description": "The search results area is replaced by grey skeleton loaders and a red three-dot loading animation."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 21700,
+    "time_end_ms": 22000,
+    "description": "The search results for hostels in Camden, London are loaded and displayed on the page.",
+    "confidence": 0.9,
+    "frame_description": "The loading state ends, and a list of hostels in Camden appears on the left with a map on the right."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 22000,
+    "time_end_ms": 75750,
+    "description": "User scrolls through the list of hostels and the map, occasionally hovering over hostel cards like 'Palmers Lodge' and 'Smart Camden Inn'.",
+    "confidence": 0.8,
+    "frame_description": "The user is browsing the search results, scrolling down the list of hostels and moving the cursor over different property cards."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 75750,
+    "time_end_ms": 76500,
+    "description": "User switches from the Hostelworld tab to the Rome2Rio tab.",
+    "confidence": 0.95,
+    "interaction_target": "Rome2Rio tab",
+    "page_title": "Rome to Palermo - Rome2Rio",
+    "frame_description": "The browser tab changes from Hostelworld to Rome2Rio. The page shows travel options between Rome and Palermo."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 81100,
+    "time_end_ms": 81100,
+    "description": "User clicks on the origin location input field, which currently contains 'Rome, Italy'.",
+    "confidence": 0.95,
+    "interaction_target": "Rome, Italy input",
+    "cursor_position_x": 220,
+    "cursor_position_y": 115,
+    "page_title": "Rome to Palermo - Rome2Rio",
+    "frame_description": "The cursor is positioned over the origin search box on the Rome2Rio page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 81100,
+    "time_end_ms": 81450,
+    "description": "A dropdown menu with suggested locations appears below the origin input field.",
+    "confidence": 0.9,
+    "frame_description": "A dropdown menu has appeared below the origin input field on Rome2Rio."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 81450,
+    "time_end_ms": 83200,
+    "description": "User types 'lon' into the origin input field.",
+    "confidence": 0.95,
+    "interaction_target": "Rome, Italy input",
+    "frame_description": "The user is typing 'lon' into the origin search box, replacing 'Rome, Italy'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 83200,
+    "time_end_ms": 83200,
+    "description": "Autocomplete suggestions for the origin location appear, including 'London, England'.",
+    "confidence": 0.9,
+    "frame_description": "The dropdown menu updates to show location suggestions starting with 'lon'."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 83200,
+    "time_end_ms": 83550,
+    "description": "User hovers the cursor over the 'London, England' suggestion.",
+    "confidence": 0.8,
+    "interaction_target": "London, England suggestion",
+    "cursor_position_x": 220,
+    "cursor_position_y": 160,
+    "frame_description": "The cursor is hovering over the 'London, England' suggestion in the Rome2Rio dropdown."
+  }
+]

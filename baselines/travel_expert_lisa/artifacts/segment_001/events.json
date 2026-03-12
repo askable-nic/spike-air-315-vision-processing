@@ -1,0 +1,185 @@
+[
+  {
+    "type": "navigate",
+    "time_start_ms": 4600,
+    "time_end_ms": 4650,
+    "description": "User switches from the Google search results tab to the Askable Sessions tab to review instructions.",
+    "confidence": 0.95,
+    "page_title": "Askable Sessions",
+    "frame_description": "The screen shows the Askable Sessions interface with a message reminding the participant to think aloud."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 6400,
+    "time_end_ms": 6450,
+    "description": "User switches back from the Askable Sessions tab to the Google search results tab.",
+    "confidence": 0.95,
+    "page_title": "webjet - Google Search",
+    "page_location": "https://www.google.com/search?q=webjet",
+    "frame_description": "The browser returns to the Google search results page for the query 'webjet'."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 7150,
+    "time_end_ms": 8100,
+    "description": "User hovers the cursor over the first organic search result for Webjet.",
+    "confidence": 0.85,
+    "interaction_target": "Webjet | Your go-to for going places.",
+    "cursor_position_x": 238,
+    "cursor_position_y": 278,
+    "frame_description": "The cursor is positioned over the main link of the first search result."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 8100,
+    "time_end_ms": 8150,
+    "description": "User clicks on the Webjet search result link.",
+    "confidence": 0.98,
+    "interaction_target": "Webjet | Your go-to for going places.",
+    "cursor_position_x": 238,
+    "cursor_position_y": 278,
+    "frame_description": "The link is activated, and the browser begins to navigate away from Google."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 8150,
+    "time_end_ms": 9550,
+    "description": "The browser navigates to the Webjet homepage.",
+    "confidence": 0.95,
+    "page_title": "Webjet | Your go-to for going places",
+    "page_location": "https://www.webjet.com.au/",
+    "frame_description": "The Webjet homepage loads, showing a large hero image and a flight search widget on the right."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 9550,
+    "time_end_ms": 10000,
+    "description": "The flight search widget fully renders and becomes interactive.",
+    "confidence": 0.9,
+    "frame_description": "The search widget is now visible with fields for 'Leaving from', 'Going to', and dates."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 19250,
+    "time_end_ms": 19350,
+    "description": "User clicks into the 'Leaving from' input field to begin searching for a departure city.",
+    "confidence": 0.95,
+    "interaction_target": "Leaving from",
+    "cursor_position_x": 705,
+    "cursor_position_y": 685,
+    "frame_description": "The cursor clicks inside the 'Leaving from' text box."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 19350,
+    "time_end_ms": 19500,
+    "description": "An autocomplete dropdown menu appears above the 'Leaving from' field.",
+    "confidence": 0.9,
+    "interaction_target": "Leaving from dropdown",
+    "frame_description": "A list of suggested airports appears above the input field."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 20550,
+    "time_end_ms": 21000,
+    "description": "User types 'sun' into the 'Leaving from' field.",
+    "confidence": 0.95,
+    "interaction_target": "Leaving from",
+    "frame_description": "The characters 'sun' appear in the input field as the user types."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 21100,
+    "time_end_ms": 21300,
+    "description": "The autocomplete suggestions update to show locations matching 'sun'.",
+    "confidence": 0.9,
+    "frame_description": "The dropdown list refreshes to show 'Sunshine Coast (MCY)' and other related results."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 22600,
+    "time_end_ms": 23100,
+    "description": "User selects the Sunshine Coast airport from the autocomplete list.",
+    "confidence": 0.95,
+    "interaction_target": "Maroochydore, Australia - Sunshine Coast (MCY)",
+    "cursor_position_x": 705,
+    "cursor_position_y": 225,
+    "frame_description": "The user clicks on the Sunshine Coast option in the dropdown list."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 28450,
+    "time_end_ms": 28850,
+    "description": "User types 'lon' into the 'Going to' input field.",
+    "confidence": 0.95,
+    "interaction_target": "Going to",
+    "frame_description": "The user types the destination into the second search field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 28850,
+    "time_end_ms": 29100,
+    "description": "Autocomplete suggestions for London appear.",
+    "confidence": 0.9,
+    "frame_description": "A dropdown menu appears above the 'Going to' field with London airport options."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 30950,
+    "time_end_ms": 31100,
+    "description": "User selects 'All Airports (LON)' for London from the suggestions.",
+    "confidence": 0.95,
+    "interaction_target": "London, United Kingdom - All Airports (LON)",
+    "cursor_position_x": 705,
+    "cursor_position_y": 315,
+    "frame_description": "The user clicks the 'All Airports' option for London."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 42550,
+    "time_end_ms": 42950,
+    "description": "User hovers over the 'One Way' tab in the flight search widget.",
+    "confidence": 0.85,
+    "interaction_target": "One Way",
+    "cursor_position_x": 755,
+    "cursor_position_y": 385,
+    "frame_description": "The cursor pauses over the 'One Way' selection tab."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 42950,
+    "time_end_ms": 43050,
+    "description": "User clicks the 'One Way' tab.",
+    "confidence": 0.95,
+    "interaction_target": "One Way",
+    "cursor_position_x": 755,
+    "cursor_position_y": 385,
+    "frame_description": "The 'One Way' tab is clicked."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 43050,
+    "time_end_ms": 43200,
+    "description": "The search form updates to a one-way trip layout.",
+    "confidence": 0.9,
+    "frame_description": "The return date field disappears from the search widget."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 77450,
+    "time_end_ms": 77550,
+    "description": "User switches back to the Askable Sessions tab.",
+    "confidence": 0.95,
+    "page_title": "Askable Sessions",
+    "frame_description": "The browser switches to the instruction tab."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 80250,
+    "time_end_ms": 80350,
+    "description": "User switches back to the Webjet tab to continue the task.",
+    "confidence": 0.95,
+    "page_title": "Webjet | Your go-to for going places",
+    "frame_description": "The browser returns to the Webjet flight search page."
+  }
+]

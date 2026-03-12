@@ -1,0 +1,317 @@
+[
+  {
+    "type": "select",
+    "time_start_ms": 500,
+    "time_end_ms": 600,
+    "description": "User selects the 'Under 10 min' duration filter option in the Filter Opportunities modal.",
+    "confidence": 1.0,
+    "interaction_target": "Under 10 min button",
+    "page_title": "Explore",
+    "frame_description": "The Filter Opportunities modal is open, showing duration, pay rate, and device filters."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 1450,
+    "time_end_ms": 1550,
+    "description": "User selects the '10-30 min' duration filter option.",
+    "confidence": 1.0,
+    "interaction_target": "10-30 min button",
+    "page_title": "Explore"
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 2150,
+    "time_end_ms": 2550,
+    "description": "Cursor hovers over the '10-30 min' duration button.",
+    "confidence": 0.9,
+    "interaction_target": "10-30 min button",
+    "page_title": "Explore"
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 6050,
+    "time_end_ms": 6450,
+    "description": "Cursor hovers over the 'Under 10 min' duration button.",
+    "confidence": 0.9,
+    "interaction_target": "Under 10 min button",
+    "page_title": "Explore"
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 6550,
+    "time_end_ms": 7900,
+    "description": "Cursor hovers over the '30+ min' duration button.",
+    "confidence": 0.9,
+    "interaction_target": "30+ min button",
+    "page_title": "Explore"
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 8800,
+    "time_end_ms": 9050,
+    "description": "The 'ADVANCED OPTIONS' section in the filter modal expands to reveal additional filter criteria.",
+    "confidence": 1.0,
+    "interaction_target": "ADVANCED OPTIONS section",
+    "page_title": "Explore",
+    "frame_description": "The filter modal expands vertically to show 'Time of Day Available' and 'Study Topic' options."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 10300,
+    "time_end_ms": 10400,
+    "description": "User clicks the 'Apply Filters' button.",
+    "confidence": 1.0,
+    "interaction_target": "Apply Filters button",
+    "page_title": "Explore"
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 10450,
+    "time_end_ms": 10800,
+    "description": "The filter modal closes and the opportunity list updates with the applied filters.",
+    "confidence": 1.0,
+    "page_title": "Explore",
+    "frame_description": "The modal slides down, revealing the Explore page with filtered results like 'Video Call' and 'Survey'."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 11350,
+    "time_end_ms": 11800,
+    "description": "Cursor hovers over a 'Video Call' opportunity card for vehicle insurance.",
+    "confidence": 0.9,
+    "interaction_target": "Video Call card ($40)",
+    "page_title": "Explore"
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 14150,
+    "time_end_ms": 14450,
+    "description": "Cursor hovers over an 'AI Interview' opportunity card for a budgeting app.",
+    "confidence": 0.9,
+    "interaction_target": "AI Interview card ($25)",
+    "page_title": "Explore"
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 14650,
+    "time_end_ms": 15100,
+    "description": "Cursor hovers over a 'Survey' opportunity card about streaming services.",
+    "confidence": 0.9,
+    "interaction_target": "Survey card ($15)",
+    "page_title": "Explore"
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 17250,
+    "time_end_ms": 18000,
+    "description": "Cursor hovers over a 'Survey' opportunity card for food delivery app users.",
+    "confidence": 0.9,
+    "interaction_target": "Survey card ($8)",
+    "page_title": "Explore"
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 20450,
+    "time_end_ms": 21100,
+    "description": "Cursor hovers over the 'Mobile Only' filter chip.",
+    "confidence": 0.9,
+    "interaction_target": "Mobile Only chip",
+    "page_title": "Explore"
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 21850,
+    "time_end_ms": 22800,
+    "description": "Cursor hovers over the 'Video Call' opportunity card again.",
+    "confidence": 0.9,
+    "interaction_target": "Video Call card ($40)",
+    "page_title": "Explore"
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 25800,
+    "time_end_ms": 26100,
+    "description": "Cursor hovers over the 'AI Interview' filter chip.",
+    "confidence": 0.9,
+    "interaction_target": "AI Interview chip",
+    "page_title": "Explore"
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 26250,
+    "time_end_ms": 26350,
+    "description": "Cursor hovers over the 'Survey' filter chip.",
+    "confidence": 0.9,
+    "interaction_target": "Survey chip",
+    "page_title": "Explore"
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 26450,
+    "time_end_ms": 26550,
+    "description": "Cursor hovers over the 'Video Call' filter chip.",
+    "confidence": 0.9,
+    "interaction_target": "Video Call chip",
+    "page_title": "Explore"
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 26650,
+    "time_end_ms": 26800,
+    "description": "Cursor hovers over the 'Mobile Only' filter chip.",
+    "confidence": 0.9,
+    "interaction_target": "Mobile Only chip",
+    "page_title": "Explore"
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 31750,
+    "time_end_ms": 32400,
+    "description": "Cursor hovers over the 'Survey' opportunity card about streaming services.",
+    "confidence": 0.9,
+    "interaction_target": "Survey card ($15)",
+    "page_title": "Explore"
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 35500,
+    "time_end_ms": 35800,
+    "description": "Cursor hovers over the 'Diary Study' filter chip.",
+    "confidence": 0.9,
+    "interaction_target": "Diary Study chip",
+    "page_title": "Explore"
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 38100,
+    "time_end_ms": 38800,
+    "description": "Cursor hovers over the 'Survey' opportunity card about streaming services.",
+    "confidence": 0.9,
+    "interaction_target": "Survey card ($15)",
+    "page_title": "Explore"
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 40550,
+    "time_end_ms": 40750,
+    "description": "The filter modal is reopened from the bottom of the screen.",
+    "confidence": 0.8,
+    "page_title": "Explore",
+    "frame_description": "The Filter Opportunities modal slides back up into view."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 42800,
+    "time_end_ms": 42900,
+    "description": "The filter modal closes again.",
+    "confidence": 1.0,
+    "page_title": "Explore"
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 43000,
+    "time_end_ms": 43400,
+    "description": "Cursor hovers over the 'AI Interview' opportunity card.",
+    "confidence": 0.9,
+    "interaction_target": "AI Interview card ($25)",
+    "page_title": "Explore"
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 44450,
+    "time_end_ms": 44850,
+    "description": "Cursor hovers over the 'Video Call' filter chip.",
+    "confidence": 0.9,
+    "interaction_target": "Video Call chip",
+    "page_title": "Explore"
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 46650,
+    "time_end_ms": 47100,
+    "description": "Cursor hovers over the 'Survey' opportunity card about streaming services.",
+    "confidence": 0.9,
+    "interaction_target": "Survey card ($15)",
+    "page_title": "Explore"
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 47350,
+    "time_end_ms": 48100,
+    "description": "Cursor hovers over the 'Survey' opportunity card for food delivery app users.",
+    "confidence": 0.9,
+    "interaction_target": "Survey card ($8)",
+    "page_title": "Explore"
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 48850,
+    "time_end_ms": 49300,
+    "description": "Cursor hovers over an 'AI Interview' opportunity card for customer support scenarios.",
+    "confidence": 0.9,
+    "interaction_target": "AI Interview card ($40)",
+    "page_title": "Explore"
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 49750,
+    "time_end_ms": 50200,
+    "description": "Cursor hovers over the 'Video Call' opportunity card.",
+    "confidence": 0.9,
+    "interaction_target": "Video Call card ($40)",
+    "page_title": "Explore"
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 50500,
+    "time_end_ms": 50700,
+    "description": "The filter modal is reopened and remains open for preference settings.",
+    "confidence": 1.0,
+    "page_title": "Explore",
+    "frame_description": "The filter modal is fully visible again."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 69500,
+    "time_end_ms": 69600,
+    "description": "User clicks the 'Remember my preferences' toggle switch.",
+    "confidence": 1.0,
+    "interaction_target": "Remember my preferences toggle",
+    "page_title": "Explore"
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 69850,
+    "time_end_ms": 70150,
+    "description": "A 'Remember Preferences' confirmation modal appears.",
+    "confidence": 1.0,
+    "page_title": "Explore",
+    "frame_description": "A small modal titled 'Remember Preferences' appears over the filter settings."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 70700,
+    "time_end_ms": 70800,
+    "description": "User clicks the 'Get it' button in the confirmation modal.",
+    "confidence": 1.0,
+    "interaction_target": "Get it button",
+    "page_title": "Explore"
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 71900,
+    "time_end_ms": 72200,
+    "description": "The 'Remember Preferences' confirmation modal closes.",
+    "confidence": 1.0,
+    "page_title": "Explore"
+  },
+  {
+    "type": "click",
+    "time_start_ms": 72750,
+    "time_end_ms": 72850,
+    "description": "User clicks the 'Remember my preferences' toggle switch again to turn it off.",
+    "confidence": 1.0,
+    "interaction_target": "Remember my preferences toggle",
+    "page_title": "Explore"
+  }
+]

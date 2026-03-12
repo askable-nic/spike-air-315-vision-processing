@@ -1,0 +1,311 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 800,
+    "time_end_ms": 7150,
+    "description": "Task instructions are being typed out on the Askable Sessions page: 'As you keep exploring the prototype, what else are you finding that helps you decide which opportunities to click on?'",
+    "confidence": 0.9,
+    "interaction_target": "Instruction text area",
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com",
+    "frame_description": "Dark background with centered text being typed out character by character."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 7150,
+    "time_end_ms": 7350,
+    "description": "User clicks on the 'Smart Filters Mobile App' browser tab to switch to the Figma prototype.",
+    "confidence": 0.95,
+    "interaction_target": "Browser tab",
+    "cursor_position_x": 460,
+    "cursor_position_y": 15,
+    "page_title": "Askable Sessions",
+    "frame_description": "Browser interface showing tabs at the top; cursor is clicking the second tab."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 7350,
+    "time_end_ms": 7700,
+    "description": "Page navigates from the instructions page to the Figma prototype.",
+    "confidence": 0.95,
+    "interaction_target": "Figma prototype page",
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "Screen transitions from the dark instruction page to the Figma prototype interface."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 10000,
+    "time_end_ms": 12700,
+    "description": "User scrolls down the list of research opportunities in the prototype.",
+    "confidence": 0.9,
+    "interaction_target": "Opportunity list",
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "Mobile app prototype showing a vertical list of opportunity cards scrolling downwards."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 12700,
+    "time_end_ms": 15600,
+    "description": "User hovers the cursor over the 'AI Interview' opportunity card.",
+    "confidence": 0.85,
+    "interaction_target": "AI Interview card",
+    "cursor_position_x": 450,
+    "cursor_position_y": 750,
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "Cursor lingers over a pink card labeled 'AI Interview' in the opportunity list."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 15600,
+    "time_end_ms": 16850,
+    "description": "User scrolls back up the opportunity list.",
+    "confidence": 0.9,
+    "interaction_target": "Opportunity list",
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "The list of opportunity cards scrolls upwards."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 16850,
+    "time_end_ms": 18050,
+    "description": "User hovers over the 'Video Call' opportunity card.",
+    "confidence": 0.85,
+    "interaction_target": "Video Call card",
+    "cursor_position_x": 450,
+    "cursor_position_y": 250,
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "Cursor pauses over the 'Video Call' card at the top of the list."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 18050,
+    "time_end_ms": 18250,
+    "description": "User clicks on the 'Askable Sessions' browser tab to return to the instructions.",
+    "confidence": 0.95,
+    "interaction_target": "Browser tab",
+    "cursor_position_x": 280,
+    "cursor_position_y": 15,
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "Cursor clicks the first browser tab."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 18250,
+    "time_end_ms": 20350,
+    "description": "Page navigates back to the instructions page.",
+    "confidence": 0.95,
+    "interaction_target": "Askable Sessions page",
+    "page_title": "Askable Sessions",
+    "frame_description": "Screen transitions back to the dark instruction page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 22050,
+    "time_end_ms": 28350,
+    "description": "New task instructions are typed out: 'What does seeing that information about the device\u2014like mobile or desktop\u2014mean for you in this lunch break scenario?'",
+    "confidence": 0.9,
+    "interaction_target": "Instruction text area",
+    "page_title": "Askable Sessions",
+    "frame_description": "Dark background with new instruction text appearing character by character."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 28350,
+    "time_end_ms": 28550,
+    "description": "User clicks on the 'Smart Filters Mobile App' browser tab.",
+    "confidence": 0.95,
+    "interaction_target": "Browser tab",
+    "cursor_position_x": 460,
+    "cursor_position_y": 15,
+    "page_title": "Askable Sessions",
+    "frame_description": "Cursor clicks the second browser tab."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 28550,
+    "time_end_ms": 29750,
+    "description": "Page navigates back to the Figma prototype.",
+    "confidence": 0.95,
+    "interaction_target": "Figma prototype page",
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "Screen transitions to the mobile app prototype."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 43400,
+    "time_end_ms": 48800,
+    "description": "User scrolls down the list of opportunities.",
+    "confidence": 0.9,
+    "interaction_target": "Opportunity list",
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "Opportunity cards scrolling downwards."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 48800,
+    "time_end_ms": 50000,
+    "description": "User scrolls back up the list.",
+    "confidence": 0.9,
+    "interaction_target": "Opportunity list",
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "Opportunity cards scrolling upwards."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 50000,
+    "time_end_ms": 52150,
+    "description": "User hovers over the 'Video Call' opportunity card.",
+    "confidence": 0.85,
+    "interaction_target": "Video Call card",
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "Cursor pauses over the top card in the list."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 52150,
+    "time_end_ms": 53450,
+    "description": "User scrolls up slightly to reach the top of the list.",
+    "confidence": 0.9,
+    "interaction_target": "Opportunity list",
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "List header becomes fully visible."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 53450,
+    "time_end_ms": 55600,
+    "description": "User hovers over the 'Diary Study' opportunity card.",
+    "confidence": 0.85,
+    "interaction_target": "Diary Study card",
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "Cursor lingers over an orange card labeled 'Diary Study'."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 55600,
+    "time_end_ms": 58250,
+    "description": "User scrolls to the very top of the page.",
+    "confidence": 0.9,
+    "interaction_target": "Opportunity list",
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "Header 'Explore' and 'Sessions to schedule' are visible at the top."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 58250,
+    "time_end_ms": 59050,
+    "description": "User clicks on the filter icon in the top right of the app header.",
+    "confidence": 0.95,
+    "interaction_target": "Filter icon",
+    "cursor_position_x": 620,
+    "cursor_position_y": 100,
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "Cursor clicks the funnel icon in the top right corner of the mobile frame."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 59050,
+    "time_end_ms": 59350,
+    "description": "The 'Filter Opportunities' menu slides up from the bottom.",
+    "confidence": 0.9,
+    "interaction_target": "Filter menu",
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "A white modal overlay appears over the opportunity list."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 59350,
+    "time_end_ms": 62700,
+    "description": "User hovers over the 'Mobile Only' option in the Device section of the filter menu.",
+    "confidence": 0.85,
+    "interaction_target": "Mobile Only option",
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "Cursor lingers over the 'Mobile Only' radio button option."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 62700,
+    "time_end_ms": 63450,
+    "description": "User selects the 'Mobile Only' radio button.",
+    "confidence": 0.95,
+    "interaction_target": "Mobile Only radio button",
+    "cursor_position_x": 350,
+    "cursor_position_y": 680,
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "Cursor clicks the radio button for 'Mobile Only'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 63450,
+    "time_end_ms": 64150,
+    "description": "The UI updates to show the 'Mobile Only' option is selected.",
+    "confidence": 0.9,
+    "interaction_target": "Mobile Only radio button",
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "The radio button fills with blue to indicate selection."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 64150,
+    "time_end_ms": 65550,
+    "description": "User hovers over the 'Apply Filters' button at the bottom of the menu.",
+    "confidence": 0.85,
+    "interaction_target": "Apply Filters button",
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "Cursor moves to the blue 'Apply Filters' button at the bottom of the modal."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 65550,
+    "time_end_ms": 66350,
+    "description": "User clicks the 'Apply Filters' button.",
+    "confidence": 0.95,
+    "interaction_target": "Apply Filters button",
+    "cursor_position_x": 450,
+    "cursor_position_y": 830,
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "Cursor clicks the blue button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 66350,
+    "time_end_ms": 68250,
+    "description": "The filter menu closes and the opportunity list updates to show only mobile opportunities.",
+    "confidence": 0.9,
+    "interaction_target": "Opportunity list",
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "The filter modal disappears and the list content refreshes with a 'Mobile Only' tag visible."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 72450,
+    "time_end_ms": 72850,
+    "description": "User clicks on the 'Askable Sessions' browser tab.",
+    "confidence": 0.95,
+    "interaction_target": "Browser tab",
+    "cursor_position_x": 280,
+    "cursor_position_y": 15,
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "Cursor clicks the first browser tab."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 72850,
+    "time_end_ms": 73200,
+    "description": "Page navigates back to the instructions page.",
+    "confidence": 0.95,
+    "interaction_target": "Askable Sessions page",
+    "page_title": "Askable Sessions",
+    "frame_description": "Screen transitions back to the dark instruction page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 73400,
+    "time_end_ms": 76196,
+    "description": "Final task instructions are typed out: 'Go ahead and try that out if you'd like\u2014what are you noticing as you interact with...'",
+    "confidence": 0.9,
+    "interaction_target": "Instruction text area",
+    "page_title": "Askable Sessions",
+    "frame_description": "Dark background with final instruction text appearing."
+  }
+]

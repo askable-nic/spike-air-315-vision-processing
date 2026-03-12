@@ -1,0 +1,486 @@
+[
+  {
+    "type": "hover",
+    "time_start_ms": 1450,
+    "time_end_ms": 1850,
+    "description": "User hovers over the first sponsored search result from Unloan.",
+    "confidence": 0.9,
+    "interaction_target": "Unloan sponsored result",
+    "cursor_position_x": 245,
+    "cursor_position_y": 320,
+    "page_title": "home loans comparison - Google Search",
+    "page_location": "https://www.google.com/search?q=home+loans+comparison",
+    "frame_description": "Google search results page for 'home loans comparison' with sponsored results visible."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 1850,
+    "time_end_ms": 4250,
+    "description": "User scrolls down the Google search results page to view more options.",
+    "confidence": 1.0,
+    "page_title": "home loans comparison - Google Search",
+    "page_location": "https://www.google.com/search?q=home+loans+comparison",
+    "frame_description": "The user is scrolling down the page, passing several search results for home loans."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 4250,
+    "time_end_ms": 6150,
+    "description": "User hovers over the Lendi sponsored result title.",
+    "confidence": 0.9,
+    "interaction_target": "Top 20 Home Loan Rates 2026 | Compare Your Best Options Now",
+    "cursor_position_x": 320,
+    "cursor_position_y": 450,
+    "page_title": "home loans comparison - Google Search",
+    "page_location": "https://www.google.com/search?q=home+loans+comparison",
+    "frame_description": "Cursor pauses over the Lendi search result link."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 6150,
+    "time_end_ms": 6200,
+    "description": "User clicks on the Lendi sponsored search result.",
+    "confidence": 1.0,
+    "interaction_target": "Top 20 Home Loan Rates 2026 | Compare Your Best Options Now",
+    "cursor_position_x": 320,
+    "cursor_position_y": 450,
+    "page_title": "home loans comparison - Google Search",
+    "page_location": "https://www.google.com/search?q=home+loans+comparison",
+    "frame_description": "The user clicks the link, initiating navigation to the Lendi website."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 6200,
+    "time_end_ms": 7250,
+    "description": "Page navigates from Google search results to the Lendi landing page.",
+    "confidence": 1.0,
+    "page_title": "Compare Top 20 Home Loan Rates In 2026 (January)",
+    "page_location": "https://www.lendi.com.au/home-loan-rates/",
+    "frame_description": "The screen transitions from Google to the Lendi landing page with 'I WANT TO REFINANCE' and 'I WANT TO BUY A HOME' buttons."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 7250,
+    "time_end_ms": 9300,
+    "description": "User hovers over the 'I WANT TO REFINANCE' button, considering their choice.",
+    "confidence": 0.9,
+    "interaction_target": "I WANT TO REFINANCE",
+    "cursor_position_x": 380,
+    "cursor_position_y": 710,
+    "page_title": "Compare Top 20 Home Loan Rates In 2026 (January)",
+    "frame_description": "The cursor moves between the two main call-to-action buttons on the Lendi landing page."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 9300,
+    "time_end_ms": 9350,
+    "description": "User clicks the 'I WANT TO REFINANCE' button.",
+    "confidence": 1.0,
+    "interaction_target": "I WANT TO REFINANCE",
+    "cursor_position_x": 380,
+    "cursor_position_y": 710,
+    "page_title": "Compare Top 20 Home Loan Rates In 2026 (January)",
+    "frame_description": "The button is activated, triggering the start of the refinancing flow."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 9350,
+    "time_end_ms": 9800,
+    "description": "A loading screen appears with the Lendi logo and progress text.",
+    "confidence": 1.0,
+    "interaction_target": "Loading screen",
+    "frame_description": "Screen shows 'Loading... You're moving along nicely.' with an animated logo."
+  },
+  {
+    "type": "hesitate",
+    "time_start_ms": 9800,
+    "time_end_ms": 11850,
+    "description": "User pauses briefly on the 'What is your current loan balance?' screen before interacting.",
+    "confidence": 0.8,
+    "page_title": "Lendi - Refinance Flow",
+    "frame_description": "The first question of the flow is displayed: 'What is your current loan balance?'."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 11850,
+    "time_end_ms": 11900,
+    "description": "User clicks into the loan balance input field to begin typing.",
+    "confidence": 1.0,
+    "interaction_target": "Loan balance input field",
+    "cursor_position_x": 500,
+    "cursor_position_y": 550,
+    "frame_description": "The input field is focused, showing a cursor."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 11900,
+    "time_end_ms": 16650,
+    "description": "User types '800,000' into the current loan balance field.",
+    "confidence": 1.0,
+    "interaction_target": "Loan balance input field",
+    "frame_description": "The numbers '800,000' are entered into the text box."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 17050,
+    "time_end_ms": 17100,
+    "description": "User clicks the 'NEXT' button to proceed to the next question.",
+    "confidence": 1.0,
+    "interaction_target": "NEXT",
+    "cursor_position_x": 500,
+    "cursor_position_y": 680,
+    "frame_description": "The user clicks the green 'NEXT' button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 17100,
+    "time_end_ms": 18050,
+    "description": "The UI transitions to the next screen asking for interest rate details.",
+    "confidence": 1.0,
+    "frame_description": "The screen updates to 'Please tell us more about your current loan.'."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 18050,
+    "time_end_ms": 20100,
+    "description": "User hovers over the 'I don't know, skip' toggle switch.",
+    "confidence": 0.9,
+    "interaction_target": "I don't know, skip toggle",
+    "cursor_position_x": 350,
+    "cursor_position_y": 460,
+    "frame_description": "Cursor lingers over the skip toggle for the interest rate."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 20100,
+    "time_end_ms": 20400,
+    "description": "User clicks the 'I don't know, skip' toggle.",
+    "confidence": 1.0,
+    "interaction_target": "I don't know, skip toggle",
+    "cursor_position_x": 350,
+    "cursor_position_y": 460,
+    "frame_description": "The toggle is switched to the 'on' state."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 20400,
+    "time_end_ms": 20450,
+    "description": "The interest rate input field is disabled as a result of the skip toggle.",
+    "confidence": 0.9,
+    "interaction_target": "Estimate interest rate field",
+    "frame_description": "The interest rate input field becomes greyed out."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 20550,
+    "time_end_ms": 20600,
+    "description": "User clicks the 'NEXT' button.",
+    "confidence": 1.0,
+    "interaction_target": "NEXT",
+    "cursor_position_x": 500,
+    "cursor_position_y": 750,
+    "frame_description": "The user proceeds to the fixed rate question."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 22250,
+    "time_end_ms": 22300,
+    "description": "User selects the 'No' option for 'Are you currently on a fixed rate?'.",
+    "confidence": 1.0,
+    "interaction_target": "No",
+    "cursor_position_x": 580,
+    "cursor_position_y": 630,
+    "frame_description": "The 'No' radio button/card is selected."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 23100,
+    "time_end_ms": 23150,
+    "description": "User clicks the 'NEXT' button.",
+    "confidence": 1.0,
+    "interaction_target": "NEXT",
+    "cursor_position_x": 500,
+    "cursor_position_y": 750,
+    "frame_description": "User moves to the lender selection screen."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 25700,
+    "time_end_ms": 25750,
+    "description": "User clicks 'NEXT' without entering a lender, triggering a validation error.",
+    "confidence": 1.0,
+    "interaction_target": "NEXT",
+    "cursor_position_x": 500,
+    "cursor_position_y": 680,
+    "page_title": "Who is your current lender?",
+    "frame_description": "The user attempts to skip the lender question."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 25750,
+    "time_end_ms": 26250,
+    "description": "An error message 'Current lender is required' appears below the search box.",
+    "confidence": 1.0,
+    "interaction_target": "Error message",
+    "frame_description": "Red error text appears indicating the field is mandatory."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 27050,
+    "time_end_ms": 27750,
+    "description": "User types 'anz' into the lender search field.",
+    "confidence": 1.0,
+    "interaction_target": "Lender search input",
+    "frame_description": "The letters 'anz' are typed into the search box."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 27750,
+    "time_end_ms": 27800,
+    "description": "A dropdown menu with lender suggestions appears.",
+    "confidence": 1.0,
+    "interaction_target": "Lender suggestions dropdown",
+    "frame_description": "A list of banks starting with 'ANZ' appears below the input."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 28600,
+    "time_end_ms": 28650,
+    "description": "User selects 'ANZ Bank' from the suggestion list.",
+    "confidence": 1.0,
+    "interaction_target": "ANZ Bank",
+    "cursor_position_x": 450,
+    "cursor_position_y": 610,
+    "frame_description": "The user clicks on the 'ANZ Bank' option in the dropdown."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 29000,
+    "time_end_ms": 29250,
+    "description": "User clicks the 'NEXT' button.",
+    "confidence": 1.0,
+    "interaction_target": "NEXT",
+    "cursor_position_x": 500,
+    "cursor_position_y": 680,
+    "frame_description": "User proceeds to the property value question."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 29250,
+    "time_end_ms": 30000,
+    "description": "Loading screen appears briefly between questions.",
+    "confidence": 1.0,
+    "frame_description": "Animated Lendi logo on a white background."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 31000,
+    "time_end_ms": 31050,
+    "description": "User clicks into the property value input field.",
+    "confidence": 1.0,
+    "interaction_target": "Property value input field",
+    "cursor_position_x": 500,
+    "cursor_position_y": 550,
+    "frame_description": "The input field for 'How much do you think your property is worth?' is focused."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 31050,
+    "time_end_ms": 33950,
+    "description": "User types '1,000,000' into the property value field.",
+    "confidence": 1.0,
+    "interaction_target": "Property value input field",
+    "frame_description": "The value '1,000,000' is entered."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 35150,
+    "time_end_ms": 35200,
+    "description": "User clicks the 'NEXT' button.",
+    "confidence": 1.0,
+    "interaction_target": "NEXT",
+    "cursor_position_x": 500,
+    "cursor_position_y": 680,
+    "frame_description": "User moves to the refinancing goal screen."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 38700,
+    "time_end_ms": 38750,
+    "description": "User selects 'Decrease repayments' as their refinancing goal.",
+    "confidence": 1.0,
+    "interaction_target": "Decrease repayments",
+    "cursor_position_x": 500,
+    "cursor_position_y": 470,
+    "frame_description": "The user clicks the first option card."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 38750,
+    "time_end_ms": 38900,
+    "description": "Loading screen appears.",
+    "confidence": 1.0,
+    "frame_description": "Animated Lendi logo."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 39850,
+    "time_end_ms": 39900,
+    "description": "User selects 'I will live there' for property usage.",
+    "confidence": 1.0,
+    "interaction_target": "I will live there",
+    "cursor_position_x": 500,
+    "cursor_position_y": 530,
+    "frame_description": "The user clicks the primary usage option."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 39900,
+    "time_end_ms": 41050,
+    "description": "Loading screen appears.",
+    "confidence": 1.0,
+    "frame_description": "Animated Lendi logo."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 43050,
+    "time_end_ms": 43100,
+    "description": "User clicks the 'NO THANKS, NEXT' button on the lender features screen.",
+    "confidence": 1.0,
+    "interaction_target": "NO THANKS, NEXT",
+    "cursor_position_x": 500,
+    "cursor_position_y": 880,
+    "page_title": "Are any of the following important to you when choosing a lender?",
+    "frame_description": "The user skips selecting specific lender features."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 48050,
+    "time_end_ms": 48100,
+    "description": "User selects 'Excellent - No issues' for their credit history.",
+    "confidence": 1.0,
+    "interaction_target": "Excellent - No issues",
+    "cursor_position_x": 500,
+    "cursor_position_y": 460,
+    "page_title": "What do you think your credit history is?",
+    "frame_description": "The user clicks the top credit rating option."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 48100,
+    "time_end_ms": 48750,
+    "description": "Loading screen appears.",
+    "confidence": 1.0,
+    "frame_description": "Animated Lendi logo."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 50750,
+    "time_end_ms": 50800,
+    "description": "User selects 'Other' for their income source.",
+    "confidence": 1.0,
+    "interaction_target": "Other",
+    "cursor_position_x": 500,
+    "cursor_position_y": 710,
+    "page_title": "How do you earn your income?",
+    "frame_description": "The user clicks the third income option."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 51250,
+    "time_end_ms": 51300,
+    "description": "User clicks 'GET MY HOME LOAN MATCHES' without entering a name.",
+    "confidence": 1.0,
+    "interaction_target": "GET MY HOME LOAN MATCHES",
+    "cursor_position_x": 500,
+    "cursor_position_y": 680,
+    "page_title": "One last thing, what's your first name?",
+    "frame_description": "The user attempts to submit the final form step."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 51650,
+    "time_end_ms": 59250,
+    "description": "User navigates back through the entire flow using the browser back button multiple times.",
+    "confidence": 0.9,
+    "frame_description": "The screen rapidly cycles back through all previous question screens in reverse order."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 59250,
+    "time_end_ms": 60650,
+    "description": "User navigates back to the Google search results page.",
+    "confidence": 1.0,
+    "page_title": "home loans comparison - Google Search",
+    "page_location": "https://www.google.com/search?q=home+loans+comparison",
+    "frame_description": "The user is back on the original search results page."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 60650,
+    "time_end_ms": 66950,
+    "description": "User scrolls further down the search results page.",
+    "confidence": 1.0,
+    "frame_description": "Scrolling past previously seen results to find new ones."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 66950,
+    "time_end_ms": 67450,
+    "description": "User clicks on the Mortgage Choice search result.",
+    "confidence": 1.0,
+    "interaction_target": "Compare Home Loans for 2024 (Interest Rates from 5.09%)",
+    "cursor_position_x": 300,
+    "cursor_position_y": 950,
+    "frame_description": "The user selects a different lender from the search results."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 67450,
+    "time_end_ms": 70200,
+    "description": "Page navigates to the Mortgage Choice website.",
+    "confidence": 1.0,
+    "page_title": "Compare home loans",
+    "page_location": "https://www.mortgagechoice.com.au/home-loans/compare-home-loans/",
+    "frame_description": "The Mortgage Choice landing page loads."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 70200,
+    "time_end_ms": 73100,
+    "description": "User hovers over the featured fixed rate interest rate card.",
+    "confidence": 0.9,
+    "interaction_target": "Fixed rate 5.09% p.a.* card",
+    "cursor_position_x": 250,
+    "cursor_position_y": 650,
+    "frame_description": "Cursor pauses over the large interest rate display."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 73100,
+    "time_end_ms": 75100,
+    "description": "User scrolls down the Mortgage Choice page to see specific loan products.",
+    "confidence": 1.0,
+    "frame_description": "The user scrolls down to the comparison table section."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 75100,
+    "time_end_ms": 76450,
+    "description": "A list of home loan products and their details renders on the page.",
+    "confidence": 1.0,
+    "interaction_target": "Loan products list",
+    "frame_description": "The comparison table populates with various loan offers."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 76450,
+    "time_end_ms": 78725,
+    "description": "User hovers over the 'Property purpose' filter dropdown.",
+    "confidence": 0.9,
+    "interaction_target": "Property purpose dropdown",
+    "cursor_position_x": 280,
+    "cursor_position_y": 710,
+    "frame_description": "The cursor is positioned over the filter menu at the end of the segment."
+  }
+]

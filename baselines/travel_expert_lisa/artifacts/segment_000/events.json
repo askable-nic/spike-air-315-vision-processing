@@ -1,0 +1,109 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 1300,
+    "time_end_ms": 36250,
+    "description": "Instructional scenario text is progressively typed out on the screen, providing the participant with their task context.",
+    "confidence": 0.95,
+    "frame_description": "A dark background with white text being revealed word-by-word, describing a travel planning scenario."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 38900,
+    "time_end_ms": 39100,
+    "description": "A circular 'Open' button appears in the center of the screen to allow the user to proceed to the website.",
+    "confidence": 1.0,
+    "interaction_target": "Open button",
+    "frame_description": "The instructional text is complete, and a blue 'Open' button has appeared below it."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 48500,
+    "time_end_ms": 48500,
+    "description": "User clicks the 'Open' button to initiate the task and open the browser.",
+    "confidence": 1.0,
+    "interaction_target": "Open button",
+    "cursor_position_x": 480,
+    "cursor_position_y": 400,
+    "frame_description": "The cursor is centered over the 'Open' button at the moment of the click."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 48600,
+    "time_end_ms": 49350,
+    "description": "The browser opens a new tab and navigates to the Google homepage.",
+    "confidence": 1.0,
+    "page_title": "Google",
+    "page_location": "https://www.google.com",
+    "frame_description": "A new browser window appears, loading the Google search page."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 50300,
+    "time_end_ms": 60450,
+    "description": "User hovers the cursor over the Google search input field, pausing before starting to type.",
+    "confidence": 0.9,
+    "interaction_target": "Search input field",
+    "page_title": "Google",
+    "frame_description": "The cursor is positioned inside the search bar on the Google homepage."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 60450,
+    "time_end_ms": 62450,
+    "description": "User types the search query 'webjet' into the Google search bar.",
+    "confidence": 1.0,
+    "interaction_target": "Search input field",
+    "frame_description": "The word 'webjet' is typed into the search bar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 60650,
+    "time_end_ms": 60850,
+    "description": "Google search suggestions dropdown menu appears in response to the user's typing.",
+    "confidence": 1.0,
+    "interaction_target": "Search suggestions dropdown",
+    "frame_description": "A list of autocomplete suggestions appears beneath the search bar as the user types."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 63900,
+    "time_end_ms": 63900,
+    "description": "User selects the 'webjet' suggestion from the autocomplete list.",
+    "confidence": 1.0,
+    "interaction_target": "webjet suggestion",
+    "cursor_position_x": 350,
+    "cursor_position_y": 380,
+    "frame_description": "The cursor moves down to the first suggestion in the dropdown and clicks it."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 64700,
+    "time_end_ms": 65100,
+    "description": "The browser navigates to the Google search results page for the query 'webjet'.",
+    "confidence": 1.0,
+    "page_title": "webjet - Google Search",
+    "frame_description": "The Google search results page loads, showing various links related to Webjet."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 75600,
+    "time_end_ms": 75600,
+    "description": "User clicks on the primary Webjet website link in the search results.",
+    "confidence": 1.0,
+    "interaction_target": "Webjet | Your go-to for going places. link",
+    "cursor_position_x": 250,
+    "cursor_position_y": 230,
+    "frame_description": "The cursor is over the first search result link as the user clicks to navigate to the site."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 76100,
+    "time_end_ms": 77450,
+    "description": "The browser navigates to the Webjet homepage.",
+    "confidence": 1.0,
+    "page_title": "Cheap Flights, Hotels, Holiday Packages & Car Hire | Webjet",
+    "page_location": "https://www.webjet.com.au",
+    "frame_description": "The Webjet homepage is fully loaded, displaying the flight search widget and promotional banners."
+  }
+]

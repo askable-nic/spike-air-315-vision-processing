@@ -1,0 +1,188 @@
+[
+  {
+    "type": "hover",
+    "time_start_ms": 0,
+    "time_end_ms": 1500,
+    "description": "User hovers over the 'Papillon' listing card in the search results.",
+    "confidence": 0.8,
+    "interaction_target": "Papillon listing card",
+    "cursor_position_x": 150,
+    "cursor_position_y": 650,
+    "page_title": "London \u2022 300+ Caravans, Motorhomes & Campers to hire | Camplify",
+    "frame_description": "Search results page for London showing multiple campervan listings."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 1500,
+    "time_end_ms": 3000,
+    "description": "User hovers over the 'Archie' listing card.",
+    "confidence": 0.8,
+    "interaction_target": "Archie listing card",
+    "cursor_position_x": 400,
+    "cursor_position_y": 650
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 3000,
+    "time_end_ms": 4500,
+    "description": "User hovers over 'The Mobile Retreat' listing card.",
+    "confidence": 0.8,
+    "interaction_target": "The Mobile Retreat listing card",
+    "cursor_position_x": 650,
+    "cursor_position_y": 650
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 4500,
+    "time_end_ms": 5550,
+    "description": "User hovers back over the 'Papillon' listing card before clicking.",
+    "confidence": 0.8,
+    "interaction_target": "Papillon listing card",
+    "cursor_position_x": 150,
+    "cursor_position_y": 650
+  },
+  {
+    "type": "click",
+    "time_start_ms": 5550,
+    "time_end_ms": 5550,
+    "description": "User clicks on the 'Papillon' campervan listing card to view details.",
+    "confidence": 0.95,
+    "interaction_target": "Papillon listing card",
+    "cursor_position_x": 150,
+    "cursor_position_y": 650
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 5550,
+    "time_end_ms": 8100,
+    "description": "The browser navigates to the detailed listing page for the 'Papillon' campervan.",
+    "confidence": 0.98,
+    "page_location": "https://www.camplify.co.uk/rv/campervan-hire-london-papillon/65371",
+    "frame_description": "The screen transitions from search results to the specific listing page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 8100,
+    "time_end_ms": 11400,
+    "description": "The 'Papillon' listing page finishes loading its content and images.",
+    "confidence": 0.9,
+    "page_title": "Papillon | Camplify",
+    "frame_description": "The detailed listing page for 'Papillon' is displayed with a large image gallery at the top."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 11400,
+    "time_end_ms": 11900,
+    "description": "User hovers the cursor over the 'Save' button below the listing images.",
+    "confidence": 0.85,
+    "interaction_target": "Save button",
+    "cursor_position_x": 530,
+    "cursor_position_y": 860
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 11900,
+    "time_end_ms": 13350,
+    "description": "User scrolls down to view the campervan description.",
+    "confidence": 0.95,
+    "frame_description": "The page content moves upwards as the user scrolls down."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 13350,
+    "time_end_ms": 15550,
+    "description": "User hovers over the 'Read more' link in the description section.",
+    "confidence": 0.85,
+    "interaction_target": "Read more link",
+    "cursor_position_x": 110,
+    "cursor_position_y": 720
+  },
+  {
+    "type": "click",
+    "time_start_ms": 15550,
+    "time_end_ms": 15550,
+    "description": "User clicks the 'Read more' link to expand the campervan description.",
+    "confidence": 0.95,
+    "interaction_target": "Read more link",
+    "cursor_position_x": 110,
+    "cursor_position_y": 880
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 16000,
+    "time_end_ms": 16400,
+    "description": "The description section expands to reveal the full text.",
+    "confidence": 0.9,
+    "frame_description": "The text area expands downwards to show more information."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 16400,
+    "time_end_ms": 44650,
+    "description": "User scrolls down through the 'Important stuff' and 'Amenities' sections.",
+    "confidence": 0.95,
+    "frame_description": "User reviews various sections of the listing page including hiring rules and features."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 44650,
+    "time_end_ms": 44650,
+    "description": "User clicks 'Read more' in the Amenities section to see the full list.",
+    "confidence": 0.95,
+    "interaction_target": "Read more link in Amenities",
+    "cursor_position_x": 110,
+    "cursor_position_y": 680
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 44750,
+    "time_end_ms": 45300,
+    "description": "The Amenities section expands to show more items.",
+    "confidence": 0.9,
+    "frame_description": "The list of amenities expands to show additional features."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 45300,
+    "time_end_ms": 48750,
+    "description": "User scrolls down to the location map and availability calendar.",
+    "confidence": 0.95,
+    "frame_description": "The map and calendar sections come into view."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 48750,
+    "time_end_ms": 50900,
+    "description": "User hovers over dates in the November 2026 availability calendar.",
+    "confidence": 0.85,
+    "interaction_target": "November 2026 calendar",
+    "cursor_position_x": 200,
+    "cursor_position_y": 800
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 50900,
+    "time_end_ms": 59900,
+    "description": "User scrolls back up the page to re-read the description and rules.",
+    "confidence": 0.95,
+    "frame_description": "Page content moves downwards as user scrolls up."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 59900,
+    "time_end_ms": 60500,
+    "description": "User clicks and drags to highlight the text 'Travel to mainland Europe OK'.",
+    "confidence": 0.9,
+    "interaction_target": "'Travel to mainland Europe OK' text",
+    "cursor_position_x": 150,
+    "cursor_position_y": 720
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 60500,
+    "time_end_ms": 84950,
+    "description": "User scrolls up and down the page, continuing to review the listing details and hiring rules.",
+    "confidence": 0.95,
+    "frame_description": "User continues to browse the page content before finishing the segment."
+  }
+]

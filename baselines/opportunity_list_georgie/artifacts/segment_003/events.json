@@ -1,0 +1,208 @@
+[
+  {
+    "type": "hover",
+    "time_start_ms": 650,
+    "time_end_ms": 1400,
+    "description": "The user hovers over the 'Save these preferences' toggle at the bottom of the screen.",
+    "confidence": 0.9,
+    "interaction_target": "Save these preferences toggle",
+    "cursor_position_x": 580,
+    "cursor_position_y": 850,
+    "page_title": "Explore",
+    "frame_description": "The Explore page is visible with a list of opportunities. A 'Save these preferences' toggle is at the bottom."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 1400,
+    "time_end_ms": 2400,
+    "description": "The user hovers over the 'Tasks' tab in the bottom navigation bar.",
+    "confidence": 0.9,
+    "interaction_target": "Tasks tab",
+    "cursor_position_x": 480,
+    "cursor_position_y": 950,
+    "page_title": "Explore",
+    "frame_description": "The cursor moves to the bottom navigation bar, hovering over the Tasks icon."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 2400,
+    "time_end_ms": 3000,
+    "description": "The user hovers over the 'Save these preferences' toggle again.",
+    "confidence": 0.9,
+    "interaction_target": "Save these preferences toggle",
+    "cursor_position_x": 580,
+    "cursor_position_y": 850,
+    "page_title": "Explore",
+    "frame_description": "The cursor returns to the toggle switch above the navigation bar."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 3800,
+    "time_end_ms": 4300,
+    "description": "The user hovers over the 'AI Interview' opportunity card.",
+    "confidence": 0.9,
+    "interaction_target": "AI Interview card",
+    "cursor_position_x": 450,
+    "cursor_position_y": 750,
+    "page_title": "Explore",
+    "frame_description": "The cursor moves up to hover over a pink opportunity card labeled 'AI Interview'."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 5500,
+    "time_end_ms": 6300,
+    "description": "The user scrolls down the list of opportunities.",
+    "confidence": 1.0,
+    "page_title": "Explore",
+    "frame_description": "The list of opportunity cards moves upwards as the user scrolls down."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 6300,
+    "time_end_ms": 6800,
+    "description": "The user hovers over the 'Video Call' opportunity card after scrolling.",
+    "confidence": 0.9,
+    "interaction_target": "Video Call card",
+    "cursor_position_x": 450,
+    "cursor_position_y": 650,
+    "page_title": "Explore",
+    "frame_description": "The cursor pauses over a pink card for a 'Video Call' session."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 6800,
+    "time_end_ms": 7800,
+    "description": "The user scrolls further down the page.",
+    "confidence": 1.0,
+    "page_title": "Explore",
+    "frame_description": "The page content continues to move up, revealing more items."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 9200,
+    "time_end_ms": 10300,
+    "description": "The user hovers over an 'AI Interview' card in the 'Short tasks & surveys' section.",
+    "confidence": 0.9,
+    "interaction_target": "AI Interview card",
+    "cursor_position_x": 450,
+    "cursor_position_y": 350,
+    "page_title": "Explore",
+    "frame_description": "The cursor hovers over a smaller card in a horizontal scrolling section."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 10300,
+    "time_end_ms": 11000,
+    "description": "The user scrolls up the page.",
+    "confidence": 1.0,
+    "page_title": "Explore",
+    "frame_description": "The page content moves down as the user scrolls up."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 11000,
+    "time_end_ms": 40400,
+    "description": "The user performs multiple rapid scrolls up and down the opportunity list, appearing to browse the available options.",
+    "confidence": 1.0,
+    "page_title": "Explore",
+    "frame_description": "The screen content moves up and down repeatedly as the user browses the list."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 40400,
+    "time_end_ms": 41250,
+    "description": "The user clicks on the filter icon in the top right corner of the screen.",
+    "confidence": 1.0,
+    "interaction_target": "Filter icon",
+    "cursor_position_x": 600,
+    "cursor_position_y": 150,
+    "page_title": "Explore",
+    "frame_description": "The cursor moves to the top right and clicks the blue filter icon."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 41250,
+    "time_end_ms": 42150,
+    "description": "The 'Filter Opportunities' modal slides up from the bottom of the screen.",
+    "confidence": 1.0,
+    "interaction_target": "Filter Opportunities modal",
+    "page_title": "Explore",
+    "frame_description": "A modal window with various filter options (Task Type, Duration, Pay Rate) appears over the list."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 45650,
+    "time_end_ms": 46400,
+    "description": "The user hovers over the 'Clear All' button within the filter modal.",
+    "confidence": 0.9,
+    "interaction_target": "Clear All button",
+    "cursor_position_x": 550,
+    "cursor_position_y": 650,
+    "page_title": "Explore",
+    "frame_description": "The cursor moves to the top right of the modal, over the 'Clear All' text."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 46400,
+    "time_end_ms": 47750,
+    "description": "The user hovers over the 'X' close button in the filter modal.",
+    "confidence": 0.9,
+    "interaction_target": "Close button",
+    "cursor_position_x": 610,
+    "cursor_position_y": 650,
+    "page_title": "Explore",
+    "frame_description": "The cursor moves slightly to the right, over the 'X' icon in the modal header."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 48850,
+    "time_end_ms": 50050,
+    "description": "The filter modal is closed, returning the user to the main opportunity list.",
+    "confidence": 1.0,
+    "interaction_target": "Filter Opportunities modal",
+    "page_title": "Explore",
+    "frame_description": "The modal slides back down, revealing the full opportunity list again."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 50050,
+    "time_end_ms": 62050,
+    "description": "The user continues to scroll up and down the list of opportunities.",
+    "confidence": 1.0,
+    "page_title": "Explore",
+    "frame_description": "The list content moves vertically as the user resumes browsing."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 62050,
+    "time_end_ms": 62700,
+    "description": "The user hovers over the 'AI Interview' card.",
+    "confidence": 0.9,
+    "interaction_target": "AI Interview card",
+    "cursor_position_x": 450,
+    "cursor_position_y": 750,
+    "page_title": "Explore",
+    "frame_description": "The cursor pauses briefly over the pink AI Interview card."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 62700,
+    "time_end_ms": 63650,
+    "description": "The user hovers over the 'Video Call' card.",
+    "confidence": 0.9,
+    "interaction_target": "Video Call card",
+    "cursor_position_x": 450,
+    "cursor_position_y": 650,
+    "page_title": "Explore",
+    "frame_description": "The cursor moves up to hover over the Video Call card."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 63650,
+    "time_end_ms": 69650,
+    "description": "The user performs final scrolls through the list before the segment ends.",
+    "confidence": 1.0,
+    "page_title": "Explore",
+    "frame_description": "The page content moves up and down as the user continues to browse."
+  }
+]

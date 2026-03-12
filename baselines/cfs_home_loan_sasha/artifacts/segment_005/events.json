@@ -1,0 +1,184 @@
+[
+  {
+    "type": "scroll",
+    "time_start_ms": 0,
+    "time_end_ms": 2250,
+    "description": "Sasha scrolls down the ANZ Standard Variable Rate Home Loan page, reviewing the listed features and fees.",
+    "confidence": 0.9,
+    "page_title": "ANZ Standard Variable Rate Home Loan",
+    "frame_description": "The user is looking at the 'Keep in mind' and 'Fees' sections of the ANZ home loan page."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 2250,
+    "time_end_ms": 2950,
+    "description": "Sasha hovers over the information icon next to the comparison rate.",
+    "confidence": 0.9,
+    "interaction_target": "Comparison rate info icon",
+    "cursor_position_x": 224,
+    "cursor_position_y": 205,
+    "frame_description": "The cursor is positioned over the small 'i' icon next to the 6.49% p.a. comparison rate."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 2650,
+    "time_end_ms": 2950,
+    "description": "A tooltip appears explaining how the comparison rate is calculated.",
+    "confidence": 0.9,
+    "interaction_target": "Comparison rate tooltip",
+    "frame_description": "A grey box with white text appears above the comparison rate, providing a definition of the comparison rate."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 2950,
+    "time_end_ms": 4200,
+    "description": "Sasha continues scrolling down the page towards the 'Learn more' link.",
+    "confidence": 0.9,
+    "frame_description": "The page moves vertically as the user scrolls past the comparison rate section."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 4200,
+    "time_end_ms": 4300,
+    "description": "Sasha clicks on the 'Learn more >' link.",
+    "confidence": 1.0,
+    "interaction_target": "Learn more >",
+    "cursor_position_x": 145,
+    "cursor_position_y": 415,
+    "frame_description": "The cursor clicks the blue 'Learn more' link located under the comparison rate."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 4300,
+    "time_end_ms": 5050,
+    "description": "The page navigates to the detailed ANZ Standard Variable home loan page.",
+    "confidence": 1.0,
+    "page_title": "ANZ Standard Variable home loan",
+    "page_location": "https://www.anz.com.au/personal/home-loans/standard-variable/",
+    "frame_description": "The screen flashes pink/white as the new page loads, eventually showing the ANZ Standard Variable home loan landing page."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 5150,
+    "time_end_ms": 6050,
+    "description": "Sasha hovers over the 'Request call back' button.",
+    "confidence": 0.9,
+    "interaction_target": "Request call back",
+    "cursor_position_x": 175,
+    "cursor_position_y": 475,
+    "frame_description": "The cursor pauses over the blue 'Request call back' button in the hero section."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 7950,
+    "time_end_ms": 8750,
+    "description": "Sasha hovers over the 'Apply online' button.",
+    "confidence": 0.9,
+    "interaction_target": "Apply online",
+    "cursor_position_x": 315,
+    "cursor_position_y": 475,
+    "frame_description": "The cursor moves to and pauses over the green 'Apply online' button."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 8750,
+    "time_end_ms": 16550,
+    "description": "Sasha scrolls down the page, reviewing the 'Jump to' links, the cashback offer, and the variable rate negotiation section.",
+    "confidence": 0.9,
+    "frame_description": "The user scrolls past the main image of a woman and baby, looking at the content below."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 16550,
+    "time_end_ms": 16950,
+    "description": "Sasha hovers over the 'Tell me more' button in the cashback offer section.",
+    "confidence": 0.9,
+    "interaction_target": "Tell me more",
+    "cursor_position_x": 175,
+    "cursor_position_y": 885,
+    "frame_description": "The cursor pauses over the 'Tell me more' button under the $3,000 bonus for first home buyers offer."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 16950,
+    "time_end_ms": 19400,
+    "description": "Sasha scrolls back up the page towards the top hero section.",
+    "confidence": 0.9,
+    "frame_description": "The page content moves downwards as the user scrolls back up."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 19400,
+    "time_end_ms": 20200,
+    "description": "Sasha hovers over the 'Request a call back' button in the 'Negotiate your variable rate' section.",
+    "confidence": 0.9,
+    "interaction_target": "Request a call back",
+    "cursor_position_x": 450,
+    "cursor_position_y": 485,
+    "frame_description": "The cursor pauses over the blue button next to the image of an ANZ representative."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 22450,
+    "time_end_ms": 27750,
+    "description": "Sasha scrolls down to the bottom of the page and then quickly back up to the top.",
+    "confidence": 0.9,
+    "frame_description": "The user performs a rapid scroll down and then back up, likely looking for specific information or a way to navigate back."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 27750,
+    "time_end_ms": 28050,
+    "description": "The comparison rate tooltip appears briefly as the user hovers over the info icon while scrolling.",
+    "confidence": 0.8,
+    "interaction_target": "Comparison rate tooltip",
+    "frame_description": "The grey tooltip box flickers on screen as the cursor passes over the info icon."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 28350,
+    "time_end_ms": 29100,
+    "description": "Sasha navigates back to the Google search results page.",
+    "confidence": 1.0,
+    "page_title": "home loans comparison - Google Search",
+    "page_location": "https://www.google.com/search?q=home+loans+comparison",
+    "frame_description": "The ANZ page is replaced by a white loading screen, which then displays the Google search results."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 29100,
+    "time_end_ms": 37150,
+    "description": "Sasha scrolls through the Google search results, scanning the titles and descriptions of various home loan comparison sites.",
+    "confidence": 0.9,
+    "frame_description": "The user scrolls past results from ANZ, Bank of Melbourne, AMP, and IMB Bank."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 37150,
+    "time_end_ms": 37250,
+    "description": "Sasha clicks on the 'Choosing a home loan' link from Moneysmart.gov.au.",
+    "confidence": 1.0,
+    "interaction_target": "Choosing a home loan",
+    "cursor_position_x": 215,
+    "cursor_position_y": 715,
+    "frame_description": "The cursor clicks on the blue link for the Moneysmart article."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 37250,
+    "time_end_ms": 37750,
+    "description": "The page navigates to the Moneysmart 'Choosing a home loan' article.",
+    "confidence": 1.0,
+    "page_title": "Choosing a home loan | Moneysmart",
+    "page_location": "https://moneysmart.gov.au/home-loans/choosing-a-home-loan",
+    "frame_description": "The Moneysmart website loads, showing a blue and green header with the title 'Choosing a home loan'."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 38450,
+    "time_end_ms": 78725,
+    "description": "Sasha scrolls through the Moneysmart article, reading about repayment types, loan terms, and interest rate comparisons.",
+    "confidence": 0.9,
+    "frame_description": "The user scrolls slowly through the text-heavy article, pausing to read different sections."
+  }
+]

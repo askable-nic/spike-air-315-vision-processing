@@ -1,0 +1,330 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 2300,
+    "time_end_ms": 2350,
+    "description": "The on-screen keyboard is dismissed as the user prepares to interact with the form toggles.",
+    "confidence": 0.95,
+    "frame_description": "The 'Estimate interest rate' screen is visible; the keyboard at the bottom of the screen slides down and disappears."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 2350,
+    "time_end_ms": 2450,
+    "description": "User clicks the 'I don't know, skip' toggle to bypass entering an interest rate.",
+    "confidence": 0.9,
+    "interaction_target": "I don't know, skip toggle",
+    "cursor_position_x": 50,
+    "cursor_position_y": 450,
+    "frame_description": "The user's finger taps the toggle switch next to 'I don't know, skip'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 2450,
+    "time_end_ms": 5750,
+    "description": "The 'I don't know, skip' toggle moves to the active position and changes color to purple.",
+    "confidence": 0.95,
+    "frame_description": "The toggle switch is now in the 'on' position, highlighted in purple."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 5750,
+    "time_end_ms": 5850,
+    "description": "User clicks the 'No' button for the question 'Are you currently on a fixed rate?'.",
+    "confidence": 0.95,
+    "interaction_target": "No button",
+    "cursor_position_x": 600,
+    "cursor_position_y": 600,
+    "frame_description": "The user taps the 'No' option button under the fixed rate question."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 5850,
+    "time_end_ms": 6350,
+    "description": "The 'No' button UI updates to a selected state with a purple border and fill.",
+    "confidence": 0.95,
+    "frame_description": "The 'No' button is now highlighted, indicating it has been selected."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 6350,
+    "time_end_ms": 7950,
+    "description": "The application navigates to the next step in the flow: identifying the current lender.",
+    "confidence": 0.95,
+    "page_title": "Who is your current lender",
+    "frame_description": "The screen transitions from the interest rate form to a new page titled 'Who is your current lender'."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 7950,
+    "time_end_ms": 8100,
+    "description": "User clicks into the lender search input field to begin typing.",
+    "confidence": 0.9,
+    "interaction_target": "Search for your lender input",
+    "cursor_position_x": 400,
+    "cursor_position_y": 280,
+    "frame_description": "The user taps the search bar, and the keyboard reappears at the bottom of the screen."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 8600,
+    "time_end_ms": 11250,
+    "description": "User types 'St George' into the lender search field.",
+    "confidence": 0.95,
+    "interaction_target": "Search for your lender input",
+    "frame_description": "Characters 'St George' appear in the search bar as the user types on the keyboard."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 11250,
+    "time_end_ms": 11350,
+    "description": "User selects 'St George' from the autocomplete suggestion list.",
+    "confidence": 0.9,
+    "interaction_target": "St George suggestion",
+    "frame_description": "The user taps the 'St George' entry in the dropdown list below the search bar."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 11350,
+    "time_end_ms": 11850,
+    "description": "The application navigates to the property value estimation screen.",
+    "confidence": 0.95,
+    "page_title": "How much do you think your property is worth?",
+    "frame_description": "The screen transitions to a page asking for the estimated property value."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 13550,
+    "time_end_ms": 13700,
+    "description": "User clicks the property value input field to enter a dollar amount.",
+    "confidence": 0.9,
+    "interaction_target": "Property value input",
+    "cursor_position_x": 400,
+    "cursor_position_y": 300,
+    "frame_description": "The user taps the input field marked with a '$' symbol."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 15000,
+    "time_end_ms": 21250,
+    "description": "User types '1100000' into the property value field.",
+    "confidence": 0.95,
+    "interaction_target": "Property value input",
+    "frame_description": "The value '$ 1,100,000' is entered into the field."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 21250,
+    "time_end_ms": 21350,
+    "description": "The application navigates to the refinancing goal selection screen.",
+    "confidence": 0.95,
+    "page_title": "What's your refinancing goal?",
+    "frame_description": "The screen transitions to a page with several goal options like 'Decrease repayments' and 'Pay off loan faster'."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 25200,
+    "time_end_ms": 25300,
+    "description": "User clicks the 'Pay off loan faster' goal option.",
+    "confidence": 0.95,
+    "interaction_target": "Pay off loan faster button",
+    "cursor_position_x": 400,
+    "cursor_position_y": 400,
+    "frame_description": "The user taps the second button in the list of refinancing goals."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 25300,
+    "time_end_ms": 26650,
+    "description": "The application navigates to the property usage screen.",
+    "confidence": 0.95,
+    "page_title": "How will this property be used?",
+    "frame_description": "The screen transitions to a page asking if the property is a home or an investment."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 31700,
+    "time_end_ms": 31800,
+    "description": "User clicks the 'I will live there' button.",
+    "confidence": 0.95,
+    "interaction_target": "I will live there button",
+    "cursor_position_x": 400,
+    "cursor_position_y": 350,
+    "frame_description": "The user taps the first option button on the property usage screen."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 31800,
+    "time_end_ms": 32500,
+    "description": "The application navigates to the lender features preference screen.",
+    "confidence": 0.95,
+    "page_title": "Are any of the following important to you when choosing a lender?",
+    "frame_description": "The screen transitions to a page with icons for different lender features."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 32500,
+    "time_end_ms": 32650,
+    "description": "User selects 'Major lender' as an important feature.",
+    "confidence": 0.8,
+    "interaction_target": "Major lender icon",
+    "cursor_position_x": 200,
+    "cursor_position_y": 750,
+    "frame_description": "The 'Major lender' icon is tapped and becomes highlighted."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 33600,
+    "time_end_ms": 33700,
+    "description": "User clicks the 'NEXT' button to proceed.",
+    "confidence": 0.95,
+    "interaction_target": "NEXT button",
+    "cursor_position_x": 400,
+    "cursor_position_y": 950,
+    "frame_description": "The user taps the purple 'NEXT' button at the bottom of the screen."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 33700,
+    "time_end_ms": 34400,
+    "description": "The application navigates to the credit history self-assessment screen.",
+    "confidence": 0.95,
+    "page_title": "What do you think your credit history is?",
+    "frame_description": "The screen transitions to a page with credit rating options."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 34400,
+    "time_end_ms": 34500,
+    "description": "User clicks the 'Excellent - No issues' credit history option.",
+    "confidence": 0.95,
+    "interaction_target": "Excellent - No issues button",
+    "cursor_position_x": 400,
+    "cursor_position_y": 350,
+    "frame_description": "The user taps the top button in the credit history list."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 34500,
+    "time_end_ms": 37100,
+    "description": "The application navigates to the income source selection screen.",
+    "confidence": 0.95,
+    "page_title": "How do you earn your income?",
+    "frame_description": "The screen transitions to a page asking about employment status."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 37100,
+    "time_end_ms": 37200,
+    "description": "User clicks the 'I'm an employee' button.",
+    "confidence": 0.95,
+    "interaction_target": "I'm an employee button",
+    "cursor_position_x": 400,
+    "cursor_position_y": 350,
+    "frame_description": "The user taps the first option on the income source screen."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 37200,
+    "time_end_ms": 38950,
+    "description": "The application navigates to the final step: entering the user's name.",
+    "confidence": 0.95,
+    "page_title": "One last thing, what's your first name?",
+    "frame_description": "The screen transitions to a page with a single text input for the user's first name."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 40650,
+    "time_end_ms": 40800,
+    "description": "User clicks the first name input field.",
+    "confidence": 0.9,
+    "interaction_target": "Type your first name here input",
+    "cursor_position_x": 400,
+    "cursor_position_y": 350,
+    "frame_description": "The user taps the text box, and the keyboard appears."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 43350,
+    "time_end_ms": 47250,
+    "description": "User types 'JANE DO' into the first name field.",
+    "confidence": 0.95,
+    "interaction_target": "Type your first name here input",
+    "frame_description": "The name 'JANE DO' is typed into the input field."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 47300,
+    "time_end_ms": 47400,
+    "description": "User clicks the 'GET MY HOME LOAN MATCHES' button.",
+    "confidence": 0.95,
+    "interaction_target": "GET MY HOME LOAN MATCHES button",
+    "cursor_position_x": 400,
+    "cursor_position_y": 500,
+    "frame_description": "The user taps the large purple button below the name input."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 47400,
+    "time_end_ms": 47850,
+    "description": "A loading screen appears while the application processes the form data.",
+    "confidence": 0.95,
+    "frame_description": "A white screen with a purple animated logo and the text 'Loading.... You're moving along nicely.' is displayed."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 47850,
+    "time_end_ms": 48050,
+    "description": "The application navigates to the phone number verification screen.",
+    "confidence": 0.95,
+    "page_title": "Your home loan options await!",
+    "frame_description": "The screen transitions to a page asking for an Australian mobile phone number."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 51750,
+    "time_end_ms": 51900,
+    "description": "User clicks the phone number input field.",
+    "confidence": 0.9,
+    "interaction_target": "Mobile phone number input",
+    "cursor_position_x": 400,
+    "cursor_position_y": 350,
+    "frame_description": "The user taps the input field next to the '+61' flag icon."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 54250,
+    "time_end_ms": 103350,
+    "description": "User types '0442238885' into the phone number field.",
+    "confidence": 0.95,
+    "interaction_target": "Mobile phone number input",
+    "frame_description": "The phone number is entered digit by digit into the field."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 103350,
+    "time_end_ms": 103450,
+    "description": "User clicks the 'PROTECT MY ACCOUNT' button to submit their phone number.",
+    "confidence": 0.95,
+    "interaction_target": "PROTECT MY ACCOUNT button",
+    "cursor_position_x": 400,
+    "cursor_position_y": 450,
+    "frame_description": "The user taps the purple button below the phone number input."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 103450,
+    "time_end_ms": 104100,
+    "description": "A loading spinner appears on the button, indicating the submission is being processed.",
+    "confidence": 0.95,
+    "frame_description": "The 'PROTECT MY ACCOUNT' button text is replaced by a white animated loading spinner."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 104100,
+    "time_end_ms": 105000,
+    "description": "An error message appears indicating a problem with the submission.",
+    "confidence": 0.95,
+    "frame_description": "A red error box appears below the phone number input with the text 'Something Went Wrong. Please try again shortly or contact us for further assistance.'"
+  }
+]

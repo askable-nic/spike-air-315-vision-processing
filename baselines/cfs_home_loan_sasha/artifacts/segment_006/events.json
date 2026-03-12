@@ -1,0 +1,329 @@
+[
+  {
+    "type": "scroll",
+    "time_start_ms": 0,
+    "time_end_ms": 5600,
+    "description": "User scrolls down the Moneysmart home loan page to review loan features and next steps.",
+    "confidence": 0.9,
+    "page_title": "Choosing a home loan | Moneysmart",
+    "frame_description": "The user is at the bottom of the Moneysmart 'Choosing a home loan' page, looking at 'Up next in Home loans' cards."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 5600,
+    "time_end_ms": 5700,
+    "description": "User switches to the browser tab containing the user testing task instructions.",
+    "confidence": 0.9,
+    "page_title": "Task Instructions",
+    "frame_description": "The screen switches to a white page with text detailing the study tasks."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 9700,
+    "time_end_ms": 9800,
+    "description": "User switches back to the Moneysmart browser tab.",
+    "confidence": 0.9,
+    "page_title": "Choosing a home loan | Moneysmart",
+    "frame_description": "The screen returns to the Moneysmart website."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 11300,
+    "time_end_ms": 11450,
+    "description": "User navigates to a Google search results page for 'home loans comparison'.",
+    "confidence": 0.9,
+    "page_title": "home loans comparison - Google Search",
+    "frame_description": "Google search results for home loans are displayed."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 15150,
+    "time_end_ms": 15250,
+    "description": "User clicks on the search result for Unloan.",
+    "confidence": 0.9,
+    "interaction_target": "Unloan search result link",
+    "cursor_position_x": 240,
+    "cursor_position_y": 710,
+    "page_title": "home loans comparison - Google Search",
+    "frame_description": "The cursor clicks on the 'Unloan' sponsored result."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 15250,
+    "time_end_ms": 15350,
+    "description": "The Unloan homepage loads.",
+    "confidence": 0.9,
+    "page_title": "Unloan | The value for money home loan",
+    "page_location": "https://www.unloan.com.au/",
+    "frame_description": "The Unloan homepage with a dark background and 'The value for money home loan' headline appears."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 15350,
+    "time_end_ms": 16200,
+    "description": "User scrolls down the Unloan homepage to view loan options.",
+    "confidence": 0.9,
+    "frame_description": "The page scrolls down to reveal 'Live in' and 'Invest' loan cards."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 20450,
+    "time_end_ms": 20550,
+    "description": "User clicks on the 'I'm Refinancing' option.",
+    "confidence": 0.9,
+    "interaction_target": "I'm Refinancing button",
+    "cursor_position_x": 600,
+    "cursor_position_y": 200,
+    "frame_description": "The user selects the refinancing path in the application flow."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 20550,
+    "time_end_ms": 20650,
+    "description": "The UI updates to show the next question: 'What's the purpose of your loan?'.",
+    "confidence": 0.9,
+    "frame_description": "A new section appears below the refinancing selection."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 24200,
+    "time_end_ms": 24350,
+    "description": "User clicks the 'Continue' button.",
+    "confidence": 0.9,
+    "interaction_target": "Continue button",
+    "cursor_position_x": 600,
+    "cursor_position_y": 950,
+    "frame_description": "The user proceeds to the next step of the application."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 24350,
+    "time_end_ms": 25150,
+    "description": "The 'Before you begin' page loads.",
+    "confidence": 0.9,
+    "page_title": "Before you begin",
+    "frame_description": "A checklist page appears with requirements for property, borrowers, and financials."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 26100,
+    "time_end_ms": 26250,
+    "description": "User clicks 'Continue' on the 'Before you begin' page.",
+    "confidence": 0.9,
+    "interaction_target": "Continue button",
+    "cursor_position_x": 600,
+    "cursor_position_y": 720,
+    "frame_description": "The user confirms they meet the initial criteria."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 26250,
+    "time_end_ms": 26750,
+    "description": "The 'Let's find your property' page loads.",
+    "confidence": 0.9,
+    "page_title": "Let's find your property",
+    "frame_description": "A form page appears asking for property address and details."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 28350,
+    "time_end_ms": 28450,
+    "description": "User clicks into the 'What's your property address?' input field.",
+    "confidence": 0.9,
+    "interaction_target": "Property address input field",
+    "cursor_position_x": 450,
+    "cursor_position_y": 300,
+    "frame_description": "The address field is focused, ready for text input."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 31500,
+    "time_end_ms": 33550,
+    "description": "User types '11 d' into the address field.",
+    "confidence": 0.9,
+    "interaction_target": "Property address input field",
+    "frame_description": "Characters appear in the address field as the user types."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 33550,
+    "time_end_ms": 34650,
+    "description": "An address autocomplete dropdown appears.",
+    "confidence": 0.9,
+    "frame_description": "A list of suggested addresses appears below the input field."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 34650,
+    "time_end_ms": 38400,
+    "description": "User continues typing 'wyer st' to refine the address search.",
+    "confidence": 0.9,
+    "interaction_target": "Property address input field",
+    "frame_description": "The user types more characters and the suggestions update."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 41300,
+    "time_end_ms": 41800,
+    "description": "User selects '11 Dwyer Street, Cavendish VIC 3314' from the suggestions.",
+    "confidence": 0.9,
+    "interaction_target": "Address suggestion item",
+    "frame_description": "The user clicks a specific address from the dropdown list."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 42100,
+    "time_end_ms": 42450,
+    "description": "User clicks the 'Property type' dropdown.",
+    "confidence": 0.9,
+    "interaction_target": "Property type dropdown",
+    "cursor_position_x": 450,
+    "cursor_position_y": 420,
+    "frame_description": "The user activates the dropdown to select a property type."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 42450,
+    "time_end_ms": 42550,
+    "description": "The property type dropdown menu opens.",
+    "confidence": 0.9,
+    "frame_description": "A list of options (House, Townhouse, etc.) is displayed."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 42900,
+    "time_end_ms": 43350,
+    "description": "User selects 'House' from the property type menu.",
+    "confidence": 0.9,
+    "interaction_target": "House option",
+    "frame_description": "The user chooses 'House' and the menu closes."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 44400,
+    "time_end_ms": 44750,
+    "description": "User clicks into the 'Estimated property value' input field.",
+    "confidence": 0.9,
+    "interaction_target": "Estimated property value input",
+    "cursor_position_x": 450,
+    "cursor_position_y": 650,
+    "frame_description": "The property value field is focused."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 45900,
+    "time_end_ms": 46950,
+    "description": "User types '800000' into the property value field.",
+    "confidence": 0.9,
+    "interaction_target": "Estimated property value input",
+    "frame_description": "The value '800,000' is entered into the field."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 49650,
+    "time_end_ms": 49800,
+    "description": "User clicks the 'Next' button.",
+    "confidence": 0.9,
+    "interaction_target": "Next button",
+    "cursor_position_x": 600,
+    "cursor_position_y": 950,
+    "frame_description": "The user submits the property details."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 49800,
+    "time_end_ms": 51300,
+    "description": "The 'Tell us about your loan' page loads.",
+    "confidence": 0.9,
+    "page_title": "Tell us about your loan",
+    "frame_description": "A new form page appears asking for loan details and borrower information."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 54350,
+    "time_end_ms": 54850,
+    "description": "User clicks the 'Two of us' radio button for 'Who is this loan for?'.",
+    "confidence": 0.9,
+    "interaction_target": "Two of us radio button",
+    "cursor_position_x": 250,
+    "cursor_position_y": 200,
+    "frame_description": "The user indicates there are two borrowers."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 54850,
+    "time_end_ms": 54950,
+    "description": "Input fields for borrower names appear on the screen.",
+    "confidence": 0.9,
+    "frame_description": "Two text fields for first names are dynamically added to the form."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 58800,
+    "time_end_ms": 59450,
+    "description": "User types 'serene' into the first name field.",
+    "confidence": 0.9,
+    "interaction_target": "First name input field",
+    "frame_description": "The user enters their name."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 60950,
+    "time_end_ms": 61800,
+    "description": "User types 'ned' into the co-borrower's first name field.",
+    "confidence": 0.9,
+    "interaction_target": "Co-borrower first name input field",
+    "frame_description": "The user enters the second borrower's name."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 67650,
+    "time_end_ms": 68150,
+    "description": "User hovers over the 'Borrow more money' radio button.",
+    "confidence": 0.8,
+    "interaction_target": "Borrow more money radio button",
+    "frame_description": "The cursor pauses over the 'Borrow more money' option."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 68950,
+    "time_end_ms": 69100,
+    "description": "User clicks the 'Save money' radio button.",
+    "confidence": 0.9,
+    "interaction_target": "Save money radio button",
+    "cursor_position_x": 250,
+    "cursor_position_y": 700,
+    "frame_description": "The user selects 'Save money' as the reason for refinancing."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 69600,
+    "time_end_ms": 70050,
+    "description": "User clicks into the refinance amount input field.",
+    "confidence": 0.9,
+    "interaction_target": "Refinance amount input field",
+    "cursor_position_x": 450,
+    "cursor_position_y": 850,
+    "frame_description": "The amount field is focused."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 73150,
+    "time_end_ms": 74150,
+    "description": "User types '500000' into the refinance amount field.",
+    "confidence": 0.9,
+    "interaction_target": "Refinance amount input field",
+    "frame_description": "The value '500,000' is entered."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 78500,
+    "time_end_ms": 78725,
+    "description": "User clicks the 'Next' button at the bottom of the form.",
+    "confidence": 0.9,
+    "interaction_target": "Next button",
+    "cursor_position_x": 600,
+    "cursor_position_y": 950,
+    "frame_description": "The user submits the loan details to proceed."
+  }
+]

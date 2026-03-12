@@ -1,0 +1,129 @@
+[
+  {
+    "type": "scroll",
+    "time_start_ms": 0,
+    "time_end_ms": 1900,
+    "description": "The user scrolls down the 'Filter Opportunities' modal, moving past the 'Duration' and 'Pay Rate' sections to reveal 'Device' and 'Advanced Options'.",
+    "confidence": 0.9,
+    "interaction_target": "Filter Opportunities modal",
+    "page_title": "Explore",
+    "frame_description": "The 'Filter Opportunities' modal is open over the 'Explore' page, showing various filter options like Duration, Pay Rate, and Device."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 1900,
+    "time_end_ms": 3250,
+    "description": "The cursor moves from the bottom of the modal up to the 'X' close button in the top right corner and lingers there briefly.",
+    "confidence": 0.8,
+    "interaction_target": "Close button (X)",
+    "cursor_position_x": 600,
+    "cursor_position_y": 210,
+    "page_title": "Explore",
+    "frame_description": "The cursor is positioned over the 'X' icon at the top right of the 'Filter Opportunities' modal."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 3250,
+    "time_end_ms": 3450,
+    "description": "The user clicks the 'X' button to close the filter modal.",
+    "confidence": 1.0,
+    "interaction_target": "Close button (X)",
+    "cursor_position_x": 600,
+    "cursor_position_y": 210,
+    "page_title": "Explore",
+    "frame_description": "The 'X' button is clicked, initiating the closing of the modal."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 3450,
+    "time_end_ms": 3800,
+    "description": "The 'Filter Opportunities' modal slides down and disappears, revealing the 'Explore' page with a list of opportunity cards.",
+    "confidence": 1.0,
+    "page_title": "Explore",
+    "frame_description": "The modal is gone, and the main 'Explore' screen is visible with sections like 'Short tasks & surveys' and 'Sessions to schedule'."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 3800,
+    "time_end_ms": 13100,
+    "description": "The user scrolls down through the list of opportunities on the Explore page.",
+    "confidence": 0.9,
+    "interaction_target": "Opportunities list",
+    "page_title": "Explore",
+    "frame_description": "The user is scrolling through various opportunity cards like 'AI Interview', 'Video Call', and 'Diary Study'."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 13100,
+    "time_end_ms": 13900,
+    "description": "The cursor pauses over a 'Survey' card titled 'People who bought food on a delivery app recently'.",
+    "confidence": 0.7,
+    "interaction_target": "Survey card",
+    "cursor_position_x": 550,
+    "cursor_position_y": 350,
+    "page_title": "Explore",
+    "frame_description": "The cursor is stationary over one of the opportunity cards in the list."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 13900,
+    "time_end_ms": 21350,
+    "description": "The user continues scrolling down the list of opportunities.",
+    "confidence": 0.9,
+    "interaction_target": "Opportunities list",
+    "page_title": "Explore",
+    "frame_description": "More opportunity cards are revealed as the user scrolls down."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 21350,
+    "time_end_ms": 24050,
+    "description": "The user scrolls back up the list of opportunities.",
+    "confidence": 0.9,
+    "interaction_target": "Opportunities list",
+    "page_title": "Explore",
+    "frame_description": "The user is scrolling upwards, revisiting previously seen cards."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 24050,
+    "time_end_ms": 27800,
+    "description": "The user scrolls down the list again.",
+    "confidence": 0.9,
+    "interaction_target": "Opportunities list",
+    "page_title": "Explore",
+    "frame_description": "The user is scrolling down the list once more."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 27800,
+    "time_end_ms": 30000,
+    "description": "The user scrolls back up to the top of the Explore page.",
+    "confidence": 0.9,
+    "interaction_target": "Opportunities list",
+    "page_title": "Explore",
+    "frame_description": "The top of the Explore page is visible again."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 30000,
+    "time_end_ms": 32800,
+    "description": "The cursor hovers over the 'Survey' card at the top right of the 'Short tasks & surveys' section.",
+    "confidence": 0.8,
+    "interaction_target": "Survey card",
+    "cursor_position_x": 580,
+    "cursor_position_y": 300,
+    "page_title": "Explore",
+    "frame_description": "The cursor is lingering on the 'Survey' card for delivery app users."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 32800,
+    "time_end_ms": 82593,
+    "description": "The user performs a series of rapid up and down scrolls through the opportunities list until the end of the segment.",
+    "confidence": 0.9,
+    "interaction_target": "Opportunities list",
+    "page_title": "Explore",
+    "frame_description": "The user is quickly scrolling through the list of available tasks and sessions."
+  }
+]

@@ -1,0 +1,193 @@
+[
+  {
+    "type": "click",
+    "time_start_ms": 450,
+    "time_end_ms": 450,
+    "description": "User clicks the 'Begin task' button on the Task #1 heatmap screen.",
+    "confidence": 0.95,
+    "interaction_target": "Begin task button",
+    "cursor_position_x": 460,
+    "cursor_position_y": 520,
+    "page_title": "Askable Website Test - Unmod results",
+    "page_location": "app.askable.com/studies/60795d30db4b5b42e161891e/results/task/607f16d71d8c0071c1b42119?firstTaskBlock=true",
+    "frame_description": "Task #1 heatmap view with a 'Begin task' button in the center."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 500,
+    "time_end_ms": 5000,
+    "description": "The prototype screen transitions from the task introduction to the 'Explore' page.",
+    "confidence": 0.9,
+    "frame_description": "Loading state followed by the appearance of the 'Explore' prototype screen."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 7100,
+    "time_end_ms": 7900,
+    "description": "User scrolls down on the 'Explore' prototype screen to view more opportunities.",
+    "confidence": 0.8,
+    "frame_description": "The 'Explore' screen content shifts upwards as the user scrolls down."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 8000,
+    "time_end_ms": 8800,
+    "description": "User scrolls back up to the top of the 'Explore' prototype screen.",
+    "confidence": 0.8,
+    "frame_description": "The 'Explore' screen content shifts downwards as the user scrolls back up."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 26550,
+    "time_end_ms": 26650,
+    "description": "The prototype screen automatically transitions to the 'Profile' page.",
+    "confidence": 0.9,
+    "frame_description": "The 'Explore' screen is replaced by the 'Profile' screen in the prototype viewer."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 33050,
+    "time_end_ms": 33050,
+    "description": "User clicks on the 'Recordings' tab in the top navigation bar of the results viewer.",
+    "confidence": 0.95,
+    "interaction_target": "Recordings tab",
+    "cursor_position_x": 470,
+    "cursor_position_y": 190,
+    "page_title": "Askable Website Test - Unmod results",
+    "frame_description": "The user moves the cursor to the 'Recordings' tab and clicks it."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 33100,
+    "time_end_ms": 33400,
+    "description": "The UI updates to show the list of participant recordings.",
+    "confidence": 0.9,
+    "frame_description": "A list of participants with their recording durations appears on the left side of the overlay."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 39100,
+    "time_end_ms": 39600,
+    "description": "User hovers the cursor over the 'Close' (X) button in the top right corner.",
+    "confidence": 0.85,
+    "interaction_target": "Close button",
+    "cursor_position_x": 960,
+    "cursor_position_y": 150,
+    "frame_description": "The cursor lingers over the 'X' button before clicking."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 39600,
+    "time_end_ms": 39600,
+    "description": "User clicks the 'Close' button to exit the recordings overlay.",
+    "confidence": 0.95,
+    "interaction_target": "Close button",
+    "cursor_position_x": 960,
+    "cursor_position_y": 150,
+    "frame_description": "The user clicks the 'X' button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 40750,
+    "time_end_ms": 40850,
+    "description": "The recordings overlay closes, returning the user to the main study results page.",
+    "confidence": 0.9,
+    "frame_description": "The overlay disappears, revealing the 'Path analysis' and study summary page."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 41100,
+    "time_end_ms": 42500,
+    "description": "User scrolls down the results page to view more study metrics and paths.",
+    "confidence": 0.8,
+    "frame_description": "The results page content scrolls vertically."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 43400,
+    "time_end_ms": 44100,
+    "description": "User scrolls back up the results page.",
+    "confidence": 0.8,
+    "frame_description": "The results page content scrolls back up."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 44250,
+    "time_end_ms": 44250,
+    "description": "User clicks on a specific question in the left sidebar to view its detailed results.",
+    "confidence": 0.95,
+    "interaction_target": "Question: 'What do you think a reasonable minimum withdrawal amount would be?'",
+    "cursor_position_x": 150,
+    "cursor_position_y": 450,
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "frame_description": "The user selects a question from the list on the left."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 44900,
+    "time_end_ms": 45100,
+    "description": "The main content area updates to display the results for the selected question.",
+    "confidence": 0.9,
+    "frame_description": "The results for the withdrawal amount question load into the main view."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 59800,
+    "time_end_ms": 60250,
+    "description": "User hovers over the 'Filters' button in the top right.",
+    "confidence": 0.85,
+    "interaction_target": "Filters button",
+    "cursor_position_x": 940,
+    "cursor_position_y": 190,
+    "frame_description": "The cursor pauses over the 'Filters' button."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 60250,
+    "time_end_ms": 60250,
+    "description": "User clicks the 'Filters' button to open the filtering options.",
+    "confidence": 0.95,
+    "interaction_target": "Filters button",
+    "cursor_position_x": 940,
+    "cursor_position_y": 190,
+    "frame_description": "The user clicks the 'Filters' button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 60850,
+    "time_end_ms": 61000,
+    "description": "The Filters sidebar slides out from the right side of the screen.",
+    "confidence": 0.9,
+    "frame_description": "A sidebar containing filter options appears on the right."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 62050,
+    "time_end_ms": 63950,
+    "description": "User hovers over the 'Hide filter' eye icon next to an active filter.",
+    "confidence": 0.85,
+    "interaction_target": "Hide filter icon",
+    "cursor_position_x": 950,
+    "cursor_position_y": 280,
+    "frame_description": "The cursor lingers over the eye icon in the Filters sidebar."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 63950,
+    "time_end_ms": 63950,
+    "description": "User clicks the 'Hide filter' icon to disable the current filter.",
+    "confidence": 0.95,
+    "interaction_target": "Hide filter icon",
+    "cursor_position_x": 950,
+    "cursor_position_y": 280,
+    "frame_description": "The user clicks the eye icon."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 64050,
+    "time_end_ms": 64200,
+    "description": "The filter is disabled and the results in the main view update accordingly.",
+    "confidence": 0.9,
+    "frame_description": "The results data refreshes as the filter is removed."
+  }
+]

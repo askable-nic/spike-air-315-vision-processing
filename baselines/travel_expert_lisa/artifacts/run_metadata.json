@@ -1,0 +1,99 @@
+{
+  "session": "travel_expert_lisa",
+  "timestamp": "2026-03-12T11:57:22.995135+00:00",
+  "config": {
+    "model": "gemini-3-flash-preview",
+    "temperature": 0.2,
+    "max_concurrent": 3,
+    "video_fps": 20,
+    "max_segment_duration_ms": 75000,
+    "segment_overlap_ms": 5000,
+    "source": "gemini_video_baseline",
+    "merge": {
+      "time_tolerance_ms": 2000,
+      "similarity_threshold": 0.6,
+      "discard_context_events": false
+    }
+  },
+  "video_duration_ms": 656260.623,
+  "video_path": "input_data/screen_tracks_normalized/travel_expert_lisa.mp4",
+  "segments": [
+    {
+      "index": 0,
+      "start_ms": 0.0,
+      "end_ms": 77917.84700000001,
+      "event_count": 11,
+      "input_tokens": 95184,
+      "output_tokens": 1403
+    },
+    {
+      "index": 1,
+      "start_ms": 67917.84700000001,
+      "end_ms": 150835.69400000002,
+      "event_count": 19,
+      "input_tokens": 101309,
+      "output_tokens": 2321
+    },
+    {
+      "index": 2,
+      "start_ms": 140835.69400000002,
+      "end_ms": 223753.54100000003,
+      "event_count": 16,
+      "input_tokens": 101130,
+      "output_tokens": 2277
+    },
+    {
+      "index": 3,
+      "start_ms": 213753.54100000003,
+      "end_ms": 296671.38800000004,
+      "event_count": 58,
+      "input_tokens": 99630,
+      "output_tokens": 5584
+    },
+    {
+      "index": 4,
+      "start_ms": 286671.38800000004,
+      "end_ms": 369589.23500000004,
+      "event_count": 25,
+      "input_tokens": 101430,
+      "output_tokens": 3141
+    },
+    {
+      "index": 5,
+      "start_ms": 359589.23500000004,
+      "end_ms": 442507.08200000005,
+      "event_count": 18,
+      "input_tokens": 101730,
+      "output_tokens": 2313
+    },
+    {
+      "index": 6,
+      "start_ms": 432507.08200000005,
+      "end_ms": 515424.92900000006,
+      "event_count": 30,
+      "input_tokens": 98670,
+      "output_tokens": 3646
+    },
+    {
+      "index": 7,
+      "start_ms": 505424.92900000006,
+      "end_ms": 588342.7760000001,
+      "event_count": 23,
+      "input_tokens": 101130,
+      "output_tokens": 4052
+    },
+    {
+      "index": 8,
+      "start_ms": 578342.7760000001,
+      "end_ms": 656260.623,
+      "event_count": 13,
+      "input_tokens": 94050,
+      "output_tokens": 1636
+    }
+  ],
+  "total_events_merged": 213,
+  "total_events_deduped": 178,
+  "total_input_tokens": 894263,
+  "total_output_tokens": 26373,
+  "analysis_time_ms": 266476.4
+}

@@ -1,0 +1,496 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 0,
+    "time_end_ms": 6300,
+    "description": "Loading screen with plane animation between Maroochydore and London.",
+    "confidence": 1.0,
+    "interaction_target": "Loading screen",
+    "frame_description": "A red and white loading screen for WebJet showing a flight path from Maroochydore to London."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 6300,
+    "time_end_ms": 6500,
+    "description": "Search results page loads.",
+    "confidence": 1.0,
+    "page_title": "Flight Search",
+    "page_location": "https://www.webjet.com.au/flights/results/",
+    "frame_description": "The search results page for flights from Maroochydore to London is displayed."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 9100,
+    "time_end_ms": 10000,
+    "description": "User scrolls down the results list.",
+    "confidence": 0.9,
+    "frame_description": "The user is scrolling down the page to view more flight options."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 10300,
+    "time_end_ms": 10350,
+    "description": "User clicks 'View Details' on the first flight result.",
+    "confidence": 1.0,
+    "interaction_target": "View Details button",
+    "cursor_position_x": 780,
+    "cursor_position_y": 750,
+    "frame_description": "The cursor is over the 'View Details' button of the first flight result."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 10350,
+    "time_end_ms": 10800,
+    "description": "Flight details section expands.",
+    "confidence": 1.0,
+    "frame_description": "The flight details section for the first result expands to show more information."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 11000,
+    "time_end_ms": 12000,
+    "description": "User scrolls down.",
+    "confidence": 0.9,
+    "frame_description": "User continues scrolling down the list of flight results."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 12000,
+    "time_end_ms": 13200,
+    "description": "User hovers over 'View Details' button.",
+    "confidence": 0.8,
+    "interaction_target": "View Details button",
+    "frame_description": "The cursor lingers over the 'View Details' button of the second flight result."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 13200,
+    "time_end_ms": 13250,
+    "description": "User clicks 'View Details' on the second flight result.",
+    "confidence": 1.0,
+    "interaction_target": "View Details button",
+    "frame_description": "The user clicks the 'View Details' button for the second flight option."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 13250,
+    "time_end_ms": 13700,
+    "description": "Flight details section expands.",
+    "confidence": 1.0,
+    "frame_description": "The details for the second flight result are now visible."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 14000,
+    "time_end_ms": 15000,
+    "description": "User scrolls down.",
+    "confidence": 0.9,
+    "frame_description": "User scrolls further down the page."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 15500,
+    "time_end_ms": 15550,
+    "description": "User clicks 'View Details' on the third flight result.",
+    "confidence": 1.0,
+    "interaction_target": "View Details button",
+    "frame_description": "User clicks to see details for the third flight result."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 15550,
+    "time_end_ms": 16000,
+    "description": "Flight details section expands.",
+    "confidence": 1.0,
+    "frame_description": "The third flight's details are expanded."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 16000,
+    "time_end_ms": 17000,
+    "description": "User scrolls down.",
+    "confidence": 0.9,
+    "frame_description": "User scrolls down the results page."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 17000,
+    "time_end_ms": 18500,
+    "description": "User hovers over 'View Details' button.",
+    "confidence": 0.8,
+    "interaction_target": "View Details button",
+    "frame_description": "Cursor is positioned over the 'View Details' button of the fourth result."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 18500,
+    "time_end_ms": 18550,
+    "description": "User clicks 'View Details' on the fourth flight result.",
+    "confidence": 1.0,
+    "interaction_target": "View Details button",
+    "frame_description": "User clicks the 'View Details' button for the fourth flight."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 18550,
+    "time_end_ms": 19000,
+    "description": "Flight details section expands.",
+    "confidence": 1.0,
+    "frame_description": "Details for the fourth flight result are displayed."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 19000,
+    "time_end_ms": 20000,
+    "description": "User scrolls down.",
+    "confidence": 0.9,
+    "frame_description": "User scrolls down the list."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 20900,
+    "time_end_ms": 20950,
+    "description": "User clicks 'View Details' on the fifth flight result.",
+    "confidence": 1.0,
+    "interaction_target": "View Details button",
+    "frame_description": "User clicks the 'View Details' button for the fifth flight."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 20950,
+    "time_end_ms": 21400,
+    "description": "Flight details section expands.",
+    "confidence": 1.0,
+    "frame_description": "Details for the fifth flight result are expanded."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 21500,
+    "time_end_ms": 22500,
+    "description": "User scrolls down.",
+    "confidence": 0.9,
+    "frame_description": "User scrolls down the results page."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 23200,
+    "time_end_ms": 23250,
+    "description": "User clicks 'View Details' on the sixth flight result.",
+    "confidence": 1.0,
+    "interaction_target": "View Details button",
+    "frame_description": "User clicks the 'View Details' button for the sixth flight."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 23250,
+    "time_end_ms": 23700,
+    "description": "Flight details section expands.",
+    "confidence": 1.0,
+    "frame_description": "Details for the sixth flight result are shown."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 24000,
+    "time_end_ms": 25500,
+    "description": "User scrolls down.",
+    "confidence": 0.9,
+    "frame_description": "User scrolls down the page."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 25500,
+    "time_end_ms": 26500,
+    "description": "User hovers over 'View Details' button.",
+    "confidence": 0.8,
+    "interaction_target": "View Details button",
+    "frame_description": "Cursor hovers over the 'View Details' button of the seventh result."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 26500,
+    "time_end_ms": 26550,
+    "description": "User clicks 'View Details' on the seventh flight result.",
+    "confidence": 1.0,
+    "interaction_target": "View Details button",
+    "frame_description": "User clicks the 'View Details' button for the seventh flight."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 26550,
+    "time_end_ms": 27000,
+    "description": "Flight details section expands.",
+    "confidence": 1.0,
+    "frame_description": "Details for the seventh flight result are expanded."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 27500,
+    "time_end_ms": 28500,
+    "description": "User scrolls down.",
+    "confidence": 0.9,
+    "frame_description": "User scrolls down the list."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 29200,
+    "time_end_ms": 29250,
+    "description": "User clicks 'View Details' on the eighth flight result.",
+    "confidence": 1.0,
+    "interaction_target": "View Details button",
+    "frame_description": "User clicks the 'View Details' button for the eighth flight."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 29250,
+    "time_end_ms": 29700,
+    "description": "Flight details section expands.",
+    "confidence": 1.0,
+    "frame_description": "Details for the eighth flight result are displayed."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 30000,
+    "time_end_ms": 31000,
+    "description": "User scrolls down.",
+    "confidence": 0.9,
+    "frame_description": "User scrolls down the results page."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 31000,
+    "time_end_ms": 32200,
+    "description": "User hovers over 'View Details' button.",
+    "confidence": 0.8,
+    "interaction_target": "View Details button",
+    "frame_description": "Cursor hovers over the 'View Details' button of the ninth result."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 32200,
+    "time_end_ms": 32250,
+    "description": "User clicks 'View Details' on the ninth flight result.",
+    "confidence": 1.0,
+    "interaction_target": "View Details button",
+    "frame_description": "User clicks the 'View Details' button for the ninth flight."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 32250,
+    "time_end_ms": 32700,
+    "description": "Flight details section expands.",
+    "confidence": 1.0,
+    "frame_description": "Details for the ninth flight result are expanded."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 33000,
+    "time_end_ms": 34000,
+    "description": "User scrolls down.",
+    "confidence": 0.9,
+    "frame_description": "User scrolls down the page."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 34000,
+    "time_end_ms": 35500,
+    "description": "User hovers over 'View Details' button.",
+    "confidence": 0.8,
+    "interaction_target": "View Details button",
+    "frame_description": "Cursor hovers over the 'View Details' button of the tenth result."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 35500,
+    "time_end_ms": 35550,
+    "description": "User clicks 'View Details' on the tenth flight result.",
+    "confidence": 1.0,
+    "interaction_target": "View Details button",
+    "frame_description": "User clicks the 'View Details' button for the tenth flight."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 35550,
+    "time_end_ms": 36000,
+    "description": "Flight details section expands.",
+    "confidence": 1.0,
+    "frame_description": "Details for the tenth flight result are shown."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 36000,
+    "time_end_ms": 37000,
+    "description": "User scrolls down.",
+    "confidence": 0.9,
+    "frame_description": "User scrolls down the list."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 37000,
+    "time_end_ms": 38500,
+    "description": "User hovers over 'View Details' button.",
+    "confidence": 0.8,
+    "interaction_target": "View Details button",
+    "frame_description": "Cursor hovers over the 'View Details' button of the eleventh result."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 38500,
+    "time_end_ms": 38550,
+    "description": "User clicks 'View Details' on the eleventh flight result.",
+    "confidence": 1.0,
+    "interaction_target": "View Details button",
+    "frame_description": "User clicks the 'View Details' button for the eleventh flight."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 38550,
+    "time_end_ms": 39000,
+    "description": "Flight details section expands.",
+    "confidence": 1.0,
+    "frame_description": "Details for the eleventh flight result are expanded."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 39000,
+    "time_end_ms": 40000,
+    "description": "User scrolls down.",
+    "confidence": 0.9,
+    "frame_description": "User scrolls down the results page."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 40000,
+    "time_end_ms": 41500,
+    "description": "User hovers over 'View Details' button.",
+    "confidence": 0.8,
+    "interaction_target": "View Details button",
+    "frame_description": "Cursor hovers over the 'View Details' button of the twelfth result."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 41500,
+    "time_end_ms": 41550,
+    "description": "User clicks 'View Details' on the twelfth flight result.",
+    "confidence": 1.0,
+    "interaction_target": "View Details button",
+    "frame_description": "User clicks the 'View Details' button for the twelfth flight."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 41550,
+    "time_end_ms": 42000,
+    "description": "Flight details section expands.",
+    "confidence": 1.0,
+    "frame_description": "Details for the twelfth flight result are displayed."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 42000,
+    "time_end_ms": 43200,
+    "description": "User scrolls down.",
+    "confidence": 0.9,
+    "frame_description": "User scrolls down the page."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 43200,
+    "time_end_ms": 43250,
+    "description": "User clicks 'View Details' on the thirteenth flight result.",
+    "confidence": 1.0,
+    "interaction_target": "View Details button",
+    "frame_description": "User clicks the 'View Details' button for the thirteenth flight."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 43250,
+    "time_end_ms": 43700,
+    "description": "Flight details section expands.",
+    "confidence": 1.0,
+    "frame_description": "Details for the thirteenth flight result are expanded."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 44000,
+    "time_end_ms": 45000,
+    "description": "User scrolls down.",
+    "confidence": 0.9,
+    "frame_description": "User scrolls down the list."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 45000,
+    "time_end_ms": 46500,
+    "description": "User hovers over 'View Details' button.",
+    "confidence": 0.8,
+    "interaction_target": "View Details button",
+    "frame_description": "Cursor hovers over the 'View Details' button of the fourteenth result."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 46500,
+    "time_end_ms": 46550,
+    "description": "User clicks 'View Details' on the fourteenth flight result.",
+    "confidence": 1.0,
+    "interaction_target": "View Details button",
+    "frame_description": "User clicks the 'View Details' button for the fourteenth flight."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 46550,
+    "time_end_ms": 47000,
+    "description": "Flight details section expands.",
+    "confidence": 1.0,
+    "frame_description": "Details for the fourteenth flight result are shown."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 47000,
+    "time_end_ms": 48000,
+    "description": "User scrolls down the results page.",
+    "confidence": 0.9,
+    "frame_description": "User scrolls down the results page."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 48000,
+    "time_end_ms": 49500,
+    "description": "User hovers over 'View Details' button.",
+    "confidence": 0.8,
+    "interaction_target": "View Details button",
+    "frame_description": "Cursor hovers over the 'View Details' button of the fifteenth result."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 49500,
+    "time_end_ms": 49550,
+    "description": "User clicks 'View Details' on the fifteenth flight result.",
+    "confidence": 1.0,
+    "interaction_target": "View Details button",
+    "frame_description": "User clicks the 'View Details' button for the fifteenth flight."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 49550,
+    "time_end_ms": 50000,
+    "description": "Flight details section expands.",
+    "confidence": 1.0,
+    "frame_description": "Details for the fifteenth flight result are expanded."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 50800,
+    "time_end_ms": 67000,
+    "description": "User scrolls down through the remaining flight results.",
+    "confidence": 0.9,
+    "frame_description": "User performs a long scroll down the results page."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 67750,
+    "time_end_ms": 68500,
+    "description": "User switches browser tab to 'askable sessions'.",
+    "confidence": 1.0,
+    "page_title": "askable sessions",
+    "frame_description": "The user switches to the Askable sessions tab."
+  }
+]

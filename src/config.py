@@ -5,7 +5,7 @@ from typing import Any
 
 import yaml
 
-from src.models import PipelineConfig
+from src.models import GenerateBaselinesConfig, PipelineConfig
 
 
 DEFAULTS: dict[str, Any] = {
@@ -103,6 +103,20 @@ DEFAULTS: dict[str, Any] = {
         "baseline_max_gap_ms": 5000,
         "frame_dedup_ms": 200,
     },
+    "generate_baselines": {
+        "model": "gemini-3-flash-preview",
+        "temperature": 0.2,
+        "max_concurrent": 3,
+        "video_fps": 20,
+        "max_segment_duration_ms": 75000,
+        "segment_overlap_ms": 5000,
+        "source": "gemini_video_baseline",
+        "merge": {
+            "time_tolerance_ms": 2000,
+            "similarity_threshold": 0.6,
+            "discard_context_events": False,
+        },
+    },
 }
 
 
@@ -174,3 +188,14 @@ def resolve_config(
     merged = deep_merge(merged, cli_config)
 
     return PipelineConfig(**merged)
+
+
+def resolve_generate_baselines_config(
+    cli_overrides: tuple[str, ...] = (),
+) -> GenerateBaselinesConfig:
+    """Apply 2-layer config precedence for generate-baselines: defaults -> CLI overrides."""
+    base = dict(DEFAULTS.get("generate_baselines", {}))
+    cli_config = _expand_dotted_overrides(cli_overrides)
+    gb_overrides = cli_config.get("generate_baselines", cli_config)
+    merged = deep_merge(base, gb_overrides)
+    return GenerateBaselinesConfig(**merged)

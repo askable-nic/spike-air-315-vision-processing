@@ -1,0 +1,198 @@
+[
+  {
+    "type": "hover",
+    "time_start_ms": 0,
+    "time_end_ms": 1000,
+    "description": "User hovers over the information icon for the 'Minimum cover for rental car excess' slider.",
+    "confidence": 0.9,
+    "interaction_target": "Rental car excess info icon",
+    "cursor_position_x": 380,
+    "cursor_position_y": 420,
+    "page_title": "Cover levels",
+    "page_location": "comparethemarket.com.au/travel/compare/nz/p/vth/cover-levels",
+    "frame_description": "The user is on the 'Cover levels' page, looking at the minimum cover sliders."
+  },
+  {
+    "type": "drag",
+    "time_start_ms": 2800,
+    "time_end_ms": 3800,
+    "description": "User drags the 'Minimum cover for rental car excess' slider handle to increase the amount.",
+    "confidence": 0.95,
+    "interaction_target": "Rental car excess slider",
+    "cursor_position_x": 200,
+    "cursor_position_y": 440,
+    "page_title": "Cover levels",
+    "frame_description": "The user interacts with the rental car excess slider, moving it from $2,000 to $3,000."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 3400,
+    "time_end_ms": 3800,
+    "description": "The value for rental car excess updates on screen as the slider is moved.",
+    "confidence": 0.9,
+    "interaction_target": "Rental car excess value display",
+    "frame_description": "The numerical value above the slider handle changes to reflect the new selection."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 6500,
+    "time_end_ms": 7500,
+    "description": "User hovers over the information icon for the 'Pre-existing medical conditions' section.",
+    "confidence": 0.85,
+    "interaction_target": "Pre-existing medical conditions info icon",
+    "cursor_position_x": 380,
+    "cursor_position_y": 465,
+    "frame_description": "The cursor pauses over the info icon next to the medical conditions heading."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 9800,
+    "time_end_ms": 11000,
+    "description": "User hovers over the checkbox for pre-existing medical conditions assessment.",
+    "confidence": 0.85,
+    "interaction_target": "Medical conditions checkbox",
+    "cursor_position_x": 110,
+    "cursor_position_y": 485,
+    "frame_description": "The cursor lingers over the checkbox before clicking."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 12200,
+    "time_end_ms": 12800,
+    "description": "User clicks the checkbox 'Only show policies that allow assessment of pre-existing medical conditions?'.",
+    "confidence": 0.95,
+    "interaction_target": "Medical conditions checkbox",
+    "cursor_position_x": 110,
+    "cursor_position_y": 485,
+    "frame_description": "The user activates the checkbox to filter policies based on medical assessment."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 12750,
+    "time_end_ms": 12850,
+    "description": "A checkmark appears in the medical conditions checkbox.",
+    "confidence": 0.9,
+    "interaction_target": "Medical conditions checkbox",
+    "frame_description": "The UI updates to show the checkbox is now selected."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 13300,
+    "time_end_ms": 14100,
+    "description": "User clicks the 'Continue' button at the bottom of the Cover levels page.",
+    "confidence": 0.95,
+    "interaction_target": "Continue button",
+    "cursor_position_x": 150,
+    "cursor_position_y": 565,
+    "frame_description": "The user proceeds to the next step of the quote process."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 14100,
+    "time_end_ms": 16800,
+    "description": "The page navigates from 'Cover levels' to the 'Contact details' section.",
+    "confidence": 0.95,
+    "page_title": "Contact details",
+    "page_location": "comparethemarket.com.au/travel/compare/nz/p/vth/contact-details",
+    "frame_description": "The screen transitions to a new page containing form fields for personal details."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 16800,
+    "time_end_ms": 17500,
+    "description": "User scrolls down the Contact details page to view the 'Your details' form.",
+    "confidence": 0.9,
+    "frame_description": "The page content moves vertically to bring the input fields into view."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 26300,
+    "time_end_ms": 26800,
+    "description": "User hovers over the 'See results' button before starting to fill the form.",
+    "confidence": 0.85,
+    "interaction_target": "See results button",
+    "cursor_position_x": 150,
+    "cursor_position_y": 585,
+    "frame_description": "The cursor briefly pauses on the primary action button."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 28200,
+    "time_end_ms": 28700,
+    "description": "User clicks into the 'First name' input field.",
+    "confidence": 0.95,
+    "interaction_target": "First name input",
+    "cursor_position_x": 150,
+    "cursor_position_y": 455,
+    "frame_description": "The user focuses the first name field to begin typing."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 28700,
+    "time_end_ms": 33500,
+    "description": "User types 'Sophia' into the First name field.",
+    "confidence": 0.95,
+    "interaction_target": "First name input",
+    "frame_description": "The name 'Sophia' appears character by character in the text box."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 33500,
+    "time_end_ms": 34000,
+    "description": "User clicks into the 'Last name' input field.",
+    "confidence": 0.95,
+    "interaction_target": "Last name input",
+    "cursor_position_x": 450,
+    "cursor_position_y": 455,
+    "frame_description": "The user moves focus to the last name field."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 34000,
+    "time_end_ms": 39500,
+    "description": "User types 'Jayde' into the Last name field.",
+    "confidence": 0.95,
+    "interaction_target": "Last name input",
+    "frame_description": "The name 'Jayde' is entered into the form."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 40500,
+    "time_end_ms": 41500,
+    "description": "User clicks into the 'Email' input field.",
+    "confidence": 0.95,
+    "interaction_target": "Email input",
+    "cursor_position_x": 150,
+    "cursor_position_y": 520,
+    "frame_description": "The user focuses the email address field."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 41500,
+    "time_end_ms": 50000,
+    "description": "User types their email address into the form.",
+    "confidence": 0.95,
+    "interaction_target": "Email input",
+    "frame_description": "The user enters a full email address into the text field."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 50000,
+    "time_end_ms": 51000,
+    "description": "User clicks the 'See results' button to submit the form.",
+    "confidence": 0.95,
+    "interaction_target": "See results button",
+    "cursor_position_x": 150,
+    "cursor_position_y": 585,
+    "frame_description": "The user triggers the final submission to view insurance quotes."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 51000,
+    "time_end_ms": 84011,
+    "description": "A loading screen with meerkats appears while the results are being fetched.",
+    "confidence": 0.9,
+    "interaction_target": "Loading overlay",
+    "frame_description": "The form disappears and is replaced by a full-screen loading animation featuring the brand's meerkat characters."
+  }
+]

@@ -1,0 +1,283 @@
+[
+  {
+    "type": "click",
+    "time_start_ms": 1700,
+    "time_end_ms": 1750,
+    "description": "User clicks on the sidebar item 'I can easily find and understand...' to view results for that specific question.",
+    "confidence": 0.95,
+    "interaction_target": "I can easily find and understand...",
+    "cursor_position_x": 150,
+    "cursor_position_y": 700,
+    "page_title": "Askable - Participant App: Wallet Core Flows & Expectations",
+    "frame_description": "The user is viewing the 'Path analysis' for the 'View your transaction history' task and moves the cursor to the sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 1750,
+    "time_end_ms": 3350,
+    "description": "The main content area updates to show a bar chart and individual responses for the selected question.",
+    "confidence": 0.9,
+    "frame_description": "The path analysis view is replaced by a question results view with a bar chart showing agreement levels."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 7550,
+    "time_end_ms": 7600,
+    "description": "User clicks back on 'View your transaction history' in the sidebar.",
+    "confidence": 0.95,
+    "interaction_target": "View your transaction history",
+    "cursor_position_x": 150,
+    "cursor_position_y": 650,
+    "frame_description": "The user moves the cursor back to the task item in the sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 7600,
+    "time_end_ms": 8200,
+    "description": "The main content area updates back to the path analysis view for the task.",
+    "confidence": 0.9,
+    "frame_description": "The screen refreshes to show the mobile screen mockups and path statistics."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 10050,
+    "time_end_ms": 10100,
+    "description": "User clicks on the 'Heat map' tab to view click density.",
+    "confidence": 0.95,
+    "interaction_target": "Heat map",
+    "cursor_position_x": 550,
+    "cursor_position_y": 150,
+    "frame_description": "The user selects the heat map tab from the top of the path analysis section."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 10100,
+    "time_end_ms": 10750,
+    "description": "A heat map overlay appears over the page, showing a mobile screen mockup with click hotspots.",
+    "confidence": 0.9,
+    "frame_description": "A dark overlay with a mobile screen mockup and colored hotspots appears."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 11900,
+    "time_end_ms": 12150,
+    "description": "User hovers over the 'Close' (X) button on the heat map overlay.",
+    "confidence": 0.8,
+    "interaction_target": "Close",
+    "cursor_position_x": 960,
+    "cursor_position_y": 100,
+    "frame_description": "The cursor pauses over the close button in the top right corner of the overlay."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 12150,
+    "time_end_ms": 12200,
+    "description": "User clicks the 'Close' button to exit the heat map view.",
+    "confidence": 0.95,
+    "interaction_target": "Close",
+    "cursor_position_x": 960,
+    "cursor_position_y": 100,
+    "frame_description": "The user activates the close button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 12200,
+    "time_end_ms": 12800,
+    "description": "The heat map overlay closes, returning the user to the path analysis view.",
+    "confidence": 0.9,
+    "frame_description": "The dark overlay disappears, revealing the underlying results page."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 13700,
+    "time_end_ms": 14500,
+    "description": "User hovers over the 'Misclick rate' information icon.",
+    "confidence": 0.8,
+    "interaction_target": "Misclick rate info",
+    "cursor_position_x": 250,
+    "cursor_position_y": 300,
+    "frame_description": "The cursor lingers over the small info icon next to the misclick rate metric."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 22850,
+    "time_end_ms": 22900,
+    "description": "User clicks on the sidebar item 'I can easily find and understand...' again.",
+    "confidence": 0.95,
+    "interaction_target": "I can easily find and understand...",
+    "cursor_position_x": 150,
+    "cursor_position_y": 700,
+    "frame_description": "The user navigates back to the question results via the sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 22900,
+    "time_end_ms": 23450,
+    "description": "The main content area updates to show the results for the selected question.",
+    "confidence": 0.9,
+    "frame_description": "The bar chart view for the question agreement level reappears."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 24700,
+    "time_end_ms": 24750,
+    "description": "User clicks on the sidebar item 'Where would you expect to find this information?' to view card sort results.",
+    "confidence": 0.95,
+    "interaction_target": "Where would you expect to find this information?",
+    "cursor_position_x": 150,
+    "cursor_position_y": 750,
+    "frame_description": "The user selects the card sort question from the sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 24750,
+    "time_end_ms": 25200,
+    "description": "The main content area updates to show card sort results, including cards and categories.",
+    "confidence": 0.9,
+    "frame_description": "The view changes to show a list of cards and their categorization statistics."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 25200,
+    "time_end_ms": 33000,
+    "description": "User scrolls down the card sort results page to view the agreement matrix.",
+    "confidence": 0.85,
+    "frame_description": "The page content moves vertically as the user scrolls down past the card list."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 34400,
+    "time_end_ms": 36000,
+    "description": "User scrolls further down to view the similarity matrix and individual responses.",
+    "confidence": 0.85,
+    "frame_description": "The user continues scrolling to the bottom of the results page."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 44850,
+    "time_end_ms": 44900,
+    "description": "User clicks on the sidebar item 'I can easily find and understand...' once more.",
+    "confidence": 0.95,
+    "interaction_target": "I can easily find and understand...",
+    "cursor_position_x": 150,
+    "cursor_position_y": 700,
+    "frame_description": "The user returns to the agreement question results."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 44900,
+    "time_end_ms": 45350,
+    "description": "The main content area updates to show the question results.",
+    "confidence": 0.9,
+    "frame_description": "The bar chart view loads again."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 63750,
+    "time_end_ms": 64250,
+    "description": "User hovers over the 'Hide filter' icon in the top right of the results panel.",
+    "confidence": 0.8,
+    "interaction_target": "Hide filter",
+    "cursor_position_x": 950,
+    "cursor_position_y": 150,
+    "frame_description": "The cursor pauses over the eye icon with a slash."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 64250,
+    "time_end_ms": 64300,
+    "description": "User clicks the 'Hide filter' icon to collapse the filter sidebar.",
+    "confidence": 0.95,
+    "interaction_target": "Hide filter",
+    "cursor_position_x": 950,
+    "cursor_position_y": 150,
+    "frame_description": "The user activates the hide filter toggle."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 64300,
+    "time_end_ms": 65300,
+    "description": "The filter sidebar on the right collapses, and the main content area expands.",
+    "confidence": 0.9,
+    "frame_description": "The right-hand panel disappears, and the charts expand to fill the width."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 66450,
+    "time_end_ms": 66500,
+    "description": "User clicks the 'Show filter' icon to reopen the filter sidebar.",
+    "confidence": 0.95,
+    "interaction_target": "Show filter",
+    "cursor_position_x": 950,
+    "cursor_position_y": 150,
+    "frame_description": "The user clicks the eye icon to restore the filters."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 66500,
+    "time_end_ms": 67500,
+    "description": "The filter sidebar reappears on the right side of the screen.",
+    "confidence": 0.9,
+    "frame_description": "The right-hand panel with filter options slides back into view."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 68400,
+    "time_end_ms": 68900,
+    "description": "User hovers over the 'Hide filter' icon again.",
+    "confidence": 0.8,
+    "interaction_target": "Hide filter",
+    "cursor_position_x": 950,
+    "cursor_position_y": 150,
+    "frame_description": "The cursor lingers over the filter toggle icon."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 72200,
+    "time_end_ms": 72250,
+    "description": "User clicks the 'Hide filter' icon to collapse the sidebar again.",
+    "confidence": 0.95,
+    "interaction_target": "Hide filter",
+    "cursor_position_x": 950,
+    "cursor_position_y": 150,
+    "frame_description": "The user hides the filter panel once more."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 72250,
+    "time_end_ms": 73250,
+    "description": "The filter sidebar collapses.",
+    "confidence": 0.9,
+    "frame_description": "The right-hand panel is hidden."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 73600,
+    "time_end_ms": 74500,
+    "description": "User hovers over cells in the agreement matrix to see detailed percentages.",
+    "confidence": 0.8,
+    "interaction_target": "Agreement matrix cells",
+    "cursor_position_x": 400,
+    "cursor_position_y": 600,
+    "frame_description": "The cursor moves across the blue-shaded cells of the agreement matrix."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 78700,
+    "time_end_ms": 78750,
+    "description": "User clicks on the sidebar item 'I would prefer my transaction history to show:' to view results for that question.",
+    "confidence": 0.95,
+    "interaction_target": "I would prefer my transaction history to show:",
+    "cursor_position_x": 150,
+    "cursor_position_y": 850,
+    "frame_description": "The user selects a multiple-choice question from the sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 78750,
+    "time_end_ms": 79250,
+    "description": "The main content area updates to show the results for the selected multiple-choice question.",
+    "confidence": 0.9,
+    "frame_description": "The view changes to show a bar chart for the transaction history preference question."
+  }
+]

@@ -1,5 +1,6 @@
 import { useRef, useState, useCallback, useEffect } from "react";
 import { useVideoTime } from "../hooks/useVideoTime";
+import { useVideoKeyboard } from "../hooks/useVideoKeyboard";
 import { SessionData } from "../types";
 import { VideoPlayer } from "./VideoPlayer";
 import { ColumnsPanel } from "./ColumnsPanel";
@@ -16,7 +17,8 @@ const MIN_PANEL_PERCENT = 15;
 
 export const Layout = ({ sessionKey, columns }: LayoutProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const { currentTime, duration, seekTo } = useVideoTime(videoRef);
+  const { currentTime, duration, isPlaying, playbackRate, seekTo, togglePlay, setPlaybackRate } = useVideoTime(videoRef);
+  useVideoKeyboard({ videoRef, togglePlay, playbackRate, setPlaybackRate });
   const containerRef = useRef<HTMLDivElement>(null);
 
   const [columnsWidthPercent, setColumnsWidthPercent] = useState(DEFAULT_COLUMNS_WIDTH_PERCENT);
@@ -106,7 +108,16 @@ export const Layout = ({ sessionKey, columns }: LayoutProps) => {
           className={`layout__video${isPiP ? " layout__video--pip" : ""}`}
           style={isPiP ? undefined : { flexBasis: `${videoWidthPercent}%` }}
         >
-          <VideoPlayer videoRef={videoRef} sessionKey={sessionKey} />
+          <VideoPlayer
+            videoRef={videoRef}
+            sessionKey={sessionKey}
+            currentTime={currentTime}
+            duration={duration}
+            isPlaying={isPlaying}
+            playbackRate={playbackRate}
+            onTogglePlay={togglePlay}
+            onSetPlaybackRate={setPlaybackRate}
+          />
           {!isPiP && document.pictureInPictureEnabled && (
             <button className="layout__pip-button" onClick={togglePiP} title="Picture-in-Picture">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none">

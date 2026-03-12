@@ -1,0 +1,198 @@
+[
+  {
+    "type": "select",
+    "time_start_ms": 0,
+    "time_end_ms": 800,
+    "description": "User selects 'London' from the suggested locations dropdown menu.",
+    "confidence": 0.9,
+    "interaction_target": "Suggested Locations dropdown",
+    "cursor_position_x": 218,
+    "cursor_position_y": 168,
+    "page_title": "Camplify",
+    "page_location": "camplify.co.uk",
+    "frame_description": "The homepage with a location search dropdown open showing 'London' and several suggestions."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 1100,
+    "time_end_ms": 1650,
+    "description": "User clicks on the date range input field to open the calendar picker.",
+    "confidence": 0.9,
+    "interaction_target": "Date range input ('From - to')",
+    "cursor_position_x": 340,
+    "cursor_position_y": 660,
+    "page_title": "Camplify",
+    "page_location": "camplify.co.uk",
+    "frame_description": "The search bar on the homepage with the location 'London' already entered."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 1650,
+    "time_end_ms": 1700,
+    "description": "The date picker calendar modal appears on screen.",
+    "confidence": 0.9,
+    "frame_description": "A calendar modal overlaying the homepage, initially showing February and March 2026."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 2800,
+    "time_end_ms": 3650,
+    "description": "User clicks the next month arrow in the date picker to advance the calendar.",
+    "confidence": 0.8,
+    "interaction_target": "Next month arrow",
+    "cursor_position_x": 515,
+    "cursor_position_y": 345,
+    "frame_description": "The calendar modal updating to show April and May 2026."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 5400,
+    "time_end_ms": 6100,
+    "description": "User clicks the next month arrow again to advance the calendar.",
+    "confidence": 0.8,
+    "interaction_target": "Next month arrow",
+    "cursor_position_x": 515,
+    "cursor_position_y": 345,
+    "frame_description": "The calendar modal updating to show May and June 2026."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 6400,
+    "time_end_ms": 7000,
+    "description": "User clicks the next month arrow again to advance the calendar.",
+    "confidence": 0.8,
+    "interaction_target": "Next month arrow",
+    "cursor_position_x": 515,
+    "cursor_position_y": 345,
+    "frame_description": "The calendar modal updating to show June and July 2026."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 7150,
+    "time_end_ms": 7500,
+    "description": "User clicks the next month arrow again to advance the calendar.",
+    "confidence": 0.8,
+    "interaction_target": "Next month arrow",
+    "cursor_position_x": 515,
+    "cursor_position_y": 345,
+    "frame_description": "The calendar modal updating to show August and September 2026."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 8150,
+    "time_end_ms": 8650,
+    "description": "User clicks the next month arrow a final time to reach November 2026.",
+    "confidence": 0.8,
+    "interaction_target": "Next month arrow",
+    "cursor_position_x": 515,
+    "cursor_position_y": 345,
+    "frame_description": "The calendar modal updating to show October and November 2026."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 10050,
+    "time_end_ms": 10150,
+    "description": "User selects November 9th, 2026, as the start date.",
+    "confidence": 0.9,
+    "interaction_target": "November 9th in calendar",
+    "cursor_position_x": 345,
+    "cursor_position_y": 450,
+    "frame_description": "The calendar modal with November 9th highlighted."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 10450,
+    "time_end_ms": 10550,
+    "description": "User selects November 15th, 2026, as the end date.",
+    "confidence": 0.9,
+    "interaction_target": "November 15th in calendar",
+    "cursor_position_x": 465,
+    "cursor_position_y": 450,
+    "frame_description": "The calendar modal with the range Nov 9 - Nov 15 highlighted."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 11050,
+    "time_end_ms": 11150,
+    "description": "The date picker modal closes after the date range is confirmed.",
+    "confidence": 0.9,
+    "frame_description": "The homepage search bar now showing the selected date range."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 11700,
+    "time_end_ms": 11800,
+    "description": "User clicks the 'Find your van' button to initiate the search.",
+    "confidence": 0.9,
+    "interaction_target": "'Find your van' button",
+    "cursor_position_x": 640,
+    "cursor_position_y": 660,
+    "frame_description": "The search button being activated."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 12450,
+    "time_end_ms": 15350,
+    "description": "The page navigates to the search results for London.",
+    "confidence": 0.9,
+    "page_title": "London - 300+ Caravans, Motorhomes & Campers to hire",
+    "page_location": "camplify.co.uk/s/london",
+    "frame_description": "The browser loading the search results page, showing skeleton loaders initially."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 15350,
+    "time_end_ms": 15450,
+    "description": "The search result cards finish loading and render on the page.",
+    "confidence": 0.9,
+    "frame_description": "The search results page populated with van listing cards."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 16000,
+    "time_end_ms": 16100,
+    "description": "Pricing information appears on the van listing cards.",
+    "confidence": 0.9,
+    "frame_description": "The listing cards now displaying '\u00a3/Day' prices."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 16850,
+    "time_end_ms": 17000,
+    "description": "A 'Need a hand?' chat widget pops up in the bottom right corner.",
+    "confidence": 0.9,
+    "frame_description": "The search results page with a chat support bubble visible."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 18800,
+    "time_end_ms": 21100,
+    "description": "User hovers the cursor over the search input area while reviewing results.",
+    "confidence": 0.8,
+    "interaction_target": "Search input bar",
+    "cursor_position_x": 220,
+    "cursor_position_y": 300,
+    "frame_description": "The cursor lingering near the top search bar on the results page."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 21100,
+    "time_end_ms": 21150,
+    "description": "User clicks on the first search result, the 'Papillon' van listing.",
+    "confidence": 0.9,
+    "interaction_target": "'Papillon' van listing card",
+    "cursor_position_x": 150,
+    "cursor_position_y": 750,
+    "frame_description": "The first listing card being clicked."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 21150,
+    "time_end_ms": 22000,
+    "description": "The page navigates to the detailed listing for the 'Papillon' van.",
+    "confidence": 0.9,
+    "page_title": "Papillon",
+    "page_location": "camplify.co.uk/rv/campervan-hire-london-papillon",
+    "frame_description": "The van detail page loading, showing interior photos of the campervan."
+  }
+]

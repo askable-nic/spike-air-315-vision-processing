@@ -1,0 +1,181 @@
+[
+  {
+    "type": "click",
+    "time_start_ms": 2150,
+    "time_end_ms": 2150,
+    "description": "Lisa clicks on March 22nd in the calendar to select it as her return date.",
+    "confidence": 0.95,
+    "interaction_target": "Date 22 in March 2026",
+    "cursor_position_x": 815,
+    "cursor_position_y": 645,
+    "page_title": "Webjet | Your fun to go guide for flights, hotels, cars & more",
+    "page_location": "https://www.webjet.com.au/",
+    "frame_description": "The flight search calendar is open, showing March 2026."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 2150,
+    "time_end_ms": 2300,
+    "description": "The calendar UI updates to highlight the selected date range from March 1st to March 22nd.",
+    "confidence": 0.9,
+    "frame_description": "The calendar highlights the selected dates in blue."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 3650,
+    "time_end_ms": 3650,
+    "description": "Lisa clicks the 'Done' button to confirm her flight date selection.",
+    "confidence": 0.95,
+    "interaction_target": "Done button",
+    "cursor_position_x": 815,
+    "cursor_position_y": 705,
+    "page_title": "Webjet | Your fun to go guide for flights, hotels, cars & more",
+    "page_location": "https://www.webjet.com.au/",
+    "frame_description": "The user is clicking the blue 'Done' button at the bottom of the calendar overlay."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 3650,
+    "time_end_ms": 4250,
+    "description": "The calendar overlay closes, revealing the main flight search form with the updated dates.",
+    "confidence": 0.95,
+    "frame_description": "The calendar disappears and the homepage search widget is visible."
+  },
+  {
+    "type": "hesitate",
+    "time_start_ms": 4250,
+    "time_end_ms": 7250,
+    "description": "Lisa pauses with her cursor over the search button, likely reviewing her search criteria before proceeding.",
+    "confidence": 0.7,
+    "interaction_target": "Search Flights button",
+    "page_title": "Webjet | Your fun to go guide for flights, hotels, cars & more",
+    "frame_description": "The cursor lingers over the 'Search Flights' button."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 7250,
+    "time_end_ms": 7250,
+    "description": "Lisa clicks the 'Search Flights' button to initiate the flight search.",
+    "confidence": 0.95,
+    "interaction_target": "Search Flights button",
+    "cursor_position_x": 705,
+    "cursor_position_y": 625,
+    "page_title": "Webjet | Your fun to go guide for flights, hotels, cars & more",
+    "page_location": "https://www.webjet.com.au/",
+    "frame_description": "The user activates the purple search button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 8750,
+    "time_end_ms": 9100,
+    "description": "A loading overlay with a plane animation appears as the search request is processed.",
+    "confidence": 0.9,
+    "frame_description": "A white loading screen with a red plane icon and 'Available airfares will be displayed shortly' text."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 9100,
+    "time_end_ms": 39550,
+    "description": "The browser navigates to the search results page, which takes several seconds to fully load and display flight options.",
+    "confidence": 0.95,
+    "page_title": "Flight Search",
+    "page_location": "https://services.webjet.com.au/flights/search/results/...",
+    "frame_description": "The screen transitions from the loading state to the flight results list."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 40500,
+    "time_end_ms": 41500,
+    "description": "Lisa scrolls down the results page to view more flight options.",
+    "confidence": 0.85,
+    "frame_description": "The list of flight results moves vertically."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 42250,
+    "time_end_ms": 43000,
+    "description": "Lisa hovers over a British Airways flight option, possibly comparing its price or duration.",
+    "confidence": 0.8,
+    "interaction_target": "British Airways flight card",
+    "page_title": "Flight Search",
+    "frame_description": "The cursor pauses over the British Airways result row."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 50750,
+    "time_end_ms": 51500,
+    "description": "Lisa hovers over a Qatar Airways flight option.",
+    "confidence": 0.8,
+    "interaction_target": "Qatar Airways flight card",
+    "page_title": "Flight Search",
+    "frame_description": "The cursor pauses over the Qatar Airways result row."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 51800,
+    "time_end_ms": 52500,
+    "description": "Lisa hovers over the 'Cheapest' sorting tab.",
+    "confidence": 0.75,
+    "interaction_target": "Cheapest sort tab",
+    "page_title": "Flight Search",
+    "frame_description": "The cursor moves to the sorting options at the top of the results list."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 54750,
+    "time_end_ms": 54750,
+    "description": "Lisa clicks the '1 more flight option' link to see more details for the Qatar Airways flight.",
+    "confidence": 0.9,
+    "interaction_target": "1 more flight option link (Qatar)",
+    "cursor_position_x": 550,
+    "cursor_position_y": 850,
+    "page_title": "Flight Search",
+    "frame_description": "The user clicks a text link within the Qatar Airways flight card."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 54750,
+    "time_end_ms": 55000,
+    "description": "The Qatar Airways flight card expands to reveal additional flight segments and timing details.",
+    "confidence": 0.9,
+    "frame_description": "The UI element expands downwards to show more content."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 62950,
+    "time_end_ms": 62950,
+    "description": "Lisa clicks the '1 more flight option' link for a Virgin Australia flight.",
+    "confidence": 0.9,
+    "interaction_target": "1 more flight option link (Virgin)",
+    "cursor_position_x": 550,
+    "cursor_position_y": 950,
+    "page_title": "Flight Search",
+    "frame_description": "The user clicks a text link within the Virgin Australia flight card."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 62950,
+    "time_end_ms": 63200,
+    "description": "The Virgin Australia flight card expands to show more details.",
+    "confidence": 0.9,
+    "frame_description": "The Virgin Australia result expands to show more flight information."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 75000,
+    "time_end_ms": 76500,
+    "description": "Lisa scrolls further down the page to explore more results.",
+    "confidence": 0.85,
+    "frame_description": "The page content scrolls up."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 81500,
+    "time_end_ms": 82500,
+    "description": "Lisa hovers over another Virgin Australia flight option at the bottom of the visible list.",
+    "confidence": 0.8,
+    "interaction_target": "Virgin Australia flight card",
+    "page_title": "Flight Search",
+    "frame_description": "The cursor pauses over a flight result near the bottom of the screen."
+  }
+]

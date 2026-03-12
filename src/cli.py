@@ -278,97 +278,201 @@ def enrich_baselines(session: str | None, max_concurrent: int, dry_run: bool, ba
     click.echo("Done.")
 
 
+@main.command("generate-baselines")
+@click.option("--session", "-s", default=None, help="Process single session by identifier")
+@click.option("--dry-run", is_flag=True, default=False, help="Show segments and estimated tokens without calling API")
+@click.option("--force", is_flag=True, default=False, help="Overwrite existing baselines")
+@click.option("--override", "-o", multiple=True, help="Config overrides (e.g. generate_baselines.model=gemini-3-flash-preview)")
+@click.option("--base-dir", type=click.Path(exists=True, path_type=Path), default=".", help="Project base directory")
+def generate_baselines(session: str | None, dry_run: bool, force: bool, override: tuple[str, ...], base_dir: Path):
+    """Generate draft baselines from video using Gemini video input."""
+    from src.config import resolve_generate_baselines_config
+    from src.manifest import load_manifest, resolve_video_path
+    from stages.generate_baselines import generate_session_baseline
+
+    config = resolve_generate_baselines_config(override)
+    manifest = load_manifest(base_dir / "input_data" / "manifest.json")
+
+    # Filter to requested session or all
+    if session:
+        sessions = tuple(s for s in manifest if s.identifier == session)
+        if not sessions:
+            click.echo(f"Session '{session}' not found in manifest.")
+            raise SystemExit(1)
+    else:
+        sessions = manifest
+
+    # Load prompt template
+    prompt_path = base_dir / "prompts" / "generate_baseline.txt"
+    if not prompt_path.exists():
+        click.echo(f"Prompt template not found: {prompt_path}")
+        raise SystemExit(1)
+    prompt_template = prompt_path.read_text()
+
+    total_tokens = 0
+    results: list[dict] = []
+
+    for session_manifest in sessions:
+        video_path = resolve_video_path(session_manifest, base_dir / "input_data")
+        if not video_path.exists():
+            click.echo(f"Skipping {session_manifest.identifier}: video not found at {video_path}")
+            continue
+
+        result = asyncio.run(generate_session_baseline(
+            session_manifest=session_manifest,
+            video_path=video_path,
+            config=config,
+            prompt_template=prompt_template,
+            base_dir=base_dir,
+            dry_run=dry_run,
+            force=force,
+        ))
+
+        if result is not None:
+            results.append(result)
+            total_tokens += result.get("estimated_tokens", 0) if dry_run else result.get("total_input_tokens", 0)
+
+    if dry_run and results:
+        print(f"\nTotal estimated tokens: ~{total_tokens:,}")
+    elif results:
+        total_events = sum(r.get("total_events_deduped", 0) for r in results)
+        click.echo(f"\nDone. {len(results)} sessions, {total_events} total events, {total_tokens:,} input tokens.")
+    else:
+        click.echo("No sessions processed.")
+
+
 @main.command()
-@click.option("--branch", "-b", required=True, help="Experiment branch name")
-@click.option("--iteration", "-i", required=True, type=int, help="Iteration number")
+@click.option("--branch", "-b", default=None, help="Experiment branch name")
+@click.option("--iteration", "-i", default=None, type=int, help="Iteration number")
+@click.option("--reference", type=click.Path(exists=True, path_type=Path), default=None, help="Path to reference events.json")
+@click.option("--candidate", type=click.Path(exists=True, path_type=Path), default=None, help="Path to candidate events.json")
 @click.option("--session", "-s", multiple=True, help="Session ID(s) to evaluate (default: all with baselines)")
 @click.option("--time-tolerance", default=2000, type=float, help="Time tolerance in ms for matching (default: 2000)")
 @click.option("--similarity-threshold", default=0.5, type=float, help="Min match score threshold (default: 0.5)")
+@click.option("--llm-judge", is_flag=True, default=False, help="Use LLM to evaluate (type-agnostic, qualitative)")
 @click.option("--verbose", "-v", is_flag=True, default=False, help="Show event-level match details")
 @click.option("--output-json", is_flag=True, default=False, help="Output results as JSON")
 @click.option("--base-dir", type=click.Path(exists=True, path_type=Path), default=".", help="Project base directory")
 def evaluate(
-    branch: str,
-    iteration: int,
+    branch: str | None,
+    iteration: int | None,
+    reference: Path | None,
+    candidate: Path | None,
     session: tuple[str, ...],
     time_tolerance: float,
     similarity_threshold: float,
+    llm_judge: bool,
     verbose: bool,
     output_json: bool,
     base_dir: Path,
 ):
-    """Evaluate experiment results against baseline annotations."""
+    """Evaluate experiment results against baseline annotations.
+
+    Two modes:
+
+      vex evaluate -b branch -i 1          # experiment vs baselines/
+
+      vex evaluate --reference ref.json --candidate cand.json  # two files
+    """
     from src.evaluate import (
         greedy_match,
         compute_metrics,
         format_results,
         result_to_dict,
+        llm_judge_evaluate,
+        format_judge_result,
     )
 
-    baselines_dir = base_dir / "baselines"
-    experiment_dir = base_dir / "experiments" / branch / str(iteration) / "output"
+    # Build list of (session_id, reference_events, candidate_events) pairs
+    pairs: list[tuple[str, list[dict], list[dict]]] = []
 
-    if not baselines_dir.exists():
-        click.echo("No baselines/ directory found.")
-        raise SystemExit(1)
-    if not experiment_dir.exists():
-        click.echo(f"No experiment output found at {experiment_dir}")
-        raise SystemExit(1)
+    if reference is not None and candidate is not None:
+        # Direct file comparison mode
+        with open(reference) as f:
+            ref_events = json.load(f)
+        with open(candidate) as f:
+            cand_events = json.load(f)
+        sid = reference.parent.name
+        pairs.append((sid, ref_events, cand_events))
 
-    # Discover sessions that have both baseline and experiment events
-    if session:
-        session_ids = list(session)
+    elif branch is not None and iteration is not None:
+        # Experiment vs baselines mode
+        baselines_dir = base_dir / "baselines"
+        experiment_dir = base_dir / "experiments" / branch / str(iteration) / "output"
+
+        if not baselines_dir.exists():
+            click.echo("No baselines/ directory found.")
+            raise SystemExit(1)
+        if not experiment_dir.exists():
+            click.echo(f"No experiment output found at {experiment_dir}")
+            raise SystemExit(1)
+
+        if session:
+            session_ids = list(session)
+        else:
+            baseline_sessions = {
+                d.name for d in baselines_dir.iterdir()
+                if d.is_dir() and not d.name.startswith(".") and (d / "events.json").exists()
+            }
+            experiment_sessions = {
+                d.name for d in experiment_dir.iterdir()
+                if d.is_dir() and not d.name.startswith(".") and (d / "events.json").exists()
+            }
+            session_ids = sorted(baseline_sessions & experiment_sessions)
+
+        for sid in session_ids:
+            bp = baselines_dir / sid / "events.json"
+            ep = experiment_dir / sid / "events.json"
+            if not bp.exists():
+                click.echo(f"Skipping {sid}: no baseline events.json")
+                continue
+            if not ep.exists():
+                click.echo(f"Skipping {sid}: no experiment events.json")
+                continue
+            with open(bp) as f:
+                ref_events = json.load(f)
+            with open(ep) as f:
+                cand_events = json.load(f)
+            pairs.append((sid, ref_events, cand_events))
     else:
-        baseline_sessions = {
-            d.name for d in baselines_dir.iterdir()
-            if d.is_dir() and not d.name.startswith(".") and (d / "events.json").exists()
-        }
-        experiment_sessions = {
-            d.name for d in experiment_dir.iterdir()
-            if d.is_dir() and not d.name.startswith(".") and (d / "events.json").exists()
-        }
-        session_ids = sorted(baseline_sessions & experiment_sessions)
+        click.echo("Provide either --reference + --candidate, or --branch + --iteration.")
+        raise SystemExit(1)
 
-    if not session_ids:
-        click.echo("No sessions found with both baseline and experiment events.")
+    if not pairs:
+        click.echo("No sessions found to evaluate.")
         return
 
     all_results = []
 
-    for sid in session_ids:
-        baseline_path = baselines_dir / sid / "events.json"
-        experiment_path = experiment_dir / sid / "events.json"
-
-        if not baseline_path.exists():
-            click.echo(f"Skipping {sid}: no baseline events.json")
-            continue
-        if not experiment_path.exists():
-            click.echo(f"Skipping {sid}: no experiment events.json")
-            continue
-
-        with open(baseline_path) as f:
-            baselines = json.load(f)
-        with open(experiment_path) as f:
-            experiments = json.load(f)
-
+    for sid, ref_events, cand_events in pairs:
+        # Mechanical matching
         matched, unmatched_b, unmatched_e = greedy_match(
-            baselines, experiments, time_tolerance, similarity_threshold,
+            ref_events, cand_events, time_tolerance, similarity_threshold,
         )
         result = compute_metrics(
-            baselines, experiments, matched, unmatched_b, unmatched_e, sid,
+            ref_events, cand_events, matched, unmatched_b, unmatched_e, sid,
         )
-        all_results.append((result, baselines, experiments, matched, unmatched_b, unmatched_e))
+        all_results.append((result, ref_events, cand_events, matched, unmatched_b, unmatched_e))
 
         if not output_json:
             click.echo(f"\n{format_results(
                 result,
-                baselines=baselines,
-                experiments=experiments,
+                baselines=ref_events,
+                experiments=cand_events,
                 matched_pairs=matched,
                 unmatched_baselines=unmatched_b,
                 unmatched_experiments=unmatched_e,
                 verbose=verbose,
             )}")
+
+        # LLM judge
+        if llm_judge:
+            click.echo("\nRunning LLM judge...")
+            judgment = asyncio.run(llm_judge_evaluate(ref_events, cand_events, sid))
+            if output_json:
+                click.echo(json.dumps(judgment, indent=2))
+            else:
+                click.echo(f"\n{format_judge_result(judgment, ref_events, cand_events)}")
 
     if not all_results:
         click.echo("No sessions evaluated.")
@@ -388,7 +492,7 @@ def evaluate(
         click.echo(f"  Baseline: {total_b}  Experiment: {total_e}  Matched: {total_m}")
         click.echo(f"  Precision: {agg_prec:.3f}  Recall: {agg_rec:.3f}  F1: {agg_f1:.3f}")
 
-    if output_json:
+    if output_json and not llm_judge:
         output = [result_to_dict(r) for r in results_only]
         click.echo(json.dumps(output if len(output) > 1 else output[0], indent=2))
 

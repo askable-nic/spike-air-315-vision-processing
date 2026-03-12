@@ -1,0 +1,75 @@
+{
+  "session": "ask_create_study_brandon",
+  "timestamp": "2026-03-12T22:40:00.733371+00:00",
+  "config": {
+    "model": "gemini-3-flash-preview",
+    "temperature": 0.2,
+    "max_concurrent": 3,
+    "video_fps": 20,
+    "max_segment_duration_ms": 75000,
+    "segment_overlap_ms": 5000,
+    "source": "gemini_video_baseline",
+    "merge": {
+      "time_tolerance_ms": 2000,
+      "similarity_threshold": 0.6,
+      "discard_context_events": false
+    }
+  },
+  "video_duration_ms": 443366.667,
+  "video_path": "input_data/screen_tracks_normalized/ask_create_study_brandon.mp4",
+  "segments": [
+    {
+      "index": 0,
+      "start_ms": 0.0,
+      "end_ms": 78894.4445,
+      "event_count": 25,
+      "input_tokens": 96392,
+      "output_tokens": 3551
+    },
+    {
+      "index": 1,
+      "start_ms": 68894.4445,
+      "end_ms": 152788.889,
+      "event_count": 40,
+      "input_tokens": 102337,
+      "output_tokens": 4974
+    },
+    {
+      "index": 2,
+      "start_ms": 142788.889,
+      "end_ms": 226683.3335,
+      "event_count": 57,
+      "input_tokens": 102458,
+      "output_tokens": 6382
+    },
+    {
+      "index": 3,
+      "start_ms": 216683.3335,
+      "end_ms": 300577.778,
+      "event_count": 38,
+      "input_tokens": 102458,
+      "output_tokens": 3357
+    },
+    {
+      "index": 4,
+      "start_ms": 290577.778,
+      "end_ms": 374472.2225,
+      "event_count": 35,
+      "input_tokens": 102338,
+      "output_tokens": 6495
+    },
+    {
+      "index": 5,
+      "start_ms": 364472.2225,
+      "end_ms": 443366.667,
+      "event_count": 33,
+      "input_tokens": 96218,
+      "output_tokens": 5446
+    }
+  ],
+  "total_events_merged": 228,
+  "total_events_deduped": 174,
+  "total_input_tokens": 602201,
+  "total_output_tokens": 30205,
+  "analysis_time_ms": 191904.7
+}

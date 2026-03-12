@@ -1,0 +1,150 @@
+[
+  {
+    "type": "scroll",
+    "time_start_ms": 850,
+    "time_end_ms": 2500,
+    "description": "User scrolls down the list of return flight options to view more choices.",
+    "confidence": 0.95,
+    "interaction_target": "Flight results list",
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "secure.flightcentre.com.au/AAXy9kh/results#inbound",
+    "frame_description": "The user is on the 'Select Return Flight' page and is scrolling through the available flight cards."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 5450,
+    "time_end_ms": 7400,
+    "description": "Cursor lingers over the sort dropdown menu, suggesting the user is considering changing the flight order.",
+    "confidence": 0.85,
+    "interaction_target": "Departure Time (Earliest) dropdown",
+    "cursor_position_x": 910,
+    "cursor_position_y": 195,
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "secure.flightcentre.com.au/AAXy9kh/results#inbound",
+    "frame_description": "The cursor is positioned over the sort selection dropdown at the top right of the flight results."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 7450,
+    "time_end_ms": 14600,
+    "description": "User hovers over the first Virgin Australia flight option while reviewing the flight times and price.",
+    "confidence": 0.9,
+    "interaction_target": "Virgin Australia flight card (6:00am - 7:25am)",
+    "cursor_position_x": 550,
+    "cursor_position_y": 700,
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "secure.flightcentre.com.au/AAXy9kh/results#inbound",
+    "frame_description": "The cursor is hovering over the first flight result card for Virgin Australia."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 14650,
+    "time_end_ms": 14650,
+    "description": "User clicks on the flight card to expand it and view fare options.",
+    "confidence": 0.98,
+    "interaction_target": "Virgin Australia flight card",
+    "cursor_position_x": 550,
+    "cursor_position_y": 700,
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "secure.flightcentre.com.au/AAXy9kh/results#inbound",
+    "frame_description": "The user clicks the flight card, triggering a UI expansion."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 14700,
+    "time_end_ms": 14950,
+    "description": "The flight card expands to reveal the 'Select Returning Fare Type' section with Lite, Choice, and Flex options.",
+    "confidence": 0.95,
+    "interaction_target": "Virgin Australia flight card",
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "secure.flightcentre.com.au/AAXy9kh/results#inbound",
+    "frame_description": "The UI updates to show three fare columns below the selected flight."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 15000,
+    "time_end_ms": 23300,
+    "description": "User reviews the inclusions and prices for the different fare types, moving the cursor between the Lite and Choice columns.",
+    "confidence": 0.85,
+    "interaction_target": "Virgin Australia fare options",
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "secure.flightcentre.com.au/AAXy9kh/results#inbound",
+    "frame_description": "The user is reading the fare conditions for the expanded flight option."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 23350,
+    "time_end_ms": 23350,
+    "description": "User clicks the 'SELECT' button for the Lite fare option.",
+    "confidence": 0.98,
+    "interaction_target": "SELECT button (Lite fare)",
+    "cursor_position_x": 415,
+    "cursor_position_y": 955,
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "secure.flightcentre.com.au/AAXy9kh/results#inbound",
+    "frame_description": "The user clicks the blue 'SELECT' button under the $157 Lite fare."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 23350,
+    "time_end_ms": 42950,
+    "description": "The application processes the selection and navigates to the 'Review trip' page.",
+    "confidence": 0.95,
+    "interaction_target": "Browser window",
+    "page_location": "secure.flightcentre.com.au/AAXy9kh/results#baggage",
+    "frame_description": "The page transitions from the flight results to the review screen."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 23400,
+    "time_end_ms": 38600,
+    "description": "The 'SELECT' button shows a loading spinner while the selection is being processed.",
+    "confidence": 0.9,
+    "interaction_target": "SELECT button",
+    "frame_description": "A loading animation is visible on the button the user just clicked."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 38650,
+    "time_end_ms": 42900,
+    "description": "A transition overlay appears with the text 'All Set! Now let's review your flight selections...'",
+    "confidence": 0.95,
+    "interaction_target": "Transition overlay",
+    "frame_description": "A full-screen loading/transition message is displayed to the user."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 42950,
+    "time_end_ms": 42950,
+    "description": "The 'Review trip' page content renders, showing the summary of departing and returning flights.",
+    "confidence": 0.95,
+    "interaction_target": "Review trip page",
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "secure.flightcentre.com.au/AAXy9kh/results#baggage",
+    "frame_description": "The review page is now fully visible, showing flight details and a price summary."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 44600,
+    "time_end_ms": 47200,
+    "description": "User hovers over the price summary on the right side of the page to verify the total cost.",
+    "confidence": 0.85,
+    "interaction_target": "Price summary section",
+    "cursor_position_x": 850,
+    "cursor_position_y": 650,
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "secure.flightcentre.com.au/AAXy9kh/results#baggage",
+    "frame_description": "The cursor is positioned over the price breakdown on the right sidebar."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 72300,
+    "time_end_ms": 75300,
+    "description": "User scrolls down the review page to see the baggage information and add-ons.",
+    "confidence": 0.95,
+    "interaction_target": "Review trip page",
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "secure.flightcentre.com.au/AAXy9kh/results#baggage",
+    "frame_description": "The user scrolls down to view the lower sections of the review page."
+  }
+]

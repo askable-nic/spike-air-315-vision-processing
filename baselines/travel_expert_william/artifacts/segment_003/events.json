@@ -1,0 +1,404 @@
+[
+  {
+    "type": "hover",
+    "time_start_ms": 0,
+    "time_end_ms": 1600,
+    "description": "User hovers over the price per traveller filter slider at the start of the segment.",
+    "confidence": 0.9,
+    "interaction_target": "Price per traveller slider",
+    "cursor_position_x": 150,
+    "cursor_position_y": 450,
+    "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results | Expedia",
+    "page_location": "https://www.expedia.com.au/Hotel-Search?adults=2&d1=2020-03-12&d2=2020-03-14&destination=London%20%28and%20vicinity%29%2C%20England%2C%20United%20Kingdom&endDate=2020-03-14&latLong=51.50753%2C-0.12783&regionId=178279&rooms=1&semdtl=&sort=RECOMMENDED&startDate=2020-03-12&theme=&useRewards=false&userIntent=",
+    "frame_description": "Expedia search results page for London hotels with filters on the left sidebar."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 1600,
+    "time_end_ms": 7500,
+    "description": "User hovers over the guest rating filter options, appearing to read the choices.",
+    "confidence": 0.9,
+    "interaction_target": "Guest rating filter section",
+    "cursor_position_x": 100,
+    "cursor_position_y": 750,
+    "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results | Expedia",
+    "frame_description": "The cursor lingers over the 'Guest rating' section of the filter sidebar."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 7500,
+    "time_end_ms": 7600,
+    "description": "User selects the 'Very good 8+' guest rating filter.",
+    "confidence": 1.0,
+    "interaction_target": "Very good 8+ (2186)",
+    "cursor_position_x": 70,
+    "cursor_position_y": 755,
+    "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results | Expedia",
+    "frame_description": "The user clicks the radio button for the 'Very good 8+' rating filter."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 8250,
+    "time_end_ms": 8500,
+    "description": "The page begins to refresh and update results after the filter selection.",
+    "confidence": 0.9,
+    "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results | Expedia",
+    "frame_description": "The search results area begins to dim or show signs of updating."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 8500,
+    "time_end_ms": 8650,
+    "description": "The browser navigates to a new URL containing the guest rating filter parameter.",
+    "confidence": 0.9,
+    "page_location": "https://www.expedia.com.au/Hotel-Search?adults=2&d1=2020-03-12&d2=2020-03-14&destination=London%20%28and%20vicinity%29%2C%20England%2C%20United%20Kingdom&endDate=2020-03-14&latLong=51.50753%2C-0.12783&regionId=178279&rooms=1&semdtl=&sort=RECOMMENDED&startDate=2020-03-12&theme=&useRewards=false&userIntent=&guestRating=VERY_GOOD",
+    "frame_description": "The tab title briefly changes to a generic Expedia title during the navigation."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 8650,
+    "time_end_ms": 12550,
+    "description": "Loading skeleton screens and a spinner appear while the filtered results are fetched.",
+    "confidence": 1.0,
+    "frame_description": "The results area is replaced by grey skeleton placeholders and a blue loading spinner."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 12550,
+    "time_end_ms": 12700,
+    "description": "The new search results for hotels with a 'Very good 8+' rating are displayed.",
+    "confidence": 1.0,
+    "frame_description": "The skeleton screens disappear and the actual hotel cards for the filtered results render."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 12900,
+    "time_end_ms": 13900,
+    "description": "User scrolls down to view the updated list of hotels.",
+    "confidence": 0.9,
+    "frame_description": "The page content moves vertically as the user scrolls down."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 14050,
+    "time_end_ms": 15500,
+    "description": "User hovers over the first hotel result card.",
+    "confidence": 0.8,
+    "interaction_target": "The Pelham London - Starhotels Collezione",
+    "cursor_position_x": 600,
+    "cursor_position_y": 300,
+    "frame_description": "The cursor pauses over the hotel card for 'The Pelham London'."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 16500,
+    "time_end_ms": 18500,
+    "description": "User scrolls further down the results page.",
+    "confidence": 0.9,
+    "frame_description": "The user continues to scroll down through the hotel listings."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 19250,
+    "time_end_ms": 19550,
+    "description": "User hovers over the 'Breakfast included' filter checkbox.",
+    "confidence": 0.9,
+    "interaction_target": "Breakfast included (1005)",
+    "cursor_position_x": 70,
+    "cursor_position_y": 950,
+    "frame_description": "The cursor moves to the 'Popular filters' section and hovers over 'Breakfast included'."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 19550,
+    "time_end_ms": 19650,
+    "description": "User selects the 'Breakfast included' filter.",
+    "confidence": 1.0,
+    "interaction_target": "Breakfast included (1005)",
+    "cursor_position_x": 70,
+    "cursor_position_y": 950,
+    "frame_description": "The user clicks the checkbox for 'Breakfast included'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 19650,
+    "time_end_ms": 20200,
+    "description": "The results list updates to reflect the breakfast filter.",
+    "confidence": 0.8,
+    "frame_description": "The results area flickers as it updates the list of hotels."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 20450,
+    "time_end_ms": 21500,
+    "description": "User scrolls down the page.",
+    "confidence": 0.9,
+    "frame_description": "The user scrolls down to see more results or filters."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 21600,
+    "time_end_ms": 23500,
+    "description": "User continues scrolling down.",
+    "confidence": 0.9,
+    "frame_description": "The user scrolls further down the page."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 25000,
+    "time_end_ms": 26500,
+    "description": "User scrolls back up towards the top of the page.",
+    "confidence": 0.9,
+    "frame_description": "The page content moves downwards as the user scrolls up."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 26900,
+    "time_end_ms": 28500,
+    "description": "User hovers over the guest rating filter section again.",
+    "confidence": 0.8,
+    "interaction_target": "Very good 8+ (2186)",
+    "cursor_position_x": 100,
+    "cursor_position_y": 750,
+    "frame_description": "The cursor pauses over the already selected 'Very good 8+' filter."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 28800,
+    "time_end_ms": 29800,
+    "description": "User scrolls up to the top of the sidebar.",
+    "confidence": 0.9,
+    "frame_description": "The user scrolls to the top of the filter sidebar."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 30000,
+    "time_end_ms": 31000,
+    "description": "User hovers over the price per traveller slider.",
+    "confidence": 0.9,
+    "interaction_target": "Price per traveller slider",
+    "cursor_position_x": 150,
+    "cursor_position_y": 450,
+    "frame_description": "The cursor moves to the price slider handles."
+  },
+  {
+    "type": "drag",
+    "time_start_ms": 31000,
+    "time_end_ms": 36000,
+    "description": "User drags the maximum price handle to the left to lower the price limit.",
+    "confidence": 1.0,
+    "interaction_target": "Price slider right handle",
+    "cursor_position_x": 250,
+    "cursor_position_y": 450,
+    "frame_description": "The right handle of the price slider is moved left, and the maximum price value updates."
+  },
+  {
+    "type": "drag",
+    "time_start_ms": 36000,
+    "time_end_ms": 39000,
+    "description": "User drags the minimum price handle to the right to increase the lower price limit.",
+    "confidence": 1.0,
+    "interaction_target": "Price slider left handle",
+    "cursor_position_x": 100,
+    "cursor_position_y": 450,
+    "frame_description": "The left handle of the price slider is moved right, and the minimum price value updates."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 39850,
+    "time_end_ms": 40300,
+    "description": "Results start updating based on the new price range.",
+    "confidence": 0.9,
+    "frame_description": "The results area begins to dim as the filter is applied."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 40300,
+    "time_end_ms": 43900,
+    "description": "Loading skeleton screens appear while results are filtered.",
+    "confidence": 1.0,
+    "frame_description": "Skeleton placeholders appear in the results area."
+  },
+  {
+    "type": "drag",
+    "time_start_ms": 41000,
+    "time_end_ms": 43500,
+    "description": "User adjusts the minimum price handle again while the page is loading.",
+    "confidence": 0.9,
+    "interaction_target": "Price slider left handle",
+    "cursor_position_x": 120,
+    "cursor_position_y": 450,
+    "frame_description": "The user continues to tweak the price slider while the results are still loading."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 43900,
+    "time_end_ms": 44100,
+    "description": "Results update with the new price filter.",
+    "confidence": 0.9,
+    "frame_description": "The hotel cards reappear with the updated price filter applied."
+  },
+  {
+    "type": "drag",
+    "time_start_ms": 44100,
+    "time_end_ms": 48500,
+    "description": "User adjusts the maximum price handle further.",
+    "confidence": 1.0,
+    "interaction_target": "Price slider right handle",
+    "cursor_position_x": 220,
+    "cursor_position_y": 450,
+    "frame_description": "The user drags the right handle of the price slider again."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 48850,
+    "time_end_ms": 50400,
+    "description": "Results update again based on the price adjustment.",
+    "confidence": 0.9,
+    "frame_description": "The results list refreshes to show hotels within the new price range."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 49300,
+    "time_end_ms": 50500,
+    "description": "User hovers over a hotel card in the updated results.",
+    "confidence": 0.8,
+    "interaction_target": "Lexham Gardens by Cheval Maison",
+    "cursor_position_x": 600,
+    "cursor_position_y": 600,
+    "frame_description": "The cursor pauses over the 'Lexham Gardens' hotel card."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 51200,
+    "time_end_ms": 51700,
+    "description": "User hovers over the 'Search by property name' input field.",
+    "confidence": 0.9,
+    "interaction_target": "Search by property name input",
+    "cursor_position_x": 150,
+    "cursor_position_y": 820,
+    "frame_description": "The cursor moves to the property name search box."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 51800,
+    "time_end_ms": 52800,
+    "description": "User scrolls down slightly.",
+    "confidence": 0.9,
+    "frame_description": "The user performs a small downward scroll."
+  },
+  {
+    "type": "drag",
+    "time_start_ms": 52900,
+    "time_end_ms": 54500,
+    "description": "User drags the minimum price handle further to the right.",
+    "confidence": 1.0,
+    "interaction_target": "Price slider left handle",
+    "cursor_position_x": 140,
+    "cursor_position_y": 450,
+    "frame_description": "The user increases the minimum price limit on the slider."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 54850,
+    "time_end_ms": 55300,
+    "description": "Results update based on the increased minimum price.",
+    "confidence": 0.9,
+    "frame_description": "The results area refreshes."
+  },
+  {
+    "type": "drag",
+    "time_start_ms": 55300,
+    "time_end_ms": 61500,
+    "description": "User drags the maximum price handle significantly to the left, narrowing the price range.",
+    "confidence": 1.0,
+    "interaction_target": "Price slider right handle",
+    "cursor_position_x": 180,
+    "cursor_position_y": 450,
+    "frame_description": "The user narrows the price range to a very small window on the slider."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 61900,
+    "time_end_ms": 62450,
+    "description": "Results start updating for the narrow price range.",
+    "confidence": 0.9,
+    "frame_description": "The results area begins to load new content."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 62450,
+    "time_end_ms": 64800,
+    "description": "Loading skeleton screens appear.",
+    "confidence": 1.0,
+    "frame_description": "Skeleton placeholders are visible while the narrow results load."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 64800,
+    "time_end_ms": 65500,
+    "description": "Final results for the narrow price range are displayed.",
+    "confidence": 1.0,
+    "frame_description": "The filtered hotel results are fully rendered."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 66700,
+    "time_end_ms": 68000,
+    "description": "User hovers over a hotel card in the final filtered list.",
+    "confidence": 0.8,
+    "interaction_target": "The Drey - Kensington, Earl's Court",
+    "cursor_position_x": 600,
+    "cursor_position_y": 450,
+    "frame_description": "The cursor pauses over 'The Drey' hotel card."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 68400,
+    "time_end_ms": 75000,
+    "description": "User scrolls down to browse the filtered results.",
+    "confidence": 0.9,
+    "frame_description": "The user scrolls through the final set of filtered hotel results."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 75800,
+    "time_end_ms": 76500,
+    "description": "User scrolls back up.",
+    "confidence": 0.9,
+    "frame_description": "The user scrolls back up to re-examine earlier results."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 76850,
+    "time_end_ms": 78500,
+    "description": "User hovers over 'The Z Hotel Victoria' card.",
+    "confidence": 0.8,
+    "interaction_target": "The Z Hotel Victoria",
+    "cursor_position_x": 600,
+    "cursor_position_y": 850,
+    "frame_description": "The cursor pauses over 'The Z Hotel Victoria' card."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 79250,
+    "time_end_ms": 80500,
+    "description": "User hovers over 'Hub By Premier Inn London Westminster' card.",
+    "confidence": 0.8,
+    "interaction_target": "Hub By Premier Inn London Westminster - Westminster Abbey",
+    "cursor_position_x": 600,
+    "cursor_position_y": 600,
+    "frame_description": "The cursor pauses over the 'Hub By Premier Inn' hotel card."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 81200,
+    "time_end_ms": 81627,
+    "description": "User hovers over 'Ibis London Shepherds Bush' card at the end of the segment.",
+    "confidence": 0.8,
+    "interaction_target": "Ibis London Shepherds Bush - Hammersmith",
+    "cursor_position_x": 600,
+    "cursor_position_y": 850,
+    "frame_description": "The cursor pauses over the 'Ibis London' hotel card as the segment ends."
+  }
+]

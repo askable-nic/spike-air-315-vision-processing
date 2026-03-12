@@ -1,0 +1,229 @@
+[
+  {
+    "type": "input_text",
+    "time_start_ms": 0,
+    "time_end_ms": 2200,
+    "description": "Brandon types 'participant app' into the search bar on the Studies page to filter the list of studies.",
+    "confidence": 0.95,
+    "interaction_target": "Search studies input",
+    "cursor_position_x": 268,
+    "cursor_position_y": 102,
+    "page_title": "Askable | Studies",
+    "page_location": "app.askable.com/studies",
+    "frame_description": "The user is on the Studies dashboard and is using the search bar to find a specific study."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 550,
+    "time_end_ms": 2200,
+    "description": "The study list dynamically filters as the user types, eventually showing only the 'BCA - Participant App Screen Reader Test' study.",
+    "confidence": 0.9,
+    "frame_description": "The list of studies below the search bar is updating in real-time based on the search query."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 2250,
+    "time_end_ms": 3500,
+    "description": "Brandon clears the search bar by deleting the typed text.",
+    "confidence": 0.95,
+    "interaction_target": "Search studies input",
+    "cursor_position_x": 268,
+    "cursor_position_y": 102,
+    "page_title": "Askable | Studies",
+    "frame_description": "The user is backspacing to clear the search criteria."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 2550,
+    "time_end_ms": 3550,
+    "description": "The study list updates to show all available studies as the search query is cleared.",
+    "confidence": 0.9,
+    "frame_description": "The full list of studies reappears as the search input becomes empty."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 5900,
+    "time_end_ms": 5950,
+    "description": "Brandon clicks on the team selector dropdown in the top navigation bar.",
+    "confidence": 0.98,
+    "interaction_target": "Askable Product Team dropdown",
+    "cursor_position_x": 102,
+    "cursor_position_y": 62,
+    "page_title": "Askable | Studies",
+    "frame_description": "The user activates the team selection menu in the top left corner of the interface."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 5950,
+    "time_end_ms": 6050,
+    "description": "The team selection dropdown menu opens, showing options like Settings, Switch team, and Log out.",
+    "confidence": 0.95,
+    "frame_description": "A vertical menu has appeared below the team name in the header."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 6450,
+    "time_end_ms": 6650,
+    "description": "Brandon hovers over the 'Switch team' option in the dropdown menu.",
+    "confidence": 0.85,
+    "interaction_target": "Switch team menu item",
+    "cursor_position_x": 102,
+    "cursor_position_y": 172,
+    "frame_description": "The cursor is positioned over the 'Switch team' option, which is highlighted."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 6650,
+    "time_end_ms": 6750,
+    "description": "The 'Switch team' sub-menu appears to the right, listing a large number of available teams.",
+    "confidence": 0.95,
+    "frame_description": "A secondary menu has opened to the right of the main dropdown menu."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 6750,
+    "time_end_ms": 10250,
+    "description": "Brandon scrolls through the long list of teams in the 'Switch team' sub-menu.",
+    "confidence": 0.9,
+    "interaction_target": "Switch team sub-menu",
+    "frame_description": "The user is navigating through the list of teams within the UI overlay."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 10300,
+    "time_end_ms": 10350,
+    "description": "Brandon clicks on the page background to close the team selection menu.",
+    "confidence": 0.9,
+    "interaction_target": "Page background",
+    "cursor_position_x": 300,
+    "cursor_position_y": 400,
+    "frame_description": "The user clicks away from the menu to dismiss it."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 10350,
+    "time_end_ms": 10450,
+    "description": "The team selection menu and sub-menu close, returning focus to the Studies page.",
+    "confidence": 0.95,
+    "frame_description": "The dropdown menus disappear from the screen."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 11200,
+    "time_end_ms": 11250,
+    "description": "Brandon clicks on the 'Copy of AI Mod V2 Test' study from the list.",
+    "confidence": 0.98,
+    "interaction_target": "Copy of AI Mod V2 Test study link",
+    "cursor_position_x": 240,
+    "cursor_position_y": 725,
+    "page_title": "Askable | Studies",
+    "frame_description": "The user selects a specific study to view its results."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 11250,
+    "time_end_ms": 12000,
+    "description": "The browser navigates to the results page for the selected study.",
+    "confidence": 0.95,
+    "page_location": "app.askable.com/studies/68715d30ab43a85423e15916/results",
+    "frame_description": "The page content changes as the results for the selected study load."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 12700,
+    "time_end_ms": 16600,
+    "description": "Brandon types 'participant app' into the search bar on the study results page to find a specific task.",
+    "confidence": 0.95,
+    "interaction_target": "Search tasks input",
+    "cursor_position_x": 268,
+    "cursor_position_y": 102,
+    "page_title": "Askable | Copy of AI Mod V2 Test",
+    "frame_description": "The user is searching for a specific task within the study results."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 15050,
+    "time_end_ms": 16650,
+    "description": "The list of tasks and questions filters as the user types.",
+    "confidence": 0.9,
+    "frame_description": "The task list is updating to show matches for 'participant app'."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 19600,
+    "time_end_ms": 19650,
+    "description": "Brandon clicks on the 'Participant App: Wallet Core Flows & Expectations' result.",
+    "confidence": 0.98,
+    "interaction_target": "Participant App: Wallet Core Flows & Expectations list item",
+    "cursor_position_x": 240,
+    "cursor_position_y": 335,
+    "frame_description": "The user selects a specific task result to view detailed analytics."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 19650,
+    "time_end_ms": 35400,
+    "description": "The page loads the detailed results for the selected task, including charts and individual responses.",
+    "confidence": 0.95,
+    "page_location": "app.askable.com/studies/68715d30ab43a85423e15916/results/task/66f715dcf1dcc6071c187114",
+    "frame_description": "The interface transitions to a detailed view of the task results after a loading period."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 44400,
+    "time_end_ms": 44450,
+    "description": "Brandon clicks on the second task, 'Locate your Askable wallet', in the left sidebar navigation.",
+    "confidence": 0.98,
+    "interaction_target": "Locate your Askable wallet sidebar item",
+    "cursor_position_x": 100,
+    "cursor_position_y": 215,
+    "page_title": "Askable | Participant App: Wallet Core Flows & Expectations",
+    "frame_description": "The user switches to the results of the second task in the study."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 44450,
+    "time_end_ms": 45400,
+    "description": "The main content area updates to show the path analysis and screen analysis for the 'Locate your Askable wallet' task.",
+    "confidence": 0.95,
+    "frame_description": "The data visualizations and response list update to reflect the newly selected task."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 104400,
+    "time_end_ms": 104450,
+    "description": "Brandon clicks on the third task, 'Make a withdrawal from your Wallet', in the left sidebar navigation.",
+    "confidence": 0.98,
+    "interaction_target": "Make a withdrawal from your Wallet sidebar item",
+    "cursor_position_x": 100,
+    "cursor_position_y": 255,
+    "frame_description": "The user switches to the results of the third task."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 104450,
+    "time_end_ms": 105400,
+    "description": "The main content area updates to show the results for the 'Make a withdrawal from your Wallet' task.",
+    "confidence": 0.95,
+    "frame_description": "The analytics dashboard refreshes with data for the third task."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 121900,
+    "time_end_ms": 121950,
+    "description": "Brandon clicks on the fourth task, 'Where would you expect to find this information?', in the left sidebar navigation.",
+    "confidence": 0.98,
+    "interaction_target": "Where would you expect to find this information? sidebar item",
+    "cursor_position_x": 100,
+    "cursor_position_y": 715,
+    "frame_description": "The user switches to the results of the fourth task, which is a card sort."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 121950,
+    "time_end_ms": 122900,
+    "description": "The main content area updates to show the card sort results, including a table of cards and categories.",
+    "confidence": 0.95,
+    "frame_description": "The interface displays card sorting data for the fourth task."
+  }
+]

@@ -1,0 +1,248 @@
+[
+  {
+    "type": "input_text",
+    "time_start_ms": 3350,
+    "time_end_ms": 5200,
+    "description": "User types a question onto the screen: 'What makes you lean towards a short task right now?'",
+    "confidence": 0.95,
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/ai-mod/998d5e92b10ad786b2b9d9c",
+    "frame_description": "A dark screen with a central prompt and an 'Open' button. Text is appearing as if being typed."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 5400,
+    "time_end_ms": 6800,
+    "description": "Cursor hovers over the 'Smart Filters Mobile App' browser tab.",
+    "confidence": 0.9,
+    "interaction_target": "Smart Filters Mobile App tab",
+    "cursor_position_x": 450,
+    "cursor_position_y": 15,
+    "page_title": "Askable Sessions",
+    "frame_description": "The cursor is positioned over the third tab in the browser's tab bar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 6800,
+    "time_end_ms": 9300,
+    "description": "A preview window of the 'Smart Filters Mobile App' tab content appears below the tab bar.",
+    "confidence": 0.95,
+    "interaction_target": "Tab preview",
+    "frame_description": "A small thumbnail preview of the Figma prototype is visible below the browser's address bar."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 12750,
+    "time_end_ms": 16350,
+    "description": "User types a follow-up question: 'As you look at the options for short tasks, what are you seeing that helps you decide which one to go for?'",
+    "confidence": 0.95,
+    "page_title": "Askable Sessions",
+    "frame_description": "The previous text is replaced by a new, longer question appearing character by character."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 18150,
+    "time_end_ms": 18750,
+    "description": "Cursor hovers over the close button of the current browser tab.",
+    "confidence": 0.8,
+    "interaction_target": "Close tab button",
+    "cursor_position_x": 305,
+    "cursor_position_y": 15,
+    "frame_description": "The cursor moves to the 'X' icon on the active 'Askable Sessions' tab."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 18750,
+    "time_end_ms": 19350,
+    "description": "Cursor hovers over the 'Smart Filters Mobile App' tab before clicking.",
+    "confidence": 0.9,
+    "interaction_target": "Smart Filters Mobile App tab",
+    "cursor_position_x": 450,
+    "cursor_position_y": 15,
+    "frame_description": "The cursor moves from the close button to the center of the adjacent tab."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 19350,
+    "time_end_ms": 19350,
+    "description": "User clicks on the 'Smart Filters Mobile App' tab to switch views.",
+    "confidence": 0.95,
+    "interaction_target": "Smart Filters Mobile App tab",
+    "cursor_position_x": 450,
+    "cursor_position_y": 15,
+    "frame_description": "The browser tab is activated."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 19350,
+    "time_end_ms": 19450,
+    "description": "The view switches to the Figma prototype showing the opportunity list.",
+    "confidence": 0.95,
+    "page_title": "Smart Filters Mobile App",
+    "page_location": "art-resin-03323ff1.figma.site",
+    "frame_description": "The screen content changes from the dark session page to a mobile app prototype with a list of tasks."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 21200,
+    "time_end_ms": 23050,
+    "description": "Cursor hovers over the 'Short tasks & surveys' section header.",
+    "confidence": 0.7,
+    "interaction_target": "Short tasks & surveys header",
+    "cursor_position_x": 450,
+    "cursor_position_y": 150,
+    "frame_description": "The cursor is stationary over the text heading in the prototype."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 23050,
+    "time_end_ms": 25000,
+    "description": "Cursor hovers over the 'AI Interview' task card.",
+    "confidence": 0.8,
+    "interaction_target": "AI Interview card",
+    "cursor_position_x": 450,
+    "cursor_position_y": 250,
+    "frame_description": "The cursor moves down to rest on the first task card in the list."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 26350,
+    "time_end_ms": 28550,
+    "description": "Cursor hovers over the 'Askable Sessions' tab in the browser.",
+    "confidence": 0.9,
+    "interaction_target": "Askable Sessions tab",
+    "cursor_position_x": 250,
+    "cursor_position_y": 15,
+    "frame_description": "The cursor moves back up to the browser's tab bar."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 28550,
+    "time_end_ms": 28550,
+    "description": "User clicks the 'Askable Sessions' tab to return to the session instructions.",
+    "confidence": 0.95,
+    "interaction_target": "Askable Sessions tab",
+    "cursor_position_x": 250,
+    "cursor_position_y": 15,
+    "frame_description": "The first tab is clicked."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 28550,
+    "time_end_ms": 28650,
+    "description": "The view switches back to the session instruction screen.",
+    "confidence": 0.95,
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/ai-mod/998d5e92b10ad786b2b9d9c",
+    "frame_description": "The screen returns to the dark background with the central prompt."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 30350,
+    "time_end_ms": 34900,
+    "description": "User types a detailed question: 'What are you seeing on the screen that indicates how much time that survey might take compared to the other?'",
+    "confidence": 0.95,
+    "page_title": "Askable Sessions",
+    "frame_description": "New text is being typed onto the screen, replacing the previous question."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 34900,
+    "time_end_ms": 34900,
+    "description": "User clicks on the 'Smart Filters Mobile App' tab again.",
+    "confidence": 0.95,
+    "interaction_target": "Smart Filters Mobile App tab",
+    "cursor_position_x": 450,
+    "cursor_position_y": 15,
+    "frame_description": "The cursor clicks the third tab."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 34900,
+    "time_end_ms": 35000,
+    "description": "The view switches back to the Figma prototype.",
+    "confidence": 0.95,
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "The mobile app prototype is visible again."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 35250,
+    "time_end_ms": 38850,
+    "description": "Cursor hovers over the 'AI Interview' card while likely discussing it.",
+    "confidence": 0.8,
+    "interaction_target": "AI Interview card",
+    "cursor_position_x": 450,
+    "cursor_position_y": 250,
+    "frame_description": "The cursor stays over the task card for several seconds."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 38850,
+    "time_end_ms": 42350,
+    "description": "Cursor hovers over the 'Askable Sessions' tab.",
+    "confidence": 0.9,
+    "interaction_target": "Askable Sessions tab",
+    "cursor_position_x": 250,
+    "cursor_position_y": 15,
+    "frame_description": "The cursor moves back to the tab bar."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 42350,
+    "time_end_ms": 43850,
+    "description": "Cursor hovers over the close button of the Figma tab.",
+    "confidence": 0.8,
+    "interaction_target": "Close tab button",
+    "cursor_position_x": 505,
+    "cursor_position_y": 15,
+    "frame_description": "The cursor moves to the 'X' on the 'Smart Filters Mobile App' tab."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 43850,
+    "time_end_ms": 43850,
+    "description": "User clicks the 'Askable Sessions' tab.",
+    "confidence": 0.95,
+    "interaction_target": "Askable Sessions tab",
+    "cursor_position_x": 250,
+    "cursor_position_y": 15,
+    "frame_description": "The first tab is clicked."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 43850,
+    "time_end_ms": 43950,
+    "description": "The view switches back to the session instruction screen.",
+    "confidence": 0.95,
+    "page_title": "Askable Sessions",
+    "frame_description": "The dark session screen is visible."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 45100,
+    "time_end_ms": 51850,
+    "description": "User types a complex question about the UI labels: 'As you're looking at these options that are both labeled as 10 minutes, is there anything else on the screen you're curious about or would want to click on?'",
+    "confidence": 0.95,
+    "page_title": "Askable Sessions",
+    "frame_description": "A long block of text is typed onto the screen."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 58400,
+    "time_end_ms": 62300,
+    "description": "User types a transition statement: 'It sounds like you've explored the features that were relevant to your lunch break. Shall we move on from this prototype?'",
+    "confidence": 0.95,
+    "page_title": "Askable Sessions",
+    "frame_description": "The text on screen updates with a new prompt character by character."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 67450,
+    "time_end_ms": 71150,
+    "description": "User types concluding instructions: 'Perfect, thank you. Please close the website task and we'll continue our session.'",
+    "confidence": 0.95,
+    "page_title": "Askable Sessions",
+    "frame_description": "The final instruction is typed onto the screen."
+  }
+]

@@ -1,0 +1,369 @@
+[
+  {
+    "type": "select",
+    "time_start_ms": 950,
+    "time_end_ms": 1000,
+    "description": "User selects 'Multiple choice' from the 'Add a custom screening question' dropdown menu.",
+    "confidence": 0.9,
+    "interaction_target": "Multiple choice",
+    "cursor_position_x": 400,
+    "cursor_position_y": 250,
+    "page_title": "Askable Website Test - Create Interview Study",
+    "page_location": "https://app.askable.com/booking-setup/689b7b70bc8e82b66a4788/audience/custom-screener",
+    "frame_description": "The user is on the 'Custom screener' page and selects the 'Multiple choice' option from an open dropdown menu."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 1000,
+    "time_end_ms": 1100,
+    "description": "A modal window titled 'Multiple Choice' appears on top of the page.",
+    "confidence": 1.0,
+    "frame_description": "A modal overlay for creating a multiple-choice screener question appears over the main content."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 7400,
+    "time_end_ms": 29350,
+    "description": "User types the question 'Which best describes your habits for how you interact with TV streaming services?' into the screener question text area.",
+    "confidence": 1.0,
+    "interaction_target": "Screener question",
+    "frame_description": "The user is typing into the 'Screener question' text field within the Multiple Choice modal."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 30300,
+    "time_end_ms": 30350,
+    "description": "User clicks on the first answer input field to focus it.",
+    "confidence": 0.9,
+    "interaction_target": "Answer 1...",
+    "cursor_position_x": 400,
+    "cursor_position_y": 700,
+    "frame_description": "The cursor clicks into the first answer option field in the modal."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 30350,
+    "time_end_ms": 35150,
+    "description": "User types 'I don't use them at all' as the first answer option.",
+    "confidence": 1.0,
+    "interaction_target": "Answer 1...",
+    "frame_description": "Text is being entered into the first answer field."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 37550,
+    "time_end_ms": 37600,
+    "description": "User clicks on the second answer input field.",
+    "confidence": 0.9,
+    "interaction_target": "Answer 2...",
+    "frame_description": "The cursor clicks into the second answer option field."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 38200,
+    "time_end_ms": 42150,
+    "description": "User types 'I use them a few times per week' as the second answer option.",
+    "confidence": 1.0,
+    "interaction_target": "Answer 2...",
+    "frame_description": "Text is being entered into the second answer field."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 43700,
+    "time_end_ms": 43750,
+    "description": "User clicks on the third answer input field.",
+    "confidence": 0.9,
+    "interaction_target": "Answer 3...",
+    "frame_description": "The cursor clicks into the third answer option field."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 44300,
+    "time_end_ms": 47150,
+    "description": "User types 'I use them daily' as the third answer option.",
+    "confidence": 1.0,
+    "interaction_target": "Answer 3...",
+    "frame_description": "Text is being entered into the third answer field."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 47550,
+    "time_end_ms": 47600,
+    "description": "User clicks on the fourth answer input field.",
+    "confidence": 0.9,
+    "interaction_target": "Answer 4...",
+    "frame_description": "The cursor clicks into the fourth answer option field."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 49050,
+    "time_end_ms": 57000,
+    "description": "User types 'I use them multiple times per day' as the fourth answer option.",
+    "confidence": 1.0,
+    "interaction_target": "Answer 4...",
+    "frame_description": "Text is being entered into the fourth answer field."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 57050,
+    "time_end_ms": 59850,
+    "description": "User moves the cursor to the 'Save' button and pauses.",
+    "confidence": 0.8,
+    "interaction_target": "Save",
+    "cursor_position_x": 680,
+    "cursor_position_y": 750,
+    "frame_description": "The cursor lingers over the 'Save' button at the bottom of the modal."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 59850,
+    "time_end_ms": 59900,
+    "description": "User clicks the 'Save' button to add the question.",
+    "confidence": 1.0,
+    "interaction_target": "Save",
+    "cursor_position_x": 680,
+    "cursor_position_y": 750,
+    "frame_description": "The 'Save' button is clicked."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 59900,
+    "time_end_ms": 60950,
+    "description": "The modal closes and the new multiple-choice question appears in the list on the 'Custom screener' page.",
+    "confidence": 1.0,
+    "frame_description": "The modal disappears, and the 'Custom screener' page updates to show the newly created question card."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 62350,
+    "time_end_ms": 62400,
+    "description": "User clicks the 'Next' button at the bottom of the page.",
+    "confidence": 0.9,
+    "interaction_target": "Next",
+    "cursor_position_x": 330,
+    "cursor_position_y": 660,
+    "frame_description": "The user clicks the 'Next' button to proceed to the next step of the setup."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 62400,
+    "time_end_ms": 62500,
+    "description": "The browser navigates to the 'Your Timezone' section of the study setup.",
+    "confidence": 1.0,
+    "page_location": "https://app.askable.com/booking-setup/689b7b70bc8e82b66a4788/additional-info/your-timezone",
+    "frame_description": "The page URL changes and the screen begins to load the 'Your Timezone' section."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 62500,
+    "time_end_ms": 63700,
+    "description": "The 'Your Timezone' page content, including a dropdown for selecting a timezone, finishes rendering.",
+    "confidence": 1.0,
+    "page_title": "Your Timezone",
+    "frame_description": "The 'Your Timezone' page is fully loaded, showing a timezone selection dropdown."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 63750,
+    "time_end_ms": 65550,
+    "description": "User hovers the cursor over the 'Audience' link in the left-hand navigation sidebar.",
+    "confidence": 0.7,
+    "interaction_target": "Audience",
+    "cursor_position_x": 100,
+    "cursor_position_y": 150,
+    "frame_description": "The cursor moves to the sidebar and pauses over the 'Audience' menu item."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 65550,
+    "time_end_ms": 65600,
+    "description": "User clicks the 'Audience' link to return to the previous section.",
+    "confidence": 0.9,
+    "interaction_target": "Audience",
+    "cursor_position_x": 100,
+    "cursor_position_y": 150,
+    "frame_description": "The user clicks the 'Audience' link in the sidebar."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 65600,
+    "time_end_ms": 65700,
+    "description": "The browser navigates back to the 'Custom screener' page.",
+    "confidence": 1.0,
+    "page_location": "https://app.askable.com/booking-setup/689b7b70bc8e82b66a4788/audience/custom-screener",
+    "frame_description": "The page navigates back to the 'Custom screener' section."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 65700,
+    "time_end_ms": 66550,
+    "description": "The 'Custom screener' page content, showing the previously added question, finishes loading.",
+    "confidence": 1.0,
+    "page_title": "Custom screener",
+    "frame_description": "The 'Custom screener' page is reloaded, displaying the question card created earlier."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 66600,
+    "time_end_ms": 68100,
+    "description": "User hovers over the '+ Add another custom question' button.",
+    "confidence": 0.8,
+    "interaction_target": "+ Add another custom question",
+    "cursor_position_x": 400,
+    "cursor_position_y": 610,
+    "frame_description": "The cursor pauses over the button to add a new question."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 68100,
+    "time_end_ms": 68150,
+    "description": "User clicks the '+ Add another custom question' button.",
+    "confidence": 1.0,
+    "interaction_target": "+ Add another custom question",
+    "cursor_position_x": 400,
+    "cursor_position_y": 610,
+    "frame_description": "The button is clicked."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 68150,
+    "time_end_ms": 68200,
+    "description": "A dropdown menu appears with options: 'Multiple Choice', 'Short answer', and 'Copy from other study'.",
+    "confidence": 1.0,
+    "frame_description": "A dropdown menu opens below the button."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 68200,
+    "time_end_ms": 70400,
+    "description": "User hovers over the 'Copy from other study' option.",
+    "confidence": 0.8,
+    "interaction_target": "Copy from other study",
+    "cursor_position_x": 400,
+    "cursor_position_y": 680,
+    "frame_description": "The cursor moves down the dropdown menu to 'Copy from other study'."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 70400,
+    "time_end_ms": 70450,
+    "description": "User selects 'Copy from other study'.",
+    "confidence": 0.9,
+    "interaction_target": "Copy from other study",
+    "cursor_position_x": 400,
+    "cursor_position_y": 680,
+    "frame_description": "The user selects the 'Copy from other study' option."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 70450,
+    "time_end_ms": 70950,
+    "description": "A modal titled 'Select a study to copy from' appears with a red loading spinner in the center.",
+    "confidence": 1.0,
+    "frame_description": "A new modal opens with a loading animation."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 70950,
+    "time_end_ms": 71000,
+    "description": "The loading spinner disappears and a list of previous studies is displayed in the modal.",
+    "confidence": 1.0,
+    "frame_description": "The loading spinner is replaced by a list of study items."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 71000,
+    "time_end_ms": 71700,
+    "description": "User scrolls down through the list of studies.",
+    "confidence": 0.8,
+    "frame_description": "The content within the modal is scrolled vertically."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 71750,
+    "time_end_ms": 72200,
+    "description": "User hovers over the 'X' close button in the top right corner of the modal.",
+    "confidence": 0.7,
+    "interaction_target": "Close",
+    "cursor_position_x": 750,
+    "cursor_position_y": 150,
+    "frame_description": "The cursor moves to the close icon of the modal."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 72200,
+    "time_end_ms": 72250,
+    "description": "User clicks the close button.",
+    "confidence": 0.9,
+    "interaction_target": "Close",
+    "cursor_position_x": 750,
+    "cursor_position_y": 150,
+    "frame_description": "The close button is clicked."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 72250,
+    "time_end_ms": 72300,
+    "description": "The 'Select a study to copy from' modal closes.",
+    "confidence": 1.0,
+    "frame_description": "The modal overlay disappears."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 73150,
+    "time_end_ms": 73200,
+    "description": "User clicks the '+ Add another custom question' button again.",
+    "confidence": 0.9,
+    "interaction_target": "+ Add another custom question",
+    "cursor_position_x": 400,
+    "cursor_position_y": 820,
+    "frame_description": "The user clicks the button to add another question."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 73200,
+    "time_end_ms": 73250,
+    "description": "The dropdown menu with question types reappears.",
+    "confidence": 1.0,
+    "frame_description": "The question type dropdown menu opens again."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 73250,
+    "time_end_ms": 75200,
+    "description": "User hovers over the 'Short answer' option.",
+    "confidence": 0.8,
+    "interaction_target": "Short answer",
+    "cursor_position_x": 400,
+    "cursor_position_y": 860,
+    "frame_description": "The cursor pauses over the 'Short answer' option in the dropdown."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 75200,
+    "time_end_ms": 75250,
+    "description": "User selects 'Short answer'.",
+    "confidence": 0.9,
+    "interaction_target": "Short answer",
+    "cursor_position_x": 400,
+    "cursor_position_y": 860,
+    "frame_description": "The user selects the 'Short answer' option."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 75250,
+    "time_end_ms": 75300,
+    "description": "A modal titled 'Short answer' appears.",
+    "confidence": 1.0,
+    "frame_description": "A modal for creating a short-answer question opens."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 76200,
+    "time_end_ms": 84000,
+    "description": "User types 'What is the name of your favourite' into the screener question field.",
+    "confidence": 1.0,
+    "interaction_target": "Screener question",
+    "frame_description": "The user begins typing a new question into the Short Answer modal."
+  }
+]

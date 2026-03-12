@@ -1,0 +1,124 @@
+[
+  {
+    "type": "click",
+    "time_start_ms": 18700,
+    "time_end_ms": 19100,
+    "description": "User clicks on the origin input field, which currently contains 'London, England', to focus it.",
+    "confidence": 0.95,
+    "interaction_target": "Origin location input field",
+    "cursor_position_x": 245,
+    "cursor_position_y": 55,
+    "page_title": "London to Ireland | Rome2Rio",
+    "page_location": "https://www.rome2rio.com/map/London/Ireland",
+    "frame_description": "The user is on the Rome2Rio search results page for London to Ireland, with the origin field highlighted."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 19300,
+    "time_end_ms": 19500,
+    "description": "User clicks the swap button (double arrows) to switch the origin and destination locations.",
+    "confidence": 0.98,
+    "interaction_target": "Swap locations button",
+    "cursor_position_x": 385,
+    "cursor_position_y": 55,
+    "page_title": "London to Ireland | Rome2Rio",
+    "page_location": "https://www.rome2rio.com/map/London/Ireland",
+    "frame_description": "The cursor is positioned directly over the swap icon between the two location input fields."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 19500,
+    "time_end_ms": 19800,
+    "description": "The origin and destination locations swap in the UI: 'Ireland' moves to the origin field and 'London, England' moves to the destination field.",
+    "confidence": 0.95,
+    "interaction_target": "Location input fields",
+    "page_title": "London to Ireland | Rome2Rio",
+    "frame_description": "The text in the input fields has swapped, reflecting the user's click on the swap button."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 21100,
+    "time_end_ms": 21300,
+    "description": "User clicks on the destination input field (now containing 'London, England') to prepare for a new search entry.",
+    "confidence": 0.92,
+    "interaction_target": "Destination location input field",
+    "cursor_position_x": 450,
+    "cursor_position_y": 55,
+    "page_title": "London to Ireland | Rome2Rio",
+    "frame_description": "The cursor focuses the destination field, which is now ready for text input."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 21300,
+    "time_end_ms": 24050,
+    "description": "User types 'scotland' into the destination field, deleting the previous entry 'London, England' in the process.",
+    "confidence": 0.95,
+    "interaction_target": "Destination location input field",
+    "page_title": "London to Ireland | Rome2Rio",
+    "frame_description": "The user types characters into the input field, and the text updates from 'London, England' to 'scotland'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 21650,
+    "time_end_ms": 24100,
+    "description": "An autocomplete dropdown menu appears below the destination field, showing suggested locations starting with 'sc'.",
+    "confidence": 0.95,
+    "interaction_target": "Autocomplete dropdown menu",
+    "page_title": "London to Ireland | Rome2Rio",
+    "frame_description": "A list of suggestions including 'Scandinavia' and 'Scottsdale' appears as the user types."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 25350,
+    "time_end_ms": 25750,
+    "description": "User selects 'Scotland' from the autocomplete suggestion list.",
+    "confidence": 0.98,
+    "interaction_target": "Scotland suggestion item",
+    "cursor_position_x": 450,
+    "cursor_position_y": 150,
+    "page_title": "London to Ireland | Rome2Rio",
+    "frame_description": "The cursor moves down the dropdown list and clicks on the 'Scotland' option."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 25750,
+    "time_end_ms": 26100,
+    "description": "The autocomplete dropdown closes and the destination field is populated with the selected value 'Scotland'.",
+    "confidence": 0.95,
+    "interaction_target": "Destination location input field",
+    "page_title": "London to Ireland | Rome2Rio",
+    "frame_description": "The dropdown menu disappears and the input field now clearly displays 'Scotland'."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 27150,
+    "time_end_ms": 27550,
+    "description": "User clicks the pink search button to initiate the new search from Ireland to Scotland.",
+    "confidence": 0.98,
+    "interaction_target": "Search button",
+    "cursor_position_x": 685,
+    "cursor_position_y": 55,
+    "page_title": "London to Ireland | Rome2Rio",
+    "frame_description": "The cursor moves to the magnifying glass icon on the right and clicks it."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 27550,
+    "time_end_ms": 28350,
+    "description": "The page navigates to the new search results for Ireland to Scotland.",
+    "confidence": 0.95,
+    "page_title": "Ireland to Scotland | Rome2Rio",
+    "page_location": "https://www.rome2rio.com/map/Ireland/Scotland",
+    "frame_description": "The browser URL changes and the page content refreshes to show the new route."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 28350,
+    "time_end_ms": 29000,
+    "description": "The travel options list and the map update to show routes and travel times from Ireland to Scotland.",
+    "confidence": 0.9,
+    "interaction_target": "Search results panel and map",
+    "page_title": "Ireland to Scotland | Rome2Rio",
+    "frame_description": "New travel options like 'Train to George Best Belfast City airport...' appear on the left, and the map shows the route between Ireland and Scotland."
+  }
+]

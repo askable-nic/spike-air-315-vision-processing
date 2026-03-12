@@ -1,0 +1,285 @@
+[
+  {
+    "type": "scroll",
+    "time_start_ms": 1700,
+    "time_end_ms": 5000,
+    "description": "User scrolls down the United Kingdom travel advice page to read the latest updates.",
+    "confidence": 0.95,
+    "page_title": "United Kingdom Travel Advice & Safety | Smartraveller",
+    "page_location": "https://www.smartraveller.gov.au/destinations/europe/united-kingdom",
+    "frame_description": "The user is scrolling through the 'Latest update' section of the UK travel advice page."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 5050,
+    "time_end_ms": 6150,
+    "description": "User hovers over the 'Local contacts' menu item in the left sidebar.",
+    "confidence": 0.85,
+    "interaction_target": "Local contacts",
+    "cursor_position_x": 150,
+    "cursor_position_y": 600,
+    "page_title": "United Kingdom Travel Advice & Safety | Smartraveller",
+    "frame_description": "The cursor pauses over the 'Local contacts' link in the navigation menu on the left."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 7100,
+    "time_end_ms": 8150,
+    "description": "User scrolls further down the page to find specific travel requirements.",
+    "confidence": 0.95,
+    "page_title": "United Kingdom Travel Advice & Safety | Smartraveller",
+    "frame_description": "The user scrolls past the 'Advice levels' map towards the 'Overview' section."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 8200,
+    "time_end_ms": 8900,
+    "description": "User hovers over the 'Electronic Travel Authorisation (ETA)' link within the Travel section text.",
+    "confidence": 0.9,
+    "interaction_target": "Electronic Travel Authorisation (ETA)",
+    "cursor_position_x": 400,
+    "cursor_position_y": 830,
+    "page_title": "United Kingdom Travel Advice & Safety | Smartraveller",
+    "frame_description": "The cursor is positioned over a blue hyperlink for the ETA system in the main content area."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 8950,
+    "time_end_ms": 8950,
+    "description": "User clicks on the 'Electronic Travel Authorisation (ETA)' link.",
+    "confidence": 0.99,
+    "interaction_target": "Electronic Travel Authorisation (ETA)",
+    "cursor_position_x": 400,
+    "cursor_position_y": 830,
+    "page_title": "United Kingdom Travel Advice & Safety | Smartraveller",
+    "frame_description": "The user activates the link to the UK government website."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 8950,
+    "time_end_ms": 19050,
+    "description": "The browser navigates from Smartraveller to the official UK government page for ETA.",
+    "confidence": 0.99,
+    "page_title": "Get an electronic travel authorisation (ETA) to visit the UK - GOV.UK",
+    "page_location": "https://www.gov.uk/guidance/electronic-travel-authorisation-eta",
+    "frame_description": "A new page loads with the GOV.UK header and information about the ETA."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 21050,
+    "time_end_ms": 24950,
+    "description": "User scrolls down the GOV.UK page to find application details.",
+    "confidence": 0.95,
+    "page_title": "Get an electronic travel authorisation (ETA) to visit the UK - GOV.UK",
+    "frame_description": "The user scrolls through the contents and overview of the ETA page."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 46650,
+    "time_end_ms": 46650,
+    "description": "User clicks on the 'Apply for an ETA' link in the page contents.",
+    "confidence": 0.99,
+    "interaction_target": "Apply for an ETA",
+    "cursor_position_x": 200,
+    "cursor_position_y": 880,
+    "page_title": "Get an electronic travel authorisation (ETA) to visit the UK - GOV.UK",
+    "frame_description": "The user clicks a link in the 'Contents' list to jump to the application section."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 46650,
+    "time_end_ms": 47700,
+    "description": "The page scrolls or navigates to the 'Apply for an ETA' section.",
+    "confidence": 0.9,
+    "page_title": "Get an electronic travel authorisation (ETA) to visit the UK - GOV.UK",
+    "frame_description": "The view shifts to the application section of the page."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 47750,
+    "time_end_ms": 47750,
+    "description": "User clicks on the browser address bar.",
+    "confidence": 0.95,
+    "interaction_target": "Browser Address Bar",
+    "cursor_position_x": 300,
+    "cursor_position_y": 50,
+    "frame_description": "The user focuses the address bar to perform a new search."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 47750,
+    "time_end_ms": 49350,
+    "description": "User navigates to the Google search page.",
+    "confidence": 0.95,
+    "page_title": "Google",
+    "page_location": "https://www.google.com",
+    "frame_description": "The browser displays the Google search homepage."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 54300,
+    "time_end_ms": 55950,
+    "description": "User types 'smart traveller' into the search bar.",
+    "confidence": 0.99,
+    "interaction_target": "Search Bar",
+    "page_title": "Google",
+    "frame_description": "The user types their search query into the central Google search box."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 56000,
+    "time_end_ms": 56000,
+    "description": "Google search results page appears.",
+    "confidence": 0.99,
+    "page_title": "smart traveller - Google Search",
+    "frame_description": "The search results for 'smart traveller' are displayed."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 56050,
+    "time_end_ms": 56050,
+    "description": "User clicks on the first search result for Smartraveller.",
+    "confidence": 0.99,
+    "interaction_target": "Smartraveller | Advice | Travel Advice for Overseas",
+    "cursor_position_x": 300,
+    "cursor_position_y": 400,
+    "page_title": "smart traveller - Google Search",
+    "frame_description": "The user selects the main Smartraveller website from the results."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 56050,
+    "time_end_ms": 58250,
+    "description": "Navigation to the Smartraveller homepage.",
+    "confidence": 0.99,
+    "page_title": "Smartraveller | Advice | Travel Advice for Overseas",
+    "page_location": "https://www.smartraveller.gov.au/",
+    "frame_description": "The Smartraveller homepage loads."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 58300,
+    "time_end_ms": 60250,
+    "description": "User scrolls down the Smartraveller homepage.",
+    "confidence": 0.95,
+    "page_title": "Smartraveller | Advice | Travel Advice for Overseas",
+    "frame_description": "The user scrolls past the featured major events section."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 60300,
+    "time_end_ms": 60300,
+    "description": "User clicks into the search input field on the homepage.",
+    "confidence": 0.99,
+    "interaction_target": "Search input field",
+    "cursor_position_x": 250,
+    "cursor_position_y": 660,
+    "page_title": "Smartraveller | Advice | Travel Advice for Overseas",
+    "frame_description": "The user focuses the search box to look for a specific destination."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 61150,
+    "time_end_ms": 62200,
+    "description": "User types 'italy' into the search box.",
+    "confidence": 0.99,
+    "interaction_target": "Search input field",
+    "page_title": "Smartraveller | Advice | Travel Advice for Overseas",
+    "frame_description": "The user types 'italy' and waits for suggestions."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 62250,
+    "time_end_ms": 62250,
+    "description": "Autocomplete suggestions dropdown appears below the search box.",
+    "confidence": 0.95,
+    "page_title": "Smartraveller | Advice | Travel Advice for Overseas",
+    "frame_description": "A list of suggested destinations, including 'Italy', appears."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 62300,
+    "time_end_ms": 63900,
+    "description": "User hovers over the 'Italy' option in the search suggestions.",
+    "confidence": 0.9,
+    "interaction_target": "Italy suggestion",
+    "cursor_position_x": 250,
+    "cursor_position_y": 700,
+    "page_title": "Smartraveller | Advice | Travel Advice for Overseas",
+    "frame_description": "The cursor is positioned over the 'Italy' result in the autocomplete list."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 63950,
+    "time_end_ms": 63950,
+    "description": "User selects 'Italy' from the search suggestions.",
+    "confidence": 0.99,
+    "interaction_target": "Italy suggestion",
+    "cursor_position_x": 250,
+    "cursor_position_y": 700,
+    "page_title": "Smartraveller | Advice | Travel Advice for Overseas",
+    "frame_description": "The user clicks the 'Italy' suggestion to trigger a search."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 63950,
+    "time_end_ms": 64250,
+    "description": "Navigation to the search results page for Italy.",
+    "confidence": 0.99,
+    "page_title": "Search | Smartraveller",
+    "page_location": "https://www.smartraveller.gov.au/search?search=italy",
+    "frame_description": "The search results page loads showing results related to Italy."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 66400,
+    "time_end_ms": 66400,
+    "description": "User clicks on the main 'Italy' destination link in the search results.",
+    "confidence": 0.99,
+    "interaction_target": "Italy destination link",
+    "cursor_position_x": 100,
+    "cursor_position_y": 620,
+    "page_title": "Search | Smartraveller",
+    "frame_description": "The user selects the primary travel advice page for Italy."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 66400,
+    "time_end_ms": 67400,
+    "description": "Navigation to the Italy travel advice page.",
+    "confidence": 0.99,
+    "page_title": "Italy Travel Advice & Safety | Smartraveller",
+    "page_location": "https://www.smartraveller.gov.au/destinations/europe/italy",
+    "frame_description": "The Italy destination page loads with a hero image of an Italian street."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 67450,
+    "time_end_ms": 69300,
+    "description": "User scrolls down the Italy travel advice page.",
+    "confidence": 0.95,
+    "page_title": "Italy Travel Advice & Safety | Smartraveller",
+    "frame_description": "The user scrolls down to see the latest updates and advice levels."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 69350,
+    "time_end_ms": 70000,
+    "description": "User hovers over the interactive map of Italy.",
+    "confidence": 0.85,
+    "interaction_target": "Map of Italy",
+    "cursor_position_x": 400,
+    "cursor_position_y": 700,
+    "page_title": "Italy Travel Advice & Safety | Smartraveller",
+    "frame_description": "The cursor pauses over the map showing advice levels for different regions of Italy."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 70050,
+    "time_end_ms": 84600,
+    "description": "User continues scrolling down the Italy page to read the 'Safety' section.",
+    "confidence": 0.95,
+    "page_title": "Italy Travel Advice & Safety | Smartraveller",
+    "frame_description": "The user scrolls through the Safety and Health sections of the page."
+  }
+]

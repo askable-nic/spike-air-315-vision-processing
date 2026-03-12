@@ -1,0 +1,257 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 0,
+    "time_end_ms": 300,
+    "description": "The 'Where are you travelling to?' page finishes loading and displays the search input field.",
+    "confidence": 0.9,
+    "page_title": "Travel Insurance - Compare the Market",
+    "page_location": "comparethemarket.com.au/travel-insurance/",
+    "frame_description": "The user is on the destination selection page of a travel insurance quote flow."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 1700,
+    "time_end_ms": 1800,
+    "description": "A list of 'Popular Destinations' appears below the search input field.",
+    "confidence": 0.9,
+    "interaction_target": "Popular Destinations list",
+    "frame_description": "A grid of popular travel destinations categorized by region appears on the screen."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 3100,
+    "time_end_ms": 3500,
+    "description": "User hovers the cursor over 'All of Asia' in the popular destinations list.",
+    "confidence": 0.8,
+    "interaction_target": "All of Asia",
+    "cursor_position_x": 402,
+    "cursor_position_y": 785,
+    "frame_description": "The cursor pauses over the 'All of Asia' link in the Asia column."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 3550,
+    "time_end_ms": 4400,
+    "description": "User hovers the cursor over 'All of Europe' in the popular destinations list.",
+    "confidence": 0.8,
+    "interaction_target": "All of Europe",
+    "cursor_position_x": 585,
+    "cursor_position_y": 785,
+    "frame_description": "The cursor moves and pauses over the 'All of Europe' link in the Europe column."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 8100,
+    "time_end_ms": 8800,
+    "description": "User scrolls down the list of popular destinations to find the United Kingdom.",
+    "confidence": 0.9,
+    "frame_description": "The page content shifts upwards as the user scrolls down the list of countries."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 10750,
+    "time_end_ms": 10850,
+    "description": "User clicks on 'United Kingdom' in the Europe section of popular destinations.",
+    "confidence": 0.95,
+    "interaction_target": "United Kingdom",
+    "cursor_position_x": 585,
+    "cursor_position_y": 1035,
+    "frame_description": "The user selects United Kingdom from the list."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 10850,
+    "time_end_ms": 11100,
+    "description": "The 'UK' tag is added to the search input, and the 'Continue' button becomes active.",
+    "confidence": 0.9,
+    "frame_description": "A blue 'UK' tag appears in the search box and a green 'Continue' button appears to the right."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 12050,
+    "time_end_ms": 12150,
+    "description": "User clicks the 'Continue' button to proceed to the next section.",
+    "confidence": 0.95,
+    "interaction_target": "Continue button",
+    "cursor_position_x": 915,
+    "cursor_position_y": 115,
+    "frame_description": "The user clicks the green continue button next to the destination input."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 12150,
+    "time_end_ms": 12500,
+    "description": "The page automatically scrolls down to the 'Policy type' section.",
+    "confidence": 0.9,
+    "frame_description": "The screen transitions to show the 'Policy type' question."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 14650,
+    "time_end_ms": 14750,
+    "description": "User clicks the 'Continue' button in the 'Policy type' section.",
+    "confidence": 0.95,
+    "interaction_target": "Continue button",
+    "cursor_position_x": 155,
+    "cursor_position_y": 705,
+    "frame_description": "The user clicks the green continue button under the policy type selection."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 14750,
+    "time_end_ms": 15500,
+    "description": "The page automatically scrolls down to the 'Travel dates' section.",
+    "confidence": 0.9,
+    "frame_description": "The screen transitions to show the 'Travel dates' section."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 24450,
+    "time_end_ms": 24550,
+    "description": "User clicks on the 'Departure Date' input field to open the calendar.",
+    "confidence": 0.95,
+    "interaction_target": "Departure Date input",
+    "cursor_position_x": 185,
+    "cursor_position_y": 615,
+    "frame_description": "The user clicks into the departure date field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 24550,
+    "time_end_ms": 24800,
+    "description": "A calendar date picker appears for selecting the departure date.",
+    "confidence": 0.9,
+    "frame_description": "A dual-month calendar view opens below the date inputs."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 25100,
+    "time_end_ms": 25250,
+    "description": "User selects a departure date from the calendar.",
+    "confidence": 0.9,
+    "interaction_target": "Calendar date",
+    "frame_description": "The user clicks on a specific date in the calendar."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 26250,
+    "time_end_ms": 26350,
+    "description": "User clicks on the 'Return Date' input field to open the calendar.",
+    "confidence": 0.95,
+    "interaction_target": "Return Date input",
+    "cursor_position_x": 385,
+    "cursor_position_y": 615,
+    "frame_description": "The user clicks into the return date field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 26350,
+    "time_end_ms": 26600,
+    "description": "A calendar date picker appears for selecting the return date.",
+    "confidence": 0.9,
+    "frame_description": "The calendar view opens again for the return date selection."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 27400,
+    "time_end_ms": 31100,
+    "description": "User clicks the next month arrow in the calendar multiple times to navigate to a future date.",
+    "confidence": 0.9,
+    "interaction_target": "Next month arrow",
+    "frame_description": "The user repeatedly clicks the right arrow on the calendar to advance the months."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 34350,
+    "time_end_ms": 34450,
+    "description": "User selects a return date from the calendar.",
+    "confidence": 0.9,
+    "interaction_target": "Calendar date",
+    "frame_description": "The user selects a date in the future month."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 34450,
+    "time_end_ms": 34550,
+    "description": "User clicks the 'Continue' button in the 'Travel dates' section.",
+    "confidence": 0.95,
+    "interaction_target": "Continue button",
+    "cursor_position_x": 155,
+    "cursor_position_y": 855,
+    "frame_description": "The user clicks the green continue button below the date inputs."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 34550,
+    "time_end_ms": 35500,
+    "description": "The page automatically scrolls down to the 'Travellers' section.",
+    "confidence": 0.9,
+    "frame_description": "The screen transitions to show the 'Travellers' section."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 41400,
+    "time_end_ms": 41500,
+    "description": "User clicks the 'Continue' button in the 'Travellers' section.",
+    "confidence": 0.95,
+    "interaction_target": "Continue button",
+    "cursor_position_x": 155,
+    "cursor_position_y": 655,
+    "frame_description": "The user clicks the green continue button in the travellers section."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 41500,
+    "time_end_ms": 42000,
+    "description": "The page automatically scrolls down to the age input field.",
+    "confidence": 0.9,
+    "frame_description": "The screen transitions to show the age input field for travellers."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 44100,
+    "time_end_ms": 46900,
+    "description": "User types '24' into the age input field for the adult traveller.",
+    "confidence": 0.95,
+    "interaction_target": "Age input field",
+    "frame_description": "The user enters '24' into the text field."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 50200,
+    "time_end_ms": 50300,
+    "description": "User clicks the 'Continue' button after entering the traveller's age.",
+    "confidence": 0.95,
+    "interaction_target": "Continue button",
+    "cursor_position_x": 155,
+    "cursor_position_y": 725,
+    "frame_description": "The user clicks the green continue button below the age input."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 50300,
+    "time_end_ms": 51000,
+    "description": "The page automatically scrolls down to the 'Cover levels' section.",
+    "confidence": 0.9,
+    "frame_description": "The screen transitions to show the 'Cover levels' section with sliders."
+  },
+  {
+    "type": "drag",
+    "time_start_ms": 51250,
+    "time_end_ms": 52000,
+    "description": "User drags the slider to adjust the 'Minimum cover for rental car excess'.",
+    "confidence": 0.9,
+    "interaction_target": "Rental car excess slider",
+    "frame_description": "The user interacts with the horizontal slider to set a cover amount."
+  },
+  {
+    "type": "drag",
+    "time_start_ms": 83500,
+    "time_end_ms": 84000,
+    "description": "User drags the slider to adjust the 'Minimum cover for trip cancellation'.",
+    "confidence": 0.9,
+    "interaction_target": "Trip cancellation slider",
+    "frame_description": "The user interacts with the trip cancellation slider at the end of the segment."
+  }
+]

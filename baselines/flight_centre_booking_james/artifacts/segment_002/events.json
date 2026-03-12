@@ -1,0 +1,228 @@
+[
+  {
+    "type": "scroll",
+    "time_start_ms": 0,
+    "time_end_ms": 11500,
+    "description": "User scrolls down through the list of available flights from Melbourne to Adelaide to compare options.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://www.flightcentre.com.au/review/result/Mbaiggr",
+    "frame_description": "Search results page showing various flight options from MEL to ADL with filters on the left."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 11550,
+    "time_end_ms": 13300,
+    "description": "User hovers over the Virgin Australia flight departing at 12:10pm.",
+    "confidence": 0.85,
+    "interaction_target": "Virgin Australia flight card (12:10pm)",
+    "page_title": "Flight Centre | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://www.flightcentre.com.au/review/result/Mbaiggr",
+    "frame_description": "The cursor is positioned over the flight card for the 12:10pm Virgin Australia flight."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 13350,
+    "time_end_ms": 13350,
+    "description": "User clicks to expand the flight details for the 12:10pm Virgin Australia flight.",
+    "confidence": 0.95,
+    "interaction_target": "Flight card expand button",
+    "cursor_position_x": 800,
+    "cursor_position_y": 430,
+    "page_title": "Flight Centre | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://www.flightcentre.com.au/review/result/Mbaiggr",
+    "frame_description": "The user activates the expansion of the flight card to see fare options."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 13400,
+    "time_end_ms": 13500,
+    "description": "The flight card expands to show different fare types: Lite, Choice, and Flex.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://www.flightcentre.com.au/review/result/Mbaiggr",
+    "frame_description": "The UI updates to reveal the 'Select Returning Fare Type' section within the flight card."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 13550,
+    "time_end_ms": 14900,
+    "description": "User hovers over the SELECT button for the Lite fare option.",
+    "confidence": 0.85,
+    "interaction_target": "Lite fare SELECT button",
+    "page_title": "Flight Centre | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://www.flightcentre.com.au/review/result/Mbaiggr",
+    "frame_description": "The cursor lingers over the first fare option labeled 'Lite' for $177."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 14950,
+    "time_end_ms": 14950,
+    "description": "User selects the Lite fare option for $177.",
+    "confidence": 0.95,
+    "interaction_target": "Lite fare SELECT button",
+    "cursor_position_x": 400,
+    "cursor_position_y": 720,
+    "page_title": "Flight Centre | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://www.flightcentre.com.au/review/result/Mbaiggr",
+    "frame_description": "The user clicks the blue SELECT button under the Lite fare column."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 15000,
+    "time_end_ms": 15500,
+    "description": "The SELECT button updates to a green SELECTED state with a checkmark.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://www.flightcentre.com.au/review/result/Mbaiggr",
+    "frame_description": "Visual feedback confirms the fare selection with a green checkmark icon."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 15850,
+    "time_end_ms": 19300,
+    "description": "An 'All Set!' loading overlay appears, followed by a transition to the 'Review trip' page.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://www.flightcentre.com.au/review/result/Mbaiggr",
+    "frame_description": "A white loading overlay with a spinner and the text 'All Set! Now let's review your flight selections' covers the screen."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 19300,
+    "time_end_ms": 19350,
+    "description": "Page navigates to the Review Trip screen.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://www.flightcentre.com.au/review/result/Mbaiggr",
+    "frame_description": "The loading overlay disappears, revealing the 'Review trip' page content."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 20750,
+    "time_end_ms": 21100,
+    "description": "The price summary sidebar loads on the right side of the page.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://www.flightcentre.com.au/review/result/Mbaiggr",
+    "frame_description": "The 'Price summary' box appears on the right, showing the total cost of $333.95."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 21150,
+    "time_end_ms": 38450,
+    "description": "User scrolls down the Review Trip page to check flight details and add-ons like baggage and seats.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://www.flightcentre.com.au/review/result/Mbaiggr",
+    "frame_description": "User moves down the page past the flight summaries into the 'Add-ons' section."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 38500,
+    "time_end_ms": 39100,
+    "description": "User hovers over the SELECT button for the Online Captain's Pack.",
+    "confidence": 0.85,
+    "interaction_target": "Captain's Pack SELECT button",
+    "page_title": "Flight Centre | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://www.flightcentre.com.au/review/result/Mbaiggr",
+    "frame_description": "The cursor is positioned over the selection button for the $9.95 Captain's Pack add-on."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 39150,
+    "time_end_ms": 39150,
+    "description": "User clicks to add the Online Captain's Pack for $9.95.",
+    "confidence": 0.95,
+    "interaction_target": "Captain's Pack SELECT button",
+    "cursor_position_x": 580,
+    "cursor_position_y": 450,
+    "page_title": "Flight Centre | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://www.flightcentre.com.au/review/result/Mbaiggr",
+    "frame_description": "The user clicks the blue SELECT button to include the Captain's Pack in their booking."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 39200,
+    "time_end_ms": 39450,
+    "description": "The Captain's Pack button updates to SELECTED.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://www.flightcentre.com.au/review/result/Mbaiggr",
+    "frame_description": "The button text changes to 'SELECTED' and the background color updates."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 39500,
+    "time_end_ms": 41050,
+    "description": "User scrolls to the bottom of the page to find the final confirmation button.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://www.flightcentre.com.au/review/result/Mbaiggr",
+    "frame_description": "User scrolls past the Captain's Pack section to the very bottom of the review page."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 41100,
+    "time_end_ms": 41500,
+    "description": "User hovers over the green CONTINUE button at the bottom of the page.",
+    "confidence": 0.85,
+    "interaction_target": "CONTINUE button",
+    "page_title": "Flight Centre | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://www.flightcentre.com.au/review/result/Mbaiggr",
+    "frame_description": "The cursor is placed over the large green 'CONTINUE' button."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 41550,
+    "time_end_ms": 41550,
+    "description": "User clicks the CONTINUE button to proceed to traveller details.",
+    "confidence": 0.95,
+    "interaction_target": "CONTINUE button",
+    "cursor_position_x": 600,
+    "cursor_position_y": 700,
+    "page_title": "Flight Centre | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://www.flightcentre.com.au/review/result/Mbaiggr",
+    "frame_description": "The user clicks the button to move to the next step of the booking flow."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 41600,
+    "time_end_ms": 44400,
+    "description": "A 'Thanks for confirming your flights' loading overlay appears with a spinner.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://www.flightcentre.com.au/review/result/Mbaiggr",
+    "frame_description": "A white loading screen with a spinner and the text 'Thanks for confirming your flights. Next up, your traveller details...' is displayed."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 44450,
+    "time_end_ms": 45000,
+    "description": "Page navigates to the Travellers details entry page.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://www.flightcentre.com.au/review/passenger",
+    "frame_description": "The URL changes and the 'Travellers' page begins to render."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 45000,
+    "time_end_ms": 49600,
+    "description": "The Travellers page loads its content, including the form for Adult 1.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://www.flightcentre.com.au/review/passenger",
+    "frame_description": "The form fields for Title, First name, Last name, and Date of birth appear on the screen."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 49650,
+    "time_end_ms": 63950,
+    "description": "A full-screen overlay from the usability testing tool appears asking 'What's making you hesitate there?'.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://www.flightcentre.com.au/review/passenger",
+    "frame_description": "A dark, semi-transparent overlay with a question from the testing platform covers the entire browser window."
+  }
+]

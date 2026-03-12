@@ -1,0 +1,81 @@
+[
+  {
+    "type": "scroll",
+    "time_start_ms": 0,
+    "time_end_ms": 7150,
+    "description": "User scrolls vertically through the 'Explore' page to browse available research opportunities.",
+    "confidence": 0.95,
+    "page_title": "Explore",
+    "page_location": "/explore",
+    "frame_description": "The Explore page is visible, showing a list of research tasks and sessions with various pay rates."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 7550,
+    "time_end_ms": 7600,
+    "description": "User clicks the filter icon in the top right corner of the screen.",
+    "confidence": 0.95,
+    "interaction_target": "Filter icon",
+    "cursor_position_x": 1050,
+    "cursor_position_y": 120,
+    "page_title": "Explore",
+    "page_location": "/explore",
+    "frame_description": "The user is activating the filter menu to refine the list of opportunities."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 7550,
+    "time_end_ms": 7800,
+    "description": "The 'Filter Opportunities' modal slides up from the bottom of the screen.",
+    "confidence": 0.95,
+    "interaction_target": "Filter Opportunities modal",
+    "page_title": "Explore",
+    "page_location": "/explore",
+    "frame_description": "A modal overlay appears on top of the Explore page, containing various filter categories."
+  },
+  {
+    "type": "hesitate",
+    "time_start_ms": 7800,
+    "time_end_ms": 31050,
+    "description": "User pauses to review the filter options (Task Type, Duration, Pay Rate, Device) without making any selections.",
+    "confidence": 0.8,
+    "interaction_target": "Filter options",
+    "page_title": "Explore",
+    "page_location": "/explore",
+    "frame_description": "The filter modal is fully displayed, showing options like 'Survey', 'AI Interview', and 'Video Call'."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 31050,
+    "time_end_ms": 31100,
+    "description": "User clicks the 'X' close button in the top right of the filter modal.",
+    "confidence": 0.95,
+    "interaction_target": "Close button",
+    "cursor_position_x": 1050,
+    "cursor_position_y": 850,
+    "page_title": "Explore",
+    "page_location": "/explore",
+    "frame_description": "The user is dismissing the filter menu without applying any new filters."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 31050,
+    "time_end_ms": 31300,
+    "description": "The filter modal slides down and disappears from view.",
+    "confidence": 0.95,
+    "interaction_target": "Filter Opportunities modal",
+    "page_title": "Explore",
+    "page_location": "/explore",
+    "frame_description": "The modal is closing, returning the user to the main opportunity list."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 31300,
+    "time_end_ms": 82593,
+    "description": "User continues to scroll through the list of opportunities on the Explore page.",
+    "confidence": 0.95,
+    "page_title": "Explore",
+    "page_location": "/explore",
+    "frame_description": "The user is back on the main list, browsing through cards for 'Video Call', 'In Person', and 'Diary Study' sessions."
+  }
+]

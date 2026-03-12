@@ -1,0 +1,142 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 1300,
+    "time_end_ms": 38800,
+    "description": "The task instructions are presented to the user, typing out line by line on a dark background.",
+    "confidence": 0.9,
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/s/-mod899159145853d8ad8c8dad",
+    "frame_description": "A dark screen with white text appearing line by line, providing instructions for the travel planning task."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 38800,
+    "time_end_ms": 44500,
+    "description": "An 'Open' button appears below the instructions, allowing the user to proceed to the test website.",
+    "confidence": 0.95,
+    "interaction_target": "Open button",
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/s/-mod899159145853d8ad8c8dad",
+    "frame_description": "The instruction screen now displays a circular 'Open' button in the center."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 44500,
+    "time_end_ms": 49600,
+    "description": "The user moves the cursor towards the 'Open' button and pauses briefly before clicking.",
+    "confidence": 0.85,
+    "interaction_target": "Open button",
+    "cursor_position_x": 960,
+    "cursor_position_y": 670,
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/s/-mod899159145853d8ad8c8dad",
+    "frame_description": "The cursor is positioned over the 'Open' button on the dark instruction screen."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 49600,
+    "time_end_ms": 49700,
+    "description": "The user clicks the 'Open' button to launch the website.",
+    "confidence": 0.98,
+    "interaction_target": "Open button",
+    "cursor_position_x": 960,
+    "cursor_position_y": 670,
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/s/-mod899159145853d8ad8c8dad",
+    "frame_description": "The 'Open' button is clicked, initiating a new tab load."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 49700,
+    "time_end_ms": 51300,
+    "description": "A new browser tab opens and loads the Google homepage.",
+    "confidence": 0.95,
+    "page_title": "Google",
+    "page_location": "google.com",
+    "frame_description": "The screen transitions from the dark instruction page to the white Google homepage."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 52000,
+    "time_end_ms": 54600,
+    "description": "The user moves the cursor to the top of the browser window, hovering over the open tabs.",
+    "confidence": 0.8,
+    "interaction_target": "Browser tabs",
+    "cursor_position_x": 350,
+    "cursor_position_y": 20,
+    "page_title": "Google",
+    "page_location": "google.com",
+    "frame_description": "The cursor lingers near the tab bar at the top of the browser."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 54600,
+    "time_end_ms": 54700,
+    "description": "The user clicks on the 'Askable Sessions' tab to refer back to the instructions.",
+    "confidence": 0.95,
+    "interaction_target": "Askable Sessions tab",
+    "cursor_position_x": 350,
+    "cursor_position_y": 20,
+    "page_title": "Google",
+    "page_location": "google.com",
+    "frame_description": "The user selects the previous tab containing the task instructions."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 54700,
+    "time_end_ms": 55000,
+    "description": "The browser view switches to the 'Askable Sessions' tab.",
+    "confidence": 0.95,
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/s/-mod899159145853d8ad8c8dad",
+    "frame_description": "The screen switches back to the dark instruction page."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 56800,
+    "time_end_ms": 56900,
+    "description": "The user clicks back on the 'Google' tab to continue with the task.",
+    "confidence": 0.95,
+    "interaction_target": "Google tab",
+    "cursor_position_x": 450,
+    "cursor_position_y": 20,
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/s/-mod899159145853d8ad8c8dad",
+    "frame_description": "The user clicks the Google tab to return to the search engine."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 56900,
+    "time_end_ms": 57200,
+    "description": "The browser view switches back to the Google homepage.",
+    "confidence": 0.95,
+    "page_title": "Google",
+    "page_location": "google.com",
+    "frame_description": "The screen switches back to the Google homepage."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 75200,
+    "time_end_ms": 75300,
+    "description": "The user clicks inside the Google search input field to begin searching.",
+    "confidence": 0.98,
+    "interaction_target": "Search input field",
+    "cursor_position_x": 960,
+    "cursor_position_y": 410,
+    "page_title": "Google",
+    "page_location": "google.com",
+    "frame_description": "The cursor is clicked inside the central search box on Google."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 75500,
+    "time_end_ms": 76626,
+    "description": "Upon clicking the search box, a dropdown menu with trending searches and suggestions appears.",
+    "confidence": 0.95,
+    "interaction_target": "Search suggestions dropdown",
+    "page_title": "Google",
+    "page_location": "google.com",
+    "frame_description": "A list of trending search terms appears below the search input field."
+  }
+]

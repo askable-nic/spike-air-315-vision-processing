@@ -1,0 +1,230 @@
+[
+  {
+    "type": "input_text",
+    "time_start_ms": 0,
+    "time_end_ms": 2400,
+    "description": "Serene finishes entering her phone number '0442238885' into the input field on the Aussie home loan options page.",
+    "confidence": 1.0,
+    "interaction_target": "Phone number input field",
+    "page_title": "Aussie",
+    "frame_description": "Serene is on the Aussie 'Your home loan options await!' page with a numeric keypad open, entering her phone number."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 2400,
+    "time_end_ms": 3350,
+    "description": "The 'PROTECT MY ACCOUNT' button changes from a disabled grey state to an enabled purple state after a valid phone number is entered.",
+    "confidence": 1.0,
+    "interaction_target": "PROTECT MY ACCOUNT button",
+    "frame_description": "The 'PROTECT MY ACCOUNT' button turns purple, indicating it is now clickable."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 3100,
+    "time_end_ms": 3350,
+    "description": "Serene hovers the cursor over the 'PROTECT MY ACCOUNT' button before clicking it.",
+    "confidence": 0.9,
+    "interaction_target": "PROTECT MY ACCOUNT button",
+    "cursor_position_x": 480,
+    "cursor_position_y": 380
+  },
+  {
+    "type": "click",
+    "time_start_ms": 3350,
+    "time_end_ms": 3350,
+    "description": "Serene clicks the 'PROTECT MY ACCOUNT' button.",
+    "confidence": 1.0,
+    "interaction_target": "PROTECT MY ACCOUNT button",
+    "cursor_position_x": 480,
+    "cursor_position_y": 380
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 3350,
+    "time_end_ms": 4100,
+    "description": "A loading spinner appears on the 'PROTECT MY ACCOUNT' button while the request is being processed.",
+    "confidence": 1.0,
+    "interaction_target": "PROTECT MY ACCOUNT button",
+    "frame_description": "A white loading spinner is visible in the center of the purple button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 4100,
+    "time_end_ms": 4100,
+    "description": "An error message 'Something Went Wrong' appears below the phone number field.",
+    "confidence": 1.0,
+    "interaction_target": "Error message",
+    "frame_description": "A red error box with the text 'Something Went Wrong' is displayed on the page."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 10350,
+    "time_end_ms": 14150,
+    "description": "The page navigates away from the error state to a loading screen.",
+    "confidence": 1.0,
+    "page_title": "Aussie",
+    "frame_description": "The screen transitions to a white loading page with a purple house icon animation."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 10350,
+    "time_end_ms": 14150,
+    "description": "A loading screen with a house icon animation and the text 'Loading... You're moving along nicely.' is displayed.",
+    "confidence": 1.0,
+    "frame_description": "The loading animation is active on the screen."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 14150,
+    "time_end_ms": 14650,
+    "description": "The 'home loan rates' page finishes loading.",
+    "confidence": 1.0,
+    "page_title": "home loan rates",
+    "frame_description": "The 'home loan rates' page is visible with options to refinance or buy a home."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 14650,
+    "time_end_ms": 14650,
+    "description": "Serene navigates back to the Google search results page.",
+    "confidence": 1.0,
+    "page_title": "home loan australia bank st george - Google Search",
+    "frame_description": "The browser returns to the Google search results for home loans."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 14650,
+    "time_end_ms": 19050,
+    "description": "Serene scrolls down through the Google search results, looking at different bank options.",
+    "confidence": 1.0,
+    "frame_description": "The user is scrolling through search results for Suncorp, Bendigo Bank, and ubank."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 18800,
+    "time_end_ms": 19050,
+    "description": "Serene hovers over the ubank search result link before clicking.",
+    "confidence": 0.9,
+    "interaction_target": "ubank search result link",
+    "cursor_position_x": 300,
+    "cursor_position_y": 750
+  },
+  {
+    "type": "click",
+    "time_start_ms": 19050,
+    "time_end_ms": 19050,
+    "description": "Serene clicks on the ubank search result.",
+    "confidence": 1.0,
+    "interaction_target": "ubank search result link",
+    "cursor_position_x": 300,
+    "cursor_position_y": 750
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 19050,
+    "time_end_ms": 26650,
+    "description": "The ubank 'Home loans' page loads.",
+    "confidence": 1.0,
+    "page_title": "Home loans | ubank",
+    "frame_description": "The ubank home loans page is displayed with interest rate information."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 19050,
+    "time_end_ms": 26650,
+    "description": "Serene scrolls through the ubank home loans page to review their offerings.",
+    "confidence": 1.0,
+    "frame_description": "The user is scrolling through the ubank page, viewing 'Reasons to refinance' and 'Perks of refinancing'."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 26650,
+    "time_end_ms": 26650,
+    "description": "Serene navigates back to the Google search results.",
+    "confidence": 1.0,
+    "page_title": "home loan australia bank st george - Google Search",
+    "frame_description": "The browser returns to the Google search results page."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 26650,
+    "time_end_ms": 50200,
+    "description": "Serene scrolls further down the Google search results page, passing several ads and results.",
+    "confidence": 1.0,
+    "frame_description": "The user is scrolling past results for Suncorp and Bendigo Bank again."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 49900,
+    "time_end_ms": 50200,
+    "description": "Serene hovers over the St. George Bank search result link.",
+    "confidence": 0.9,
+    "interaction_target": "St. George Bank search result link",
+    "cursor_position_x": 350,
+    "cursor_position_y": 800
+  },
+  {
+    "type": "click",
+    "time_start_ms": 50200,
+    "time_end_ms": 50200,
+    "description": "Serene clicks on the St. George Bank search result.",
+    "confidence": 1.0,
+    "interaction_target": "St. George Bank search result link",
+    "cursor_position_x": 350,
+    "cursor_position_y": 800
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 50200,
+    "time_end_ms": 58150,
+    "description": "The St. George Bank 'Home Loans' page loads.",
+    "confidence": 1.0,
+    "page_title": "Home Loans | St.George Bank",
+    "frame_description": "The St. George Bank home loans landing page is displayed."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 50200,
+    "time_end_ms": 58150,
+    "description": "Serene scrolls through the St. George Bank home loans page, looking for calculators.",
+    "confidence": 1.0,
+    "frame_description": "The user is scrolling through the St. George page, viewing 'What kind of home loan are you looking for?' and various icons."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 57600,
+    "time_end_ms": 58150,
+    "description": "Serene hovers over the 'Calculators and tools' link.",
+    "confidence": 0.9,
+    "interaction_target": "Calculators and tools",
+    "cursor_position_x": 650,
+    "cursor_position_y": 650
+  },
+  {
+    "type": "click",
+    "time_start_ms": 58150,
+    "time_end_ms": 58150,
+    "description": "Serene clicks on the 'Calculators and tools' link.",
+    "confidence": 1.0,
+    "interaction_target": "Calculators and tools",
+    "cursor_position_x": 650,
+    "cursor_position_y": 650
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 58150,
+    "time_end_ms": 70000,
+    "description": "The 'Home loan calculators and tools' page loads.",
+    "confidence": 1.0,
+    "page_title": "Home loan calculators and tools | St.George Bank",
+    "frame_description": "The St. George Bank calculators page is displayed."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 58150,
+    "time_end_ms": 70000,
+    "description": "Serene scrolls through the calculators page, viewing the Mortgage calculator, Home loan repayment calculator, Stamp duty calculator, and Refinance calculator.",
+    "confidence": 1.0,
+    "frame_description": "The user is scrolling through a list of different home loan calculators."
+  }
+]

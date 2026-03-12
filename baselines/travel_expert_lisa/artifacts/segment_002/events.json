@@ -1,0 +1,178 @@
+[
+  {
+    "type": "hover",
+    "time_start_ms": 0,
+    "time_end_ms": 4500,
+    "description": "User hovers over the 'Leaving From' input field, which is pre-filled with 'Maroochydore, Australia - Sunshine Coast'.",
+    "confidence": 0.95,
+    "interaction_target": "Leaving From input field",
+    "cursor_position_x": 740,
+    "cursor_position_y": 420,
+    "page_title": "Webjet | Your go-to for going places",
+    "page_location": "https://www.webjet.com.au/",
+    "frame_description": "The Webjet homepage is visible with a flight search form on the right side. The 'Leaving From' and 'Going To' fields are already populated."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 4500,
+    "time_end_ms": 4550,
+    "description": "User switches browser tabs to the 'Askable Sessions' page.",
+    "confidence": 1.0,
+    "interaction_target": "Browser Tab",
+    "cursor_position_x": 225,
+    "cursor_position_y": 15,
+    "page_title": "Askable Sessions",
+    "page_location": "https://sessions.askable.com/...",
+    "frame_description": "The screen changes to the Askable Sessions dashboard showing task instructions."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 7350,
+    "time_end_ms": 7400,
+    "description": "User switches back to the Webjet flight search tab.",
+    "confidence": 1.0,
+    "interaction_target": "Browser Tab",
+    "cursor_position_x": 380,
+    "cursor_position_y": 15,
+    "page_title": "Webjet | Your go-to for going places",
+    "page_location": "https://www.webjet.com.au/",
+    "frame_description": "The Webjet homepage search form is visible again."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 7400,
+    "time_end_ms": 44350,
+    "description": "User hovers over the 'Select Travel Dates' field, appearing to review the form before proceeding.",
+    "confidence": 0.9,
+    "interaction_target": "Select Travel Dates field",
+    "cursor_position_x": 740,
+    "cursor_position_y": 500,
+    "page_title": "Webjet | Your go-to for going places",
+    "frame_description": "The cursor remains stationary over the date selection area of the search widget."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 44350,
+    "time_end_ms": 44350,
+    "description": "User clicks on the 'Select Travel Dates' input field to open the calendar.",
+    "confidence": 1.0,
+    "interaction_target": "Select Travel Dates field",
+    "cursor_position_x": 740,
+    "cursor_position_y": 500,
+    "page_title": "Webjet | Your go-to for going places",
+    "frame_description": "The user activates the date picker."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 44350,
+    "time_end_ms": 44450,
+    "description": "The date picker modal overlay appears on the screen.",
+    "confidence": 1.0,
+    "interaction_target": "Date Picker Modal",
+    "frame_description": "A calendar modal showing February and March 2026 opens over the search form."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 44450,
+    "time_end_ms": 47350,
+    "description": "User hovers over various dates in the March 2026 calendar view.",
+    "confidence": 0.9,
+    "interaction_target": "Calendar dates",
+    "cursor_position_x": 650,
+    "cursor_position_y": 650,
+    "frame_description": "The cursor moves across the calendar grid."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 47350,
+    "time_end_ms": 47350,
+    "description": "User selects March 1, 2026, as the departure date.",
+    "confidence": 1.0,
+    "interaction_target": "March 1, 2026",
+    "cursor_position_x": 815,
+    "cursor_position_y": 630,
+    "frame_description": "The date March 1st is highlighted in the calendar."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 47350,
+    "time_end_ms": 56850,
+    "description": "User hovers over dates in late March to choose a return flight.",
+    "confidence": 0.9,
+    "interaction_target": "Calendar dates",
+    "cursor_position_x": 750,
+    "cursor_position_y": 850,
+    "frame_description": "The cursor moves toward the end of the March calendar grid."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 56850,
+    "time_end_ms": 56850,
+    "description": "User selects March 22, 2026, as the return date.",
+    "confidence": 1.0,
+    "interaction_target": "March 22, 2026",
+    "cursor_position_x": 815,
+    "cursor_position_y": 850,
+    "frame_description": "The date March 22nd is highlighted, and the range between the two dates is shaded."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 57850,
+    "time_end_ms": 57850,
+    "description": "User clicks the 'Done' button in the date picker modal.",
+    "confidence": 1.0,
+    "interaction_target": "Done button",
+    "cursor_position_x": 810,
+    "cursor_position_y": 910,
+    "frame_description": "The user confirms their date selection."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 57850,
+    "time_end_ms": 59650,
+    "description": "The date picker modal closes.",
+    "confidence": 1.0,
+    "interaction_target": "Date Picker Modal",
+    "frame_description": "The calendar overlay disappears, showing the updated search form with selected dates."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 61300,
+    "time_end_ms": 61300,
+    "description": "User clicks the 'Search Flights' button.",
+    "confidence": 1.0,
+    "interaction_target": "Search Flights button",
+    "cursor_position_x": 740,
+    "cursor_position_y": 700,
+    "frame_description": "The user initiates the search process."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 62400,
+    "time_end_ms": 79300,
+    "description": "A loading screen with a flight path animation is displayed.",
+    "confidence": 1.0,
+    "interaction_target": "Loading Screen",
+    "frame_description": "The screen shows an animation of a plane moving from Maroochydore to London with the text 'Available airfares will be displayed shortly'."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 61300,
+    "time_end_ms": 79300,
+    "description": "The browser navigates to the flight search results page.",
+    "confidence": 1.0,
+    "interaction_target": "Flight Search Results Page",
+    "page_location": "https://www.webjet.com.au/flights/results/...",
+    "frame_description": "The URL changes and the results page begins to render."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 79300,
+    "time_end_ms": 82950,
+    "description": "User scrolls down the results page to view different flight options.",
+    "confidence": 0.95,
+    "interaction_target": "Search Results List",
+    "page_title": "Maroochydore to London (Return)",
+    "frame_description": "The user moves the page content vertically to see more flight cards."
+  }
+]

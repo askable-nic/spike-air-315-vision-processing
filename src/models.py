@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Literal
 
 from pydantic import BaseModel
@@ -37,6 +38,8 @@ class SessionManifest(BaseModel, frozen=True):
     participant: str
     userId: tuple[str, ...]
     screenTrackStartOffset: int
+    fullSessionDurationMs: float | None = None
+    screenTrackDurationMs: float | None = None
     data: SessionData
 
 
@@ -165,6 +168,21 @@ class ObserveConfig(BaseModel, frozen=True):
     frame_dedup_ms: int = 200
 
 
+class GenerateBaselinesConfig(BaseModel, frozen=True):
+    model: str = "gemini-3-flash-preview"
+    temperature: float = 0.2
+    max_concurrent: int = 3
+    video_fps: int = 20
+    max_segment_duration_ms: int = 75000
+    segment_overlap_ms: int = 5000
+    source: str = "gemini_video_baseline"
+    merge: MergeConfig = MergeConfig(
+        time_tolerance_ms=2000,
+        similarity_threshold=0.6,
+        discard_context_events=False,
+    )
+
+
 class PipelineConfig(BaseModel, frozen=True):
     triage: TriageConfig = TriageConfig()
     analyse: AnalyseConfig = AnalyseConfig()
@@ -179,6 +197,30 @@ class VideoMetadata(BaseModel, frozen=True):
     fps: float
     width: int
     height: int
+
+
+class VideoSegment(BaseModel, frozen=True):
+    index: int
+    start_ms: float
+    end_ms: float
+    overlap_start_ms: float  # start of overlap with previous segment
+    overlap_end_ms: float    # end of overlap with next segment
+    path: Path               # path to extracted segment file
+
+
+class VideoAnalysisEvent(BaseModel, frozen=True):
+    """Event detected from video segment analysis."""
+    type: str
+    time_start_ms: float
+    time_end_ms: float
+    description: str
+    confidence: float
+    interaction_target: str | None = None
+    cursor_position_x: int | None = None
+    cursor_position_y: int | None = None
+    page_title: str | None = None
+    page_location: str | None = None
+    frame_description: str | None = None
 
 
 # --- Triage ---

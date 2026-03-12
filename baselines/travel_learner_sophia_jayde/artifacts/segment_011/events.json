@@ -1,0 +1,243 @@
+[
+  {
+    "type": "click",
+    "time_start_ms": 20100,
+    "time_end_ms": 20100,
+    "description": "User clicks the 'New Tab' button in the browser to start a new search.",
+    "confidence": 1.0,
+    "interaction_target": "New Tab button",
+    "cursor_position_x": 932,
+    "cursor_position_y": 18,
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/rooms/btkt-biku-dq6",
+    "frame_description": "Browser window showing a screen sharing recursion in an Askable session tab."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 20100,
+    "time_end_ms": 20500,
+    "description": "A new browser tab opens, displaying the default Google search page.",
+    "confidence": 0.9,
+    "interaction_target": "Browser Tab",
+    "page_title": "New Tab",
+    "frame_description": "The browser UI updates to show a new, empty tab with a Google search bar."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 21600,
+    "time_end_ms": 23300,
+    "description": "User types 'hostel world' into the search bar on the new tab page.",
+    "confidence": 1.0,
+    "interaction_target": "Google Search input",
+    "cursor_position_x": 640,
+    "cursor_position_y": 400,
+    "page_title": "New Tab",
+    "frame_description": "Chrome New Tab page with a Google search bar in the center; text is being entered."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 21650,
+    "time_end_ms": 23300,
+    "description": "Google search suggestions appear below the search bar as the user types.",
+    "confidence": 0.9,
+    "interaction_target": "Search suggestions dropdown",
+    "page_title": "New Tab",
+    "frame_description": "A dropdown menu appears below the search input with various autocomplete options."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 23900,
+    "time_end_ms": 25500,
+    "description": "User presses Enter, and the browser navigates to the Google search results page for 'hostel world'.",
+    "confidence": 1.0,
+    "interaction_target": "Enter key",
+    "page_title": "hostel world - Google Search",
+    "page_location": "google.com/search?q=hostel+world",
+    "frame_description": "The page transitions from the New Tab screen to Google search results."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 28100,
+    "time_end_ms": 28100,
+    "description": "User clicks on the first organic search result for 'Hostelworld'.",
+    "confidence": 1.0,
+    "interaction_target": "Hostelworld search result link",
+    "cursor_position_x": 200,
+    "cursor_position_y": 350,
+    "page_title": "hostel world - Google Search",
+    "frame_description": "Google search results page; the cursor activates the primary link for Hostelworld."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 28100,
+    "time_end_ms": 31500,
+    "description": "The browser navigates to the Hostelworld homepage.",
+    "confidence": 1.0,
+    "page_title": "Hostels Worldwide - Online Hostel Bookings, Ratings and Reviews - Hostelworld",
+    "page_location": "hostelworld.com",
+    "frame_description": "The screen transitions from Google results to the Hostelworld homepage."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 40500,
+    "time_end_ms": 43000,
+    "description": "User scrolls down the Hostelworld homepage to view content and then back up.",
+    "confidence": 0.9,
+    "interaction_target": "Page body",
+    "page_title": "Hostels Worldwide - Online Hostel Bookings, Ratings and Reviews - Hostelworld",
+    "frame_description": "The user moves the page content vertically to explore the homepage layout."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 45500,
+    "time_end_ms": 45500,
+    "description": "User clicks into the destination search field on the Hostelworld homepage.",
+    "confidence": 1.0,
+    "interaction_target": "Location search input",
+    "cursor_position_x": 400,
+    "cursor_position_y": 300,
+    "page_title": "Hostels Worldwide - Online Hostel Bookings, Ratings and Reviews - Hostelworld",
+    "frame_description": "Hostelworld homepage; the cursor focuses on the 'Where do you want to go?' input field."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 46500,
+    "time_end_ms": 47500,
+    "description": "User types 'Palermo' into the destination search field.",
+    "confidence": 1.0,
+    "interaction_target": "Location search input",
+    "page_title": "Hostels Worldwide - Online Hostel Bookings, Ratings and Reviews - Hostelworld",
+    "frame_description": "The search input field updates as the user types the destination name."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 46550,
+    "time_end_ms": 47500,
+    "description": "A dropdown list of destination suggestions appears below the search field.",
+    "confidence": 0.9,
+    "interaction_target": "Autocomplete suggestions",
+    "frame_description": "A list of matching locations appears dynamically as the user types 'Palermo'."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 48500,
+    "time_end_ms": 48500,
+    "description": "User selects 'Palermo, Italy' from the autocomplete suggestions.",
+    "confidence": 1.0,
+    "interaction_target": "Palermo, Italy suggestion",
+    "cursor_position_x": 400,
+    "cursor_position_y": 340,
+    "page_title": "Hostels Worldwide - Online Hostel Bookings, Ratings and Reviews - Hostelworld",
+    "frame_description": "The user clicks a specific location from the presented list."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 49500,
+    "time_end_ms": 49500,
+    "description": "User clicks on the check-in date field to open the calendar.",
+    "confidence": 1.0,
+    "interaction_target": "Check-in date field",
+    "cursor_position_x": 650,
+    "cursor_position_y": 300,
+    "page_title": "Hostels Worldwide - Online Hostel Bookings, Ratings and Reviews - Hostelworld",
+    "frame_description": "The user activates the date selection portion of the search bar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 49500,
+    "time_end_ms": 50000,
+    "description": "The date picker calendar modal appears on the screen.",
+    "confidence": 0.9,
+    "interaction_target": "Date picker calendar",
+    "frame_description": "A calendar interface opens to allow the user to select travel dates."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 51500,
+    "time_end_ms": 51500,
+    "description": "User selects the check-in date from the calendar.",
+    "confidence": 0.9,
+    "interaction_target": "June 10th",
+    "cursor_position_x": 600,
+    "cursor_position_y": 450,
+    "page_title": "Hostels Worldwide - Online Hostel Bookings, Ratings and Reviews - Hostelworld",
+    "frame_description": "The user clicks a specific day in the calendar modal."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 53500,
+    "time_end_ms": 53500,
+    "description": "User selects the check-out date from the calendar.",
+    "confidence": 0.9,
+    "interaction_target": "June 17th",
+    "cursor_position_x": 700,
+    "cursor_position_y": 450,
+    "page_title": "Hostels Worldwide - Online Hostel Bookings, Ratings and Reviews - Hostelworld",
+    "frame_description": "The user clicks a second date to define the stay duration."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 55000,
+    "time_end_ms": 55000,
+    "description": "User clicks the orange 'Search' button to find hostels in Palermo.",
+    "confidence": 1.0,
+    "interaction_target": "Search button",
+    "cursor_position_x": 900,
+    "cursor_position_y": 300,
+    "page_title": "Hostels Worldwide - Online Hostel Bookings, Ratings and Reviews - Hostelworld",
+    "frame_description": "The user activates the search query with all parameters filled."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 55000,
+    "time_end_ms": 62000,
+    "description": "The browser navigates to the search results page for hostels in Palermo.",
+    "confidence": 1.0,
+    "page_title": "Hostels in Palermo - Book Online at Hostelworld",
+    "page_location": "hostelworld.com/st/hostels/europe/italy/palermo",
+    "frame_description": "The page transitions from the homepage to a list of search results."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 72000,
+    "time_end_ms": 75000,
+    "description": "User scrolls through the list of hostel search results.",
+    "confidence": 0.9,
+    "interaction_target": "Page body",
+    "page_title": "Hostels in Palermo - Book Online at Hostelworld",
+    "frame_description": "The user browses the list of available hostels by scrolling down the results page."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 79200,
+    "time_end_ms": 80500,
+    "description": "User hovers over a specific hostel card while considering it.",
+    "confidence": 0.8,
+    "interaction_target": "A Casa di Amici hostel card",
+    "cursor_position_x": 400,
+    "cursor_position_y": 500,
+    "page_title": "Hostels in Palermo - Book Online at Hostelworld",
+    "frame_description": "The cursor lingers over a hostel listing card before the user decides to click."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 80500,
+    "time_end_ms": 80500,
+    "description": "User clicks on the 'A Casa di Amici' hostel card to view details.",
+    "confidence": 1.0,
+    "interaction_target": "A Casa di Amici hostel card",
+    "cursor_position_x": 400,
+    "cursor_position_y": 500,
+    "page_title": "Hostels in Palermo - Book Online at Hostelworld",
+    "frame_description": "The user selects a specific hostel to see more information."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 80500,
+    "time_end_ms": 84011,
+    "description": "The browser navigates to the specific hostel's details page.",
+    "confidence": 1.0,
+    "page_title": "A Casa di Amici, Palermo \u2013 Updated 2025 Prices",
+    "frame_description": "The page begins loading the detailed view for the selected hostel."
+  }
+]

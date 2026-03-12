@@ -1,0 +1,242 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 650,
+    "time_end_ms": 850,
+    "description": "The Filters sidebar opens on the right side of the screen.",
+    "confidence": 0.95,
+    "frame_description": "The survey results page is visible with a new sidebar titled 'Filters' appearing on the right."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 1600,
+    "time_end_ms": 1650,
+    "description": "User clicks on the 'Select filter' dropdown menu in the Filters sidebar to open it.",
+    "confidence": 0.9,
+    "interaction_target": "Select filter dropdown",
+    "cursor_position_x": 840,
+    "cursor_position_y": 190,
+    "frame_description": "The cursor is positioned over the 'Select filter' dropdown in the sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 1650,
+    "time_end_ms": 1800,
+    "description": "A dropdown menu with filter categories appears.",
+    "confidence": 0.95,
+    "frame_description": "A list of filter options like 'Participants', 'Age', 'Location' is now visible below the 'Select filter' box."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 2150,
+    "time_end_ms": 2450,
+    "description": "Cursor hovers over the 'Completion date' option in the filter dropdown.",
+    "confidence": 0.8,
+    "interaction_target": "Completion date option",
+    "cursor_position_x": 840,
+    "cursor_position_y": 730,
+    "frame_description": "The cursor is stationary over the 'Completion date' item in the open dropdown menu."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 3350,
+    "time_end_ms": 3450,
+    "description": "Cursor hovers over the 'Participants' option in the filter dropdown.",
+    "confidence": 0.8,
+    "interaction_target": "Participants option",
+    "cursor_position_x": 840,
+    "cursor_position_y": 340,
+    "frame_description": "The cursor moves up and pauses over the 'Participants' item in the dropdown."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 7150,
+    "time_end_ms": 8250,
+    "description": "User scrolls down the survey results page.",
+    "confidence": 0.9,
+    "frame_description": "The content on the page moves upwards as the user scrolls down."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 10900,
+    "time_end_ms": 10950,
+    "description": "User clicks on the 'Select filter' dropdown menu again.",
+    "confidence": 0.9,
+    "interaction_target": "Select filter dropdown",
+    "cursor_position_x": 840,
+    "cursor_position_y": 190,
+    "frame_description": "The cursor is back on the 'Select filter' box in the sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 10950,
+    "time_end_ms": 11100,
+    "description": "The filter categories dropdown menu reappears.",
+    "confidence": 0.95,
+    "frame_description": "The list of filter categories is visible again."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 15900,
+    "time_end_ms": 15950,
+    "description": "User selects the 'Study blocks' category from the filter dropdown.",
+    "confidence": 0.9,
+    "interaction_target": "Study blocks option",
+    "cursor_position_x": 840,
+    "cursor_position_y": 840,
+    "frame_description": "The cursor clicks on the 'Study blocks' item at the bottom of the dropdown."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 15950,
+    "time_end_ms": 16100,
+    "description": "A list of survey questions appears in the sidebar.",
+    "confidence": 0.95,
+    "frame_description": "The dropdown menu is replaced by a list of specific questions from the study."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 17300,
+    "time_end_ms": 17350,
+    "description": "User selects the question 'How important is it to you to be able to pool your Askable earnings before withdrawing?' from the list.",
+    "confidence": 0.9,
+    "interaction_target": "Survey question filter",
+    "cursor_position_x": 840,
+    "cursor_position_y": 340,
+    "frame_description": "The cursor clicks on the first question in the list."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 17350,
+    "time_end_ms": 17500,
+    "description": "The sidebar updates to show filter configuration options for the selected question.",
+    "confidence": 0.95,
+    "frame_description": "The sidebar now shows 'Rating' and 'is greater than or equal to' fields."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 19700,
+    "time_end_ms": 21650,
+    "description": "User types '5' into the rating input field.",
+    "confidence": 0.9,
+    "interaction_target": "Rating input field",
+    "cursor_position_x": 900,
+    "cursor_position_y": 340,
+    "frame_description": "The number '5' appears in the input box next to 'is greater than or equal to'."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 22750,
+    "time_end_ms": 22800,
+    "description": "User clicks the 'Apply filter' button.",
+    "confidence": 0.9,
+    "interaction_target": "Apply filter button",
+    "cursor_position_x": 780,
+    "cursor_position_y": 470,
+    "frame_description": "The cursor clicks the 'Apply filter' button in the sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 28450,
+    "time_end_ms": 29550,
+    "description": "The survey results update to show only responses with a rating of 5.",
+    "confidence": 0.95,
+    "frame_description": "The chart on the main page refreshes, now showing a single bar for rating '5' at 100%."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 31350,
+    "time_end_ms": 32350,
+    "description": "User scrolls down to see the filtered individual responses.",
+    "confidence": 0.9,
+    "frame_description": "The page scrolls down to the 'Individual responses' section."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 34200,
+    "time_end_ms": 38150,
+    "description": "User hovers over the 'Locate your Askable wallet' task in the left sidebar, hesitating before clicking.",
+    "confidence": 0.8,
+    "interaction_target": "Locate your Askable wallet task",
+    "cursor_position_x": 150,
+    "cursor_position_y": 190,
+    "frame_description": "The cursor pauses over the second task item in the left-hand navigation menu for several seconds."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 38150,
+    "time_end_ms": 38200,
+    "description": "User clicks on the 'Locate your Askable wallet' task.",
+    "confidence": 0.9,
+    "interaction_target": "Locate your Askable wallet task",
+    "cursor_position_x": 150,
+    "cursor_position_y": 190,
+    "frame_description": "The cursor clicks the task item in the left sidebar."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 38200,
+    "time_end_ms": 38600,
+    "description": "The page navigates to the analysis view for the 'Locate your Askable wallet' task.",
+    "confidence": 0.9,
+    "page_location": "https://app.askable.com/studios/66195d30ab43ba8542e16816/results/task/66195d7fed31dc007c1b4211?statsTaskBlock=66195d7fed31dc007c1b4219",
+    "frame_description": "The URL in the address bar updates and the page content refreshes to show the new task's data."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 43100,
+    "time_end_ms": 43150,
+    "description": "User clicks the 'X' button to close the Filters sidebar.",
+    "confidence": 0.9,
+    "interaction_target": "Close filters button",
+    "cursor_position_x": 970,
+    "cursor_position_y": 140,
+    "frame_description": "The cursor clicks the close icon at the top right of the Filters sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 43150,
+    "time_end_ms": 44100,
+    "description": "The Filters sidebar closes.",
+    "confidence": 0.95,
+    "frame_description": "The sidebar on the right disappears, and the main content expands."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 51450,
+    "time_end_ms": 51550,
+    "description": "User hovers over the 'Why do you think a reason...' task in the left sidebar.",
+    "confidence": 0.8,
+    "interaction_target": "Why do you think a reason... task",
+    "cursor_position_x": 150,
+    "cursor_position_y": 440,
+    "frame_description": "The cursor pauses over another task item in the left sidebar."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 52450,
+    "time_end_ms": 53450,
+    "description": "User scrolls down the task analysis page.",
+    "confidence": 0.9,
+    "frame_description": "The page content moves up as the user scrolls down to see more paths."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 70800,
+    "time_end_ms": 70850,
+    "description": "User clicks on the 'Heat map' tab.",
+    "confidence": 0.9,
+    "interaction_target": "Heat map tab",
+    "cursor_position_x": 650,
+    "cursor_position_y": 210,
+    "frame_description": "The cursor clicks the 'Heat map' option next to 'Recordings'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 71300,
+    "time_end_ms": 72300,
+    "description": "The heat map visualization loads and appears on the screen.",
+    "confidence": 0.95,
+    "frame_description": "The screen recordings are replaced by a heat map overlay on the task screen."
+  }
+]

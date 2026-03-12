@@ -1,0 +1,94 @@
+[
+  {
+    "type": "scroll",
+    "time_start_ms": 0,
+    "time_end_ms": 15850,
+    "description": "User scrolls through the list of opportunities on the Explore page, browsing various cards like 'Video Call', 'In Person', and 'Diary Study'.",
+    "confidence": 0.9,
+    "interaction_target": "Explore opportunity list",
+    "page_title": "Explore",
+    "frame_description": "The Explore page is visible, showing a list of research opportunities with different colors and icons."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 15850,
+    "time_end_ms": 15950,
+    "description": "User clicks on the filter icon located in the top right corner of the Explore page.",
+    "confidence": 0.95,
+    "interaction_target": "Filter icon",
+    "cursor_position_x": 778,
+    "cursor_position_y": 102,
+    "page_title": "Explore",
+    "frame_description": "The cursor moves to and clicks the filter icon in the header of the Explore page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 15950,
+    "time_end_ms": 16100,
+    "description": "The 'Filter Opportunities' modal appears, sliding up to cover the screen.",
+    "confidence": 0.95,
+    "interaction_target": "Filter Opportunities modal",
+    "page_title": "Explore",
+    "frame_description": "A white modal overlay titled 'Filter Opportunities' appears over the main content."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 16100,
+    "time_end_ms": 31200,
+    "description": "User scrolls through the various filter options within the modal, including Task Type, Duration, Pay Rate, and Device.",
+    "confidence": 0.9,
+    "interaction_target": "Filter Opportunities modal",
+    "page_title": "Explore",
+    "frame_description": "The user is browsing through the filter settings without making any selections."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 31200,
+    "time_end_ms": 31300,
+    "description": "User clicks the 'X' button in the top right of the filter modal to close it.",
+    "confidence": 0.95,
+    "interaction_target": "Close button",
+    "cursor_position_x": 778,
+    "cursor_position_y": 602,
+    "page_title": "Explore",
+    "frame_description": "The cursor clicks the close icon on the filter modal."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 31300,
+    "time_end_ms": 31450,
+    "description": "The filter modal closes, returning the user to the Explore opportunity list.",
+    "confidence": 0.95,
+    "interaction_target": "Filter Opportunities modal",
+    "page_title": "Explore",
+    "frame_description": "The filter modal disappears, revealing the main Explore page again."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 31450,
+    "time_end_ms": 58700,
+    "description": "User continues to scroll through the opportunity list on the Explore page.",
+    "confidence": 0.9,
+    "interaction_target": "Explore opportunity list",
+    "page_title": "Explore",
+    "frame_description": "The user is browsing the main list of opportunities again."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 58700,
+    "time_end_ms": 60450,
+    "description": "The screen transitions to a task completion message.",
+    "confidence": 1.0,
+    "interaction_target": "Completion screen",
+    "frame_description": "A dark screen with white text appears, thanking the user and instructing them to close the task."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 60450,
+    "time_end_ms": 77594,
+    "description": "The video transitions from the app interface to a full-screen view of the participant's webcam.",
+    "confidence": 1.0,
+    "interaction_target": "Webcam view",
+    "frame_description": "The participant, Georgie, is visible on camera, speaking to the researcher at the end of the session."
+  }
+]

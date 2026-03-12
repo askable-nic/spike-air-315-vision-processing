@@ -47,9 +47,7 @@ export const ScenesColumn = ({ scenes, currentTime, duration, seekTo }: ScenesCo
   }, [scenes, duration]);
 
   return (
-    <div className="column">
-      <div className="column__header">Scenes</div>
-      <div className="column__body" ref={containerRef}>
+    <div className="column__body" ref={containerRef}>
         {entries.map((entry, i) =>
           entry.kind === "gap" ? (
             <GapPlaceholder
@@ -81,7 +79,6 @@ export const ScenesColumn = ({ scenes, currentTime, duration, seekTo }: ScenesCo
             </ColumnItem>
           ),
         )}
-      </div>
     </div>
   );
 };

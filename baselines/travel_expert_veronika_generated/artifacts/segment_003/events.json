@@ -1,0 +1,193 @@
+[
+  {
+    "type": "click",
+    "time_start_ms": 5650,
+    "time_end_ms": 5650,
+    "description": "User clicks the 'Select' button for the first flight result (Qantas/Emirates) on the Skyscanner search results page.",
+    "confidence": 1.0,
+    "interaction_target": "Select button",
+    "cursor_position_x": 680,
+    "cursor_position_y": 815,
+    "page_title": "Skyscanner",
+    "frame_description": "The cursor is positioned over the blue 'Select' button for the top flight result."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 5650,
+    "time_end_ms": 6100,
+    "description": "The selected flight result expands to show more detailed information and specific booking options.",
+    "confidence": 0.9,
+    "frame_description": "The flight result card expands vertically, revealing additional details."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 6500,
+    "time_end_ms": 15550,
+    "description": "User scrolls down the page to review other flight results.",
+    "confidence": 1.0,
+    "frame_description": "The page content moves upwards as the user scrolls down."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 15550,
+    "time_end_ms": 19550,
+    "description": "User hovers the cursor over various filter options in the left sidebar, specifically looking at the 'Stops' and 'Baggage' sections.",
+    "confidence": 0.8,
+    "interaction_target": "Sidebar filters",
+    "frame_description": "The cursor moves slowly over the filter options on the left side of the screen."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 19550,
+    "time_end_ms": 19550,
+    "description": "User clicks the '2+ stops' checkbox to filter the results.",
+    "confidence": 1.0,
+    "interaction_target": "2+ stops checkbox",
+    "cursor_position_x": 25,
+    "cursor_position_y": 215,
+    "frame_description": "The cursor is over the checkbox for '2+ stops' in the sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 19600,
+    "time_end_ms": 21000,
+    "description": "A 'Searching...' loading overlay appears, and then the results update to show that no flights match the selected filters.",
+    "confidence": 0.9,
+    "frame_description": "A semi-transparent overlay with a loading spinner and the text 'Searching...' is visible over the results area."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 22250,
+    "time_end_ms": 22250,
+    "description": "User clicks the '2+ stops' checkbox again to re-enable those flights in the search results.",
+    "confidence": 1.0,
+    "interaction_target": "2+ stops checkbox",
+    "cursor_position_x": 25,
+    "cursor_position_y": 215,
+    "frame_description": "The cursor is back over the '2+ stops' checkbox."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 22300,
+    "time_end_ms": 23700,
+    "description": "The 'Searching...' overlay appears again, and the original flight results are restored to the page.",
+    "confidence": 0.9,
+    "frame_description": "The loading overlay appears and then disappears as the flight results reload."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 23700,
+    "time_end_ms": 24850,
+    "description": "User scrolls down the sidebar to view more filter categories like 'Airlines'.",
+    "confidence": 0.9,
+    "frame_description": "The sidebar content scrolls down."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 26000,
+    "time_end_ms": 28200,
+    "description": "User scrolls back up to the top of the Skyscanner search results page.",
+    "confidence": 0.9,
+    "frame_description": "The page content moves downwards as the user scrolls up."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 48500,
+    "time_end_ms": 49500,
+    "description": "User switches to a different browser tab, which is the Google homepage.",
+    "confidence": 1.0,
+    "page_title": "Google",
+    "frame_description": "The screen content changes from Skyscanner to the Google search page."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 49500,
+    "time_end_ms": 49500,
+    "description": "User clicks on the Trello shortcut icon on the Google new tab page.",
+    "confidence": 1.0,
+    "interaction_target": "Trello shortcut",
+    "cursor_position_x": 400,
+    "cursor_position_y": 450,
+    "frame_description": "The cursor is over a Trello icon in the shortcuts section of the Google page."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 49550,
+    "time_end_ms": 50350,
+    "description": "The browser navigates to Trello and the dashboard begins to load.",
+    "confidence": 1.0,
+    "page_title": "Trello",
+    "frame_description": "A white screen with the Trello logo and a loading animation is visible."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 50350,
+    "time_end_ms": 50450,
+    "description": "The Trello dashboard finishes loading, displaying the user's workspaces and boards.",
+    "confidence": 0.9,
+    "frame_description": "The Trello dashboard interface is fully rendered."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 51200,
+    "time_end_ms": 51200,
+    "description": "User clicks on the 'Japan' board card to open it.",
+    "confidence": 1.0,
+    "interaction_target": "Japan board card",
+    "cursor_position_x": 800,
+    "cursor_position_y": 680,
+    "frame_description": "The cursor is over the 'Japan' board card in the 'Your boards' section."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 51250,
+    "time_end_ms": 54100,
+    "description": "The browser navigates to the Japan trip board on Trello.",
+    "confidence": 1.0,
+    "page_title": "Japan | Trello",
+    "frame_description": "The screen shows the loading state for the specific Trello board."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 54100,
+    "time_end_ms": 54700,
+    "description": "The content of the Japan board, including lists and cards, is rendered.",
+    "confidence": 0.9,
+    "frame_description": "The Trello board with multiple lists and cards is visible."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 56300,
+    "time_end_ms": 58300,
+    "description": "User scrolls horizontally to the right to see more lists on the Trello board.",
+    "confidence": 1.0,
+    "frame_description": "The board content moves to the left as the user scrolls horizontally."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 66600,
+    "time_end_ms": 67350,
+    "description": "User switches back to the Skyscanner tab.",
+    "confidence": 1.0,
+    "page_title": "Skyscanner",
+    "frame_description": "The screen content switches back to the Skyscanner search results."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 67350,
+    "time_end_ms": 67500,
+    "description": "User switches back to the Google tab.",
+    "confidence": 1.0,
+    "page_title": "Google",
+    "frame_description": "The screen content switches back to the Google page."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 67500,
+    "time_end_ms": 72850,
+    "description": "User navigates to Booking.com.",
+    "confidence": 1.0,
+    "page_title": "Booking.com",
+    "frame_description": "The browser loads the Booking.com homepage."
+  }
+]

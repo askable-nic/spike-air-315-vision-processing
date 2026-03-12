@@ -1,0 +1,263 @@
+[
+  {
+    "type": "hover",
+    "time_start_ms": 0,
+    "time_end_ms": 1350,
+    "description": "User hovers over March 13th in the departure date picker.",
+    "confidence": 0.9,
+    "interaction_target": "March 13th date",
+    "cursor_position_x": 620,
+    "cursor_position_y": 580,
+    "page_title": "Flight Centre AU | Cheap Flights, Hotels, Holidays & Travel Packages",
+    "page_location": "https://www.flightcentre.com.au/",
+    "frame_description": "The travel dates calendar modal is open over the Flight Centre homepage, showing February and March 2026."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 1350,
+    "time_end_ms": 1450,
+    "description": "User clicks on March 13th to select it as the departure date.",
+    "confidence": 0.95,
+    "interaction_target": "March 13th date",
+    "cursor_position_x": 620,
+    "cursor_position_y": 580,
+    "page_title": "Flight Centre AU | Cheap Flights, Hotels, Holidays & Travel Packages",
+    "page_location": "https://www.flightcentre.com.au/",
+    "frame_description": "The user selects March 13th in the calendar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 1450,
+    "time_end_ms": 2400,
+    "description": "The date picker updates to highlight the selected departure date and prompts for a return date selection.",
+    "confidence": 0.9,
+    "frame_description": "The calendar UI updates, showing March 13th as selected and changing the prompt to 'Returning travel dates'."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 2400,
+    "time_end_ms": 6150,
+    "description": "User hovers over March 22nd in the return date picker.",
+    "confidence": 0.9,
+    "interaction_target": "March 22nd date",
+    "cursor_position_x": 680,
+    "cursor_position_y": 680,
+    "page_title": "Flight Centre AU | Cheap Flights, Hotels, Holidays & Travel Packages",
+    "page_location": "https://www.flightcentre.com.au/",
+    "frame_description": "The cursor moves to and lingers over March 22nd in the calendar."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 6150,
+    "time_end_ms": 6250,
+    "description": "User clicks on March 22nd to select it as the return date.",
+    "confidence": 0.95,
+    "interaction_target": "March 22nd date",
+    "cursor_position_x": 680,
+    "cursor_position_y": 680,
+    "page_title": "Flight Centre AU | Cheap Flights, Hotels, Holidays & Travel Packages",
+    "page_location": "https://www.flightcentre.com.au/",
+    "frame_description": "The user selects March 22nd as the return date."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 6250,
+    "time_end_ms": 7300,
+    "description": "The date picker updates to show the selected return date range.",
+    "confidence": 0.9,
+    "frame_description": "The calendar highlights the range between March 13th and March 22nd."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 7300,
+    "time_end_ms": 11350,
+    "description": "User hovers over the 'Done' button in the date picker modal.",
+    "confidence": 0.9,
+    "interaction_target": "Done button",
+    "cursor_position_x": 750,
+    "cursor_position_y": 880,
+    "page_title": "Flight Centre AU | Cheap Flights, Hotels, Holidays & Travel Packages",
+    "page_location": "https://www.flightcentre.com.au/",
+    "frame_description": "The cursor moves to the 'Done' button at the bottom right of the modal."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 11350,
+    "time_end_ms": 11450,
+    "description": "User clicks the 'Done' button to confirm date selection.",
+    "confidence": 0.95,
+    "interaction_target": "Done button",
+    "cursor_position_x": 750,
+    "cursor_position_y": 880,
+    "page_title": "Flight Centre AU | Cheap Flights, Hotels, Holidays & Travel Packages",
+    "page_location": "https://www.flightcentre.com.au/",
+    "frame_description": "The user clicks 'Done' to close the date picker."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 11450,
+    "time_end_ms": 12200,
+    "description": "The date picker modal closes, returning focus to the main search form.",
+    "confidence": 0.9,
+    "frame_description": "The modal disappears, revealing the homepage search bar with the selected dates populated."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 12200,
+    "time_end_ms": 12850,
+    "description": "User hovers over the 'Search flights' button.",
+    "confidence": 0.9,
+    "interaction_target": "Search flights button",
+    "cursor_position_x": 780,
+    "cursor_position_y": 115,
+    "page_title": "Flight Centre AU | Cheap Flights, Hotels, Holidays & Travel Packages",
+    "page_location": "https://www.flightcentre.com.au/",
+    "frame_description": "The cursor hovers over the blue 'Search flights' button in the header area."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 12850,
+    "time_end_ms": 12950,
+    "description": "User clicks the 'Search flights' button to initiate the search.",
+    "confidence": 0.95,
+    "interaction_target": "Search flights button",
+    "cursor_position_x": 780,
+    "cursor_position_y": 115,
+    "page_title": "Flight Centre AU | Cheap Flights, Hotels, Holidays & Travel Packages",
+    "page_location": "https://www.flightcentre.com.au/",
+    "frame_description": "The user clicks the search button."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 12950,
+    "time_end_ms": 29300,
+    "description": "The page navigates to the search results. A loading screen is displayed while results are fetched.",
+    "confidence": 0.95,
+    "page_title": "Flight Search Results | Flight Centre",
+    "page_location": "https://www.flightcentre.com.au/search/flights/ADL/MEL/2026-03-13/2026-03-22/1/ECONOMY",
+    "frame_description": "The browser navigates to a new URL and displays a loading screen."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 12950,
+    "time_end_ms": 29300,
+    "description": "A loading overlay appears with the message 'Our overhead compartments are stuffed with deals!' and a progress spinner.",
+    "confidence": 0.9,
+    "frame_description": "A full-screen loading animation is visible."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 29350,
+    "time_end_ms": 34550,
+    "description": "User scrolls down through the list of departing flight results.",
+    "confidence": 0.9,
+    "page_title": "Flight Search Results | Flight Centre",
+    "frame_description": "The search results page has loaded, and the user is scrolling through the available departing flights."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 34550,
+    "time_end_ms": 35350,
+    "description": "User hovers over a Virgin Australia flight departing at 6:10am.",
+    "confidence": 0.9,
+    "interaction_target": "Flight result card (6:10am)",
+    "cursor_position_x": 800,
+    "cursor_position_y": 650,
+    "frame_description": "The cursor pauses over a specific flight result card."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 35350,
+    "time_end_ms": 35450,
+    "description": "User clicks on the flight card to view fare options.",
+    "confidence": 0.95,
+    "interaction_target": "Flight result card (6:10am)",
+    "cursor_position_x": 800,
+    "cursor_position_y": 650,
+    "frame_description": "The user clicks the flight card."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 35450,
+    "time_end_ms": 40250,
+    "description": "The flight card expands to show different fare types: Lite, Choice, and Flex.",
+    "confidence": 0.9,
+    "frame_description": "The UI expands to reveal three fare columns with details and select buttons."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 40250,
+    "time_end_ms": 42900,
+    "description": "User hovers over the 'Select' button for the 'Lite' fare option.",
+    "confidence": 0.9,
+    "interaction_target": "Select Lite fare button",
+    "cursor_position_x": 400,
+    "cursor_position_y": 900,
+    "frame_description": "The cursor hovers over the 'Select' button for the cheapest fare option."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 42900,
+    "time_end_ms": 43000,
+    "description": "User clicks 'Select' for the Lite fare.",
+    "confidence": 0.95,
+    "interaction_target": "Select Lite fare button",
+    "cursor_position_x": 400,
+    "cursor_position_y": 900,
+    "frame_description": "The user selects the Lite fare."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 43000,
+    "time_end_ms": 45000,
+    "description": "A 'Good choice!' confirmation overlay appears briefly before transitioning to return flight selection.",
+    "confidence": 0.9,
+    "frame_description": "A modal overlay with a checkmark and 'Good choice!' message appears."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 45000,
+    "time_end_ms": 46000,
+    "description": "The UI updates to display the 'Select Return Flight' section.",
+    "confidence": 0.9,
+    "frame_description": "The page content refreshes to show return flight options from Melbourne to Adelaide."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 46000,
+    "time_end_ms": 50400,
+    "description": "User scrolls through the return flight options.",
+    "confidence": 0.9,
+    "frame_description": "The user is browsing the list of return flights."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 50400,
+    "time_end_ms": 51350,
+    "description": "User hovers over a Virgin Australia return flight departing at 11:00am.",
+    "confidence": 0.9,
+    "interaction_target": "Return flight card (11:00am)",
+    "cursor_position_x": 800,
+    "cursor_position_y": 750,
+    "frame_description": "The cursor hovers over a return flight option."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 51350,
+    "time_end_ms": 51450,
+    "description": "User clicks on the return flight card.",
+    "confidence": 0.95,
+    "interaction_target": "Return flight card (11:00am)",
+    "cursor_position_x": 800,
+    "cursor_position_y": 750,
+    "frame_description": "The user clicks to expand the return flight details."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 51450,
+    "time_end_ms": 68955,
+    "description": "The return flight card expands to show fare options. User hovers over different fare details.",
+    "confidence": 0.9,
+    "frame_description": "The return flight fare options are displayed, and the user examines the details before the segment ends."
+  }
+]

@@ -1,0 +1,108 @@
+[
+  {
+    "type": "click",
+    "time_start_ms": 20950,
+    "time_end_ms": 21000,
+    "description": "User clicks on the flight option 'Fly Fiumicino International Airport to Palermo' to view more details.",
+    "confidence": 0.95,
+    "interaction_target": "Fly Fiumicino International Airport to Palermo",
+    "cursor_position_x": 180,
+    "cursor_position_y": 210,
+    "page_title": "Rome to Palermo - 8 ways to travel via train, plane, bus, ferry, and car",
+    "page_location": "https://www.rome2rio.com/map/Rome/Palermo",
+    "frame_description": "The main travel options list is visible on the left, with a map of Italy on the right."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 21000,
+    "time_end_ms": 21500,
+    "description": "The sidebar content changes to show specific flight information and the map updates its view.",
+    "confidence": 0.9,
+    "interaction_target": "Sidebar and Map",
+    "frame_description": "The sidebar now shows flight durations and prices, and the map shows a flight path from Rome to Palermo."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 59450,
+    "time_end_ms": 59500,
+    "description": "User clicks the 'Back' button in the sidebar to return to the main list of travel options.",
+    "confidence": 0.95,
+    "interaction_target": "Back button",
+    "cursor_position_x": 30,
+    "cursor_position_y": 160,
+    "frame_description": "The user is viewing flight details in the sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 59500,
+    "time_end_ms": 60900,
+    "description": "The sidebar displays a loading message while refreshing the travel options.",
+    "confidence": 0.9,
+    "interaction_target": "Sidebar",
+    "frame_description": "A 'Loading results for 12 February' message is displayed in the sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 60900,
+    "time_end_ms": 61200,
+    "description": "The main list of travel options is re-rendered in the sidebar.",
+    "confidence": 0.9,
+    "interaction_target": "Sidebar",
+    "frame_description": "The list of 8 ways to travel from Rome to Palermo is visible again."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 62050,
+    "time_end_ms": 63500,
+    "description": "User hovers the cursor over the 'Train' travel option.",
+    "confidence": 0.8,
+    "interaction_target": "Train option",
+    "cursor_position_x": 150,
+    "cursor_position_y": 740,
+    "frame_description": "The cursor is positioned over the second travel option in the list."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 64450,
+    "time_end_ms": 66000,
+    "description": "User hovers the cursor over the 'Train, bus' travel option.",
+    "confidence": 0.8,
+    "interaction_target": "Train, bus option",
+    "cursor_position_x": 150,
+    "cursor_position_y": 840,
+    "frame_description": "The cursor is positioned over the third travel option in the list."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 68450,
+    "time_end_ms": 70000,
+    "description": "User hovers over a hotel advertisement in the right-hand sidebar.",
+    "confidence": 0.7,
+    "interaction_target": "Booking.com ad",
+    "cursor_position_x": 850,
+    "cursor_position_y": 450,
+    "frame_description": "The cursor moves to the right side of the screen over the Booking.com widget."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 75550,
+    "time_end_ms": 77000,
+    "description": "User hovers over another hotel advertisement in the right-hand sidebar.",
+    "confidence": 0.7,
+    "interaction_target": "Booking.com ad",
+    "cursor_position_x": 850,
+    "cursor_position_y": 700,
+    "frame_description": "The cursor is over a different hotel image in the right sidebar."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 82550,
+    "time_end_ms": 84000,
+    "description": "User hovers over a hotel advertisement in the right-hand sidebar.",
+    "confidence": 0.7,
+    "interaction_target": "Booking.com ad",
+    "cursor_position_x": 950,
+    "cursor_position_y": 700,
+    "frame_description": "The cursor is over the bottom-right hotel image in the right sidebar."
+  }
+]

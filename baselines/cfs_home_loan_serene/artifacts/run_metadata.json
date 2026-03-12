@@ -1,0 +1,59 @@
+{
+  "session": "cfs_home_loan_serene",
+  "timestamp": "2026-03-12T22:26:23.704489+00:00",
+  "config": {
+    "model": "gemini-3-flash-preview",
+    "temperature": 0.2,
+    "max_concurrent": 3,
+    "video_fps": 20,
+    "max_segment_duration_ms": 75000,
+    "segment_overlap_ms": 5000,
+    "source": "gemini_video_baseline",
+    "merge": {
+      "time_tolerance_ms": 2000,
+      "similarity_threshold": 0.6,
+      "discard_context_events": false
+    }
+  },
+  "video_duration_ms": 239933.333,
+  "video_path": "input_data/screen_tracks_normalized/cfs_home_loan_serene.mp4",
+  "segments": [
+    {
+      "index": 0,
+      "start_ms": 0.0,
+      "end_ms": 64983.33325,
+      "event_count": 23,
+      "input_tokens": 79705,
+      "output_tokens": 3329
+    },
+    {
+      "index": 1,
+      "start_ms": 54983.33325,
+      "end_ms": 124966.6665,
+      "event_count": 34,
+      "input_tokens": 85650,
+      "output_tokens": 4239
+    },
+    {
+      "index": 2,
+      "start_ms": 114966.6665,
+      "end_ms": 184949.99975000002,
+      "event_count": 25,
+      "input_tokens": 85651,
+      "output_tokens": 2863
+    },
+    {
+      "index": 3,
+      "start_ms": 174949.99975000002,
+      "end_ms": 239933.333,
+      "event_count": 28,
+      "input_tokens": 79531,
+      "output_tokens": 3555
+    }
+  ],
+  "total_events_merged": 110,
+  "total_events_deduped": 98,
+  "total_input_tokens": 330537,
+  "total_output_tokens": 13986,
+  "analysis_time_ms": 131231.0
+}

@@ -194,7 +194,7 @@ def run_merge(
     resolved.sort(key=lambda e: e.time_start)
 
     # Deduplicate
-    deduped = _deduplicate(resolved, mc.time_tolerance_ms, mc.similarity_threshold)
+    deduped = deduplicate_events(resolved, mc.time_tolerance_ms, mc.similarity_threshold)
 
     elapsed = (time.monotonic() - t0) * 1000
 
@@ -239,7 +239,7 @@ def run_merge(
     )
 
 
-def _deduplicate(
+def deduplicate_events(
     events: list[ResolvedEvent],
     time_tolerance_ms: float,
     similarity_threshold: float,

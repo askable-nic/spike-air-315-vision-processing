@@ -1,0 +1,410 @@
+[
+  {
+    "type": "input_text",
+    "time_start_ms": 0,
+    "time_end_ms": 4600,
+    "description": "User types '- Discovery' into the study title input field, updating the title to 'TV Streaming - Discovery'.",
+    "confidence": 1.0,
+    "interaction_target": "Study title input field",
+    "cursor_position_x": 410,
+    "cursor_position_y": 290,
+    "page_title": "Askable - Create Study",
+    "page_location": "/booking-setup/create",
+    "frame_description": "The user is on the 'Study title' step of the study setup process."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 4600,
+    "time_end_ms": 8500,
+    "description": "Cursor hovers over the 'Next' button after finishing typing the title.",
+    "confidence": 0.9,
+    "interaction_target": "Next button",
+    "cursor_position_x": 430,
+    "cursor_position_y": 430,
+    "frame_description": "The cursor is positioned over the black 'Next' button below the title input."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 8500,
+    "time_end_ms": 8500,
+    "description": "User clicks the 'Next' button to proceed to the next step.",
+    "confidence": 1.0,
+    "interaction_target": "Next button",
+    "cursor_position_x": 430,
+    "cursor_position_y": 430,
+    "frame_description": "The 'Next' button is clicked."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 8500,
+    "time_end_ms": 8750,
+    "description": "The screen goes blank with a loading indicator as the next step is fetched.",
+    "confidence": 1.0,
+    "frame_description": "A white screen with a central loading spinner is visible."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 8750,
+    "time_end_ms": 8750,
+    "description": "The page content updates to the 'Research method' step.",
+    "confidence": 1.0,
+    "page_title": "Askable - Research Method",
+    "page_location": "/project-setup/research-type",
+    "frame_description": "The 'How will you be conducting your research?' page is displayed with several method cards."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 8900,
+    "time_end_ms": 12000,
+    "description": "Cursor hovers over the 'In-person' research method card while the user considers options.",
+    "confidence": 0.9,
+    "interaction_target": "In-person card",
+    "cursor_position_x": 580,
+    "cursor_position_y": 450,
+    "frame_description": "The cursor lingers over the card illustrating in-person research."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 12600,
+    "time_end_ms": 14400,
+    "description": "Cursor moves to and hovers over the 'Video Call' research method card.",
+    "confidence": 0.9,
+    "interaction_target": "Video Call card",
+    "cursor_position_x": 380,
+    "cursor_position_y": 450,
+    "frame_description": "The cursor is now over the 'Video Call' option, which is highlighted with a blue border."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 14700,
+    "time_end_ms": 15300,
+    "description": "Cursor hovers over the 'Next' button at the bottom of the research method page.",
+    "confidence": 0.9,
+    "interaction_target": "Next button",
+    "cursor_position_x": 330,
+    "cursor_position_y": 950,
+    "frame_description": "The cursor is over the 'Next' button at the bottom left of the main content area."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 15300,
+    "time_end_ms": 15300,
+    "description": "User clicks 'Next' to confirm the 'Video Call' selection.",
+    "confidence": 1.0,
+    "interaction_target": "Next button",
+    "cursor_position_x": 330,
+    "cursor_position_y": 950,
+    "frame_description": "The 'Next' button is clicked."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 15300,
+    "time_end_ms": 15550,
+    "description": "Loading transition to the next step.",
+    "confidence": 1.0,
+    "frame_description": "Loading screen visible."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 15550,
+    "time_end_ms": 15550,
+    "description": "The page content updates to the 'Device' step.",
+    "confidence": 1.0,
+    "page_title": "Askable - Device",
+    "page_location": "/project-setup/devices",
+    "frame_description": "The 'Device requirements' page is displayed."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 16300,
+    "time_end_ms": 16350,
+    "description": "Brief hover over the 'Next' button on the Device page.",
+    "confidence": 0.7,
+    "interaction_target": "Next button",
+    "cursor_position_x": 330,
+    "cursor_position_y": 430,
+    "frame_description": "Cursor is over the 'Next' button."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 16350,
+    "time_end_ms": 16350,
+    "description": "User clicks 'Next' on the Device page, accepting the default 'Any device' option.",
+    "confidence": 1.0,
+    "interaction_target": "Next button",
+    "cursor_position_x": 330,
+    "cursor_position_y": 430,
+    "frame_description": "The 'Next' button is clicked."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 16350,
+    "time_end_ms": 16600,
+    "description": "Loading transition to the next step.",
+    "confidence": 1.0,
+    "frame_description": "Loading screen visible."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 16600,
+    "time_end_ms": 16600,
+    "description": "The page content updates to the 'Tool' step.",
+    "confidence": 1.0,
+    "page_title": "Askable - Tool",
+    "page_location": "/project-setup/tool",
+    "frame_description": "The 'Which tool will you use to conduct the remote research?' page is displayed."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 30600,
+    "time_end_ms": 30650,
+    "description": "Brief hover over the Askable tool card while reading the description.",
+    "confidence": 0.7,
+    "interaction_target": "Askable tool card",
+    "cursor_position_x": 400,
+    "cursor_position_y": 200,
+    "frame_description": "Cursor is over the Askable tool option."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 34550,
+    "time_end_ms": 34550,
+    "description": "User clicks the 'I want to use a third party tool' link.",
+    "confidence": 1.0,
+    "interaction_target": "Third party tool link",
+    "cursor_position_x": 380,
+    "cursor_position_y": 720,
+    "frame_description": "The link text is clicked."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 34550,
+    "time_end_ms": 35300,
+    "description": "The UI expands to reveal a list of third-party tool options (Zoom, Lookback, etc.).",
+    "confidence": 1.0,
+    "frame_description": "A grid of third-party tool logos appears below the link."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 37600,
+    "time_end_ms": 37650,
+    "description": "Brief hover over the 'Next' button on the Tool page.",
+    "confidence": 0.7,
+    "interaction_target": "Next button",
+    "cursor_position_x": 330,
+    "cursor_position_y": 850,
+    "frame_description": "Cursor is over the 'Next' button."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 37650,
+    "time_end_ms": 37650,
+    "description": "User clicks 'Next' on the Tool page.",
+    "confidence": 1.0,
+    "interaction_target": "Next button",
+    "cursor_position_x": 330,
+    "cursor_position_y": 850,
+    "frame_description": "The 'Next' button is clicked."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 37650,
+    "time_end_ms": 38100,
+    "description": "Loading transition to the next step.",
+    "confidence": 1.0,
+    "frame_description": "Loading screen visible."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 38100,
+    "time_end_ms": 38100,
+    "description": "The page content updates to the 'Quota' step.",
+    "confidence": 1.0,
+    "page_title": "Askable - Quota",
+    "page_location": "/project-setup/quota",
+    "frame_description": "The 'Quota' page is displayed with a participant count input."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 39200,
+    "time_end_ms": 39200,
+    "description": "User clicks into the participant count input field to edit it.",
+    "confidence": 1.0,
+    "interaction_target": "Participant count input",
+    "cursor_position_x": 380,
+    "cursor_position_y": 290,
+    "frame_description": "The input field is focused."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 39650,
+    "time_end_ms": 46400,
+    "description": "User deletes '12' and types '5' into the participant count field.",
+    "confidence": 1.0,
+    "interaction_target": "Participant count input",
+    "cursor_position_x": 380,
+    "cursor_position_y": 290,
+    "frame_description": "The value in the input field changes from 12 to 5."
+  },
+  {
+    "type": "hesitate",
+    "time_start_ms": 46400,
+    "time_end_ms": 53800,
+    "description": "User pauses for several seconds, looking at the Quota page and the 'Replace / Refund guarantee' info box.",
+    "confidence": 0.8,
+    "frame_description": "The cursor remains mostly still on the page while the user reads."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 53800,
+    "time_end_ms": 55600,
+    "description": "Cursor hovers over the 'Next' button on the Quota page.",
+    "confidence": 0.9,
+    "interaction_target": "Next button",
+    "cursor_position_x": 330,
+    "cursor_position_y": 430,
+    "frame_description": "Cursor is over the 'Next' button."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 55600,
+    "time_end_ms": 55600,
+    "description": "User clicks 'Next' on the Quota page.",
+    "confidence": 1.0,
+    "interaction_target": "Next button",
+    "cursor_position_x": 330,
+    "cursor_position_y": 430,
+    "frame_description": "The 'Next' button is clicked."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 55600,
+    "time_end_ms": 55800,
+    "description": "Loading transition to the next step.",
+    "confidence": 1.0,
+    "frame_description": "Loading screen visible."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 55800,
+    "time_end_ms": 55800,
+    "description": "The page content updates to the 'Session format' step.",
+    "confidence": 1.0,
+    "page_title": "Askable - Session Format",
+    "page_location": "/project-setup/session-format",
+    "frame_description": "The 'Session format' page is displayed with 'Individual Interviews' and 'Focus Group' options."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 55800,
+    "time_end_ms": 60000,
+    "description": "Cursor hovers over the 'Individual Interviews' card while reading.",
+    "confidence": 0.9,
+    "interaction_target": "Individual Interviews card",
+    "cursor_position_x": 380,
+    "cursor_position_y": 200,
+    "frame_description": "The 'Individual Interviews' card is highlighted."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 57300,
+    "time_end_ms": 58800,
+    "description": "Cursor moves to and hovers over the 'Focus Group' card.",
+    "confidence": 0.9,
+    "interaction_target": "Focus Group card",
+    "cursor_position_x": 580,
+    "cursor_position_y": 200,
+    "frame_description": "The 'Focus Group' card is highlighted."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 61850,
+    "time_end_ms": 61850,
+    "description": "User clicks 'Next' on the Session format page.",
+    "confidence": 1.0,
+    "interaction_target": "Next button",
+    "cursor_position_x": 330,
+    "cursor_position_y": 630,
+    "frame_description": "The 'Next' button is clicked."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 61850,
+    "time_end_ms": 62900,
+    "description": "Loading transition to the next step.",
+    "confidence": 1.0,
+    "frame_description": "Loading screen visible."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 62900,
+    "time_end_ms": 62900,
+    "description": "The page content updates to the 'Session duration' step.",
+    "confidence": 1.0,
+    "page_title": "Askable - Session Duration",
+    "page_location": "/project-setup/session-duration",
+    "frame_description": "The 'Session duration' page is displayed."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 63850,
+    "time_end_ms": 63850,
+    "description": "User clicks 'Next' on the Session duration page, accepting the default '45 mins'.",
+    "confidence": 1.0,
+    "interaction_target": "Next button",
+    "cursor_position_x": 330,
+    "cursor_position_y": 430,
+    "frame_description": "The 'Next' button is clicked."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 63850,
+    "time_end_ms": 69900,
+    "description": "Loading transition to the next step.",
+    "confidence": 1.0,
+    "frame_description": "Loading screen visible."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 69900,
+    "time_end_ms": 69900,
+    "description": "The page content updates to the 'Participant selection' step.",
+    "confidence": 1.0,
+    "page_title": "Askable - Participant Selection",
+    "page_location": "/project-setup/participant-selection",
+    "frame_description": "The 'How much control do you need with participant selection?' page is displayed."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 70000,
+    "time_end_ms": 71300,
+    "description": "Cursor hovers over the 'Hand picking' selection card.",
+    "confidence": 0.9,
+    "interaction_target": "Hand picking card",
+    "cursor_position_x": 380,
+    "cursor_position_y": 450,
+    "frame_description": "The 'Hand picking' card is highlighted."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 72300,
+    "time_end_ms": 72900,
+    "description": "Cursor moves to and hovers over the 'Automated' selection card.",
+    "confidence": 0.9,
+    "interaction_target": "Automated card",
+    "cursor_position_x": 580,
+    "cursor_position_y": 450,
+    "frame_description": "The 'Automated' card is highlighted."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 73300,
+    "time_end_ms": 83894,
+    "description": "Cursor moves back to and hovers over the 'Hand picking' card while the user reads the side panel information.",
+    "confidence": 0.9,
+    "interaction_target": "Hand picking card",
+    "cursor_position_x": 380,
+    "cursor_position_y": 450,
+    "frame_description": "The cursor remains over the 'Hand picking' card until the end of the segment."
+  }
+]

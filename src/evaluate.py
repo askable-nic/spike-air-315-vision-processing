@@ -2,7 +2,10 @@
 
 from __future__ import annotations
 
+import asyncio
+import json
 from dataclasses import dataclass
+from typing import Any
 
 from src.similarity import string_similarity
 
@@ -303,3 +306,205 @@ def result_to_dict(result: EvaluationResult) -> dict:
             for t in result.per_type
         ],
     }
+
+
+# --- LLM Judge ---
+
+_JUDGE_SCHEMA = {
+    "type": "OBJECT",
+    "properties": {
+        "coverage_score": {"type": "NUMBER"},
+        "type_accuracy_score": {"type": "NUMBER"},
+        "timing_accuracy_score": {"type": "NUMBER"},
+        "overall_quality_score": {"type": "NUMBER"},
+        "events_matched": {"type": "INTEGER"},
+        "events_missed": {"type": "INTEGER"},
+        "events_extra_valid": {"type": "INTEGER"},
+        "events_extra_noise": {"type": "INTEGER"},
+        "type_disagreements": {
+            "type": "ARRAY",
+            "items": {
+                "type": "OBJECT",
+                "properties": {
+                    "reference_index": {"type": "INTEGER"},
+                    "candidate_index": {"type": "INTEGER"},
+                    "reference_type": {"type": "STRING"},
+                    "candidate_type": {"type": "STRING"},
+                    "correct_type": {"type": "STRING"},
+                    "explanation": {"type": "STRING"},
+                },
+                "required": [
+                    "reference_index", "candidate_index",
+                    "reference_type", "candidate_type", "correct_type",
+                ],
+            },
+        },
+        "critical_misses": {
+            "type": "ARRAY",
+            "items": {
+                "type": "OBJECT",
+                "properties": {
+                    "reference_index": {"type": "INTEGER"},
+                    "event_type": {"type": "STRING"},
+                    "time_start_s": {"type": "NUMBER"},
+                    "description": {"type": "STRING"},
+                    "severity": {"type": "STRING"},
+                },
+                "required": ["reference_index", "event_type", "severity"],
+            },
+        },
+        "strengths": {"type": "ARRAY", "items": {"type": "STRING"}},
+        "weaknesses": {"type": "ARRAY", "items": {"type": "STRING"}},
+        "recommendations": {"type": "ARRAY", "items": {"type": "STRING"}},
+    },
+    "required": [
+        "coverage_score", "type_accuracy_score", "timing_accuracy_score",
+        "overall_quality_score", "events_matched", "events_missed",
+        "events_extra_valid", "events_extra_noise",
+        "type_disagreements", "critical_misses",
+        "strengths", "weaknesses", "recommendations",
+    ],
+}
+
+_JUDGE_SYSTEM_PROMPT = """\
+You are an expert evaluator comparing two event annotations of the same screen recording from a UX research study.
+
+The REFERENCE is a human-annotated baseline — treat it as ground truth for what events occurred.
+The CANDIDATE is a machine-generated baseline being evaluated.
+
+Your job is to assess how well the candidate captures the events in the reference, considering:
+
+1. **Coverage** (coverage_score 0-1): What fraction of reference events are captured by the candidate? Match events by temporal proximity and semantic meaning, NOT by exact type label. A candidate "dwell" covering the same moment as a reference "change_ui_state" still counts as partial coverage.
+
+2. **Type accuracy** (type_accuracy_score 0-1): When both baselines capture the same event, how often do they agree on the event type? Report the most important disagreements in type_disagreements (up to 10).
+
+3. **Timing accuracy** (timing_accuracy_score 0-1): How close are the timestamps for matched events? Within 1s = excellent, 1-3s = good, 3-5s = acceptable, >5s = poor.
+
+4. **Overall quality** (overall_quality_score 0-1): How useful is the candidate as a starting draft for a human reviewer? Consider: would a reviewer save significant time starting from this candidate vs annotating from scratch?
+
+For events_extra_valid / events_extra_noise: candidate events with no reference match may still be valid events the human annotator missed (e.g. dwells, subtle hovers). Count these separately.
+
+For critical_misses: reference events the candidate failed to capture. Severity levels:
+- "critical": Key user actions (clicks, navigation, text input) that are completely missing
+- "important": Notable interactions (hovers on key elements, UI state changes) that are missing
+- "minor": Subtle events that are hard to detect from video alone
+
+Report up to 10 critical_misses, prioritising by severity.\
+"""
+
+
+def _format_events_for_judge(events: list[dict], label: str) -> str:
+    lines = [f"## {label} ({len(events)} events)\n"]
+    for i, e in enumerate(events):
+        t = e.get("type", "?")
+        start_s = e.get("time_start", 0) / 1000
+        end_s = (e.get("time_end") or e.get("time_start", 0)) / 1000
+        desc = e.get("description", "")
+        target = e.get("interaction_target", "")
+        line = f"[{i}] {t} @ {start_s:.1f}s-{end_s:.1f}s: {desc}"
+        if target:
+            line += f" (target: {target})"
+        lines.append(line)
+    return "\n".join(lines)
+
+
+async def llm_judge_evaluate(
+    reference: list[dict],
+    candidate: list[dict],
+    session_id: str,
+) -> dict:
+    """Use Gemini to evaluate candidate events against a reference baseline."""
+    from src.gemini import create_client, make_request
+
+    client = create_client()
+
+    prompt_text = (
+        _format_events_for_judge(reference, "REFERENCE (human-annotated)")
+        + "\n\n"
+        + _format_events_for_judge(candidate, "CANDIDATE (machine-generated)")
+    )
+
+    result = await make_request(
+        client=client,
+        model="gemini-3-flash-preview",
+        system_prompt=_JUDGE_SYSTEM_PROMPT,
+        content_parts=[prompt_text],
+        response_schema=_JUDGE_SCHEMA,
+        temperature=0.1,
+    )
+
+    judgment = json.loads(result["text"])
+    judgment["_meta"] = {
+        "session_id": session_id,
+        "judge_input_tokens": result["input_tokens"],
+        "judge_output_tokens": result["output_tokens"],
+    }
+    return judgment
+
+
+def format_judge_result(judgment: dict, reference: list[dict], candidate: list[dict]) -> str:
+    """Format LLM judge result as readable output."""
+    lines = [
+        "LLM Judge Evaluation",
+        "=" * 50,
+        "",
+        f"  Coverage:       {judgment['coverage_score']:.2f}",
+        f"  Type accuracy:  {judgment['type_accuracy_score']:.2f}",
+        f"  Timing:         {judgment['timing_accuracy_score']:.2f}",
+        f"  Overall:        {judgment['overall_quality_score']:.2f}",
+        "",
+        f"  Matched: {judgment['events_matched']}  "
+        f"Missed: {judgment['events_missed']}  "
+        f"Extra valid: {judgment['events_extra_valid']}  "
+        f"Extra noise: {judgment['events_extra_noise']}",
+    ]
+
+    if judgment.get("type_disagreements"):
+        lines.append("")
+        lines.append("  Type disagreements:")
+        for td in judgment["type_disagreements"]:
+            ri, ci = td["reference_index"], td["candidate_index"]
+            ref_desc = reference[ri]["description"][:50] if ri < len(reference) else "?"
+            lines.append(
+                f"    [{ri}] {td['reference_type']} vs [{ci}] {td['candidate_type']}"
+                f" -> {td['correct_type']}  ({ref_desc}...)"
+            )
+            if td.get("explanation"):
+                lines.append(f"      {td['explanation']}")
+
+    if judgment.get("critical_misses"):
+        lines.append("")
+        lines.append("  Critical misses:")
+        for cm in judgment["critical_misses"]:
+            ri = cm["reference_index"]
+            ref_desc = reference[ri]["description"][:60] if ri < len(reference) else "?"
+            t_s = cm.get("time_start_s", reference[ri]["time_start"] / 1000 if ri < len(reference) else 0)
+            lines.append(
+                f"    [{cm['severity']:>9s}] {cm['event_type']:18s} @ {t_s:6.1f}s  {ref_desc}"
+            )
+
+    if judgment.get("strengths"):
+        lines.append("")
+        lines.append("  Strengths:")
+        for s in judgment["strengths"]:
+            lines.append(f"    + {s}")
+
+    if judgment.get("weaknesses"):
+        lines.append("")
+        lines.append("  Weaknesses:")
+        for w in judgment["weaknesses"]:
+            lines.append(f"    - {w}")
+
+    if judgment.get("recommendations"):
+        lines.append("")
+        lines.append("  Recommendations:")
+        for r in judgment["recommendations"]:
+            lines.append(f"    > {r}")
+
+    meta = judgment.get("_meta", {})
+    if meta:
+        lines.append("")
+        lines.append(f"  Judge tokens: {meta.get('judge_input_tokens', 0):,} in / "
+                      f"{meta.get('judge_output_tokens', 0):,} out")
+
+    return "\n".join(lines)

@@ -1,0 +1,37 @@
+{
+  "snapshot_timestamp": "2026-03-12T22:45:12.363139+00:00",
+  "total_events": 61,
+  "sources": [
+    "gemini_video_baseline"
+  ],
+  "event_types": {
+    "change_ui_state": 23,
+    "click": 11,
+    "hover": 11,
+    "input_text": 1,
+    "navigate": 4,
+    "scroll": 6,
+    "select": 5
+  },
+  "time_range_ms": {
+    "start": 238982.0,
+    "end": 415842.67733333335
+  },
+  "field_coverage": {
+    "interaction_target": "32/61",
+    "cursor_position": "25/61",
+    "page_title": "9/61",
+    "page_location": "5/61",
+    "frame_description": "61/61"
+  },
+  "previous_run": {
+    "timestamp": "2026-03-12T22:24:12.255436+00:00",
+    "model": "gemini-3-flash-preview",
+    "video_fps": 20,
+    "max_segment_duration_ms": 75000,
+    "segments": 3,
+    "total_input_tokens": 264950,
+    "total_output_tokens": 8356,
+    "analysis_time_ms": 57437.1
+  }
+}

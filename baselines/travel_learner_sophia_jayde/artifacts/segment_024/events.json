@@ -1,0 +1,65 @@
+[
+  {
+    "type": "hover",
+    "time_start_ms": 5100,
+    "time_end_ms": 8300,
+    "description": "The user hovers the cursor over the 'Schengen area' hyperlink within the Travel section text.",
+    "confidence": 0.9,
+    "interaction_target": "Schengen area link",
+    "cursor_position_x": 465,
+    "cursor_position_y": 185,
+    "page_title": "Travel",
+    "page_location": "smarttraveller.gov.au/destinations/europe/italy",
+    "frame_description": "The Italy travel advice page is visible, specifically the 'Travel' section which mentions Schengen area rules."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 10550,
+    "time_end_ms": 12850,
+    "description": "The user hovers the cursor over the 'Entry/Exit System' hyperlink in the Travel section.",
+    "confidence": 0.9,
+    "interaction_target": "Entry/Exit System link",
+    "cursor_position_x": 485,
+    "cursor_position_y": 215,
+    "page_title": "Travel",
+    "page_location": "smarttraveller.gov.au/destinations/europe/italy",
+    "frame_description": "The Italy travel advice page is visible, with the cursor positioned over a link about the EU Entry/Exit System (EES)."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 43350,
+    "time_end_ms": 44650,
+    "description": "The user moves the cursor to the browser tab bar and hovers over the 'Italy' tab.",
+    "confidence": 0.9,
+    "interaction_target": "Italy browser tab",
+    "cursor_position_x": 715,
+    "cursor_position_y": 15,
+    "page_title": "Travel",
+    "page_location": "smarttraveller.gov.au/destinations/europe/italy",
+    "frame_description": "The browser interface is visible at the top, showing several open tabs related to travel advice."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 44650,
+    "time_end_ms": 45750,
+    "description": "The user moves the cursor slightly to the right to hover over the 'United Kingdom' browser tab.",
+    "confidence": 0.9,
+    "interaction_target": "United Kingdom browser tab",
+    "cursor_position_x": 780,
+    "cursor_position_y": 15,
+    "page_title": "Travel",
+    "page_location": "smarttraveller.gov.au/destinations/europe/italy",
+    "frame_description": "The cursor is now over the tab for United Kingdom travel advice."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 44650,
+    "time_end_ms": 45750,
+    "description": "A browser tooltip appears for the United Kingdom tab, showing page details and an ETA notice.",
+    "confidence": 0.95,
+    "interaction_target": "Browser tab tooltip",
+    "page_title": "Travel",
+    "page_location": "smarttraveller.gov.au/destinations/europe/italy",
+    "frame_description": "A white tooltip box is visible over the page content, triggered by hovering over the UK tab."
+  }
+]

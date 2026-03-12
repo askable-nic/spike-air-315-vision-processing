@@ -1,0 +1,306 @@
+[
+  {
+    "type": "navigate",
+    "time_start_ms": 0,
+    "time_end_ms": 1650,
+    "description": "User switches browser tabs from Hostelworld to Rome2Rio.",
+    "confidence": 0.9,
+    "interaction_target": "Browser Tab",
+    "page_title": "Rome to Palermo | Rome2Rio",
+    "frame_description": "The screen transitions from a Hostelworld search results page for London to a Rome2Rio page showing travel options from Rome to Palermo."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 1650,
+    "time_end_ms": 4250,
+    "description": "User hovers over the Rome2Rio search results page, observing the map and route options for Rome to Palermo.",
+    "confidence": 0.8,
+    "page_title": "Rome to Palermo | Rome2Rio",
+    "frame_description": "Rome2Rio page showing a map of Italy with a route from Rome to Palermo and travel options on the left sidebar."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 4300,
+    "time_end_ms": 4350,
+    "description": "User clicks on the 'From' location input field to change the starting point.",
+    "confidence": 0.9,
+    "interaction_target": "From input field",
+    "cursor_position_x": 250,
+    "cursor_position_y": 110,
+    "page_title": "Rome to Palermo | Rome2Rio",
+    "frame_description": "The cursor is positioned over the 'From' input field which currently contains 'Rome, Italy'."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 7000,
+    "time_end_ms": 7300,
+    "description": "User types 'lo' into the 'From' input field.",
+    "confidence": 0.9,
+    "interaction_target": "From input field",
+    "page_title": "Rome to Palermo | Rome2Rio",
+    "frame_description": "The text 'lo' appears in the 'From' input field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 7350,
+    "time_end_ms": 7400,
+    "description": "A dropdown menu with location suggestions appears below the 'From' input field.",
+    "confidence": 0.9,
+    "interaction_target": "Suggestions dropdown",
+    "frame_description": "A list of suggested locations starting with 'lo' is displayed."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 7400,
+    "time_end_ms": 8650,
+    "description": "User continues typing 'London, England' into the 'From' input field.",
+    "confidence": 0.9,
+    "interaction_target": "From input field",
+    "page_title": "Rome to Palermo | Rome2Rio",
+    "frame_description": "The text in the 'From' input field updates to 'London, England'."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 8700,
+    "time_end_ms": 9050,
+    "description": "User hovers over the 'London, England' suggestion in the dropdown menu.",
+    "confidence": 0.9,
+    "interaction_target": "London, England suggestion",
+    "cursor_position_x": 250,
+    "cursor_position_y": 150,
+    "frame_description": "The 'London, England' item in the suggestion list is highlighted."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 9100,
+    "time_end_ms": 9150,
+    "description": "User selects 'London, England' from the suggestions list.",
+    "confidence": 0.9,
+    "interaction_target": "London, England suggestion",
+    "cursor_position_x": 250,
+    "cursor_position_y": 150,
+    "frame_description": "The dropdown closes and 'London, England' is set as the 'From' location."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 10250,
+    "time_end_ms": 10300,
+    "description": "User clicks on the 'To' location input field.",
+    "confidence": 0.9,
+    "interaction_target": "To input field",
+    "cursor_position_x": 500,
+    "cursor_position_y": 110,
+    "frame_description": "The cursor is positioned over the 'To' input field which currently contains 'Palermo, Italy'."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 10300,
+    "time_end_ms": 10500,
+    "description": "User types 'ireland' into the 'To' input field.",
+    "confidence": 0.9,
+    "interaction_target": "To input field",
+    "frame_description": "The text 'ireland' is typed into the destination field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 10550,
+    "time_end_ms": 10600,
+    "description": "A dropdown menu with location suggestions appears below the 'To' input field.",
+    "confidence": 0.9,
+    "interaction_target": "Suggestions dropdown",
+    "frame_description": "A list of suggested locations for 'ireland' is displayed."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 10600,
+    "time_end_ms": 11900,
+    "description": "User continues typing 'ireland' into the 'To' input field.",
+    "confidence": 0.9,
+    "interaction_target": "To input field",
+    "frame_description": "The text in the 'To' input field is 'ireland'."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 11950,
+    "time_end_ms": 12350,
+    "description": "User hovers over the 'Ireland' suggestion in the dropdown menu.",
+    "confidence": 0.9,
+    "interaction_target": "Ireland suggestion",
+    "cursor_position_x": 500,
+    "cursor_position_y": 150,
+    "frame_description": "The 'Ireland' item in the suggestion list is highlighted."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 12400,
+    "time_end_ms": 12450,
+    "description": "User selects 'Ireland' from the suggestions list.",
+    "confidence": 0.9,
+    "interaction_target": "Ireland suggestion",
+    "cursor_position_x": 500,
+    "cursor_position_y": 150,
+    "frame_description": "The dropdown closes and 'Ireland' is set as the 'To' location."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 13950,
+    "time_end_ms": 14050,
+    "description": "User clicks the search button to find travel options from London to Ireland.",
+    "confidence": 0.9,
+    "interaction_target": "Search button",
+    "cursor_position_x": 680,
+    "cursor_position_y": 110,
+    "frame_description": "The cursor clicks the pink search button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 14050,
+    "time_end_ms": 15650,
+    "description": "The page content updates to display travel results for London to Ireland.",
+    "confidence": 0.9,
+    "page_title": "London to Ireland | Rome2Rio",
+    "frame_description": "The map and sidebar update to show routes between London and Ireland."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 16650,
+    "time_end_ms": 16750,
+    "description": "User clicks back into the 'From' input field, possibly to re-verify or change the location.",
+    "confidence": 0.9,
+    "interaction_target": "From input field",
+    "cursor_position_x": 250,
+    "cursor_position_y": 110,
+    "frame_description": "The cursor is placed back in the 'From' field."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 19600,
+    "time_end_ms": 19700,
+    "description": "User clicks the search button again.",
+    "confidence": 0.9,
+    "interaction_target": "Search button",
+    "cursor_position_x": 680,
+    "cursor_position_y": 110,
+    "frame_description": "The search button is clicked again."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 19700,
+    "time_end_ms": 20650,
+    "description": "The search results for London to Ireland refresh.",
+    "confidence": 0.9,
+    "page_title": "London to Ireland | Rome2Rio",
+    "frame_description": "The results list and map update."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 21500,
+    "time_end_ms": 22850,
+    "description": "User hovers over the 'Train, ferry' route option in the sidebar.",
+    "confidence": 0.9,
+    "interaction_target": "Train, ferry route option",
+    "cursor_position_x": 150,
+    "cursor_position_y": 450,
+    "frame_description": "The 'Train, ferry' option is highlighted as the cursor lingers over it."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 30500,
+    "time_end_ms": 33900,
+    "description": "User hovers over various route options in the sidebar, comparing travel times and prices.",
+    "confidence": 0.8,
+    "frame_description": "The cursor moves between different travel options like 'Fly', 'Train, ferry', and 'Bus'."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 40050,
+    "time_end_ms": 45000,
+    "description": "User hovers over the flight route option from London Heathrow to Dublin.",
+    "confidence": 0.9,
+    "interaction_target": "Fly London Heathrow... route option",
+    "cursor_position_x": 150,
+    "cursor_position_y": 400,
+    "frame_description": "The flight option is highlighted."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 45050,
+    "time_end_ms": 50000,
+    "description": "User hovers over the 'Train, ferry' route option again.",
+    "confidence": 0.9,
+    "interaction_target": "Train, ferry route option",
+    "cursor_position_x": 150,
+    "cursor_position_y": 450,
+    "frame_description": "The 'Train, ferry' option is highlighted."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 50050,
+    "time_end_ms": 55000,
+    "description": "User hovers over the 'Bus, train, ferry' route option.",
+    "confidence": 0.9,
+    "interaction_target": "Bus, train, ferry route option",
+    "cursor_position_x": 150,
+    "cursor_position_y": 500,
+    "frame_description": "The 'Bus, train, ferry' option is highlighted."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 55050,
+    "time_end_ms": 60000,
+    "description": "User hovers over the 'Drive, car ferry' route option.",
+    "confidence": 0.9,
+    "interaction_target": "Drive, car ferry route option",
+    "cursor_position_x": 150,
+    "cursor_position_y": 550,
+    "frame_description": "The 'Drive, car ferry' option is highlighted."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 60050,
+    "time_end_ms": 65000,
+    "description": "User hovers over the 'Bus' route option.",
+    "confidence": 0.9,
+    "interaction_target": "Bus route option",
+    "cursor_position_x": 150,
+    "cursor_position_y": 600,
+    "frame_description": "The 'Bus' option is highlighted."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 65050,
+    "time_end_ms": 70000,
+    "description": "User hovers over the 'Show 7 more options' button.",
+    "confidence": 0.9,
+    "interaction_target": "Show more options button",
+    "cursor_position_x": 150,
+    "cursor_position_y": 650,
+    "frame_description": "The 'Show 7 more options' button is highlighted."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 75050,
+    "time_end_ms": 80000,
+    "description": "User hovers over the 'Hotels in Ireland' section at the bottom of the sidebar.",
+    "confidence": 0.8,
+    "frame_description": "The cursor moves down to the hotel recommendations section."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 80050,
+    "time_end_ms": 85000,
+    "description": "User hovers over a specific hotel card in the 'Hotels in Ireland' section.",
+    "confidence": 0.9,
+    "cursor_position_x": 100,
+    "cursor_position_y": 900,
+    "frame_description": "A hotel card is highlighted as the user considers accommodation options."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 85050,
+    "time_end_ms": 86550,
+    "description": "User hovers over another hotel card in the results.",
+    "confidence": 0.9,
+    "frame_description": "The cursor moves to a second hotel card."
+  }
+]

@@ -1,0 +1,75 @@
+{
+  "session": "flight_centre_booking_kay",
+  "timestamp": "2026-03-12T22:23:14.644952+00:00",
+  "config": {
+    "model": "gemini-3-flash-preview",
+    "temperature": 0.2,
+    "max_concurrent": 3,
+    "video_fps": 20,
+    "max_segment_duration_ms": 75000,
+    "segment_overlap_ms": 5000,
+    "source": "gemini_video_baseline",
+    "merge": {
+      "time_tolerance_ms": 2000,
+      "similarity_threshold": 0.6,
+      "discard_context_events": false
+    }
+  },
+  "video_duration_ms": 391433.008,
+  "video_path": "input_data/screen_tracks_normalized/flight_centre_booking_kay.mp4",
+  "segments": [
+    {
+      "index": 0,
+      "start_ms": 0.0,
+      "end_ms": 70238.83466666666,
+      "event_count": 10,
+      "input_tokens": 94451,
+      "output_tokens": 1032
+    },
+    {
+      "index": 1,
+      "start_ms": 60238.83466666666,
+      "end_ms": 135477.66933333332,
+      "event_count": 23,
+      "input_tokens": 101122,
+      "output_tokens": 3934
+    },
+    {
+      "index": 2,
+      "start_ms": 125477.66933333332,
+      "end_ms": 200716.504,
+      "event_count": 9,
+      "input_tokens": 101057,
+      "output_tokens": 1194
+    },
+    {
+      "index": 3,
+      "start_ms": 190716.504,
+      "end_ms": 265955.33866666665,
+      "event_count": 13,
+      "input_tokens": 101057,
+      "output_tokens": 2187
+    },
+    {
+      "index": 4,
+      "start_ms": 255955.33866666665,
+      "end_ms": 331194.17333333334,
+      "event_count": 14,
+      "input_tokens": 100991,
+      "output_tokens": 1308
+    },
+    {
+      "index": 5,
+      "start_ms": 321194.17333333334,
+      "end_ms": 391433.008,
+      "event_count": 13,
+      "input_tokens": 94325,
+      "output_tokens": 1715
+    }
+  ],
+  "total_events_merged": 82,
+  "total_events_deduped": 71,
+  "total_input_tokens": 593003,
+  "total_output_tokens": 11370,
+  "analysis_time_ms": 125544.7
+}

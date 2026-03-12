@@ -1,0 +1,172 @@
+[
+  {
+    "type": "scroll",
+    "time_start_ms": 8350,
+    "time_end_ms": 9500,
+    "description": "User scrolls down the page to view more of the summary and individual responses.",
+    "confidence": 0.9,
+    "interaction_target": "Page content",
+    "page_title": "What other types of withdrawal methods would be desirable?",
+    "frame_description": "The user is viewing the results for the question about desirable withdrawal methods. They scroll down past the summary text."
+  },
+  {
+    "type": "hesitate",
+    "time_start_ms": 10000,
+    "time_end_ms": 11400,
+    "description": "User pauses with the cursor over the sidebar before selecting a new question.",
+    "confidence": 0.7,
+    "interaction_target": "Sidebar menu",
+    "frame_description": "The cursor is positioned over the left sidebar containing the list of survey questions."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 11400,
+    "time_end_ms": 11550,
+    "description": "User clicks on the sidebar item: 'Being able to easily see my monthly or yearly total Askable earnings is beneficial to me.'",
+    "confidence": 0.95,
+    "interaction_target": "Sidebar item: Being able to easily see...",
+    "cursor_position_x": 150,
+    "cursor_position_y": 750,
+    "page_title": "What other types of withdrawal methods would be desirable?",
+    "frame_description": "The user activates a different question from the sidebar to view its specific results."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 11550,
+    "time_end_ms": 12750,
+    "description": "The page content updates to show results for the newly selected question.",
+    "confidence": 0.9,
+    "interaction_target": "Question results page",
+    "page_title": "Being able to easily see my monthly or yearly total Askable earnings is beneficial to me.",
+    "frame_description": "The main content area refreshes, displaying a summary and a bar chart for the new question."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 12750,
+    "time_end_ms": 14500,
+    "description": "User scrolls down to view the bar chart and individual responses for the current question.",
+    "confidence": 0.9,
+    "interaction_target": "Page content",
+    "page_title": "Being able to easily see my monthly or yearly total Askable earnings is beneficial to me.",
+    "frame_description": "The user scrolls down the page, bringing the 'Individual responses' section into view."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 18850,
+    "time_end_ms": 21250,
+    "description": "User hovers over the 'Hide filter' icon in the top right of the Filters pane.",
+    "confidence": 0.9,
+    "interaction_target": "Hide filter button",
+    "cursor_position_x": 960,
+    "cursor_position_y": 140,
+    "frame_description": "The cursor lingers over the funnel icon with an 'x' in the Filters sidebar."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 21250,
+    "time_end_ms": 21350,
+    "description": "User clicks the 'Hide filter' icon to collapse the Filters pane.",
+    "confidence": 0.95,
+    "interaction_target": "Hide filter button",
+    "cursor_position_x": 960,
+    "cursor_position_y": 140,
+    "frame_description": "The user clicks the icon, triggering the sidebar to close."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 21350,
+    "time_end_ms": 25300,
+    "description": "The Filters pane collapses and disappears from the right side of the screen.",
+    "confidence": 0.9,
+    "interaction_target": "Filters pane",
+    "frame_description": "The right-hand sidebar containing filters slides out of view, expanding the main content area."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 25300,
+    "time_end_ms": 26150,
+    "description": "User hovers over the 'Show filter' icon that replaced the previous filter pane.",
+    "confidence": 0.8,
+    "interaction_target": "Show filter button",
+    "cursor_position_x": 960,
+    "cursor_position_y": 140,
+    "frame_description": "The cursor stays near the top right where the filter controls are located."
+  },
+  {
+    "type": "hesitate",
+    "time_start_ms": 26150,
+    "time_end_ms": 27850,
+    "description": "User pauses before selecting the next question from the sidebar.",
+    "confidence": 0.7,
+    "interaction_target": "Sidebar menu",
+    "frame_description": "The cursor moves back to the left sidebar as the user considers the next question."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 27850,
+    "time_end_ms": 27950,
+    "description": "User clicks on the sidebar item: 'What other apps do you use that have a wallet or balance you can withdraw from?'",
+    "confidence": 0.95,
+    "interaction_target": "Sidebar item: What other apps...",
+    "cursor_position_x": 150,
+    "cursor_position_y": 780,
+    "frame_description": "The user selects the final question in the list."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 27950,
+    "time_end_ms": 28100,
+    "description": "The page content updates to show results for the 'What other apps...' question.",
+    "confidence": 0.9,
+    "interaction_target": "Question results page",
+    "page_title": "What other apps do you use that have a wallet or balance you can withdraw from?",
+    "frame_description": "The main content area refreshes with a new summary and list of individual responses."
+  },
+  {
+    "type": "drag",
+    "time_start_ms": 36500,
+    "time_end_ms": 49000,
+    "description": "User repeatedly clicks and drags to highlight various terms and sentences in the summary text while reading.",
+    "confidence": 0.8,
+    "interaction_target": "Summary text",
+    "frame_description": "The user highlights words like 'cashback/rewards', 'apps', 'wallets', and 'banking' as they read through the AI-generated summary."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 49100,
+    "time_end_ms": 53650,
+    "description": "User scrolls down to the bottom of the page to see the full list of individual responses.",
+    "confidence": 0.9,
+    "interaction_target": "Page content",
+    "frame_description": "The user scrolls past the summary to reach the table of individual participant answers."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 58400,
+    "time_end_ms": 58500,
+    "description": "User clicks the '+10 more' button at the bottom of the individual responses list.",
+    "confidence": 0.95,
+    "interaction_target": "+10 more button",
+    "cursor_position_x": 450,
+    "cursor_position_y": 780,
+    "frame_description": "The user activates the button to load more responses in the table."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 58500,
+    "time_end_ms": 61000,
+    "description": "The list of individual responses expands to show additional entries.",
+    "confidence": 0.9,
+    "interaction_target": "Individual responses list",
+    "frame_description": "The table grows vertically as ten more participant responses are rendered."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 61000,
+    "time_end_ms": 63450,
+    "description": "User scrolls back up to the top of the page.",
+    "confidence": 0.9,
+    "interaction_target": "Page content",
+    "frame_description": "The user scrolls upward, returning to the summary section of the page."
+  }
+]

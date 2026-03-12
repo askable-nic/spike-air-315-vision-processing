@@ -1,0 +1,259 @@
+[
+  {
+    "type": "hover",
+    "time_start_ms": 6000,
+    "time_end_ms": 10600,
+    "description": "The user hovers the cursor over the 'AI Interview' task card on the Explore page.",
+    "confidence": 0.9,
+    "interaction_target": "AI Interview task card",
+    "cursor_position_x": 518,
+    "cursor_position_y": 212,
+    "page_title": "Explore",
+    "frame_description": "The Explore page is visible, showing various task cards under 'Short tasks & surveys' and 'Sessions to schedule'."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 10600,
+    "time_end_ms": 10600,
+    "description": "The user clicks on the filter icon in the top right corner of the Explore page.",
+    "confidence": 0.9,
+    "interaction_target": "Filter icon",
+    "cursor_position_x": 584,
+    "cursor_position_y": 114,
+    "page_title": "Explore",
+    "frame_description": "The cursor is positioned over the filter icon at the top right of the screen."
+  },
+  {
+    "type": "hesitate",
+    "time_start_ms": 10600,
+    "time_end_ms": 11750,
+    "description": "A brief pause occurs after clicking the filter icon before the filter modal begins to appear.",
+    "confidence": 0.7,
+    "frame_description": "The Explore page remains visible while the application processes the filter request."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 11750,
+    "time_end_ms": 12050,
+    "description": "The 'Filter Opportunities' modal slides up from the bottom of the screen.",
+    "confidence": 0.9,
+    "interaction_target": "Filter Opportunities modal",
+    "frame_description": "The filter modal is now fully visible, overlaying the Explore page."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 30350,
+    "time_end_ms": 30650,
+    "description": "The user hovers the cursor over the 'Under 10 min' duration filter option.",
+    "confidence": 0.9,
+    "interaction_target": "Under 10 min button",
+    "cursor_position_x": 417,
+    "cursor_position_y": 678,
+    "frame_description": "The filter modal is open, and the cursor is over the 'Under 10 min' button in the Duration section."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 30650,
+    "time_end_ms": 30650,
+    "description": "The user selects the 'Under 10 min' duration filter.",
+    "confidence": 0.9,
+    "interaction_target": "Under 10 min button",
+    "cursor_position_x": 417,
+    "cursor_position_y": 678,
+    "frame_description": "The user clicks the 'Under 10 min' button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 30650,
+    "time_end_ms": 30750,
+    "description": "The 'Under 10 min' button changes its visual state to selected (blue background).",
+    "confidence": 0.9,
+    "interaction_target": "Under 10 min button",
+    "frame_description": "The 'Under 10 min' button is now highlighted in blue."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 31250,
+    "time_end_ms": 31250,
+    "description": "The user selects the '10-30 min' duration filter.",
+    "confidence": 0.9,
+    "interaction_target": "10-30 min button",
+    "cursor_position_x": 496,
+    "cursor_position_y": 678,
+    "frame_description": "The user clicks the '10-30 min' button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 31250,
+    "time_end_ms": 31350,
+    "description": "The '10-30 min' button becomes selected, and the 'Under 10 min' button is automatically deselected.",
+    "confidence": 0.9,
+    "frame_description": "The '10-30 min' button is now highlighted, while 'Under 10 min' returns to its default state."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 32550,
+    "time_end_ms": 32550,
+    "description": "The user selects the 'Under 10 min' duration filter again.",
+    "confidence": 0.9,
+    "interaction_target": "Under 10 min button",
+    "cursor_position_x": 417,
+    "cursor_position_y": 678,
+    "frame_description": "The user clicks the 'Under 10 min' button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 32550,
+    "time_end_ms": 32650,
+    "description": "The 'Under 10 min' button becomes selected, and the '10-30 min' button is deselected.",
+    "confidence": 0.9,
+    "frame_description": "The selection has toggled back to 'Under 10 min'."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 33400,
+    "time_end_ms": 33400,
+    "description": "The user clicks the 'Under 10 min' button to deselect it.",
+    "confidence": 0.9,
+    "interaction_target": "Under 10 min button",
+    "cursor_position_x": 417,
+    "cursor_position_y": 678,
+    "frame_description": "The user clicks the already selected 'Under 10 min' button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 33400,
+    "time_end_ms": 33550,
+    "description": "The 'Under 10 min' button returns to its unselected state.",
+    "confidence": 0.9,
+    "interaction_target": "Under 10 min button",
+    "frame_description": "No duration filters are currently selected."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 33900,
+    "time_end_ms": 33900,
+    "description": "The user selects the '10-30 min' duration filter.",
+    "confidence": 0.9,
+    "interaction_target": "10-30 min button",
+    "cursor_position_x": 496,
+    "cursor_position_y": 678,
+    "frame_description": "The user clicks the '10-30 min' button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 33900,
+    "time_end_ms": 34050,
+    "description": "The '10-30 min' button changes to its selected state.",
+    "confidence": 0.9,
+    "interaction_target": "10-30 min button",
+    "frame_description": "The '10-30 min' button is highlighted."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 34600,
+    "time_end_ms": 34600,
+    "description": "The user clicks the '10-30 min' button to deselect it.",
+    "confidence": 0.9,
+    "interaction_target": "10-30 min button",
+    "cursor_position_x": 496,
+    "cursor_position_y": 678,
+    "frame_description": "The user clicks the already selected '10-30 min' button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 34600,
+    "time_end_ms": 34750,
+    "description": "The '10-30 min' button returns to its unselected state.",
+    "confidence": 0.9,
+    "interaction_target": "10-30 min button",
+    "frame_description": "No duration filters are currently selected."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 34900,
+    "time_end_ms": 34900,
+    "description": "The user selects the 'Under 10 min' duration filter.",
+    "confidence": 0.9,
+    "interaction_target": "Under 10 min button",
+    "cursor_position_x": 417,
+    "cursor_position_y": 678,
+    "frame_description": "The user clicks the 'Under 10 min' button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 34900,
+    "time_end_ms": 35050,
+    "description": "The 'Under 10 min' button changes to its selected state.",
+    "confidence": 0.9,
+    "interaction_target": "Under 10 min button",
+    "frame_description": "The 'Under 10 min' button is highlighted."
+  },
+  {
+    "type": "drag",
+    "time_start_ms": 36300,
+    "time_end_ms": 45400,
+    "description": "The user repeatedly drags the handles of the Pay Rate slider to adjust the range.",
+    "confidence": 0.9,
+    "interaction_target": "Pay Rate slider",
+    "cursor_position_x": 496,
+    "cursor_position_y": 745,
+    "frame_description": "The user is interacting with the dual-handle slider in the Pay Rate section."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 36300,
+    "time_end_ms": 45400,
+    "description": "The pay rate range text (e.g., '$0 - $100+') updates dynamically as the slider handles are moved.",
+    "confidence": 0.9,
+    "interaction_target": "Pay Rate range text",
+    "frame_description": "The text above the slider changes to reflect the current selection."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 46400,
+    "time_end_ms": 46550,
+    "description": "The user scrolls down within the filter modal to view more options.",
+    "confidence": 0.9,
+    "frame_description": "The content of the filter modal moves upward, revealing the 'Device' section."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 51150,
+    "time_end_ms": 51300,
+    "description": "The user scrolls back up within the filter modal.",
+    "confidence": 0.9,
+    "frame_description": "The content of the filter modal moves downward, returning to the 'Pay Rate' and 'Duration' sections."
+  },
+  {
+    "type": "drag",
+    "time_start_ms": 51650,
+    "time_end_ms": 80550,
+    "description": "The user performs a series of rapid, repetitive adjustments to the Pay Rate slider handles.",
+    "confidence": 0.9,
+    "interaction_target": "Pay Rate slider",
+    "cursor_position_x": 496,
+    "cursor_position_y": 745,
+    "frame_description": "The user is continuously dragging the slider handles back and forth."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 51650,
+    "time_end_ms": 80550,
+    "description": "The pay rate range text updates rapidly in response to the slider movements.",
+    "confidence": 0.9,
+    "interaction_target": "Pay Rate range text",
+    "frame_description": "The displayed pay rate range changes constantly as the user drags the handles."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 81200,
+    "time_end_ms": 82600,
+    "description": "The user hovers the cursor over the 'Under 10 min' button before the segment ends.",
+    "confidence": 0.9,
+    "interaction_target": "Under 10 min button",
+    "cursor_position_x": 417,
+    "cursor_position_y": 678,
+    "frame_description": "The cursor is stationary over the 'Under 10 min' button in the filter modal."
+  }
+]

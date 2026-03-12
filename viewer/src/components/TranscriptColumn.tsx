@@ -6,7 +6,6 @@ import { ColumnItem } from "./ColumnItem";
 import { GapPlaceholder } from "./GapPlaceholder";
 
 interface TranscriptColumnProps {
-  readonly title: string;
   readonly utterances: readonly Utterance[];
   readonly currentTime: number;
   readonly duration: number;
@@ -18,7 +17,6 @@ type ListEntry =
   | { readonly kind: "gap"; readonly range: TimeRange };
 
 export const TranscriptColumn = ({
-  title,
   utterances,
   currentTime,
   duration,
@@ -53,9 +51,7 @@ export const TranscriptColumn = ({
   }, [utterances, duration]);
 
   return (
-    <div className="column">
-      <div className="column__header">{title}</div>
-      <div className="column__body" ref={containerRef}>
+    <div className="column__body" ref={containerRef}>
         {entries.map((entry, i) =>
           entry.kind === "gap" ? (
             <GapPlaceholder
@@ -77,7 +73,6 @@ export const TranscriptColumn = ({
             </ColumnItem>
           ),
         )}
-      </div>
     </div>
   );
 };

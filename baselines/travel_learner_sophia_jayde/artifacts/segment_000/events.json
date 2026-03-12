@@ -1,0 +1,178 @@
+[
+  {
+    "type": "navigate",
+    "time_start_ms": 5800,
+    "time_end_ms": 8200,
+    "description": "User switches from the Sokable session tab to the Airbnb homepage tab.",
+    "confidence": 0.98,
+    "interaction_target": "Airbnb browser tab",
+    "cursor_position_x": 412,
+    "cursor_position_y": 18,
+    "page_title": "Airbnb | Holiday Rentals, Cabins, Beach Houses, Unique Homes & Experiences",
+    "page_location": "https://www.airbnb.com.au/",
+    "frame_description": "The browser tab for Airbnb is selected, and the homepage begins to render."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 15200,
+    "time_end_ms": 15300,
+    "description": "User clicks on the 'Search destinations' input field to begin their search.",
+    "confidence": 0.95,
+    "interaction_target": "Search destinations input",
+    "cursor_position_x": 345,
+    "cursor_position_y": 148,
+    "page_title": "Airbnb | Holiday Rentals, Cabins, Beach Houses, Unique Homes & Experiences",
+    "frame_description": "The cursor is positioned over the destination input field in the search bar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 15300,
+    "time_end_ms": 15800,
+    "description": "The search bar expands and the destination input field gains focus.",
+    "confidence": 0.9,
+    "interaction_target": "Search bar",
+    "frame_description": "The search bar UI changes to an active state with the destination field highlighted."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 17000,
+    "time_end_ms": 20500,
+    "description": "User types 'London' into the destination search field.",
+    "confidence": 0.98,
+    "interaction_target": "Search destinations input",
+    "page_title": "Airbnb | Holiday Rentals, Cabins, Beach Houses, Unique Homes & Experiences",
+    "frame_description": "Characters 'L-o-n-d-o-n' appear sequentially in the input box."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 20500,
+    "time_end_ms": 21500,
+    "description": "A dropdown menu with location suggestions appears below the search bar.",
+    "confidence": 0.92,
+    "interaction_target": "Search suggestions dropdown",
+    "frame_description": "A list of matching locations like 'London, United Kingdom' is displayed."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 22800,
+    "time_end_ms": 23200,
+    "description": "User selects 'London, United Kingdom' from the autocomplete suggestions.",
+    "confidence": 0.95,
+    "interaction_target": "London, United Kingdom suggestion",
+    "cursor_position_x": 352,
+    "cursor_position_y": 210,
+    "frame_description": "The cursor clicks on the first suggestion in the dropdown list."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 23200,
+    "time_end_ms": 24000,
+    "description": "The date picker calendar opens automatically after the destination is selected.",
+    "confidence": 0.9,
+    "interaction_target": "Date picker calendar",
+    "frame_description": "The UI shifts focus to the check-in date selection, showing a two-month calendar view."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 35000,
+    "time_end_ms": 40000,
+    "description": "User hovers the cursor over various dates in the March calendar, considering options.",
+    "confidence": 0.85,
+    "interaction_target": "Calendar dates",
+    "frame_description": "The cursor moves slowly across the grid of dates in the March calendar."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 40500,
+    "time_end_ms": 40600,
+    "description": "User clicks on March 3rd to set it as the check-in date.",
+    "confidence": 0.95,
+    "interaction_target": "March 3 date cell",
+    "cursor_position_x": 310,
+    "cursor_position_y": 415,
+    "frame_description": "The date '3' is selected and highlighted in the calendar."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 42000,
+    "time_end_ms": 42100,
+    "description": "User clicks on March 10th to set it as the check-out date.",
+    "confidence": 0.95,
+    "interaction_target": "March 10 date cell",
+    "cursor_position_x": 445,
+    "cursor_position_y": 415,
+    "frame_description": "The date '10' is selected, and the range between 3 and 10 is highlighted."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 45500,
+    "time_end_ms": 45600,
+    "description": "User clicks on the 'Add guests' section of the search bar.",
+    "confidence": 0.95,
+    "interaction_target": "Add guests button",
+    "cursor_position_x": 712,
+    "cursor_position_y": 148,
+    "frame_description": "The cursor moves to the rightmost section of the search bar and clicks."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 45600,
+    "time_end_ms": 46200,
+    "description": "The guest selection popover menu appears.",
+    "confidence": 0.9,
+    "interaction_target": "Guest selection menu",
+    "frame_description": "A menu with increment/decrement buttons for Adults, Children, Infants, and Pets opens."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 56200,
+    "time_end_ms": 56300,
+    "description": "User clicks the '+' button to add one adult guest.",
+    "confidence": 0.95,
+    "interaction_target": "Adults increment button",
+    "cursor_position_x": 845,
+    "cursor_position_y": 295,
+    "frame_description": "The count for Adults changes from 0 to 1."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 57800,
+    "time_end_ms": 57900,
+    "description": "User clicks the '+' button again to add a second adult guest.",
+    "confidence": 0.95,
+    "interaction_target": "Adults increment button",
+    "cursor_position_x": 845,
+    "cursor_position_y": 295,
+    "frame_description": "The count for Adults changes from 1 to 2."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 60500,
+    "time_end_ms": 60600,
+    "description": "User clicks the Search button to execute the search.",
+    "confidence": 0.98,
+    "interaction_target": "Search button",
+    "cursor_position_x": 860,
+    "cursor_position_y": 148,
+    "frame_description": "The cursor clicks the red magnifying glass icon at the end of the search bar."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 60600,
+    "time_end_ms": 75000,
+    "description": "The application navigates to the search results page for London.",
+    "confidence": 0.95,
+    "page_title": "Airbnb | London - Holiday Rentals & Places to Stay - England, United Kingdom",
+    "page_location": "https://www.airbnb.com.au/s/London--United-Kingdom/homes",
+    "frame_description": "The URL changes and the browser begins loading the results page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 61500,
+    "time_end_ms": 75000,
+    "description": "The search results page shows skeleton loading states and a map while content is fetched.",
+    "confidence": 0.9,
+    "interaction_target": "Search results list",
+    "frame_description": "Gray placeholder boxes (skeletons) are visible where property cards will appear."
+  }
+]

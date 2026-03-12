@@ -1,0 +1,91 @@
+{
+  "session": "cfs_home_loan_sasha",
+  "timestamp": "2026-03-12T22:29:50.881904+00:00",
+  "config": {
+    "model": "gemini-3-flash-preview",
+    "temperature": 0.2,
+    "max_concurrent": 3,
+    "video_fps": 20,
+    "max_segment_duration_ms": 75000,
+    "segment_overlap_ms": 5000,
+    "source": "gemini_video_baseline",
+    "merge": {
+      "time_tolerance_ms": 2000,
+      "similarity_threshold": 0.6,
+      "discard_context_events": false
+    }
+  },
+  "video_duration_ms": 549800.0,
+  "video_path": "input_data/screen_tracks_normalized/cfs_home_loan_sasha.mp4",
+  "segments": [
+    {
+      "index": 0,
+      "start_ms": 0.0,
+      "end_ms": 73725.0,
+      "event_count": 14,
+      "input_tokens": 99000,
+      "output_tokens": 1476
+    },
+    {
+      "index": 1,
+      "start_ms": 63725.0,
+      "end_ms": 142450.0,
+      "event_count": 18,
+      "input_tokens": 105737,
+      "output_tokens": 2833
+    },
+    {
+      "index": 2,
+      "start_ms": 132450.0,
+      "end_ms": 211175.0,
+      "event_count": 47,
+      "input_tokens": 105672,
+      "output_tokens": 6091
+    },
+    {
+      "index": 3,
+      "start_ms": 201175.0,
+      "end_ms": 279900.0,
+      "event_count": 36,
+      "input_tokens": 105540,
+      "output_tokens": 4054
+    },
+    {
+      "index": 4,
+      "start_ms": 269900.0,
+      "end_ms": 348625.0,
+      "event_count": 44,
+      "input_tokens": 105672,
+      "output_tokens": 5673
+    },
+    {
+      "index": 5,
+      "start_ms": 338625.0,
+      "end_ms": 417350.0,
+      "event_count": 19,
+      "input_tokens": 105738,
+      "output_tokens": 2456
+    },
+    {
+      "index": 6,
+      "start_ms": 407350.0,
+      "end_ms": 486075.0,
+      "event_count": 34,
+      "input_tokens": 105672,
+      "output_tokens": 3995
+    },
+    {
+      "index": 7,
+      "start_ms": 476075.0,
+      "end_ms": 549800.0,
+      "event_count": 28,
+      "input_tokens": 98874,
+      "output_tokens": 3395
+    }
+  ],
+  "total_events_merged": 240,
+  "total_events_deduped": 187,
+  "total_input_tokens": 831905,
+  "total_output_tokens": 29973,
+  "analysis_time_ms": 206856.8
+}

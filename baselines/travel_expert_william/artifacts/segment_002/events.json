@@ -1,0 +1,321 @@
+[
+  {
+    "type": "hover",
+    "time_start_ms": 4000,
+    "time_end_ms": 4800,
+    "description": "User hovers over the 'I only need accommodation for part of my trip' checkbox.",
+    "confidence": 0.8,
+    "interaction_target": "I only need accommodation for part of my trip",
+    "cursor_position_x": 75,
+    "cursor_position_y": 485,
+    "page_title": "Travel: Holidays, Cheap Flights, Hotels, Packages & Cars | Expedia",
+    "frame_description": "Expedia homepage with the Packages tab active and the search form visible."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 4800,
+    "time_end_ms": 4800,
+    "description": "User clicks the 'I only need accommodation for part of my trip' checkbox.",
+    "confidence": 0.9,
+    "interaction_target": "I only need accommodation for part of my trip",
+    "cursor_position_x": 75,
+    "cursor_position_y": 485,
+    "page_title": "Travel: Holidays, Cheap Flights, Hotels, Packages & Cars | Expedia",
+    "frame_description": "The user activates the accommodation checkbox."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 4800,
+    "time_end_ms": 5400,
+    "description": "A new form section 'Dates for stay' appears below the checkbox.",
+    "confidence": 0.9,
+    "frame_description": "The UI updates to show additional date selection fields for the accommodation-only portion of the trip."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 5400,
+    "time_end_ms": 5800,
+    "description": "User hovers over the 'I only need accommodation for part of my trip' checkbox again.",
+    "confidence": 0.8,
+    "interaction_target": "I only need accommodation for part of my trip",
+    "cursor_position_x": 75,
+    "cursor_position_y": 485,
+    "page_title": "Travel: Holidays, Cheap Flights, Hotels, Packages & Cars | Expedia",
+    "frame_description": "Cursor lingers over the checked box."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 5800,
+    "time_end_ms": 5800,
+    "description": "User clicks the checkbox to uncheck 'I only need accommodation for part of my trip'.",
+    "confidence": 0.9,
+    "interaction_target": "I only need accommodation for part of my trip",
+    "cursor_position_x": 75,
+    "cursor_position_y": 485,
+    "page_title": "Travel: Holidays, Cheap Flights, Hotels, Packages & Cars | Expedia",
+    "frame_description": "The user deactivates the accommodation checkbox."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 5800,
+    "time_end_ms": 6200,
+    "description": "The 'Dates for stay' section disappears from the form.",
+    "confidence": 0.9,
+    "frame_description": "The UI reverts to the standard package search form layout."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 6200,
+    "time_end_ms": 6850,
+    "description": "User hovers over the 'Search' button.",
+    "confidence": 0.8,
+    "interaction_target": "Search",
+    "cursor_position_x": 880,
+    "cursor_position_y": 485,
+    "page_title": "Travel: Holidays, Cheap Flights, Hotels, Packages & Cars | Expedia",
+    "frame_description": "Cursor moves to the blue search button."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 6850,
+    "time_end_ms": 6850,
+    "description": "User clicks the 'Search' button to initiate the package search.",
+    "confidence": 0.9,
+    "interaction_target": "Search",
+    "cursor_position_x": 880,
+    "cursor_position_y": 485,
+    "page_title": "Travel: Holidays, Cheap Flights, Hotels, Packages & Cars | Expedia",
+    "frame_description": "The search button is clicked."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 6850,
+    "time_end_ms": 21200,
+    "description": "Page navigates from the homepage to the search results page.",
+    "confidence": 0.9,
+    "page_location": "expedia.com.au/Hotel-Search",
+    "frame_description": "The browser begins loading the search results."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 9250,
+    "time_end_ms": 21200,
+    "description": "A full-screen loading overlay with the Expedia logo and a spinner is displayed.",
+    "confidence": 0.9,
+    "frame_description": "The intermediate loading screen is visible while results are fetched."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 24500,
+    "time_end_ms": 35300,
+    "description": "User scrolls down the search results page to view hotel options.",
+    "confidence": 0.9,
+    "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results | Expedia",
+    "frame_description": "The user is browsing through the list of available hotel packages in London."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 35300,
+    "time_end_ms": 35800,
+    "description": "User hovers over the result for 'The Zetter Clerkenwell'.",
+    "confidence": 0.7,
+    "interaction_target": "The Zetter Clerkenwell",
+    "cursor_position_x": 500,
+    "cursor_position_y": 450,
+    "frame_description": "Cursor pauses over the first hotel result card."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 35800,
+    "time_end_ms": 36200,
+    "description": "User hovers over the result for 'The Drey - Kensington, Earl's Court'.",
+    "confidence": 0.7,
+    "interaction_target": "The Drey - Kensington, Earl's Court",
+    "cursor_position_x": 500,
+    "cursor_position_y": 650,
+    "frame_description": "Cursor moves to the second hotel result card."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 36200,
+    "time_end_ms": 40300,
+    "description": "User continues scrolling down the results page.",
+    "confidence": 0.9,
+    "frame_description": "More hotel results are revealed as the user scrolls."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 40300,
+    "time_end_ms": 40800,
+    "description": "User hovers over the result for 'The Tower Hotel, by Thistle'.",
+    "confidence": 0.7,
+    "interaction_target": "The Tower Hotel, by Thistle",
+    "cursor_position_x": 500,
+    "cursor_position_y": 850,
+    "frame_description": "Cursor pauses over another hotel card."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 40800,
+    "time_end_ms": 50100,
+    "description": "User scrolls down the left-hand sidebar to view filter options.",
+    "confidence": 0.9,
+    "frame_description": "The user is looking through the filtering sidebar on the left."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 50100,
+    "time_end_ms": 50400,
+    "description": "User hovers over the 'Breakfast included' filter checkbox.",
+    "confidence": 0.8,
+    "interaction_target": "Breakfast included",
+    "cursor_position_x": 75,
+    "cursor_position_y": 925,
+    "frame_description": "Cursor targets the breakfast filter."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 50400,
+    "time_end_ms": 50400,
+    "description": "User selects the 'Breakfast included' filter.",
+    "confidence": 0.9,
+    "interaction_target": "Breakfast included",
+    "cursor_position_x": 75,
+    "cursor_position_y": 925,
+    "frame_description": "The breakfast filter is checked."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 50400,
+    "time_end_ms": 51000,
+    "description": "The search results refresh to show only hotels with breakfast included.",
+    "confidence": 0.9,
+    "frame_description": "The results list updates based on the selected filter."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 51000,
+    "time_end_ms": 52500,
+    "description": "User scrolls further down the filter sidebar.",
+    "confidence": 0.9,
+    "frame_description": "User continues exploring filter options."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 52500,
+    "time_end_ms": 52900,
+    "description": "User hovers over the 'See more' link under the 'Property class' filter section.",
+    "confidence": 0.8,
+    "interaction_target": "See more",
+    "cursor_position_x": 75,
+    "cursor_position_y": 950,
+    "frame_description": "Cursor pauses over the expansion link for property class."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 52900,
+    "time_end_ms": 52900,
+    "description": "User clicks 'See more' to expand the property class filters.",
+    "confidence": 0.9,
+    "interaction_target": "See more",
+    "cursor_position_x": 75,
+    "cursor_position_y": 950,
+    "frame_description": "The user expands the filter section."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 52900,
+    "time_end_ms": 53300,
+    "description": "Additional property class filter options (e.g., star ratings) become visible.",
+    "confidence": 0.9,
+    "frame_description": "The sidebar expands to show more filter checkboxes."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 53300,
+    "time_end_ms": 63400,
+    "description": "User scrolls through the expanded filter list and results.",
+    "confidence": 0.9,
+    "frame_description": "General browsing behavior as the user reviews options."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 73300,
+    "time_end_ms": 74400,
+    "description": "User hovers over the 'Any' guest rating option.",
+    "confidence": 0.7,
+    "interaction_target": "Any",
+    "cursor_position_x": 75,
+    "cursor_position_y": 850,
+    "frame_description": "Cursor moves over the guest rating filter section."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 74400,
+    "time_end_ms": 75100,
+    "description": "User hovers over the 'Wonderful 9+' guest rating option.",
+    "confidence": 0.7,
+    "interaction_target": "Wonderful 9+",
+    "cursor_position_x": 75,
+    "cursor_position_y": 880,
+    "frame_description": "Cursor moves down the rating options."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 75100,
+    "time_end_ms": 75600,
+    "description": "User hovers over the 'Very good 8+' guest rating option.",
+    "confidence": 0.7,
+    "interaction_target": "Very good 8+",
+    "cursor_position_x": 75,
+    "cursor_position_y": 910,
+    "frame_description": "Cursor continues moving through rating filters."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 75600,
+    "time_end_ms": 76200,
+    "description": "User hovers over the 'Good 7+' guest rating option.",
+    "confidence": 0.7,
+    "interaction_target": "Good 7+",
+    "cursor_position_x": 75,
+    "cursor_position_y": 940,
+    "frame_description": "Cursor pauses briefly on the 7+ rating."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 76200,
+    "time_end_ms": 79850,
+    "description": "User scrolls back up to the top of the search results.",
+    "confidence": 0.9,
+    "frame_description": "The user returns to the top of the list to make a selection."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 79850,
+    "time_end_ms": 79850,
+    "description": "User clicks on 'The Zetter Clerkenwell' to view the hotel details.",
+    "confidence": 0.9,
+    "interaction_target": "The Zetter Clerkenwell",
+    "cursor_position_x": 500,
+    "cursor_position_y": 700,
+    "frame_description": "The user selects a specific hotel result."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 79850,
+    "time_end_ms": 81600,
+    "description": "Page navigates to the hotel details page for The Zetter Clerkenwell.",
+    "confidence": 0.9,
+    "page_location": "expedia.com.au/London-Hotels-The-Zetter-Clerkenwell",
+    "frame_description": "The browser begins loading the detailed hotel page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 80250,
+    "time_end_ms": 81600,
+    "description": "A loading screen is displayed while the hotel details page loads.",
+    "confidence": 0.9,
+    "frame_description": "The intermediate loading state before the hotel page is rendered."
+  }
+]

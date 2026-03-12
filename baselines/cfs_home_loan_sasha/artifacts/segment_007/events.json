@@ -1,0 +1,281 @@
+[
+  {
+    "type": "hover",
+    "time_start_ms": 350,
+    "time_end_ms": 700,
+    "description": "Sasha hovers over the 'Borrow more money' radio option while considering the reason for refinancing.",
+    "confidence": 0.9,
+    "interaction_target": "Borrow more money radio button",
+    "page_title": "unloan.",
+    "frame_description": "The user is on the 'Why are you refinancing?' step of the loan application."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 800,
+    "time_end_ms": 800,
+    "description": "Sasha clicks into the 'Amount' input field to enter the loan value.",
+    "confidence": 1.0,
+    "interaction_target": "Amount input field",
+    "cursor_position_x": 350,
+    "cursor_position_y": 340,
+    "page_title": "unloan.",
+    "frame_description": "The cursor is placed inside the empty Amount text box."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 800,
+    "time_end_ms": 1350,
+    "description": "Sasha types '1' into the Amount field before pausing.",
+    "confidence": 1.0,
+    "interaction_target": "Amount input field",
+    "page_title": "unloan.",
+    "frame_description": "The character '1' appears in the Amount field."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 3600,
+    "time_end_ms": 5350,
+    "description": "Sasha types '500,000' into the refinancing amount field.",
+    "confidence": 1.0,
+    "interaction_target": "Amount input field",
+    "page_title": "unloan.",
+    "frame_description": "The Amount field is updated to show '$ 500,000'."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 5950,
+    "time_end_ms": 6400,
+    "description": "Sasha hovers over the 'Loan Term' dropdown menu.",
+    "confidence": 0.9,
+    "interaction_target": "Loan Term dropdown",
+    "page_title": "unloan.",
+    "frame_description": "The cursor lingers over the dropdown currently set to '30 years'."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 8000,
+    "time_end_ms": 8000,
+    "description": "Sasha selects the 'No' option for taking cash out using property equity.",
+    "confidence": 1.0,
+    "interaction_target": "No radio button",
+    "cursor_position_x": 310,
+    "cursor_position_y": 615,
+    "page_title": "unloan.",
+    "frame_description": "The user clicks the radio button next to 'No'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 8000,
+    "time_end_ms": 8300,
+    "description": "The 'No' radio button state changes to selected.",
+    "confidence": 1.0,
+    "interaction_target": "No radio button",
+    "page_title": "unloan.",
+    "frame_description": "The radio button fills in to indicate selection."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 9650,
+    "time_end_ms": 9650,
+    "description": "Sasha clicks the 'Next' button to proceed with the application.",
+    "confidence": 1.0,
+    "interaction_target": "Next button",
+    "cursor_position_x": 600,
+    "cursor_position_y": 765,
+    "page_title": "unloan.",
+    "frame_description": "The Next button is activated."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 9650,
+    "time_end_ms": 10150,
+    "description": "The application navigates to the Welcome/Email login screen.",
+    "confidence": 1.0,
+    "page_title": "unloan.",
+    "frame_description": "The screen transitions from the form to a centered login modal."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 10300,
+    "time_end_ms": 10300,
+    "description": "Sasha clicks into the 'Email Address*' field.",
+    "confidence": 1.0,
+    "interaction_target": "Email Address input field",
+    "cursor_position_x": 500,
+    "cursor_position_y": 480,
+    "page_title": "unloan.",
+    "frame_description": "The cursor focuses on the email input field."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 11950,
+    "time_end_ms": 12450,
+    "description": "Sasha hovers over the Unloan logo in the top left corner.",
+    "confidence": 0.9,
+    "interaction_target": "unloan. logo",
+    "page_title": "unloan.",
+    "frame_description": "The cursor moves to the top left of the page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 13250,
+    "time_end_ms": 13650,
+    "description": "The screen flashes white and returns to a previous step of the application form.",
+    "confidence": 0.9,
+    "page_title": "unloan.",
+    "frame_description": "The login modal disappears and the 'Tell us about your loan' page loads."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 13850,
+    "time_end_ms": 14200,
+    "description": "The page content updates to show borrower name input fields.",
+    "confidence": 0.9,
+    "page_title": "unloan.",
+    "frame_description": "Fields for 'What's your first name?' and 'What's your co-borrower's first name?' appear."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 14850,
+    "time_end_ms": 15200,
+    "description": "Sasha hovers over the 'income' step in the sidebar navigation.",
+    "confidence": 0.9,
+    "interaction_target": "income sidebar link",
+    "page_title": "unloan.",
+    "frame_description": "The cursor moves over the left-hand progress menu."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 15900,
+    "time_end_ms": 16300,
+    "description": "Sasha hovers over the co-borrower warning message.",
+    "confidence": 0.9,
+    "interaction_target": "Co-borrower warning box",
+    "page_title": "unloan.",
+    "frame_description": "The cursor pauses over the yellow alert box."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 17300,
+    "time_end_ms": 17550,
+    "description": "Sasha scrolls down the page to view more form content.",
+    "confidence": 1.0,
+    "page_title": "unloan.",
+    "frame_description": "The page content shifts vertically."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 17550,
+    "time_end_ms": 17800,
+    "description": "The page content transitions to the 'Let's find your property' section.",
+    "confidence": 0.9,
+    "page_title": "unloan.",
+    "frame_description": "New form fields for property address and value appear."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 18750,
+    "time_end_ms": 19000,
+    "description": "The page content transitions to the 'Before you begin' summary section.",
+    "confidence": 0.9,
+    "page_title": "unloan.",
+    "frame_description": "A summary of eligibility criteria is displayed."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 19000,
+    "time_end_ms": 19150,
+    "description": "The page content transitions to 'What's the purpose of your loan?'.",
+    "confidence": 0.9,
+    "page_title": "unloan.",
+    "frame_description": "The screen shows a heading asking for the loan purpose."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 19150,
+    "time_end_ms": 20100,
+    "description": "Product cards for 'Live in' and 'Invest' loans appear on the screen.",
+    "confidence": 1.0,
+    "page_title": "unloan.",
+    "frame_description": "Two large cards with interest rates and features animate into view."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 21450,
+    "time_end_ms": 21450,
+    "description": "Sasha clicks the 'View full product features >' link.",
+    "confidence": 1.0,
+    "interaction_target": "View full product features link",
+    "cursor_position_x": 500,
+    "cursor_position_y": 880,
+    "page_title": "unloan.",
+    "frame_description": "The user clicks the text link below the product cards."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 21450,
+    "time_end_ms": 22000,
+    "description": "The page navigates to the detailed 'Unloan Features' page.",
+    "confidence": 1.0,
+    "page_title": "Unloan Features",
+    "frame_description": "The screen loads a new page with the heading 'Unloan Features'."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 22000,
+    "time_end_ms": 36700,
+    "description": "Sasha performs a long, continuous scroll down the features page to review interest rates and loan details.",
+    "confidence": 1.0,
+    "page_title": "Unloan Features",
+    "frame_description": "The user scrolls through sections on variable rates and loan details."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 36700,
+    "time_end_ms": 37650,
+    "description": "Sasha hovers over 'application fees' in the list of zero fees.",
+    "confidence": 0.9,
+    "interaction_target": "application fees list item",
+    "page_title": "Unloan Features",
+    "frame_description": "The cursor points to the first item in the fee list."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 37650,
+    "time_end_ms": 38600,
+    "description": "Sasha hovers over 'account keeping fees' in the list.",
+    "confidence": 0.9,
+    "interaction_target": "account keeping fees list item",
+    "page_title": "Unloan Features",
+    "frame_description": "The cursor moves down the list of fees."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 38600,
+    "time_end_ms": 49050,
+    "description": "Sasha continues scrolling to the bottom of the features page, reviewing redraw and top-up information.",
+    "confidence": 1.0,
+    "page_title": "Unloan Features",
+    "frame_description": "The user reaches the footer of the page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 49050,
+    "time_end_ms": 49300,
+    "description": "Sasha switches focus from the browser to the Lookback task instruction window.",
+    "confidence": 1.0,
+    "page_title": "Task Instructions",
+    "frame_description": "The screen displays the user testing task description."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 54850,
+    "time_end_ms": 55600,
+    "description": "Sasha hovers over the 'End Task' button in the Lookback overlay.",
+    "confidence": 0.9,
+    "interaction_target": "End Task button",
+    "cursor_position_x": 470,
+    "cursor_position_y": 935,
+    "frame_description": "The cursor is positioned over the button to finish the session."
+  }
+]

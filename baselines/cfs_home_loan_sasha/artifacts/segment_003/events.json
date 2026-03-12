@@ -1,0 +1,332 @@
+[
+  {
+    "type": "navigate",
+    "time_start_ms": 0,
+    "time_end_ms": 1450,
+    "description": "The page begins to load, showing a green background with placeholders before the full content appears.",
+    "confidence": 0.9,
+    "interaction_target": "Compare home loans page",
+    "page_title": "Compare home loans | Mortgage Choice",
+    "page_location": "https://www.mortgagechoice.com.au/compare-home-loans/",
+    "frame_description": "A green background with white placeholder boxes is visible as the page loads."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 1450,
+    "time_end_ms": 1500,
+    "description": "The 'Compare home loans' page fully loads, displaying interest rates and loan comparison tools.",
+    "confidence": 1.0,
+    "interaction_target": "Compare home loans page",
+    "page_title": "Compare home loans | Mortgage Choice",
+    "page_location": "https://www.mortgagechoice.com.au/compare-home-loans/",
+    "frame_description": "The full 'Compare home loans' page is visible with various loan options and filters."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 6350,
+    "time_end_ms": 6500,
+    "description": "Additional loan results and filter options load below the initial fold of the page.",
+    "confidence": 0.9,
+    "interaction_target": "Loan results list",
+    "frame_description": "The page layout shifts slightly as more content and filter dropdowns appear below the main header."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 7600,
+    "time_end_ms": 8450,
+    "description": "The user hovers the cursor over the 'Property purpose' dropdown menu.",
+    "confidence": 0.8,
+    "interaction_target": "Property purpose dropdown",
+    "cursor_position_x": 250,
+    "cursor_position_y": 800,
+    "frame_description": "The cursor is positioned over the 'Property purpose' filter dropdown."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 8450,
+    "time_end_ms": 9100,
+    "description": "The user scrolls down the page to view the list of home loan results.",
+    "confidence": 0.9,
+    "frame_description": "The page content moves vertically as the user scrolls down."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 9100,
+    "time_end_ms": 10600,
+    "description": "The user hovers over several loan cards, likely scanning the interest rates and features.",
+    "confidence": 0.7,
+    "interaction_target": "Loan cards",
+    "frame_description": "The cursor moves across different loan result cards in the list."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 10600,
+    "time_end_ms": 11450,
+    "description": "The user continues scrolling down the list of loan options.",
+    "confidence": 0.9,
+    "frame_description": "The user scrolls further down the results list."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 11450,
+    "time_end_ms": 13200,
+    "description": "The user hovers over more loan cards further down the list.",
+    "confidence": 0.7,
+    "interaction_target": "Loan cards",
+    "frame_description": "The cursor lingers over loan cards as the user reviews the options."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 13200,
+    "time_end_ms": 15550,
+    "description": "The user scrolls down towards the bottom of the first page of results.",
+    "confidence": 0.9,
+    "frame_description": "The user scrolls to the bottom of the current set of loan results."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 15550,
+    "time_end_ms": 15900,
+    "description": "The user switches to the Askable browser tab.",
+    "confidence": 0.9,
+    "interaction_target": "Askable Explore page",
+    "page_title": "Explore - Askable",
+    "page_location": "https://app.askable.com/explore",
+    "frame_description": "The screen switches to the Askable platform's explore page."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 15900,
+    "time_end_ms": 27750,
+    "description": "The user views the task instructions on the Askable platform, remaining on this screen for several seconds to read.",
+    "confidence": 1.0,
+    "interaction_target": "Task instructions page",
+    "page_title": "Task - Askable",
+    "frame_description": "The user is looking at a page with detailed task instructions for the study."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 27750,
+    "time_end_ms": 27800,
+    "description": "The user switches back to the Mortgage Choice browser tab.",
+    "confidence": 0.9,
+    "interaction_target": "Compare home loans page",
+    "page_title": "Compare home loans | Mortgage Choice",
+    "page_location": "https://www.mortgagechoice.com.au/compare-home-loans/",
+    "frame_description": "The screen switches back to the loan comparison results."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 27800,
+    "time_end_ms": 28700,
+    "description": "The user hovers over the loan cards again after returning to the page.",
+    "confidence": 0.7,
+    "interaction_target": "Loan cards",
+    "frame_description": "The cursor is visible again, hovering over the loan results."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 28700,
+    "time_end_ms": 29250,
+    "description": "The user scrolls down to the bottom of the page.",
+    "confidence": 0.9,
+    "frame_description": "The user scrolls down to reach the pagination controls."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 29250,
+    "time_end_ms": 30450,
+    "description": "The user hovers over the loan cards at the bottom of the list.",
+    "confidence": 0.7,
+    "interaction_target": "Loan cards",
+    "frame_description": "The cursor moves over the final few loan cards on the page."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 30450,
+    "time_end_ms": 31350,
+    "description": "The user scrolls to the very bottom of the results list to access the pagination.",
+    "confidence": 0.9,
+    "frame_description": "The user scrolls to the bottom of the results list."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 31350,
+    "time_end_ms": 32300,
+    "description": "The user hovers over the 'Next' button in the pagination section.",
+    "confidence": 0.9,
+    "interaction_target": "Next button",
+    "cursor_position_x": 450,
+    "cursor_position_y": 950,
+    "frame_description": "The cursor is positioned over the 'Next' button at the bottom of the page."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 32300,
+    "time_end_ms": 32400,
+    "description": "The user clicks the 'Next' button.",
+    "confidence": 1.0,
+    "interaction_target": "Next button",
+    "cursor_position_x": 450,
+    "cursor_position_y": 950,
+    "frame_description": "The user clicks the 'Next' button to navigate to more results."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 32300,
+    "time_end_ms": 36550,
+    "description": "The page content updates as the next set of results or a detailed view loads.",
+    "confidence": 0.9,
+    "interaction_target": "Loan results list",
+    "frame_description": "The screen goes white briefly as the new content loads."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 41150,
+    "time_end_ms": 41850,
+    "description": "The user hovers over the interest rate section of a specific loan detail page.",
+    "confidence": 0.8,
+    "interaction_target": "Interest rate section",
+    "frame_description": "The cursor is hovering over the interest rate details on a loan information page."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 47850,
+    "time_end_ms": 41850,
+    "description": "The user hovers over the 'Calculators' menu in the navigation bar.",
+    "confidence": 0.9,
+    "interaction_target": "Calculators menu",
+    "cursor_position_x": 450,
+    "cursor_position_y": 50,
+    "frame_description": "The cursor is hovering over the 'Calculators' link in the header."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 48150,
+    "time_end_ms": 48250,
+    "description": "The 'Calculators' dropdown menu opens.",
+    "confidence": 1.0,
+    "interaction_target": "Calculators menu",
+    "frame_description": "The 'Calculators' dropdown menu is visible, showing various calculator options."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 48150,
+    "time_end_ms": 48500,
+    "description": "The user hovers over different items within the 'Calculators' dropdown menu.",
+    "confidence": 0.8,
+    "interaction_target": "Calculators menu items",
+    "frame_description": "The cursor moves across the items in the open dropdown menu."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 48500,
+    "time_end_ms": 48600,
+    "description": "The 'Calculators' dropdown menu closes.",
+    "confidence": 1.0,
+    "interaction_target": "Calculators menu",
+    "frame_description": "The dropdown menu disappears as the user moves the cursor away."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 49550,
+    "time_end_ms": 49800,
+    "description": "The user scrolls down to the 'Home loans from other lenders' section.",
+    "confidence": 0.9,
+    "frame_description": "The user scrolls down to view alternative loan options."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 49800,
+    "time_end_ms": 50700,
+    "description": "The user hovers over the 'Home loans from other lenders' heading.",
+    "confidence": 0.7,
+    "interaction_target": "Other lenders section",
+    "frame_description": "The cursor is positioned over the heading for alternative loan options."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 50700,
+    "time_end_ms": 51650,
+    "description": "The user scrolls down to view the loan cards from other lenders.",
+    "confidence": 0.9,
+    "frame_description": "The user scrolls down to see the cards for other lenders."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 51650,
+    "time_end_ms": 52750,
+    "description": "The user hovers over loan cards from other lenders.",
+    "confidence": 0.7,
+    "interaction_target": "Loan cards",
+    "frame_description": "The cursor moves across the loan cards in the 'other lenders' section."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 52750,
+    "time_end_ms": 53700,
+    "description": "The user scrolls further down the page.",
+    "confidence": 0.9,
+    "frame_description": "The user scrolls down to the bottom of the page."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 53700,
+    "time_end_ms": 54850,
+    "description": "The user hovers over more loan options at the bottom of the page.",
+    "confidence": 0.7,
+    "interaction_target": "Loan cards",
+    "frame_description": "The cursor hovers over the final loan options on the page."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 54850,
+    "time_end_ms": 58450,
+    "description": "The user scrolls back up the page to review previous options.",
+    "confidence": 0.9,
+    "frame_description": "The user scrolls up through the list of loan results."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 58450,
+    "time_end_ms": 64050,
+    "description": "The user hovers over loan cards while scrolling back up.",
+    "confidence": 0.7,
+    "interaction_target": "Loan cards",
+    "frame_description": "The cursor moves over loan cards as the user scrolls up."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 64050,
+    "time_end_ms": 64600,
+    "description": "The user continues scrolling up towards the top of the page.",
+    "confidence": 0.9,
+    "frame_description": "The user scrolls further up the page."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 66850,
+    "time_end_ms": 68150,
+    "description": "The user hovers over the information icon next to the 'Comparison rate'.",
+    "confidence": 0.9,
+    "interaction_target": "Comparison rate info icon",
+    "frame_description": "The cursor is positioned over the 'i' icon next to the comparison rate."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 68150,
+    "time_end_ms": 68650,
+    "description": "The page content briefly flashes or updates.",
+    "confidence": 0.8,
+    "interaction_target": "Page body",
+    "frame_description": "The screen flashes pink/white as content updates or a transition occurs."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 71750,
+    "time_end_ms": 74250,
+    "description": "The user scrolls down the page again.",
+    "confidence": 0.9,
+    "frame_description": "The user scrolls down the page once more."
+  }
+]

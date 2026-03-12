@@ -1,0 +1,253 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 6700,
+    "time_end_ms": 7500,
+    "description": "The search bar at the top of the page expands to reveal location, date, and guest inputs.",
+    "confidence": 0.95,
+    "interaction_target": "Search bar",
+    "page_title": "London - 300+ Caravans, Motorhomes & Campers to hire",
+    "page_location": "https://www.camplify.co.uk/search?location=London",
+    "frame_description": "The user is viewing campervan listings in London on Camplify. The search bar at the top expands."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 8100,
+    "time_end_ms": 9100,
+    "description": "The cursor hovers over the location input field which currently contains 'London'.",
+    "confidence": 0.85,
+    "interaction_target": "Location search input",
+    "cursor_position_x": 210,
+    "cursor_position_y": 105,
+    "page_title": "London - 300+ Caravans, Motorhomes & Campers to hire",
+    "frame_description": "The cursor is positioned over the 'London' text in the search bar."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 9100,
+    "time_end_ms": 9200,
+    "description": "The user clicks into the location search input field.",
+    "confidence": 0.98,
+    "interaction_target": "Location search input",
+    "cursor_position_x": 210,
+    "cursor_position_y": 105,
+    "page_title": "London - 300+ Caravans, Motorhomes & Campers to hire",
+    "frame_description": "The user activates the location input field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 9200,
+    "time_end_ms": 9500,
+    "description": "A dropdown menu with recent searches or location suggestions appears below the location input.",
+    "confidence": 0.9,
+    "interaction_target": "Location suggestions dropdown",
+    "page_title": "London - 300+ Caravans, Motorhomes & Campers to hire",
+    "frame_description": "A dropdown menu appears under the search bar after the click."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 29300,
+    "time_end_ms": 30000,
+    "description": "The user switches browser tabs to the Sokrates video conferencing room.",
+    "confidence": 0.95,
+    "interaction_target": "Sokrates tab",
+    "page_title": "Sokrates Room",
+    "frame_description": "The screen changes from the Camplify website to a video call interface."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 41600,
+    "time_end_ms": 42000,
+    "description": "The user switches to a new browser tab with a Google search interface.",
+    "confidence": 0.95,
+    "interaction_target": "New Tab",
+    "page_title": "New Tab",
+    "frame_description": "The screen transitions to a Google search page."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 42300,
+    "time_end_ms": 44500,
+    "description": "The user types 'smart traveller' into the Google search box.",
+    "confidence": 0.98,
+    "interaction_target": "Google search box",
+    "cursor_position_x": 480,
+    "cursor_position_y": 450,
+    "page_title": "Google",
+    "frame_description": "Text 'smart traveller' is being entered into the central search bar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 44500,
+    "time_end_ms": 44600,
+    "description": "Autocomplete suggestions appear below the Google search box.",
+    "confidence": 0.9,
+    "interaction_target": "Search suggestions",
+    "frame_description": "A list of search suggestions appears as the user types."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 44600,
+    "time_end_ms": 44700,
+    "description": "The user selects the 'smart traveller' suggestion from the autocomplete list.",
+    "confidence": 0.9,
+    "interaction_target": "Autocomplete suggestion",
+    "cursor_position_x": 480,
+    "cursor_position_y": 480,
+    "frame_description": "The user clicks on one of the suggested search terms."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 44700,
+    "time_end_ms": 45700,
+    "description": "The browser navigates to the Google search results page for 'smart traveller'.",
+    "confidence": 0.98,
+    "page_title": "smart traveller - Google Search",
+    "page_location": "https://www.google.com/search?q=smart+traveller",
+    "frame_description": "Google search results for 'smart traveller' are displayed."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 45700,
+    "time_end_ms": 45800,
+    "description": "The user clicks on the first search result: 'Smartraveller | Travel Advice for Overseas'.",
+    "confidence": 0.98,
+    "interaction_target": "Smartraveller search result link",
+    "cursor_position_x": 250,
+    "cursor_position_y": 420,
+    "frame_description": "The cursor clicks the primary link for the Smartraveller website."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 45800,
+    "time_end_ms": 48600,
+    "description": "The browser navigates to the Smartraveller homepage.",
+    "confidence": 0.98,
+    "page_title": "Smartraveller",
+    "page_location": "https://www.smartraveller.gov.au/",
+    "frame_description": "The Smartraveller homepage finishes loading."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 54200,
+    "time_end_ms": 56600,
+    "description": "The user scrolls down the Smartraveller homepage to view more content.",
+    "confidence": 0.95,
+    "frame_description": "The page content moves vertically as the user scrolls."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 58100,
+    "time_end_ms": 58200,
+    "description": "The user clicks into the search input field labeled 'Stay safe with the latest travel advice'.",
+    "confidence": 0.98,
+    "interaction_target": "Search topic or destination input",
+    "cursor_position_x": 250,
+    "cursor_position_y": 850,
+    "frame_description": "The user focuses the search box on the Smartraveller page."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 58100,
+    "time_end_ms": 58800,
+    "description": "The user types 'uk' into the search box.",
+    "confidence": 0.98,
+    "interaction_target": "Search topic or destination input",
+    "frame_description": "The characters 'uk' appear in the search field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 58800,
+    "time_end_ms": 59000,
+    "description": "A list of destination suggestions appears below the search box.",
+    "confidence": 0.9,
+    "interaction_target": "Search suggestions dropdown",
+    "frame_description": "A dropdown menu with country names appears."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 60200,
+    "time_end_ms": 60600,
+    "description": "The user clears the previous input and types 'lon'.",
+    "confidence": 0.95,
+    "interaction_target": "Search topic or destination input",
+    "frame_description": "The user changes the search query to 'lon'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 60600,
+    "time_end_ms": 60800,
+    "description": "The destination suggestions update to match 'lon'.",
+    "confidence": 0.9,
+    "interaction_target": "Search suggestions dropdown",
+    "frame_description": "The dropdown list updates with new suggestions."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 64200,
+    "time_end_ms": 64900,
+    "description": "The user clears the input again and types 'eng'.",
+    "confidence": 0.95,
+    "interaction_target": "Search topic or destination input",
+    "frame_description": "The user types 'eng' into the search field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 64900,
+    "time_end_ms": 65100,
+    "description": "The destination suggestions update to show 'England'.",
+    "confidence": 0.9,
+    "interaction_target": "Search suggestions dropdown",
+    "frame_description": "The dropdown shows 'England' as a suggestion."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 66300,
+    "time_end_ms": 66400,
+    "description": "The user selects 'England' from the suggestion list.",
+    "confidence": 0.95,
+    "interaction_target": "England suggestion",
+    "cursor_position_x": 250,
+    "cursor_position_y": 880,
+    "frame_description": "The user clicks on the 'England' option in the dropdown."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 66400,
+    "time_end_ms": 66900,
+    "description": "The browser navigates to the search results page for 'England'.",
+    "confidence": 0.98,
+    "page_title": "England",
+    "page_location": "https://www.smartraveller.gov.au/search?search=England",
+    "frame_description": "Search results for England are displayed, showing 'United Kingdom'."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 70300,
+    "time_end_ms": 70400,
+    "description": "The user clicks on the 'United Kingdom' result link.",
+    "confidence": 0.98,
+    "interaction_target": "United Kingdom result link",
+    "cursor_position_x": 300,
+    "cursor_position_y": 750,
+    "frame_description": "The user clicks the main heading for the United Kingdom advice page."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 70400,
+    "time_end_ms": 71600,
+    "description": "The browser navigates to the detailed travel advice page for the United Kingdom.",
+    "confidence": 0.98,
+    "page_title": "United Kingdom | Smartraveller",
+    "page_location": "https://www.smartraveller.gov.au/destinations/europe/united-kingdom",
+    "frame_description": "The United Kingdom travel advice page loads."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 71600,
+    "time_end_ms": 84011,
+    "description": "The user scrolls down through the United Kingdom travel advice page, passing sections like Safety and Health.",
+    "confidence": 0.95,
+    "frame_description": "The user is reading through the UK travel advice content."
+  }
+]

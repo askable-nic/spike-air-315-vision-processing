@@ -1,0 +1,106 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 350,
+    "time_end_ms": 1850,
+    "description": "The initial instruction screen appears, asking the user to share their screen.",
+    "confidence": 0.95,
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/ai-mod/698d05e92b10ad7f8662b9d9e",
+    "frame_description": "Dark screen with white text instructions for screen sharing."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 1850,
+    "time_end_ms": 7450,
+    "description": "The text on the instruction screen updates to 'Perfect!'.",
+    "confidence": 0.95,
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/ai-mod/698d05e92b10ad7f8662b9d9e",
+    "frame_description": "Dark screen with 'Perfect!' text."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 7450,
+    "time_end_ms": 29800,
+    "description": "The task description and scenario are displayed on the screen.",
+    "confidence": 0.95,
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/ai-mod/698d05e92b10ad7f8662b9d9e",
+    "frame_description": "Dark screen with detailed task instructions."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 29800,
+    "time_end_ms": 45000,
+    "description": "Final instructions are shown, informing the user that the prototype will open shortly.",
+    "confidence": 0.95,
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/ai-mod/698d05e92b10ad7f8662b9d9e",
+    "frame_description": "Dark screen with final instructions and a note about the website opening."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 45000,
+    "time_end_ms": 46550,
+    "description": "The browser navigates to a blank page as the session transitions.",
+    "confidence": 0.9,
+    "page_location": "about:blank",
+    "frame_description": "Browser window showing a blank page."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 46550,
+    "time_end_ms": 48250,
+    "description": "The browser navigates to the Figma prototype URL.",
+    "confidence": 0.95,
+    "page_location": "art-resin-05325911.figma.site",
+    "frame_description": "Browser window showing the Figma loading screen."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 48250,
+    "time_end_ms": 48950,
+    "description": "The Figma prototype content finishes loading and becomes visible on the screen.",
+    "confidence": 0.95,
+    "page_title": "Smart Filters Mobile App",
+    "page_location": "art-resin-05325911.figma.site",
+    "frame_description": "Figma prototype 'Smart Filters Mobile App' is loaded, showing a list of opportunities."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 48950,
+    "time_end_ms": 56850,
+    "description": "Scrolling down through the list of available opportunities to explore the content.",
+    "confidence": 0.95,
+    "interaction_target": "Opportunity list",
+    "cursor_position_x": 650,
+    "cursor_position_y": 650,
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "Opportunity list scrolling downwards."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 56850,
+    "time_end_ms": 60250,
+    "description": "Scrolling back up to the top of the opportunity list.",
+    "confidence": 0.95,
+    "interaction_target": "Opportunity list",
+    "cursor_position_x": 650,
+    "cursor_position_y": 650,
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "Opportunity list scrolling upwards."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 60250,
+    "time_end_ms": 71195,
+    "description": "Scrolling down the opportunity list again, more slowly.",
+    "confidence": 0.95,
+    "interaction_target": "Opportunity list",
+    "cursor_position_x": 650,
+    "cursor_position_y": 650,
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "Opportunity list scrolling downwards again."
+  }
+]

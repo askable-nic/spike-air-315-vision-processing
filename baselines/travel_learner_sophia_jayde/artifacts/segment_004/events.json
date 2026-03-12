@@ -1,0 +1,243 @@
+[
+  {
+    "type": "navigate",
+    "time_start_ms": 0,
+    "time_end_ms": 33450,
+    "description": "User is viewing flight options from Melbourne to Palermo on Google Flights.",
+    "confidence": 0.9,
+    "page_title": "Melbourne to Palermo | Google Flights",
+    "page_location": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI1LTEwLTE5agwIAhIIL20vMGNoZ3pyBwgBEgNQTU9AAUgBcAGCAQsI____________AZgBAg",
+    "frame_description": "The screen shows Google Flights search results for a one-way trip from Melbourne to Palermo on October 19th."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 33450,
+    "time_end_ms": 33950,
+    "description": "User hovers the cursor over the 'New Tab' button in the browser.",
+    "confidence": 0.8,
+    "interaction_target": "New Tab button (+)",
+    "cursor_position_x": 682,
+    "cursor_position_y": 15,
+    "frame_description": "The cursor moves from the flight results area up to the browser tab bar."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 33950,
+    "time_end_ms": 34050,
+    "description": "User clicks the plus icon to open a new browser tab.",
+    "confidence": 1.0,
+    "interaction_target": "New Tab button (+)",
+    "cursor_position_x": 682,
+    "cursor_position_y": 15,
+    "frame_description": "The user activates the new tab button."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 34050,
+    "time_end_ms": 34950,
+    "description": "A new Google Chrome tab page loads.",
+    "confidence": 1.0,
+    "page_title": "New Tab",
+    "frame_description": "The browser displays the default new tab page with a search bar and site shortcuts."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 38150,
+    "time_end_ms": 40550,
+    "description": "User types 'rome to rio' into the browser's address bar.",
+    "confidence": 1.0,
+    "interaction_target": "Address bar",
+    "frame_description": "Text appears in the address bar as the user types."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 38250,
+    "time_end_ms": 40550,
+    "description": "Search suggestions dropdown appears as the user types.",
+    "confidence": 0.9,
+    "frame_description": "A list of autocomplete suggestions appears below the address bar."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 40550,
+    "time_end_ms": 40650,
+    "description": "User selects the 'rome to rio app' option from the search suggestions.",
+    "confidence": 0.9,
+    "interaction_target": "rome to rio app suggestion",
+    "frame_description": "The user clicks on one of the suggested search terms in the dropdown."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 40650,
+    "time_end_ms": 40950,
+    "description": "Page navigates to Google search results for 'rome to rio'.",
+    "confidence": 1.0,
+    "page_title": "rometorio - Google Search",
+    "frame_description": "The Google search results page loads, showing links for Rome2Rio."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 41750,
+    "time_end_ms": 43350,
+    "description": "User hovers the cursor over the main Rome2Rio search result.",
+    "confidence": 0.8,
+    "interaction_target": "Rome2Rio website link",
+    "cursor_position_x": 145,
+    "cursor_position_y": 425,
+    "frame_description": "The cursor lingers over the first organic search result link."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 43350,
+    "time_end_ms": 43450,
+    "description": "User clicks on the Rome2Rio website link.",
+    "confidence": 1.0,
+    "interaction_target": "Rome2Rio website link",
+    "cursor_position_x": 145,
+    "cursor_position_y": 425,
+    "frame_description": "The user clicks the link to navigate to the Rome2Rio site."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 43450,
+    "time_end_ms": 43750,
+    "description": "The Rome2Rio homepage loads.",
+    "confidence": 1.0,
+    "page_title": "Rome2Rio: Discover how to get anywhere",
+    "page_location": "https://www.rome2rio.com/",
+    "frame_description": "The Rome2Rio homepage is displayed with its search interface."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 45100,
+    "time_end_ms": 45700,
+    "description": "User hovers over the 'From' input field.",
+    "confidence": 0.8,
+    "interaction_target": "From input field",
+    "cursor_position_x": 650,
+    "cursor_position_y": 350,
+    "frame_description": "The cursor moves to the origin location input box."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 50750,
+    "time_end_ms": 50850,
+    "description": "User clicks into the 'From' location field to change it.",
+    "confidence": 0.9,
+    "interaction_target": "From input field",
+    "cursor_position_x": 650,
+    "cursor_position_y": 350,
+    "frame_description": "The user clicks the origin field, clearing the previous value."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 50850,
+    "time_end_ms": 51400,
+    "description": "User types 'Ro' into the origin field.",
+    "confidence": 1.0,
+    "interaction_target": "From input field",
+    "frame_description": "The letters 'Ro' appear in the origin input box."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 51400,
+    "time_end_ms": 51500,
+    "description": "A location suggestion dropdown appears.",
+    "confidence": 0.9,
+    "frame_description": "A list of cities starting with 'Ro' appears below the input field."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 51500,
+    "time_end_ms": 51650,
+    "description": "User selects 'Rome, Italy' from the suggestions.",
+    "confidence": 0.9,
+    "interaction_target": "Rome, Italy suggestion",
+    "frame_description": "The user clicks on the 'Rome, Italy' option in the dropdown."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 53000,
+    "time_end_ms": 53100,
+    "description": "User clicks into the destination field.",
+    "confidence": 0.9,
+    "interaction_target": "To input field",
+    "cursor_position_x": 650,
+    "cursor_position_y": 460,
+    "frame_description": "The user clicks the destination field, highlighting the existing text."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 53700,
+    "time_end_ms": 55300,
+    "description": "User types 'palem' into the destination field.",
+    "confidence": 1.0,
+    "interaction_target": "To input field",
+    "frame_description": "The user types the start of 'Palermo' into the destination box."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 54300,
+    "time_end_ms": 56450,
+    "description": "Location suggestions for the destination appear.",
+    "confidence": 0.9,
+    "frame_description": "A dropdown list of destination suggestions appears."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 56450,
+    "time_end_ms": 56600,
+    "description": "User selects 'Palermo, Italy' from the dropdown.",
+    "confidence": 0.9,
+    "interaction_target": "Palermo, Italy suggestion",
+    "frame_description": "The user clicks on the 'Palermo, Italy' option."
+  },
+  {
+    "type": "hover",
+    "time_start_ms": 56650,
+    "time_end_ms": 57400,
+    "description": "User hovers over the 'See all options' search button.",
+    "confidence": 0.8,
+    "interaction_target": "See all options button",
+    "cursor_position_x": 650,
+    "cursor_position_y": 515,
+    "frame_description": "The cursor moves to the pink search button."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 57400,
+    "time_end_ms": 57500,
+    "description": "User clicks the search button to find travel options.",
+    "confidence": 1.0,
+    "interaction_target": "See all options button",
+    "cursor_position_x": 650,
+    "cursor_position_y": 515,
+    "frame_description": "The user activates the search button."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 57500,
+    "time_end_ms": 58450,
+    "description": "The travel options results page for Rome to Palermo loads.",
+    "confidence": 1.0,
+    "page_title": "Rome to Palermo: 8 ways to travel from Rome to Palermo",
+    "page_location": "https://www.rome2rio.com/map/Rome/Palermo",
+    "frame_description": "The results page loads with a list of travel methods on the left."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 58450,
+    "time_end_ms": 60800,
+    "description": "The map and travel route details finish loading on the results page.",
+    "confidence": 0.8,
+    "frame_description": "The map on the right side of the screen updates to show the route between Rome and Palermo."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 65450,
+    "time_end_ms": 65950,
+    "description": "Hotel recommendations and a Booking.com advertisement appear on the right side of the page.",
+    "confidence": 0.8,
+    "frame_description": "New UI elements for hotels and ads render on the right panel."
+  }
+]
