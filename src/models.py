@@ -25,6 +25,7 @@ class SessionData(BaseModel, frozen=True):
     fullSession: str
     screenTrack: str
     transcript: str
+    normalizedScreenTrack: str | None = None
 
 
 class SessionManifest(BaseModel, frozen=True):
@@ -102,6 +103,16 @@ class ObserveConfig(BaseModel, frozen=True):
     tokens_roi_pair: int = 750
     tokens_roi_single: int = 300
     roi_min_size: int = 256
+    # Moment candidate filtering
+    moment_categories: tuple[str, ...] = (
+        "scene_change", "pre_scene_change", "interaction", "scroll",
+        "continuous", "cursor_stop", "cursor_only", "baseline",
+    )
+    min_visual_change_duration_ms: float = 0
+    max_moments_per_minute: float = 0
+    # Adaptive frame sampling
+    moment_sample_interval_ms: int = 0
+    moment_max_frames: int = 0
     # Cursor tracking — adaptive two-pass
     tracking_fps: float = 5.0  # legacy single-pass FPS
     tracking_base_fps: float = 2.0
@@ -277,7 +288,7 @@ class FlowEvent(BaseModel, frozen=True):
 
 
 MomentCategory = Literal[
-    "scene_change", "interaction", "scroll",
+    "scene_change", "pre_scene_change", "interaction", "scroll",
     "continuous", "cursor_stop", "cursor_only", "baseline",
 ]
 
@@ -293,6 +304,7 @@ class Moment(BaseModel, frozen=True):
     category: MomentCategory = "baseline"
     priority: int = 5
     estimated_tokens: int = 1600
+    frame_count: int = 0
 
 
 class SceneDescription(BaseModel, frozen=True):
@@ -417,6 +429,8 @@ class SessionOutput(BaseModel, frozen=True):
     merge_metrics: StageMetrics = StageMetrics()
     events: tuple[ResolvedEvent, ...]
     event_count: int = 0
+    total_input_token_budget: int = 0
+    total_input_token_budget_utilisation: float = 0.0
     total_input_tokens: int = 0
     total_output_tokens: int = 0
 
@@ -429,6 +443,8 @@ class RunMetadata(BaseModel, frozen=True):
     config: dict
     sessions_processed: tuple[str, ...]
     total_events: int = 0
+    total_input_token_budget: int = 0
+    total_input_token_budget_utilisation: float = 0.0
     total_input_tokens: int = 0
     total_output_tokens: int = 0
     errors: tuple[str, ...] = ()

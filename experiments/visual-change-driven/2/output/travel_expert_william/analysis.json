@@ -1,0 +1,67 @@
+{
+  "recording_id": "travel_expert_william",
+  "segments": [
+    {
+      "segment_index": 0,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "change_ui_state",
+          "description": "The UI transitions from an instruction screen ('To start, please click the \"Share\" button...') to a confirmation message ('Thank you.').",
+          "confidence": 0.9,
+          "interaction_target": "Share button",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The text on the dark background changes from instructions to a thank you message."
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 3,
+          "type": "change_ui_state",
+          "description": "A pink glow appears at the bottom of the screen, indicating a transition or loading state.",
+          "confidence": 0.8,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen is mostly dark with a help icon in the bottom left; a pink gradient appears along the bottom edge."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 908.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 1774.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 1807.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 2574.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 5472,
+      "output_tokens": 231
+    }
+  ],
+  "total_input_tokens": 5472,
+  "total_output_tokens": 231,
+  "processing_time_ms": 14405.947374994867
+}

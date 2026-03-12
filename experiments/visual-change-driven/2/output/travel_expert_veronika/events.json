@@ -1,0 +1,296 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start": 34255.0,
+    "time_end": 35055.0,
+    "description": "Instructional text appears on screen: 'Great. To start, please click the \"Share\" button'",
+    "confidence": 0.9
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 39858.0,
+    "time_end": 43558.0,
+    "description": "Task scenario text appears: 'Imagine you're living on the Sunshine Coast in Queensland and you're planning a holiday to London.'",
+    "confidence": 0.9
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 48658.0,
+    "time_end": 53091.0,
+    "description": "Detailed task instructions are revealed, explaining the planning process and evaluation criteria.",
+    "confidence": 0.9
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 66854.0,
+    "time_end": 76946.0,
+    "description": "Final instructions are displayed and an 'Open' button appears at the top of the screen to begin the task.",
+    "confidence": 0.9,
+    "interaction_target": "Open button"
+  },
+  {
+    "type": "hover",
+    "time_start": 90863.0,
+    "time_end": 92430.0,
+    "description": "User hovers over the 'Repeat the task instructions' button",
+    "confidence": 0.9,
+    "interaction_target": "Repeat the task instructions button",
+    "cursor_position": {
+      "x": 592.5,
+      "y": 774.5999999999999
+    },
+    "page_title": "Task Instructions",
+    "frame_description": "The cursor is positioned over the 'Repeat the task instructions' button on the dark instruction screen."
+  },
+  {
+    "type": "navigate",
+    "time_start": 100263.0,
+    "time_end": 101742.0,
+    "description": "User navigates from the task instructions to the Google homepage",
+    "confidence": 0.9,
+    "page_title": "Google",
+    "frame_description": "The screen transitions from the dark instruction text to the Google search homepage."
+  },
+  {
+    "type": "input_text",
+    "time_start": 101742.0,
+    "time_end": 103019.0,
+    "description": "User types 'sky' into the Google search bar, triggering search suggestions",
+    "confidence": 0.95,
+    "interaction_target": "Google search bar",
+    "page_title": "Google",
+    "frame_description": "The text 'sky' appears in the search input field and a dropdown of suggestions including 'skyscanner' is displayed."
+  },
+  {
+    "type": "navigate",
+    "time_start": 103330.0,
+    "time_end": 105198.0,
+    "description": "User navigates to the Skyscanner search results page",
+    "confidence": 0.95,
+    "page_title": "Skyscanner | Find the cheapest flights",
+    "page_location": "https://www.skyscanner.com.au",
+    "frame_description": "The page loads the Skyscanner website after the user selects a search result or suggestion."
+  },
+  {
+    "type": "dwell",
+    "time_start": 110598.0,
+    "time_end": 117497.0,
+    "description": "User is reading the task instructions regarding a holiday to London.",
+    "confidence": 0.9,
+    "cursor_position": {
+      "x": 633.0,
+      "y": 726.5999999999999
+    },
+    "page_title": "Task Instructions",
+    "frame_description": "A dark screen displaying text instructions for the user to read before starting the task."
+  },
+  {
+    "type": "scroll",
+    "time_start": 117780.00000000001,
+    "time_end": 120981.0,
+    "description": "Scroll E (magnitude: 9.5, uniformity: 0.76)",
+    "confidence": 0.8,
+    "page_title": "Task Instructions"
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 126192.0,
+    "time_end": 127831.0,
+    "description": "The task instruction text updates from a long description to 'Yes, please think aloud as you'",
+    "confidence": 0.9,
+    "page_title": "Task Instructions",
+    "frame_description": "Instruction text changes on a dark background"
+  },
+  {
+    "type": "scroll",
+    "time_start": 129230.0,
+    "time_end": 130030.00000000001,
+    "description": "Scroll E (magnitude: 21.1, uniformity: 0.62)",
+    "confidence": 0.8,
+    "page_title": "Task Instructions"
+  },
+  {
+    "type": "hover",
+    "time_start": 134514.0,
+    "time_end": 138630.0,
+    "description": "User hovers the cursor over the 'Repeat the task instructions' button",
+    "confidence": 0.8,
+    "interaction_target": "Repeat the task instructions",
+    "page_title": "Task Instructions",
+    "frame_description": "Cursor is positioned over the repeat instructions button"
+  },
+  {
+    "type": "dwell",
+    "time_start": 143813.0,
+    "time_end": 145915.0,
+    "description": "User dwells on the 'Think Aloud Reminder' screen, likely reading the prompt or instructions.",
+    "confidence": 0.9,
+    "interaction_target": "Think Aloud Reminder screen",
+    "cursor_position": {
+      "x": 633.0,
+      "y": 741.5999999999999
+    },
+    "page_title": "Think Aloud Reminder",
+    "frame_description": "A dark screen with a 'Repeat the task instructions' button visible at the top."
+  },
+  {
+    "type": "input_text",
+    "time_start": 173832.00000000003,
+    "time_end": 176999.00000000003,
+    "description": "User types 'sunsh' into the 'From' origin field, replacing the previous value 'Sydney (SYD)'",
+    "confidence": 0.95,
+    "interaction_target": "From field",
+    "page_title": "Skyscanner - Millions of cheap flights. One simple search.",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "The user is entering a new origin city in the flight search form."
+  },
+  {
+    "type": "select",
+    "time_start": 177332.00000000003,
+    "time_end": 178325.0,
+    "description": "User selects 'Sunshine Coast (MCY)' from the search suggestions, which populates the field and automatically moves focus to the 'To' destination field",
+    "confidence": 0.9,
+    "interaction_target": "Sunshine Coast (MCY) suggestion",
+    "page_title": "Skyscanner - Millions of cheap flights. One simple search.",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "The origin is confirmed as Sunshine Coast and the destination field is now active."
+  },
+  {
+    "type": "input_text",
+    "time_start": 185140.0,
+    "time_end": 186549.0,
+    "description": "User continues typing in the destination search field, changing the input from 'lon' to 'lond'.",
+    "confidence": 0.9,
+    "interaction_target": "To",
+    "page_title": "Skyscanner - Millions of cheap flights. One simple search.",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "The user is interacting with the destination input field on the Skyscanner homepage."
+  },
+  {
+    "type": "navigate",
+    "time_start": 186549.0,
+    "time_end": 191180.0,
+    "description": "The page navigates from the search input screen to a loading state for the flight search results.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner - Millions of cheap flights. One simple search.",
+    "frame_description": "The screen transitions to a skeleton loading state as the search results are fetched."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 191180.0,
+    "time_end": 194763.0,
+    "description": "The flight search results page loads incrementally, transitioning from a skeleton screen to displaying flight options and filters.",
+    "confidence": 0.95,
+    "page_title": "Skyscanner - Millions of cheap flights. One simple search.",
+    "frame_description": "The UI updates as flight data and filter options (like 'Stops' and 'Departure times') become visible on the results page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 212597.0,
+    "time_end": 213637.0,
+    "description": "Flight search results finished loading, transitioning from 'Checked 25 of 26 providers' to '997 results sorted by Best'.",
+    "confidence": 0.95,
+    "interaction_target": "Search results status",
+    "page_title": "Skyscanner - Sunshine Coast (MCY) to London (Any)",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "The loading spinner and provider count are replaced by the final number of flight results."
+  },
+  {
+    "type": "dwell",
+    "time_start": 231695.0,
+    "time_end": 232481.00000000003,
+    "description": "User is reviewing the flight search results, specifically examining the details for the Emirates + Qantas and Qatar Airways flight options.",
+    "confidence": 0.8,
+    "interaction_target": "Flight search results",
+    "page_title": "Skyscanner - Sunshine Coast (MCY) to London (Any)",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "The screen shows detailed flight information including airline names (Emirates, Qantas, Qatar Airways), departure/arrival times, and stopover details."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 237510.0,
+    "time_end": 238781.0,
+    "description": "The flight search results page updates to a 'no flights found' state, displaying London hotel deals instead, likely following a user interaction or filter application.",
+    "confidence": 0.85,
+    "interaction_target": "Flight search results",
+    "page_title": "Skyscanner - Sunshine Coast (MCY) to London (Any)",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "The screen transitions from showing specific flight options (Virgin Australia, Qantas) to a message stating no flights match the filters, followed by a list of London hotel deals."
+  },
+  {
+    "type": "hover",
+    "time_start": 249959.0,
+    "time_end": 249959.0,
+    "description": "User hovered over the date navigation bar for Sunday, 26 July.",
+    "confidence": 0.8,
+    "interaction_target": "Date navigation bar",
+    "cursor_position": {
+      "x": 51.0,
+      "y": 30.0
+    },
+    "page_title": "Skyscanner - Sunshine Coast (MCY) to London (Any)",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "The top of the Skyscanner search results page showing the date selector."
+  },
+  {
+    "type": "hover",
+    "time_start": 253844.00000000003,
+    "time_end": 254681.0,
+    "description": "User hovered over the 'Book Direct with Virgin Australia' flight result card.",
+    "confidence": 0.9,
+    "interaction_target": "Book Direct with Virgin Australia card",
+    "cursor_position": {
+      "x": 1747.5,
+      "y": 189.0
+    },
+    "page_title": "Skyscanner - Sunshine Coast (MCY) to London (Any)",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "A flight result card for Virgin Australia with a 'Book Direct' call to action."
+  },
+  {
+    "type": "hover",
+    "time_start": 257245.0,
+    "time_end": 258131.0,
+    "description": "User hovered over the 'Best' flight sorting tab.",
+    "confidence": 0.9,
+    "interaction_target": "Best tab",
+    "cursor_position": {
+      "x": 1747.5,
+      "y": 189.0
+    },
+    "page_title": "Skyscanner - Sunshine Coast (MCY) to London (Any)",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "The flight sorting tabs (Best, Cheapest, Fastest) at the top of the results list."
+  },
+  {
+    "type": "input_text",
+    "time_start": 304759.0,
+    "time_end": 306648.0,
+    "description": "User types 'london' into the 'Where are you going?' search field.",
+    "confidence": 0.95,
+    "interaction_target": "Where are you going? search field",
+    "page_title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+    "page_location": "booking.com",
+    "frame_description": "The search input field updates from 'lo' to 'lon' and then to 'london' as the user types."
+  },
+  {
+    "type": "select",
+    "time_start": 306648.0,
+    "time_end": 307758.00000000006,
+    "description": "User selects 'London, Greater London, United Kingdom' from the autocomplete suggestions.",
+    "confidence": 0.9,
+    "interaction_target": "Search suggestion",
+    "page_title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+    "page_location": "booking.com",
+    "frame_description": "The input text in the search field changes from the typed 'london' to the full formatted location string."
+  },
+  {
+    "type": "dwell",
+    "time_start": 346759.0,
+    "time_end": 348425.0,
+    "description": "User dwells on the 'Next Steps Reminder' screen, likely reading the prompt 'What are you thinking about doing next?'",
+    "confidence": 0.8,
+    "page_title": "Next Steps Reminder",
+    "frame_description": "A dark screen with faint text asking the user about their next steps."
+  }
+]

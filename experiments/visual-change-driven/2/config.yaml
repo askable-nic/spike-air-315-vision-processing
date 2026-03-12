@@ -1,0 +1,12 @@
+observe:
+  # Lower scene change threshold: 30% → 15% of frame area
+  # Catches partial page transitions, modal overlays, large dropdown menus
+  scene_change_area_threshold: 0.15
+
+  # Lower minimum change area: 1000px → 500px
+  # Detects subtler UI changes (small buttons, icon state changes)
+  change_min_area_px: 500
+
+  # Lower cursor stop threshold: 300ms → 200ms
+  # Catches quicker hover/click interactions
+  cursor_stop_min_ms: 150

@@ -1,0 +1,50 @@
+{
+  "frames_analysed": 565,
+  "cursor_detection_rate": 0.0,
+  "cursor_detections": 0,
+  "template_match_counts": {},
+  "flow_windows": 421,
+  "processing_time_ms": 47034.9,
+  "visual_change_events": 2,
+  "flow_events": 0,
+  "moments_total": 3,
+  "moments_by_category": {
+    "interaction": 2,
+    "baseline": 1
+  },
+  "token_budget": 298448,
+  "token_budget_used": 2064,
+  "token_budget_usage_pct": 0.7,
+  "moments": [
+    {
+      "category": "interaction",
+      "time_start_ms": 1158.0,
+      "time_end_ms": 1524.0,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 2057.0,
+      "time_end_ms": 2324.0,
+      "priority": 1,
+      "estimated_tokens": 1032,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "baseline",
+      "time_start_ms": 180230.9055,
+      "time_end_ms": 180230.9055,
+      "priority": 5,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": false,
+      "has_flow_event": false
+    }
+  ]
+}

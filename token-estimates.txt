@@ -1,0 +1,149 @@
+╭─── Claude Code v2.1.72 ──────────────────────────────────────────────────────╮
+│                                                 │ Tips for getting started   │
+│                Welcome back Nic!                │ Run /init to create a CLA… │
+│                                                 │ ────────────────────────── │
+│                     ▐▛███▜▌                     │ Recent activity            │
+│                    ▝▜█████▛▘                    │ No recent activity         │
+│                      ▘▘ ▝▝                      │                            │
+│                                                 │                            │
+│             Opus 4.6 · Claude Team              │                            │
+│   ~/Developer/spike-air-315-vision-processing   │                            │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+❯ visual-change-driven/2 used even fewer tokens (and produced fewer events)     
+than visual-change-driven/1                                                     
+
+⏺ Let me look at both experiments to understand the comparison.
+
+⏺ Searched for 2 patterns, read 4 files (ctrl+o to expand)
+
+⏺ Let me check the observe.json and response.json files for both to see the LLM
+  pass results.
+
+⏺ Read 4 files (ctrl+o to expand)
+
+⏺ Let me count the pass2 batches and check for response files to compare the LLM
+   passes.
+
+⏺ Searched for 4 patterns (ctrl+o to expand)
+
+⏺ Let me compare the LLM pass2 output events.
+
+⏺ Bash(echo "=== Exp 1: pass2 events ===" && for f in
+      /Users/nic/Developer/spike-air-315-vision-processing/experiments/visual-ch
+      ange-driven/1/output/travel_expert_vero…)
+  ⎿  === Exp 1: pass2 events ===
+     pass2_batch_000: 4 events
+     pass2_batch_001: 5 events
+     … +24 lines (ctrl+o to expand)
+
+⏺ Bash(echo "Exp 1 total pass2 events: $(python3 -c
+      "print(4+5+3+4+5+1+1+2+3+2+1)")" && echo "Exp 2 total pass2 events:
+      $(python3 -c "print(4+4+1+3+1+2+3+1+1+1+3+2+1)"…)
+  ⎿  Exp 1 total pass2 events: 31
+     Exp 2 total pass2 events: 27
+
+⏺ Now let me check the actual token sizes of the responses.
+
+⏺ Bash(echo "=== Exp 1: response sizes ===" && for f in
+      /Users/nic/Developer/spike-air-315-vision-processing/experiments/visual-ch
+      ange-driven/1/output/travel_expert_ve…)
+  ⎿  === Exp 1: response sizes ===
+     pass2_batch_000:     1389 bytes
+     pass2_batch_001:     1362 bytes
+     … +26 lines (ctrl+o to expand)
+
+⏺ Here's the comparison:
+
+  ┌──────────────────────┬──────────┬──────────┬───────┐
+  │        Metric        │  Exp 1   │  Exp 2   │ Delta │
+  ├──────────────────────┼──────────┼──────────┼───────┤
+  │ CV pass              │          │          │       │
+  ├──────────────────────┼──────────┼──────────┼───────┤
+  │ Frames analysed      │ 1589     │ 1589     │ same  │
+  ├──────────────────────┼──────────┼──────────┼───────┤
+  │ Visual change events │ 125      │ 174      │ +39%  │
+  ├──────────────────────┼──────────┼──────────┼───────┤
+  │ Moments detected     │ 93       │ 94       │ +1    │
+  ├──────────────────────┼──────────┼──────────┼───────┤
+  │ Est. input tokens    │ 141,700  │ 188,950  │ +33%  │
+  ├──────────────────────┼──────────┼──────────┼───────┤
+  │ Pass 1 (scene desc)  │          │          │       │
+  ├──────────────────────┼──────────┼──────────┼───────┤
+  │ Frames sent          │ 37       │ 43       │ +16%  │
+  ├──────────────────────┼──────────┼──────────┼───────┤
+  │ Pass 2 (events)      │          │          │       │
+  ├──────────────────────┼──────────┼──────────┼───────┤
+  │ Batches              │ 11       │ 13       │ +18%  │
+  ├──────────────────────┼──────────┼──────────┼───────┤
+  │ Frames sent          │ 111      │ 99       │ -11%  │
+  ├──────────────────────┼──────────┼──────────┼───────┤
+  │ Events produced      │ 31       │ 27       │ -13%  │
+  ├──────────────────────┼──────────┼──────────┼───────┤
+  │ Response output size │ 10,948 B │ 10,887 B │ ~same │
+  └──────────────────────┴──────────┴──────────┴───────┘
+
+  So the paradox: experiment 2 with lower thresholds
+  (scene_change_area_threshold: 0.15, change_min_area_px: 500,
+  cursor_stop_min_ms: 150) detected more visual change events (174 vs 125) and
+  created more moments (94 vs 93), but sent fewer pass2 frames (99 vs 111) and
+  got fewer events (27 vs 31) from the LLM.
+
+  The likely explanation is that the moment merging/batching logic changed
+  behavior. Experiment 2's lower thresholds produced more fine-grained moments,
+  but many of them got merged together into longer interaction spans (e.g., the
+  big 20000ms-28533ms interaction in exp 2 worth 13,500 tokens). This
+  consolidation means fewer distinct before/after frame pairs needed per batch,
+  but each pair covers more ground. The LLM then produces fewer discrete events
+  because it's seeing merged spans rather than individual micro-interactions.
+
+  The estimated token budget went up (188,950 vs 141,700) even though fewer
+  images were sent — suggesting the token accounting got tighter in exp 2 (it
+  now tracks token_budget / token_budget_used / token_budget_usage_pct which exp
+   1 didn't have). The higher token estimate per moment is from the merged
+  longer spans.
+
+  Was there a specific aspect of this you wanted to investigate further, or is
+  this heading toward a config tuning decision?
+
+✻ Sautéed for 1m 30s
+
+❯ is it overestimating token usage?                                             
+
+⏺ Let me check how tokens are estimated and compare against what's actually
+  being sent.
+
+⏺ Explore(Find token estimation logic)
+  ⎿  Done (19 tool uses · 81.5k tokens · 57s)
+  (ctrl+o to expand)
+
+⏺ The key issue is moment merging. Let me verify what actually happens when
+  merged moments become frames.
+
+⏺ Searched for 2 patterns, read 1 file (ctrl+o to expand)
+
+⏺ Yes, it's overestimating. Here's why:
+
+  When moments merge (line 1612), their token costs are summed:
+  estimated_tokens=prev.estimated_tokens + m.estimated_tokens
+
+  But when a merged moment is actually sent to the LLM (lines 996-1003), it
+  still only produces 2 frames (one before, one after) regardless of how many
+  constituent moments were merged:
+  before_ts = max(0, moment.time_start_ms - 250)
+  after_ts = moment.time_end_ms + 250
+
+  So if 5 interaction moments merge into one, the estimate is 5 * 750 = 3,750 
+  tokens, but the actual cost is still ~750 tokens (2 ROI crops).
+
+  Looking at experiment 2's data, the big merged interaction at 20000ms-28533ms
+  estimates 13,500 tokens — that's 18 original moments merged together. But it
+  only sends 2 ROI crops (~750 actual tokens). That's an 18x overestimate for
+  that single moment.
+
+  The fix should update estimated_tokens after merging to reflect the actual
+  frame cost of the merged result, not the sum of constituents. For a merged
+  interaction with visual_change, it should be tokens_roi_pair (750), not the
+  additive sum. Want me to fix that?
+
+✻ Cooked for 1m 27s

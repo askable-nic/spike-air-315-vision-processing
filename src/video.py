@@ -10,6 +10,80 @@ import numpy as np
 from src.models import ChangeRegion, VideoMetadata, VisualChangeFrame
 
 
+def _probe_reference_dimensions(path: Path, duration_ms: float) -> tuple[int, int]:
+    """Probe frame dimensions near the end of the video.
+
+    Samples ~3s before the end to capture the likely settled aspect ratio,
+    since window resizing tends to happen near the start of recordings.
+    Falls back to stream-level dimensions if probing fails.
+    """
+    seek_sec = max(0, duration_ms / 1000.0 - 3.0)
+    try:
+        result = subprocess.run(
+            [
+                "ffprobe", "-v", "quiet",
+                "-select_streams", "v:0",
+                "-show_entries", "frame=width,height",
+                "-read_intervals", f"{seek_sec:.3f}%+#1",
+                "-print_format", "json",
+                str(path),
+            ],
+            capture_output=True, text=True, check=True,
+        )
+        frames = json.loads(result.stdout).get("frames", [])
+        if frames:
+            return int(frames[0]["width"]), int(frames[0]["height"])
+    except (subprocess.CalledProcessError, KeyError, IndexError, ValueError):
+        pass
+
+    meta = get_video_metadata(path)
+    return meta.width, meta.height
+
+
+def normalize_video(
+    input_path: Path,
+    output_path: Path,
+    target_pixels: int = 2_073_600,
+) -> Path:
+    """Re-encode video to consistent-resolution MP4 using ffmpeg.
+
+    Determines the output aspect ratio from a frame near the end of the video
+    (where the window layout has likely settled).  Output dimensions are derived
+    from ``target_pixels`` (default 2 073 600 = 1920x1080) so that portrait and
+    landscape recordings are downsampled equally.  Frames with a different
+    aspect ratio are scaled to fit and letterboxed with black bars.
+    """
+    import math
+
+    meta = get_video_metadata(input_path)
+    ref_w, ref_h = _probe_reference_dimensions(input_path, meta.duration_ms)
+
+    aspect = ref_w / ref_h
+    # target_pixels = out_w * out_h = (out_h * aspect) * out_h
+    out_h = int(math.sqrt(target_pixels / aspect))
+    out_w = int(out_h * aspect)
+    # libx264 requires even dimensions
+    out_w += out_w % 2
+    out_h += out_h % 2
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    subprocess.run(
+        [
+            "ffmpeg", "-y", "-i", str(input_path),
+            "-vf", (
+                f"scale={out_w}:{out_h}:force_original_aspect_ratio=decrease,"
+                f"pad={out_w}:{out_h}:(ow-iw)/2:(oh-ih)/2:color=black"
+            ),
+            "-c:v", "libx264", "-preset", "fast", "-crf", "23",
+            "-an",
+            str(output_path),
+        ],
+        capture_output=True,
+        check=True,
+    )
+    return output_path
+
+
 def get_video_metadata(path: Path) -> VideoMetadata:
     """Get video metadata via ffprobe."""
     result = subprocess.run(

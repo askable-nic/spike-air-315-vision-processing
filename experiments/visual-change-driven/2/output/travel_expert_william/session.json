@@ -1,0 +1,72 @@
+{
+  "recording_id": "travel_expert_william",
+  "session": {
+    "identifier": "travel_expert_william",
+    "team": "(prod) Askable x Thinking Machines",
+    "study": "Travel Expert Live Website Test",
+    "studyId": "699fd69145953d08ad8c04ad",
+    "roomId": "69a0c114bbfa2af8fb7c5e3a",
+    "participant": "William",
+    "userId": [
+      "683d71c89a28814bcd703c44"
+    ],
+    "screenTrackStartOffset": 29884,
+    "data": {
+      "fullSession": "full_sessions/travel_expert_william.mp4",
+      "screenTrack": "screen_tracks/travel_expert_william.webm",
+      "transcript": "transcripts/travel_expert_william.json"
+    }
+  },
+  "triage_metrics": {
+    "duration_ms": 0,
+    "artifacts_created": 0
+  },
+  "observe_metrics": {
+    "duration_ms": 47034.85566699237,
+    "artifacts_created": 3
+  },
+  "analyse_metrics": {
+    "duration_ms": 14405.947374994867,
+    "artifacts_created": 2
+  },
+  "merge_metrics": {
+    "duration_ms": 0.9431669896002859,
+    "artifacts_created": 2
+  },
+  "events": [
+    {
+      "type": "change_ui_state",
+      "time_start": 30792.0,
+      "time_end": 31658.0,
+      "description": "The UI transitions from an instruction screen ('To start, please click the \"Share\" button...') to a confirmation message ('Thank you.').",
+      "confidence": 0.9,
+      "interaction_target": "Share button",
+      "cursor_position": null,
+      "page_title": null,
+      "page_location": null,
+      "viewport_width": null,
+      "viewport_height": null,
+      "frame_description": "The text on the dark background changes from instructions to a thank you message.",
+      "task_id": null
+    },
+    {
+      "type": "change_ui_state",
+      "time_start": 31691.0,
+      "time_end": 32458.0,
+      "description": "A pink glow appears at the bottom of the screen, indicating a transition or loading state.",
+      "confidence": 0.8,
+      "interaction_target": null,
+      "cursor_position": null,
+      "page_title": null,
+      "page_location": null,
+      "viewport_width": null,
+      "viewport_height": null,
+      "frame_description": "The screen is mostly dark with a help icon in the bottom left; a pink gradient appears along the bottom edge.",
+      "task_id": null
+    }
+  ],
+  "event_count": 2,
+  "total_input_token_budget": 298448,
+  "total_input_tokens": 5472,
+  "total_output_tokens": 231
+}

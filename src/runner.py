@@ -10,7 +10,7 @@ from typing import Any, Callable
 
 from src.config import resolve_config
 from src.log import log
-from src.manifest import load_manifest, resolve_video_path
+from src.manifest import load_manifest, resolve_video_path, save_manifest
 from src.models import (
     AnalyseResult,
     ObserveResult,
@@ -20,7 +20,7 @@ from src.models import (
     SessionOutput,
     TriageResult,
 )
-from src.video import get_video_metadata
+from src.video import get_video_metadata, normalize_video
 
 
 def run_iteration(
@@ -38,7 +38,11 @@ def run_iteration(
     log(f"Config resolved for {branch}/{iteration}")
 
     input_dir = base_dir / "input_data"
-    manifest = load_manifest(input_dir / "manifest.json")
+    manifest_path = input_dir / "manifest.json"
+    manifest = load_manifest(manifest_path)
+
+    # Normalize screen tracks before any CV processing
+    manifest = _normalize_screen_tracks(manifest, input_dir, manifest_path)
 
     if sessions:
         manifest = tuple(s for s in manifest if s.identifier in sessions)
@@ -77,6 +81,10 @@ def run_iteration(
         config=config.model_dump(),
         sessions_processed=tuple(o.recording_id for o in all_outputs),
         total_events=sum(o.event_count for o in all_outputs),
+        total_input_token_budget=(budget := sum(o.total_input_token_budget for o in all_outputs)),
+        total_input_token_budget_utilisation=round(
+            sum(o.total_input_tokens for o in all_outputs) / budget * 100, 1
+        ) if budget > 0 else 0.0,
         total_input_tokens=sum(o.total_input_tokens for o in all_outputs),
         total_output_tokens=sum(o.total_output_tokens for o in all_outputs),
         errors=tuple(errors),
@@ -89,6 +97,56 @@ def run_iteration(
     log(f"Run complete: {len(all_outputs)} sessions, {metadata.total_events} total events")
     if errors:
         log(f"Errors: {len(errors)}")
+
+
+def _normalize_screen_tracks(
+    manifest: tuple[SessionManifest, ...],
+    input_dir: Path,
+    manifest_path: Path,
+) -> tuple[SessionManifest, ...]:
+    """Normalize screen track videos to consistent-resolution MP4s.
+
+    Skips sessions that already have a normalizedScreenTrack reference pointing
+    to an existing file.  Saves the updated manifest after any new normalizations.
+    """
+    updated: list[SessionManifest] = []
+    changed = False
+
+    for session in manifest:
+        # Already normalized — skip
+        if session.data.normalizedScreenTrack:
+            normalized_path = input_dir / session.data.normalizedScreenTrack
+            if normalized_path.exists():
+                updated.append(session)
+                continue
+
+        source = input_dir / session.data.screenTrack
+        if not source.exists():
+            updated.append(session)
+            continue
+
+        stem = Path(session.data.screenTrack).stem
+        rel_path = f"screen_tracks_normalized/{stem}.mp4"
+        output_path = input_dir / rel_path
+
+        if output_path.exists():
+            # File exists but manifest wasn't updated — fix reference
+            log(f"  Normalize: {session.identifier} (already on disk, updating manifest)")
+        else:
+            log(f"  Normalize: {session.identifier}...")
+            normalize_video(source, output_path)
+            log(f"  Normalize: done → {rel_path}")
+
+        new_data = session.data.model_copy(update={"normalizedScreenTrack": rel_path})
+        updated.append(session.model_copy(update={"data": new_data}))
+        changed = True
+
+    result = tuple(updated)
+
+    if changed:
+        save_manifest(manifest_path, result)
+
+    return result
 
 
 def _load_stage_json(path: Path, model_cls: type) -> Any | None:
@@ -332,7 +390,8 @@ def _process_session(
     # --- Merge ---
     log(f"  Merge...")
     session_output: SessionOutput = run_merge_fn(
-        session, config, analyse_result, triage_result, observe_result=observe_result,
+        session, config, analyse_result, triage_result,
+        observe_result=observe_result, video_path=video_path,
     )
 
     return session_output

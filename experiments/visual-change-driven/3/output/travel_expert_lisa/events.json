@@ -1,0 +1,252 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start": 41711.954674220964,
+    "time_end": 75458.41359773371,
+    "description": "Task instructions are progressively revealed to the user, detailing a travel planning scenario from Queensland to London.",
+    "confidence": 0.9,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "Text instructions appearing on a dark background."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 58947.0821529745,
+    "time_end": 61724.70254957507,
+    "description": "A browser window briefly flashes on screen during the instruction phase.",
+    "confidence": 0.7,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "Brief appearance of a browser address bar area."
+  },
+  {
+    "type": "input_text",
+    "time_start": 90017.90368271955,
+    "time_end": 90959.83002832861,
+    "description": "User types 'web' into the Google search bar",
+    "confidence": 0.9,
+    "interaction_target": "Search bar",
+    "page_title": "Google",
+    "page_location": "google.com",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The search bar shows 'web' with suggestions appearing below."
+  },
+  {
+    "type": "navigate",
+    "time_start": 93859.26345609066,
+    "time_end": 95209.12181303116,
+    "description": "User clicks on the 'webjet' search suggestion, navigating to the Google search results page",
+    "confidence": 0.95,
+    "interaction_target": "webjet search suggestion",
+    "page_title": "Google",
+    "page_location": "google.com",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor is positioned over the first search suggestion before the page transitions to search results."
+  },
+  {
+    "type": "hover",
+    "time_start": 98040.56657223796,
+    "time_end": 98812.52124645893,
+    "description": "User hovers over the 'Askable Sessions' browser tab",
+    "confidence": 0.85,
+    "interaction_target": "Askable Sessions tab",
+    "cursor_position": {
+      "x": 826.6833333333334,
+      "y": 1078.2266666666667
+    },
+    "page_title": "webjet - Google Search",
+    "page_location": "google.com/search?q=webjet",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor moves to the top of the browser window, highlighting the 'Askable Sessions' tab."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 99366.34560906516,
+    "time_end": 100172.29461756373,
+    "description": "A tab preview tooltip appears for the 'Askable Sessions' tab",
+    "confidence": 0.9,
+    "interaction_target": "Askable Sessions tab",
+    "page_title": "webjet - Google Search",
+    "page_location": "google.com/search?q=webjet",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "A small popover window appears showing details for the hovered tab."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 100386.17563739377,
+    "time_end": 101192.12464589236,
+    "description": "The tab preview tooltip disappears",
+    "confidence": 0.9,
+    "interaction_target": "Askable Sessions tab",
+    "page_title": "webjet - Google Search",
+    "page_location": "google.com/search?q=webjet",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The tab preview popover is no longer visible on the screen."
+  },
+  {
+    "type": "dwell",
+    "time_start": 238267.1954674221,
+    "time_end": 248465.4957507082,
+    "description": "User waits for the flight search results to load on the Webjet search page.",
+    "confidence": 0.9,
+    "page_title": "Flight Search",
+    "page_location": "services.webjet.com.au/web/flights/search/",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "A loading screen for a flight search from Maroochydore to London, featuring an animated airplane icon."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 248465.4957507082,
+    "time_end": 251209.12181303118,
+    "description": "The loading animation completes and the flight search results are displayed to the user.",
+    "confidence": 1.0,
+    "page_title": "Flight Search",
+    "page_location": "services.webjet.com.au/web/flights/search/",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "Transition from the loading screen to the flight results list showing various airline options and prices."
+  },
+  {
+    "type": "dwell",
+    "time_start": 284125.552407932,
+    "time_end": 290880.50991501415,
+    "description": "User paused for several seconds to review the flight search results, specifically looking at the cheapest options from Qantas Airways.",
+    "confidence": 0.9,
+    "interaction_target": "Flight search results",
+    "page_title": "Flight Search",
+    "page_location": "services.webjet.com.au/web/flights/search/",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The flight search results page shows various airline options (Qantas, Virgin Australia, etc.) and a specific flight from Maroochydore to London."
+  },
+  {
+    "type": "dwell",
+    "time_start": 317507.9886685552,
+    "time_end": 327764.3626062323,
+    "description": "User dwells on the prompt screen asking 'I hear you. What are you going to do next?' while the cursor remains stationary at the bottom of the screen.",
+    "confidence": 0.9,
+    "cursor_position": {
+      "x": 826.6833333333334,
+      "y": 1078.2266666666667
+    },
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/ai-mod/699fd69145953d08ad8c04ad",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "A dark overlay screen with a prompt and 'Open' button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 328114.22096317285,
+    "time_end": 328886.1756373938,
+    "description": "The screen momentarily goes black, indicating a UI transition or loading state.",
+    "confidence": 1.0,
+    "page_title": "Askable Sessions",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The screen is completely black."
+  },
+  {
+    "type": "dwell",
+    "time_start": 329202.03966005665,
+    "time_end": 337826.68555240793,
+    "description": "User continues to dwell on the prompt screen after the UI reappears, with the cursor still stationary.",
+    "confidence": 0.9,
+    "cursor_position": {
+      "x": 826.6833333333334,
+      "y": 1078.2266666666667
+    },
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/ai-mod/699fd69145953d08ad8c04ad",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The prompt screen with 'Open' and 'Repeat the task instructions' buttons is visible again."
+  },
+  {
+    "type": "dwell",
+    "time_start": 410822.4362606233,
+    "time_end": 428329.5184135977,
+    "description": "User dwells on the loading screen while flight search results for Brisbane to London are being fetched.",
+    "confidence": 0.9,
+    "cursor_position": {
+      "x": 1527.9166666666667,
+      "y": 231.597082586151
+    },
+    "page_title": "Flight Search",
+    "page_location": "services.webjet.com.au/web/flights/search/",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "A loading screen with a flight summary and a progress message 'Available airfares will be displayed shortly'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 428329.5184135977,
+    "time_end": 430189.29178470257,
+    "description": "The loading screen animation completes and the flight search results are displayed, showing various airline options and filters.",
+    "confidence": 1.0,
+    "page_title": "Flight Search",
+    "page_location": "services.webjet.com.au/web/flights/search/",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The transition from the loading animation to the active search results page."
+  },
+  {
+    "type": "click",
+    "time_start": 454981.07648725214,
+    "time_end": 455821.0198300283,
+    "description": "User clicks on the 'Qatar Airways' airline filter tab to filter the flight results.",
+    "confidence": 0.95,
+    "interaction_target": "Qatar Airways filter tab",
+    "cursor_position": {
+      "x": 826.6833333333334,
+      "y": 1078.2266666666667
+    },
+    "page_title": "Flight Search",
+    "page_location": "services.webjet.com.au/web/flights/search/",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor is positioned over the Qatar Airways filter tab which then changes to a selected state."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 585213.3711048159,
+    "time_end": 608931.5014164307,
+    "description": "The flight search summary bar animates, cycling through search details like destination, return date, and travel class while results load.",
+    "confidence": 0.95,
+    "interaction_target": "Flight search summary bar",
+    "page_title": "Flight Search",
+    "page_location": "services.webjet.com.au/web/flights/search/",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "Loading screen showing an animated summary of the flight search parameters."
+  },
+  {
+    "type": "scroll",
+    "time_start": 617010.1133144477,
+    "time_end": 629180.0849858358,
+    "description": "Scroll up (magnitude: 3.6, uniformity: 0.69)",
+    "confidence": 0.8,
+    "page_title": "Flight Search",
+    "viewport_width": 1790,
+    "viewport_height": 1158
+  },
+  {
+    "type": "hover",
+    "time_start": 684714.7875354108,
+    "time_end": 686030.6515580737,
+    "description": "User hovered over the '2 more flight options' button on a flight result card",
+    "confidence": 0.9,
+    "interaction_target": "2 more flight options button",
+    "page_title": "Flight Search",
+    "page_location": "services.webjet.com.au/web/flights/search/",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The user is viewing flight search results and has their cursor positioned over the '2 more flight options' button for a Virgin Australia flight."
+  }
+]

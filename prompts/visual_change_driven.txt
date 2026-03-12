@@ -16,6 +16,18 @@ For interaction moments (before/after pairs), determine:
 2. What UI element was involved (button label, link text, form field, etc.)
 3. A clear description of the user action
 
+For pre_scene_change moments (before/after pairs captured just before a page
+navigation or major screen transition), determine:
+1. What user action most likely triggered the scene change. Look for:
+   - Elements in a hover or active/pressed state (highlighted buttons, underlined
+     links, focused form controls)
+   - Cursor position if visible — but note the cursor may not be present (e.g.
+     mobile devices, keyboard navigation, touch input)
+   - Any visual difference between the before and after frames that indicates an
+     element was activated (colour change, ripple effect, depression)
+2. Identify the specific UI element (button label, link text, menu item, etc.)
+3. Set the event type to "click" or "navigate" as appropriate
+
 For cursor position moments (single frame), determine:
 1. What UI element is under or near the cursor
 2. Whether this appears to be a hover, a click (if context suggests it), or

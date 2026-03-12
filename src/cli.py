@@ -129,6 +129,9 @@ def compare(branch: str | None, iterations: str | None, session: str | None, bas
         click.echo(f"  Total events: {meta.get('total_events', 0)}")
         click.echo(f"  Input tokens: {meta.get('total_input_tokens', 0):,}")
         click.echo(f"  Output tokens: {meta.get('total_output_tokens', 0):,}")
+        budget = meta.get('total_input_token_budget', 0)
+        utilisation = meta.get('total_input_token_budget_utilisation', 0.0)
+        click.echo(f"  Token budget: {budget:,} ({utilisation}% used)")
 
         if session:
             events_path = output_dir / session / "events.json"

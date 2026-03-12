@@ -1,0 +1,799 @@
+{
+  "frames_analysed": 1811,
+  "cursor_detection_rate": 0.4219,
+  "cursor_detections": 764,
+  "template_match_counts": {
+    "ibeam": 32,
+    "wait": 36,
+    "hand": 535,
+    "arrow": 109,
+    "arrow_dark": 52
+  },
+  "flow_windows": 421,
+  "processing_time_ms": 135244.0,
+  "visual_change_events": 144,
+  "flow_events": 5,
+  "moments_total": 77,
+  "moments_by_category": {
+    "interaction": 34,
+    "scene_change": 21,
+    "baseline": 17,
+    "cursor_stop": 3,
+    "scroll": 2
+  },
+  "token_budget": 298445,
+  "token_budget_used": 87462,
+  "token_budget_usage_pct": 29.3,
+  "moments": [
+    {
+      "category": "interaction",
+      "time_start_ms": 1158.0,
+      "time_end_ms": 1524.0,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 2057.0,
+      "time_end_ms": 2591.0,
+      "priority": 1,
+      "estimated_tokens": 2064,
+      "cursor_associated": true,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 3140.0,
+      "time_end_ms": 4540.0,
+      "priority": 1,
+      "estimated_tokens": 1032,
+      "cursor_associated": true,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 5908.0,
+      "time_end_ms": 6172.0,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 6946.0,
+      "time_end_ms": 7229.0,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 7812.0,
+      "time_end_ms": 9412.0,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": true,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 10212.0,
+      "time_end_ms": 11561.0,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 12090.0,
+      "time_end_ms": 16184.000000000002,
+      "priority": 1,
+      "estimated_tokens": 1032,
+      "cursor_associated": true,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 16984.0,
+      "time_end_ms": 18850.0,
+      "priority": 1,
+      "estimated_tokens": 1032,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 19650.000000000004,
+      "time_end_ms": 24511.0,
+      "priority": 1,
+      "estimated_tokens": 1032,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 25053.0,
+      "time_end_ms": 28843.0,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "scene_change",
+      "time_start_ms": 29408.0,
+      "time_end_ms": 45073.0,
+      "priority": 0,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "baseline",
+      "time_start_ms": 37240.5,
+      "time_end_ms": 37240.5,
+      "priority": 5,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": false,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 45672.00000000001,
+      "time_end_ms": 46917.0,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "scene_change",
+      "time_start_ms": 48829.0,
+      "time_end_ms": 49717.0,
+      "priority": 0,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 50252.0,
+      "time_end_ms": 51562.0,
+      "priority": 1,
+      "estimated_tokens": 2064,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 54611.00000000001,
+      "time_end_ms": 54931.00000000001,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "baseline",
+      "time_start_ms": 58974.0,
+      "time_end_ms": 58974.0,
+      "priority": 5,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": false,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 63017.0,
+      "time_end_ms": 63381.0,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 64312.0,
+      "time_end_ms": 64570.00000000001,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "baseline",
+      "time_start_ms": 69697.0,
+      "time_end_ms": 69697.0,
+      "priority": 5,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": false,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 74824.0,
+      "time_end_ms": 76073.00000000001,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "cursor_stop",
+      "time_start_ms": 79575.0,
+      "time_end_ms": 81073.00000000001,
+      "priority": 3,
+      "estimated_tokens": 258,
+      "cursor_associated": true,
+      "has_visual_change": false,
+      "has_flow_event": false
+    },
+    {
+      "category": "cursor_stop",
+      "time_start_ms": 81574.0,
+      "time_end_ms": 83073.00000000001,
+      "priority": 3,
+      "estimated_tokens": 258,
+      "cursor_associated": true,
+      "has_visual_change": false,
+      "has_flow_event": false
+    },
+    {
+      "category": "cursor_stop",
+      "time_start_ms": 83575.0,
+      "time_end_ms": 84073.00000000001,
+      "priority": 3,
+      "estimated_tokens": 258,
+      "cursor_associated": true,
+      "has_visual_change": false,
+      "has_flow_event": false
+    },
+    {
+      "category": "scroll",
+      "time_start_ms": 85073.00000000001,
+      "time_end_ms": 89698.00000000001,
+      "priority": 2,
+      "estimated_tokens": 1548,
+      "cursor_associated": true,
+      "has_visual_change": true,
+      "has_flow_event": true
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 90201.00000000001,
+      "time_end_ms": 90460.00000000001,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "scene_change",
+      "time_start_ms": 91291.0,
+      "time_end_ms": 93285.0,
+      "priority": 0,
+      "estimated_tokens": 1548,
+      "cursor_associated": true,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 94404.0,
+      "time_end_ms": 95961.0,
+      "priority": 1,
+      "estimated_tokens": 1032,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 96608.0,
+      "time_end_ms": 96908.0,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 100519.0,
+      "time_end_ms": 102055.0,
+      "priority": 1,
+      "estimated_tokens": 1032,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "scene_change",
+      "time_start_ms": 104152.0,
+      "time_end_ms": 105858.0,
+      "priority": 0,
+      "estimated_tokens": 1548,
+      "cursor_associated": true,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "baseline",
+      "time_start_ms": 109312.0,
+      "time_end_ms": 109312.0,
+      "priority": 5,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": false,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 112766.0,
+      "time_end_ms": 115758.0,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 118435.0,
+      "time_end_ms": 119107.0,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "baseline",
+      "time_start_ms": 131084.5,
+      "time_end_ms": 131084.5,
+      "priority": 5,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": false,
+      "has_flow_event": false
+    },
+    {
+      "category": "scroll",
+      "time_start_ms": 143062.0,
+      "time_end_ms": 143904.0,
+      "priority": 2,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": true
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 145052.0,
+      "time_end_ms": 145340.0,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "scene_change",
+      "time_start_ms": 146507.0,
+      "time_end_ms": 147587.0,
+      "priority": 0,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "baseline",
+      "time_start_ms": 153143.5,
+      "time_end_ms": 153143.5,
+      "priority": 5,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": false,
+      "has_flow_event": false
+    },
+    {
+      "category": "scene_change",
+      "time_start_ms": 158700.00000000003,
+      "time_end_ms": 159907.0,
+      "priority": 0,
+      "estimated_tokens": 1548,
+      "cursor_associated": true,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "baseline",
+      "time_start_ms": 163328.5,
+      "time_end_ms": 163328.5,
+      "priority": 5,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": false,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 166750.0,
+      "time_end_ms": 167017.0,
+      "priority": 1,
+      "estimated_tokens": 1032,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 167868.0,
+      "time_end_ms": 168194.00000000003,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 168986.0,
+      "time_end_ms": 170724.0,
+      "priority": 1,
+      "estimated_tokens": 1032,
+      "cursor_associated": true,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "scene_change",
+      "time_start_ms": 171902.00000000003,
+      "time_end_ms": 212517.0,
+      "priority": 0,
+      "estimated_tokens": 1548,
+      "cursor_associated": true,
+      "has_visual_change": true,
+      "has_flow_event": true
+    },
+    {
+      "category": "baseline",
+      "time_start_ms": 192209.5,
+      "time_end_ms": 192209.5,
+      "priority": 5,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": false,
+      "has_flow_event": false
+    },
+    {
+      "category": "scene_change",
+      "time_start_ms": 216953.0,
+      "time_end_ms": 241225.0,
+      "priority": 0,
+      "estimated_tokens": 1548,
+      "cursor_associated": true,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "baseline",
+      "time_start_ms": 229089.0,
+      "time_end_ms": 229089.0,
+      "priority": 5,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": false,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 243247.0,
+      "time_end_ms": 244445.0,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "scene_change",
+      "time_start_ms": 247928.0,
+      "time_end_ms": 254104.0,
+      "priority": 0,
+      "estimated_tokens": 1548,
+      "cursor_associated": true,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "baseline",
+      "time_start_ms": 251016.0,
+      "time_end_ms": 251016.0,
+      "priority": 5,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": false,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 254690.0,
+      "time_end_ms": 256156.0,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "scene_change",
+      "time_start_ms": 257868.0,
+      "time_end_ms": 262223.0,
+      "priority": 0,
+      "estimated_tokens": 1548,
+      "cursor_associated": true,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "scene_change",
+      "time_start_ms": 263438.0,
+      "time_end_ms": 265159.0,
+      "priority": 0,
+      "estimated_tokens": 1548,
+      "cursor_associated": true,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 265743.0,
+      "time_end_ms": 266359.0,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 266860.0,
+      "time_end_ms": 267360.0,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "scene_change",
+      "time_start_ms": 269101.0,
+      "time_end_ms": 275659.0,
+      "priority": 0,
+      "estimated_tokens": 1548,
+      "cursor_associated": true,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "baseline",
+      "time_start_ms": 272380.0,
+      "time_end_ms": 272380.0,
+      "priority": 5,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": false,
+      "has_flow_event": false
+    },
+    {
+      "category": "scene_change",
+      "time_start_ms": 276600.0,
+      "time_end_ms": 280714.0,
+      "priority": 0,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "baseline",
+      "time_start_ms": 284737.0,
+      "time_end_ms": 284737.0,
+      "priority": 5,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": false,
+      "has_flow_event": false
+    },
+    {
+      "category": "scene_change",
+      "time_start_ms": 288760.0,
+      "time_end_ms": 302919.0,
+      "priority": 0,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": true
+    },
+    {
+      "category": "baseline",
+      "time_start_ms": 295839.5,
+      "time_end_ms": 295839.5,
+      "priority": 5,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": false,
+      "has_flow_event": false
+    },
+    {
+      "category": "scene_change",
+      "time_start_ms": 305498.0,
+      "time_end_ms": 309578.00000000006,
+      "priority": 0,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "scene_change",
+      "time_start_ms": 310137.0,
+      "time_end_ms": 316118.0,
+      "priority": 0,
+      "estimated_tokens": 1548,
+      "cursor_associated": true,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "baseline",
+      "time_start_ms": 313127.5,
+      "time_end_ms": 313127.5,
+      "priority": 5,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": false,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 317429.00000000006,
+      "time_end_ms": 317809.0,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "scene_change",
+      "time_start_ms": 318997.0,
+      "time_end_ms": 323010.0,
+      "priority": 0,
+      "estimated_tokens": 1548,
+      "cursor_associated": true,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "scene_change",
+      "time_start_ms": 323541.0,
+      "time_end_ms": 330705.0,
+      "priority": 0,
+      "estimated_tokens": 1548,
+      "cursor_associated": true,
+      "has_visual_change": true,
+      "has_flow_event": true
+    },
+    {
+      "category": "baseline",
+      "time_start_ms": 327123.0,
+      "time_end_ms": 327123.0,
+      "priority": 5,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": false,
+      "has_flow_event": false
+    },
+    {
+      "category": "scene_change",
+      "time_start_ms": 331408.0,
+      "time_end_ms": 335397.0,
+      "priority": 0,
+      "estimated_tokens": 1548,
+      "cursor_associated": true,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "baseline",
+      "time_start_ms": 338272.0,
+      "time_end_ms": 338272.0,
+      "priority": 5,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": false,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 341147.0,
+      "time_end_ms": 341713.0,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "scene_change",
+      "time_start_ms": 342401.0,
+      "time_end_ms": 346474.0,
+      "priority": 0,
+      "estimated_tokens": 1548,
+      "cursor_associated": true,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "interaction",
+      "time_start_ms": 347818.0,
+      "time_end_ms": 348084.0,
+      "priority": 1,
+      "estimated_tokens": 516,
+      "cursor_associated": false,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "scene_change",
+      "time_start_ms": 348788.0,
+      "time_end_ms": 358080.0,
+      "priority": 0,
+      "estimated_tokens": 1548,
+      "cursor_associated": true,
+      "has_visual_change": true,
+      "has_flow_event": false
+    },
+    {
+      "category": "baseline",
+      "time_start_ms": 353434.0,
+      "time_end_ms": 353434.0,
+      "priority": 5,
+      "estimated_tokens": 1548,
+      "cursor_associated": false,
+      "has_visual_change": false,
+      "has_flow_event": false
+    }
+  ]
+}

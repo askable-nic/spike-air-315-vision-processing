@@ -1,0 +1,359 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start": 34259.73333333333,
+    "time_end": 35060.03333333333,
+    "description": "Instructional text appears on the screen: 'Great. To start, please click the \"Share\" button'",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A dark screen with white instructional text appearing at the bottom."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 39865.333333333336,
+    "time_end": 74949.88333333333,
+    "description": "Task instructions are displayed progressively on the screen, detailing a travel planning scenario from the Sunshine Coast, Queensland to London.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "White text updates on a dark background, providing context for a user research task."
+  },
+  {
+    "type": "hover",
+    "time_start": 74949.88333333333,
+    "time_end": 74949.88333333333,
+    "description": "User hovers over the 'Open' button that appeared at the end of the instructions.",
+    "confidence": 0.8,
+    "interaction_target": "Open button",
+    "cursor_position": {
+      "x": 790.4611111111111,
+      "y": 758.0011111111111
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is positioned over a circular 'Open' button that has just appeared on the screen."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 83158.58333333334,
+    "time_end": 97789.36666666667,
+    "description": "Task instructions are progressively displayed and updated on a dark screen, including a reminder to think aloud and the specific task scenario.",
+    "confidence": 0.9,
+    "page_title": "Task Instructions",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "Dark screen with white text updating with instructions."
+  },
+  {
+    "type": "scroll",
+    "time_start": 89447.95000000001,
+    "time_end": 90515.68333333333,
+    "description": "Scroll E (magnitude: 4.5, uniformity: 0.63)",
+    "confidence": 0.8,
+    "page_title": "Task Instructions",
+    "viewport_width": 1916,
+    "viewport_height": 1082
+  },
+  {
+    "type": "hover",
+    "time_start": 91066.48333333334,
+    "time_end": 92367.28333333333,
+    "description": "The cursor hovers over the 'Repeat the task instructions' button.",
+    "confidence": 0.8,
+    "interaction_target": "Repeat the task instructions button",
+    "cursor_position": {
+      "x": 1223.2611111111112,
+      "y": 839.151111111111
+    },
+    "page_title": "Task Instructions",
+    "viewport_width": 1916,
+    "viewport_height": 1082
+  },
+  {
+    "type": "hover",
+    "time_start": 98090.16666666667,
+    "time_end": 99124.03333333334,
+    "description": "The cursor hovers over the 'Open' button.",
+    "confidence": 0.8,
+    "interaction_target": "Open button",
+    "cursor_position": {
+      "x": 531.9833333333333,
+      "y": 709.9122222222222
+    },
+    "page_title": "Task Instructions",
+    "viewport_width": 1916,
+    "viewport_height": 1082
+  },
+  {
+    "type": "click",
+    "time_start": 99124.03333333334,
+    "time_end": 99124.03333333334,
+    "description": "User clicks the 'Open' button to proceed to the task.",
+    "confidence": 0.9,
+    "interaction_target": "Open button",
+    "page_title": "Task Instructions",
+    "viewport_width": 1916,
+    "viewport_height": 1082
+  },
+  {
+    "type": "navigate",
+    "time_start": 99124.03333333334,
+    "time_end": 101743.81666666667,
+    "description": "The page navigates from the instruction screen to the Google homepage.",
+    "confidence": 1.0,
+    "page_title": "Google",
+    "page_location": "https://www.google.com",
+    "viewport_width": 1916,
+    "viewport_height": 1082
+  },
+  {
+    "type": "input_text",
+    "time_start": 101743.81666666667,
+    "time_end": 103011.25,
+    "description": "User types 'sky' into the Google search input field.",
+    "confidence": 1.0,
+    "interaction_target": "Search bar",
+    "page_title": "Google",
+    "page_location": "https://www.google.com",
+    "viewport_width": 1916,
+    "viewport_height": 1082
+  },
+  {
+    "type": "dwell",
+    "time_start": 110602.66666666667,
+    "time_end": 117492.38333333335,
+    "description": "User is reading the initial task instructions about planning a trip to London.",
+    "confidence": 0.8,
+    "cursor_position": {
+      "x": 634.1722222222222,
+      "y": 727.9455555555555
+    },
+    "page_title": "Task Instructions",
+    "viewport_width": 1916,
+    "viewport_height": 1082
+  },
+  {
+    "type": "hover",
+    "time_start": 117526.25,
+    "time_end": 121229.45000000001,
+    "description": "User hovers over the 'Open' button while reading the instructions.",
+    "confidence": 0.8,
+    "interaction_target": "Open button",
+    "cursor_position": {
+      "x": 1413.7703968254154,
+      "y": 881.7441269841323
+    },
+    "page_title": "Task Instructions",
+    "viewport_width": 1916,
+    "viewport_height": 1082
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 126184.90000000001,
+    "time_end": 127836.05,
+    "description": "The instruction text updates to a new prompt: 'Yes, please think aloud as you'.",
+    "confidence": 0.9,
+    "page_title": "Task Instructions",
+    "viewport_width": 1916,
+    "viewport_height": 1082
+  },
+  {
+    "type": "dwell",
+    "time_start": 127869.91666666667,
+    "time_end": 128903.78333333334,
+    "description": "User pauses to read the updated prompt.",
+    "confidence": 0.8,
+    "page_title": "Task Instructions",
+    "viewport_width": 1916,
+    "viewport_height": 1082
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 130221.76666666668,
+    "time_end": 130238.95000000001,
+    "description": "The instruction text updates further to: 'Yes, please think aloud as you go. What are you looking at right now?'.",
+    "confidence": 0.9,
+    "page_title": "Task Instructions",
+    "viewport_width": 1916,
+    "viewport_height": 1082
+  },
+  {
+    "type": "hover",
+    "time_start": 130238.95000000001,
+    "time_end": 132507.38333333336,
+    "description": "User hovers over the 'Open' button.",
+    "confidence": 0.8,
+    "interaction_target": "Open button",
+    "cursor_position": {
+      "x": 1518.4066666666665,
+      "y": 876.4200000000001
+    },
+    "page_title": "Task Instructions",
+    "viewport_width": 1916,
+    "viewport_height": 1082
+  },
+  {
+    "type": "hover",
+    "time_start": 134509.88333333336,
+    "time_end": 142917.78333333333,
+    "description": "User hovers over the 'Repeat the task instructions' button.",
+    "confidence": 0.8,
+    "interaction_target": "Repeat the task instructions button",
+    "cursor_position": {
+      "x": 1349.4944444444445,
+      "y": 872.2122222222222
+    },
+    "page_title": "Task Instructions",
+    "viewport_width": 1916,
+    "viewport_height": 1082
+  },
+  {
+    "type": "input_text",
+    "time_start": 173832.5,
+    "time_end": 177001.83333333334,
+    "description": "User types 'sunsh' into the 'From' origin airport input field, replacing 'Sydney (SYD)'",
+    "confidence": 1.0,
+    "interaction_target": "From input field",
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user updates the origin airport in the search form, triggering a location suggestion dropdown."
+  },
+  {
+    "type": "dwell",
+    "time_start": 191066.38333333333,
+    "time_end": 193034.5166666667,
+    "description": "User waits while the flight search results are loading, with the cursor resting near the bottom right of the screen.",
+    "confidence": 0.8,
+    "cursor_position": {
+      "x": 51.094444907466446,
+      "y": 180.33333261234193
+    },
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A loading screen for flight results showing skeleton loaders and a 'Searching' indicator."
+  },
+  {
+    "type": "select",
+    "time_start": 193335.31666666665,
+    "time_end": 194769.58333333334,
+    "description": "User selects the '2+ stops' filter checkbox in the sidebar to filter flight results.",
+    "confidence": 0.9,
+    "interaction_target": "2+ stops checkbox",
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user interacts with the sidebar filters while flight results begin to populate."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 193335.31666666665,
+    "time_end": 194769.58333333334,
+    "description": "Flight search results populate the page, replacing the skeleton loaders and updating the provider count.",
+    "confidence": 0.95,
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The UI transitions from a loading state to displaying specific flight options and prices."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 212604.56666666665,
+    "time_end": 213638.43333333335,
+    "description": "The flight search results finished loading, transitioning from 'Checked 25 of 26 providers' to '997 results sorted by Best'.",
+    "confidence": 0.95,
+    "interaction_target": "Search results status",
+    "page_title": "Skyscanner - Sunshine Coast (MCY) - London (Any)",
+    "page_location": "skyscanner.com.au",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The loading progress bar and provider count disappear, replaced by the total number of results and the sort order."
+  },
+  {
+    "type": "click",
+    "time_start": 233525.46666666667,
+    "time_end": 234292.4,
+    "description": "User clicked the 'Book now' button to proceed with the flight booking.",
+    "confidence": 0.85,
+    "interaction_target": "Book now button",
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user interacts with the primary 'Book now' call-to-action button on a flight search result."
+  },
+  {
+    "type": "hover",
+    "time_start": 253845.7666666667,
+    "time_end": 254679.43333333335,
+    "description": "User hovers over the 'Book Direct with Virgin Australia' promotional link",
+    "confidence": 0.9,
+    "interaction_target": "Book Direct with Virgin Australia",
+    "cursor_position": {
+      "x": 45.083333333333336,
+      "y": 25.54722222222222
+    },
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor moves over the Virgin Australia booking option, changing from an arrow to a pointer."
+  },
+  {
+    "type": "scroll",
+    "time_start": 254679.43333333335,
+    "time_end": 257382.63333333336,
+    "description": "The page scrolls up to reveal the flight category summary tabs (Best, Cheapest, Fastest)",
+    "confidence": 0.8,
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The view shifts from a specific flight result to the top-level summary tabs."
+  },
+  {
+    "type": "hover",
+    "time_start": 257382.63333333336,
+    "time_end": 258132.88333333336,
+    "description": "User hovers over the 'Best' flight summary tab showing a price of $2,693",
+    "confidence": 0.9,
+    "interaction_target": "Best flight summary tab",
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is positioned over the 'Best' flight option tab, indicated by the pointer icon."
+  },
+  {
+    "type": "input_text",
+    "time_start": 304763.3,
+    "time_end": 306097.4666666667,
+    "description": "User types into the destination search field, updating the text from 'lo' to 'lon'.",
+    "confidence": 0.9,
+    "interaction_target": "Destination input field",
+    "page_title": "Booking.com",
+    "page_location": "booking.com",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The destination input field is focused and shows the text 'lon'."
+  },
+  {
+    "type": "select",
+    "time_start": 306648.51666666666,
+    "time_end": 307765.8,
+    "description": "User selects 'London, Greater London, United Kingdom' from the destination autocomplete suggestions, updating the field from 'london'.",
+    "confidence": 0.9,
+    "interaction_target": "Destination input field",
+    "page_title": "Booking.com",
+    "page_location": "booking.com",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The destination input field now contains the full formatted address 'London, Greater London, United Kingdom'."
+  }
+]

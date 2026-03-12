@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import time
 from bisect import bisect_left
+from pathlib import Path
 
 from src.models import (
     AnalyseResult,
@@ -18,6 +19,7 @@ from src.models import (
     TriageResult,
 )
 from src.similarity import events_are_duplicates
+from src.video import get_video_metadata
 from stages.observe import _lookup_cursor_at_timestamp
 
 
@@ -75,10 +77,18 @@ def run_merge(
     analyse_result: AnalyseResult,
     triage_result: TriageResult | None = None,
     observe_result: ObserveResult | None = None,
+    video_path: Path | None = None,
 ) -> SessionOutput:
     """Merge analysis results: resolve timestamps, discard context events, deduplicate."""
     t0 = time.monotonic()
     mc = config.merge
+
+    viewport_w: int | None = None
+    viewport_h: int | None = None
+    if video_path is not None:
+        meta = get_video_metadata(video_path)
+        viewport_w = meta.width
+        viewport_h = meta.height
 
     resolved: list[ResolvedEvent] = []
 
@@ -124,6 +134,8 @@ def run_merge(
                 cursor_position=cursor_dict,
                 page_title=event.page_title,
                 page_location=event.page_location,
+                viewport_width=viewport_w,
+                viewport_height=viewport_h,
                 frame_description=event.frame_description,
             ))
 
@@ -150,6 +162,8 @@ def run_merge(
                     description=local_event.description,
                     confidence=local_event.confidence,
                     cursor_position=cursor_dict,
+                    viewport_width=viewport_w,
+                    viewport_height=viewport_h,
                 ))
 
     # Add scroll moments from visual-change-driven pipeline
@@ -172,6 +186,8 @@ def run_merge(
                     description=f"Scroll {direction} (magnitude: {fe.mean_magnitude:.1f}, uniformity: {fe.flow_uniformity:.2f})",
                     confidence=0.8,
                     page_title=page_title,
+                    viewport_width=viewport_w,
+                    viewport_height=viewport_h,
                 ))
 
     # Sort by start time
@@ -189,6 +205,10 @@ def run_merge(
             duration_ms=observe_result.processing_time_ms,
             artifacts_created=artifacts,
         )
+
+    budget = observe_result.token_budget if observe_result is not None else 0
+    input_tokens = analyse_result.total_input_tokens
+    utilisation = round(input_tokens / budget * 100, 1) if budget > 0 else 0.0
 
     return SessionOutput(
         recording_id=session.identifier,
@@ -212,7 +232,9 @@ def run_merge(
         ),
         events=tuple(deduped),
         event_count=len(deduped),
-        total_input_tokens=analyse_result.total_input_tokens,
+        total_input_token_budget=budget,
+        total_input_token_budget_utilisation=utilisation,
+        total_input_tokens=input_tokens,
         total_output_tokens=analyse_result.total_output_tokens,
     )
 

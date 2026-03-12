@@ -1,0 +1,834 @@
+{
+  "recording_id": "travel_expert_william",
+  "segments": [
+    {
+      "segment_index": 0,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 2,
+          "type": "navigate",
+          "description": "The user navigates to the Askable Sessions page.",
+          "confidence": 1.0,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/699fd69145953d08ad8c04ad",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The browser window is visible with the URL sessions.askable.com and the title 'Askable Sessions'. The main content area shows the text 'Thank you.'"
+        },
+        {
+          "frame_index_start": 3,
+          "frame_index_end": 21,
+          "type": "change_ui_state",
+          "description": "Instructional text for the user study is progressively displayed on the screen, detailing a travel planning task.",
+          "confidence": 0.9,
+          "interaction_target": "Instructional prompt",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen displays a growing block of text providing a scenario about planning a holiday from Queensland to London, including instructions to show the planning process."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 908.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 1774.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 1807.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 2841.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 2890.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 4790.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 5658.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 6422.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 6696.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 7479.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 7562.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 9662.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 9962.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 11811.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 11840.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 16434.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 16734.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 17,
+          "timestamp_ms": 19100.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 18,
+          "timestamp_ms": 19400.000000000004,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 19,
+          "timestamp_ms": 24761.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 20,
+          "timestamp_ms": 24803.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 21,
+          "timestamp_ms": 29093.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 26225,
+      "output_tokens": 220
+    },
+    {
+      "segment_index": 1,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 2,
+          "type": "click",
+          "description": "User clicks the 'Open' button on the instruction screen to begin the session, triggering a new browser tab.",
+          "confidence": 0.85,
+          "interaction_target": "Open button",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "A dark instruction screen transitions to a browser window."
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 3,
+          "type": "navigate",
+          "description": "The browser navigates from a blank page to google.com.",
+          "confidence": 1.0,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Google",
+          "page_location": "https://www.google.com",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The 'Untitled' tab loads the Google homepage."
+        },
+        {
+          "frame_index_start": 4,
+          "frame_index_end": 5,
+          "type": "navigate",
+          "description": "User clicks on the 'Askable Sessions' tab to switch focus away from Google.",
+          "confidence": 1.0,
+          "interaction_target": "Askable Sessions tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The active tab changes from Google to Askable Sessions."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 45422.00000000001,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 47167.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 50002.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 51812.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 54361.00000000001,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 55181.00000000001,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 8097,
+      "output_tokens": 238
+    },
+    {
+      "segment_index": 2,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "click",
+          "description": "User clicks the 'Askable' extension button in the browser toolbar, deactivating the extension panel.",
+          "confidence": 0.9,
+          "interaction_target": "Askable extension button",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Google",
+          "page_location": "https://www.google.com",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The browser toolbar shows the 'Askable' extension button losing its active blue highlight."
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 3,
+          "type": "click",
+          "description": "User clicks the 'Askable' extension button in the browser toolbar, reactivating the extension panel.",
+          "confidence": 0.9,
+          "interaction_target": "Askable extension button",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Google",
+          "page_location": "https://www.google.com",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The browser toolbar shows the 'Askable' extension button gaining an active blue highlight."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 62767.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 63631.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 64062.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 64820.00000000001,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 5806,
+      "output_tokens": 198
+    },
+    {
+      "segment_index": 3,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "click",
+          "description": "User clicks on the Askable extension button in the browser toolbar, indicated by the appearance of a UI separator line.",
+          "confidence": 0.8,
+          "interaction_target": "Askable extension button",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Google",
+          "page_location": "https://www.google.com",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The top-right corner of the browser showing tabs and the extension toolbar."
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 4,
+          "type": "hover",
+          "description": "User hovers the cursor over the 'AI Mode' button, with the cursor stopping at multiple points on or near the element.",
+          "confidence": 0.9,
+          "interaction_target": "AI Mode button",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Google",
+          "page_location": "https://www.google.com",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "A pill-shaped button labeled 'AI Mode' with a sparkle icon."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 74574.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 76323.00000000001,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 80324.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 82323.5,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 83824.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 6998,
+      "output_tokens": 283
+    },
+    {
+      "segment_index": 4,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "navigate",
+          "description": "User navigates from Google search results to the Expedia website by clicking on a sponsored result.",
+          "confidence": 0.9,
+          "interaction_target": "Expedia sponsored result",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Google Search",
+          "page_location": "https://www.google.com",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Google search results page showing a sponsored link for Expedia."
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 3,
+          "type": "change_ui_state",
+          "description": "The Expedia homepage finishes loading, transitioning from a blurred state to a clear view of travel category icons.",
+          "confidence": 0.8,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Expedia",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Expedia homepage loading travel categories like Stays, Flights, and Packages."
+        },
+        {
+          "frame_index_start": 4,
+          "frame_index_end": 5,
+          "type": "hover",
+          "description": "User hovers the cursor over the 'Packages' travel category icon.",
+          "confidence": 0.9,
+          "interaction_target": "Packages",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Expedia",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Expedia homepage with the cursor positioned over the Packages icon."
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 7,
+          "type": "dwell",
+          "description": "User pauses on the Expedia homepage, likely reviewing the search form options for 'Stays'.",
+          "confidence": 0.7,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Expedia",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Expedia homepage showing the default search form for hotel stays."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 89951.00000000001,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 90710.00000000001,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 94154.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 96211.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 96358.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 97158.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 100269.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 102305.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 10318,
+      "output_tokens": 317
+    },
+    {
+      "segment_index": 5,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "input_text",
+          "description": "User types \"london\" into the \"Going to\" destination field, which triggers a search suggestion dropdown.",
+          "confidence": 1.0,
+          "interaction_target": "Going to input field",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Travel with Expedia: Holiday Homes, Hotels, Flights & More",
+          "page_location": "https://www.expedia.com.au/",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The Expedia homepage search widget showing the destination being entered."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 112516.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 116008.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 118185.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 119357.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 5771,
+      "output_tokens": 152
+    },
+    {
+      "segment_index": 6,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "dwell",
+          "description": "User pauses on the 'Packages' tab, which is currently selected as the active search mode.",
+          "confidence": 0.8,
+          "interaction_target": "Packages tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Travel with Expedia: Holiday Homes, Hotels, Flights & More",
+          "page_location": "https://www.expedia.com.au/",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Close-up of the 'Packages' and 'Activities' tabs on the Expedia homepage, with 'Packages' underlined in blue."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 144802.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 145590.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3525,
+      "output_tokens": 161
+    },
+    {
+      "segment_index": 7,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "navigate",
+          "description": "The page navigates to the hotel search results for London, as indicated by the URL and tab title change.",
+          "confidence": 0.95,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": "https://www.expedia.com.au/Hotel-Search",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The browser header shows a URL change and the tab title updating to 'London (and vicinity), England'."
+        },
+        {
+          "frame_index_start": 4,
+          "frame_index_end": 5,
+          "type": "change_ui_state",
+          "description": "The search results page updates its state, displaying a search progress bar ('Select stay') and a promotional banner about best prices.",
+          "confidence": 0.9,
+          "interaction_target": "Search results content area",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "New UI elements like the 'Select stay' progress indicator and a dark blue price guarantee banner appear on the page."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 166500.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 167267.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 167618.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 168444.00000000003,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 168736.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 170974.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 8226,
+      "output_tokens": 259
+    },
+    {
+      "segment_index": 8,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "drag",
+          "description": "User drags the price slider to set a minimum price of AU$516",
+          "confidence": 0.9,
+          "interaction_target": "Price per traveller slider",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results",
+          "page_location": "https://www.expedia.com.au/Hotel-Search",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user is adjusting the price filter on the search results page."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 242997.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 244695.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3557,
+      "output_tokens": 110
+    },
+    {
+      "segment_index": 9,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "dwell",
+          "description": "User pauses their cursor near the 'Price per traveller' section, likely reviewing filter options or preparing to adjust the price slider.",
+          "confidence": 0.8,
+          "interaction_target": "Price per traveller section",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results",
+          "page_location": "https://www.expedia.com.au/Hotel-Search",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user is viewing the hotel search filters, including amenities like 'Breakfast included' and 'Gym', with the cursor resting near the price filter header."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 254440.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 256406.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3553,
+      "output_tokens": 177
+    },
+    {
+      "segment_index": 10,
+      "events": [
+        {
+          "frame_index_start": 1,
+          "frame_index_end": 2,
+          "type": "scroll",
+          "description": "User scrolls down the page to reveal more filter options, moving from the 'Popular filters' section to the 'Price per traveller' section.",
+          "confidence": 0.9,
+          "interaction_target": "Filter sidebar",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results",
+          "page_location": "https://www.expedia.com.au/Hotel-Search",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The page content shifts upwards, bringing the price filter into view."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 265493.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 266609.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 266610.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 267610.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 5900,
+      "output_tokens": 120
+    },
+    {
+      "segment_index": 11,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "hover",
+          "description": "User hovers over the right navigation arrow of the hotel image carousel.",
+          "confidence": 0.9,
+          "interaction_target": "Right navigation arrow",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results",
+          "page_location": "https://www.expedia.com.au/Hotel-Search",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The cursor is positioned over the right arrow button on a hotel listing's image gallery."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 317179.00000000006,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 318059.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3536,
+      "output_tokens": 153
+    },
+    {
+      "segment_index": 12,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "hover",
+          "description": "User hovered the cursor over a session identifier string.",
+          "confidence": 0.8,
+          "interaction_target": "=AgiuLL2soMf5h1sQy6-3k4y_",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results",
+          "page_location": "https://www.expedia.com.au/Hotel-Search",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The cursor is positioned over a long alphanumeric string, likely a session ID, displayed above hotel interior images."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 340897.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 341963.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3545,
+      "output_tokens": 168
+    },
+    {
+      "segment_index": 13,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "dwell",
+          "description": "User is reading the prompt 'Are you done with the task?' on the Askable Sessions page.",
+          "confidence": 0.8,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "https://sessions.askable.com/ai-mod/699fd69145953d08ad8c04ad",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "A dark screen with a prompt asking the user if they are finished with the task, featuring 'Open' and 'Repeat the task instructions' buttons."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 347568.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 348334.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3541,
+      "output_tokens": 170
+    }
+  ],
+  "total_input_tokens": 98598,
+  "total_output_tokens": 2726,
+  "processing_time_ms": 53466.59441701195
+}

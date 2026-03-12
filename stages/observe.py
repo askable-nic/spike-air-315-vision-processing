@@ -1461,6 +1461,92 @@ def _time_ranges_overlap(
     return a_start < b_end and b_start < a_end
 
 
+def _per_frame_tokens(
+    category: str,
+    visual_change: VisualChangeEvent | None,
+    frame_width: int,
+    frame_height: int,
+    roi_min_size: int,
+    roi_padding: int,
+) -> int:
+    """Token cost of a single image for this moment type."""
+    from src.gemini import estimate_image_tokens
+
+    # Full-frame categories (Pass 1), and pre_scene_change without a known
+    # change region (the trigger element could be anywhere on the page)
+    if category in ("scene_change", "scroll", "continuous", "baseline"):
+        return estimate_image_tokens(frame_width, frame_height)
+    if category == "pre_scene_change" and visual_change is None:
+        return estimate_image_tokens(frame_width, frame_height)
+
+    # ROI-cropped categories (Pass 2)
+    if visual_change is not None:
+        _bx, _by, bw, bh = visual_change.bounding_box
+        roi_w = min(max(roi_min_size, bw + 2 * roi_padding), frame_width)
+        roi_h = min(max(roi_min_size, bh + 2 * roi_padding), frame_height)
+    else:
+        size = roi_min_size + 2 * roi_padding
+        roi_w = min(size, frame_width)
+        roi_h = min(size, frame_height)
+
+    return estimate_image_tokens(roi_w, roi_h)
+
+
+def _base_frame_count(category: str, visual_change: VisualChangeEvent | None) -> int:
+    """Minimum frame count for a moment category."""
+    if category == "pre_scene_change":
+        return 2
+    if category == "interaction" and visual_change is not None:
+        return 2
+    return 1
+
+
+def _ideal_frame_count(
+    category: str,
+    visual_change: VisualChangeEvent | None,
+    duration_ms: float,
+    sample_interval_ms: int,
+    max_frames: int,
+) -> int:
+    """Activity-based frame count: more frames for longer moments."""
+    base = _base_frame_count(category, visual_change)
+    if sample_interval_ms <= 0 or duration_ms <= 0:
+        return base
+
+    if category == "pre_scene_change" or (category == "interaction" and visual_change is not None):
+        # before + evenly spaced intermediates + after
+        intermediates = max(0, int(duration_ms / sample_interval_ms) - 1)
+        count = 2 + intermediates
+    else:
+        count = max(1, math.ceil(duration_ms / sample_interval_ms))
+
+    if max_frames > 0:
+        count = min(count, max_frames)
+    return max(base, count)
+
+
+def _estimate_moment_tokens(
+    category: str,
+    visual_change: VisualChangeEvent | None,
+    frame_width: int,
+    frame_height: int,
+    roi_min_size: int,
+    roi_padding: int,
+    frame_count: int = 0,
+) -> int:
+    """Estimate total token cost for a moment.
+
+    When *frame_count* is 0 the default for the category is used (2 for
+    interactions, 1 for everything else).
+    """
+    if frame_count <= 0:
+        frame_count = _base_frame_count(category, visual_change)
+    return _per_frame_tokens(
+        category, visual_change, frame_width, frame_height,
+        roi_min_size, roi_padding,
+    ) * frame_count
+
+
 def detect_moments(
     visual_changes: tuple[VisualChangeEvent, ...],
     flow_events: tuple[FlowEvent, ...],
@@ -1480,8 +1566,15 @@ def detect_moments(
     candidates: list[Moment] = []
     used_time_ranges: list[tuple[float, float]] = []
 
+    enabled_cats = set(oc.moment_categories)
+    min_vc_dur = oc.min_visual_change_duration_ms
+
     # Step 1-3: Visual change events → moment candidates, subtract scrolls
     for vc in visual_changes:
+        # Duration filter — skip transient changes
+        if min_vc_dur > 0 and (vc.time_end_ms - vc.time_start_ms) < min_vc_dur:
+            continue
+
         # Step 2: Check if overlapping with a flow event (scroll)
         overlapping_flow = None
         for fe in flow_events:
@@ -1498,7 +1591,11 @@ def detect_moments(
                 flow_event=overlapping_flow,
                 category="scroll",
                 priority=2,
-                estimated_tokens=oc.tokens_full_frame,
+                estimated_tokens=_estimate_moment_tokens(
+                    "scroll", vc, frame_width, frame_height,
+                    oc.roi_min_size, oc.roi_padding,
+                ),
+                frame_count=_base_frame_count("scroll", vc),
             ))
             used_time_ranges.append((vc.time_start_ms, vc.time_end_ms))
             continue
@@ -1529,13 +1626,10 @@ def detect_moments(
 
         if vc.category == "scene_change":
             cat, pri = "scene_change", 0
-            est_tokens = oc.tokens_full_frame
         elif vc.category == "continuous_change":
             cat, pri = "continuous", 2
-            est_tokens = oc.tokens_full_frame
         else:  # local_change
             cat, pri = "interaction", 1
-            est_tokens = oc.tokens_roi_pair
 
         candidates.append(Moment(
             time_start_ms=vc.time_start_ms,
@@ -1546,9 +1640,43 @@ def detect_moments(
             cursor_associated=cursor_associated,
             category=cat,
             priority=pri,
-            estimated_tokens=est_tokens,
+            estimated_tokens=_estimate_moment_tokens(
+                cat, vc, frame_width, frame_height,
+                oc.roi_min_size, oc.roi_padding,
+            ),
+            frame_count=_base_frame_count(cat, vc),
         ))
         used_time_ranges.append((vc.time_start_ms, vc.time_end_ms))
+
+        # Companion: capture the window just before a scene change so
+        # Pass 2 can identify what triggered the navigation.
+        if vc.category == "scene_change" and "pre_scene_change" in enabled_cats:
+            anchor_ms = vc.frames[0].timestamp_a_ms if vc.frames else vc.time_start_ms
+            pre_start = max(0, anchor_ms - 500)
+            pre_end = anchor_ms
+
+            # Cursor at the moment of the trigger — may be None
+            pre_cursor: CursorPosition | None = None
+            pre_cursor_assoc = False
+            if trajectory:
+                det = _lookup_cursor_at_timestamp(trajectory, anchor_ms, tolerance_ms=600)
+                if det is not None:
+                    pre_cursor = CursorPosition(x=det.x, y=det.y)
+                    pre_cursor_assoc = True
+
+            candidates.append(Moment(
+                time_start_ms=pre_start,
+                time_end_ms=pre_end,
+                cursor_before=pre_cursor,
+                cursor_associated=pre_cursor_assoc,
+                category="pre_scene_change",
+                priority=1,
+                estimated_tokens=_estimate_moment_tokens(
+                    "pre_scene_change", None, frame_width, frame_height,
+                    oc.roi_min_size, oc.roi_padding,
+                ),
+                frame_count=2,
+            ))
 
     # Step 5: Add cursor_stop moments not overlapping existing
     for start_ms, end_ms, cx, cy in cursor_stops:
@@ -1564,7 +1692,11 @@ def detect_moments(
                 cursor_associated=True,
                 category="cursor_stop",
                 priority=3,
-                estimated_tokens=oc.tokens_roi_single,
+                estimated_tokens=_estimate_moment_tokens(
+                    "cursor_stop", None, frame_width, frame_height,
+                    oc.roi_min_size, oc.roi_padding,
+                ),
+                frame_count=1,
             ))
             used_time_ranges.append((start_ms, end_ms))
 
@@ -1586,7 +1718,11 @@ def detect_moments(
                 cursor_associated=cursor_pos is not None,
                 category="cursor_only",
                 priority=4,
-                estimated_tokens=oc.tokens_roi_single,
+                estimated_tokens=_estimate_moment_tokens(
+                    "cursor_only", None, frame_width, frame_height,
+                    oc.roi_min_size, oc.roi_padding,
+                ),
+                frame_count=1,
             ))
             used_time_ranges.append((event.time_start_ms, event.time_end_ms))
 
@@ -1599,25 +1735,34 @@ def detect_moments(
             # Keep higher priority (lower number)
             best_pri = min(prev.priority, m.priority)
             best_cat = prev.category if prev.priority <= m.priority else m.category
+            merged_vc = prev.visual_change or m.visual_change
+            merged_base = _base_frame_count(best_cat, merged_vc)
             merged[-1] = Moment(
                 time_start_ms=prev.time_start_ms,
                 time_end_ms=max(prev.time_end_ms, m.time_end_ms),
-                visual_change=prev.visual_change or m.visual_change,
+                visual_change=merged_vc,
                 flow_event=prev.flow_event or m.flow_event,
                 cursor_before=prev.cursor_before or m.cursor_before,
                 cursor_after=m.cursor_after or prev.cursor_after,
                 cursor_associated=prev.cursor_associated or m.cursor_associated,
                 category=best_cat,
                 priority=best_pri,
-                estimated_tokens=prev.estimated_tokens + m.estimated_tokens,
+                estimated_tokens=_estimate_moment_tokens(
+                    best_cat, merged_vc, frame_width, frame_height,
+                    oc.roi_min_size, oc.roi_padding, merged_base,
+                ),
+                frame_count=merged_base,
             )
         else:
             merged.append(m)
 
+    # Category filter — drop disabled categories after merging
+    merged = [m for m in merged if m.category in enabled_cats]
+
     # Step 8: Budget-based selection
     budget = (duration_ms / 60000.0) * oc.token_budget_per_minute
 
-    # Scene changes always included
+    # Scene changes always included (if enabled)
     selected: list[Moment] = [m for m in merged if m.category == "scene_change"]
     remaining = [m for m in merged if m.category != "scene_change"]
     used_budget = sum(m.estimated_tokens for m in selected)
@@ -1630,28 +1775,91 @@ def detect_moments(
             used_budget += m.estimated_tokens
 
     # Step 9: Add baseline moments in gaps > baseline_max_gap_ms
-    selected.sort(key=lambda m: m.time_start_ms)
-    all_times = [0.0] + [m.time_start_ms for m in selected] + [m.time_end_ms for m in selected] + [duration_ms]
-    all_times.sort()
+    if "baseline" in enabled_cats:
+        selected.sort(key=lambda m: m.time_start_ms)
+        all_times = [0.0] + [m.time_start_ms for m in selected] + [m.time_end_ms for m in selected] + [duration_ms]
+        all_times.sort()
 
-    baselines: list[Moment] = []
-    for i in range(len(all_times) - 1):
-        gap = all_times[i + 1] - all_times[i]
-        if gap > oc.baseline_max_gap_ms:
-            mid = (all_times[i] + all_times[i + 1]) / 2.0
-            baseline = Moment(
-                time_start_ms=mid,
-                time_end_ms=mid,
-                category="baseline",
-                priority=5,
-                estimated_tokens=oc.tokens_full_frame,
+        baseline_tokens = _estimate_moment_tokens(
+            "baseline", None, frame_width, frame_height,
+            oc.roi_min_size, oc.roi_padding,
+        )
+        baselines: list[Moment] = []
+        for i in range(len(all_times) - 1):
+            gap = all_times[i + 1] - all_times[i]
+            if gap > oc.baseline_max_gap_ms:
+                mid = (all_times[i] + all_times[i + 1]) / 2.0
+                baseline = Moment(
+                    time_start_ms=mid,
+                    time_end_ms=mid,
+                    category="baseline",
+                    priority=5,
+                    estimated_tokens=baseline_tokens,
+                    frame_count=1,
+                )
+                if used_budget + baseline_tokens <= budget:
+                    baselines.append(baseline)
+                    used_budget += baseline_tokens
+
+        selected.extend(baselines)
+
+    selected.sort(key=lambda m: m.time_start_ms)
+
+    # Step 10: Density cap — keep highest priority if over limit
+    max_per_min = oc.max_moments_per_minute
+    if max_per_min > 0:
+        max_moments = max(1, int((duration_ms / 60000.0) * max_per_min))
+        if len(selected) > max_moments:
+            selected.sort(key=lambda m: (m.priority, m.time_start_ms))
+            selected = selected[:max_moments]
+            selected.sort(key=lambda m: m.time_start_ms)
+
+    # Step 11: Distribute extra frames from remaining budget
+    #
+    # Moments were selected at base frame counts (1 or 2).  When
+    # moment_sample_interval_ms is set, compute the ideal (activity-based)
+    # frame count for each moment and upgrade as many as the remaining budget
+    # allows, longest moments first.
+    if oc.moment_sample_interval_ms > 0:
+        remaining_budget = budget - sum(m.estimated_tokens for m in selected)
+
+        # Build upgrade candidates: (index, extra_frames_wanted, per_frame_cost)
+        upgrades: list[tuple[int, int, int]] = []
+        for i, m in enumerate(selected):
+            ideal = _ideal_frame_count(
+                m.category, m.visual_change,
+                m.time_end_ms - m.time_start_ms,
+                oc.moment_sample_interval_ms, oc.moment_max_frames,
             )
-            if used_budget + oc.tokens_full_frame <= budget:
-                baselines.append(baseline)
-                used_budget += oc.tokens_full_frame
+            extra = ideal - m.frame_count
+            if extra > 0:
+                pf = _per_frame_tokens(
+                    m.category, m.visual_change, frame_width, frame_height,
+                    oc.roi_min_size, oc.roi_padding,
+                )
+                upgrades.append((i, extra, pf))
 
-    selected.extend(baselines)
-    selected.sort(key=lambda m: m.time_start_ms)
+        # Longest moments benefit most from extra frames
+        upgrades.sort(key=lambda u: -(selected[u[0]].time_end_ms - selected[u[0]].time_start_ms))
+
+        for idx, extra_wanted, pf_cost in upgrades:
+            granted = 0
+            for _ in range(extra_wanted):
+                if remaining_budget >= pf_cost:
+                    granted += 1
+                    remaining_budget -= pf_cost
+                else:
+                    break
+            if granted > 0:
+                m = selected[idx]
+                new_count = m.frame_count + granted
+                selected[idx] = m.model_copy(update={
+                    "frame_count": new_count,
+                    "estimated_tokens": _estimate_moment_tokens(
+                        m.category, m.visual_change, frame_width, frame_height,
+                        oc.roi_min_size, oc.roi_padding, new_count,
+                    ),
+                })
 
     return tuple(selected)
 

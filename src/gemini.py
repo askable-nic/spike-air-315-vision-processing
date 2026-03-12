@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import asyncio
+import math
 import os
 import time
 from typing import Any
@@ -71,6 +72,18 @@ async def make_request(
                 await asyncio.sleep(wait)
 
     raise RuntimeError(f"Gemini request failed after {max_retries} attempts: {last_error}")
+
+
+def estimate_image_tokens(width: int, height: int, tokens_per_tile: int = 258) -> int:
+    """Estimate Gemini image tokens using the tiling formula.
+
+    Gemini divides images into 768x768 tiles, each costing ``tokens_per_tile``
+    tokens (258 by default).  For example a 1920x1080 frame requires
+    ceil(1920/768) * ceil(1080/768) = 3*2 = 6 tiles = 1548 tokens, while a
+    512x512 ROI crop needs just 1 tile = 258 tokens.
+    """
+    tiles = math.ceil(width / 768) * math.ceil(height / 768)
+    return tiles * tokens_per_tile
 
 
 def estimate_tokens(frame_count: int, tokens_per_frame: int = 1548) -> int:

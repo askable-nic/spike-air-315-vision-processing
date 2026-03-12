@@ -794,10 +794,10 @@ def _parse_scene_descriptions(response_text: str) -> tuple[SceneDescription, ...
 def _select_pass2_moments(
     moments: tuple[Moment, ...],
 ) -> tuple[Moment, ...]:
-    """Filter moments for Pass 2: interaction, cursor_stop, cursor_only."""
+    """Filter moments for Pass 2: interaction, pre_scene_change, cursor_stop, cursor_only."""
     return tuple(
         m for m in moments
-        if m.category in ("interaction", "cursor_stop", "cursor_only")
+        if m.category in ("interaction", "pre_scene_change", "cursor_stop", "cursor_only")
     )
 
 
@@ -830,6 +830,10 @@ def _compute_moment_roi(
         x0 = min(x0, frame_width - w)
         y0 = min(y0, frame_height - h)
         return (max(0, x0), max(0, y0), min(w, frame_width), min(h, frame_height))
+
+    # pre_scene_change without cursor → full frame (trigger could be anywhere)
+    if moment.category == "pre_scene_change" and moment.cursor_before is None:
+        return (0, 0, frame_width, frame_height)
 
     # Cursor-based ROI
     cx, cy = frame_width // 2, frame_height // 2
@@ -992,20 +996,39 @@ async def _analyse_moment_batch(
 
         for m_idx, moment in enumerate(batch):
             frame_indices: list[int] = []
+            is_pair = (
+                moment.category in ("interaction", "pre_scene_change")
+                and moment.visual_change is not None
+            )
+            n = moment.frame_count if moment.frame_count > 0 else (2 if is_pair else 1)
 
-            if moment.category == "interaction" and moment.visual_change is not None:
-                # Before + after frames
+            if is_pair:
                 before_ts = max(0, moment.time_start_ms - 250)
                 after_ts = moment.time_end_ms + 250
-                frame_indices.append(len(ts_to_extract))
-                ts_to_extract.append(before_ts)
-                frame_indices.append(len(ts_to_extract))
-                ts_to_extract.append(after_ts)
+                if n <= 2:
+                    timestamps = [before_ts, after_ts]
+                else:
+                    # before + evenly spaced intermediates + after
+                    timestamps = [before_ts]
+                    dur = moment.time_end_ms - moment.time_start_ms
+                    for k in range(1, n - 1):
+                        timestamps.append(moment.time_start_ms + dur * k / (n - 1))
+                    timestamps.append(after_ts)
+                for ts in timestamps:
+                    frame_indices.append(len(ts_to_extract))
+                    ts_to_extract.append(ts)
             else:
-                # Single frame at midpoint
-                mid_ts = (moment.time_start_ms + moment.time_end_ms) / 2.0
-                frame_indices.append(len(ts_to_extract))
-                ts_to_extract.append(mid_ts)
+                if n <= 1:
+                    timestamps = [(moment.time_start_ms + moment.time_end_ms) / 2.0]
+                else:
+                    dur = moment.time_end_ms - moment.time_start_ms
+                    timestamps = [
+                        moment.time_start_ms + dur * k / (n - 1)
+                        for k in range(n)
+                    ] if dur > 0 else [(moment.time_start_ms + moment.time_end_ms) / 2.0]
+                for ts in timestamps:
+                    frame_indices.append(len(ts_to_extract))
+                    ts_to_extract.append(ts)
 
             moment_frame_map.append((m_idx, frame_indices))
 
@@ -1038,8 +1061,13 @@ async def _analyse_moment_batch(
                 jpeg_bytes = encode_jpeg(frame_to_encode, ac.jpeg_quality)
 
                 # Label
-                if moment.category == "interaction" and len(fi_list) == 2:
-                    role = "before" if fi_pos == 0 else "after"
+                if moment.category in ("interaction", "pre_scene_change") and len(fi_list) >= 2:
+                    if fi_pos == 0:
+                        role = "before"
+                    elif fi_pos == len(fi_list) - 1:
+                        role = "after"
+                    else:
+                        role = f"intermediate {fi_pos}"
                 else:
                     role = "single"
 
@@ -1090,6 +1118,11 @@ async def _analyse_moment_batch(
                 "1. What event type best describes what happened (click, hover, navigate, input_text, select, change_ui_state, drag, etc.)\n"
                 "2. What UI element was involved (button label, link text, form field, etc.)\n"
                 "3. A clear description of the user action\n\n"
+                "For pre_scene_change moments (before/after pairs captured just before a page "
+                "navigation), determine what triggered the scene change. Look for elements in a "
+                "hover or active/pressed state, cursor position if visible, and any visual "
+                "difference indicating an element was activated. The cursor may not be present "
+                "(mobile, keyboard navigation, touch). Set event type to click or navigate.\n\n"
                 "For cursor position moments (single frame), determine:\n"
                 "1. What UI element is under or near the cursor\n"
                 "2. Whether this appears to be a hover, a click, or just the cursor resting\n"
