@@ -195,5 +195,203 @@ def describe_frame(session: str, timestamp: float, base_dir: Path):
     click.echo(json.dumps({"description": result["text"]}))
 
 
+@main.command("enrich-baselines")
+@click.option("--session", "-s", default=None, help="Session ID to enrich (default: all in baselines/)")
+@click.option("--max-concurrent", default=5, type=int, help="Max concurrent Gemini requests")
+@click.option("--dry-run", is_flag=True, default=False, help="Print enrichment summary without calling Gemini")
+@click.option("--base-dir", type=click.Path(exists=True, path_type=Path), default=".", help="Project base directory")
+def enrich_baselines(session: str | None, max_concurrent: int, dry_run: bool, base_dir: Path):
+    """Enrich baseline event annotations with Gemini-generated descriptions."""
+    from src.manifest import load_manifest, resolve_video_path
+    from stages.enrich_baselines import enrich_session
+
+    baselines_dir = base_dir / "baselines"
+    if not baselines_dir.exists():
+        click.echo("No baselines/ directory found.")
+        raise SystemExit(1)
+
+    # Discover sessions
+    if session:
+        session_dirs = [baselines_dir / session]
+        if not session_dirs[0].exists():
+            click.echo(f"Session directory not found: {session_dirs[0]}")
+            raise SystemExit(1)
+    else:
+        session_dirs = sorted(
+            d for d in baselines_dir.iterdir()
+            if d.is_dir() and not d.name.startswith(".")
+        )
+
+    if not session_dirs:
+        click.echo("No session directories found in baselines/.")
+        return
+
+    # Load manifest for video paths and offsets
+    manifest = load_manifest(base_dir / "input_data" / "manifest.json")
+    manifest_lookup = {s.identifier: s for s in manifest}
+
+    # Load prompt template
+    prompt_path = base_dir / "prompts" / "enrich_baseline.txt"
+    if not prompt_path.exists():
+        click.echo(f"Prompt template not found: {prompt_path}")
+        raise SystemExit(1)
+    template = prompt_path.read_text()
+
+    for session_dir in session_dirs:
+        session_id = session_dir.name
+        events_path = session_dir / "events.json"
+
+        if not events_path.exists():
+            click.echo(f"Skipping {session_id}: no events.json")
+            continue
+
+        session_manifest = manifest_lookup.get(session_id)
+        if session_manifest is None:
+            click.echo(f"Skipping {session_id}: not found in manifest")
+            continue
+
+        video_path = resolve_video_path(session_manifest, base_dir / "input_data")
+        if not video_path.exists():
+            click.echo(f"Skipping {session_id}: video not found at {video_path}")
+            continue
+
+        with open(events_path) as f:
+            events = json.load(f)
+
+        click.echo(f"Processing {session_id} ({len(events)} events)...")
+
+        enriched = asyncio.run(enrich_session(
+            session_id=session_id,
+            events=events,
+            video_path=video_path,
+            screen_track_start_offset=session_manifest.screenTrackStartOffset,
+            template=template,
+            max_concurrent=max_concurrent,
+            dry_run=dry_run,
+        ))
+
+        if not dry_run:
+            with open(events_path, "w") as f:
+                json.dump(enriched, f, indent=2)
+            click.echo(f"  Written enriched events to {events_path}")
+
+    click.echo("Done.")
+
+
+@main.command()
+@click.option("--branch", "-b", required=True, help="Experiment branch name")
+@click.option("--iteration", "-i", required=True, type=int, help="Iteration number")
+@click.option("--session", "-s", multiple=True, help="Session ID(s) to evaluate (default: all with baselines)")
+@click.option("--time-tolerance", default=2000, type=float, help="Time tolerance in ms for matching (default: 2000)")
+@click.option("--similarity-threshold", default=0.5, type=float, help="Min match score threshold (default: 0.5)")
+@click.option("--verbose", "-v", is_flag=True, default=False, help="Show event-level match details")
+@click.option("--output-json", is_flag=True, default=False, help="Output results as JSON")
+@click.option("--base-dir", type=click.Path(exists=True, path_type=Path), default=".", help="Project base directory")
+def evaluate(
+    branch: str,
+    iteration: int,
+    session: tuple[str, ...],
+    time_tolerance: float,
+    similarity_threshold: float,
+    verbose: bool,
+    output_json: bool,
+    base_dir: Path,
+):
+    """Evaluate experiment results against baseline annotations."""
+    from src.evaluate import (
+        greedy_match,
+        compute_metrics,
+        format_results,
+        result_to_dict,
+    )
+
+    baselines_dir = base_dir / "baselines"
+    experiment_dir = base_dir / "experiments" / branch / str(iteration) / "output"
+
+    if not baselines_dir.exists():
+        click.echo("No baselines/ directory found.")
+        raise SystemExit(1)
+    if not experiment_dir.exists():
+        click.echo(f"No experiment output found at {experiment_dir}")
+        raise SystemExit(1)
+
+    # Discover sessions that have both baseline and experiment events
+    if session:
+        session_ids = list(session)
+    else:
+        baseline_sessions = {
+            d.name for d in baselines_dir.iterdir()
+            if d.is_dir() and not d.name.startswith(".") and (d / "events.json").exists()
+        }
+        experiment_sessions = {
+            d.name for d in experiment_dir.iterdir()
+            if d.is_dir() and not d.name.startswith(".") and (d / "events.json").exists()
+        }
+        session_ids = sorted(baseline_sessions & experiment_sessions)
+
+    if not session_ids:
+        click.echo("No sessions found with both baseline and experiment events.")
+        return
+
+    all_results = []
+
+    for sid in session_ids:
+        baseline_path = baselines_dir / sid / "events.json"
+        experiment_path = experiment_dir / sid / "events.json"
+
+        if not baseline_path.exists():
+            click.echo(f"Skipping {sid}: no baseline events.json")
+            continue
+        if not experiment_path.exists():
+            click.echo(f"Skipping {sid}: no experiment events.json")
+            continue
+
+        with open(baseline_path) as f:
+            baselines = json.load(f)
+        with open(experiment_path) as f:
+            experiments = json.load(f)
+
+        matched, unmatched_b, unmatched_e = greedy_match(
+            baselines, experiments, time_tolerance, similarity_threshold,
+        )
+        result = compute_metrics(
+            baselines, experiments, matched, unmatched_b, unmatched_e, sid,
+        )
+        all_results.append((result, baselines, experiments, matched, unmatched_b, unmatched_e))
+
+        if not output_json:
+            click.echo(f"\n{format_results(
+                result,
+                baselines=baselines,
+                experiments=experiments,
+                matched_pairs=matched,
+                unmatched_baselines=unmatched_b,
+                unmatched_experiments=unmatched_e,
+                verbose=verbose,
+            )}")
+
+    if not all_results:
+        click.echo("No sessions evaluated.")
+        return
+
+    results_only = [r for r, *_ in all_results]
+
+    # Aggregate summary for multiple sessions
+    if len(results_only) > 1 and not output_json:
+        total_b = sum(r.baseline_count for r in results_only)
+        total_e = sum(r.experiment_count for r in results_only)
+        total_m = sum(r.matched_count for r in results_only)
+        agg_prec = total_m / total_e if total_e > 0 else 0.0
+        agg_rec = total_m / total_b if total_b > 0 else 0.0
+        agg_f1 = 2 * agg_prec * agg_rec / (agg_prec + agg_rec) if (agg_prec + agg_rec) > 0 else 0.0
+        click.echo(f"\n--- Aggregate ({len(results_only)} sessions) ---")
+        click.echo(f"  Baseline: {total_b}  Experiment: {total_e}  Matched: {total_m}")
+        click.echo(f"  Precision: {agg_prec:.3f}  Recall: {agg_rec:.3f}  F1: {agg_f1:.3f}")
+
+    if output_json:
+        output = [result_to_dict(r) for r in results_only]
+        click.echo(json.dumps(output if len(output) > 1 else output[0], indent=2))
+
+
 if __name__ == "__main__":
     main()

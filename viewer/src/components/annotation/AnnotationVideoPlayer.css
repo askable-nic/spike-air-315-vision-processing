@@ -123,3 +123,24 @@
   pointer-events: none;
   z-index: 8;
 }
+
+.annotation-video__cursor {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  margin-left: -6px;
+  margin-top: -6px;
+  border-radius: 50%;
+  background: rgba(255, 220, 40, 0.85);
+  border: 2px solid rgba(255, 100, 0, 0.9);
+  pointer-events: none;
+  z-index: 9;
+}
+
+.annotation-video__target-bbox {
+  position: absolute;
+  border: 2px solid rgba(0, 220, 100, 0.8);
+  background: rgba(0, 220, 100, 0.1);
+  pointer-events: none;
+  z-index: 8;
+}

@@ -109,6 +109,7 @@
   cursor: pointer;
   font-size: 12px;
   transition: background-color 0.15s;
+  flex-wrap: wrap;
 }
 
 .event-list__item:hover {
@@ -136,6 +137,23 @@
   color: var(--text-secondary);
   white-space: nowrap;
   flex-shrink: 0;
+}
+
+.event-list__seek {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 9px;
+  padding: 2px 4px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.event-list__seek:hover {
+  color: var(--accent);
+  background: var(--hover-bg);
 }
 
 .event-list__desc {

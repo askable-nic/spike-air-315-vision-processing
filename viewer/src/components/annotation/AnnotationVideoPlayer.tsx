@@ -1,5 +1,5 @@
 import { RefObject, useCallback } from "react";
-import { BoundingBox } from "../../annotationTypes";
+import { BoundingBox, CursorPosition } from "../../annotationTypes";
 import { PickMode } from "../../hooks/useCoordinatePick";
 import { formatTimeMs, videoMsToStoredMs } from "../../lib/time";
 import "./AnnotationVideoPlayer.css";
@@ -37,6 +37,8 @@ interface AnnotationVideoPlayerProps {
   ) => BoundingBox | null;
   readonly onCoordinatePicked?: (coords: { x: number; y: number }) => void;
   readonly onRegionPicked?: (box: BoundingBox) => void;
+  readonly cursorPosition?: CursorPosition;
+  readonly targetBbox?: BoundingBox;
 }
 
 const videoToClient = (
@@ -88,6 +90,8 @@ export const AnnotationVideoPlayer = ({
   onVideoMouseUp,
   onCoordinatePicked,
   onRegionPicked,
+  cursorPosition,
+  targetBbox,
 }: AnnotationVideoPlayerProps) => {
   const videoMs = currentTime * 1000;
   const storedMs = videoMsToStoredMs(videoMs, offset);
@@ -193,6 +197,20 @@ export const AnnotationVideoPlayer = ({
         </div>
       )}
       {renderDragOverlay()}
+      {cursorPosition && videoRef.current && (() => {
+        const pos = videoToClient(cursorPosition.x, cursorPosition.y, videoRef.current!);
+        return <div className="annotation-video__cursor" style={{ left: pos.left, top: pos.top }} />;
+      })()}
+      {targetBbox && videoRef.current && (() => {
+        const tl = videoToClient(targetBbox.x, targetBbox.y, videoRef.current!);
+        const br = videoToClient(targetBbox.x + targetBbox.width, targetBbox.y + targetBbox.height, videoRef.current!);
+        return (
+          <div
+            className="annotation-video__target-bbox"
+            style={{ left: tl.left, top: tl.top, width: br.left - tl.left, height: br.top - tl.top }}
+          />
+        );
+      })()}
       <div className="annotation-video__info">
         <span className="annotation-video__controls">
           <button onClick={(e) => { e.stopPropagation(); handleFrameStep(-1 / 30); }} title="Back 1 frame (Shift+←)">

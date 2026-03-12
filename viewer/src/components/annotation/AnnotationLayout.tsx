@@ -35,6 +35,8 @@ export const AnnotationLayout = ({ sessionId, manifest }: AnnotationLayoutProps)
   const coordinatePick = useCoordinatePick();
   const [editorWidthPercent, setEditorWidthPercent] = useState(40);
   const [isDragging, setIsDragging] = useState(false);
+  const [showOverlays, setShowOverlays] = useState(true);
+  const [seekOnSelect, setSeekOnSelect] = useState(false);
 
   const handlePointerDown = useCallback(
     (e: React.PointerEvent<HTMLDivElement>) => {
@@ -70,8 +72,15 @@ export const AnnotationLayout = ({ sessionId, manifest }: AnnotationLayoutProps)
   const handleEventSelect = useCallback(
     (index: number) => {
       annotation.selectEvent(index);
+      if (seekOnSelect) {
+        const evt = annotation.events[index];
+        if (evt) {
+          const videoSec = (evt.time_start - offset) / 1000;
+          if (videoSec >= 0) seekTo(videoSec);
+        }
+      }
     },
-    [annotation]
+    [annotation, seekOnSelect, offset, seekTo]
   );
 
   const handleSeekToEvent = useCallback(
@@ -202,6 +211,20 @@ export const AnnotationLayout = ({ sessionId, manifest }: AnnotationLayoutProps)
         <button className="annotation-layout__export" onClick={annotation.exportJson}>
           Export
         </button>
+        <button
+          className={`annotation-layout__toggle${seekOnSelect ? " annotation-layout__toggle--active" : ""}`}
+          onClick={() => setSeekOnSelect((v) => !v)}
+          title="Seek video when selecting an event"
+        >
+          Auto-seek
+        </button>
+        <button
+          className={`annotation-layout__toggle${showOverlays ? " annotation-layout__toggle--active" : ""}`}
+          onClick={() => setShowOverlays((v) => !v)}
+          title="Toggle cursor & region overlays"
+        >
+          Overlays
+        </button>
       </div>
 
       {annotation.error && (
@@ -230,6 +253,8 @@ export const AnnotationLayout = ({ sessionId, manifest }: AnnotationLayoutProps)
             onVideoMouseUp={coordinatePick.onVideoMouseUp}
             onCoordinatePicked={handleCoordinatePicked}
             onRegionPicked={handleRegionPicked}
+            cursorPosition={showOverlays ? selectedEvent?.cursor_position : undefined}
+            targetBbox={showOverlays ? selectedEvent?._metadata?.interaction_target_bbox : undefined}
           />
         </div>
 

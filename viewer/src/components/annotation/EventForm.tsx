@@ -126,6 +126,20 @@ export const EventForm = ({
         </div>
       </div>
 
+      {event.time_end != null && (
+        <div className="event-form__field">
+          <label>Time Range</label>
+          <input
+            type="range"
+            min={event.time_start}
+            max={event.time_end}
+            step={1000 / 30}
+            value={Math.min(Math.max(currentVideoMs + offset, event.time_start), event.time_end)}
+            onChange={(e) => onSeekTo(Number(e.target.value))}
+          />
+        </div>
+      )}
+
       <div className="event-form__field">
         <label>Description</label>
         <textarea

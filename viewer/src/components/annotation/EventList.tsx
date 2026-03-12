@@ -72,6 +72,13 @@ export const EventList = ({
             onClick={() => onSelect(i)}
             onDoubleClick={() => onSeekTo(i)}
           >
+            <button
+              className="event-list__seek"
+              onClick={(e) => { e.stopPropagation(); onSelect(i); onSeekTo(i); }}
+              title="Seek to event"
+            >
+              ▶
+            </button>
             <span
               className="event-list__type"
               style={{ background: EVENT_TYPE_COLORS[evt.type] || "#666" }}

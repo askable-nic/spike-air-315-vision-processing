@@ -130,6 +130,27 @@
   border-top: 1px solid var(--border);
 }
 
+.annotation-layout__toggle {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.annotation-layout__toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.annotation-layout__toggle--active {
+  border-color: var(--accent);
+  background: rgba(76, 141, 255, 0.15);
+  color: var(--accent);
+}
+
 .annotation-layout__timeline {
   flex-shrink: 0;
 }
