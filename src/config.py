@@ -5,7 +5,7 @@ from typing import Any
 
 import yaml
 
-from src.models import GenerateBaselinesConfig, PipelineConfig
+from src.models import CvAugmentedConfig, ExperimentConfig, GenerateBaselinesConfig, PipelineConfig
 
 
 DEFAULTS: dict[str, Any] = {
@@ -22,7 +22,7 @@ DEFAULTS: dict[str, Any] = {
     "analyse": {
         "model": "gemini-3-flash-preview",
         "temperature": 0.1,
-        "max_concurrent": 5,
+        "max_concurrent": 10,
         "token_budget_per_segment": 50000,
         "tokens_per_frame": 1548,
         "context_frames": 2,
@@ -103,6 +103,18 @@ DEFAULTS: dict[str, Any] = {
         "baseline_max_gap_ms": 5000,
         "frame_dedup_ms": 200,
     },
+    "experiment": {
+        "f1_threshold": 0.3,
+        "recall_threshold": 0.2,
+        "precision_threshold": 0.15,
+        "min_sessions_before_break": 2,
+        "max_consecutive_systematic": 2,
+        "f1_decline_threshold": 0.1,
+        "auto_iterate": False,
+        "max_auto_iterations": 3,
+        "time_tolerance_ms": 2000,
+        "similarity_threshold": 0.5,
+    },
     "generate_baselines": {
         "model": "gemini-3-flash-preview",
         "temperature": 0.2,
@@ -111,6 +123,36 @@ DEFAULTS: dict[str, Any] = {
         "max_segment_duration_ms": 75000,
         "segment_overlap_ms": 5000,
         "source": "gemini_video_baseline",
+        "merge": {
+            "time_tolerance_ms": 2000,
+            "similarity_threshold": 0.6,
+            "discard_context_events": False,
+        },
+    },
+    "cv_augmented": {
+        "model": "gemini-3-flash-preview",
+        "temperature": 0.2,
+        "max_concurrent": 3,
+        "video_fps": 5,
+        "max_segment_duration_ms": 120000,
+        "segment_overlap_ms": 5000,
+        "source": "cv_augmented",
+        "summary_window_ms": 250,
+        "tracking_base_fps": 2.0,
+        "tracking_peak_fps": 15.0,
+        "tracking_displacement_threshold_px": 30.0,
+        "tracking_active_padding_ms": 500,
+        "resolution_height": 720,
+        "template_scales": [0.8, 1.0, 1.25, 1.5],
+        "match_threshold": 0.6,
+        "early_exit_threshold": 0.9,
+        "max_interpolation_gap_ms": 500,
+        "smooth_window": 3,
+        "smooth_displacement_threshold": 50.0,
+        "flow_fps": 2.0,
+        "flow_grid_step": 20,
+        "flow_window_size_ms": 1000,
+        "flow_window_step_ms": 500,
         "merge": {
             "time_tolerance_ms": 2000,
             "similarity_threshold": 0.6,
@@ -190,6 +232,17 @@ def resolve_config(
     return PipelineConfig(**merged)
 
 
+def resolve_experiment_config(
+    cli_overrides: tuple[str, ...] = (),
+) -> ExperimentConfig:
+    """Resolve experiment config from defaults + CLI overrides (experiment.* namespace)."""
+    base = dict(DEFAULTS.get("experiment", {}))
+    cli_config = _expand_dotted_overrides(cli_overrides)
+    exp_overrides = cli_config.get("experiment", {})
+    merged = deep_merge(base, exp_overrides)
+    return ExperimentConfig(**merged)
+
+
 def resolve_generate_baselines_config(
     cli_overrides: tuple[str, ...] = (),
 ) -> GenerateBaselinesConfig:
@@ -199,3 +252,14 @@ def resolve_generate_baselines_config(
     gb_overrides = cli_config.get("generate_baselines", cli_config)
     merged = deep_merge(base, gb_overrides)
     return GenerateBaselinesConfig(**merged)
+
+
+def resolve_cv_augmented_config(
+    cli_overrides: tuple[str, ...] = (),
+) -> CvAugmentedConfig:
+    """Apply 2-layer config precedence for cv-augmented: defaults -> CLI overrides."""
+    base = dict(DEFAULTS.get("cv_augmented", {}))
+    cli_config = _expand_dotted_overrides(cli_overrides)
+    cv_overrides = cli_config.get("cv_augmented", cli_config)
+    merged = deep_merge(base, cv_overrides)
+    return CvAugmentedConfig(**merged)

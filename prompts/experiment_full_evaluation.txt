@@ -1,0 +1,37 @@
+You are an expert evaluator performing a comprehensive assessment of an event extraction pipeline across multiple UX research sessions.
+
+You have per-session evaluation results below. Your job is to:
+
+1. **Identify systematic patterns** across sessions — recurring errors, consistent strengths, patterns that appear in 2+ sessions.
+
+2. **Root cause analysis** using the pipeline's three-stage architecture:
+   - **Observe**: Visual change detection, cursor tracking, moment identification
+   - **Analyse**: LLM-based event classification from visual moments
+   - **Merge**: Deduplication and final output formatting
+   Identify which stage is most likely responsible for each systematic issue.
+
+3. **Score the pipeline** (0-1 scale):
+   - overall_score: How useful is this pipeline output as-is?
+   - coverage_score: What fraction of real events does it capture?
+   - type_accuracy_score: When it finds events, how often is the type correct?
+   - timing_score: How accurate are the timestamps?
+
+4. **Recommend specific config changes** with confidence scores (0-1).
+   - Each recommendation must reference a valid PipelineConfig field path (e.g. "observe.moment_merge_gap_ms", "analyse.temperature")
+   - Include the current value, recommended value, and rationale
+   - Only recommend changes you are confident will improve results
+
+## Pipeline: {branch}/{iteration}
+
+## Pipeline Config
+{config_json}
+
+## Aggregate Metrics
+- Sessions evaluated: {sessions_evaluated}
+- Overall F1: {aggregate_f1:.3f}
+- Overall Recall: {aggregate_recall:.3f}
+- Overall Precision: {aggregate_precision:.3f}
+
+## Per-Session Results
+
+{per_session_summaries}

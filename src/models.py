@@ -183,6 +183,52 @@ class GenerateBaselinesConfig(BaseModel, frozen=True):
     )
 
 
+class CvAugmentedConfig(BaseModel, frozen=True):
+    model: str = "gemini-3-flash-preview"
+    temperature: float = 0.2
+    max_concurrent: int = 3
+    video_fps: int = 5
+    max_segment_duration_ms: int = 120000
+    segment_overlap_ms: int = 5000
+    source: str = "cv_augmented"
+    summary_window_ms: int = 250
+    # Cursor tracking
+    tracking_base_fps: float = 2.0
+    tracking_peak_fps: float = 15.0
+    tracking_displacement_threshold_px: float = 30.0
+    tracking_active_padding_ms: int = 500
+    resolution_height: int = 720
+    template_scales: tuple[float, ...] = (0.8, 1.0, 1.25, 1.5)
+    match_threshold: float = 0.6
+    early_exit_threshold: float = 0.9
+    max_interpolation_gap_ms: int = 500
+    smooth_window: int = 3
+    smooth_displacement_threshold: float = 50.0
+    # Optical flow
+    flow_fps: float = 2.0
+    flow_grid_step: int = 20
+    flow_window_size_ms: int = 1000
+    flow_window_step_ms: int = 500
+    merge: MergeConfig = MergeConfig(
+        time_tolerance_ms=2000,
+        similarity_threshold=0.6,
+        discard_context_events=False,
+    )
+
+
+class ExperimentConfig(BaseModel, frozen=True):
+    f1_threshold: float = 0.3
+    recall_threshold: float = 0.2
+    precision_threshold: float = 0.15
+    min_sessions_before_break: int = 2
+    max_consecutive_systematic: int = 2
+    f1_decline_threshold: float = 0.1
+    auto_iterate: bool = False
+    max_auto_iterations: int = 3
+    time_tolerance_ms: float = 2000
+    similarity_threshold: float = 0.5
+
+
 class PipelineConfig(BaseModel, frozen=True):
     triage: TriageConfig = TriageConfig()
     analyse: AnalyseConfig = AnalyseConfig()

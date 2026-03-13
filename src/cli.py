@@ -341,6 +341,125 @@ def generate_baselines(session: str | None, dry_run: bool, force: bool, override
         click.echo("No sessions processed.")
 
 
+@main.command("cv-augmented")
+@click.option("--session", "-s", default=None, help="Process single session by identifier")
+@click.option("--dry-run", is_flag=True, default=False, help="Show segments and estimated tokens without calling API")
+@click.option("--force", is_flag=True, default=False, help="Overwrite existing output")
+@click.option("--override", "-o", multiple=True, help="Config overrides (e.g. cv_augmented.model=gemini-3-flash-preview)")
+@click.option("--output-dir", type=click.Path(path_type=Path), default="experiments/cv-augmented/1/output", help="Output directory")
+@click.option("--base-dir", type=click.Path(exists=True, path_type=Path), default=".", help="Project base directory")
+def cv_augmented(session: str | None, dry_run: bool, force: bool, override: tuple[str, ...], output_dir: Path, base_dir: Path):
+    """Generate event annotations using video + CV cursor/scroll context."""
+    from src.config import resolve_cv_augmented_config
+    from src.manifest import load_manifest, resolve_video_path
+    from stages.generate_cv_augmented import generate_session_cv_augmented
+
+    config = resolve_cv_augmented_config(override)
+    manifest = load_manifest(base_dir / "input_data" / "manifest.json")
+
+    # Filter to requested session or all
+    if session:
+        sessions = tuple(s for s in manifest if s.identifier == session)
+        if not sessions:
+            click.echo(f"Session '{session}' not found in manifest.")
+            raise SystemExit(1)
+    else:
+        sessions = manifest
+
+    # Load prompt template
+    prompt_path = base_dir / "prompts" / "cv_augmented.txt"
+    if not prompt_path.exists():
+        click.echo(f"Prompt template not found: {prompt_path}")
+        raise SystemExit(1)
+    prompt_template = prompt_path.read_text()
+
+    # Resolve output dir relative to base_dir
+    resolved_output_dir = output_dir if output_dir.is_absolute() else base_dir / output_dir
+
+    total_tokens = 0
+    results: list[dict] = []
+
+    for session_manifest in sessions:
+        video_path = resolve_video_path(session_manifest, base_dir / "input_data")
+        if not video_path.exists():
+            click.echo(f"Skipping {session_manifest.identifier}: video not found at {video_path}")
+            continue
+
+        result = asyncio.run(generate_session_cv_augmented(
+            session_manifest=session_manifest,
+            video_path=video_path,
+            config=config,
+            prompt_template=prompt_template,
+            base_dir=base_dir,
+            output_dir=resolved_output_dir,
+            dry_run=dry_run,
+            force=force,
+        ))
+
+        if result is not None:
+            results.append(result)
+            total_tokens += result.get("estimated_tokens", 0) if dry_run else result.get("total_input_tokens", 0)
+
+    if dry_run and results:
+        print(f"\nTotal estimated tokens: ~{total_tokens:,}")
+    elif results:
+        total_events = sum(r.get("total_events_deduped", 0) for r in results)
+        click.echo(f"\nDone. {len(results)} sessions, {total_events} total events, {total_tokens:,} input tokens.")
+        click.echo(f"Output: {resolved_output_dir}")
+    else:
+        click.echo("No sessions processed.")
+
+
+@main.command()
+@click.option("--branch", "-b", required=True, help="Experiment branch name")
+@click.option("--iteration", "-i", default=None, type=int, help="Iteration number (default: latest)")
+@click.option("--session", "-s", multiple=True, help="Session ID(s) to evaluate (default: all with baselines)")
+@click.option("--override", "-o", multiple=True, help="Config override as dotted.key=value")
+@click.option("--force", "-f", is_flag=True, default=False, help="Re-run extraction, ignoring cached outputs")
+@click.option("--resume", is_flag=True, default=False, help="Resume from experiment_progress.json checkpoint")
+@click.option("--dry-run", is_flag=True, default=False, help="Show what would be evaluated without running")
+@click.option("--base-dir", type=click.Path(exists=True, path_type=Path), default=".", help="Project base directory")
+def experiment(
+    branch: str,
+    iteration: int | None,
+    session: tuple[str, ...],
+    override: tuple[str, ...],
+    force: bool,
+    resume: bool,
+    dry_run: bool,
+    base_dir: Path,
+):
+    """Run experiment: extract + mechanical evaluation.
+
+    Qualitative analysis and LLM judgment are handled by the /evaluate skill in Claude Code.
+    """
+    from src.experiment import run_experiment
+
+    sessions = session if session else None
+    summary = run_experiment(
+        branch=branch,
+        iteration=iteration,
+        sessions=sessions,
+        cli_overrides=override,
+        base_dir=base_dir,
+        force=force,
+        resume=resume,
+        dry_run=dry_run,
+    )
+
+    # Print summary
+    click.echo(f"\n{'=' * 60}")
+    click.echo(f"Experiment: {summary.branch}/{summary.iteration}")
+    click.echo(f"Sessions: {len(summary.sessions_completed)}/{len(summary.sessions_requested)}")
+    if summary.early_break:
+        click.echo(f"Early break: {summary.early_break_reason}")
+    click.echo(f"F1: {summary.aggregate_f1:.3f}  Recall: {summary.aggregate_recall:.3f}  Precision: {summary.aggregate_precision:.3f}")
+
+    output_dir = base_dir / "experiments" / summary.branch / str(summary.iteration) / "output"
+    click.echo(f"\nFull report: {output_dir / 'experiment_summary.md'}")
+    click.echo("Run /evaluate to perform qualitative analysis and LLM judgment.")
+
+
 @main.command()
 @click.option("--branch", "-b", default=None, help="Experiment branch name")
 @click.option("--iteration", "-i", default=None, type=int, help="Iteration number")

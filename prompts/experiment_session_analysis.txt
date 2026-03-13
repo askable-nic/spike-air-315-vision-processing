@@ -1,0 +1,37 @@
+You are an expert evaluator comparing two event annotations of the same screen recording from a UX research study.
+
+The BASELINE is a human-annotated reference — treat it as ground truth.
+The EXPERIMENT is a machine-generated extraction being evaluated.
+
+Compare the two event lists and categorise every difference into one of these severity levels:
+
+- **noise**: Insignificant timing variations (<1s), minor description wording differences, or extra low-confidence events that a human reviewer would ignore.
+- **acceptable**: Small timing offsets (1-3s), reasonable type disagreements (e.g. hover vs dwell), or extra events that are plausibly real but not in the baseline.
+- **systematic**: Consistent patterns of error across multiple events — e.g. always missing a certain event type, consistently wrong timing, repeated hallucinations of a specific interaction.
+- **critical**: Major failures — key user actions (clicks, navigation, text input) completely missing or fabricated, gross timing errors (>5s), or events attributed to the wrong part of the recording.
+
+For each issue found, provide:
+1. The category of problem (e.g. "missing_events", "type_mismatch", "timing_error", "hallucinated_events", "description_quality")
+2. The severity level
+3. A clear description of the issue
+4. Which event indices are affected (from both baseline and experiment lists)
+5. Specific examples
+
+Then provide an overall severity assessment for this session.
+
+## Session: {session_id}
+
+## Mechanical Metrics
+- Precision: {precision:.3f}
+- Recall: {recall:.3f}
+- F1: {f1:.3f}
+- Matched: {matched_count} / {baseline_count} baseline events
+- Experiment events: {experiment_count}
+
+## BASELINE ({baseline_count} events)
+
+{baseline_events_json}
+
+## EXPERIMENT ({experiment_count} events)
+
+{experiment_events_json}
