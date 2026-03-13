@@ -1,0 +1,180 @@
+[
+  {
+    "type": "hover",
+    "time_start_ms": 0,
+    "time_end_ms": 3000,
+    "description": "The user hovers the cursor over various cards on the Trello board while reviewing the 'Japan' travel itinerary.",
+    "confidence": 0.8,
+    "interaction_target": "Trello cards",
+    "page_title": "Trello",
+    "frame_description": "A Trello board titled 'Japan' with lists for 'Tokyo To Do', 'Sapporo To Do', and 'Niseko To Do' is visible."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 3000,
+    "time_end_ms": 3900,
+    "description": "The user navigates away from the Trello board, and the Google homepage begins to load.",
+    "confidence": 0.9,
+    "page_title": "Trello",
+    "frame_description": "The screen transitions from the Trello board to a white loading screen and then to the Google homepage."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 8000,
+    "time_end_ms": 9300,
+    "description": "The user navigates from the Google search page to the Booking.com homepage.",
+    "confidence": 0.9,
+    "page_title": "Google",
+    "frame_description": "The screen transitions from the Google homepage to the Booking.com landing page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 10100,
+    "time_end_ms": 10200,
+    "description": "A 'Genius' sign-in modal automatically appears over the Booking.com homepage.",
+    "confidence": 0.95,
+    "interaction_target": "Genius sign-in modal",
+    "page_title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+    "frame_description": "A blue and white modal titled 'Genius' appears in the center of the screen, offering a sign-in option."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 12400,
+    "time_end_ms": 12600,
+    "description": "The user clicks the 'X' button in the top right corner of the Genius modal to dismiss it.",
+    "confidence": 0.9,
+    "interaction_target": "Close button (X)",
+    "cursor_position_x": 910,
+    "cursor_position_y": 300,
+    "page_title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+    "frame_description": "The cursor is positioned over the close icon on the Genius modal."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 12600,
+    "time_end_ms": 12700,
+    "description": "The Genius modal disappears, revealing the full Booking.com search interface.",
+    "confidence": 0.95,
+    "page_title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+    "frame_description": "The modal is gone, and the main search form on the Booking.com homepage is visible."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 20000,
+    "time_end_ms": 20200,
+    "description": "The user clicks into the destination input field to change the search location.",
+    "confidence": 0.9,
+    "interaction_target": "Destination input field",
+    "cursor_position_x": 250,
+    "cursor_position_y": 440,
+    "page_title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+    "frame_description": "The cursor clicks inside the destination search box which currently contains 'Cradle Mountain'."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 22300,
+    "time_end_ms": 23000,
+    "description": "The user selects the existing text 'Cradle Mountain' in the search box to prepare for typing a new destination.",
+    "confidence": 0.8,
+    "interaction_target": "Destination input field text",
+    "page_title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+    "frame_description": "The text 'Cradle Mountain' inside the input field is highlighted in blue."
+  },
+  {
+    "type": "input_text",
+    "time_start_ms": 23400,
+    "time_end_ms": 25800,
+    "description": "The user types 'london' into the destination search field.",
+    "confidence": 0.9,
+    "interaction_target": "Destination input field",
+    "page_title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+    "frame_description": "The characters 'l', 'o', 'n', 'd', 'o', 'n' appear in the destination input field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 24200,
+    "time_end_ms": 24500,
+    "description": "An autocomplete dropdown menu appears with location suggestions as the user types.",
+    "confidence": 0.9,
+    "interaction_target": "Autocomplete dropdown",
+    "page_title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+    "frame_description": "A dropdown list of locations starting with 'Lon' appears below the search input."
+  },
+  {
+    "type": "select",
+    "time_start_ms": 25800,
+    "time_end_ms": 26200,
+    "description": "The user selects 'London, Greater London, United Kingdom' from the autocomplete suggestions.",
+    "confidence": 0.9,
+    "interaction_target": "London suggestion item",
+    "cursor_position_x": 250,
+    "cursor_position_y": 490,
+    "page_title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+    "frame_description": "The cursor clicks on the first suggestion in the dropdown list."
+  },
+  {
+    "type": "click",
+    "time_start_ms": 27400,
+    "time_end_ms": 27800,
+    "description": "The user clicks the 'Search' button to initiate the hotel search for London.",
+    "confidence": 0.9,
+    "interaction_target": "Search button",
+    "cursor_position_x": 850,
+    "cursor_position_y": 440,
+    "page_title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+    "frame_description": "The cursor clicks the blue 'Search' button on the right side of the search bar."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 27800,
+    "time_end_ms": 35150,
+    "description": "The page navigates to the search results for London.",
+    "confidence": 0.8,
+    "page_title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+    "frame_description": "The screen transitions from the homepage to the search results page."
+  },
+  {
+    "type": "navigate",
+    "time_start_ms": 35150,
+    "time_end_ms": 35500,
+    "description": "The search results page for London loads completely.",
+    "confidence": 0.9,
+    "page_title": "London: 6,959 properties found",
+    "frame_description": "The results page is fully rendered, showing various hotel listings in London."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 36800,
+    "time_end_ms": 41500,
+    "description": "The user scrolls down the list of search results to browse available hotels.",
+    "confidence": 0.9,
+    "page_title": "London: 6,959 properties found",
+    "frame_description": "The user scrolls through the first few hotel listings, including 'Deluxe Two-Bedroom Vauxhall Apartment'."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 46200,
+    "time_end_ms": 49000,
+    "description": "The user continues scrolling down the results page, looking at more property listings.",
+    "confidence": 0.9,
+    "page_title": "London: 6,959 properties found",
+    "frame_description": "The user scrolls past listings for 'Arriva Hotel' and 'The Franklin London'."
+  },
+  {
+    "type": "scroll",
+    "time_start_ms": 50300,
+    "time_end_ms": 51500,
+    "description": "The user scrolls back up towards the top of the search results page.",
+    "confidence": 0.9,
+    "page_title": "London: 6,959 properties found",
+    "frame_description": "The page content moves downwards as the user scrolls back to the top of the list."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start_ms": 58300,
+    "time_end_ms": 58500,
+    "description": "The browser window transitions to a task completion screen.",
+    "confidence": 0.9,
+    "frame_description": "The Booking.com page is replaced by a dark overlay with the text 'What are you thinking about doing next?'."
+  }
+]

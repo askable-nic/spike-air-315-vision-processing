@@ -1,0 +1,2744 @@
+{
+  "branch": "visual-change-driven",
+  "iteration": 3,
+  "sessions_requested": [
+    "ask_create_study_brandon",
+    "ask_results_usability_brandon",
+    "cfs_home_loan_sasha",
+    "cfs_home_loan_serene",
+    "flight_centre_booking_james",
+    "flight_centre_booking_kay",
+    "opportunity_list_ben",
+    "opportunity_list_georgie",
+    "travel_expert_lisa",
+    "travel_expert_veronika",
+    "travel_expert_william",
+    "travel_learner_sophia_jayde"
+  ],
+  "sessions_completed": [
+    "ask_create_study_brandon",
+    "ask_results_usability_brandon",
+    "cfs_home_loan_sasha",
+    "cfs_home_loan_serene",
+    "flight_centre_booking_james",
+    "flight_centre_booking_kay",
+    "opportunity_list_ben",
+    "opportunity_list_georgie",
+    "travel_expert_lisa",
+    "travel_expert_veronika",
+    "travel_expert_william",
+    "travel_learner_sophia_jayde"
+  ],
+  "sessions_skipped": [],
+  "early_break": false,
+  "early_break_reason": null,
+  "session_results": [
+    {
+      "session_id": "ask_create_study_brandon",
+      "metrics": {
+        "session_id": "ask_create_study_brandon",
+        "baseline_count": 174,
+        "experiment_count": 55,
+        "matched_count": 21,
+        "precision": 0.38181818181818183,
+        "recall": 0.1206896551724138,
+        "f1": 0.18340611353711792,
+        "mean_description_similarity": 0.5841293431371524,
+        "mean_start_error_ms": 858.9947460317441,
+        "mean_end_error_ms": 1229.3649841270055,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 40,
+            "experiment_count": 5,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "click",
+            "baseline_count": 48,
+            "experiment_count": 14,
+            "matched": 7,
+            "precision": 0.5,
+            "recall": 0.1458,
+            "f1": 0.2258
+          },
+          {
+            "type": "drag",
+            "baseline_count": 0,
+            "experiment_count": 1,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "dwell",
+            "baseline_count": 0,
+            "experiment_count": 3,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hesitate",
+            "baseline_count": 1,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 42,
+            "experiment_count": 4,
+            "matched": 2,
+            "precision": 0.5,
+            "recall": 0.0476,
+            "f1": 0.087
+          },
+          {
+            "type": "input_text",
+            "baseline_count": 14,
+            "experiment_count": 5,
+            "matched": 1,
+            "precision": 0.2,
+            "recall": 0.0714,
+            "f1": 0.1053
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 20,
+            "experiment_count": 12,
+            "matched": 10,
+            "precision": 0.8333,
+            "recall": 0.5,
+            "f1": 0.625
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 2,
+            "experiment_count": 7,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "select",
+            "baseline_count": 7,
+            "experiment_count": 4,
+            "matched": 1,
+            "precision": 0.25,
+            "recall": 0.1429,
+            "f1": 0.1818
+          }
+        ],
+        "f1_pass": false,
+        "recall_pass": false,
+        "precision_pass": true
+      },
+      "qualitative": {
+        "overall_severity": "acceptable",
+        "summary": "Captures major workflow steps (create study, set title, configure research method, set location, add screener questions, submit) with reasonable fidelity, but misses many granular interactions (hover events, loading transitions, hesitations) and has moderate timing offsets of 1-6s on matched events.",
+        "issues": [
+          {
+            "category": "missing_hover_events",
+            "severity": "systematic",
+            "description": "Baseline contains ~42 hover events; experiment captures only 4. Cursor movements over study list items, menu options, and cards are systematically omitted.",
+            "affected_events": [],
+            "examples": [
+              "Baseline has ~15 hover events over study list items, menu options, and selection cards. Experiment has only 3-4 hover events total."
+            ]
+          },
+          {
+            "category": "missing_change_ui_state",
+            "severity": "systematic",
+            "description": "Baseline records ~40 change_ui_state events (loading spinners, step transitions). Experiment captures only 2. Most loading transitions between wizard steps are absent.",
+            "affected_events": [
+              13,
+              31
+            ],
+            "examples": [
+              "Baseline records loading transitions between every wizard step; experiment skips all of these."
+            ]
+          },
+          {
+            "category": "timing_offsets",
+            "severity": "acceptable",
+            "description": "Key actions have timing offsets of 1-6s compared to baseline, likely due to frame-based detection.",
+            "affected_events": [
+              0,
+              2,
+              3,
+              6,
+              10,
+              18,
+              20
+            ],
+            "examples": [
+              "Click +Create button: experiment 530238ms vs baseline 530588ms (350ms offset)"
+            ]
+          },
+          {
+            "category": "fabricated_dwell_events",
+            "severity": "acceptable",
+            "description": "Experiment produces 3 dwell events with no baseline counterpart. Baseline uses no dwell type.",
+            "affected_events": [],
+            "examples": [
+              "3 dwell events generated where baseline has hover or no event"
+            ]
+          },
+          {
+            "category": "extra_scroll_events",
+            "severity": "noise",
+            "description": "A few scroll events in experiment with no clear baseline match.",
+            "affected_events": [
+              15,
+              25,
+              26,
+              34,
+              35,
+              36
+            ],
+            "examples": [
+              "Scroll on Quota page at 615821ms not in baseline"
+            ]
+          },
+          {
+            "category": "type_disagreements",
+            "severity": "noise",
+            "description": "Minor type disagreements where experiment uses click and baseline uses select for same action.",
+            "affected_events": [
+              3,
+              8
+            ],
+            "examples": [
+              "Experiment click for Interview study selection vs baseline select"
+            ]
+          }
+        ],
+        "noise_fraction": 0.15,
+        "acceptable_fraction": 0.45,
+        "systematic_fraction": 0.35,
+        "critical_fraction": 0.05,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": {
+        "sessions_completed": 1,
+        "cumulative_f1": 0.18340611353711792,
+        "cumulative_recall": 0.1206896551724138,
+        "cumulative_precision": 0.38181818181818183,
+        "cumulative_matched": 21,
+        "cumulative_baseline": 174,
+        "cumulative_experiment": 55,
+        "f1_trend": "stable",
+        "f1_history": [
+          0.18340611353711792
+        ]
+      },
+      "break_decision": {
+        "should_break": false,
+        "reason": "too_early",
+        "explanation": "Only 1 sessions completed, minimum is 2."
+      }
+    },
+    {
+      "session_id": "ask_results_usability_brandon",
+      "metrics": {
+        "session_id": "ask_results_usability_brandon",
+        "baseline_count": 196,
+        "experiment_count": 95,
+        "matched_count": 13,
+        "precision": 0.1368421052631579,
+        "recall": 0.0663265306122449,
+        "f1": 0.08934707903780069,
+        "mean_description_similarity": 0.5634229187367772,
+        "mean_start_error_ms": 1157.6923076923256,
+        "mean_end_error_ms": 1276.0683760683705,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 56,
+            "experiment_count": 7,
+            "matched": 2,
+            "precision": 0.2857,
+            "recall": 0.0357,
+            "f1": 0.0635
+          },
+          {
+            "type": "click",
+            "baseline_count": 52,
+            "experiment_count": 16,
+            "matched": 6,
+            "precision": 0.375,
+            "recall": 0.1154,
+            "f1": 0.1765
+          },
+          {
+            "type": "drag",
+            "baseline_count": 1,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "dwell",
+            "baseline_count": 0,
+            "experiment_count": 10,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hesitate",
+            "baseline_count": 2,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 47,
+            "experiment_count": 14,
+            "matched": 1,
+            "precision": 0.0714,
+            "recall": 0.0213,
+            "f1": 0.0328
+          },
+          {
+            "type": "input_text",
+            "baseline_count": 6,
+            "experiment_count": 5,
+            "matched": 3,
+            "precision": 0.6,
+            "recall": 0.5,
+            "f1": 0.5455
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 10,
+            "experiment_count": 8,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 18,
+            "experiment_count": 35,
+            "matched": 1,
+            "precision": 0.0286,
+            "recall": 0.0556,
+            "f1": 0.0377
+          },
+          {
+            "type": "select",
+            "baseline_count": 4,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        ],
+        "f1_pass": false,
+        "recall_pass": false,
+        "precision_pass": false
+      },
+      "qualitative": {
+        "overall_severity": "systematic",
+        "summary": "Captures core user journey (searching studies, navigating results, switching tasks, exploring filters, viewing heatmaps) with reasonable accuracy. Generates excessive scroll events and misses fine-grained hover/dwell interactions. Scroll detection over-triggers significantly.",
+        "issues": [
+          {
+            "category": "excessive_scroll_events",
+            "severity": "systematic",
+            "description": "Experiment generates ~25 scroll events vs baseline ~8. Flow-based scroll detection over-triggers, generating 3x the baseline count.",
+            "affected_events": [
+              6,
+              7,
+              11,
+              14,
+              15,
+              19,
+              20,
+              22,
+              23,
+              24,
+              25
+            ],
+            "examples": [
+              "Dense cluster of scrolls in results page where baseline has 2-3 scrolls"
+            ]
+          },
+          {
+            "category": "missing_hover_events",
+            "severity": "systematic",
+            "description": "Baseline records ~20 hover events over sidebar items, participant names, filter options. Experiment captures very few.",
+            "affected_events": [],
+            "examples": [
+              "Hovers over sidebar items, pagination info, industry column -- all missing"
+            ]
+          },
+          {
+            "category": "missing_change_ui_state",
+            "severity": "systematic",
+            "description": "Baseline records ~15 change_ui_state events (dropdowns, filter panels, tooltips). Experiment captures only 1-2.",
+            "affected_events": [],
+            "examples": [
+              "Team dropdown, filter sidebar, tooltip appearances -- all missing"
+            ]
+          },
+          {
+            "category": "fabricated_search_sequences",
+            "severity": "acceptable",
+            "description": "Experiment records 3 separate click-on-search-input events at the start, splitting a single search into multiple detected events.",
+            "affected_events": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              8,
+              9,
+              10
+            ],
+            "examples": [
+              "3 click-on-search-input events (439k, 449k, 463k) where baseline has 2"
+            ]
+          },
+          {
+            "category": "missing_tab_switching",
+            "severity": "acceptable",
+            "description": "Baseline records browser tab switching events not captured by experiment.",
+            "affected_events": [],
+            "examples": [
+              "Click on Askable Opportunities browser tab at 430936ms missing"
+            ]
+          }
+        ],
+        "noise_fraction": 0.15,
+        "acceptable_fraction": 0.35,
+        "systematic_fraction": 0.45,
+        "critical_fraction": 0.05,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": {
+        "sessions_completed": 2,
+        "cumulative_f1": 0.13076923076923078,
+        "cumulative_recall": 0.0918918918918919,
+        "cumulative_precision": 0.22666666666666666,
+        "cumulative_matched": 34,
+        "cumulative_baseline": 370,
+        "cumulative_experiment": 150,
+        "f1_trend": "stable",
+        "f1_history": [
+          0.18340611353711792,
+          0.08934707903780069
+        ]
+      },
+      "break_decision": {
+        "should_break": false,
+        "reason": "continue",
+        "explanation": "No early-break conditions met."
+      }
+    },
+    {
+      "session_id": "cfs_home_loan_sasha",
+      "metrics": {
+        "session_id": "cfs_home_loan_sasha",
+        "baseline_count": 187,
+        "experiment_count": 67,
+        "matched_count": 28,
+        "precision": 0.417910447761194,
+        "recall": 0.1497326203208556,
+        "f1": 0.2204724409448819,
+        "mean_description_similarity": 0.6218555732534216,
+        "mean_start_error_ms": 1024.107142857137,
+        "mean_end_error_ms": 1523.5119047619007,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 33,
+            "experiment_count": 3,
+            "matched": 1,
+            "precision": 0.3333,
+            "recall": 0.0303,
+            "f1": 0.0556
+          },
+          {
+            "type": "click",
+            "baseline_count": 32,
+            "experiment_count": 16,
+            "matched": 9,
+            "precision": 0.5625,
+            "recall": 0.2812,
+            "f1": 0.375
+          },
+          {
+            "type": "dwell",
+            "baseline_count": 0,
+            "experiment_count": 2,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hesitate",
+            "baseline_count": 3,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 42,
+            "experiment_count": 12,
+            "matched": 4,
+            "precision": 0.3333,
+            "recall": 0.0952,
+            "f1": 0.1481
+          },
+          {
+            "type": "input_text",
+            "baseline_count": 11,
+            "experiment_count": 2,
+            "matched": 2,
+            "precision": 1.0,
+            "recall": 0.1818,
+            "f1": 0.3077
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 26,
+            "experiment_count": 14,
+            "matched": 3,
+            "precision": 0.2143,
+            "recall": 0.1154,
+            "f1": 0.15
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 28,
+            "experiment_count": 14,
+            "matched": 6,
+            "precision": 0.4286,
+            "recall": 0.2143,
+            "f1": 0.2857
+          },
+          {
+            "type": "select",
+            "baseline_count": 12,
+            "experiment_count": 4,
+            "matched": 3,
+            "precision": 0.75,
+            "recall": 0.25,
+            "f1": 0.375
+          }
+        ],
+        "f1_pass": false,
+        "recall_pass": false,
+        "precision_pass": true
+      },
+      "qualitative": {
+        "overall_severity": "acceptable",
+        "summary": "Accurately captures the multi-site browsing journey (Google, Unloan, Lendi, Mortgage Choice, Compare the Market, ANZ, Moneysmart) with correct event ordering and reasonable timing. Key form fills, button clicks, and navigations well-detected. Main gaps are missing hesitate events and detailed hovers.",
+        "issues": [
+          {
+            "category": "missing_hover_events",
+            "severity": "systematic",
+            "description": "Baseline records ~25 hover events over search results, navigation menus, loan cards, buttons. Experiment captures only 7-8.",
+            "affected_events": [
+              6,
+              7,
+              9,
+              28,
+              32,
+              35,
+              36
+            ],
+            "examples": [
+              "Hovers over Unloan Apply button, loan cards, filter dropdowns mostly missed"
+            ]
+          },
+          {
+            "category": "missing_change_ui_state",
+            "severity": "systematic",
+            "description": "Baseline records ~15 change_ui_state events (task modal, loading screens, autocomplete, errors). Experiment captures only 2.",
+            "affected_events": [
+              1,
+              30
+            ],
+            "examples": [
+              "Task modal, autocomplete dropdown, Lendi loading screens missed"
+            ]
+          },
+          {
+            "category": "missing_hesitate_events",
+            "severity": "acceptable",
+            "description": "Baseline has 3 hesitate events marking user pauses/uncertainty. Experiment misses or miscategorizes these.",
+            "affected_events": [],
+            "examples": [
+              "Hesitate at 50350-53150ms reviewing autocomplete -- missing"
+            ]
+          },
+          {
+            "category": "missing_lender_input",
+            "severity": "acceptable",
+            "description": "Detailed ANZ lender selection sequence (type anz, select from dropdown) collapsed to a single click.",
+            "affected_events": [
+              17
+            ],
+            "examples": [
+              "Baseline: input_text anz, change_ui_state dropdown, select ANZ Bank -- experiment: single click"
+            ]
+          },
+          {
+            "category": "timing_alignment",
+            "severity": "noise",
+            "description": "Most matched events have sub-1s timing offsets. Timestamps align well.",
+            "affected_events": [
+              0,
+              3,
+              4,
+              5,
+              10,
+              11,
+              12,
+              13,
+              14
+            ],
+            "examples": [
+              "Click home loans comparison at 53350ms -- exact match with baseline"
+            ]
+          }
+        ],
+        "noise_fraction": 0.25,
+        "acceptable_fraction": 0.4,
+        "systematic_fraction": 0.3,
+        "critical_fraction": 0.05,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": {
+        "sessions_completed": 3,
+        "cumulative_f1": 0.16020671834625325,
+        "cumulative_recall": 0.11131059245960502,
+        "cumulative_precision": 0.2857142857142857,
+        "cumulative_matched": 62,
+        "cumulative_baseline": 557,
+        "cumulative_experiment": 217,
+        "f1_trend": "stable",
+        "f1_history": [
+          0.18340611353711792,
+          0.08934707903780069,
+          0.2204724409448819
+        ]
+      },
+      "break_decision": {
+        "should_break": false,
+        "reason": "continue",
+        "explanation": "No early-break conditions met."
+      }
+    },
+    {
+      "session_id": "cfs_home_loan_serene",
+      "metrics": {
+        "session_id": "cfs_home_loan_serene",
+        "baseline_count": 98,
+        "experiment_count": 14,
+        "matched_count": 5,
+        "precision": 0.35714285714285715,
+        "recall": 0.05102040816326531,
+        "f1": 0.08928571428571429,
+        "mean_description_similarity": 0.552336117542142,
+        "mean_start_error_ms": 1336.666566666669,
+        "mean_end_error_ms": 1516.666699999993,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 18,
+            "experiment_count": 1,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "click",
+            "baseline_count": 29,
+            "experiment_count": 4,
+            "matched": 1,
+            "precision": 0.25,
+            "recall": 0.0345,
+            "f1": 0.0606
+          },
+          {
+            "type": "hesitate",
+            "baseline_count": 1,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 5,
+            "experiment_count": 4,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "input_text",
+            "baseline_count": 9,
+            "experiment_count": 4,
+            "matched": 3,
+            "precision": 0.75,
+            "recall": 0.3333,
+            "f1": 0.4615
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 20,
+            "experiment_count": 1,
+            "matched": 1,
+            "precision": 1.0,
+            "recall": 0.05,
+            "f1": 0.0952
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 12,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "select",
+            "baseline_count": 4,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        ],
+        "f1_pass": false,
+        "recall_pass": false,
+        "precision_pass": true
+      },
+      "qualitative": {
+        "overall_severity": "critical",
+        "summary": "Only 14 events vs ~67 baseline events, missing the vast majority of the user journey through Aussie refinance flow, Google searches, St. George calculator, ubank, and Macquarie Bank. Large time gaps with zero coverage and several events describe low-level visual changes rather than meaningful interactions.",
+        "issues": [
+          {
+            "category": "coverage_gap",
+            "severity": "critical",
+            "description": "Missed entire initial sequence: Start task, Google search, Aussie navigation, scrolling, clicking I want to refinance, entering loan balance. First experiment event starts at 20.3s, second jumps to 55s.",
+            "affected_events": [
+              0
+            ],
+            "examples": [
+              "Baseline has 15+ events from 13s-52s; experiment has 1 event at 20.3s then gap to 55s"
+            ]
+          },
+          {
+            "category": "massive_event_loss",
+            "severity": "critical",
+            "description": "Only 14 events for 67 in baseline. Missing: loan balance entry, lender selection, property value, refinancing goal, employment type, name entry, form submission, ubank visit, St George calculator, second half of session.",
+            "affected_events": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            "examples": [
+              "Baseline documents visits to 4 bank sites; experiment captures fragments from 2"
+            ]
+          },
+          {
+            "category": "event_type_mismatch",
+            "severity": "systematic",
+            "description": "Experiment uses hover events where baseline has click/select actions. Form element interactions misclassified.",
+            "affected_events": [
+              5,
+              6,
+              7
+            ],
+            "examples": [
+              "Hover at 86417ms over form -- baseline shows click on I will live there button at 86683ms"
+            ]
+          },
+          {
+            "category": "hallucinated_context",
+            "severity": "systematic",
+            "description": "change_ui_state event describes location services icon in system status bar -- extremely low-level, not in baseline.",
+            "affected_events": [
+              10
+            ],
+            "examples": [
+              "Location services icon appearing in status bar is not a user interaction"
+            ]
+          },
+          {
+            "category": "timing_alignment",
+            "severity": "acceptable",
+            "description": "Where events align, timing is within 1-3s.",
+            "affected_events": [
+              0,
+              2
+            ],
+            "examples": [
+              "Input text 20283ms vs baseline 17250ms (3s offset)"
+            ]
+          }
+        ],
+        "noise_fraction": 0.05,
+        "acceptable_fraction": 0.1,
+        "systematic_fraction": 0.25,
+        "critical_fraction": 0.6,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": {
+        "sessions_completed": 4,
+        "cumulative_f1": 0.15124153498871332,
+        "cumulative_recall": 0.10229007633587786,
+        "cumulative_precision": 0.29004329004329005,
+        "cumulative_matched": 67,
+        "cumulative_baseline": 655,
+        "cumulative_experiment": 231,
+        "f1_trend": "stable",
+        "f1_history": [
+          0.18340611353711792,
+          0.08934707903780069,
+          0.2204724409448819,
+          0.08928571428571429
+        ]
+      },
+      "break_decision": {
+        "should_break": false,
+        "reason": "continue",
+        "explanation": "No early-break conditions met."
+      }
+    },
+    {
+      "session_id": "flight_centre_booking_james",
+      "metrics": {
+        "session_id": "flight_centre_booking_james",
+        "baseline_count": 57,
+        "experiment_count": 31,
+        "matched_count": 5,
+        "precision": 0.16129032258064516,
+        "recall": 0.08771929824561403,
+        "f1": 0.11363636363636363,
+        "mean_description_similarity": 0.6494688872056311,
+        "mean_start_error_ms": 3746.796800000011,
+        "mean_end_error_ms": 3201.0677333333415,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 19,
+            "experiment_count": 10,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "click",
+            "baseline_count": 14,
+            "experiment_count": 1,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "dwell",
+            "baseline_count": 0,
+            "experiment_count": 4,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 12,
+            "experiment_count": 2,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 5,
+            "experiment_count": 4,
+            "matched": 1,
+            "precision": 0.25,
+            "recall": 0.2,
+            "f1": 0.2222
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 5,
+            "experiment_count": 9,
+            "matched": 3,
+            "precision": 0.3333,
+            "recall": 0.6,
+            "f1": 0.4286
+          },
+          {
+            "type": "select",
+            "baseline_count": 2,
+            "experiment_count": 1,
+            "matched": 1,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6667
+          }
+        ],
+        "f1_pass": false,
+        "recall_pass": false,
+        "precision_pass": true
+      },
+      "qualitative": {
+        "overall_severity": "systematic",
+        "summary": "Captures the overall booking flow shape but over-generates change_ui_state and dwell events where baseline has hover/click sequences. Consistently uses dwell instead of hover for cursor pause events. Several key click interactions (Search flights, Select fare, CONTINUE) are missing.",
+        "issues": [
+          {
+            "category": "dwell_vs_hover_substitution",
+            "severity": "systematic",
+            "description": "Consistently uses dwell where baseline uses hover for cursor pause events at multiple points throughout the session.",
+            "affected_events": [
+              9,
+              21,
+              23
+            ],
+            "examples": [
+              "Dwell at 292865ms on date picker vs baseline hover at 291982ms on March 13"
+            ]
+          },
+          {
+            "category": "missing_click_interactions",
+            "severity": "systematic",
+            "description": "Key clicks absent: Search flights, Done for dates, Select Lite fare, CONTINUE button. Important user decision points lost.",
+            "affected_events": [],
+            "examples": [
+              "Baseline click Search flights at 300082ms -- no experiment event",
+              "Baseline click CONTINUE at 393443ms -- missing"
+            ]
+          },
+          {
+            "category": "missing_addon_interaction",
+            "severity": "critical",
+            "description": "Captain Pack add-on selection (hover, click SELECT, SELECTED confirmation) entirely absent from experiment.",
+            "affected_events": [],
+            "examples": [
+              "Baseline hover+click+confirm Captain Pack at 390-391s -- none captured"
+            ]
+          },
+          {
+            "category": "over_segmented_scrolls",
+            "severity": "acceptable",
+            "description": "Six separate scroll events for return flight browsing where baseline has 1-2.",
+            "affected_events": [
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "examples": [
+              "6 scroll events 342-360s vs baseline 1-2 scrolls"
+            ]
+          },
+          {
+            "category": "pre_task_events",
+            "severity": "acceptable",
+            "description": "8 events before task begins that baseline omits. Plausible but not in ground truth.",
+            "affected_events": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "examples": [
+              "Screen sharing instructions, task description, dwell on instructions -- not in baseline"
+            ]
+          }
+        ],
+        "noise_fraction": 0.15,
+        "acceptable_fraction": 0.35,
+        "systematic_fraction": 0.35,
+        "critical_fraction": 0.15,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": {
+        "sessions_completed": 5,
+        "cumulative_f1": 0.14784394250513344,
+        "cumulative_recall": 0.10112359550561797,
+        "cumulative_precision": 0.2748091603053435,
+        "cumulative_matched": 72,
+        "cumulative_baseline": 712,
+        "cumulative_experiment": 262,
+        "f1_trend": "stable",
+        "f1_history": [
+          0.18340611353711792,
+          0.08934707903780069,
+          0.2204724409448819,
+          0.08928571428571429,
+          0.11363636363636363
+        ]
+      },
+      "break_decision": {
+        "should_break": false,
+        "reason": "continue",
+        "explanation": "No early-break conditions met."
+      }
+    },
+    {
+      "session_id": "flight_centre_booking_kay",
+      "metrics": {
+        "session_id": "flight_centre_booking_kay",
+        "baseline_count": 71,
+        "experiment_count": 39,
+        "matched_count": 10,
+        "precision": 0.2564102564102564,
+        "recall": 0.14084507042253522,
+        "f1": 0.1818181818181818,
+        "mean_description_similarity": 0.5163076122530399,
+        "mean_start_error_ms": 2165.5501333333145,
+        "mean_end_error_ms": 2399.4498666666623,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 33,
+            "experiment_count": 11,
+            "matched": 4,
+            "precision": 0.3636,
+            "recall": 0.1212,
+            "f1": 0.1818
+          },
+          {
+            "type": "click",
+            "baseline_count": 15,
+            "experiment_count": 3,
+            "matched": 2,
+            "precision": 0.6667,
+            "recall": 0.1333,
+            "f1": 0.2222
+          },
+          {
+            "type": "dwell",
+            "baseline_count": 0,
+            "experiment_count": 8,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 13,
+            "experiment_count": 8,
+            "matched": 2,
+            "precision": 0.25,
+            "recall": 0.1538,
+            "f1": 0.1905
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 5,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 3,
+            "experiment_count": 7,
+            "matched": 1,
+            "precision": 0.1429,
+            "recall": 0.3333,
+            "f1": 0.2
+          },
+          {
+            "type": "select",
+            "baseline_count": 2,
+            "experiment_count": 2,
+            "matched": 1,
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5
+          }
+        ],
+        "f1_pass": false,
+        "recall_pass": false,
+        "precision_pass": true
+      },
+      "qualitative": {
+        "overall_severity": "systematic",
+        "summary": "Captures general flow shape with reasonable timing but systematically uses dwell instead of hover/click for key interactions. Pre-task phase well-covered. Fare selection and return flight selection partially captured, but critical click events on fare buttons are missing.",
+        "issues": [
+          {
+            "category": "dwell_substitution",
+            "severity": "systematic",
+            "description": "Uses dwell events at 9 points where baseline uses hover or has explicit clicks (homepage, flight results, fare selection, passenger form).",
+            "affected_events": [
+              8,
+              12,
+              15,
+              17,
+              18,
+              22,
+              24,
+              32,
+              34
+            ],
+            "examples": [
+              "Dwell at 520831ms on Red Edeal fare vs baseline click at 522426ms to select it"
+            ]
+          },
+          {
+            "category": "missing_interaction_events",
+            "severity": "critical",
+            "description": "Key booking events missing: Open button, Flight Centre navigation, destination To field, Search flights, Red Edeal SELECT, return fare selection, CONFIRM seat, passenger page transition.",
+            "affected_events": [],
+            "examples": [
+              "Baseline click Search flights at 469637ms -- not captured as click",
+              "Baseline click SELECT for Red Edeal at 522426ms -- only dwell captured"
+            ]
+          },
+          {
+            "category": "missing_destination_selection",
+            "severity": "systematic",
+            "description": "Entire destination selection sequence (hover From, click To, dropdown, hover Melbourne, select Melbourne, dropdown close) absent.",
+            "affected_events": [],
+            "examples": [
+              "Baseline: click To at 447337ms, hover Melbourne at 448787ms, select Melbourne at 450037ms -- none in experiment"
+            ]
+          },
+          {
+            "category": "return_flight_gap",
+            "severity": "critical",
+            "description": "Return flight fare selection poorly captured. Baseline documents scroll, hover, click, expand, select -- experiment has only dwell fragments.",
+            "affected_events": [],
+            "examples": [
+              "Baseline explicit click to select return fare missing -- only dwells captured"
+            ]
+          },
+          {
+            "category": "date_selection",
+            "severity": "acceptable",
+            "description": "Date selection captured with good accuracy. Select Feb 18 at 430698ms vs baseline 430987ms (289ms offset).",
+            "affected_events": [
+              9,
+              10
+            ],
+            "examples": [
+              "Select Feb 18: 289ms offset, select Feb 21: good alignment"
+            ]
+          }
+        ],
+        "noise_fraction": 0.1,
+        "acceptable_fraction": 0.3,
+        "systematic_fraction": 0.4,
+        "critical_fraction": 0.2,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": {
+        "sessions_completed": 6,
+        "cumulative_f1": 0.15129151291512913,
+        "cumulative_recall": 0.10472541507024266,
+        "cumulative_precision": 0.2724252491694352,
+        "cumulative_matched": 82,
+        "cumulative_baseline": 783,
+        "cumulative_experiment": 301,
+        "f1_trend": "stable",
+        "f1_history": [
+          0.18340611353711792,
+          0.08934707903780069,
+          0.2204724409448819,
+          0.08928571428571429,
+          0.11363636363636363,
+          0.1818181818181818
+        ]
+      },
+      "break_decision": {
+        "should_break": false,
+        "reason": "continue",
+        "explanation": "No early-break conditions met."
+      }
+    },
+    {
+      "session_id": "opportunity_list_ben",
+      "metrics": {
+        "session_id": "opportunity_list_ben",
+        "baseline_count": 140,
+        "experiment_count": 58,
+        "matched_count": 24,
+        "precision": 0.41379310344827586,
+        "recall": 0.17142857142857143,
+        "f1": 0.24242424242424243,
+        "mean_description_similarity": 0.5991856476952689,
+        "mean_start_error_ms": 1613.9881428571389,
+        "mean_end_error_ms": 1722.0237976190426,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 17,
+            "experiment_count": 9,
+            "matched": 4,
+            "precision": 0.4444,
+            "recall": 0.2353,
+            "f1": 0.3077
+          },
+          {
+            "type": "click",
+            "baseline_count": 28,
+            "experiment_count": 4,
+            "matched": 2,
+            "precision": 0.5,
+            "recall": 0.0714,
+            "f1": 0.125
+          },
+          {
+            "type": "dwell",
+            "baseline_count": 0,
+            "experiment_count": 6,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 24,
+            "experiment_count": 7,
+            "matched": 2,
+            "precision": 0.2857,
+            "recall": 0.0833,
+            "f1": 0.129
+          },
+          {
+            "type": "input_text",
+            "baseline_count": 14,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 31,
+            "experiment_count": 8,
+            "matched": 5,
+            "precision": 0.625,
+            "recall": 0.1613,
+            "f1": 0.2564
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 25,
+            "experiment_count": 23,
+            "matched": 10,
+            "precision": 0.4348,
+            "recall": 0.4,
+            "f1": 0.4167
+          },
+          {
+            "type": "select",
+            "baseline_count": 1,
+            "experiment_count": 1,
+            "matched": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        ],
+        "f1_pass": false,
+        "recall_pass": false,
+        "precision_pass": true
+      },
+      "qualitative": {
+        "overall_severity": "systematic",
+        "summary": "Captures only 41% of baseline events (58 vs 140), systematically missing all 14 input_text events and majority of click/navigate tab-switching events. Core prototype interactions (scrolling, filter use) present but at substantially reduced granularity with multiple 20s+ coverage gaps.",
+        "issues": [
+          {
+            "category": "missing_input_text",
+            "severity": "critical",
+            "description": "All 14 input_text events from baseline completely absent. User typing activity in Askable Sessions text area entirely undetected.",
+            "affected_events": [],
+            "examples": [
+              "Baseline has input_text at 310298, 331048, 350248, 365848, 378348, 389193 -- none in experiment"
+            ]
+          },
+          {
+            "category": "under_counting_tab_switches",
+            "severity": "systematic",
+            "description": "Dense tab-switching pattern severely under-represented. Baseline has ~15 tab switch pairs; experiment has ~4.",
+            "affected_events": [
+              4,
+              23,
+              41,
+              46,
+              48,
+              50,
+              51,
+              52
+            ],
+            "examples": [
+              "Time range 310k-420k has extensive tab-switching in baseline but only sparse events in experiment"
+            ]
+          },
+          {
+            "category": "timing_coverage_gaps",
+            "severity": "systematic",
+            "description": "Multiple gaps >20s during active baseline periods: 24s gap (272k-296k), 21s gap (331k-352k), 21.9s gap (353k-375k).",
+            "affected_events": [
+              13,
+              14,
+              21,
+              22,
+              23
+            ],
+            "examples": [
+              "24s gap while baseline shows scrolling and browsing"
+            ]
+          },
+          {
+            "category": "filter_interaction",
+            "severity": "acceptable",
+            "description": "Core filter interaction (modal open, Mobile Only selection, modal close) captured with 1-3s timing offsets.",
+            "affected_events": [
+              38,
+              39,
+              40
+            ],
+            "examples": [
+              "Select Mobile Only at 506391 vs baseline 505389 (1s offset)"
+            ]
+          },
+          {
+            "category": "dwell_substitution",
+            "severity": "noise",
+            "description": "6 dwell events where baseline has hovers and reading pauses. Reasonable alternative but inconsistent with baseline vocabulary.",
+            "affected_events": [
+              6,
+              22,
+              25,
+              30,
+              31,
+              43
+            ],
+            "examples": [
+              "Dwell at 237591 corresponds roughly to baseline hover/reading time"
+            ]
+          }
+        ],
+        "noise_fraction": 0.1,
+        "acceptable_fraction": 0.15,
+        "systematic_fraction": 0.45,
+        "critical_fraction": 0.3,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": {
+        "sessions_completed": 7,
+        "cumulative_f1": 0.16536661466458658,
+        "cumulative_recall": 0.11484290357529794,
+        "cumulative_precision": 0.29526462395543174,
+        "cumulative_matched": 106,
+        "cumulative_baseline": 923,
+        "cumulative_experiment": 359,
+        "f1_trend": "stable",
+        "f1_history": [
+          0.18340611353711792,
+          0.08934707903780069,
+          0.2204724409448819,
+          0.08928571428571429,
+          0.11363636363636363,
+          0.1818181818181818,
+          0.24242424242424243
+        ]
+      },
+      "break_decision": {
+        "should_break": false,
+        "reason": "continue",
+        "explanation": "No early-break conditions met."
+      }
+    },
+    {
+      "session_id": "opportunity_list_georgie",
+      "metrics": {
+        "session_id": "opportunity_list_georgie",
+        "baseline_count": 264,
+        "experiment_count": 116,
+        "matched_count": 17,
+        "precision": 0.14655172413793102,
+        "recall": 0.06439393939393939,
+        "f1": 0.08947368421052632,
+        "mean_description_similarity": 0.5599814207605656,
+        "mean_start_error_ms": 3726.8627450980507,
+        "mean_end_error_ms": 3753.9019607843193,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 47,
+            "experiment_count": 11,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "click",
+            "baseline_count": 28,
+            "experiment_count": 9,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "drag",
+            "baseline_count": 7,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "dwell",
+            "baseline_count": 0,
+            "experiment_count": 11,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hesitate",
+            "baseline_count": 2,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 107,
+            "experiment_count": 11,
+            "matched": 5,
+            "precision": 0.4545,
+            "recall": 0.0467,
+            "f1": 0.0847
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 2,
+            "experiment_count": 4,
+            "matched": 1,
+            "precision": 0.25,
+            "recall": 0.5,
+            "f1": 0.3333
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 61,
+            "experiment_count": 68,
+            "matched": 10,
+            "precision": 0.1471,
+            "recall": 0.1639,
+            "f1": 0.155
+          },
+          {
+            "type": "select",
+            "baseline_count": 10,
+            "experiment_count": 2,
+            "matched": 1,
+            "precision": 0.5,
+            "recall": 0.1,
+            "f1": 0.1667
+          }
+        ],
+        "f1_pass": false,
+        "recall_pass": false,
+        "precision_pass": false
+      },
+      "qualitative": {
+        "overall_severity": "systematic",
+        "summary": "Captures 44% of baseline events (116 vs 264) with reasonable scroll and filter coverage, but systematically misses drag events, most hover events (11 of 107 baseline hovers captured), and has multiple 30-40s coverage gaps in later session where filter modal is repeatedly opened.",
+        "issues": [
+          {
+            "category": "massive_hover_undercounting",
+            "severity": "systematic",
+            "description": "Baseline has 107 hover events; experiment captures only 11. Fine-grained cursor movements over opportunity cards, filter chips, and UI elements largely invisible.",
+            "affected_events": [
+              22,
+              31,
+              38,
+              39,
+              59,
+              60,
+              61,
+              62,
+              63,
+              72,
+              73
+            ],
+            "examples": [
+              "Between 380k-420k, baseline has ~15 hover events; experiment has ~3"
+            ]
+          },
+          {
+            "category": "missing_drag_events",
+            "severity": "acceptable",
+            "description": "Baseline has 7 drag events (pay rate slider). Experiment has zero -- drag type not in experiment vocabulary.",
+            "affected_events": [],
+            "examples": [
+              "All 7 baseline drags on pay rate slider between 342k-900k missing"
+            ]
+          },
+          {
+            "category": "coverage_gaps",
+            "severity": "systematic",
+            "description": "Second half of session has 9 gaps >25s while baseline shows continuous filter exploration and card browsing activity.",
+            "affected_events": [
+              56,
+              57,
+              62,
+              63,
+              64,
+              65,
+              83,
+              84,
+              93,
+              94,
+              95,
+              96,
+              105,
+              106
+            ],
+            "examples": [
+              "40s gap (611k-651k) while baseline shows scrolling and filter exploration",
+              "43s gap (735k-778k) while baseline shows active browsing"
+            ]
+          },
+          {
+            "category": "scroll_over_representation",
+            "severity": "acceptable",
+            "description": "Scrolls make up 59% of experiment events (68/116) vs 23% in baseline (61/264). Many have auto-generated descriptions lacking semantic context.",
+            "affected_events": [],
+            "examples": [
+              "Scroll descriptions like \"Scroll E (magnitude: 5.1, uniformity: 0.68)\" lack semantic meaning"
+            ]
+          },
+          {
+            "category": "filter_partial_capture",
+            "severity": "acceptable",
+            "description": "Key filter interactions partially detected but Georgie opening/closing modal ~7 times is compressed.",
+            "affected_events": [
+              17,
+              25,
+              28,
+              29,
+              30,
+              37,
+              57,
+              58
+            ],
+            "examples": [
+              "Apply Filters at 334252 vs baseline 327462 -- reasonable alignment"
+            ]
+          }
+        ],
+        "noise_fraction": 0.1,
+        "acceptable_fraction": 0.25,
+        "systematic_fraction": 0.55,
+        "critical_fraction": 0.1,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": {
+        "sessions_completed": 8,
+        "cumulative_f1": 0.14801444043321302,
+        "cumulative_recall": 0.10362257792754845,
+        "cumulative_precision": 0.25894736842105265,
+        "cumulative_matched": 123,
+        "cumulative_baseline": 1187,
+        "cumulative_experiment": 475,
+        "f1_trend": "stable",
+        "f1_history": [
+          0.18340611353711792,
+          0.08934707903780069,
+          0.2204724409448819,
+          0.08928571428571429,
+          0.11363636363636363,
+          0.1818181818181818,
+          0.24242424242424243,
+          0.08947368421052632
+        ]
+      },
+      "break_decision": {
+        "should_break": false,
+        "reason": "continue",
+        "explanation": "No early-break conditions met."
+      }
+    },
+    {
+      "session_id": "travel_expert_lisa",
+      "metrics": {
+        "session_id": "travel_expert_lisa",
+        "baseline_count": 178,
+        "experiment_count": 19,
+        "matched_count": 2,
+        "precision": 0.10526315789473684,
+        "recall": 0.011235955056179775,
+        "f1": 0.02030456852791878,
+        "mean_description_similarity": 0.6959868059373282,
+        "mean_start_error_ms": 326.41643059489434,
+        "mean_end_error_ms": 799.6458923512764,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 49,
+            "experiment_count": 8,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "click",
+            "baseline_count": 45,
+            "experiment_count": 1,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "dwell",
+            "baseline_count": 0,
+            "experiment_count": 5,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hesitate",
+            "baseline_count": 4,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 29,
+            "experiment_count": 2,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "input_text",
+            "baseline_count": 5,
+            "experiment_count": 1,
+            "matched": 1,
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 14,
+            "experiment_count": 1,
+            "matched": 1,
+            "precision": 1.0,
+            "recall": 0.0714,
+            "f1": 0.1333
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 21,
+            "experiment_count": 1,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "select",
+            "baseline_count": 11,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        ],
+        "f1_pass": false,
+        "recall_pass": false,
+        "precision_pass": false
+      },
+      "qualitative": {
+        "overall_severity": "critical",
+        "summary": "Only 19 events for 178 in baseline (11% coverage). Entire major interaction sequences missing: Google search to Webjet, flight search form filling, clicking Search Flights, browsing 12+ flight detail expansions, Brisbane departure switch. Essentially a sparse skeleton of a rich interaction session.",
+        "issues": [
+          {
+            "category": "massive_event_undercounting",
+            "severity": "critical",
+            "description": "19 experiment events vs 178 baseline -- 89% loss rate. Only ~7 distinct temporal moments covered across a session spanning ~645s of activity.",
+            "affected_events": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18
+            ],
+            "examples": [
+              "19 events vs 178 baseline = 10.7% coverage"
+            ]
+          },
+          {
+            "category": "missing_critical_sequences",
+            "severity": "critical",
+            "description": "Flight search form filling (departure, destination, dates), Search Flights click, 12 View Details expansions, Virgin Australia filter, Brisbane departure switch -- all absent.",
+            "affected_events": [],
+            "examples": [
+              "12 View Details click events in baseline -- zero in experiment",
+              "137s gap between events 6-7 covers ENTIRE flight form interaction"
+            ]
+          },
+          {
+            "category": "enormous_temporal_gaps",
+            "severity": "critical",
+            "description": "Gaps of 137s, 129s, 73s, 55s between events during dense baseline activity.",
+            "affected_events": [
+              6,
+              7,
+              15,
+              16
+            ],
+            "examples": [
+              "137s gap: Google search results through entire Webjet form -- missed",
+              "129s gap: Qatar filter through entire second search -- missed"
+            ]
+          },
+          {
+            "category": "missing_select_events",
+            "severity": "critical",
+            "description": "Baseline has 11 select events (airport, date, autocomplete selections). Experiment has zero.",
+            "affected_events": [],
+            "examples": [
+              "Select Sunshine Coast at 120208, select London at 128558 -- both missing"
+            ]
+          },
+          {
+            "category": "dwell_inflation",
+            "severity": "acceptable",
+            "description": "5 of 19 events (26%) are dwells. Over-represents passive waiting relative to rich active interaction in baseline.",
+            "affected_events": [
+              7,
+              9,
+              10,
+              12,
+              13
+            ],
+            "examples": [
+              "Dwell at 238k-248k on loading screen while baseline shows active navigation"
+            ]
+          }
+        ],
+        "noise_fraction": 0.05,
+        "acceptable_fraction": 0.1,
+        "systematic_fraction": 0.25,
+        "critical_fraction": 0.6,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": {
+        "sessions_completed": 9,
+        "cumulative_f1": 0.13448090371167293,
+        "cumulative_recall": 0.09157509157509157,
+        "cumulative_precision": 0.25303643724696356,
+        "cumulative_matched": 125,
+        "cumulative_baseline": 1365,
+        "cumulative_experiment": 494,
+        "f1_trend": "stable",
+        "f1_history": [
+          0.18340611353711792,
+          0.08934707903780069,
+          0.2204724409448819,
+          0.08928571428571429,
+          0.11363636363636363,
+          0.1818181818181818,
+          0.24242424242424243,
+          0.08947368421052632,
+          0.02030456852791878
+        ]
+      },
+      "break_decision": {
+        "should_break": false,
+        "reason": "continue",
+        "explanation": "No early-break conditions met."
+      }
+    },
+    {
+      "session_id": "travel_expert_veronika",
+      "metrics": {
+        "session_id": "travel_expert_veronika",
+        "baseline_count": 69,
+        "experiment_count": 28,
+        "matched_count": 6,
+        "precision": 0.21428571428571427,
+        "recall": 0.08695652173913043,
+        "f1": 0.12371134020618556,
+        "mean_description_similarity": 0.583938847139717,
+        "mean_start_error_ms": 1123.6656111111006,
+        "mean_end_error_ms": 1192.4109166666603,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 23,
+            "experiment_count": 7,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "click",
+            "baseline_count": 11,
+            "experiment_count": 2,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "cursor_thrash",
+            "baseline_count": 1,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "dwell",
+            "baseline_count": 0,
+            "experiment_count": 3,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 13,
+            "experiment_count": 8,
+            "matched": 3,
+            "precision": 0.375,
+            "recall": 0.2308,
+            "f1": 0.2857
+          },
+          {
+            "type": "input_text",
+            "baseline_count": 4,
+            "experiment_count": 3,
+            "matched": 3,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 6,
+            "experiment_count": 1,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 7,
+            "experiment_count": 2,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "select",
+            "baseline_count": 4,
+            "experiment_count": 2,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        ],
+        "f1_pass": false,
+        "recall_pass": false,
+        "precision_pass": true
+      },
+      "qualitative": {
+        "overall_severity": "systematic",
+        "summary": "Captures only 28 of 69 baseline events (41%), missing most navigations (1 of 6), clicks (2 of 11), and the entire Skyscanner-to-Google-to-Trello-to-Booking.com arc from 235k-304k. Large coverage gaps with zero events during active browsing.",
+        "issues": [
+          {
+            "category": "missing_navigations",
+            "severity": "critical",
+            "description": "Only 1 of 6 navigate events captured. Missing: Google, Skyscanner search results, Skyscanner site, Google homepage, Trello.",
+            "affected_events": [
+              8
+            ],
+            "examples": [
+              "Only navigate instruction->Google captured; all Skyscanner/Trello navigations missing"
+            ]
+          },
+          {
+            "category": "missing_mid_session",
+            "severity": "critical",
+            "description": "Entire 106k-173k range (67s) has zero experiment events covering Skyscanner loading and initial result interaction.",
+            "affected_events": [],
+            "examples": [
+              "Baseline has 7 events from 104k-173k with no experiment coverage"
+            ]
+          },
+          {
+            "category": "missing_late_session",
+            "severity": "critical",
+            "description": "Session 235k-304k (69s) completely missed including Trello visit, Booking.com navigation, modal interaction, hotel search.",
+            "affected_events": [],
+            "examples": [
+              "Trello visit 270k-274k absent; Booking.com modal 285k-294k absent"
+            ]
+          },
+          {
+            "category": "missing_clicks",
+            "severity": "systematic",
+            "description": "Only 2 of 11 clicks captured. Missing Skyscanner result link, Repeat instructions, 2+ stops filter, Booking.com close, search button.",
+            "affected_events": [
+              7,
+              22
+            ],
+            "examples": [
+              "Only Open button click and Book now button captured"
+            ]
+          },
+          {
+            "category": "fabricated_dwells",
+            "severity": "acceptable",
+            "description": "3 dwell events with no baseline counterpart, describing plausible reading/waiting behaviors.",
+            "affected_events": [
+              10,
+              13,
+              18
+            ],
+            "examples": [
+              "Dwell reading task instructions at 110k-117k; dwell waiting for flight results at 191k-193k"
+            ]
+          },
+          {
+            "category": "timing_offset",
+            "severity": "acceptable",
+            "description": "Open button click timed 20.4s off because experiment tracks a second pass through instructions while baseline tracks the first click.",
+            "affected_events": [
+              7
+            ],
+            "examples": [
+              "Exp 99124ms vs base 78687ms -- different occurrences of same action"
+            ]
+          }
+        ],
+        "noise_fraction": 0.05,
+        "acceptable_fraction": 0.15,
+        "systematic_fraction": 0.35,
+        "critical_fraction": 0.45,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": {
+        "sessions_completed": 10,
+        "cumulative_f1": 0.1339468302658487,
+        "cumulative_recall": 0.09135285913528592,
+        "cumulative_precision": 0.2509578544061303,
+        "cumulative_matched": 131,
+        "cumulative_baseline": 1434,
+        "cumulative_experiment": 522,
+        "f1_trend": "stable",
+        "f1_history": [
+          0.18340611353711792,
+          0.08934707903780069,
+          0.2204724409448819,
+          0.08928571428571429,
+          0.11363636363636363,
+          0.1818181818181818,
+          0.24242424242424243,
+          0.08947368421052632,
+          0.02030456852791878,
+          0.12371134020618556
+        ]
+      },
+      "break_decision": {
+        "should_break": false,
+        "reason": "continue",
+        "explanation": "No early-break conditions met."
+      }
+    },
+    {
+      "session_id": "travel_expert_william",
+      "metrics": {
+        "session_id": "travel_expert_william",
+        "baseline_count": 101,
+        "experiment_count": 24,
+        "matched_count": 9,
+        "precision": 0.375,
+        "recall": 0.0891089108910891,
+        "f1": 0.14400000000000002,
+        "mean_description_similarity": 0.5134573812670312,
+        "mean_start_error_ms": 1526.4444444444428,
+        "mean_end_error_ms": 1043.6888888888966,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 26,
+            "experiment_count": 3,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "click",
+            "baseline_count": 12,
+            "experiment_count": 3,
+            "matched": 2,
+            "precision": 0.6667,
+            "recall": 0.1667,
+            "f1": 0.2667
+          },
+          {
+            "type": "drag",
+            "baseline_count": 3,
+            "experiment_count": 1,
+            "matched": 1,
+            "precision": 1.0,
+            "recall": 0.3333,
+            "f1": 0.5
+          },
+          {
+            "type": "dwell",
+            "baseline_count": 0,
+            "experiment_count": 4,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 29,
+            "experiment_count": 4,
+            "matched": 2,
+            "precision": 0.5,
+            "recall": 0.069,
+            "f1": 0.1212
+          },
+          {
+            "type": "input_text",
+            "baseline_count": 2,
+            "experiment_count": 1,
+            "matched": 1,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6667
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 7,
+            "experiment_count": 5,
+            "matched": 3,
+            "precision": 0.6,
+            "recall": 0.4286,
+            "f1": 0.5
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 18,
+            "experiment_count": 3,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "select",
+            "baseline_count": 4,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        ],
+        "f1_pass": false,
+        "recall_pass": false,
+        "precision_pass": true
+      },
+      "qualitative": {
+        "overall_severity": "systematic",
+        "summary": "Captures only 24 of 101 baseline events (24%), with massive coverage gaps in hotel browsing/filtering (198k-347k, 2.5 min, 30+ baseline events missing). Misses almost all scroll events (3 of 18), most hovers (4 of 29), and key filter interactions.",
+        "issues": [
+          {
+            "category": "missing_browsing_segment",
+            "severity": "critical",
+            "description": "The 198k-347k range (2.5 min) has only 3 experiment events vs 30+ baseline events covering hotel browsing, filter application (Breakfast, Very good 8+), hotel detail navigation.",
+            "affected_events": [
+              18,
+              19,
+              20
+            ],
+            "examples": [
+              "Breakfast filter click at 218k -- absent; Very good 8+ at 247k -- absent; Zetter hotel navigation at 248k -- absent"
+            ]
+          },
+          {
+            "category": "missing_filter_interactions",
+            "severity": "critical",
+            "description": "Breakfast filter clicks, See more expansion, Very good 8+ selection, 2 of 3 price slider drags all absent.",
+            "affected_events": [
+              18
+            ],
+            "examples": [
+              "0 of 2 Breakfast filter clicks captured; only 1 of 3 drag events"
+            ]
+          },
+          {
+            "category": "missing_scroll_events",
+            "severity": "systematic",
+            "description": "3 scroll events captured vs 18 in baseline. Hotel result browsing behavior poorly represented.",
+            "affected_events": [
+              8,
+              14,
+              21
+            ],
+            "examples": [
+              "15 scroll events in baseline between 192k-360k with no experiment counterpart"
+            ]
+          },
+          {
+            "category": "dwell_substitution",
+            "severity": "noise",
+            "description": "Dwell events where baseline uses hover for slow-cursor behaviors.",
+            "affected_events": [
+              12,
+              15,
+              19,
+              23
+            ],
+            "examples": [
+              "Dwell on Expedia at 130k vs baseline hover events"
+            ]
+          },
+          {
+            "category": "fabricated_extension_clicks",
+            "severity": "acceptable",
+            "description": "2 clicks on Askable extension button with no baseline counterpart -- may be real browser UI interactions.",
+            "affected_events": [
+              5,
+              6
+            ],
+            "examples": [
+              "Click Askable extension at 92.6k and 104.4k"
+            ]
+          }
+        ],
+        "noise_fraction": 0.1,
+        "acceptable_fraction": 0.15,
+        "systematic_fraction": 0.4,
+        "critical_fraction": 0.35,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": {
+        "sessions_completed": 11,
+        "cumulative_f1": 0.13455069678039405,
+        "cumulative_recall": 0.09120521172638436,
+        "cumulative_precision": 0.2564102564102564,
+        "cumulative_matched": 140,
+        "cumulative_baseline": 1535,
+        "cumulative_experiment": 546,
+        "f1_trend": "stable",
+        "f1_history": [
+          0.18340611353711792,
+          0.08934707903780069,
+          0.2204724409448819,
+          0.08928571428571429,
+          0.11363636363636363,
+          0.1818181818181818,
+          0.24242424242424243,
+          0.08947368421052632,
+          0.02030456852791878,
+          0.12371134020618556,
+          0.14400000000000002
+        ]
+      },
+      "break_decision": {
+        "should_break": false,
+        "reason": "last_session",
+        "explanation": "This is the last (or only remaining) session."
+      }
+    },
+    {
+      "session_id": "travel_learner_sophia_jayde",
+      "metrics": {
+        "session_id": "travel_learner_sophia_jayde",
+        "baseline_count": 501,
+        "experiment_count": 104,
+        "matched_count": 27,
+        "precision": 0.25961538461538464,
+        "recall": 0.05389221556886228,
+        "f1": 0.08925619834710745,
+        "mean_description_similarity": 0.6084291871229406,
+        "mean_start_error_ms": 1516.8240275312198,
+        "mean_end_error_ms": 1393.2345047530414,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 117,
+            "experiment_count": 14,
+            "matched": 2,
+            "precision": 0.1429,
+            "recall": 0.0171,
+            "f1": 0.0305
+          },
+          {
+            "type": "click",
+            "baseline_count": 112,
+            "experiment_count": 13,
+            "matched": 5,
+            "precision": 0.3846,
+            "recall": 0.0446,
+            "f1": 0.08
+          },
+          {
+            "type": "drag",
+            "baseline_count": 9,
+            "experiment_count": 1,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "dwell",
+            "baseline_count": 0,
+            "experiment_count": 24,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hesitate",
+            "baseline_count": 3,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 108,
+            "experiment_count": 15,
+            "matched": 3,
+            "precision": 0.2,
+            "recall": 0.0278,
+            "f1": 0.0488
+          },
+          {
+            "type": "input_text",
+            "baseline_count": 30,
+            "experiment_count": 6,
+            "matched": 5,
+            "precision": 0.8333,
+            "recall": 0.1667,
+            "f1": 0.2778
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 57,
+            "experiment_count": 10,
+            "matched": 3,
+            "precision": 0.3,
+            "recall": 0.0526,
+            "f1": 0.0896
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 40,
+            "experiment_count": 12,
+            "matched": 4,
+            "precision": 0.3333,
+            "recall": 0.1,
+            "f1": 0.1538
+          },
+          {
+            "type": "select",
+            "baseline_count": 25,
+            "experiment_count": 9,
+            "matched": 5,
+            "precision": 0.5556,
+            "recall": 0.2,
+            "f1": 0.2941
+          }
+        ],
+        "f1_pass": false,
+        "recall_pass": false,
+        "precision_pass": true
+      },
+      "qualitative": {
+        "overall_severity": "systematic",
+        "summary": "Captures 104 of 501 baseline events (21%) for a 37-minute dual-screen observer session. Correctly identifies video call context. Airbnb segment (41k-120k) almost entirely missing. Observer perspective causes massive dwell events spanning periods of active participant interaction. Google Flights and CompareTheMarket segments reasonably captured.",
+        "issues": [
+          {
+            "category": "missing_airbnb_segment",
+            "severity": "critical",
+            "description": "Entire Airbnb booking segment (41k-120k, 80s, 14 baseline events) absent. Navigate, search, type London, select destination, dates, guests -- all missing. Experiment shows dwell on video call instead.",
+            "affected_events": [
+              1,
+              2,
+              3
+            ],
+            "examples": [
+              "Base 0-13 Airbnb flow from 41k-110k all missing; exp 1-3 show dwell on video call"
+            ]
+          },
+          {
+            "category": "observer_perspective_mismatch",
+            "severity": "systematic",
+            "description": "Dual perspective session where experiment captures observer view (video call dwell events) while baseline captures participant task interactions. Affects events throughout.",
+            "affected_events": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              27,
+              29,
+              30,
+              31,
+              32
+            ],
+            "examples": [
+              "Dwell on video feed 38k-49k while baseline shows Airbnb interaction"
+            ]
+          },
+          {
+            "category": "massive_dwell_events",
+            "severity": "systematic",
+            "description": "Very long dwell events spanning periods of active baseline interaction: 44.6s (76k-120k), 134s (471k-606k), 99.8s (680k-780k).",
+            "affected_events": [
+              3,
+              24,
+              26,
+              32
+            ],
+            "examples": [
+              "Dwell 471k-606k (2.2 minutes) as single event; dwell 680k-780k (1.7 minutes)"
+            ]
+          },
+          {
+            "category": "missing_click_events",
+            "severity": "systematic",
+            "description": "13 clicks captured vs 112 in baseline. Vast majority of fine-grained click interactions collapsed or missing.",
+            "affected_events": [
+              11,
+              12,
+              14,
+              37,
+              40,
+              49,
+              54,
+              58,
+              59,
+              69,
+              80,
+              84
+            ],
+            "examples": [
+              "112 baseline clicks vs 13 experiment clicks"
+            ]
+          },
+          {
+            "category": "google_flights_coverage",
+            "severity": "acceptable",
+            "description": "Google Flights segment reasonably well captured. Typing sicily, selecting destination, One way, calendar navigation, date selection all present with 0.4-1.2s offsets.",
+            "affected_events": [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "examples": [
+              "Input sicily at 213.8k vs base 214.2k (0.4s offset)"
+            ]
+          },
+          {
+            "category": "compare_market_coverage",
+            "severity": "acceptable",
+            "description": "CompareTheMarket travel insurance flow (1942k-2130k) well captured with destination, dates, traveller ages, cover levels, contact details.",
+            "affected_events": [
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102
+            ],
+            "examples": [
+              "Multi-step insurance comparison workflow captured end-to-end"
+            ]
+          }
+        ],
+        "noise_fraction": 0.05,
+        "acceptable_fraction": 0.3,
+        "systematic_fraction": 0.45,
+        "critical_fraction": 0.2,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": {
+        "sessions_completed": 12,
+        "cumulative_f1": 0.12434847356664185,
+        "cumulative_recall": 0.08202357563850687,
+        "cumulative_precision": 0.2569230769230769,
+        "cumulative_matched": 167,
+        "cumulative_baseline": 2036,
+        "cumulative_experiment": 650,
+        "f1_trend": "stable",
+        "f1_history": [
+          0.18340611353711792,
+          0.08934707903780069,
+          0.2204724409448819,
+          0.08928571428571429,
+          0.11363636363636363,
+          0.1818181818181818,
+          0.24242424242424243,
+          0.08947368421052632,
+          0.02030456852791878,
+          0.12371134020618556,
+          0.14400000000000002,
+          0.08925619834710745
+        ]
+      },
+      "break_decision": {
+        "should_break": false,
+        "reason": "last_session",
+        "explanation": "This is the last (or only remaining) session."
+      }
+    }
+  ],
+  "aggregate_f1": 0.12434847356664185,
+  "aggregate_recall": 0.08202357563850687,
+  "aggregate_precision": 0.2569230769230769,
+  "judgment": {
+    "overall_score": 0.15,
+    "coverage_score": 0.09,
+    "type_accuracy_score": 0.4,
+    "timing_score": 0.5,
+    "systematic_patterns": [
+      "change_ui_state near-total loss: ~5% recall across all sessions. Loading transitions, dropdown opens, tooltip appearances systematically missed.",
+      "Hover under-detection: Pipeline captures 10-30% of baseline hover events. Cursor-only movements without visual changes are invisible.",
+      "Dwell hallucination: Experiment generates dwell events in all sessions despite zero dwells in any baseline. Partially replaces hover/hesitate but with wrong semantics.",
+      "Click under-detection: Key button clicks (Search, Submit, CONTINUE, SELECT) frequently missed even when visual change occurs. Pipeline detects the state change but not the triggering click.",
+      "Input text blindness: Text input events missed in 8 of 12 sessions. Pipeline does not reliably detect typing activity.",
+      "Navigation under-detection: Page transitions captured at 17-71% rate. Within-flow navigations (click result -> navigate to page) particularly affected.",
+      "Scroll detection bias: Scrolls disproportionately well-detected relative to other types in some sessions, over-segmented in others. Flow-based detection over-triggers.",
+      "Token budget underutilization: All sessions use only 33-43% of available token budget, suggesting the observation pipeline is too conservative.",
+      "Cursor detection bottleneck: Detection rates range 3.7-100% across sessions. Low rates directly correlate with poor event coverage, but high rates (travel_expert_lisa: 100%) still yield poor results (F1=0.020).",
+      "Temporal coverage gaps: All sessions show significant gaps (20-137s) during active user interaction, indicating the moment selection algorithm misses extended interaction sequences."
+    ],
+    "root_cause_analysis": "Three pipeline stages contribute to the low F1=0.124, with the Observe and Analyse stages as co-primary bottlenecks and Merge as a minor factor.\n\n**Observe stage (primary)**: Cursor template matching detection rates (3.7-100%) directly limit interaction event coverage. When cursor detection fails, the pipeline cannot identify interaction moments, leading to temporal gaps. However, cursor detection alone is insufficient -- travel_expert_lisa has 100% detection but F1=0.020, proving the Analyse stage is also a bottleneck. The token budget is consistently underutilized (33-43%), meaning the pipeline has capacity to process more moments but the moment selection algorithm is too conservative. Scene change detection works well but misses fine-grained interactions.\n\n**Analyse stage (co-primary)**: Even with good observation data, the LLM extraction under-extracts events. Sessions with 60-168 moments produce only 14-116 events. The prompt (visual_change_driven.txt) focuses on visual changes rather than user intent, leading to: (1) change_ui_state events being described as context rather than extracted, (2) click events being subsumed into their visual consequences, (3) input_text events being missed when the typing is gradual, (4) dwell events being hallucinated as a catch-all for unclassified visual pauses.\n\n**Merge stage (minor)**: time_tolerance_ms=2000 and similarity_threshold=0.7 appear reasonable. Some legitimate events may be lost to deduplication but this is not the primary issue.",
+    "strengths": [
+      "Correct temporal ordering: Events that are detected maintain correct chronological sequence.",
+      "Reasonable timing accuracy: Matched events have mean timing offsets of 858-1229ms, well within the 2000ms tolerance.",
+      "Multi-site journey detection: Sessions crossing multiple websites (cfs_home_loan_sasha, travel_expert_veronika) have correct site-to-site transitions.",
+      "Form interaction detection: When detected, form fills and selections have reasonable accuracy (cfs_home_loan_sasha Unloan application flow captured well).",
+      "Scene change detection: Major page loads and navigation transitions reliably trigger visual change detection."
+    ],
+    "weaknesses": [
+      "Catastrophically low recall (0.082): Pipeline misses 92% of ground truth events, rendering output insufficient for production use.",
+      "Cursor detection unreliability: Template matching approach fails on many cursor styles, limiting the entire pipeline.",
+      "Event type vocabulary mismatch: Pipeline generates dwell events not in any baseline; misses hesitate events entirely.",
+      "Token budget waste: 57-67% of LLM token budget goes unused, representing lost extraction capacity.",
+      "No input_text detection in most sessions: Typing is one of the most important interaction types but is unreliably detected.",
+      "Observer/participant confusion: Dual-screen sessions (travel_learner_sophia_jayde) cause the pipeline to track the wrong screen."
+    ],
+    "recommendations": [
+      {
+        "config_key": "observe.cursor_tracking_enabled",
+        "current_value": true,
+        "recommended_value": true,
+        "rationale": "Cursor tracking should remain enabled but needs fundamental improvement. Current template matching approach (3.7-100% detection range) is the primary bottleneck. Consider adding ML-based cursor detection or larger template sets. This is not a config change but a pipeline improvement.",
+        "confidence": 0.9
+      },
+      {
+        "config_key": "analyse.model",
+        "current_value": "gemini-3-flash-preview",
+        "recommended_value": "gemini-2.5-pro",
+        "rationale": "The Analyse stage under-extracts events even with good observation data (travel_expert_lisa: 100% cursor detection, F1=0.020). A more capable model may better identify interaction events from visual moments. This is the highest-impact single config change.",
+        "confidence": 0.7
+      },
+      {
+        "config_key": "observe.token_budget_per_minute",
+        "current_value": 50000,
+        "recommended_value": 80000,
+        "rationale": "All sessions use only 33-43% of the 50k token budget. Increasing to 80k allows more moments to be processed per minute, potentially capturing interactions in current temporal gaps.",
+        "confidence": 0.6
+      },
+      {
+        "config_key": "observe.change_min_area_px",
+        "current_value": 500,
+        "recommended_value": 300,
+        "rationale": "Many missed events involve small UI changes (dropdown options, button state changes, text cursor movement) that may fall below the 500px minimum area threshold. Lowering to 300px would capture smaller visual changes.",
+        "confidence": 0.5
+      },
+      {
+        "config_key": "observe.baseline_max_gap_ms",
+        "current_value": 5000,
+        "recommended_value": 3000,
+        "rationale": "Temporal coverage gaps of 20-137s suggest the pipeline needs more frequent baseline sampling during periods without detected visual changes. Reducing from 5s to 3s would catch more gradual interactions.",
+        "confidence": 0.5
+      }
+    ],
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "config": {
+    "triage": {
+      "enabled": false,
+      "sample_fps": 5.0,
+      "resolution_height": 480,
+      "window_size_ms": 3000,
+      "window_step_ms": 1000,
+      "min_segment_duration_ms": 5000,
+      "thresholds": {
+        "idle": 0.005,
+        "low": 0.02,
+        "medium": 0.08
+      },
+      "fps_mapping": {
+        "idle": 0.5,
+        "low": 2.0,
+        "medium": 4.0,
+        "high": 10.0
+      }
+    },
+    "analyse": {
+      "model": "gemini-3-flash-preview",
+      "temperature": 0.1,
+      "max_concurrent": 5,
+      "token_budget_per_segment": 50000,
+      "tokens_per_frame": 1548,
+      "context_frames": 2,
+      "jpeg_quality": 85,
+      "source": "unmod_website_test_video",
+      "batch_gap_ms": 5000
+    },
+    "merge": {
+      "time_tolerance_ms": 2000,
+      "similarity_threshold": 0.7,
+      "discard_context_events": true
+    },
+    "observe": {
+      "enabled": true,
+      "visual_change_driven": true,
+      "cursor_tracking_enabled": true,
+      "change_detect_fps": 4.0,
+      "change_pixel_threshold": 20,
+      "change_min_area_px": 500,
+      "change_blur_kernel": 5,
+      "change_morph_kernel": 5,
+      "scene_change_area_threshold": 0.15,
+      "continuous_change_max_duration_ms": 3000,
+      "cursor_stop_min_ms": 150,
+      "cursor_stop_radius_px": 15.0,
+      "moment_merge_gap_ms": 500,
+      "token_budget_per_minute": 50000,
+      "tokens_full_frame": 1600,
+      "tokens_roi_pair": 750,
+      "tokens_roi_single": 300,
+      "roi_min_size": 256,
+      "moment_categories": [
+        "scene_change",
+        "pre_scene_change",
+        "interaction",
+        "scroll",
+        "continuous",
+        "cursor_stop",
+        "cursor_only",
+        "baseline"
+      ],
+      "min_visual_change_duration_ms": 0.0,
+      "max_moments_per_minute": 0.0,
+      "moment_sample_interval_ms": 0,
+      "moment_max_frames": 0,
+      "tracking_fps": 5.0,
+      "tracking_base_fps": 2.0,
+      "tracking_peak_fps": 15.0,
+      "tracking_displacement_threshold_px": 30.0,
+      "tracking_active_padding_ms": 500,
+      "resolution_height": 720,
+      "template_scales": [
+        0.8,
+        1.0,
+        1.25,
+        1.5
+      ],
+      "match_threshold": 0.6,
+      "early_exit_threshold": 0.9,
+      "max_interpolation_gap_ms": 500,
+      "smooth_window": 3,
+      "smooth_displacement_threshold": 50.0,
+      "flow_fps": 2.0,
+      "flow_grid_step": 20,
+      "flow_window_size_ms": 1000,
+      "flow_window_step_ms": 500,
+      "hover_min_ms": 300,
+      "hover_max_ms": 2000,
+      "hover_radius_px": 15.0,
+      "dwell_min_ms": 2000,
+      "dwell_radius_px": 20.0,
+      "thrash_window_ms": 1000,
+      "thrash_min_direction_changes": 4,
+      "thrash_min_speed_px_per_sec": 500.0,
+      "thrash_angle_threshold_deg": 90.0,
+      "click_stop_max_ms": 200,
+      "click_stop_radius_px": 5.0,
+      "click_min_confidence": 0.3,
+      "scroll_min_flow_uniformity": 0.6,
+      "scroll_min_magnitude": 3.0,
+      "hesitation_min_ms": 500,
+      "hesitation_max_ms": 2000,
+      "hesitation_radius_px": 10.0,
+      "roi_size": 512,
+      "roi_padding": 64,
+      "visual_scan_gap_ms": 3000,
+      "visual_scan_fps": 1.0,
+      "visual_change_threshold": 0.03,
+      "baseline_max_gap_ms": 5000,
+      "frame_dedup_ms": 200
+    }
+  },
+  "experiment_config": {
+    "f1_threshold": 0.3,
+    "recall_threshold": 0.2,
+    "precision_threshold": 0.15,
+    "min_sessions_before_break": 2,
+    "max_consecutive_systematic": 2,
+    "f1_decline_threshold": 0.1,
+    "auto_iterate": false,
+    "max_auto_iterations": 3,
+    "time_tolerance_ms": 2000.0,
+    "similarity_threshold": 0.5
+  },
+  "auto_iteration": null
+}

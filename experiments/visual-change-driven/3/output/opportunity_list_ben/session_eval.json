@@ -1,0 +1,117 @@
+{
+  "session_id": "opportunity_list_ben",
+  "metrics": {
+    "session_id": "opportunity_list_ben",
+    "baseline_count": 140,
+    "experiment_count": 58,
+    "matched_count": 24,
+    "precision": 0.41379310344827586,
+    "recall": 0.17142857142857143,
+    "f1": 0.24242424242424243,
+    "mean_description_similarity": 0.5991856476952689,
+    "mean_start_error_ms": 1613.9881428571389,
+    "mean_end_error_ms": 1722.0237976190426,
+    "per_type": [
+      {
+        "type": "change_ui_state",
+        "baseline_count": 17,
+        "experiment_count": 9,
+        "matched": 4,
+        "precision": 0.4444,
+        "recall": 0.2353,
+        "f1": 0.3077
+      },
+      {
+        "type": "click",
+        "baseline_count": 28,
+        "experiment_count": 4,
+        "matched": 2,
+        "precision": 0.5,
+        "recall": 0.0714,
+        "f1": 0.125
+      },
+      {
+        "type": "dwell",
+        "baseline_count": 0,
+        "experiment_count": 6,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hover",
+        "baseline_count": 24,
+        "experiment_count": 7,
+        "matched": 2,
+        "precision": 0.2857,
+        "recall": 0.0833,
+        "f1": 0.129
+      },
+      {
+        "type": "input_text",
+        "baseline_count": 14,
+        "experiment_count": 0,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "navigate",
+        "baseline_count": 31,
+        "experiment_count": 8,
+        "matched": 5,
+        "precision": 0.625,
+        "recall": 0.1613,
+        "f1": 0.2564
+      },
+      {
+        "type": "scroll",
+        "baseline_count": 25,
+        "experiment_count": 23,
+        "matched": 10,
+        "precision": 0.4348,
+        "recall": 0.4,
+        "f1": 0.4167
+      },
+      {
+        "type": "select",
+        "baseline_count": 1,
+        "experiment_count": 1,
+        "matched": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    ],
+    "f1_pass": false,
+    "recall_pass": false,
+    "precision_pass": true
+  },
+  "qualitative": null,
+  "cumulative": {
+    "sessions_completed": 7,
+    "cumulative_f1": 0.16536661466458658,
+    "cumulative_recall": 0.11484290357529794,
+    "cumulative_precision": 0.29526462395543174,
+    "cumulative_matched": 106,
+    "cumulative_baseline": 923,
+    "cumulative_experiment": 359,
+    "f1_trend": "stable",
+    "f1_history": [
+      0.18340611353711792,
+      0.08934707903780069,
+      0.2204724409448819,
+      0.08928571428571429,
+      0.11363636363636363,
+      0.1818181818181818,
+      0.24242424242424243
+    ]
+  },
+  "break_decision": {
+    "should_break": false,
+    "reason": "continue",
+    "explanation": "No early-break conditions met."
+  }
+}

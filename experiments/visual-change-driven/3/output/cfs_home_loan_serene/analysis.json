@@ -1,0 +1,477 @@
+{
+  "recording_id": "cfs_home_loan_serene",
+  "segments": [
+    {
+      "segment_index": 0,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "input_text",
+          "description": "User types 'homelone aust' into the Google search bar",
+          "confidence": 1.0,
+          "interaction_target": "Search input field",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Google Search",
+          "page_location": "https://www.google.com",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The search input changes from empty with trending searches to containing 'homelone aust' with relevant search suggestions."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 20283.333333333332,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 25050.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3559,
+      "output_tokens": 142
+    },
+    {
+      "segment_index": 1,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "click",
+          "description": "User clicked on the 'Estimate interest rate' input field to focus it for text entry.",
+          "confidence": 0.9,
+          "interaction_target": "Estimate interest rate input field",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Please tell us more about your current loan | Aussie",
+          "page_location": "https://www.aussie.com.au/refinance",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The input field for 'Estimate interest rate' is shown with a blue focus border and an active text insertion cursor."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 54949.99999999999,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 55716.66666666667,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3513,
+      "output_tokens": 162
+    },
+    {
+      "segment_index": 2,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "click",
+          "description": "User clicked the 'NEXT' button to advance the form from 'Please tell us more about your current loan' to 'Who is your current lender?'.",
+          "confidence": 0.9,
+          "interaction_target": "NEXT button",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Please tell us more about your current loan | Aussie",
+          "page_location": "https://www.aussie.com.au/refinance",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The form content changes and the progress bar advances, indicating a transition to the next step."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 60816.666666666664,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 61850.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3530,
+      "output_tokens": 168
+    },
+    {
+      "segment_index": 3,
+      "events": [
+        {
+          "frame_index_start": 1,
+          "frame_index_end": 2,
+          "type": "click",
+          "description": "User taps a key on the numeric keyboard, causing the page to zoom or shift focus on the property value input field.",
+          "confidence": 0.8,
+          "interaction_target": "Numeric keyboard",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "How much do you think your property is worth? | Aussie",
+          "page_location": "https://www.aussie.com.au/refinance",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The header text 'How much do you think your property is worth?' shifts position, indicating a layout change or zoom-in effect typically triggered by keyboard interaction on mobile."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 70150.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 71183.33333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 71216.66666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 71983.33333333333,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 5813,
+      "output_tokens": 137
+    },
+    {
+      "segment_index": 4,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "navigate",
+          "description": "User proceeds to the next step of the refinancing questionnaire after selecting a goal.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "What's your refinancing goal?",
+          "page_location": "https://www.aussie.com.au/refinance",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The UI updates from the 'What's your refinancing goal?' screen to a new question 'Are any of the...'."
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 3,
+          "type": "hover",
+          "description": "User hovers the cursor over the question text 'Are any of the...' on the new form page.",
+          "confidence": 0.8,
+          "interaction_target": "Are any of the...",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The cursor is stationary over the text of the current form step."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 79750.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 82116.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 86416.66666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 87183.33333333334,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 5831,
+      "output_tokens": 186
+    },
+    {
+      "segment_index": 5,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 3,
+          "type": "hover",
+          "description": "User hovers the cursor over the 'Type your first...' input field.",
+          "confidence": 0.9,
+          "interaction_target": "First name input field",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "How do you earn your income? | Aussie",
+          "page_location": "https://www.aussie.com.au/refinance",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The cursor is positioned over a text input field with the placeholder 'Type your first...'"
+        },
+        {
+          "frame_index_start": 4,
+          "frame_index_end": 5,
+          "type": "hover",
+          "description": "User hovers the cursor over the Aussie logo in the header area.",
+          "confidence": 0.8,
+          "interaction_target": "Aussie logo",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "How do you earn your income? | Aussie",
+          "page_location": "https://www.aussie.com.au/refinance",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The cursor is positioned over the Aussie logo at the top of the page."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 93350.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 94383.33333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 96550.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 97583.33333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 97883.33333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 98650.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 8135,
+      "output_tokens": 214
+    },
+    {
+      "segment_index": 6,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "input_text",
+          "description": "User interacts with the numeric keypad to enter their phone number into the focused input field.",
+          "confidence": 0.9,
+          "interaction_target": "Numeric keypad",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Your home loan options await! | Aussie",
+          "page_location": "https://www.aussie.com.au/refinance",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The phone number input field is focused with the numeric keypad visible; disclaimer text is visible at the bottom."
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 3,
+          "type": "input_text",
+          "description": "User continues entering their phone number; the page view has shifted upwards, bringing the disclaimer text to the top of the frame.",
+          "confidence": 0.9,
+          "interaction_target": "Numeric keypad",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Your home loan options await! | Aussie",
+          "page_location": "https://www.aussie.com.au/refinance",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user continues to input their phone number as the page content scrolls."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 108350.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 111716.66666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 113616.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 115716.66666666667,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 5872,
+      "output_tokens": 229
+    },
+    {
+      "segment_index": 7,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "change_ui_state",
+          "description": "The location services icon appears in the system status bar next to the time, indicating the page or browser has requested location access.",
+          "confidence": 0.9,
+          "interaction_target": "System Status Bar",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Home Loans | St.George Bank",
+          "page_location": "https://www.stgeorge.com.au/personal/home-loans",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The top of the mobile screen is visible, showing the time (10:22) and a back-link to Uber Eats. A location services arrow icon appears in the status bar in the second frame."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 170150.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 171183.33333333334,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3545,
+      "output_tokens": 191
+    },
+    {
+      "segment_index": 8,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "hover",
+          "description": "User hovers over the '26' years option in the 'Loan term left' dropdown menu, indicated by the red highlight.",
+          "confidence": 0.9,
+          "interaction_target": "26 years option",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Home Loan Repayment Calculator | St.George Bank",
+          "page_location": "https://www.stgeorge.com.au/personal/home-loans/calculators/repayment-calculator",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The 'Loan term left' dropdown menu is open with the '26' option highlighted."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 186950.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 187983.3333333333,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3503,
+      "output_tokens": 177
+    },
+    {
+      "segment_index": 9,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "input_text",
+          "description": "User replaced the search term 'homelone' with 'refinanchin' in the Google search bar",
+          "confidence": 0.95,
+          "interaction_target": "Search input field",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Google Search",
+          "page_location": "https://www.google.com",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The search input text changes from 'homelone aus' to 'refinanchin au' as the user types."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 221083.33333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 223983.3333333333,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3561,
+      "output_tokens": 113
+    },
+    {
+      "segment_index": 10,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "click",
+          "description": "User clicks the 'End Task' button on the task instruction overlay to finish the session.",
+          "confidence": 0.9,
+          "interaction_target": "End Task button",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Task Instructions",
+          "page_location": "https://www.google.com",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The task instruction modal is visible over the ubank website, and the user activates the 'End Task' button."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 238950.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 239716.66666666666,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3535,
+      "output_tokens": 104
+    }
+  ],
+  "total_input_tokens": 50397,
+  "total_output_tokens": 1823,
+  "processing_time_ms": 38343.652333001955
+}

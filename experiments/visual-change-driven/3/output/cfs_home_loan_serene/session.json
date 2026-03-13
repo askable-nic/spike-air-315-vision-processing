@@ -1,0 +1,274 @@
+{
+  "recording_id": "cfs_home_loan_serene",
+  "session": {
+    "identifier": "cfs_home_loan_serene",
+    "team": "(prod) CFS",
+    "study": "Copy of Updated Home loan",
+    "studyId": "6966dd088841fcc5876be0bd",
+    "roomId": "6966e0fb980a61c1870afed1",
+    "participant": "Serene",
+    "userId": [
+      "6361b56c26f182005d1d0ef2"
+    ],
+    "screenTrackStartOffset": 0,
+    "fullSessionDurationMs": 239955.0,
+    "screenTrackDurationMs": 239933.3,
+    "data": {
+      "fullSession": "full_sessions/cfs_home_loan_serene.mp4",
+      "screenTrack": "screen_tracks/cfs_home_loan_serene.mp4",
+      "transcript": "transcripts/cfs_home_loan_serene.json",
+      "normalizedScreenTrack": "screen_tracks_normalized/cfs_home_loan_serene.mp4"
+    }
+  },
+  "triage_metrics": {
+    "duration_ms": 0,
+    "artifacts_created": 0
+  },
+  "observe_metrics": {
+    "duration_ms": 56283.67795799568,
+    "artifacts_created": 64
+  },
+  "analyse_metrics": {
+    "duration_ms": 38343.652333001955,
+    "artifacts_created": 14
+  },
+  "merge_metrics": {
+    "duration_ms": 75.68120800715405,
+    "artifacts_created": 14
+  },
+  "events": [
+    {
+      "type": "input_text",
+      "time_start": 20283.333333333332,
+      "time_end": 25050.0,
+      "description": "User types 'homelone aust' into the Google search bar",
+      "confidence": 1.0,
+      "interaction_target": "Search input field",
+      "cursor_position": null,
+      "page_title": "Google Search",
+      "page_location": "https://www.google.com",
+      "viewport_width": 978,
+      "viewport_height": 2120,
+      "frame_description": "The search input changes from empty with trending searches to containing 'homelone aust' with relevant search suggestions.",
+      "task_id": null
+    },
+    {
+      "type": "click",
+      "time_start": 54949.99999999999,
+      "time_end": 55716.66666666667,
+      "description": "User clicked on the 'Estimate interest rate' input field to focus it for text entry.",
+      "confidence": 0.9,
+      "interaction_target": "Estimate interest rate input field",
+      "cursor_position": {
+        "x": 65.95555555555556,
+        "y": 1970.4222222222224
+      },
+      "page_title": "Please tell us more about your current loan | Aussie",
+      "page_location": "https://www.aussie.com.au/refinance",
+      "viewport_width": 978,
+      "viewport_height": 2120,
+      "frame_description": "The input field for 'Estimate interest rate' is shown with a blue focus border and an active text insertion cursor.",
+      "task_id": null
+    },
+    {
+      "type": "click",
+      "time_start": 60816.666666666664,
+      "time_end": 61850.0,
+      "description": "User clicked the 'NEXT' button to advance the form from 'Please tell us more about your current loan' to 'Who is your current lender?'.",
+      "confidence": 0.9,
+      "interaction_target": "NEXT button",
+      "cursor_position": null,
+      "page_title": "Please tell us more about your current loan | Aussie",
+      "page_location": "https://www.aussie.com.au/refinance",
+      "viewport_width": 978,
+      "viewport_height": 2120,
+      "frame_description": "The form content changes and the progress bar advances, indicating a transition to the next step.",
+      "task_id": null
+    },
+    {
+      "type": "click",
+      "time_start": 71183.33333333334,
+      "time_end": 71216.66666666667,
+      "description": "User taps a key on the numeric keyboard, causing the page to zoom or shift focus on the property value input field.",
+      "confidence": 0.8,
+      "interaction_target": "Numeric keyboard",
+      "cursor_position": {
+        "x": 65.95555555555556,
+        "y": 1964.6060356652952
+      },
+      "page_title": "How much do you think your property is worth? | Aussie",
+      "page_location": "https://www.aussie.com.au/refinance",
+      "viewport_width": 978,
+      "viewport_height": 2120,
+      "frame_description": "The header text 'How much do you think your property is worth?' shifts position, indicating a layout change or zoom-in effect typically triggered by keyboard interaction on mobile.",
+      "task_id": null
+    },
+    {
+      "type": "navigate",
+      "time_start": 79750.0,
+      "time_end": 82116.66666666666,
+      "description": "User proceeds to the next step of the refinancing questionnaire after selecting a goal.",
+      "confidence": 0.9,
+      "interaction_target": null,
+      "cursor_position": null,
+      "page_title": "What's your refinancing goal?",
+      "page_location": "https://www.aussie.com.au/refinance",
+      "viewport_width": 978,
+      "viewport_height": 2120,
+      "frame_description": "The UI updates from the 'What's your refinancing goal?' screen to a new question 'Are any of the...'.",
+      "task_id": null
+    },
+    {
+      "type": "hover",
+      "time_start": 86416.66666666667,
+      "time_end": 87183.33333333334,
+      "description": "User hovers the cursor over the question text 'Are any of the...' on the new form page.",
+      "confidence": 0.8,
+      "interaction_target": "Are any of the...",
+      "cursor_position": {
+        "x": 318.0,
+        "y": 1785.5111111111112
+      },
+      "page_title": null,
+      "page_location": null,
+      "viewport_width": 978,
+      "viewport_height": 2120,
+      "frame_description": "The cursor is stationary over the text of the current form step.",
+      "task_id": null
+    },
+    {
+      "type": "hover",
+      "time_start": 96550.0,
+      "time_end": 97583.33333333333,
+      "description": "User hovers the cursor over the 'Type your first...' input field.",
+      "confidence": 0.9,
+      "interaction_target": "First name input field",
+      "cursor_position": {
+        "x": 65.95555555555556,
+        "y": 1964.5494894071028
+      },
+      "page_title": "How do you earn your income? | Aussie",
+      "page_location": "https://www.aussie.com.au/refinance",
+      "viewport_width": 978,
+      "viewport_height": 2120,
+      "frame_description": "The cursor is positioned over a text input field with the placeholder 'Type your first...'",
+      "task_id": null
+    },
+    {
+      "type": "hover",
+      "time_start": 97883.33333333333,
+      "time_end": 98650.0,
+      "description": "User hovers the cursor over the Aussie logo in the header area.",
+      "confidence": 0.8,
+      "interaction_target": "Aussie logo",
+      "cursor_position": {
+        "x": 759.6666666666666,
+        "y": 1697.177777777778
+      },
+      "page_title": "How do you earn your income? | Aussie",
+      "page_location": "https://www.aussie.com.au/refinance",
+      "viewport_width": 978,
+      "viewport_height": 2120,
+      "frame_description": "The cursor is positioned over the Aussie logo at the top of the page.",
+      "task_id": null
+    },
+    {
+      "type": "input_text",
+      "time_start": 108350.0,
+      "time_end": 111716.66666666667,
+      "description": "User interacts with the numeric keypad to enter their phone number into the focused input field.",
+      "confidence": 0.9,
+      "interaction_target": "Numeric keypad",
+      "cursor_position": null,
+      "page_title": "Your home loan options await! | Aussie",
+      "page_location": "https://www.aussie.com.au/refinance",
+      "viewport_width": 978,
+      "viewport_height": 2120,
+      "frame_description": "The phone number input field is focused with the numeric keypad visible; disclaimer text is visible at the bottom.",
+      "task_id": null
+    },
+    {
+      "type": "input_text",
+      "time_start": 113616.66666666666,
+      "time_end": 115716.66666666667,
+      "description": "User continues entering their phone number; the page view has shifted upwards, bringing the disclaimer text to the top of the frame.",
+      "confidence": 0.9,
+      "interaction_target": "Numeric keypad",
+      "cursor_position": null,
+      "page_title": "Your home loan options await! | Aussie",
+      "page_location": "https://www.aussie.com.au/refinance",
+      "viewport_width": 978,
+      "viewport_height": 2120,
+      "frame_description": "The user continues to input their phone number as the page content scrolls.",
+      "task_id": null
+    },
+    {
+      "type": "change_ui_state",
+      "time_start": 170150.0,
+      "time_end": 171183.33333333334,
+      "description": "The location services icon appears in the system status bar next to the time, indicating the page or browser has requested location access.",
+      "confidence": 0.9,
+      "interaction_target": "System Status Bar",
+      "cursor_position": null,
+      "page_title": "Home Loans | St.George Bank",
+      "page_location": "https://www.stgeorge.com.au/personal/home-loans",
+      "viewport_width": 978,
+      "viewport_height": 2120,
+      "frame_description": "The top of the mobile screen is visible, showing the time (10:22) and a back-link to Uber Eats. A location services arrow icon appears in the status bar in the second frame.",
+      "task_id": null
+    },
+    {
+      "type": "hover",
+      "time_start": 186950.0,
+      "time_end": 187983.3333333333,
+      "description": "User hovers over the '26' years option in the 'Loan term left' dropdown menu, indicated by the red highlight.",
+      "confidence": 0.9,
+      "interaction_target": "26 years option",
+      "cursor_position": null,
+      "page_title": "Home Loan Repayment Calculator | St.George Bank",
+      "page_location": "https://www.stgeorge.com.au/personal/home-loans/calculators/repayment-calculator",
+      "viewport_width": 978,
+      "viewport_height": 2120,
+      "frame_description": "The 'Loan term left' dropdown menu is open with the '26' option highlighted.",
+      "task_id": null
+    },
+    {
+      "type": "input_text",
+      "time_start": 221083.33333333334,
+      "time_end": 223983.3333333333,
+      "description": "User replaced the search term 'homelone' with 'refinanchin' in the Google search bar",
+      "confidence": 0.95,
+      "interaction_target": "Search input field",
+      "cursor_position": null,
+      "page_title": "Google Search",
+      "page_location": "https://www.google.com",
+      "viewport_width": 978,
+      "viewport_height": 2120,
+      "frame_description": "The search input text changes from 'homelone aus' to 'refinanchin au' as the user types.",
+      "task_id": null
+    },
+    {
+      "type": "click",
+      "time_start": 238950.0,
+      "time_end": 239716.66666666666,
+      "description": "User clicks the 'End Task' button on the task instruction overlay to finish the session.",
+      "confidence": 0.9,
+      "interaction_target": "End Task button",
+      "cursor_position": {
+        "x": 837.4,
+        "y": 674.8666666666667
+      },
+      "page_title": "Task Instructions",
+      "page_location": "https://www.google.com",
+      "viewport_width": 978,
+      "viewport_height": 2120,
+      "frame_description": "The task instruction modal is visible over the ubank website, and the user activates the 'End Task' button.",
+      "task_id": null
+    }
+  ],
+  "event_count": 14,
+  "total_input_token_budget": 199944,
+  "total_input_token_budget_utilisation": 25.2,
+  "total_input_tokens": 50397,
+  "total_output_tokens": 1823
+}

@@ -1,0 +1,1928 @@
+{
+  "recording_id": "cfs_home_loan_sasha",
+  "segments": [
+    {
+      "segment_index": 0,
+      "events": [
+        {
+          "frame_index_start": 1,
+          "frame_index_end": 2,
+          "type": "navigate",
+          "description": "The Google Search homepage loads from a blank state.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Google",
+          "page_location": "google.com",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen transitions from a blank white state to the Google Search homepage."
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 3,
+          "type": "change_ui_state",
+          "description": "A task instruction overlay appears on the screen, detailing the research objective regarding home loan options.",
+          "confidence": 0.95,
+          "interaction_target": "Task instructions overlay",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "A large white modal with text 'Task' and research instructions covers the Google homepage."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 2683.333333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 3450.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 3483.3333333333335,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 4916.666666666667,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 5804,
+      "output_tokens": 156
+    },
+    {
+      "segment_index": 1,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "navigate",
+          "description": "User navigates from the task instructions page to the Google search homepage to begin the research task.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Google",
+          "page_location": "https://www.google.com",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen transitions from a task instruction modal to the Google search homepage."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 47483.333333333336,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 48250.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3450,
+      "output_tokens": 87
+    },
+    {
+      "segment_index": 2,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 0,
+          "type": "click",
+          "description": "User clicked the 'home loans comparison' autocomplete suggestion in the Google search bar.",
+          "confidence": 0.95,
+          "interaction_target": "home loans comparison autocomplete suggestion",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Google",
+          "page_location": "google.com",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Google search page with autocomplete dropdown visible and cursor over the first suggestion."
+        },
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "navigate",
+          "description": "The page navigated from the Google search homepage to the search results for 'home loans comparison'.",
+          "confidence": 1.0,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "home loans comparison - Google Search",
+          "page_location": "google.com/search?q=home+loans+comparison",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Transition from search input to search results page."
+        },
+        {
+          "frame_index_start": 4,
+          "frame_index_end": 5,
+          "type": "hover",
+          "description": "User moved the cursor to hover over the 'Unloan' sponsored search result link.",
+          "confidence": 0.9,
+          "interaction_target": "5.10% p.a. Comparison Rate | Low Rate Home Loan From Unloan",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "home loans comparison - Google Search",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Zoomed view of search results showing the cursor moving onto a sponsored link."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 53350.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 54650.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 56283.33333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 58916.666666666664,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 59750.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 60783.33333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 60816.666666666664,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 61850.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 10311,
+      "output_tokens": 282
+    },
+    {
+      "segment_index": 3,
+      "events": [
+        {
+          "frame_index_start": 3,
+          "frame_index_end": 4,
+          "type": "hover",
+          "description": "User hovers the cursor over the Unloan sponsored result URL link.",
+          "confidence": 0.95,
+          "interaction_target": "https://www.unloan.com.au",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "home loans comparison - Google Search",
+          "page_location": "google.com/search?q=home+loans+comparison",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The cursor is positioned over the Unloan website link in the sponsored results section."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 68816.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 69850.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 70416.66666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 71183.33333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 71483.33333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 72516.66666666667,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 8075,
+      "output_tokens": 152
+    },
+    {
+      "segment_index": 4,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "hover",
+          "description": "User hovers over the 'Calculators' link in the navigation menu.",
+          "confidence": 0.9,
+          "interaction_target": "Calculators",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Unloan - Home Loans",
+          "page_location": "unloan.com.au",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user's cursor is positioned over the 'Calculators' option in the header navigation bar."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 103216.66666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 105316.66666666666,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3554,
+      "output_tokens": 99
+    },
+    {
+      "segment_index": 5,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "change_ui_state",
+          "description": "The 'Savings' calculator section loads and displays input fields for loan purpose, amount, and term.",
+          "confidence": 0.8,
+          "interaction_target": "Savings calculator",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Unloan Calculators",
+          "page_location": "unloan.com.au/calculators",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 3,
+          "type": "navigate",
+          "description": "User navigates from the Unloan calculator page to the task instructions screen.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Task Instructions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 118416.66666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 121050.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 121616.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 123183.33333333334,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 5894,
+      "output_tokens": 137
+    },
+    {
+      "segment_index": 6,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "click",
+          "description": "User clicks on the loan balance input field to focus it.",
+          "confidence": 0.9,
+          "interaction_target": "Loan balance input field",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Lendi Application",
+          "page_location": "lendi.com.au/apply",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The input field for loan balance becomes focused with a blue border."
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 3,
+          "type": "click",
+          "description": "User clicks the 'NEXT' button to proceed to the next step of the application.",
+          "confidence": 1.0,
+          "interaction_target": "NEXT button",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Lendi Application",
+          "page_location": "lendi.com.au/apply",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user clicks the green NEXT button, and the page transitions to the interest rate question."
+        },
+        {
+          "frame_index_start": 4,
+          "frame_index_end": 5,
+          "type": "click",
+          "description": "User clicks on the 'Estimate interest rate' input field.",
+          "confidence": 0.9,
+          "interaction_target": "Estimate interest rate input field",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Lendi Application",
+          "page_location": "lendi.com.au/apply",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The cursor moves into the interest rate input field."
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 7,
+          "type": "select",
+          "description": "User toggles the 'I don't know, skip' switch for the interest rate.",
+          "confidence": 1.0,
+          "interaction_target": "I don't know, skip toggle",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Lendi Application",
+          "page_location": "lendi.com.au/apply",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The toggle switch changes from grey (off) to green (on)."
+        },
+        {
+          "frame_index_start": 8,
+          "frame_index_end": 9,
+          "type": "click",
+          "description": "User clicks on the 'Search for your lender' input field, which displays a validation error.",
+          "confidence": 0.9,
+          "interaction_target": "Search for your lender input field",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Lendi Application",
+          "page_location": "lendi.com.au/apply",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The lender search field is focused, and a red validation message 'Current lender is required' appears."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 144016.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 144783.33333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 149083.33333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 149850.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 151216.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 152516.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 154150.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 154916.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 157616.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 159183.33333333334,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 12501,
+      "output_tokens": 477
+    },
+    {
+      "segment_index": 7,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "click",
+          "description": "User clicked the 'NEXT' button to proceed from the property value screen.",
+          "confidence": 0.9,
+          "interaction_target": "NEXT",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Lendi Application",
+          "page_location": "lendi.com.au/apply",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user is on a screen asking for estimated property value and clicks the green 'NEXT' button."
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 3,
+          "type": "click",
+          "description": "User selected 'Decrease repayments' as the reason for refinancing.",
+          "confidence": 0.9,
+          "interaction_target": "Decrease repayments",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Lendi Application",
+          "page_location": "lendi.com.au/apply",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user selects the first option 'Decrease repayments' from a list of reasons for refinancing."
+        },
+        {
+          "frame_index_start": 4,
+          "frame_index_end": 5,
+          "type": "navigate",
+          "description": "The application navigates to the next question about property usage.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Lendi Application",
+          "page_location": "lendi.com.au/apply",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen transitions from the refinance reason question to a question about how the property will be used."
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 7,
+          "type": "click",
+          "description": "User clicked 'I will live in it' to specify property usage, triggering a page transition.",
+          "confidence": 0.85,
+          "interaction_target": "I will live in it",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Lendi Application",
+          "page_location": "lendi.com.au/apply",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user selects the 'I will live in it' option, and the screen begins to transition."
+        },
+        {
+          "frame_index_start": 8,
+          "frame_index_end": 9,
+          "type": "navigate",
+          "description": "The page loads the next step asking about important lender features after a brief loading state.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Lendi Application",
+          "page_location": "lendi.com.au/apply",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "A loading spinner is briefly visible before the new question about lender features appears."
+        },
+        {
+          "frame_index_start": 10,
+          "frame_index_end": 11,
+          "type": "click",
+          "description": "User selected 'Offset/Redraw' as an important feature when choosing a lender.",
+          "confidence": 0.9,
+          "interaction_target": "Offset/Redraw",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Lendi Application",
+          "page_location": "lendi.com.au/apply",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user clicks on the 'Offset/Redraw' icon/button, which then navigates to the credit history question."
+        },
+        {
+          "frame_index_start": 12,
+          "frame_index_end": 13,
+          "type": "click",
+          "description": "User clicked 'Excellent - No Issues' to describe their credit history, moving to the employment status screen.",
+          "confidence": 0.9,
+          "interaction_target": "Excellent - No Issues",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Lendi Application",
+          "page_location": "lendi.com.au/apply",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user selects the 'Excellent - No Issues' option, and the screen changes to ask about employment status."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 167216.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 168250.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 169350.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 170116.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 170950.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 171716.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 172283.33333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 173050.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 173083.33333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 174916.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 174950.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 176250.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 179750.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 181583.33333333334,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 17025,
+      "output_tokens": 678
+    },
+    {
+      "segment_index": 8,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "navigate",
+          "description": "User clicks the primary action button at the bottom of the form to proceed, triggering a page load and transition to a blank state.",
+          "confidence": 0.9,
+          "interaction_target": "GET MY HOME LOAN MATCHES",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Lendi Application",
+          "page_location": "lendi.com.au/apply",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen transitions from the interest rate details form to a blank white screen, indicating navigation."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 188283.33333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 189850.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3504,
+      "output_tokens": 153
+    },
+    {
+      "segment_index": 9,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "scroll",
+          "description": "User scrolls down the Google search results page to view more listings.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "home loans comparison - Google Search",
+          "page_location": "google.com/search?q=home+loans+comparison",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 3,
+          "type": "click",
+          "description": "User clicks on the 'Compare Home Loans for 2026 (Interest Rates from 5.09%)' search result link, triggering a page navigation.",
+          "confidence": 1.0,
+          "interaction_target": "Compare Home Loans for 2026 (Interest Rates from 5.09%)",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "home loans comparison - Google Search",
+          "page_location": "google.com/search?q=home+loans+comparison",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen goes white as the browser begins to load the destination page."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 195216.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 198916.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 199483.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 200250.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 5704,
+      "output_tokens": 282
+    },
+    {
+      "segment_index": 10,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "scroll",
+          "description": "User scrolls down the list of home loan products to view more options.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Compare Home Loans - Mortgage Choice",
+          "page_location": "mortgagechoice.com.au/home-loans/compare-home-loans",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user is browsing a list of home loan results from various lenders."
+        },
+        {
+          "frame_index_start": 1,
+          "frame_index_end": 2,
+          "type": "hover",
+          "description": "User hovers the cursor over the '5.19% p.a.' interest rate for a Newcastle Permanent Fixed home loan product.",
+          "confidence": 0.8,
+          "interaction_target": "5.19% p.a. interest rate",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Compare Home Loans - Mortgage Choice",
+          "page_location": "mortgagechoice.com.au/home-loans/compare-home-loans",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 3,
+          "type": "scroll",
+          "description": "User continues scrolling down the page to see further loan results.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Compare Home Loans - Mortgage Choice",
+          "page_location": "mortgagechoice.com.au/home-loans/compare-home-loans",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 210950.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 212250.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 212283.33333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 215450.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 5732,
+      "output_tokens": 384
+    },
+    {
+      "segment_index": 11,
+      "events": [
+        {
+          "frame_index_start": 4,
+          "frame_index_end": 5,
+          "type": "hover",
+          "description": "User moves the cursor towards the 'Enquire' button on the first home loan card.",
+          "confidence": 0.85,
+          "interaction_target": "Enquire button",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Home loans from other lenders - Mortgage Choice",
+          "page_location": "mortgagechoice.com.au/home-loans/compare-home-loans",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The cursor appears as a hand pointer near the bottom of the first loan card, indicating intent to interact with the 'Enquire' button."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 258950.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 261050.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 261883.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 262650.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 262683.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 263983.3333333334,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 7987,
+      "output_tokens": 126
+    },
+    {
+      "segment_index": 12,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "hover",
+          "description": "User hovered over the 'Compare' menu item in the navigation bar.",
+          "confidence": 0.8,
+          "interaction_target": "Compare",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Home loans from other lenders - Mortgage Choice",
+          "page_location": "mortgagechoice.com.au/home-loans/compare-home-loans",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The cursor is positioned over the 'Compare' link in the website header."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 285883.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 286650.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3550,
+      "output_tokens": 106
+    },
+    {
+      "segment_index": 13,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "click",
+          "description": "User clicked the 'Next' button to navigate to the next page of home loan results, triggering a page load.",
+          "confidence": 0.9,
+          "interaction_target": "Next button",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Compare Home Loans - Mortgage Choice",
+          "page_location": "mortgagechoice.com.au/home-loans/compare-home-loans",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user is at the bottom of the home loan comparison list and clicks the 'Next' button, causing the screen to go white as the next page begins to load."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 293616.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 294383.3333333333,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3476,
+      "output_tokens": 133
+    },
+    {
+      "segment_index": 14,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "change_ui_state",
+          "description": "The screen transitions from a blank white page to a loading screen featuring a meerkat illustration.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "comparethemarket",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Loading screen appears with a meerkat character."
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 3,
+          "type": "navigate",
+          "description": "The loading process completes, and the user is navigated to the first question of the flow: 'How can we help you?'.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "comparethemarket",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Transition from loading screen to the first selection screen."
+        },
+        {
+          "frame_index_start": 4,
+          "frame_index_end": 5,
+          "type": "hover",
+          "description": "User hovers the cursor over the 'I want to refinance' option, which highlights with a blue border.",
+          "confidence": 0.9,
+          "interaction_target": "I want to refinance",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "comparethemarket",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Cursor moves over the refinance option."
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 7,
+          "type": "click",
+          "description": "User clicks on the 'I want to refinance' option, triggering a transition to the next step in the process.",
+          "confidence": 1.0,
+          "interaction_target": "I want to refinance",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "comparethemarket",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "User selects the refinance option and the page changes to the address input field."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 301350.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 302383.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 302416.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 303450.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 303750.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 304516.6666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 304816.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 306116.6666666667,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 10254,
+      "output_tokens": 460
+    },
+    {
+      "segment_index": 15,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "dwell",
+          "description": "User is dwelling on the page, reviewing the 'Variable' and 'Fixed' loan type options in the comparison tool.",
+          "confidence": 0.8,
+          "interaction_target": "Loan type radio buttons",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Compare ANZ home loans",
+          "page_location": "anz.com.au/personal/home-loans/compare",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen shows radio button options for 'Variable' and 'Fixed' loan types on the ANZ home loan comparison page."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 317883.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 318650.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3547,
+      "output_tokens": 161
+    },
+    {
+      "segment_index": 16,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "scroll",
+          "description": "User scrolls down the page to view the details of the ANZ Standard Variable Rate Home Loan.",
+          "confidence": 0.9,
+          "interaction_target": "Page content",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Show me my options - ANZ",
+          "page_location": "anz.com.au/personal/home-loans/compare",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user scrolls from the filter section down to the first loan product card."
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 3,
+          "type": "scroll",
+          "description": "User scrolls further down the page to view the 'Request a call back' button and 'Learn more' link.",
+          "confidence": 0.9,
+          "interaction_target": "Page content",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Show me my options - ANZ",
+          "page_location": "anz.com.au/personal/home-loans/compare",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user scrolls to the bottom of the loan product card to see the call-to-action buttons."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 328550.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 331716.6666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 332550.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 342116.6666666667,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 5830,
+      "output_tokens": 300
+    },
+    {
+      "segment_index": 17,
+      "events": [],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 357616.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 358650.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3504,
+      "output_tokens": 1
+    },
+    {
+      "segment_index": 18,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "scroll",
+          "description": "User scrolls down the page from the 'What is a variable rate home loan?' section to view the interest rates and 'Request a call back' button.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Negotiate your variable rate - ANZ",
+          "page_location": "anz.com.au/personal/home-loans/variable/standard-variable",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 365083.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 365850.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3501,
+      "output_tokens": 97
+    },
+    {
+      "segment_index": 19,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "navigate",
+          "description": "The page 'Choosing a home loan' loads on the Moneysmart website, transitioning from a blank state to the interactive tool.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Check the average interest rate - Moneysmart",
+          "page_location": "moneysmart.gov.au/home-loans/choosing-a-home-loan",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen transitions from a blank white state to the Moneysmart home loan tool page."
+        },
+        {
+          "frame_index_start": 1,
+          "frame_index_end": 2,
+          "type": "hover",
+          "description": "User hovers the cursor over the 'Repayment type' dropdown menu.",
+          "confidence": 0.8,
+          "interaction_target": "Repayment type dropdown",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Check the average interest rate - Moneysmart",
+          "page_location": "moneysmart.gov.au/home-loans/choosing-a-home-loan",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The cursor is positioned over the 'Repayment type' dropdown which currently shows 'Principal and interest' before moving towards the interest rate display."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 387650.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 390416.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 391983.3333333334,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 4663,
+      "output_tokens": 321
+    },
+    {
+      "segment_index": 20,
+      "events": [],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 397083.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 397850.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3511,
+      "output_tokens": 1
+    },
+    {
+      "segment_index": 21,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "scroll",
+          "description": "User scrolls down the page to view more content in the 'Up next in Home loans' section.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Up next in Home loans - Moneysmart",
+          "page_location": "moneysmart.gov.au/home-loans/choosing-a-home-loan",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The page content moves upwards, revealing more article cards like 'Using a mortgage broker' and 'Pay off your mortgage faster'."
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 3,
+          "type": "navigate",
+          "description": "User navigates back to the Google search results page.",
+          "confidence": 0.95,
+          "interaction_target": "Browser back button",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "home loans comparison - Google Search",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The view changes from the Moneysmart website back to the previous Google search results for 'home loans comparison'."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 406150.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 417583.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 418416.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 421050.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 5813,
+      "output_tokens": 280
+    },
+    {
+      "segment_index": 22,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "click",
+          "description": "User clicked the 'Live in' loan purpose card to select it.",
+          "confidence": 0.95,
+          "interaction_target": "Live in card",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "What's the purpose of your loan? - Unloan",
+          "page_location": "unloan.com.au/apply",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user selects the 'Live in' option for their loan purpose."
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 3,
+          "type": "navigate",
+          "description": "The application navigates to the property details section.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Let's find your property",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen transitions from loan purpose to property address entry."
+        },
+        {
+          "frame_index_start": 4,
+          "frame_index_end": 5,
+          "type": "click",
+          "description": "User clicked into the 'What's your property address?' input field to focus it.",
+          "confidence": 0.9,
+          "interaction_target": "What's your property address?",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The cursor is placed inside the address search box."
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 11,
+          "type": "input_text",
+          "description": "User typed '11 dwyer st' into the property address field.",
+          "confidence": 0.95,
+          "interaction_target": "What's your property address?",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user types an address, triggering autocomplete suggestions."
+        },
+        {
+          "frame_index_start": 14,
+          "frame_index_end": 15,
+          "type": "select",
+          "description": "User selected '11 Dwyer Street, Cavendish VIC 3314' from the address suggestions.",
+          "confidence": 0.9,
+          "interaction_target": "11 Dwyer Street, Cavendish VIC 3314 suggestion",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user clicks a specific address from the dropdown list."
+        },
+        {
+          "frame_index_start": 16,
+          "frame_index_end": 17,
+          "type": "select",
+          "description": "User selected 'House' from the Property type dropdown.",
+          "confidence": 0.85,
+          "interaction_target": "Property type dropdown",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The property type is set to 'House'."
+        },
+        {
+          "frame_index_start": 24,
+          "frame_index_end": 25,
+          "type": "navigate",
+          "description": "The application navigates to the 'Tell us about your loan' section.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Tell us about your loan",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen transitions to the next step of the application."
+        },
+        {
+          "frame_index_start": 26,
+          "frame_index_end": 27,
+          "type": "select",
+          "description": "User selected the 'Two of us' radio button for the 'Who is this loan for?' question.",
+          "confidence": 0.95,
+          "interaction_target": "Two of us radio button",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Selecting 'Two of us' reveals additional name fields for a co-borrower."
+        },
+        {
+          "frame_index_start": 30,
+          "frame_index_end": 31,
+          "type": "input_text",
+          "description": "User typed 'serene' into the 'What's your first name?' field.",
+          "confidence": 0.95,
+          "interaction_target": "What's your first name?",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user begins entering their personal details."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 430416.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 431183.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 432016.6666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 434383.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 436283.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 437050.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 439483.3333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 440250.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 441349.99999999994,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 442383.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 445349.99999999994,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 446650.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 448016.6666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 448783.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 448816.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 450116.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 450416.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 17,
+          "timestamp_ms": 451716.6666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 18,
+          "timestamp_ms": 451750.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 19,
+          "timestamp_ms": 452516.6666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 20,
+          "timestamp_ms": 452816.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 21,
+          "timestamp_ms": 453583.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 22,
+          "timestamp_ms": 456016.6666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 23,
+          "timestamp_ms": 457849.99999999994,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 24,
+          "timestamp_ms": 458150.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 25,
+          "timestamp_ms": 461849.99999999994,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 26,
+          "timestamp_ms": 461883.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 27,
+          "timestamp_ms": 462650.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 28,
+          "timestamp_ms": 464550.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 29,
+          "timestamp_ms": 465316.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 30,
+          "timestamp_ms": 466950.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 31,
+          "timestamp_ms": 467716.6666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 32,
+          "timestamp_ms": 468816.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 33,
+          "timestamp_ms": 471183.3333333333,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 39530,
+      "output_tokens": 997
+    },
+    {
+      "segment_index": 23,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "hover",
+          "description": "User hovers over the 'Save money' radio button option.",
+          "confidence": 0.8,
+          "interaction_target": "Save money radio button",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Why are you refinancing? - Unloan",
+          "page_location": "unloan.com.au/apply",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The refinancing reason selection screen with 'Save money' selected."
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 3,
+          "type": "hover",
+          "description": "User hovers over the 'property and loan' item in the application progress sidebar.",
+          "confidence": 0.8,
+          "interaction_target": "property and loan sidebar item",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Why are you refinancing? - Unloan",
+          "page_location": "unloan.com.au/apply",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The sidebar menu showing application progress."
+        },
+        {
+          "frame_index_start": 4,
+          "frame_index_end": 5,
+          "type": "hover",
+          "description": "User hovers back over the 'Save money' radio button option.",
+          "confidence": 0.8,
+          "interaction_target": "Save money radio button",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Why are you refinancing? - Unloan",
+          "page_location": "unloan.com.au/apply",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The refinancing reason selection screen."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 477083.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 477849.99999999994,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 480016.6666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 480783.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 483216.6666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 483983.3333333334,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 7943,
+      "output_tokens": 279
+    },
+    {
+      "segment_index": 24,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "click",
+          "description": "User clicks into the co-borrower's first name input field to provide information.",
+          "confidence": 0.7,
+          "interaction_target": "What's your co-borrower's first name?",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Zoomed-in view of the co-borrower name input field and a warning message about adding a co-borrower."
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 3,
+          "type": "navigate",
+          "description": "User proceeds from the initial application form to the loan purpose selection screen.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "What's the purpose of your loan? - Unloan",
+          "page_location": "unloan.com.au/apply",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Transition from a multi-field form to a selection screen with 'Live in' and 'Invest' options."
+        },
+        {
+          "frame_index_start": 4,
+          "frame_index_end": 5,
+          "type": "hover",
+          "description": "User hovers over the 'Features' and 'Learn' links in the top navigation menu.",
+          "confidence": 0.8,
+          "interaction_target": "Features and Learn navigation links",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Close-up of the navigation menu items 'Features' and 'Learn'."
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 7,
+          "type": "scroll",
+          "description": "User scrolls down the page to view the 'Invest' section of the variable rates table.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Variable rates for new loans - Unloan",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The page content shifts upwards, revealing the 'Invest' row of interest rates."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 490416.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 491183.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 493083.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 496516.6666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 500016.6666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 500783.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 504283.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 507183.3333333333,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 10379,
+      "output_tokens": 357
+    },
+    {
+      "segment_index": 25,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 3,
+          "type": "dwell",
+          "description": "User is reading the details about loan purposes and the $0 fee structure on the Unloan rates page.",
+          "confidence": 0.8,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Variable rates for new loans - Unloan",
+          "page_location": "unloan.com.au/rates",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 4,
+          "frame_index_end": 5,
+          "type": "navigate",
+          "description": "User navigates away from the Unloan website to view the task instructions.",
+          "confidence": 0.9,
+          "interaction_target": "Task instructions",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Transition from the Unloan website to the research task description page."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 512283.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 513049.99999999994,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 513883.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 515183.33333333326,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 515216.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 525583.3333333334,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 8088,
+      "output_tokens": 147
+    },
+    {
+      "segment_index": 26,
+      "events": [],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 548016.6666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 548783.3333333333,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 3475,
+      "output_tokens": 1
+    }
+  ],
+  "total_input_tokens": 206605,
+  "total_output_tokens": 6654,
+  "processing_time_ms": 154887.7534589992
+}

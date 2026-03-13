@@ -1,0 +1,107 @@
+{
+  "session_id": "flight_centre_booking_kay",
+  "metrics": {
+    "session_id": "flight_centre_booking_kay",
+    "baseline_count": 71,
+    "experiment_count": 39,
+    "matched_count": 10,
+    "precision": 0.2564102564102564,
+    "recall": 0.14084507042253522,
+    "f1": 0.1818181818181818,
+    "mean_description_similarity": 0.5163076122530399,
+    "mean_start_error_ms": 2165.5501333333145,
+    "mean_end_error_ms": 2399.4498666666623,
+    "per_type": [
+      {
+        "type": "change_ui_state",
+        "baseline_count": 33,
+        "experiment_count": 11,
+        "matched": 4,
+        "precision": 0.3636,
+        "recall": 0.1212,
+        "f1": 0.1818
+      },
+      {
+        "type": "click",
+        "baseline_count": 15,
+        "experiment_count": 3,
+        "matched": 2,
+        "precision": 0.6667,
+        "recall": 0.1333,
+        "f1": 0.2222
+      },
+      {
+        "type": "dwell",
+        "baseline_count": 0,
+        "experiment_count": 8,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hover",
+        "baseline_count": 13,
+        "experiment_count": 8,
+        "matched": 2,
+        "precision": 0.25,
+        "recall": 0.1538,
+        "f1": 0.1905
+      },
+      {
+        "type": "navigate",
+        "baseline_count": 5,
+        "experiment_count": 0,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "scroll",
+        "baseline_count": 3,
+        "experiment_count": 7,
+        "matched": 1,
+        "precision": 0.1429,
+        "recall": 0.3333,
+        "f1": 0.2
+      },
+      {
+        "type": "select",
+        "baseline_count": 2,
+        "experiment_count": 2,
+        "matched": 1,
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5
+      }
+    ],
+    "f1_pass": false,
+    "recall_pass": false,
+    "precision_pass": true
+  },
+  "qualitative": null,
+  "cumulative": {
+    "sessions_completed": 6,
+    "cumulative_f1": 0.15129151291512913,
+    "cumulative_recall": 0.10472541507024266,
+    "cumulative_precision": 0.2724252491694352,
+    "cumulative_matched": 82,
+    "cumulative_baseline": 783,
+    "cumulative_experiment": 301,
+    "f1_trend": "stable",
+    "f1_history": [
+      0.18340611353711792,
+      0.08934707903780069,
+      0.2204724409448819,
+      0.08928571428571429,
+      0.11363636363636363,
+      0.1818181818181818
+    ]
+  },
+  "break_decision": {
+    "should_break": false,
+    "reason": "continue",
+    "explanation": "No early-break conditions met."
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "session_id": "ask_create_study_brandon",
+  "metrics": {
+    "session_id": "ask_create_study_brandon",
+    "baseline_count": 174,
+    "experiment_count": 55,
+    "matched_count": 21,
+    "precision": 0.38181818181818183,
+    "recall": 0.1206896551724138,
+    "f1": 0.18340611353711792,
+    "mean_description_similarity": 0.5841293431371524,
+    "mean_start_error_ms": 858.9947460317441,
+    "mean_end_error_ms": 1229.3649841270055,
+    "per_type": [
+      {
+        "type": "change_ui_state",
+        "baseline_count": 40,
+        "experiment_count": 5,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "click",
+        "baseline_count": 48,
+        "experiment_count": 14,
+        "matched": 7,
+        "precision": 0.5,
+        "recall": 0.1458,
+        "f1": 0.2258
+      },
+      {
+        "type": "drag",
+        "baseline_count": 0,
+        "experiment_count": 1,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "dwell",
+        "baseline_count": 0,
+        "experiment_count": 3,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hesitate",
+        "baseline_count": 1,
+        "experiment_count": 0,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hover",
+        "baseline_count": 42,
+        "experiment_count": 4,
+        "matched": 2,
+        "precision": 0.5,
+        "recall": 0.0476,
+        "f1": 0.087
+      },
+      {
+        "type": "input_text",
+        "baseline_count": 14,
+        "experiment_count": 5,
+        "matched": 1,
+        "precision": 0.2,
+        "recall": 0.0714,
+        "f1": 0.1053
+      },
+      {
+        "type": "navigate",
+        "baseline_count": 20,
+        "experiment_count": 12,
+        "matched": 10,
+        "precision": 0.8333,
+        "recall": 0.5,
+        "f1": 0.625
+      },
+      {
+        "type": "scroll",
+        "baseline_count": 2,
+        "experiment_count": 7,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "select",
+        "baseline_count": 7,
+        "experiment_count": 4,
+        "matched": 1,
+        "precision": 0.25,
+        "recall": 0.1429,
+        "f1": 0.1818
+      }
+    ],
+    "f1_pass": false,
+    "recall_pass": false,
+    "precision_pass": true
+  },
+  "qualitative": null,
+  "cumulative": {
+    "sessions_completed": 1,
+    "cumulative_f1": 0.18340611353711792,
+    "cumulative_recall": 0.1206896551724138,
+    "cumulative_precision": 0.38181818181818183,
+    "cumulative_matched": 21,
+    "cumulative_baseline": 174,
+    "cumulative_experiment": 55,
+    "f1_trend": "stable",
+    "f1_history": [
+      0.18340611353711792
+    ]
+  },
+  "break_decision": {
+    "should_break": false,
+    "reason": "too_early",
+    "explanation": "Only 1 sessions completed, minimum is 2."
+  }
+}

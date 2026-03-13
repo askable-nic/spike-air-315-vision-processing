@@ -1,0 +1,122 @@
+{
+  "session_id": "cfs_home_loan_sasha",
+  "metrics": {
+    "session_id": "cfs_home_loan_sasha",
+    "baseline_count": 187,
+    "experiment_count": 67,
+    "matched_count": 28,
+    "precision": 0.417910447761194,
+    "recall": 0.1497326203208556,
+    "f1": 0.2204724409448819,
+    "mean_description_similarity": 0.6218555732534216,
+    "mean_start_error_ms": 1024.107142857137,
+    "mean_end_error_ms": 1523.5119047619007,
+    "per_type": [
+      {
+        "type": "change_ui_state",
+        "baseline_count": 33,
+        "experiment_count": 3,
+        "matched": 1,
+        "precision": 0.3333,
+        "recall": 0.0303,
+        "f1": 0.0556
+      },
+      {
+        "type": "click",
+        "baseline_count": 32,
+        "experiment_count": 16,
+        "matched": 9,
+        "precision": 0.5625,
+        "recall": 0.2812,
+        "f1": 0.375
+      },
+      {
+        "type": "dwell",
+        "baseline_count": 0,
+        "experiment_count": 2,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hesitate",
+        "baseline_count": 3,
+        "experiment_count": 0,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hover",
+        "baseline_count": 42,
+        "experiment_count": 12,
+        "matched": 4,
+        "precision": 0.3333,
+        "recall": 0.0952,
+        "f1": 0.1481
+      },
+      {
+        "type": "input_text",
+        "baseline_count": 11,
+        "experiment_count": 2,
+        "matched": 2,
+        "precision": 1.0,
+        "recall": 0.1818,
+        "f1": 0.3077
+      },
+      {
+        "type": "navigate",
+        "baseline_count": 26,
+        "experiment_count": 14,
+        "matched": 3,
+        "precision": 0.2143,
+        "recall": 0.1154,
+        "f1": 0.15
+      },
+      {
+        "type": "scroll",
+        "baseline_count": 28,
+        "experiment_count": 14,
+        "matched": 6,
+        "precision": 0.4286,
+        "recall": 0.2143,
+        "f1": 0.2857
+      },
+      {
+        "type": "select",
+        "baseline_count": 12,
+        "experiment_count": 4,
+        "matched": 3,
+        "precision": 0.75,
+        "recall": 0.25,
+        "f1": 0.375
+      }
+    ],
+    "f1_pass": false,
+    "recall_pass": false,
+    "precision_pass": true
+  },
+  "qualitative": null,
+  "cumulative": {
+    "sessions_completed": 3,
+    "cumulative_f1": 0.16020671834625325,
+    "cumulative_recall": 0.11131059245960502,
+    "cumulative_precision": 0.2857142857142857,
+    "cumulative_matched": 62,
+    "cumulative_baseline": 557,
+    "cumulative_experiment": 217,
+    "f1_trend": "stable",
+    "f1_history": [
+      0.18340611353711792,
+      0.08934707903780069,
+      0.2204724409448819
+    ]
+  },
+  "break_decision": {
+    "should_break": false,
+    "reason": "continue",
+    "explanation": "No early-break conditions met."
+  }
+}
