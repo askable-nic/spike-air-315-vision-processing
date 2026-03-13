@@ -2,15 +2,2433 @@
   "branch": "cv-augmented",
   "iteration": 1,
   "sessions_requested": [
+    "ask_create_study_brandon",
+    "ask_results_usability_brandon",
+    "cfs_home_loan_sasha",
+    "cfs_home_loan_serene",
+    "flight_centre_booking_james",
+    "flight_centre_booking_kay",
+    "opportunity_list_ben",
+    "opportunity_list_georgie",
+    "travel_expert_lisa",
+    "travel_expert_veronika",
+    "travel_expert_veronika_manual",
+    "travel_expert_william",
     "travel_learner_sophia_jayde"
   ],
   "sessions_completed": [
+    "ask_create_study_brandon",
+    "ask_results_usability_brandon",
+    "cfs_home_loan_sasha",
+    "cfs_home_loan_serene",
+    "flight_centre_booking_james",
+    "flight_centre_booking_kay",
+    "opportunity_list_ben",
+    "opportunity_list_georgie",
+    "travel_expert_lisa",
+    "travel_expert_veronika",
+    "travel_expert_william",
     "travel_learner_sophia_jayde"
   ],
-  "sessions_skipped": [],
+  "sessions_skipped": [
+    "travel_expert_veronika_manual"
+  ],
   "early_break": false,
   "early_break_reason": null,
   "session_results": [
+    {
+      "session_id": "ask_create_study_brandon",
+      "metrics": {
+        "session_id": "ask_create_study_brandon",
+        "baseline_count": 174,
+        "experiment_count": 84,
+        "matched_count": 54,
+        "precision": 0.6428571428571429,
+        "recall": 0.3103448275862069,
+        "f1": 0.4186046511627907,
+        "mean_description_similarity": 0.7045351839452292,
+        "mean_start_error_ms": 1197.633675925923,
+        "mean_end_error_ms": 1314.4032376543187,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 40,
+            "experiment_count": 7,
+            "matched": 7,
+            "precision": 1.0,
+            "recall": 0.175,
+            "f1": 0.2979
+          },
+          {
+            "type": "click",
+            "baseline_count": 48,
+            "experiment_count": 31,
+            "matched": 21,
+            "precision": 0.6774,
+            "recall": 0.4375,
+            "f1": 0.5316
+          },
+          {
+            "type": "dwell",
+            "baseline_count": 0,
+            "experiment_count": 4,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hesitate",
+            "baseline_count": 1,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 42,
+            "experiment_count": 3,
+            "matched": 1,
+            "precision": 0.3333,
+            "recall": 0.0238,
+            "f1": 0.0444
+          },
+          {
+            "type": "input_text",
+            "baseline_count": 14,
+            "experiment_count": 12,
+            "matched": 7,
+            "precision": 0.5833,
+            "recall": 0.5,
+            "f1": 0.5385
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 20,
+            "experiment_count": 23,
+            "matched": 17,
+            "precision": 0.7391,
+            "recall": 0.85,
+            "f1": 0.7907
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 2,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "select",
+            "baseline_count": 7,
+            "experiment_count": 4,
+            "matched": 1,
+            "precision": 0.25,
+            "recall": 0.1429,
+            "f1": 0.1818
+          }
+        ],
+        "f1_pass": true,
+        "recall_pass": true,
+        "precision_pass": true
+      },
+      "qualitative": {
+        "overall_severity": "systematic",
+        "summary": "The experiment systematically misses two entire event type classes: hover events (42 baseline vs 3 extracted, recall 2.4%) and change_ui_state events (40 baseline vs 7 extracted, recall 17.5%). Navigation and core interaction events (click, input_text, navigate) are captured reasonably well, but the near-complete absence of hover and UI-state-change detection represents a consistent structural gap rather than random errors.",
+        "issues": [
+          {
+            "category": "missing_events",
+            "severity": "systematic",
+            "description": "Hover events are almost entirely absent. The baseline contains 42 hover events documenting cursor movement across the dashboard and modal interactions, while the experiment extracted only 3 (recall 2.4%). This is a consistent pattern across the entire session, not isolated to specific segments.",
+            "affected_events": [
+              1,
+              2,
+              3,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42
+            ],
+            "examples": [
+              "Baseline has hover over 'Unmoderated' status label (522388ms), 'Daily Poll' study title (523438ms), search input (524438ms) \u2014 none captured by experiment",
+              "Baseline documents hovering over screener question type options during modal interaction (~770000ms) \u2014 experiment only captures one hover in this sequence",
+              "Entire hover trail on Studies dashboard page completely absent from experiment output"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "systematic",
+            "description": "change_ui_state events are severely under-detected. The baseline documents 40 UI state changes (dropdowns appearing, modals opening/closing, page state transitions), while the experiment captures only 7 (recall 17.5%). All 7 matched with perfect precision, indicating the model detects them when it notices them, but misses the vast majority.",
+            "affected_events": [
+              0,
+              5,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70
+            ],
+            "examples": [
+              "The 'Studies' page load state change (484088ms baseline) captured as dwell in experiment instead",
+              "Dropdown menu appearances and modal open/close transitions throughout screener question creation workflow mostly absent",
+              "UI state for Multiple Choice modal appearing at ~776421ms partially captured but surrounding transitions are missing"
+            ]
+          },
+          {
+            "category": "hallucinated_events",
+            "severity": "acceptable",
+            "description": "The experiment produces 4 dwell events that have no counterpart in the baseline (which records 0 dwell events). These appear to be misclassifications of idle-looking segments as deliberate dwells.",
+            "affected_events": [
+              0,
+              34,
+              69,
+              72
+            ],
+            "examples": [
+              "Experiment event 0: dwell at 484288ms 'User is examining the list of studies' \u2014 baseline records a change_ui_state for page load at same time",
+              "Experiment event 34: dwell at 703288ms 'User examines Multiple Choice screener modal' \u2014 baseline would not classify this as a distinct dwell event",
+              "Experiment event 72: dwell at 910288ms 'User examines participants dashboard' \u2014 no baseline equivalent"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "acceptable",
+            "description": "Scroll events (2 baseline) and hesitate event (1 baseline) are completely absent from experiment output. While the counts are small, these represent real user behaviors that the model consistently ignores.",
+            "affected_events": [],
+            "examples": [
+              "2 scroll events in baseline with 0 detected in experiment \u2014 model does not appear to generate scroll type events",
+              "1 hesitate event in baseline with 0 detected \u2014 model does not appear to generate hesitate type events"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "acceptable",
+            "description": "Select events are poorly detected: 7 in baseline vs 4 in experiment, with only 1 matched (recall 14.3%). Key selections like location dropdown and session time slot selections are mostly unmatched.",
+            "affected_events": [],
+            "examples": [
+              "Baseline select for 'United States' location choice matched, but device/session/exclusion filter selections missed or mismatched",
+              "Calendar time slot selections may be merged with click events rather than classified as select"
+            ]
+          },
+          {
+            "category": "description_quality",
+            "severity": "noise",
+            "description": "Minor description differences and fragmented input_text events. The experiment sometimes splits a single typing action into multiple consecutive input_text events (e.g., two events at 777221ms and 777288ms for the same screener question field). Mean description similarity is 0.705, indicating reasonable but imperfect alignment.",
+            "affected_events": [
+              55,
+              56,
+              57,
+              58
+            ],
+            "examples": [
+              "Two input_text events at 777221ms ('Wha') and 777288ms ('What is the name...') both targeting same field \u2014 should be one event",
+              "Event describes '+ Create new...' button while baseline records '+ Create' button \u2014 minor target naming discrepancy"
+            ]
+          }
+        ],
+        "noise_fraction": 0.07,
+        "acceptable_fraction": 0.15,
+        "systematic_fraction": 0.73,
+        "critical_fraction": 0.05,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": null,
+      "break_decision": null
+    },
+    {
+      "session_id": "ask_results_usability_brandon",
+      "metrics": {
+        "session_id": "ask_results_usability_brandon",
+        "baseline_count": 196,
+        "experiment_count": 132,
+        "matched_count": 62,
+        "precision": 0.4696969696969697,
+        "recall": 0.3163265306122449,
+        "f1": 0.3780487804878049,
+        "mean_description_similarity": 0.6433592811578375,
+        "mean_start_error_ms": 1190.7706093190081,
+        "mean_end_error_ms": 1175.8064516129061,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 56,
+            "experiment_count": 11,
+            "matched": 7,
+            "precision": 0.6364,
+            "recall": 0.125,
+            "f1": 0.209
+          },
+          {
+            "type": "click",
+            "baseline_count": 52,
+            "experiment_count": 44,
+            "matched": 30,
+            "precision": 0.6818,
+            "recall": 0.5769,
+            "f1": 0.625
+          },
+          {
+            "type": "drag",
+            "baseline_count": 1,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "dwell",
+            "baseline_count": 0,
+            "experiment_count": 30,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hesitate",
+            "baseline_count": 2,
+            "experiment_count": 1,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 47,
+            "experiment_count": 15,
+            "matched": 6,
+            "precision": 0.4,
+            "recall": 0.1277,
+            "f1": 0.1935
+          },
+          {
+            "type": "input_text",
+            "baseline_count": 6,
+            "experiment_count": 3,
+            "matched": 3,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6667
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 10,
+            "experiment_count": 12,
+            "matched": 5,
+            "precision": 0.4167,
+            "recall": 0.5,
+            "f1": 0.4545
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 18,
+            "experiment_count": 13,
+            "matched": 8,
+            "precision": 0.6154,
+            "recall": 0.4444,
+            "f1": 0.5161
+          },
+          {
+            "type": "select",
+            "baseline_count": 4,
+            "experiment_count": 3,
+            "matched": 3,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571
+          }
+        ],
+        "f1_pass": true,
+        "recall_pass": true,
+        "precision_pass": true
+      },
+      "qualitative": {
+        "overall_severity": "systematic",
+        "summary": "The experiment systematically fails to detect hover and change_ui_state events (87%+ miss rate for both) while hallucinating 30 dwell events absent from the baseline. Click, scroll, select, and input_text perform reasonably well (F1 0.52\u20130.86), but the pervasive substitution of hover/UI-state events with dwell events degrades overall recall severely.",
+        "issues": [
+          {
+            "category": "hallucinated_events",
+            "severity": "systematic",
+            "description": "The experiment generates 30 'dwell' events that have no counterpart in the baseline (baseline has 0 dwell events). These appear to be a systematic misclassification of idle/reading periods and likely absorb time windows that the baseline annotated as hover or change_ui_state. Every single dwell event is a false positive.",
+            "affected_events": [],
+            "examples": [
+              "Experiment event: dwell at 433986\u2013437986ms 'User examines the list of studies' \u2014 baseline has hover at 433136\u2013438036ms 'User hovers over the search input field'",
+              "Experiment event: dwell at 441986\u2013478019ms 'User pauses with the search bar focused' \u2014 spans a long region with multiple baseline events",
+              "Experiment event: dwell at 532986\u2013542986ms 'User examines the study results summary' \u2014 baseline has no corresponding dwell"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "systematic",
+            "description": "87.5% of change_ui_state events are missed (56 baseline, only 7 matched). The model rarely labels UI state transitions explicitly, instead either skipping them or collapsing them into navigate events. This is a consistent pattern across the entire session.",
+            "affected_events": [],
+            "examples": [
+              "Baseline change_ui_state at 431786ms 'The Opportunities page content is fully displayed' \u2014 not matched in experiment",
+              "Baseline has 56 change_ui_state events; experiment only generated 11 total (7 matched)"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "systematic",
+            "description": "87% of hover events are missed (47 baseline, only 6 matched). The experiment grossly under-generates hover events, likely because idle cursor time is being labelled as 'dwell' instead. This pattern is consistent throughout the session.",
+            "affected_events": [],
+            "examples": [
+              "Baseline hover at 428536\u2013430936ms 'User hovers over various studies in the list' \u2014 experiment has no hover here",
+              "Baseline hover at 433136\u2013438036ms 'User hovers over search input field' \u2014 replaced by a dwell event in experiment",
+              "Baseline has 47 hover events; experiment only generated 15 total (6 matched)"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "acceptable",
+            "description": "The single drag event in the baseline is not detected at all (0 experiment drag events). Hesitate events are also mostly missed (2 baseline, 0 matched). These are rarer event types and may simply lack sufficient signal in the CV features.",
+            "affected_events": [],
+            "examples": [
+              "Baseline: 1 drag event, 0 detected",
+              "Baseline: 2 hesitate events, 0 matched (1 generated but wrong timing)"
+            ]
+          },
+          {
+            "category": "type_mismatch",
+            "severity": "acceptable",
+            "description": "Several navigate events in the experiment combine a preceding click into a single 'navigate' event, whereas the baseline separates the click and the navigation. This leads to 7 extra navigate events (12 vs 10) with only 5 matched \u2014 a minor structural difference in annotation granularity.",
+            "affected_events": [],
+            "examples": [
+              "Experiment event at 431319ms 'User clicks on the Opportunities tab and navigates' merges what the baseline splits into a click (430936ms) and a navigate (431186ms)"
+            ]
+          },
+          {
+            "category": "timing_error",
+            "severity": "noise",
+            "description": "Mean timing error for matched events is ~1.19s on start and ~1.18s on end \u2014 within the acceptable range but slightly elevated. No individual events appear to have gross (>5s) timing mismatches among the 62 matched events.",
+            "affected_events": [],
+            "examples": [
+              "Mean start error: 1191ms, mean end error: 1176ms across 62 matched events"
+            ]
+          }
+        ],
+        "noise_fraction": 0.1,
+        "acceptable_fraction": 0.2,
+        "systematic_fraction": 0.65,
+        "critical_fraction": 0.05,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": null,
+      "break_decision": null
+    },
+    {
+      "session_id": "cfs_home_loan_sasha",
+      "metrics": {
+        "session_id": "cfs_home_loan_sasha",
+        "baseline_count": 187,
+        "experiment_count": 162,
+        "matched_count": 73,
+        "precision": 0.4506172839506173,
+        "recall": 0.39037433155080214,
+        "f1": 0.41833810888252154,
+        "mean_description_similarity": 0.6729856518359861,
+        "mean_start_error_ms": 1285.844748858447,
+        "mean_end_error_ms": 1510.502283105022,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 33,
+            "experiment_count": 12,
+            "matched": 7,
+            "precision": 0.5833,
+            "recall": 0.2121,
+            "f1": 0.3111
+          },
+          {
+            "type": "click",
+            "baseline_count": 32,
+            "experiment_count": 18,
+            "matched": 11,
+            "precision": 0.6111,
+            "recall": 0.3438,
+            "f1": 0.44
+          },
+          {
+            "type": "dwell",
+            "baseline_count": 0,
+            "experiment_count": 26,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hesitate",
+            "baseline_count": 3,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 42,
+            "experiment_count": 17,
+            "matched": 9,
+            "precision": 0.5294,
+            "recall": 0.2143,
+            "f1": 0.3051
+          },
+          {
+            "type": "input_text",
+            "baseline_count": 11,
+            "experiment_count": 7,
+            "matched": 7,
+            "precision": 1.0,
+            "recall": 0.6364,
+            "f1": 0.7778
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 26,
+            "experiment_count": 42,
+            "matched": 22,
+            "precision": 0.5238,
+            "recall": 0.8462,
+            "f1": 0.6471
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 28,
+            "experiment_count": 30,
+            "matched": 14,
+            "precision": 0.4667,
+            "recall": 0.5,
+            "f1": 0.4828
+          },
+          {
+            "type": "select",
+            "baseline_count": 12,
+            "experiment_count": 10,
+            "matched": 3,
+            "precision": 0.3,
+            "recall": 0.25,
+            "f1": 0.2727
+          }
+        ],
+        "f1_pass": true,
+        "recall_pass": true,
+        "precision_pass": true
+      },
+      "qualitative": {
+        "overall_severity": "systematic",
+        "summary": "The experiment consistently replaces idle/reading periods with a fabricated 'dwell' event type that does not exist in the baseline, accounting for 26 spurious events. Hover events are severely under-detected (9/42 matched, recall 21%) and hesitate events are entirely absent, suggesting the model does not resolve fine-grained cursor behaviours. Navigate events are over-generated (42 vs 26 baseline), often splitting single navigations or appending redundant entries after page loads.",
+        "issues": [
+          {
+            "category": "hallucinated_events",
+            "severity": "systematic",
+            "description": "The experiment generates 26 'dwell' events (precision 0.0, recall 0.0) that have no counterpart in the baseline. These cover extended idle periods (e.g. 4200\u201346200ms reading task instructions, 55233\u201357233ms reading search results) but 'dwell' is not a recognised event type in the baseline schema. These events inflate experiment count while contributing nothing to matched events.",
+            "affected_events": [
+              1,
+              3,
+              8,
+              11
+            ],
+            "examples": [
+              "Experiment event 3: dwell 4200\u201346200ms 'User is reading task instructions' \u2014 baseline has no equivalent dwell, the period is simply unannotated idle time",
+              "Experiment event 8: dwell 55233\u201357233ms 'User pauses to read search results' \u2014 baseline has no equivalent"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "systematic",
+            "description": "Hover events are severely under-detected: only 9 of 42 baseline hovers are matched (recall 21.4%). The experiment captures a small fraction of deliberate cursor pauses over links and UI elements. All 3 baseline 'hesitate' events are also completely absent from the experiment output.",
+            "affected_events": [
+              7,
+              9,
+              10,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "examples": [
+              "Baseline: hover at 55000\u201356000ms over 'Repayment calculator' link \u2014 experiment has no match at that timestamp",
+              "Baseline: hover at 66075\u201370975ms over Unloan result \u2014 experiment matches roughly but with ~3s timing offset",
+              "Baseline: hesitate at 50350\u201353150ms 'Sasha pauses after typing' \u2014 entirely absent in experiment"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "systematic",
+            "description": "change_ui_state events are severely under-detected: only 7 of 33 matched (recall 21%). The experiment misses modal appearances, dropdown activations, and page-state transitions that the baseline annotates.",
+            "affected_events": [
+              0,
+              1,
+              3,
+              5
+            ],
+            "examples": [
+              "Baseline event 1: change_ui_state 3850\u20134000ms 'Task description modal appears' \u2014 experiment has change_ui_state at 4200ms (offset 350ms, acceptable on its own but typical of broader under-detection pattern)",
+              "Baseline event 5: change_ui_state 49000\u201349100ms 'Autocomplete dropdown appears' \u2014 no equivalent in experiment"
+            ]
+          },
+          {
+            "category": "hallucinated_events",
+            "severity": "systematic",
+            "description": "Navigate events are over-generated (42 experiment vs 26 baseline). The experiment frequently appends extra navigate events after page loads or duplicates a single navigation. For example, around the Unloan click the experiment generates two separate click+navigate sequences (at 73266ms and again at 76266ms) where the baseline records only one.",
+            "affected_events": [
+              12,
+              13,
+              14,
+              15
+            ],
+            "examples": [
+              "Experiment events 12\u201315: two hover+click+navigate sequences at ~73266ms and ~76266ms for the Unloan link \u2014 baseline records a single click at 70975ms"
+            ]
+          },
+          {
+            "category": "type_mismatch",
+            "severity": "acceptable",
+            "description": "Select events are poorly captured (3/12 matched, F1 0.27). Several baseline 'select' events (e.g. selecting autocomplete suggestion) are represented in the experiment as 'navigate' or are absent, indicating a type confusion between selection and the navigation it triggers.",
+            "affected_events": [
+              8
+            ],
+            "examples": [
+              "Baseline: select at 53350ms 'Sasha selects home loans comparison from autocomplete' \u2014 experiment represents this only as navigate at 53233ms, omitting the select action itself"
+            ]
+          },
+          {
+            "category": "timing_error",
+            "severity": "noise",
+            "description": "Matched events show acceptable mean timing offsets (~1.3s start, ~1.5s end). Individual matched events occasionally differ by 1\u20133s, within the tolerable range for frame-sampled extraction.",
+            "affected_events": [],
+            "examples": [
+              "Baseline click at 70975ms vs experiment click at 73266ms: 2.3s offset \u2014 acceptable given frame sampling rate"
+            ]
+          }
+        ],
+        "noise_fraction": 0.05,
+        "acceptable_fraction": 0.15,
+        "systematic_fraction": 0.8,
+        "critical_fraction": 0.0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": null,
+      "break_decision": null
+    },
+    {
+      "session_id": "cfs_home_loan_serene",
+      "metrics": {
+        "session_id": "cfs_home_loan_serene",
+        "baseline_count": 98,
+        "experiment_count": 74,
+        "matched_count": 41,
+        "precision": 0.5540540540540541,
+        "recall": 0.41836734693877553,
+        "f1": 0.47674418604651164,
+        "mean_description_similarity": 0.6855590646704931,
+        "mean_start_error_ms": 1066.2601788617862,
+        "mean_end_error_ms": 1090.2520284552852,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 18,
+            "experiment_count": 4,
+            "matched": 2,
+            "precision": 0.5,
+            "recall": 0.1111,
+            "f1": 0.1818
+          },
+          {
+            "type": "click",
+            "baseline_count": 29,
+            "experiment_count": 9,
+            "matched": 7,
+            "precision": 0.7778,
+            "recall": 0.2414,
+            "f1": 0.3684
+          },
+          {
+            "type": "dwell",
+            "baseline_count": 0,
+            "experiment_count": 11,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hesitate",
+            "baseline_count": 1,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 5,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "input_text",
+            "baseline_count": 9,
+            "experiment_count": 10,
+            "matched": 6,
+            "precision": 0.6,
+            "recall": 0.6667,
+            "f1": 0.6316
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 20,
+            "experiment_count": 23,
+            "matched": 16,
+            "precision": 0.6957,
+            "recall": 0.8,
+            "f1": 0.7442
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 12,
+            "experiment_count": 11,
+            "matched": 7,
+            "precision": 0.6364,
+            "recall": 0.5833,
+            "f1": 0.6087
+          },
+          {
+            "type": "select",
+            "baseline_count": 4,
+            "experiment_count": 6,
+            "matched": 3,
+            "precision": 0.5,
+            "recall": 0.75,
+            "f1": 0.6
+          }
+        ],
+        "f1_pass": true,
+        "recall_pass": true,
+        "precision_pass": true
+      },
+      "qualitative": {
+        "overall_severity": "systematic",
+        "summary": "The experiment produces reasonable coverage of navigate, scroll, and input_text events but systematically misses the majority of click events (recall 0.24) and nearly all change_ui_state events (recall 0.11), while hallucinating 11 dwell events that have no baseline counterpart. Hover events are entirely absent from the experiment output. The pattern is consistent across the full session, indicating structural gaps in event-type recognition rather than isolated errors.",
+        "issues": [
+          {
+            "category": "hallucinated_events",
+            "severity": "systematic",
+            "description": "11 dwell events generated by the experiment have no counterpart in the baseline (baseline_count=0 for dwell). The model consistently invents 'reading/pausing' events throughout the session where the human annotator recorded no such events.",
+            "affected_events": [
+              0,
+              4,
+              7,
+              28,
+              30,
+              48,
+              50,
+              53,
+              55,
+              58,
+              60
+            ],
+            "examples": [
+              "Experiment event 0: dwell at 700-2200ms 'reading task instructions' \u2014 baseline starts with a click at 13350ms",
+              "Experiment event 4: dwell at 20200ms 'pauses to look at trending searches' \u2014 no baseline match",
+              "Experiment event 28: dwell at 78200-80200ms 'examines refinancing goal screen' \u2014 no baseline match"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "systematic",
+            "description": "22 of 29 baseline click events (76%) are absent from the experiment output. The model captures only 9 click events and matches 7 of those. This is a consistent failure across the entire session \u2014 clicks on form buttons, search bars, and navigation elements are routinely skipped.",
+            "affected_events": [
+              0,
+              2,
+              4,
+              7,
+              9,
+              11,
+              13,
+              15,
+              17,
+              19,
+              21,
+              23,
+              25,
+              27,
+              29,
+              31,
+              33,
+              35,
+              37,
+              39,
+              41
+            ],
+            "examples": [
+              "Baseline click at 13350ms 'Start task button' \u2014 matched by experiment click at 16200ms (2.85s offset)",
+              "Many baseline form interaction clicks (NEXT buttons, field activations) have no experiment counterpart",
+              "Baseline click at 17250ms 'Google search bar' \u2014 matched; many subsequent clicks not captured"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "systematic",
+            "description": "16 of 18 baseline change_ui_state events (89%) are not captured by the experiment. The model produces only 4 change_ui_state events with only 2 matched, missing error messages, loading states, modal appearances, and UI transitions throughout the session.",
+            "affected_events": [
+              1,
+              5,
+              8,
+              12,
+              16,
+              20,
+              24,
+              28,
+              32,
+              36,
+              40,
+              44,
+              48,
+              52,
+              56,
+              60
+            ],
+            "examples": [
+              "Baseline change_ui_state at 15850ms 'task overlay disappears revealing Google homepage' \u2014 not in experiment",
+              "Experiment captures change_ui_state at 104200ms (error message) and 126200ms (loading screen) but misses ~16 others",
+              "Repeated UI state transitions during Aussie form flow and St George calculator not captured"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "systematic",
+            "description": "All 5 baseline hover events are completely absent from the experiment. The model never produces hover-type events, indicating the event type is not being recognised or emitted.",
+            "affected_events": [],
+            "examples": [
+              "Baseline contains 5 hover events (0 matched); experiment emits 0 hover events across the entire session"
+            ]
+          },
+          {
+            "category": "timing_error",
+            "severity": "noise",
+            "description": "Matched events have a mean timing offset of ~1.07s on start and ~1.09s on end. This is at the boundary of acceptable but most individual offsets are within 1-2s and do not significantly affect usability of the extracted events.",
+            "affected_events": [],
+            "examples": [
+              "Experiment 'Start task' click at 16200ms vs baseline 13350ms (2.85s offset \u2014 largest outlier)",
+              "Most navigate and input_text events are within 1-2s of baseline timestamps"
+            ]
+          },
+          {
+            "category": "type_mismatch",
+            "severity": "acceptable",
+            "description": "The experiment splits some input_text interactions that the baseline captures as single events, and captures a 'scroll in modal' (event 1) and extra navigate events not in the baseline. These likely reflect real user behaviour but not the annotation schema used by the baseline annotator.",
+            "affected_events": [
+              22,
+              23
+            ],
+            "examples": [
+              "Experiment events 22-23: two consecutive input_text events for property value entry (70066ms then 70200-76200ms) vs single baseline input_text",
+              "Experiment event 1: scroll at 14200ms within task modal \u2014 not annotated in baseline"
+            ]
+          }
+        ],
+        "noise_fraction": 0.08,
+        "acceptable_fraction": 0.07,
+        "systematic_fraction": 0.85,
+        "critical_fraction": 0.0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": null,
+      "break_decision": null
+    },
+    {
+      "session_id": "flight_centre_booking_james",
+      "metrics": {
+        "session_id": "flight_centre_booking_james",
+        "baseline_count": 57,
+        "experiment_count": 41,
+        "matched_count": 14,
+        "precision": 0.34146341463414637,
+        "recall": 0.24561403508771928,
+        "f1": 0.28571428571428575,
+        "mean_description_similarity": 0.602717557533894,
+        "mean_start_error_ms": 1727.2415238095273,
+        "mean_end_error_ms": 1619.094095238081,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 19,
+            "experiment_count": 10,
+            "matched": 1,
+            "precision": 0.1,
+            "recall": 0.0526,
+            "f1": 0.069
+          },
+          {
+            "type": "click",
+            "baseline_count": 14,
+            "experiment_count": 11,
+            "matched": 7,
+            "precision": 0.6364,
+            "recall": 0.5,
+            "f1": 0.56
+          },
+          {
+            "type": "dwell",
+            "baseline_count": 0,
+            "experiment_count": 8,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 12,
+            "experiment_count": 1,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 5,
+            "experiment_count": 6,
+            "matched": 3,
+            "precision": 0.5,
+            "recall": 0.6,
+            "f1": 0.5455
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 5,
+            "experiment_count": 3,
+            "matched": 2,
+            "precision": 0.6667,
+            "recall": 0.4,
+            "f1": 0.5
+          },
+          {
+            "type": "select",
+            "baseline_count": 2,
+            "experiment_count": 2,
+            "matched": 1,
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5
+          }
+        ],
+        "f1_pass": false,
+        "recall_pass": true,
+        "precision_pass": true
+      },
+      "qualitative": {
+        "overall_severity": "systematic",
+        "summary": "The extraction systematically fails to detect hover events (0/12 matched) and hallucinates dwell events not present in the baseline (8 added, 0 in baseline), while change_ui_state events are almost entirely unmatched (1/19). Clicks, navigates, and scrolls perform reasonably well (F1 0.5-0.56), indicating the core user journey is captured but the finer interaction texture is wrong. The pattern is consistent across the full session, pointing to a structural type-classification mismatch rather than random noise.",
+        "issues": [
+          {
+            "category": "missing_events",
+            "severity": "systematic",
+            "description": "All 12 baseline hover events are absent from the experiment output (only 1 hover produced, unmatched). The model consistently omits cursor-hover interactions throughout the session, including hovers over destination dropdown, date picker, fare select buttons, and add-on options.",
+            "affected_events": [
+              3,
+              8,
+              10,
+              13,
+              15,
+              22,
+              26,
+              29,
+              34,
+              38,
+              41,
+              48
+            ],
+            "examples": [
+              "Baseline[3]: hover over flight search section at 281182ms \u2014 not in experiment",
+              "Baseline[29]: hover over Lite fare Select button at 333187ms \u2014 not in experiment",
+              "Baseline[41]: hover over Lite fare SELECT for return flight at 365442ms \u2014 not in experiment",
+              "Baseline[48]: hover over Captain's Pack SELECT button at 390392ms \u2014 not in experiment"
+            ]
+          },
+          {
+            "category": "hallucinated_events",
+            "severity": "systematic",
+            "description": "The experiment produces 8 dwell events that have no counterpart in the baseline. These represent reading pauses and passive examination periods that the human annotator did not label. The model consistently applies a 'dwell' category absent from the baseline schema, inflating event count and reducing precision.",
+            "affected_events": [
+              1,
+              3,
+              18,
+              19,
+              25,
+              36,
+              38,
+              40
+            ],
+            "examples": [
+              "Experiment[1]: dwell 'reading task instructions' at 243182-253182ms \u2014 not in baseline",
+              "Experiment[18-19]: two dwell events examining departing flight results at 322348-332182ms \u2014 baseline has only a scroll",
+              "Experiment[36]: dwell on Travellers page 'Heads up! warning' at 399182ms \u2014 not in baseline",
+              "Experiment[38,40]: two dwell events on Askable prompt page \u2014 baseline has change_ui_state here"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "systematic",
+            "description": "Only 1 of 19 change_ui_state events from the baseline is matched (F1=0.069). Key UI transitions are missed: search widget expansion, dropdown appearance, calendar opening, fare card expansions, loading overlays, and SELECTED state feedback. The experiment does produce some change_ui_state events but they mostly fail to align with baseline timing or content.",
+            "affected_events": [
+              2,
+              5,
+              7,
+              12,
+              17,
+              21,
+              24,
+              28,
+              31,
+              32,
+              36,
+              40,
+              43,
+              44,
+              46,
+              50,
+              53,
+              55,
+              56
+            ],
+            "examples": [
+              "Baseline[5]: search bar expands at 283682ms \u2014 not matched in experiment",
+              "Baseline[7]: destination dropdown appears at 287082ms \u2014 not matched",
+              "Baseline[31-32]: 'Good choice!' overlay + return flight section transition \u2014 experiment has change_ui_state at 340182ms but timing gap is large",
+              "Baseline[46]: price summary sidebar loads at 372642ms \u2014 missing from experiment"
+            ]
+          },
+          {
+            "category": "type_mismatch",
+            "severity": "acceptable",
+            "description": "Several date-picker interactions that the baseline represents as a sequence of hover+select+click events are consolidated into a single broad 'select' event in the experiment (experiment[10]: time_start=294215ms, time_end=306248ms). The content is plausibly correct but the granularity is lost.",
+            "affected_events": [
+              13,
+              14,
+              15,
+              16
+            ],
+            "examples": [
+              "Baseline has: hover March 13 (291982ms), select March 13 (293182ms), hover March 22 (295337ms), click Done (296282ms) \u2014 experiment collapses to single select event spanning 294215-306248ms"
+            ]
+          },
+          {
+            "category": "timing_error",
+            "severity": "acceptable",
+            "description": "Matched events show mean timing offsets of ~1.7s for start and ~1.6s for end. Most individual offsets are in the 1-3s range. The 'Done' button click shows a notable offset: baseline at 296282ms vs experiment at 308248ms (~12s later), suggesting the experiment may be matching to a different interaction.",
+            "affected_events": [
+              16,
+              20
+            ],
+            "examples": [
+              "Baseline[16]: click Done at 296282ms; closest experiment match is experiment[11] at 308248ms (~12s offset \u2014 likely a different Done-click being mapped)",
+              "Baseline[0]: click Open at 275882ms; experiment[4] at 278182ms (~2.3s \u2014 acceptable)"
+            ]
+          }
+        ],
+        "noise_fraction": 0.05,
+        "acceptable_fraction": 0.15,
+        "systematic_fraction": 0.75,
+        "critical_fraction": 0.05,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": null,
+      "break_decision": null
+    },
+    {
+      "session_id": "flight_centre_booking_kay",
+      "metrics": {
+        "session_id": "flight_centre_booking_kay",
+        "baseline_count": 71,
+        "experiment_count": 69,
+        "matched_count": 25,
+        "precision": 0.36231884057971014,
+        "recall": 0.352112676056338,
+        "f1": 0.3571428571428571,
+        "mean_description_similarity": 0.6791891098028661,
+        "mean_start_error_ms": 1360.039039999987,
+        "mean_end_error_ms": 1015.3723733333242,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 33,
+            "experiment_count": 20,
+            "matched": 10,
+            "precision": 0.5,
+            "recall": 0.303,
+            "f1": 0.3774
+          },
+          {
+            "type": "click",
+            "baseline_count": 15,
+            "experiment_count": 15,
+            "matched": 8,
+            "precision": 0.5333,
+            "recall": 0.5333,
+            "f1": 0.5333
+          },
+          {
+            "type": "dwell",
+            "baseline_count": 0,
+            "experiment_count": 17,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hesitate",
+            "baseline_count": 0,
+            "experiment_count": 1,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 13,
+            "experiment_count": 3,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 5,
+            "experiment_count": 5,
+            "matched": 4,
+            "precision": 0.8,
+            "recall": 0.8,
+            "f1": 0.8
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 3,
+            "experiment_count": 5,
+            "matched": 1,
+            "precision": 0.2,
+            "recall": 0.3333,
+            "f1": 0.25
+          },
+          {
+            "type": "select",
+            "baseline_count": 2,
+            "experiment_count": 3,
+            "matched": 2,
+            "precision": 0.6667,
+            "recall": 1.0,
+            "f1": 0.8
+          }
+        ],
+        "f1_pass": true,
+        "recall_pass": true,
+        "precision_pass": true
+      },
+      "qualitative": {
+        "overall_severity": "systematic",
+        "summary": "The dominant failure is a systematic hover-to-dwell substitution: the experiment generates 17 dwell events and only 3 hovers, while the baseline has 13 hovers and 0 dwells, yielding zero matches for both types. Additionally, the experiment misidentifies the seat selection workflow \u2014 it records a 'NEXT FLIGHT' skip and seat 5E on flight 2, while the baseline records seat 5C selected on flight 1, representing a critical content error in a key user action.",
+        "issues": [
+          {
+            "category": "type_mismatch",
+            "severity": "systematic",
+            "description": "The experiment consistently replaces hover events with dwell events throughout the session. Baseline has 13 hovers (0 matched) and 0 dwells; experiment has 3 hovers (0 matched) and 17 dwells (0 matched). Every hover interaction \u2014 over dates, buttons, fare options, seat map, Continue \u2014 is either dropped or recast as a dwell. This is the single largest driver of F1 loss.",
+            "affected_events": [
+              10,
+              13,
+              15,
+              18,
+              21,
+              24,
+              38,
+              41,
+              47,
+              53,
+              54,
+              55,
+              60
+            ],
+            "examples": [
+              "Baseline [13]: hover over dates in February calendar (424787-430987ms) \u2192 Experiment: no hover, replaced by dwell [16] at 452548-468548ms",
+              "Baseline [24]: hover over 'Search flights' button (450787-469637ms) \u2192 Experiment: no hover, absorbed into dwell [16]",
+              "Baseline [38]: hover over Virgin Australia flight card (547515-554665ms) \u2192 Experiment: no hover, replaced by dwell [31] at 544548-554548ms"
+            ]
+          },
+          {
+            "category": "hallucinated_events",
+            "severity": "critical",
+            "description": "The experiment misidentifies the seat selection interaction. Baseline records seat 5C selected on flight 1 (SYD\u2192MEL) at ~651653ms with a 'Preferred Seat' modal, CONFIRM SEAT, then DONE. Experiment instead records a 'NEXT FLIGHT' button click at 656548ms (skipping flight 1 seat selection), then seat 5E selected on flight 2 (MEL\u2192SYD) \u2014 a different seat on a different leg. The 'NEXT FLIGHT' click in the experiment has no baseline equivalent.",
+            "affected_events": [
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61
+            ],
+            "examples": [
+              "Baseline [56]: click seat 5C at 651653ms on flight 1 \u2192 Experiment [47]: click 'NEXT FLIGHT' at 656548ms (skips flight 1)",
+              "Experiment [50]: click seat '5E' at 668548ms (attributed to flight 2) vs Baseline [58]: click CONFIRM SEAT at 669653ms (flight 1 workflow)"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "acceptable",
+            "description": "Several baseline events are absent from the experiment: the 'CHANGE' button click to expand departing flight details on the review page (baseline [48-49] at ~611453ms), and multiple change_ui_state loading transitions during fare selection (baseline [33], [44], [45]). These are secondary review interactions that do not alter the primary task narrative.",
+            "affected_events": [
+              33,
+              44,
+              45,
+              48,
+              49
+            ],
+            "examples": [
+              "Baseline [48]: click 'CHANGE' button for departing flight at 611453ms \u2014 not present in experiment",
+              "Baseline [44]: change_ui_state SELECT button loading spinner at 563465-578665ms \u2014 not captured by experiment"
+            ]
+          },
+          {
+            "category": "hallucinated_events",
+            "severity": "acceptable",
+            "description": "The experiment generates two extra events: (1) a select for 'February 21st' return date (experiment [12] at 436548ms) which has no baseline equivalent (baseline only records the outbound date selection), and (2) a second click for 'Choice' fare option (experiment [36] at 574548ms) not present in baseline. Both are plausible real interactions that the baseline annotator may have omitted.",
+            "affected_events": [
+              12,
+              36
+            ],
+            "examples": [
+              "Experiment [12]: select February 21st return date \u2014 plausible real action not annotated in baseline",
+              "Experiment [36]: click SELECT for 'Choice' fare at 574548ms \u2014 baseline only records Lite fare click at [42]"
+            ]
+          },
+          {
+            "category": "hallucinated_events",
+            "severity": "noise",
+            "description": "The experiment adds pre-session events (dwell at 349548ms, hesitate at 350548ms) before the baseline recording starts at 351598ms, and an extra change_ui_state for a 'Pop-up blocked' browser notification at 397548ms. These are minor additions a human reviewer would ignore.",
+            "affected_events": [
+              0,
+              1,
+              4
+            ],
+            "examples": [
+              "Experiment [0-1]: dwell/hesitate at 349548-351548ms \u2014 before baseline coverage begins",
+              "Experiment [4]: 'Pop-up blocked' notification at 397548ms \u2014 not in baseline, minor browser UI event"
+            ]
+          },
+          {
+            "category": "timing_error",
+            "severity": "noise",
+            "description": "Timing offsets for matched events are small. Mean start error is 1360ms and mean end error is 1015ms, both within the acceptable 1-3s range. No gross timing errors were observed for matched events.",
+            "affected_events": [],
+            "examples": [
+              "Matched events have average ~1.36s start offset, consistent with expected frame-level precision"
+            ]
+          }
+        ],
+        "noise_fraction": 0.15,
+        "acceptable_fraction": 0.25,
+        "systematic_fraction": 0.45,
+        "critical_fraction": 0.15,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": null,
+      "break_decision": null
+    },
+    {
+      "session_id": "opportunity_list_ben",
+      "metrics": {
+        "session_id": "opportunity_list_ben",
+        "baseline_count": 140,
+        "experiment_count": 119,
+        "matched_count": 46,
+        "precision": 0.3865546218487395,
+        "recall": 0.32857142857142857,
+        "f1": 0.3552123552123552,
+        "mean_description_similarity": 0.6006393828175477,
+        "mean_start_error_ms": 1267.650039337476,
+        "mean_end_error_ms": 1108.0744389234005,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 17,
+            "experiment_count": 20,
+            "matched": 4,
+            "precision": 0.2,
+            "recall": 0.2353,
+            "f1": 0.2162
+          },
+          {
+            "type": "click",
+            "baseline_count": 28,
+            "experiment_count": 3,
+            "matched": 3,
+            "precision": 1.0,
+            "recall": 0.1071,
+            "f1": 0.1935
+          },
+          {
+            "type": "dwell",
+            "baseline_count": 0,
+            "experiment_count": 25,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 24,
+            "experiment_count": 12,
+            "matched": 4,
+            "precision": 0.3333,
+            "recall": 0.1667,
+            "f1": 0.2222
+          },
+          {
+            "type": "input_text",
+            "baseline_count": 14,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 31,
+            "experiment_count": 38,
+            "matched": 25,
+            "precision": 0.6579,
+            "recall": 0.8065,
+            "f1": 0.7246
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 25,
+            "experiment_count": 19,
+            "matched": 9,
+            "precision": 0.4737,
+            "recall": 0.36,
+            "f1": 0.4091
+          },
+          {
+            "type": "select",
+            "baseline_count": 1,
+            "experiment_count": 2,
+            "matched": 1,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6667
+          }
+        ],
+        "f1_pass": true,
+        "recall_pass": true,
+        "precision_pass": true
+      },
+      "qualitative": {
+        "overall_severity": "systematic",
+        "summary": "The experiment pipeline completely fails to detect input_text events (14 baseline events, 0 extracted), which are critical moderator typing actions throughout the session. It also introduces a non-baseline 'dwell' event type (25 events, F1=0.0) that substitutes for hovers and pauses, and systematically reclassifies tab-switch clicks as navigate events, collapsing the click type recall to 10.7%. Navigate detection is relatively strong (F1=0.72), indicating the core page-change detection works but finer-grained interaction types are consistently misidentified or absent.",
+        "issues": [
+          {
+            "category": "missing_events",
+            "severity": "critical",
+            "description": "The experiment produces zero input_text events while the baseline contains 14. These represent the moderator typing questions into the Askable Sessions interface throughout the session \u2014 a distinct, repeated, high-value interaction pattern that is entirely absent from the extraction.",
+            "affected_events": [
+              22,
+              34,
+              42,
+              46,
+              51,
+              58,
+              63,
+              68,
+              120,
+              123,
+              131,
+              137,
+              138,
+              139
+            ],
+            "examples": [
+              "Baseline [22] input_text at 310298ms: 'Ben types a question into the text area on the Askable Sessions page' \u2014 no corresponding experiment event",
+              "Baseline [137] input_text at 620179ms: 'Ben types a complex question about the UI labels' \u2014 no corresponding experiment event"
+            ]
+          },
+          {
+            "category": "hallucinated_events",
+            "severity": "systematic",
+            "description": "The experiment generates 25 'dwell' events, a type not present in the baseline schema at all (F1=0.0). These appear to represent passive reading/pausing states that the baseline does not annotate as a distinct event type. The consistent use of this invented type inflates event count and displaces correct event labels.",
+            "affected_events": [
+              1,
+              3,
+              6,
+              7,
+              9,
+              11,
+              14,
+              17,
+              20,
+              22,
+              26,
+              29,
+              33,
+              37,
+              40,
+              44,
+              48,
+              53,
+              58,
+              60,
+              63,
+              68,
+              79,
+              95,
+              103
+            ],
+            "examples": [
+              "Experiment [3] dwell at 185108-227108ms: 'User is reading the task instructions' \u2014 baseline labels this period with change_ui_state events, not dwell",
+              "Experiment [7] dwell at 233108-239141ms: 'User dwells on the Video Call session card' \u2014 baseline uses scroll events for this period"
+            ]
+          },
+          {
+            "category": "type_mismatch",
+            "severity": "systematic",
+            "description": "Baseline records 28 click events (recall 10.7%), the vast majority being tab-switch actions (e.g., 'Ben clicks the Askable Sessions tab'). The experiment systematically labels these same tab switches as 'navigate' events instead, achieving high navigate recall (80.6%) at the cost of near-zero click recall. Only 3 clicks are correctly identified \u2014 all unambiguous UI interactions (tooltip close, filter icon, apply filters button).",
+            "affected_events": [
+              19,
+              24,
+              27,
+              32,
+              35,
+              40,
+              44,
+              47,
+              49,
+              52,
+              56,
+              72,
+              76,
+              79,
+              85,
+              90,
+              94,
+              97,
+              103,
+              106,
+              110,
+              112,
+              114,
+              117,
+              126,
+              129,
+              132,
+              135
+            ],
+            "examples": [
+              "Baseline [19] click at 279603ms: 'User clicks on the Askable Sessions browser tab' \u2014 experiment generates navigate [16] at 280108ms for the same action",
+              "Baseline [27] click at 319748ms: 'Ben clicks on the Smart Filters Mobile App tab' \u2014 experiment has navigate [30] at 337108ms"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "acceptable",
+            "description": "Hover recall is low (16.7%): baseline has 24 hover events but experiment only generates 12, with 4 matched. Many baseline hovers over opportunity cards and browser tabs are either missed entirely or absorbed into dwell events in the experiment.",
+            "affected_events": [
+              10,
+              12,
+              14,
+              17,
+              30,
+              38,
+              55,
+              61,
+              66,
+              82,
+              87,
+              93,
+              100,
+              102,
+              109,
+              121,
+              124,
+              125,
+              128,
+              134
+            ],
+            "examples": [
+              "Baseline [10] hover at 248603ms over 'AI Interview' card \u2014 no matching experiment hover in this time range",
+              "Baseline [66] hover at 419294ms over 'Diary Study' card \u2014 not captured by experiment"
+            ]
+          },
+          {
+            "category": "timing_error",
+            "severity": "noise",
+            "description": "For matched events, the mean start time error is 1.27s and mean end error is 1.11s, indicating modest timing drift. Most matched navigate events show offsets under 2s, consistent with frame-sampling resolution limits rather than structural errors.",
+            "affected_events": [],
+            "examples": [
+              "Baseline navigate at 229458ms vs experiment navigate at 229108ms \u2014 350ms offset, within acceptable range"
+            ]
+          }
+        ],
+        "noise_fraction": 0.07,
+        "acceptable_fraction": 0.18,
+        "systematic_fraction": 0.55,
+        "critical_fraction": 0.2,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": null,
+      "break_decision": null
+    },
+    {
+      "session_id": "opportunity_list_georgie",
+      "metrics": {
+        "session_id": "opportunity_list_georgie",
+        "baseline_count": 264,
+        "experiment_count": 176,
+        "matched_count": 69,
+        "precision": 0.39204545454545453,
+        "recall": 0.26136363636363635,
+        "f1": 0.31363636363636366,
+        "mean_description_similarity": 0.6575085815156039,
+        "mean_start_error_ms": 1309.1787439613734,
+        "mean_end_error_ms": 2132.666666666676,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 47,
+            "experiment_count": 27,
+            "matched": 12,
+            "precision": 0.4444,
+            "recall": 0.2553,
+            "f1": 0.3243
+          },
+          {
+            "type": "click",
+            "baseline_count": 28,
+            "experiment_count": 21,
+            "matched": 14,
+            "precision": 0.6667,
+            "recall": 0.5,
+            "f1": 0.5714
+          },
+          {
+            "type": "drag",
+            "baseline_count": 7,
+            "experiment_count": 5,
+            "matched": 4,
+            "precision": 0.8,
+            "recall": 0.5714,
+            "f1": 0.6667
+          },
+          {
+            "type": "dwell",
+            "baseline_count": 0,
+            "experiment_count": 54,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hesitate",
+            "baseline_count": 2,
+            "experiment_count": 0,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 107,
+            "experiment_count": 13,
+            "matched": 10,
+            "precision": 0.7692,
+            "recall": 0.0935,
+            "f1": 0.1667
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 2,
+            "experiment_count": 1,
+            "matched": 1,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6667
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 61,
+            "experiment_count": 50,
+            "matched": 24,
+            "precision": 0.48,
+            "recall": 0.3934,
+            "f1": 0.4324
+          },
+          {
+            "type": "select",
+            "baseline_count": 10,
+            "experiment_count": 5,
+            "matched": 4,
+            "precision": 0.8,
+            "recall": 0.4,
+            "f1": 0.5333
+          }
+        ],
+        "f1_pass": true,
+        "recall_pass": true,
+        "precision_pass": true
+      },
+      "qualitative": {
+        "overall_severity": "systematic",
+        "summary": "The experiment exhibits two dominant systematic failure modes: it halluccinates 54 'dwell' events that don't exist in the baseline (which uses no dwell type), and it catastrophically under-detects hover events \u2014 capturing only 10 of 107 baseline hovers (recall 0.09). These two patterns alone account for over 60% of the total discrepancy. Core interaction events (click, drag, select) are detected at acceptable quality, but the hover/dwell asymmetry suggests the CV-augmented pipeline is misclassifying or suppressing hover detections and emitting dwell as a substitute.",
+        "issues": [
+          {
+            "category": "hallucinated_events",
+            "severity": "systematic",
+            "description": "The experiment produces 54 'dwell' events that have no counterpart in the baseline. The baseline contains zero dwell events, yet dwell is the third-most-produced type in the experiment output (54 out of 176 total events, ~31%). This is a consistent, large-scale hallucination pattern \u2014 the model systematically emits dwell wherever it sees prolonged visual stability rather than recognising these as idle periods.",
+            "affected_events": [],
+            "examples": [
+              "Experiment event: dwell at 244969\u2013258969ms 'User reads the task description regarding exploring a prototype\u2026' \u2014 no matching baseline event",
+              "Experiment event: dwell at 278969\u2013280969ms 'User examines the Explore page\u2026' \u2014 baseline has change_ui_state at nearby times, not dwell",
+              "54 total dwell events produced vs 0 in baseline across the full session"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "systematic",
+            "description": "Hover events are massively under-detected: only 10 of 107 baseline hover events are matched (recall 0.09). The experiment produced only 13 hover events total. This is a systemic failure to capture cursor movement interactions. Given that dwell events are being over-produced simultaneously, the likely cause is that hover micro-interactions are being absorbed into adjacent dwell or change_ui_state events rather than being emitted as distinct hover events.",
+            "affected_events": [],
+            "examples": [
+              "Baseline has 107 hover events throughout the session; experiment emits only 13 hover events",
+              "Baseline hover at 280969ms over 'AI Interview card' \u2014 experiment emits a dwell at 280969ms instead",
+              "Baseline hover at 324969\u2013326969ms over 'Filter icon' \u2014 experiment emits a dwell/scroll and misses the hover entirely"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "acceptable",
+            "description": "Change_ui_state, scroll, click, select, and navigate events are all under-detected at varying degrees. Scroll recall is 0.39, click recall is 0.50, select recall is 0.40, change_ui_state recall is 0.26. These are incomplete but the matched events have high precision (0.48\u20131.0), so the events that are detected tend to be correct.",
+            "affected_events": [],
+            "examples": [
+              "Scroll: 24 matched of 61 baseline; 37 baseline scroll events have no experiment counterpart",
+              "Click: 14 matched of 28 baseline; 14 click events missed",
+              "Change_ui_state: 12 matched of 47 baseline; 35 missed"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "noise",
+            "description": "The 2 baseline 'hesitate' events are entirely absent from the experiment output. Given the very small count, this has negligible impact on overall metrics.",
+            "affected_events": [],
+            "examples": [
+              "2 baseline hesitate events; 0 experiment hesitate events"
+            ]
+          }
+        ],
+        "noise_fraction": 0.008,
+        "acceptable_fraction": 0.378,
+        "systematic_fraction": 0.614,
+        "critical_fraction": 0.0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": null,
+      "break_decision": null
+    },
+    {
+      "session_id": "travel_expert_lisa",
+      "metrics": {
+        "session_id": "travel_expert_lisa",
+        "baseline_count": 178,
+        "experiment_count": 110,
+        "matched_count": 43,
+        "precision": 0.39090909090909093,
+        "recall": 0.24157303370786518,
+        "f1": 0.29861111111111116,
+        "mean_description_similarity": 0.7044374847509448,
+        "mean_start_error_ms": 1271.1246144014635,
+        "mean_end_error_ms": 858.0443214968011,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 49,
+            "experiment_count": 19,
+            "matched": 3,
+            "precision": 0.1579,
+            "recall": 0.0612,
+            "f1": 0.0882
+          },
+          {
+            "type": "click",
+            "baseline_count": 45,
+            "experiment_count": 23,
+            "matched": 16,
+            "precision": 0.6957,
+            "recall": 0.3556,
+            "f1": 0.4706
+          },
+          {
+            "type": "dwell",
+            "baseline_count": 0,
+            "experiment_count": 24,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hesitate",
+            "baseline_count": 4,
+            "experiment_count": 3,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 29,
+            "experiment_count": 13,
+            "matched": 3,
+            "precision": 0.2308,
+            "recall": 0.1034,
+            "f1": 0.1429
+          },
+          {
+            "type": "input_text",
+            "baseline_count": 5,
+            "experiment_count": 6,
+            "matched": 5,
+            "precision": 0.8333,
+            "recall": 1.0,
+            "f1": 0.9091
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 14,
+            "experiment_count": 14,
+            "matched": 9,
+            "precision": 0.6429,
+            "recall": 0.6429,
+            "f1": 0.6429
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 21,
+            "experiment_count": 1,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "select",
+            "baseline_count": 11,
+            "experiment_count": 7,
+            "matched": 7,
+            "precision": 1.0,
+            "recall": 0.6364,
+            "f1": 0.7778
+          }
+        ],
+        "f1_pass": false,
+        "recall_pass": true,
+        "precision_pass": true
+      },
+      "qualitative": {
+        "overall_severity": "systematic",
+        "summary": "The experiment consistently hallucinates 'dwell' events (24 generated vs 0 in baseline) and almost entirely misses 'scroll' events (1 captured vs 21 in baseline), both of which are systematic failures across the session. Core transactional interactions (input_text, select, navigate, click) perform acceptably to well, but change_ui_state and hover events are severely under-detected, reducing overall recall to 0.24.",
+        "issues": [
+          {
+            "category": "hallucinated_events",
+            "severity": "systematic",
+            "description": "The experiment generates 24 'dwell' events throughout the session, but the baseline contains zero dwell events. These are not plausible misclassifications \u2014 the baseline consistently avoids using this event type entirely. The model appears to emit 'dwell' as a catch-all for any stationary or passive screen state.",
+            "affected_events": [],
+            "examples": [
+              "Experiment event: dwell at 29893ms 'User dwells on the page while reading the instructions' \u2014 no corresponding baseline event",
+              "Experiment event: dwell at 97134ms 'User examines the Google search results for webjet' \u2014 no corresponding baseline event",
+              "Experiment event: dwell at 109100ms 'User pauses to examine the Webjet homepage after it loads' \u2014 baseline uses change_ui_state instead"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "systematic",
+            "description": "Scroll events are almost entirely absent from the experiment output. The baseline contains 21 scroll events across the session (covering Webjet search results pages and flight listing pages), while the experiment captures only 1 and matches none. This is a consistent blind spot.",
+            "affected_events": [],
+            "examples": [
+              "Baseline has 21 scroll events; experiment has 1 with 0 matched",
+              "Scroll events cover key UX moments like scanning search results and flight listings \u2014 their absence means significant user behaviour is unrecorded"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "systematic",
+            "description": "change_ui_state events are severely under-detected: baseline has 49, experiment has 19, with only 3 matched (recall 0.06). The experiment misses UI feedback events such as dropdown appearances, form state changes, loading states, and modal open/close events that the baseline captures in detail.",
+            "affected_events": [],
+            "examples": [
+              "Baseline event at 116957ms: 'Autocomplete dropdown menu appears above the Leaving from field' \u2014 not captured by experiment",
+              "Baseline event at 228375ms: 'Date picker modal closes' \u2014 not captured by experiment",
+              "Baseline event at 140657ms: 'The search form updates to a one-way trip layout' \u2014 not captured by experiment"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "acceptable",
+            "description": "Hover events are substantially under-detected: baseline has 29, experiment has 13, with only 3 matched (recall 0.10). Many baseline hover events with clear interaction targets are either missed or absorbed into adjacent dwell events in the experiment.",
+            "affected_events": [],
+            "examples": [
+              "Baseline event at 177925ms: 'User hovers over the Select Travel Dates field' (duration ~37s) \u2014 not captured",
+              "Baseline event at 128749ms: 'User hovers over various London airport options in the destination dropdown' \u2014 not captured"
+            ]
+          },
+          {
+            "category": "type_mismatch",
+            "severity": "acceptable",
+            "description": "Hesitate events are not matched: baseline has 4 hesitate events, experiment has 3, but none are matched. The timing windows are similar but the experiment hesitate events appear to be placed at slightly different positions with 0 overlap. This is a low-volume mismatch.",
+            "affected_events": [],
+            "examples": [
+              "Baseline hesitate at 110936ms on Flight Search Widget \u2014 experiment has hesitate events at different timestamps that don't overlap"
+            ]
+          },
+          {
+            "category": "description_quality",
+            "severity": "noise",
+            "description": "For matched events, description similarity averages 0.70, indicating minor wording differences. Descriptions are semantically correct but vary in specificity and phrasing.",
+            "affected_events": [],
+            "examples": [
+              "Baseline: 'User types the search query webjet into the Google search bar' vs Experiment: 'User types webjet into the Google search bar'"
+            ]
+          }
+        ],
+        "noise_fraction": 0.05,
+        "acceptable_fraction": 0.2,
+        "systematic_fraction": 0.7,
+        "critical_fraction": 0.05,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": null,
+      "break_decision": null
+    },
+    {
+      "session_id": "travel_expert_veronika",
+      "metrics": {
+        "session_id": "travel_expert_veronika",
+        "baseline_count": 75,
+        "experiment_count": 57,
+        "matched_count": 23,
+        "precision": 0.40350877192982454,
+        "recall": 0.30666666666666664,
+        "f1": 0.3484848484848485,
+        "mean_description_similarity": 0.7083760182529243,
+        "mean_start_error_ms": 955.0105101449425,
+        "mean_end_error_ms": 1693.82711884059,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 22,
+            "experiment_count": 12,
+            "matched": 3,
+            "precision": 0.25,
+            "recall": 0.1364,
+            "f1": 0.1765
+          },
+          {
+            "type": "click",
+            "baseline_count": 13,
+            "experiment_count": 4,
+            "matched": 3,
+            "precision": 0.75,
+            "recall": 0.2308,
+            "f1": 0.3529
+          },
+          {
+            "type": "dwell",
+            "baseline_count": 0,
+            "experiment_count": 15,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 10,
+            "experiment_count": 2,
+            "matched": 1,
+            "precision": 0.5,
+            "recall": 0.1,
+            "f1": 0.1667
+          },
+          {
+            "type": "input_text",
+            "baseline_count": 6,
+            "experiment_count": 4,
+            "matched": 4,
+            "precision": 1.0,
+            "recall": 0.6667,
+            "f1": 0.8
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 11,
+            "experiment_count": 13,
+            "matched": 6,
+            "precision": 0.4615,
+            "recall": 0.5455,
+            "f1": 0.5
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 8,
+            "experiment_count": 4,
+            "matched": 4,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6667
+          },
+          {
+            "type": "select",
+            "baseline_count": 5,
+            "experiment_count": 3,
+            "matched": 2,
+            "precision": 0.6667,
+            "recall": 0.4,
+            "f1": 0.5
+          }
+        ],
+        "f1_pass": true,
+        "recall_pass": true,
+        "precision_pass": true
+      },
+      "qualitative": {
+        "overall_severity": "systematic",
+        "summary": "The experiment introduces 15 'dwell' events (absent from baseline) representing user attention/reading moments, while systematically missing the majority of click (10/13), hover (9/10), and change_ui_state (19/22) events. High-value transactional events \u2014 navigate, input_text, scroll, and select \u2014 are captured at acceptable quality, meaning the broad session narrative is preserved but fine-grained interaction detail is largely lost.",
+        "issues": [
+          {
+            "category": "hallucinated_events",
+            "severity": "systematic",
+            "description": "15 'dwell' events generated with no counterpart in the baseline. These track reading/attention behaviour (e.g. reading instructions, examining flight results) that the baseline annotator never recorded as discrete events. They inflate the experiment event count and consume matching budget without contributing to recall.",
+            "affected_events": [
+              1,
+              3,
+              7,
+              10,
+              13,
+              19,
+              21,
+              24,
+              26,
+              31,
+              33,
+              36,
+              39,
+              47,
+              49
+            ],
+            "examples": [
+              "Exp idx 1: 'dwell' at 33642ms \u2014 'User is reading the on-screen instructions' (no baseline dwell type exists)",
+              "Exp idx 36: 'dwell' at 213688ms \u2014 'User is examining the flight search results' (baseline has no corresponding event)"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "systematic",
+            "description": "Only 3 of 13 baseline click events matched. The experiment consistently misses clicks on input fields, filter checkboxes, and intermediate navigation controls. Notable missing clicks: 'From' input activation (baseline idx 22, t=173771ms), 'To' input activation (baseline idx 33, t=181271ms), two '2+ stops' filter toggling clicks (baseline idx 47/49, t=236960/239660ms), 'Select' flight button (baseline idx 45, t=223060ms), and Booking.com destination field click (baseline idx 54, t=300400ms).",
+            "affected_events": [
+              22,
+              33,
+              45,
+              47,
+              49,
+              54
+            ],
+            "examples": [
+              "Baseline idx 47: click '2+ stops' checkbox at 236960ms \u2014 completely absent from experiment",
+              "Baseline idx 49: click '2+ stops' checkbox again at 239660ms to restore results \u2014 absent from experiment"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "systematic",
+            "description": "Only 1 of 10 baseline hover events matched. The experiment nearly entirely omits cursor-positioning behaviour before clicks (hover over 'Open' button, hover over search fields, hover over 'Select' button, hover over sidebar filters, hover over Trello cards). The one matched hover (Trello cards, baseline idx 57) was detected correctly.",
+            "affected_events": [
+              2,
+              5,
+              19,
+              20,
+              27,
+              35,
+              39,
+              43,
+              57
+            ],
+            "examples": [
+              "Baseline idx 19/20: hover over 'From' field (152831ms) and 'Search' button (158831ms) \u2014 both missing",
+              "Baseline idx 39: hover over 'Select' button at 222621ms \u2014 missing despite being right before a key click"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "systematic",
+            "description": "Only 3 of 22 baseline change_ui_state events matched. The experiment misses most dropdown appearances (autocomplete on Google, Skyscanner From/To dropdowns, Booking.com suggestions), loading states (flight skeleton screens, Searching overlays), and the result-expansion after clicking Select. This erases a whole layer of reactive UI feedback from the extracted record.",
+            "affected_events": [
+              0,
+              1,
+              11,
+              15,
+              22,
+              24,
+              26,
+              30,
+              32,
+              34,
+              38,
+              41,
+              42,
+              45,
+              47,
+              53,
+              55,
+              63,
+              67,
+              75
+            ],
+            "examples": [
+              "Baseline idx 11: Google autocomplete suggestions appear at 102181ms \u2014 missing",
+              "Baseline idx 42: flight result card expands after click at 223060ms \u2014 missing"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "acceptable",
+            "description": "Two input_text events missed: the long think-aloud response to the task prompt typed during 95681\u2013148831ms (baseline idx 8 and 16), and the short 'sk' typed into the Google search bar (baseline idx 10). The experiment merges the Google typing into a single 'skyscanner' input and entirely misses the think-aloud prompt responses (replacing them with dwell events).",
+            "affected_events": [
+              8,
+              10,
+              16
+            ],
+            "examples": [
+              "Baseline idx 8: input_text 95681\u2013101381ms typing initial think-aloud response \u2014 replaced by dwell in experiment",
+              "Baseline idx 16: input_text 106781\u2013148831ms typing long travel planning response \u2014 replaced by dwell in experiment"
+            ]
+          },
+          {
+            "category": "timing_error",
+            "severity": "noise",
+            "description": "Mean start error of ~955ms across matched events is within acceptable range. A few matched events show 1\u20132s offsets (e.g. navigate to Booking.com: baseline 289664ms vs experiment 289664ms; Booking.com search click: baseline 307800ms vs experiment 312654ms ~4.8s offset). The Booking.com search click offset approaches critical but is isolated.",
+            "affected_events": [
+              69
+            ],
+            "examples": [
+              "Baseline idx 69: click 'Search' on Booking.com at 307800ms; experiment has it at 312654ms (~4.8s later)"
+            ]
+          }
+        ],
+        "noise_fraction": 0.1,
+        "acceptable_fraction": 0.15,
+        "systematic_fraction": 0.65,
+        "critical_fraction": 0.1,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": null,
+      "break_decision": null
+    },
+    {
+      "session_id": "travel_expert_william",
+      "metrics": {
+        "session_id": "travel_expert_william",
+        "baseline_count": 101,
+        "experiment_count": 65,
+        "matched_count": 36,
+        "precision": 0.5538461538461539,
+        "recall": 0.3564356435643564,
+        "f1": 0.4337349397590361,
+        "mean_description_similarity": 0.6530092396333562,
+        "mean_start_error_ms": 1795.800000000003,
+        "mean_end_error_ms": 1592.744444444444,
+        "per_type": [
+          {
+            "type": "change_ui_state",
+            "baseline_count": 26,
+            "experiment_count": 12,
+            "matched": 7,
+            "precision": 0.5833,
+            "recall": 0.2692,
+            "f1": 0.3684
+          },
+          {
+            "type": "click",
+            "baseline_count": 12,
+            "experiment_count": 7,
+            "matched": 5,
+            "precision": 0.7143,
+            "recall": 0.4167,
+            "f1": 0.5263
+          },
+          {
+            "type": "drag",
+            "baseline_count": 3,
+            "experiment_count": 3,
+            "matched": 3,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          {
+            "type": "dwell",
+            "baseline_count": 0,
+            "experiment_count": 12,
+            "matched": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "type": "hover",
+            "baseline_count": 29,
+            "experiment_count": 12,
+            "matched": 8,
+            "precision": 0.6667,
+            "recall": 0.2759,
+            "f1": 0.3902
+          },
+          {
+            "type": "input_text",
+            "baseline_count": 2,
+            "experiment_count": 2,
+            "matched": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          {
+            "type": "navigate",
+            "baseline_count": 7,
+            "experiment_count": 4,
+            "matched": 4,
+            "precision": 1.0,
+            "recall": 0.5714,
+            "f1": 0.7273
+          },
+          {
+            "type": "scroll",
+            "baseline_count": 18,
+            "experiment_count": 11,
+            "matched": 5,
+            "precision": 0.4545,
+            "recall": 0.2778,
+            "f1": 0.3448
+          },
+          {
+            "type": "select",
+            "baseline_count": 4,
+            "experiment_count": 2,
+            "matched": 2,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6667
+          }
+        ],
+        "f1_pass": true,
+        "recall_pass": true,
+        "precision_pass": true
+      },
+      "qualitative": {
+        "overall_severity": "systematic",
+        "summary": "The experiment consistently under-extracts hover, scroll, and change_ui_state events (all at ~0.27 recall) while hallucinating 12 dwell events not present in the baseline schema. Several important interaction clusters are entirely missing, including early tab-switch actions, the 'Breakfast included' filter workflow, and the hotel details navigation click.",
+        "issues": [
+          {
+            "category": "hallucinated_events",
+            "severity": "systematic",
+            "description": "12 dwell events generated with zero baseline matches. The baseline annotation schema contains no dwell events; this event type appears to be systematically fabricated by the experiment model to fill passive viewing gaps.",
+            "affected_events": [
+              1,
+              3,
+              8,
+              16,
+              20,
+              25,
+              31,
+              36,
+              41,
+              46,
+              51,
+              56
+            ],
+            "examples": [
+              "experiment[1]: dwell 30139-32142ms 'user waiting on session page' \u2014 no baseline counterpart",
+              "experiment[3]: dwell 34158-52410ms 'user dwelling reading task instructions' \u2014 no baseline counterpart",
+              "experiment[8]: dwell 81184-104458ms 'user dwells on Google homepage' \u2014 baseline has hover+clicks for tab-switching in this window"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "critical",
+            "description": "Early tab-switch interaction cluster (baseline[5-8]: hover + 2 clicks + navigate at ~82-87s) entirely absent from experiment. User explicitly switches to Askable Sessions tab and back to Google tab \u2014 key navigation behaviour.",
+            "affected_events": [
+              5,
+              6,
+              7,
+              8
+            ],
+            "examples": [
+              "baseline[6]: click at 84484ms 'user clicks Askable Sessions tab' \u2014 missing from experiment",
+              "baseline[7]: navigate at 84584ms 'browser switches to Askable Sessions tab' \u2014 missing",
+              "baseline[8]: click at 86684ms 'user clicks back to Google tab' \u2014 missing"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "critical",
+            "description": "Breakfast filter interaction cluster (baseline[40-45, 59-61]) entirely absent from experiment. User hovers, clicks the 'Breakfast included' filter, expands property class filters, and then reapplies the breakfast filter \u2014 a meaningful UX interaction sequence.",
+            "affected_events": [
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              59,
+              60,
+              61
+            ],
+            "examples": [
+              "baseline[41]: click at 218538ms 'User selects Breakfast included filter' \u2014 missing from experiment",
+              "baseline[44]: click at 221038ms 'User clicks See more to expand property class filters' \u2014 missing",
+              "baseline[60]: select at 259314ms 'User selects Breakfast included filter again' \u2014 missing"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "critical",
+            "description": "Hotel details navigation (baseline[51-52]) missing: user clicks 'The Zetter Clerkenwell' card and navigates to the hotel details page, a key UX decision point.",
+            "affected_events": [
+              51,
+              52
+            ],
+            "examples": [
+              "baseline[51]: click at 247988ms 'User clicks on The Zetter Clerkenwell to view hotel details'",
+              "baseline[52]: navigate at 247988ms 'Page navigates to hotel details page for The Zetter Clerkenwell'"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "systematic",
+            "description": "Hover events massively under-extracted: 29 baseline hover events, only 8 matched (recall 0.28). The experiment captures high-level interactions but misses most cursor hover movements during browsing.",
+            "affected_events": [
+              15,
+              18,
+              21,
+              26,
+              29,
+              37,
+              38,
+              40,
+              43,
+              47,
+              48,
+              57,
+              59,
+              64,
+              72,
+              73,
+              80,
+              83,
+              85,
+              86,
+              88,
+              89,
+              90,
+              92,
+              94,
+              96,
+              98
+            ],
+            "examples": [
+              "baseline[15]: hover at 118911ms 'William hovers over Expedia result' \u2014 missing",
+              "baseline[18]: hover at 123111ms 'William hovers over Packages tab' \u2014 missing",
+              "baseline[37]: hover at 203438ms 'User hovers over The Zetter Clerkenwell result' \u2014 missing"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "systematic",
+            "description": "change_ui_state events under-extracted: 26 baseline events, only 7 matched (recall 0.27). Dropdown appearances, autocomplete suggestions, and result-refresh states after filter actions are mostly missing.",
+            "affected_events": [
+              10,
+              12,
+              20,
+              23,
+              25,
+              28,
+              31,
+              33,
+              42,
+              45,
+              53,
+              55,
+              61,
+              67,
+              68,
+              70,
+              71,
+              76,
+              77,
+              78,
+              79
+            ],
+            "examples": [
+              "baseline[10]: change_ui_state at 105384ms 'search dropdown appears on click' \u2014 missing",
+              "baseline[12]: change_ui_state at 118011ms 'autocomplete suggestions appear' \u2014 missing",
+              "baseline[20]: change_ui_state at 125011ms 'search widget updates for Packages tab' \u2014 missing"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "systematic",
+            "description": "Scroll events under-extracted: 18 baseline events, only 5 matched (recall 0.28). Many scroll actions during the hotel browsing phase are missing or merged into fewer events.",
+            "affected_events": [
+              36,
+              39,
+              46,
+              49,
+              56,
+              58,
+              62,
+              63,
+              65,
+              74,
+              81,
+              82,
+              84,
+              87,
+              91,
+              93,
+              95,
+              97
+            ],
+            "examples": [
+              "baseline[39]: scroll at 208938ms 'User scrolls down left-hand sidebar to view filter options' \u2014 missing",
+              "baseline[46]: scroll at 221438ms 'User scrolls through expanded filter list' \u2014 missing",
+              "baseline[82]: scroll at 315564ms 'User scrolls back up' \u2014 missing"
+            ]
+          },
+          {
+            "category": "timing_error",
+            "severity": "acceptable",
+            "description": "Mean start error of 1796ms across matched events indicates moderate timing offsets. A few events show larger offsets (3-5s) but most matched events are within acceptable range.",
+            "affected_events": [
+              0,
+              4,
+              5,
+              11,
+              13
+            ],
+            "examples": [
+              "experiment[4] change_ui_state at 65158ms vs baseline[1] at 68684ms \u2014 3.5s offset",
+              "experiment[0] change_ui_state at 30139ms vs baseline[0] at 31184ms \u2014 1s offset"
+            ]
+          }
+        ],
+        "noise_fraction": 0.03,
+        "acceptable_fraction": 0.1,
+        "systematic_fraction": 0.72,
+        "critical_fraction": 0.15,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cumulative": null,
+      "break_decision": null
+    },
     {
       "session_id": "travel_learner_sophia_jayde",
       "metrics": {
@@ -120,158 +2538,124 @@
         "recall_pass": true,
         "precision_pass": true
       },
-      "qualitative": null,
-      "cumulative": {
-        "sessions_completed": 1,
-        "cumulative_f1": 0.3652392947103275,
-        "cumulative_recall": 0.2894211576846307,
-        "cumulative_precision": 0.4948805460750853,
-        "cumulative_matched": 145,
-        "cumulative_baseline": 501,
-        "cumulative_experiment": 293,
-        "f1_trend": "stable",
-        "f1_history": [
-          0.3652392947103275
-        ]
+      "qualitative": {
+        "overall_severity": "systematic",
+        "summary": "The cv-augmented branch exhibits three systematic failure patterns: it hallucinates 62 'dwell' events that have no counterpart in the baseline (0 baseline dwell events), and it severely under-detects both 'change_ui_state' (6.8% recall) and 'hover' (8.3% recall) events. High-signal event types like input_text (F1=0.74), navigate (F1=0.61), and click (F1=0.54) perform acceptably, indicating the model can detect explicit user actions but conflates passive viewing with dwell events and consistently misses UI state transitions and cursor hover activity.",
+        "issues": [
+          {
+            "category": "hallucinated_events",
+            "severity": "systematic",
+            "description": "The experiment generates 62 'dwell' events that do not exist in the baseline at all (baseline has 0 dwell events). These appear to represent periods of visual inactivity or passive reading that the model categorises as a distinct event type. The very first experiment event is a ~149-second dwell covering the entire opening video-call segment, which the baseline annotates as navigation/interaction events.",
+            "affected_events": [
+              0,
+              5,
+              6,
+              16,
+              17,
+              21,
+              24,
+              27,
+              38,
+              43
+            ],
+            "examples": [
+              "Experiment event 0: dwell 35803ms-184835ms (149s) on Askable Sessions video call \u2014 no baseline counterpart",
+              "Experiment event 5: dwell on Google Flights homepage 190614ms-193775ms \u2014 baseline shows discrete click/hover events here",
+              "Experiment event 6: dwell on Google Flights 194285ms-208767ms \u2014 again no baseline match"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "systematic",
+            "description": "change_ui_state events are almost entirely absent: 117 in baseline vs 20 detected, only 8 matched (recall 6.8%, F1 0.117). The model consistently fails to detect UI state transitions such as dropdowns opening, calendar pickers appearing, and modal/panel expansions \u2014 all high-signal UX indicators.",
+            "affected_events": [
+              2,
+              4,
+              6,
+              10,
+              14,
+              20,
+              22,
+              28,
+              32,
+              36
+            ],
+            "examples": [
+              "Baseline event 2 (t=50900ms): search bar expands into active state \u2014 not detected",
+              "Baseline event 4 (t=56100ms): autocomplete dropdown appears below search bar \u2014 not detected",
+              "Baseline event 6 (t=58800ms): date picker calendar opens after destination selected \u2014 not detected"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "systematic",
+            "description": "Hover events are almost entirely absent: 108 in baseline vs 25 detected, only 9 matched (recall 8.3%, F1 0.135). Mouse exploration and cursor-over-element events are systematically ignored, which removes a large portion of user intent signal from the extraction.",
+            "affected_events": [
+              7,
+              17,
+              23,
+              26,
+              30,
+              33,
+              34,
+              37,
+              42,
+              45
+            ],
+            "examples": [
+              "Baseline event 7 (first hover at ~t=59600ms): cursor explores date picker options \u2014 not detected",
+              "Baseline events 17, 23, 26: repeated hover events in the first search flow \u2014 all missed",
+              "108 total baseline hover events, only 9 matched across the full 20-minute session"
+            ]
+          },
+          {
+            "category": "missing_events",
+            "severity": "acceptable",
+            "description": "Click events have good precision (74.6%) but low recall (42%). 65 baseline clicks are undetected and 16 experiment clicks are false positives. The model captures the most prominent clicks reliably but misses lower-confidence or rapid click sequences.",
+            "affected_events": [
+              1,
+              8,
+              11,
+              15,
+              19,
+              25,
+              27,
+              31
+            ],
+            "examples": [
+              "112 baseline click events vs 63 detected \u2014 approximately half of clicks missed",
+              "16 experiment clicks have no baseline counterpart (false positives, precision 74.6%)",
+              "Clicks within rapid UI interaction sequences (e.g. date selection chains) are frequently missed"
+            ]
+          },
+          {
+            "category": "timing_error",
+            "severity": "noise",
+            "description": "Matched events have a mean start timing error of ~1135ms and mean end timing error of ~1162ms. This is slightly above the 1s noise threshold but well within acceptable range for video-based extraction. Description similarity for matched events is 0.671, indicating reasonable but not high-fidelity textual alignment.",
+            "affected_events": [],
+            "examples": [
+              "Mean start error 1134ms across 145 matched events \u2014 borderline acceptable",
+              "Mean end error 1162ms \u2014 consistent slight offset likely due to segment boundary alignment",
+              "Mean description similarity 0.671 \u2014 descriptions capture the gist but often miss fine detail"
+            ]
+          }
+        ],
+        "noise_fraction": 0.05,
+        "acceptable_fraction": 0.35,
+        "systematic_fraction": 0.6,
+        "critical_fraction": 0.0,
+        "input_tokens": 0,
+        "output_tokens": 0
       },
-      "break_decision": {
-        "should_break": false,
-        "reason": "too_early",
-        "explanation": "Only 1 sessions completed, minimum is 2."
-      }
+      "cumulative": null,
+      "break_decision": null
     }
   ],
-  "aggregate_f1": 0.3652392947103275,
-  "aggregate_recall": 0.2894211576846307,
-  "aggregate_precision": 0.4948805460750853,
+  "aggregate_f1": 0.36857476635514025,
+  "aggregate_recall": 0.30901077375122427,
+  "aggregate_precision": 0.4565846599131693,
   "judgment": null,
-  "config": {
-    "triage": {
-      "enabled": true,
-      "sample_fps": 5.0,
-      "resolution_height": 480,
-      "window_size_ms": 3000,
-      "window_step_ms": 1000,
-      "min_segment_duration_ms": 5000,
-      "thresholds": {
-        "idle": 0.005,
-        "low": 0.02,
-        "medium": 0.08
-      },
-      "fps_mapping": {
-        "idle": 0.5,
-        "low": 2.0,
-        "medium": 4.0,
-        "high": 10.0
-      }
-    },
-    "analyse": {
-      "model": "gemini-3-flash-preview",
-      "temperature": 0.1,
-      "max_concurrent": 10,
-      "token_budget_per_segment": 50000,
-      "tokens_per_frame": 1548,
-      "context_frames": 2,
-      "jpeg_quality": 85,
-      "source": "unmod_website_test_video",
-      "batch_gap_ms": 5000
-    },
-    "merge": {
-      "time_tolerance_ms": 2000,
-      "similarity_threshold": 0.7,
-      "discard_context_events": true
-    },
-    "observe": {
-      "enabled": false,
-      "visual_change_driven": false,
-      "cursor_tracking_enabled": true,
-      "change_detect_fps": 4.0,
-      "change_pixel_threshold": 20,
-      "change_min_area_px": 1000,
-      "change_blur_kernel": 5,
-      "change_morph_kernel": 5,
-      "scene_change_area_threshold": 0.3,
-      "continuous_change_max_duration_ms": 3000,
-      "cursor_stop_min_ms": 300,
-      "cursor_stop_radius_px": 15.0,
-      "moment_merge_gap_ms": 500,
-      "token_budget_per_minute": 50000,
-      "tokens_full_frame": 1600,
-      "tokens_roi_pair": 750,
-      "tokens_roi_single": 300,
-      "roi_min_size": 256,
-      "moment_categories": [
-        "scene_change",
-        "pre_scene_change",
-        "interaction",
-        "scroll",
-        "continuous",
-        "cursor_stop",
-        "cursor_only",
-        "baseline"
-      ],
-      "min_visual_change_duration_ms": 0.0,
-      "max_moments_per_minute": 0.0,
-      "moment_sample_interval_ms": 0,
-      "moment_max_frames": 0,
-      "tracking_fps": 5.0,
-      "tracking_base_fps": 2.0,
-      "tracking_peak_fps": 15.0,
-      "tracking_displacement_threshold_px": 30.0,
-      "tracking_active_padding_ms": 500,
-      "resolution_height": 720,
-      "template_scales": [
-        0.8,
-        1.0,
-        1.25,
-        1.5
-      ],
-      "match_threshold": 0.6,
-      "early_exit_threshold": 0.9,
-      "max_interpolation_gap_ms": 500,
-      "smooth_window": 3,
-      "smooth_displacement_threshold": 50.0,
-      "flow_fps": 2.0,
-      "flow_grid_step": 20,
-      "flow_window_size_ms": 1000,
-      "flow_window_step_ms": 500,
-      "hover_min_ms": 300,
-      "hover_max_ms": 2000,
-      "hover_radius_px": 15.0,
-      "dwell_min_ms": 2000,
-      "dwell_radius_px": 20.0,
-      "thrash_window_ms": 1000,
-      "thrash_min_direction_changes": 4,
-      "thrash_min_speed_px_per_sec": 500.0,
-      "thrash_angle_threshold_deg": 90.0,
-      "click_stop_max_ms": 200,
-      "click_stop_radius_px": 5.0,
-      "click_min_confidence": 0.3,
-      "scroll_min_flow_uniformity": 0.6,
-      "scroll_min_magnitude": 3.0,
-      "hesitation_min_ms": 500,
-      "hesitation_max_ms": 2000,
-      "hesitation_radius_px": 10.0,
-      "roi_size": 512,
-      "roi_padding": 64,
-      "visual_scan_gap_ms": 3000,
-      "visual_scan_fps": 1.0,
-      "visual_change_threshold": 0.03,
-      "baseline_max_gap_ms": 5000,
-      "frame_dedup_ms": 200
-    }
-  },
-  "experiment_config": {
-    "f1_threshold": 0.3,
-    "recall_threshold": 0.2,
-    "precision_threshold": 0.15,
-    "min_sessions_before_break": 2,
-    "max_consecutive_systematic": 2,
-    "f1_decline_threshold": 0.1,
-    "auto_iterate": false,
-    "max_auto_iterations": 3,
-    "time_tolerance_ms": 2000.0,
-    "similarity_threshold": 0.5
-  },
+  "config": {},
+  "experiment_config": {},
   "auto_iteration": null
 }
