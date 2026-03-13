@@ -1,0 +1,102 @@
+{
+  "session_id": "flight_centre_booking_james",
+  "metrics": {
+    "session_id": "flight_centre_booking_james",
+    "baseline_count": 57,
+    "experiment_count": 41,
+    "matched_count": 14,
+    "precision": 0.34146341463414637,
+    "recall": 0.24561403508771928,
+    "f1": 0.28571428571428575,
+    "mean_description_similarity": 0.602717557533894,
+    "mean_start_error_ms": 1727.2415238095273,
+    "mean_end_error_ms": 1619.094095238081,
+    "per_type": [
+      {
+        "type": "change_ui_state",
+        "baseline_count": 19,
+        "experiment_count": 10,
+        "matched": 1,
+        "precision": 0.1,
+        "recall": 0.0526,
+        "f1": 0.069
+      },
+      {
+        "type": "click",
+        "baseline_count": 14,
+        "experiment_count": 11,
+        "matched": 7,
+        "precision": 0.6364,
+        "recall": 0.5,
+        "f1": 0.56
+      },
+      {
+        "type": "dwell",
+        "baseline_count": 0,
+        "experiment_count": 8,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hover",
+        "baseline_count": 12,
+        "experiment_count": 1,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "navigate",
+        "baseline_count": 5,
+        "experiment_count": 6,
+        "matched": 3,
+        "precision": 0.5,
+        "recall": 0.6,
+        "f1": 0.5455
+      },
+      {
+        "type": "scroll",
+        "baseline_count": 5,
+        "experiment_count": 3,
+        "matched": 2,
+        "precision": 0.6667,
+        "recall": 0.4,
+        "f1": 0.5
+      },
+      {
+        "type": "select",
+        "baseline_count": 2,
+        "experiment_count": 2,
+        "matched": 1,
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5
+      }
+    ],
+    "f1_pass": false,
+    "recall_pass": true,
+    "precision_pass": true
+  },
+  "qualitative": null,
+  "cumulative": {
+    "sessions_completed": 1,
+    "cumulative_f1": 0.28571428571428575,
+    "cumulative_recall": 0.24561403508771928,
+    "cumulative_precision": 0.34146341463414637,
+    "cumulative_matched": 14,
+    "cumulative_baseline": 57,
+    "cumulative_experiment": 41,
+    "f1_trend": "stable",
+    "f1_history": [
+      0.28571428571428575
+    ]
+  },
+  "break_decision": {
+    "should_break": false,
+    "reason": "too_early",
+    "explanation": "Only 1 sessions completed, minimum is 2."
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "session_id": "travel_expert_lisa",
+  "status": "success",
+  "metrics": {
+    "session_id": "travel_expert_lisa",
+    "baseline_count": 178,
+    "experiment_count": 110,
+    "matched_count": 43,
+    "precision": 0.39090909090909093,
+    "recall": 0.24157303370786518,
+    "f1": 0.29861111111111116,
+    "mean_description_similarity": 0.7044374847509448,
+    "mean_start_error_ms": 1271.1246144014635,
+    "mean_end_error_ms": 858.0443214968011,
+    "per_type": [
+      {
+        "type": "change_ui_state",
+        "baseline_count": 49,
+        "experiment_count": 19,
+        "matched": 3,
+        "precision": 0.1579,
+        "recall": 0.0612,
+        "f1": 0.0882
+      },
+      {
+        "type": "click",
+        "baseline_count": 45,
+        "experiment_count": 23,
+        "matched": 16,
+        "precision": 0.6957,
+        "recall": 0.3556,
+        "f1": 0.4706
+      },
+      {
+        "type": "dwell",
+        "baseline_count": 0,
+        "experiment_count": 24,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hesitate",
+        "baseline_count": 4,
+        "experiment_count": 3,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hover",
+        "baseline_count": 29,
+        "experiment_count": 13,
+        "matched": 3,
+        "precision": 0.2308,
+        "recall": 0.1034,
+        "f1": 0.1429
+      },
+      {
+        "type": "input_text",
+        "baseline_count": 5,
+        "experiment_count": 6,
+        "matched": 5,
+        "precision": 0.8333,
+        "recall": 1.0,
+        "f1": 0.9091
+      },
+      {
+        "type": "navigate",
+        "baseline_count": 14,
+        "experiment_count": 14,
+        "matched": 9,
+        "precision": 0.6429,
+        "recall": 0.6429,
+        "f1": 0.6429
+      },
+      {
+        "type": "scroll",
+        "baseline_count": 21,
+        "experiment_count": 1,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "select",
+        "baseline_count": 11,
+        "experiment_count": 7,
+        "matched": 7,
+        "precision": 1.0,
+        "recall": 0.6364,
+        "f1": 0.7778
+      }
+    ],
+    "f1_pass": false,
+    "recall_pass": true,
+    "precision_pass": true
+  },
+  "qualitative": {
+    "overall_severity": "systematic",
+    "summary": "The experiment consistently hallucinates 'dwell' events (24 generated vs 0 in baseline) and almost entirely misses 'scroll' events (1 captured vs 21 in baseline), both of which are systematic failures across the session. Core transactional interactions (input_text, select, navigate, click) perform acceptably to well, but change_ui_state and hover events are severely under-detected, reducing overall recall to 0.24.",
+    "issues": [
+      {
+        "category": "hallucinated_events",
+        "severity": "systematic",
+        "description": "The experiment generates 24 'dwell' events throughout the session, but the baseline contains zero dwell events. These are not plausible misclassifications — the baseline consistently avoids using this event type entirely. The model appears to emit 'dwell' as a catch-all for any stationary or passive screen state.",
+        "affected_events": [],
+        "examples": [
+          "Experiment event: dwell at 29893ms 'User dwells on the page while reading the instructions' — no corresponding baseline event",
+          "Experiment event: dwell at 97134ms 'User examines the Google search results for webjet' — no corresponding baseline event",
+          "Experiment event: dwell at 109100ms 'User pauses to examine the Webjet homepage after it loads' — baseline uses change_ui_state instead"
+        ]
+      },
+      {
+        "category": "missing_events",
+        "severity": "systematic",
+        "description": "Scroll events are almost entirely absent from the experiment output. The baseline contains 21 scroll events across the session (covering Webjet search results pages and flight listing pages), while the experiment captures only 1 and matches none. This is a consistent blind spot.",
+        "affected_events": [],
+        "examples": [
+          "Baseline has 21 scroll events; experiment has 1 with 0 matched",
+          "Scroll events cover key UX moments like scanning search results and flight listings — their absence means significant user behaviour is unrecorded"
+        ]
+      },
+      {
+        "category": "missing_events",
+        "severity": "systematic",
+        "description": "change_ui_state events are severely under-detected: baseline has 49, experiment has 19, with only 3 matched (recall 0.06). The experiment misses UI feedback events such as dropdown appearances, form state changes, loading states, and modal open/close events that the baseline captures in detail.",
+        "affected_events": [],
+        "examples": [
+          "Baseline event at 116957ms: 'Autocomplete dropdown menu appears above the Leaving from field' — not captured by experiment",
+          "Baseline event at 228375ms: 'Date picker modal closes' — not captured by experiment",
+          "Baseline event at 140657ms: 'The search form updates to a one-way trip layout' — not captured by experiment"
+        ]
+      },
+      {
+        "category": "missing_events",
+        "severity": "acceptable",
+        "description": "Hover events are substantially under-detected: baseline has 29, experiment has 13, with only 3 matched (recall 0.10). Many baseline hover events with clear interaction targets are either missed or absorbed into adjacent dwell events in the experiment.",
+        "affected_events": [],
+        "examples": [
+          "Baseline event at 177925ms: 'User hovers over the Select Travel Dates field' (duration ~37s) — not captured",
+          "Baseline event at 128749ms: 'User hovers over various London airport options in the destination dropdown' — not captured"
+        ]
+      },
+      {
+        "category": "type_mismatch",
+        "severity": "acceptable",
+        "description": "Hesitate events are not matched: baseline has 4 hesitate events, experiment has 3, but none are matched. The timing windows are similar but the experiment hesitate events appear to be placed at slightly different positions with 0 overlap. This is a low-volume mismatch.",
+        "affected_events": [],
+        "examples": [
+          "Baseline hesitate at 110936ms on Flight Search Widget — experiment has hesitate events at different timestamps that don't overlap"
+        ]
+      },
+      {
+        "category": "description_quality",
+        "severity": "noise",
+        "description": "For matched events, description similarity averages 0.70, indicating minor wording differences. Descriptions are semantically correct but vary in specificity and phrasing.",
+        "affected_events": [],
+        "examples": [
+          "Baseline: 'User types the search query webjet into the Google search bar' vs Experiment: 'User types webjet into the Google search bar'"
+        ]
+      }
+    ],
+    "noise_fraction": 0.05,
+    "acceptable_fraction": 0.2,
+    "systematic_fraction": 0.7,
+    "critical_fraction": 0.05
+  },
+  "error": null
+}

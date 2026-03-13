@@ -1,0 +1,111 @@
+{
+  "session_id": "flight_centre_booking_kay",
+  "metrics": {
+    "session_id": "flight_centre_booking_kay",
+    "baseline_count": 71,
+    "experiment_count": 69,
+    "matched_count": 25,
+    "precision": 0.36231884057971014,
+    "recall": 0.352112676056338,
+    "f1": 0.3571428571428571,
+    "mean_description_similarity": 0.6791891098028661,
+    "mean_start_error_ms": 1360.039039999987,
+    "mean_end_error_ms": 1015.3723733333242,
+    "per_type": [
+      {
+        "type": "change_ui_state",
+        "baseline_count": 33,
+        "experiment_count": 20,
+        "matched": 10,
+        "precision": 0.5,
+        "recall": 0.303,
+        "f1": 0.3774
+      },
+      {
+        "type": "click",
+        "baseline_count": 15,
+        "experiment_count": 15,
+        "matched": 8,
+        "precision": 0.5333,
+        "recall": 0.5333,
+        "f1": 0.5333
+      },
+      {
+        "type": "dwell",
+        "baseline_count": 0,
+        "experiment_count": 17,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hesitate",
+        "baseline_count": 0,
+        "experiment_count": 1,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hover",
+        "baseline_count": 13,
+        "experiment_count": 3,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "navigate",
+        "baseline_count": 5,
+        "experiment_count": 5,
+        "matched": 4,
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1": 0.8
+      },
+      {
+        "type": "scroll",
+        "baseline_count": 3,
+        "experiment_count": 5,
+        "matched": 1,
+        "precision": 0.2,
+        "recall": 0.3333,
+        "f1": 0.25
+      },
+      {
+        "type": "select",
+        "baseline_count": 2,
+        "experiment_count": 3,
+        "matched": 2,
+        "precision": 0.6667,
+        "recall": 1.0,
+        "f1": 0.8
+      }
+    ],
+    "f1_pass": true,
+    "recall_pass": true,
+    "precision_pass": true
+  },
+  "qualitative": null,
+  "cumulative": {
+    "sessions_completed": 1,
+    "cumulative_f1": 0.3571428571428571,
+    "cumulative_recall": 0.352112676056338,
+    "cumulative_precision": 0.36231884057971014,
+    "cumulative_matched": 25,
+    "cumulative_baseline": 71,
+    "cumulative_experiment": 69,
+    "f1_trend": "stable",
+    "f1_history": [
+      0.3571428571428571
+    ]
+  },
+  "break_decision": {
+    "should_break": false,
+    "reason": "too_early",
+    "explanation": "Only 1 sessions completed, minimum is 2."
+  }
+}

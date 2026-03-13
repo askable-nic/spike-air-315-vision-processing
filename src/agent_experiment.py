@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import random
 import subprocess
 import sys
@@ -77,11 +78,15 @@ def _launch_agent(
         "--no-session-persistence",
         "--permission-mode", "bypassPermissions",
     ]
+    # Unset CLAUDECODE so nested claude -p doesn't refuse to launch
+    env = {k: v for k, v in os.environ.items() if k != "CLAUDECODE"}
+
     return subprocess.Popen(
         cmd,
         cwd=str(base_dir),
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
+        env=env,
     )
 
 

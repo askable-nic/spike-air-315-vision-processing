@@ -1,0 +1,129 @@
+{
+  "session_id": "ask_results_usability_brandon",
+  "metrics": {
+    "session_id": "ask_results_usability_brandon",
+    "baseline_count": 196,
+    "experiment_count": 132,
+    "matched_count": 62,
+    "precision": 0.4696969696969697,
+    "recall": 0.3163265306122449,
+    "f1": 0.3780487804878049,
+    "mean_description_similarity": 0.6433592811578375,
+    "mean_start_error_ms": 1190.7706093190081,
+    "mean_end_error_ms": 1175.8064516129061,
+    "per_type": [
+      {
+        "type": "change_ui_state",
+        "baseline_count": 56,
+        "experiment_count": 11,
+        "matched": 7,
+        "precision": 0.6364,
+        "recall": 0.125,
+        "f1": 0.209
+      },
+      {
+        "type": "click",
+        "baseline_count": 52,
+        "experiment_count": 44,
+        "matched": 30,
+        "precision": 0.6818,
+        "recall": 0.5769,
+        "f1": 0.625
+      },
+      {
+        "type": "drag",
+        "baseline_count": 1,
+        "experiment_count": 0,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "dwell",
+        "baseline_count": 0,
+        "experiment_count": 30,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hesitate",
+        "baseline_count": 2,
+        "experiment_count": 1,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hover",
+        "baseline_count": 47,
+        "experiment_count": 15,
+        "matched": 6,
+        "precision": 0.4,
+        "recall": 0.1277,
+        "f1": 0.1935
+      },
+      {
+        "type": "input_text",
+        "baseline_count": 6,
+        "experiment_count": 3,
+        "matched": 3,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667
+      },
+      {
+        "type": "navigate",
+        "baseline_count": 10,
+        "experiment_count": 12,
+        "matched": 5,
+        "precision": 0.4167,
+        "recall": 0.5,
+        "f1": 0.4545
+      },
+      {
+        "type": "scroll",
+        "baseline_count": 18,
+        "experiment_count": 13,
+        "matched": 8,
+        "precision": 0.6154,
+        "recall": 0.4444,
+        "f1": 0.5161
+      },
+      {
+        "type": "select",
+        "baseline_count": 4,
+        "experiment_count": 3,
+        "matched": 3,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571
+      }
+    ],
+    "f1_pass": true,
+    "recall_pass": true,
+    "precision_pass": true
+  },
+  "qualitative": null,
+  "cumulative": {
+    "sessions_completed": 1,
+    "cumulative_f1": 0.3780487804878049,
+    "cumulative_recall": 0.3163265306122449,
+    "cumulative_precision": 0.4696969696969697,
+    "cumulative_matched": 62,
+    "cumulative_baseline": 196,
+    "cumulative_experiment": 132,
+    "f1_trend": "stable",
+    "f1_history": [
+      0.3780487804878049
+    ]
+  },
+  "break_decision": {
+    "should_break": false,
+    "reason": "too_early",
+    "explanation": "Only 1 sessions completed, minimum is 2."
+  }
+}

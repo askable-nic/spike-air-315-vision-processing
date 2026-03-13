@@ -1,0 +1,199 @@
+{
+  "session_id": "travel_expert_william",
+  "status": "success",
+  "metrics": {
+    "session_id": "travel_expert_william",
+    "baseline_count": 101,
+    "experiment_count": 65,
+    "matched_count": 36,
+    "precision": 0.5538461538461539,
+    "recall": 0.3564356435643564,
+    "f1": 0.4337349397590361,
+    "mean_description_similarity": 0.6530092396333562,
+    "mean_start_error_ms": 1795.800000000003,
+    "mean_end_error_ms": 1592.744444444444,
+    "per_type": [
+      {
+        "type": "change_ui_state",
+        "baseline_count": 26,
+        "experiment_count": 12,
+        "matched": 7,
+        "precision": 0.5833,
+        "recall": 0.2692,
+        "f1": 0.3684
+      },
+      {
+        "type": "click",
+        "baseline_count": 12,
+        "experiment_count": 7,
+        "matched": 5,
+        "precision": 0.7143,
+        "recall": 0.4167,
+        "f1": 0.5263
+      },
+      {
+        "type": "drag",
+        "baseline_count": 3,
+        "experiment_count": 3,
+        "matched": 3,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "type": "dwell",
+        "baseline_count": 0,
+        "experiment_count": 12,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hover",
+        "baseline_count": 29,
+        "experiment_count": 12,
+        "matched": 8,
+        "precision": 0.6667,
+        "recall": 0.2759,
+        "f1": 0.3902
+      },
+      {
+        "type": "input_text",
+        "baseline_count": 2,
+        "experiment_count": 2,
+        "matched": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "type": "navigate",
+        "baseline_count": 7,
+        "experiment_count": 4,
+        "matched": 4,
+        "precision": 1.0,
+        "recall": 0.5714,
+        "f1": 0.7273
+      },
+      {
+        "type": "scroll",
+        "baseline_count": 18,
+        "experiment_count": 11,
+        "matched": 5,
+        "precision": 0.4545,
+        "recall": 0.2778,
+        "f1": 0.3448
+      },
+      {
+        "type": "select",
+        "baseline_count": 4,
+        "experiment_count": 2,
+        "matched": 2,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667
+      }
+    ],
+    "f1_pass": true,
+    "recall_pass": true,
+    "precision_pass": true
+  },
+  "qualitative": {
+    "overall_severity": "systematic",
+    "summary": "The experiment consistently under-extracts hover, scroll, and change_ui_state events (all at ~0.27 recall) while hallucinating 12 dwell events not present in the baseline schema. Several important interaction clusters are entirely missing, including early tab-switch actions, the 'Breakfast included' filter workflow, and the hotel details navigation click.",
+    "issues": [
+      {
+        "category": "hallucinated_events",
+        "severity": "systematic",
+        "description": "12 dwell events generated with zero baseline matches. The baseline annotation schema contains no dwell events; this event type appears to be systematically fabricated by the experiment model to fill passive viewing gaps.",
+        "affected_events": [1, 3, 8, 16, 20, 25, 31, 36, 41, 46, 51, 56],
+        "examples": [
+          "experiment[1]: dwell 30139-32142ms 'user waiting on session page' — no baseline counterpart",
+          "experiment[3]: dwell 34158-52410ms 'user dwelling reading task instructions' — no baseline counterpart",
+          "experiment[8]: dwell 81184-104458ms 'user dwells on Google homepage' — baseline has hover+clicks for tab-switching in this window"
+        ]
+      },
+      {
+        "category": "missing_events",
+        "severity": "critical",
+        "description": "Early tab-switch interaction cluster (baseline[5-8]: hover + 2 clicks + navigate at ~82-87s) entirely absent from experiment. User explicitly switches to Askable Sessions tab and back to Google tab — key navigation behaviour.",
+        "affected_events": [5, 6, 7, 8],
+        "examples": [
+          "baseline[6]: click at 84484ms 'user clicks Askable Sessions tab' — missing from experiment",
+          "baseline[7]: navigate at 84584ms 'browser switches to Askable Sessions tab' — missing",
+          "baseline[8]: click at 86684ms 'user clicks back to Google tab' — missing"
+        ]
+      },
+      {
+        "category": "missing_events",
+        "severity": "critical",
+        "description": "Breakfast filter interaction cluster (baseline[40-45, 59-61]) entirely absent from experiment. User hovers, clicks the 'Breakfast included' filter, expands property class filters, and then reapplies the breakfast filter — a meaningful UX interaction sequence.",
+        "affected_events": [40, 41, 42, 43, 44, 45, 59, 60, 61],
+        "examples": [
+          "baseline[41]: click at 218538ms 'User selects Breakfast included filter' — missing from experiment",
+          "baseline[44]: click at 221038ms 'User clicks See more to expand property class filters' — missing",
+          "baseline[60]: select at 259314ms 'User selects Breakfast included filter again' — missing"
+        ]
+      },
+      {
+        "category": "missing_events",
+        "severity": "critical",
+        "description": "Hotel details navigation (baseline[51-52]) missing: user clicks 'The Zetter Clerkenwell' card and navigates to the hotel details page, a key UX decision point.",
+        "affected_events": [51, 52],
+        "examples": [
+          "baseline[51]: click at 247988ms 'User clicks on The Zetter Clerkenwell to view hotel details'",
+          "baseline[52]: navigate at 247988ms 'Page navigates to hotel details page for The Zetter Clerkenwell'"
+        ]
+      },
+      {
+        "category": "missing_events",
+        "severity": "systematic",
+        "description": "Hover events massively under-extracted: 29 baseline hover events, only 8 matched (recall 0.28). The experiment captures high-level interactions but misses most cursor hover movements during browsing.",
+        "affected_events": [15, 18, 21, 26, 29, 37, 38, 40, 43, 47, 48, 57, 59, 64, 72, 73, 80, 83, 85, 86, 88, 89, 90, 92, 94, 96, 98],
+        "examples": [
+          "baseline[15]: hover at 118911ms 'William hovers over Expedia result' — missing",
+          "baseline[18]: hover at 123111ms 'William hovers over Packages tab' — missing",
+          "baseline[37]: hover at 203438ms 'User hovers over The Zetter Clerkenwell result' — missing"
+        ]
+      },
+      {
+        "category": "missing_events",
+        "severity": "systematic",
+        "description": "change_ui_state events under-extracted: 26 baseline events, only 7 matched (recall 0.27). Dropdown appearances, autocomplete suggestions, and result-refresh states after filter actions are mostly missing.",
+        "affected_events": [10, 12, 20, 23, 25, 28, 31, 33, 42, 45, 53, 55, 61, 67, 68, 70, 71, 76, 77, 78, 79],
+        "examples": [
+          "baseline[10]: change_ui_state at 105384ms 'search dropdown appears on click' — missing",
+          "baseline[12]: change_ui_state at 118011ms 'autocomplete suggestions appear' — missing",
+          "baseline[20]: change_ui_state at 125011ms 'search widget updates for Packages tab' — missing"
+        ]
+      },
+      {
+        "category": "missing_events",
+        "severity": "systematic",
+        "description": "Scroll events under-extracted: 18 baseline events, only 5 matched (recall 0.28). Many scroll actions during the hotel browsing phase are missing or merged into fewer events.",
+        "affected_events": [36, 39, 46, 49, 56, 58, 62, 63, 65, 74, 81, 82, 84, 87, 91, 93, 95, 97],
+        "examples": [
+          "baseline[39]: scroll at 208938ms 'User scrolls down left-hand sidebar to view filter options' — missing",
+          "baseline[46]: scroll at 221438ms 'User scrolls through expanded filter list' — missing",
+          "baseline[82]: scroll at 315564ms 'User scrolls back up' — missing"
+        ]
+      },
+      {
+        "category": "timing_error",
+        "severity": "acceptable",
+        "description": "Mean start error of 1796ms across matched events indicates moderate timing offsets. A few events show larger offsets (3-5s) but most matched events are within acceptable range.",
+        "affected_events": [0, 4, 5, 11, 13],
+        "examples": [
+          "experiment[4] change_ui_state at 65158ms vs baseline[1] at 68684ms — 3.5s offset",
+          "experiment[0] change_ui_state at 30139ms vs baseline[0] at 31184ms — 1s offset"
+        ]
+      }
+    ],
+    "noise_fraction": 0.03,
+    "acceptable_fraction": 0.10,
+    "systematic_fraction": 0.72,
+    "critical_fraction": 0.15
+  },
+  "error": null
+}

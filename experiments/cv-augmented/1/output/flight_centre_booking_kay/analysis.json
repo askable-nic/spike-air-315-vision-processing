@@ -1,0 +1,2760 @@
+{
+  "recording_id": "flight_centre_booking_kay",
+  "segments": [
+    {
+      "segment_index": 0,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 4,
+          "type": "dwell",
+          "description": "User dwells on the instruction screen: 'Please click the screen sharing button that appears, and choose the option to share this window.'",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c043bd82edc4df44a0e3c",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "A dark screen with white text providing instructions for screen sharing."
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 4,
+          "type": "hesitate",
+          "description": "User pauses with the cursor visible in the bottom right area, likely waiting for a browser screen-sharing prompt to appear or reading the instructions.",
+          "confidence": 0.7,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c043bd82edc4df44a0e3c",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 1200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 1700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 2200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 2200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 2700.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 8677,
+      "output_tokens": 223
+    },
+    {
+      "segment_index": 1,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 26,
+          "type": "dwell",
+          "description": "User reads the task instructions presented on the screen regarding booking a return domestic flight on the Flight Centre website.",
+          "confidence": 0.9,
+          "interaction_target": "Task instructions",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c043bd82edc4df44a0e3c",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen displays a series of text-based instructions for a usability testing task."
+        },
+        {
+          "frame_index_start": 3,
+          "frame_index_end": 24,
+          "type": "change_ui_state",
+          "description": "The instruction text on the screen updates dynamically, progressively revealing the details of the user's task.",
+          "confidence": 0.95,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Text on the dark background changes as the automated session guide presents the scenario."
+        },
+        {
+          "frame_index_start": 25,
+          "frame_index_end": 25,
+          "type": "change_ui_state",
+          "description": "A 'Pop-up blocked' notification appears in the browser's address bar as the system attempts to open the target website.",
+          "confidence": 0.85,
+          "interaction_target": "Browser address bar",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "A small icon indicating a blocked pop-up is visible at the right end of the URL input field."
+        },
+        {
+          "frame_index_start": 26,
+          "frame_index_end": 27,
+          "type": "navigate",
+          "description": "The browser navigates from the Askable session instructions to the Flight Centre homepage.",
+          "confidence": 1.0,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Travel Deals",
+          "page_location": "flightcentre.com.au",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen transitions from the dark instruction page to the Flight Centre website."
+        },
+        {
+          "frame_index_start": 28,
+          "frame_index_end": 28,
+          "type": "change_ui_state",
+          "description": "The Flight Centre website begins to load, displaying skeleton UI elements and promotional banners.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Travel Deals",
+          "page_location": "flightcentre.com.au",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The Flight Centre homepage is visible with some content still in a loading state."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 2200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 2200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 4200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 6200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 8200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 10200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 12200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 14200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 16200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 18200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 20200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 22200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 24200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 26200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 28200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 30200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 17,
+          "timestamp_ms": 32200.000000000004,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 18,
+          "timestamp_ms": 34200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 19,
+          "timestamp_ms": 36200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 20,
+          "timestamp_ms": 38200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 21,
+          "timestamp_ms": 40200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 22,
+          "timestamp_ms": 42200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 23,
+          "timestamp_ms": 44200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 24,
+          "timestamp_ms": 46200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 25,
+          "timestamp_ms": 48200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 26,
+          "timestamp_ms": 50200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 27,
+          "timestamp_ms": 52233.333333333336,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 28,
+          "timestamp_ms": 54233.333333333336,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 29,
+          "timestamp_ms": 55233.333333333336,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 30,
+          "timestamp_ms": 57233.333333333336,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 35564,
+      "output_tokens": 671
+    },
+    {
+      "segment_index": 2,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 6,
+          "type": "dwell",
+          "description": "User examines the Flight Centre homepage as banners rotate from 'UK & Europe Sale' to 'Qantas Flights Sale'.",
+          "confidence": 0.8,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Travel Deals",
+          "page_location": "flightcentre.com.au",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 7,
+          "frame_index_end": 7,
+          "type": "change_ui_state",
+          "description": "The 'Travel dates' calendar modal opens, displaying February and March 2026.",
+          "confidence": 0.95,
+          "interaction_target": "Travel dates modal",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Travel Deals",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 8,
+          "frame_index_end": 8,
+          "type": "change_ui_state",
+          "description": "A promotional pop-up for 'World360' rewards appears, obstructing the calendar view.",
+          "confidence": 0.95,
+          "interaction_target": "World360 promotional overlay",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 9,
+          "frame_index_end": 10,
+          "type": "click",
+          "description": "User hovers over and clicks the 'X' button to dismiss the promotional pop-up.",
+          "confidence": 0.9,
+          "interaction_target": "Close button",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The cursor moves to the top right of the red ad and the ad disappears in the next frame."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 51200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 53233.333333333336,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 55233.333333333336,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 57233.333333333336,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 59233.333333333336,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 61233.333333333336,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 63233.333333333336,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 65233.333333333336,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 67266.66666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 69266.66666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 71266.66666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 73200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 75200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 15448,
+      "output_tokens": 290
+    },
+    {
+      "segment_index": 3,
+      "events": [
+        {
+          "frame_index_start": 7,
+          "frame_index_end": 7,
+          "type": "select",
+          "description": "User selects February 18th as the departure date in the travel dates calendar modal",
+          "confidence": 0.9,
+          "interaction_target": "February 18th",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Travel Deals - Cheap Flights, Holidays & Cruises",
+          "page_location": "flightcentre.com.au",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 9,
+          "frame_index_end": 9,
+          "type": "select",
+          "description": "User selects February 21st as the return date in the travel dates calendar modal",
+          "confidence": 0.9,
+          "interaction_target": "February 21st",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Travel Deals - Cheap Flights, Holidays & Cruises",
+          "page_location": "flightcentre.com.au",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 11,
+          "frame_index_end": 11,
+          "type": "click",
+          "description": "User clicks the 'Done' button to confirm the selected travel dates",
+          "confidence": 1.0,
+          "interaction_target": "Done",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Travel Deals - Cheap Flights, Holidays & Cruises",
+          "page_location": "flightcentre.com.au",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 15,
+          "frame_index_end": 15,
+          "type": "click",
+          "description": "User clicks the 'Where to?' destination input field to open the search dropdown",
+          "confidence": 1.0,
+          "interaction_target": "Where to?",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Travel Deals - Cheap Flights, Holidays & Cruises",
+          "page_location": "flightcentre.com.au",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 16,
+          "frame_index_end": 16,
+          "type": "select",
+          "description": "User selects 'Melbourne, Australia' from the destination suggestions dropdown",
+          "confidence": 0.9,
+          "interaction_target": "Melbourne, Australia",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Travel Deals - Cheap Flights, Holidays & Cruises",
+          "page_location": "flightcentre.com.au",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 17,
+          "frame_index_end": 25,
+          "type": "dwell",
+          "description": "User pauses on the search form, likely reviewing the selected flight details before proceeding",
+          "confidence": 0.8,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Travel Deals - Cheap Flights, Holidays & Cruises",
+          "page_location": "flightcentre.com.au",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 26,
+          "frame_index_end": 26,
+          "type": "click",
+          "description": "User clicks the 'Search flights' button",
+          "confidence": 1.0,
+          "interaction_target": "Search flights",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Travel Deals - Cheap Flights, Holidays & Cruises",
+          "page_location": "flightcentre.com.au",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 27,
+          "frame_index_end": 27,
+          "type": "navigate",
+          "description": "Page navigates to the flight search results page",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen goes white as the new page begins to load"
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 71200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 73200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 73200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 75200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 77200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 79200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 81200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 83200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 85200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 87200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 89200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 91200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 93200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 95200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 97200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 99200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 101200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 17,
+          "timestamp_ms": 103200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 18,
+          "timestamp_ms": 105200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 19,
+          "timestamp_ms": 107200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 20,
+          "timestamp_ms": 109200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 21,
+          "timestamp_ms": 111200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 22,
+          "timestamp_ms": 113200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 23,
+          "timestamp_ms": 115200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 24,
+          "timestamp_ms": 117200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 25,
+          "timestamp_ms": 119200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 26,
+          "timestamp_ms": 121200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 27,
+          "timestamp_ms": 123200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 28,
+          "timestamp_ms": 123200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 29,
+          "timestamp_ms": 125200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 34469,
+      "output_tokens": 924
+    },
+    {
+      "segment_index": 4,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 13,
+          "type": "change_ui_state",
+          "description": "The flight search results page loads, transitioning from a blank screen to displaying search criteria (SYD to MEL) and a loading modal with a spinner and airline logos.",
+          "confidence": 0.95,
+          "interaction_target": "Search Results Page",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The UI populates with flight search details and a 'stuffed with deals' loading message while the user waits."
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 13,
+          "type": "dwell",
+          "description": "User waits for the flight search results to load, keeping the cursor relatively still on the right side of the screen.",
+          "confidence": 0.85,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 122700.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 123200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 123200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 123700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 124200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 124700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 125200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 125700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 126200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 126700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 127200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 127700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 128233.33333333331,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 128733.33333333331,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 129199.99999999999,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 129699.99999999999,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 18788,
+      "output_tokens": 221
+    },
+    {
+      "segment_index": 5,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 7,
+          "type": "change_ui_state",
+          "description": "The flight search results page is in a loading state, displaying a progress spinner and rotating airline logos including Air Canada, Air New Zealand, ANA, and Etihad Airways.",
+          "confidence": 0.95,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "A red and white loading screen with the message 'Our overhead compartments are stuffed with deals!' and a blue circular progress indicator."
+        },
+        {
+          "frame_index_start": 8,
+          "frame_index_end": 8,
+          "type": "change_ui_state",
+          "description": "The loading screen clears and the 'Select Departing Flight' results page becomes visible, showing flight options from Sydney to Melbourne.",
+          "confidence": 1.0,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The flight search results interface with filters on the left and flight listings for Qantas and Virgin Australia."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 125200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 127200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 129199.99999999999,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 131200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 133200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 135200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 137200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 139200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 141200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 142200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 144200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 13224,
+      "output_tokens": 314
+    },
+    {
+      "segment_index": 6,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 13,
+          "type": "dwell",
+          "description": "User spends time reviewing the available flight options from Sydney to Melbourne.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Flight search results page showing multiple flight options with prices."
+        },
+        {
+          "frame_index_start": 14,
+          "frame_index_end": 14,
+          "type": "click",
+          "description": "User clicks on the flight price button for the 6:00am Qantas flight to view different fare types.",
+          "confidence": 1.0,
+          "interaction_target": "From $307 button",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 14,
+          "frame_index_end": 14,
+          "type": "change_ui_state",
+          "description": "The 'Select Departing Fare Type' section expands, showing Red Edeal and Economy Flex options for the selected flight.",
+          "confidence": 1.0,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 140200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 142200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 142200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 144200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 146200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 148200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 150200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 152200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 154200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 156200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 158200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 160200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 162200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 164200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 166200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 166200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 168200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 19939,
+      "output_tokens": 276
+    },
+    {
+      "segment_index": 7,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 5,
+          "type": "dwell",
+          "description": "User examines the departing fare types (Red Edeal vs Economy Flex) in the selection modal.",
+          "confidence": 0.9,
+          "interaction_target": "Fare selection modal",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 6,
+          "type": "click",
+          "description": "User clicks the 'SELECT' button for the 'Red Edeal' fare.",
+          "confidence": 1.0,
+          "interaction_target": "SELECT button (Red Edeal)",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 9,
+          "frame_index_end": 11,
+          "type": "change_ui_state",
+          "description": "A loading overlay appears with the message 'Good choice! It's time to choose your flight for your return journey...'.",
+          "confidence": 1.0,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Loading overlay visible over the search results."
+        },
+        {
+          "frame_index_start": 11,
+          "frame_index_end": 12,
+          "type": "navigate",
+          "description": "The page transitions to the return flight selection screen.",
+          "confidence": 1.0,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results#inbound",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 14,
+          "frame_index_end": 16,
+          "type": "scroll",
+          "description": "User scrolls down the page to view more return flight options.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results#inbound",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 164200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 166200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 166200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 168200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 170200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 172200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 174200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 176200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 178200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 180200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 182200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 184200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 186200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 188200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 190200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 192200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 194200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 17,
+          "timestamp_ms": 195200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 18,
+          "timestamp_ms": 197200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 22177,
+      "output_tokens": 398
+    },
+    {
+      "segment_index": 8,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 7,
+          "type": "dwell",
+          "description": "User examines the flight search results for Melbourne to Sydney.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results#inbound",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user is viewing a list of flight results with various airlines and prices."
+        },
+        {
+          "frame_index_start": 7,
+          "frame_index_end": 8,
+          "type": "click",
+          "description": "User clicks on the price button for the first flight result to view fare options.",
+          "confidence": 0.95,
+          "interaction_target": "From $157 button",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 8,
+          "frame_index_end": 8,
+          "type": "change_ui_state",
+          "description": "The 'Select Returning Fare Type' modal opens, showing Lite, Choice, and Flex fare options.",
+          "confidence": 1.0,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "A modal overlay appears over the flight results."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 193200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 195200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 195200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 197200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 199200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 201200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 203200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 205200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 207200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 207200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 209200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 13224,
+      "output_tokens": 227
+    },
+    {
+      "segment_index": 9,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 6,
+          "type": "dwell",
+          "description": "User examines the returning flight fare options (Lite, Choice, Flex) for the Melbourne to Sydney flight.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results#inbound",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The 'Select Returning Fare Type' section is visible with Lite, Choice, and Flex options for a Virgin Australia flight."
+        },
+        {
+          "frame_index_start": 7,
+          "frame_index_end": 8,
+          "type": "click",
+          "description": "User clicks the 'SELECT' button for the 'Lite' fare option.",
+          "confidence": 0.95,
+          "interaction_target": "SELECT button (Lite fare)",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The cursor is over the Lite fare SELECT button, which is highlighted in a darker blue indicating a click."
+        },
+        {
+          "frame_index_start": 11,
+          "frame_index_end": 12,
+          "type": "click",
+          "description": "User clicks the 'SELECT' button for the 'Choice' fare option.",
+          "confidence": 0.95,
+          "interaction_target": "SELECT button (Choice fare)",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The cursor is over the Choice fare SELECT button, which is highlighted in a darker blue indicating a click."
+        },
+        {
+          "frame_index_start": 14,
+          "frame_index_end": 15,
+          "type": "change_ui_state",
+          "description": "A loading screen with the message 'All Set! Now let's review your flight selections...' appears.",
+          "confidence": 1.0,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results#baggage",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "A loading overlay with a spinner is displayed over the fare selection screen."
+        },
+        {
+          "frame_index_start": 16,
+          "frame_index_end": 16,
+          "type": "navigate",
+          "description": "The page content updates to the 'Review trip' screen.",
+          "confidence": 1.0,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results#baggage",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The 'Review trip' page is now visible, showing the selected flight details and a price summary."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 205200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 207200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 207200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 209200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 211200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 213200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 215200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 217200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 219200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 221200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 223200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 225200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 227200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 229200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 231200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 233200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 235200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 17,
+          "timestamp_ms": 235200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 18,
+          "timestamp_ms": 237200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 22177,
+      "output_tokens": 498
+    },
+    {
+      "segment_index": 10,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 15,
+          "type": "dwell",
+          "description": "User reviews the trip details and price summary on the 'Review trip' page.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results#baggage",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user is looking at the flight details and the total price summary on the right side of the screen."
+        },
+        {
+          "frame_index_start": 16,
+          "frame_index_end": 21,
+          "type": "scroll",
+          "description": "User scrolls down the page to view the 'Add-ons' and 'Seats' sections.",
+          "confidence": 1.0,
+          "interaction_target": "page body",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 22,
+          "frame_index_end": 22,
+          "type": "hover",
+          "description": "User moves the cursor over the 'SELECT SEATS' button.",
+          "confidence": 0.9,
+          "interaction_target": "SELECT SEATS",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 23,
+          "frame_index_end": 23,
+          "type": "click",
+          "description": "User clicks the 'SELECT SEATS' button to open the seat selection interface.",
+          "confidence": 1.0,
+          "interaction_target": "SELECT SEATS",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 23,
+          "frame_index_end": 23,
+          "type": "change_ui_state",
+          "description": "The 'Select Seats' modal overlay appears with a 'Loading seat selector' message and spinner.",
+          "confidence": 1.0,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 233200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 235200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 235200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 237200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 239200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 241200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 243200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 245200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 247200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 249200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 251200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 253200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 255200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 257200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 259200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 261200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 263200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 17,
+          "timestamp_ms": 265200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 18,
+          "timestamp_ms": 267200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 19,
+          "timestamp_ms": 269200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 20,
+          "timestamp_ms": 271200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 21,
+          "timestamp_ms": 273200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 22,
+          "timestamp_ms": 275200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 23,
+          "timestamp_ms": 277200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 24,
+          "timestamp_ms": 277200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 25,
+          "timestamp_ms": 279200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 30011,
+      "output_tokens": 325
+    },
+    {
+      "segment_index": 11,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 2,
+          "type": "change_ui_state",
+          "description": "The 'Select Seats' modal is open and shows a loading spinner for the seat selector.",
+          "confidence": 0.95,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results#baggage",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Loading spinner visible in the seat selection modal."
+        },
+        {
+          "frame_index_start": 3,
+          "frame_index_end": 3,
+          "type": "change_ui_state",
+          "description": "The seat map for Flight 1 (SYD to MEL) finishes loading.",
+          "confidence": 0.9,
+          "interaction_target": "Seat Map",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Seat map for the first flight leg is now visible."
+        },
+        {
+          "frame_index_start": 3,
+          "frame_index_end": 16,
+          "type": "dwell",
+          "description": "User examines the seat map for the first flight leg without making a selection.",
+          "confidence": 0.8,
+          "interaction_target": "Seat Map",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "User moves cursor over the seat map while reviewing options."
+        },
+        {
+          "frame_index_start": 17,
+          "frame_index_end": 17,
+          "type": "click",
+          "description": "User clicks the 'NEXT FLIGHT' button to move to the seat selection for the return leg.",
+          "confidence": 0.95,
+          "interaction_target": "NEXT FLIGHT",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Cursor clicks the blue 'NEXT FLIGHT' button at the bottom right of the modal."
+        },
+        {
+          "frame_index_start": 18,
+          "frame_index_end": 19,
+          "type": "change_ui_state",
+          "description": "Loading spinner appears while the seat map for the second flight leg loads.",
+          "confidence": 0.95,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Loading seat selector message and spinner for Flight 2."
+        },
+        {
+          "frame_index_start": 20,
+          "frame_index_end": 20,
+          "type": "change_ui_state",
+          "description": "The seat map for Flight 2 (MEL to SYD) finishes loading.",
+          "confidence": 0.9,
+          "interaction_target": "Seat Map",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Seat map for the second flight leg is now visible."
+        },
+        {
+          "frame_index_start": 23,
+          "frame_index_end": 23,
+          "type": "click",
+          "description": "User clicks on seat '5E' in the seat map.",
+          "confidence": 0.9,
+          "interaction_target": "Seat 5E",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "User selects a specific seat, triggering a confirmation popover."
+        },
+        {
+          "frame_index_start": 24,
+          "frame_index_end": 24,
+          "type": "click",
+          "description": "User clicks the 'CONFIRM SEAT' button in the selection popover.",
+          "confidence": 0.95,
+          "interaction_target": "CONFIRM SEAT",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Cursor clicks the blue 'CONFIRM SEAT' button."
+        },
+        {
+          "frame_index_start": 25,
+          "frame_index_end": 25,
+          "type": "click",
+          "description": "User clicks the 'DONE' button to finalize seat selection and close the modal.",
+          "confidence": 0.95,
+          "interaction_target": "DONE",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Cursor clicks the 'DONE' button at the bottom right."
+        },
+        {
+          "frame_index_start": 27,
+          "frame_index_end": 27,
+          "type": "change_ui_state",
+          "description": "The seat selection modal closes and the main page updates to show the selected seat 'Preferred 5E' and a total of $28.00.",
+          "confidence": 0.95,
+          "interaction_target": "Seats section",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The main baggage page now displays the confirmed seat selection details."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 275200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 277200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 277200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 279200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 281200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 283200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 285200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 287200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 289200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 291200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 293200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 295200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 297200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 299200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 301200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 303200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 305200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 17,
+          "timestamp_ms": 307200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 18,
+          "timestamp_ms": 309200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 19,
+          "timestamp_ms": 311200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 20,
+          "timestamp_ms": 313200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 21,
+          "timestamp_ms": 315200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 22,
+          "timestamp_ms": 317200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 23,
+          "timestamp_ms": 319200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 24,
+          "timestamp_ms": 321200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 25,
+          "timestamp_ms": 323200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 26,
+          "timestamp_ms": 325200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 27,
+          "timestamp_ms": 327200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 28,
+          "timestamp_ms": 327200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 29,
+          "timestamp_ms": 329200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 34487,
+      "output_tokens": 1092
+    },
+    {
+      "segment_index": 12,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 7,
+          "type": "dwell",
+          "description": "User dwells on the page, likely reviewing the selected seats and baggage options.",
+          "confidence": 0.8,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results#baggage",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen shows flight details, baggage guarantee options, and seat selection summary."
+        },
+        {
+          "frame_index_start": 7,
+          "frame_index_end": 9,
+          "type": "scroll",
+          "description": "User scrolls down the page to reveal the 'Online Captain's Pack' section and the 'CONTINUE' button.",
+          "confidence": 1.0,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results#baggage",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The view shifts from the seat selection area down to the Online Captain's Pack and the green Continue button."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 325200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 327200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 327200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 329200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 331200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 333200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 335200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 337200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 339200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 341200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 342200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 344200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 14345,
+      "output_tokens": 213
+    },
+    {
+      "segment_index": 13,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 4,
+          "type": "dwell",
+          "description": "User is reviewing the flight assistance and protection options on the baggage page.",
+          "confidence": 0.8,
+          "interaction_target": "Baggage and assistance options",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results#baggage",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen shows various add-on options like priority assistance and price drop protection."
+        },
+        {
+          "frame_index_start": 4,
+          "frame_index_end": 4,
+          "type": "hover",
+          "description": "User hovers the cursor over the 'CONTINUE' button at the bottom of the page.",
+          "confidence": 0.9,
+          "interaction_target": "CONTINUE button",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results#baggage",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 340200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 342200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 342200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 344200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 346200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 347200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 349200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 8750,
+      "output_tokens": 200
+    },
+    {
+      "segment_index": 14,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 5,
+          "type": "click",
+          "description": "User clicks the 'CONTINUE' button on the baggage selection page to proceed to traveller details.",
+          "confidence": 0.9,
+          "interaction_target": "CONTINUE",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/results#baggage",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The cursor is positioned over the green 'CONTINUE' button at the bottom of the page."
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 7,
+          "type": "change_ui_state",
+          "description": "A loading overlay appears with the message 'Thanks for confirming your flights' and 'Next up, your traveller details...'.",
+          "confidence": 1.0,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "A semi-transparent overlay with a loading spinner and confirmation text is visible over the previous page content."
+        },
+        {
+          "frame_index_start": 8,
+          "frame_index_end": 18,
+          "type": "navigate",
+          "description": "The browser navigates from the results page to the passenger details page.",
+          "confidence": 1.0,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/passenger",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The URL changes in the address bar, and the page content transitions from the loading state to the 'Travellers' page layout."
+        },
+        {
+          "frame_index_start": 19,
+          "frame_index_end": 33,
+          "type": "dwell",
+          "description": "User waits for the 'Travellers' page to fully load and begins to examine the flight summary and sign-in options.",
+          "confidence": 0.8,
+          "interaction_target": "Travellers page",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/passenger",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The 'Travellers' page is visible, showing a flight summary on the right and a sign-in prompt. The main form content is still rendering."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 346166.6666666667,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 346700.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 347200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 347733.3333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 348266.6666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 348800.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 349333.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 349866.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 350400.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 350933.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 351466.6666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 352000.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 352533.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 353066.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 353600.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 354133.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 354666.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 17,
+          "timestamp_ms": 355200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 18,
+          "timestamp_ms": 355733.3333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 19,
+          "timestamp_ms": 356266.6666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 20,
+          "timestamp_ms": 356800.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 21,
+          "timestamp_ms": 357333.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 22,
+          "timestamp_ms": 357866.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 23,
+          "timestamp_ms": 358400.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 24,
+          "timestamp_ms": 358933.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 25,
+          "timestamp_ms": 359466.6666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 26,
+          "timestamp_ms": 360000.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 27,
+          "timestamp_ms": 360533.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 28,
+          "timestamp_ms": 361066.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 29,
+          "timestamp_ms": 361600.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 30,
+          "timestamp_ms": 362133.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 31,
+          "timestamp_ms": 362666.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 32,
+          "timestamp_ms": 363200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 33,
+          "timestamp_ms": 363733.3333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 34,
+          "timestamp_ms": 364200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 35,
+          "timestamp_ms": 364733.3333333334,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 41183,
+      "output_tokens": 577
+    },
+    {
+      "segment_index": 15,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 3,
+          "type": "change_ui_state",
+          "description": "The UI transitions from a summary view to the passenger details input form.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/passenger",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen updates to show form fields for passenger name and date of birth."
+        },
+        {
+          "frame_index_start": 3,
+          "frame_index_end": 6,
+          "type": "dwell",
+          "description": "User pauses to read the 'Heads up!' warning and examine the passenger details form fields.",
+          "confidence": 0.8,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/passenger",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The passenger details form is visible with a warning message at the top."
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 7,
+          "type": "scroll",
+          "description": "User scrolls down the page to reveal additional form sections for rewards and contact information.",
+          "confidence": 0.95,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/passenger",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The view shifts downward, bringing the phone number and email fields into view."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 362200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 364200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 364200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 366200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 368200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 370200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 372200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 374200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 374200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 376200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 12105,
+      "output_tokens": 401
+    },
+    {
+      "segment_index": 16,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 5,
+          "type": "dwell",
+          "description": "User is examining the passenger details form and the price summary on the right sidebar.",
+          "confidence": 0.8,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/passenger",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The passenger details form is visible, including fields for name, date of birth, and contact information, alongside a price summary."
+        },
+        {
+          "frame_index_start": 5,
+          "frame_index_end": 6,
+          "type": "scroll",
+          "description": "User scrolls down the page to view the bottom of the form and the 'CONTINUE' button.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/passenger",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The view shifts downwards, revealing the 'CONTINUE' button and the email subscription checkbox at the bottom of the form."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 372200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 374200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 374200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 376200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 378200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 380200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 382200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 383200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 385200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 10986,
+      "output_tokens": 215
+    },
+    {
+      "segment_index": 17,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 5,
+          "type": "dwell",
+          "description": "User pauses on the passenger details page, possibly reviewing the summary or the 'Why book online with us?' section.",
+          "confidence": 0.8,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/passenger",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The passenger details form is visible with a 'CONTINUE' button at the bottom."
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 6,
+          "type": "hover",
+          "description": "User moves the cursor to the browser tab bar, hovering over the close button for the 'Flight Centre Australia' tab.",
+          "confidence": 0.9,
+          "interaction_target": "Close tab button",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Flight Centre Australia",
+          "page_location": "secure.flightcentre.com.au/AAXy9ikH/passenger",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The cursor is positioned over the 'x' on the active browser tab."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 381200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 383200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 383200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 385200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 387200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 389200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 391200.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 8730,
+      "output_tokens": 217
+    }
+  ],
+  "total_input_tokens": 364284,
+  "total_output_tokens": 7282,
+  "processing_time_ms": 346971.1276250018
+}

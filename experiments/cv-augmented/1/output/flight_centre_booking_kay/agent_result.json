@@ -1,0 +1,164 @@
+{
+  "session_id": "flight_centre_booking_kay",
+  "status": "success",
+  "metrics": {
+    "session_id": "flight_centre_booking_kay",
+    "baseline_count": 71,
+    "experiment_count": 69,
+    "matched_count": 25,
+    "precision": 0.36231884057971014,
+    "recall": 0.352112676056338,
+    "f1": 0.3571428571428571,
+    "mean_description_similarity": 0.6791891098028661,
+    "mean_start_error_ms": 1360.039039999987,
+    "mean_end_error_ms": 1015.3723733333242,
+    "per_type": [
+      {
+        "type": "change_ui_state",
+        "baseline_count": 33,
+        "experiment_count": 20,
+        "matched": 10,
+        "precision": 0.5,
+        "recall": 0.303,
+        "f1": 0.3774
+      },
+      {
+        "type": "click",
+        "baseline_count": 15,
+        "experiment_count": 15,
+        "matched": 8,
+        "precision": 0.5333,
+        "recall": 0.5333,
+        "f1": 0.5333
+      },
+      {
+        "type": "dwell",
+        "baseline_count": 0,
+        "experiment_count": 17,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hesitate",
+        "baseline_count": 0,
+        "experiment_count": 1,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hover",
+        "baseline_count": 13,
+        "experiment_count": 3,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "navigate",
+        "baseline_count": 5,
+        "experiment_count": 5,
+        "matched": 4,
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1": 0.8
+      },
+      {
+        "type": "scroll",
+        "baseline_count": 3,
+        "experiment_count": 5,
+        "matched": 1,
+        "precision": 0.2,
+        "recall": 0.3333,
+        "f1": 0.25
+      },
+      {
+        "type": "select",
+        "baseline_count": 2,
+        "experiment_count": 3,
+        "matched": 2,
+        "precision": 0.6667,
+        "recall": 1.0,
+        "f1": 0.8
+      }
+    ],
+    "f1_pass": true,
+    "recall_pass": true,
+    "precision_pass": true
+  },
+  "qualitative": {
+    "overall_severity": "systematic",
+    "summary": "The dominant failure is a systematic hover-to-dwell substitution: the experiment generates 17 dwell events and only 3 hovers, while the baseline has 13 hovers and 0 dwells, yielding zero matches for both types. Additionally, the experiment misidentifies the seat selection workflow — it records a 'NEXT FLIGHT' skip and seat 5E on flight 2, while the baseline records seat 5C selected on flight 1, representing a critical content error in a key user action.",
+    "issues": [
+      {
+        "category": "type_mismatch",
+        "severity": "systematic",
+        "description": "The experiment consistently replaces hover events with dwell events throughout the session. Baseline has 13 hovers (0 matched) and 0 dwells; experiment has 3 hovers (0 matched) and 17 dwells (0 matched). Every hover interaction — over dates, buttons, fare options, seat map, Continue — is either dropped or recast as a dwell. This is the single largest driver of F1 loss.",
+        "affected_events": [10, 13, 15, 18, 21, 24, 38, 41, 47, 53, 54, 55, 60],
+        "examples": [
+          "Baseline [13]: hover over dates in February calendar (424787-430987ms) → Experiment: no hover, replaced by dwell [16] at 452548-468548ms",
+          "Baseline [24]: hover over 'Search flights' button (450787-469637ms) → Experiment: no hover, absorbed into dwell [16]",
+          "Baseline [38]: hover over Virgin Australia flight card (547515-554665ms) → Experiment: no hover, replaced by dwell [31] at 544548-554548ms"
+        ]
+      },
+      {
+        "category": "hallucinated_events",
+        "severity": "critical",
+        "description": "The experiment misidentifies the seat selection interaction. Baseline records seat 5C selected on flight 1 (SYD→MEL) at ~651653ms with a 'Preferred Seat' modal, CONFIRM SEAT, then DONE. Experiment instead records a 'NEXT FLIGHT' button click at 656548ms (skipping flight 1 seat selection), then seat 5E selected on flight 2 (MEL→SYD) — a different seat on a different leg. The 'NEXT FLIGHT' click in the experiment has no baseline equivalent.",
+        "affected_events": [53, 54, 55, 56, 57, 58, 59, 60, 61],
+        "examples": [
+          "Baseline [56]: click seat 5C at 651653ms on flight 1 → Experiment [47]: click 'NEXT FLIGHT' at 656548ms (skips flight 1)",
+          "Experiment [50]: click seat '5E' at 668548ms (attributed to flight 2) vs Baseline [58]: click CONFIRM SEAT at 669653ms (flight 1 workflow)"
+        ]
+      },
+      {
+        "category": "missing_events",
+        "severity": "acceptable",
+        "description": "Several baseline events are absent from the experiment: the 'CHANGE' button click to expand departing flight details on the review page (baseline [48-49] at ~611453ms), and multiple change_ui_state loading transitions during fare selection (baseline [33], [44], [45]). These are secondary review interactions that do not alter the primary task narrative.",
+        "affected_events": [33, 44, 45, 48, 49],
+        "examples": [
+          "Baseline [48]: click 'CHANGE' button for departing flight at 611453ms — not present in experiment",
+          "Baseline [44]: change_ui_state SELECT button loading spinner at 563465-578665ms — not captured by experiment"
+        ]
+      },
+      {
+        "category": "hallucinated_events",
+        "severity": "acceptable",
+        "description": "The experiment generates two extra events: (1) a select for 'February 21st' return date (experiment [12] at 436548ms) which has no baseline equivalent (baseline only records the outbound date selection), and (2) a second click for 'Choice' fare option (experiment [36] at 574548ms) not present in baseline. Both are plausible real interactions that the baseline annotator may have omitted.",
+        "affected_events": [12, 36],
+        "examples": [
+          "Experiment [12]: select February 21st return date — plausible real action not annotated in baseline",
+          "Experiment [36]: click SELECT for 'Choice' fare at 574548ms — baseline only records Lite fare click at [42]"
+        ]
+      },
+      {
+        "category": "hallucinated_events",
+        "severity": "noise",
+        "description": "The experiment adds pre-session events (dwell at 349548ms, hesitate at 350548ms) before the baseline recording starts at 351598ms, and an extra change_ui_state for a 'Pop-up blocked' browser notification at 397548ms. These are minor additions a human reviewer would ignore.",
+        "affected_events": [0, 1, 4],
+        "examples": [
+          "Experiment [0-1]: dwell/hesitate at 349548-351548ms — before baseline coverage begins",
+          "Experiment [4]: 'Pop-up blocked' notification at 397548ms — not in baseline, minor browser UI event"
+        ]
+      },
+      {
+        "category": "timing_error",
+        "severity": "noise",
+        "description": "Timing offsets for matched events are small. Mean start error is 1360ms and mean end error is 1015ms, both within the acceptable 1-3s range. No gross timing errors were observed for matched events.",
+        "affected_events": [],
+        "examples": [
+          "Matched events have average ~1.36s start offset, consistent with expected frame-level precision"
+        ]
+      }
+    ],
+    "noise_fraction": 0.15,
+    "acceptable_fraction": 0.25,
+    "systematic_fraction": 0.45,
+    "critical_fraction": 0.15
+  },
+  "error": null
+}

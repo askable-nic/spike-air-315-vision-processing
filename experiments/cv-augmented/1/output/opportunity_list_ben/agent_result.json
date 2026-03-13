@@ -1,0 +1,153 @@
+{
+  "session_id": "opportunity_list_ben",
+  "status": "success",
+  "metrics": {
+    "session_id": "opportunity_list_ben",
+    "baseline_count": 140,
+    "experiment_count": 119,
+    "matched_count": 46,
+    "precision": 0.3865546218487395,
+    "recall": 0.32857142857142857,
+    "f1": 0.3552123552123552,
+    "mean_description_similarity": 0.6006393828175477,
+    "mean_start_error_ms": 1267.650039337476,
+    "mean_end_error_ms": 1108.0744389234005,
+    "per_type": [
+      {
+        "type": "change_ui_state",
+        "baseline_count": 17,
+        "experiment_count": 20,
+        "matched": 4,
+        "precision": 0.2,
+        "recall": 0.2353,
+        "f1": 0.2162
+      },
+      {
+        "type": "click",
+        "baseline_count": 28,
+        "experiment_count": 3,
+        "matched": 3,
+        "precision": 1.0,
+        "recall": 0.1071,
+        "f1": 0.1935
+      },
+      {
+        "type": "dwell",
+        "baseline_count": 0,
+        "experiment_count": 25,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hover",
+        "baseline_count": 24,
+        "experiment_count": 12,
+        "matched": 4,
+        "precision": 0.3333,
+        "recall": 0.1667,
+        "f1": 0.2222
+      },
+      {
+        "type": "input_text",
+        "baseline_count": 14,
+        "experiment_count": 0,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "navigate",
+        "baseline_count": 31,
+        "experiment_count": 38,
+        "matched": 25,
+        "precision": 0.6579,
+        "recall": 0.8065,
+        "f1": 0.7246
+      },
+      {
+        "type": "scroll",
+        "baseline_count": 25,
+        "experiment_count": 19,
+        "matched": 9,
+        "precision": 0.4737,
+        "recall": 0.36,
+        "f1": 0.4091
+      },
+      {
+        "type": "select",
+        "baseline_count": 1,
+        "experiment_count": 2,
+        "matched": 1,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6667
+      }
+    ],
+    "f1_pass": true,
+    "recall_pass": true,
+    "precision_pass": true
+  },
+  "qualitative": {
+    "overall_severity": "systematic",
+    "summary": "The experiment pipeline completely fails to detect input_text events (14 baseline events, 0 extracted), which are critical moderator typing actions throughout the session. It also introduces a non-baseline 'dwell' event type (25 events, F1=0.0) that substitutes for hovers and pauses, and systematically reclassifies tab-switch clicks as navigate events, collapsing the click type recall to 10.7%. Navigate detection is relatively strong (F1=0.72), indicating the core page-change detection works but finer-grained interaction types are consistently misidentified or absent.",
+    "issues": [
+      {
+        "category": "missing_events",
+        "severity": "critical",
+        "description": "The experiment produces zero input_text events while the baseline contains 14. These represent the moderator typing questions into the Askable Sessions interface throughout the session — a distinct, repeated, high-value interaction pattern that is entirely absent from the extraction.",
+        "affected_events": [22, 34, 42, 46, 51, 58, 63, 68, 120, 123, 131, 137, 138, 139],
+        "examples": [
+          "Baseline [22] input_text at 310298ms: 'Ben types a question into the text area on the Askable Sessions page' — no corresponding experiment event",
+          "Baseline [137] input_text at 620179ms: 'Ben types a complex question about the UI labels' — no corresponding experiment event"
+        ]
+      },
+      {
+        "category": "hallucinated_events",
+        "severity": "systematic",
+        "description": "The experiment generates 25 'dwell' events, a type not present in the baseline schema at all (F1=0.0). These appear to represent passive reading/pausing states that the baseline does not annotate as a distinct event type. The consistent use of this invented type inflates event count and displaces correct event labels.",
+        "affected_events": [1, 3, 6, 7, 9, 11, 14, 17, 20, 22, 26, 29, 33, 37, 40, 44, 48, 53, 58, 60, 63, 68, 79, 95, 103],
+        "examples": [
+          "Experiment [3] dwell at 185108-227108ms: 'User is reading the task instructions' — baseline labels this period with change_ui_state events, not dwell",
+          "Experiment [7] dwell at 233108-239141ms: 'User dwells on the Video Call session card' — baseline uses scroll events for this period"
+        ]
+      },
+      {
+        "category": "type_mismatch",
+        "severity": "systematic",
+        "description": "Baseline records 28 click events (recall 10.7%), the vast majority being tab-switch actions (e.g., 'Ben clicks the Askable Sessions tab'). The experiment systematically labels these same tab switches as 'navigate' events instead, achieving high navigate recall (80.6%) at the cost of near-zero click recall. Only 3 clicks are correctly identified — all unambiguous UI interactions (tooltip close, filter icon, apply filters button).",
+        "affected_events": [19, 24, 27, 32, 35, 40, 44, 47, 49, 52, 56, 72, 76, 79, 85, 90, 94, 97, 103, 106, 110, 112, 114, 117, 126, 129, 132, 135],
+        "examples": [
+          "Baseline [19] click at 279603ms: 'User clicks on the Askable Sessions browser tab' — experiment generates navigate [16] at 280108ms for the same action",
+          "Baseline [27] click at 319748ms: 'Ben clicks on the Smart Filters Mobile App tab' — experiment has navigate [30] at 337108ms"
+        ]
+      },
+      {
+        "category": "missing_events",
+        "severity": "acceptable",
+        "description": "Hover recall is low (16.7%): baseline has 24 hover events but experiment only generates 12, with 4 matched. Many baseline hovers over opportunity cards and browser tabs are either missed entirely or absorbed into dwell events in the experiment.",
+        "affected_events": [10, 12, 14, 17, 30, 38, 55, 61, 66, 82, 87, 93, 100, 102, 109, 121, 124, 125, 128, 134],
+        "examples": [
+          "Baseline [10] hover at 248603ms over 'AI Interview' card — no matching experiment hover in this time range",
+          "Baseline [66] hover at 419294ms over 'Diary Study' card — not captured by experiment"
+        ]
+      },
+      {
+        "category": "timing_error",
+        "severity": "noise",
+        "description": "For matched events, the mean start time error is 1.27s and mean end error is 1.11s, indicating modest timing drift. Most matched navigate events show offsets under 2s, consistent with frame-sampling resolution limits rather than structural errors.",
+        "affected_events": [],
+        "examples": [
+          "Baseline navigate at 229458ms vs experiment navigate at 229108ms — 350ms offset, within acceptable range"
+        ]
+      }
+    ],
+    "noise_fraction": 0.07,
+    "acceptable_fraction": 0.18,
+    "systematic_fraction": 0.55,
+    "critical_fraction": 0.20
+  },
+  "error": null
+}

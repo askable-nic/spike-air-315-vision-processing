@@ -1,0 +1,155 @@
+{
+  "session_id": "opportunity_list_georgie",
+  "status": "success",
+  "metrics": {
+    "session_id": "opportunity_list_georgie",
+    "baseline_count": 264,
+    "experiment_count": 176,
+    "matched_count": 69,
+    "precision": 0.39204545454545453,
+    "recall": 0.26136363636363635,
+    "f1": 0.31363636363636366,
+    "mean_description_similarity": 0.6575085815156039,
+    "mean_start_error_ms": 1309.1787439613734,
+    "mean_end_error_ms": 2132.666666666676,
+    "per_type": [
+      {
+        "type": "change_ui_state",
+        "baseline_count": 47,
+        "experiment_count": 27,
+        "matched": 12,
+        "precision": 0.4444,
+        "recall": 0.2553,
+        "f1": 0.3243
+      },
+      {
+        "type": "click",
+        "baseline_count": 28,
+        "experiment_count": 21,
+        "matched": 14,
+        "precision": 0.6667,
+        "recall": 0.5,
+        "f1": 0.5714
+      },
+      {
+        "type": "drag",
+        "baseline_count": 7,
+        "experiment_count": 5,
+        "matched": 4,
+        "precision": 0.8,
+        "recall": 0.5714,
+        "f1": 0.6667
+      },
+      {
+        "type": "dwell",
+        "baseline_count": 0,
+        "experiment_count": 54,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hesitate",
+        "baseline_count": 2,
+        "experiment_count": 0,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hover",
+        "baseline_count": 107,
+        "experiment_count": 13,
+        "matched": 10,
+        "precision": 0.7692,
+        "recall": 0.0935,
+        "f1": 0.1667
+      },
+      {
+        "type": "navigate",
+        "baseline_count": 2,
+        "experiment_count": 1,
+        "matched": 1,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667
+      },
+      {
+        "type": "scroll",
+        "baseline_count": 61,
+        "experiment_count": 50,
+        "matched": 24,
+        "precision": 0.48,
+        "recall": 0.3934,
+        "f1": 0.4324
+      },
+      {
+        "type": "select",
+        "baseline_count": 10,
+        "experiment_count": 5,
+        "matched": 4,
+        "precision": 0.8,
+        "recall": 0.4,
+        "f1": 0.5333
+      }
+    ],
+    "f1_pass": true,
+    "recall_pass": true,
+    "precision_pass": true
+  },
+  "qualitative": {
+    "overall_severity": "systematic",
+    "summary": "The experiment exhibits two dominant systematic failure modes: it halluccinates 54 'dwell' events that don't exist in the baseline (which uses no dwell type), and it catastrophically under-detects hover events — capturing only 10 of 107 baseline hovers (recall 0.09). These two patterns alone account for over 60% of the total discrepancy. Core interaction events (click, drag, select) are detected at acceptable quality, but the hover/dwell asymmetry suggests the CV-augmented pipeline is misclassifying or suppressing hover detections and emitting dwell as a substitute.",
+    "issues": [
+      {
+        "category": "hallucinated_events",
+        "severity": "systematic",
+        "description": "The experiment produces 54 'dwell' events that have no counterpart in the baseline. The baseline contains zero dwell events, yet dwell is the third-most-produced type in the experiment output (54 out of 176 total events, ~31%). This is a consistent, large-scale hallucination pattern — the model systematically emits dwell wherever it sees prolonged visual stability rather than recognising these as idle periods.",
+        "affected_events": [],
+        "examples": [
+          "Experiment event: dwell at 244969–258969ms 'User reads the task description regarding exploring a prototype…' — no matching baseline event",
+          "Experiment event: dwell at 278969–280969ms 'User examines the Explore page…' — baseline has change_ui_state at nearby times, not dwell",
+          "54 total dwell events produced vs 0 in baseline across the full session"
+        ]
+      },
+      {
+        "category": "missing_events",
+        "severity": "systematic",
+        "description": "Hover events are massively under-detected: only 10 of 107 baseline hover events are matched (recall 0.09). The experiment produced only 13 hover events total. This is a systemic failure to capture cursor movement interactions. Given that dwell events are being over-produced simultaneously, the likely cause is that hover micro-interactions are being absorbed into adjacent dwell or change_ui_state events rather than being emitted as distinct hover events.",
+        "affected_events": [],
+        "examples": [
+          "Baseline has 107 hover events throughout the session; experiment emits only 13 hover events",
+          "Baseline hover at 280969ms over 'AI Interview card' — experiment emits a dwell at 280969ms instead",
+          "Baseline hover at 324969–326969ms over 'Filter icon' — experiment emits a dwell/scroll and misses the hover entirely"
+        ]
+      },
+      {
+        "category": "missing_events",
+        "severity": "acceptable",
+        "description": "Change_ui_state, scroll, click, select, and navigate events are all under-detected at varying degrees. Scroll recall is 0.39, click recall is 0.50, select recall is 0.40, change_ui_state recall is 0.26. These are incomplete but the matched events have high precision (0.48–1.0), so the events that are detected tend to be correct.",
+        "affected_events": [],
+        "examples": [
+          "Scroll: 24 matched of 61 baseline; 37 baseline scroll events have no experiment counterpart",
+          "Click: 14 matched of 28 baseline; 14 click events missed",
+          "Change_ui_state: 12 matched of 47 baseline; 35 missed"
+        ]
+      },
+      {
+        "category": "missing_events",
+        "severity": "noise",
+        "description": "The 2 baseline 'hesitate' events are entirely absent from the experiment output. Given the very small count, this has negligible impact on overall metrics.",
+        "affected_events": [],
+        "examples": [
+          "2 baseline hesitate events; 0 experiment hesitate events"
+        ]
+      }
+    ],
+    "noise_fraction": 0.008,
+    "acceptable_fraction": 0.378,
+    "systematic_fraction": 0.614,
+    "critical_fraction": 0.0
+  },
+  "error": null
+}

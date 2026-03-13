@@ -1,0 +1,4664 @@
+{
+  "recording_id": "opportunity_list_ben",
+  "segments": [
+    {
+      "segment_index": 0,
+      "events": [
+        {
+          "frame_index_start": 0,
+          "frame_index_end": 1,
+          "type": "navigate",
+          "description": "User navigates to the Askable Sessions page",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The browser window opens to a page with screen sharing instructions."
+        },
+        {
+          "frame_index_start": 1,
+          "frame_index_end": 6,
+          "type": "dwell",
+          "description": "User dwells on the instruction page while the system detects the screen share",
+          "confidence": 0.8,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen displays instructions to click the screen sharing button."
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 7,
+          "type": "change_ui_state",
+          "description": "The UI updates from instructions to a 'Perfect!' confirmation message",
+          "confidence": 0.95,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The central text on the page changes to 'Perfect!'."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 466.6666666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 733.3333333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 1000.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 1266.6666666666665,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 1533.3333333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 1800.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 2066.6666666666665,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 2200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 2466.666666666667,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 11985,
+      "output_tokens": 241
+    },
+    {
+      "segment_index": 1,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 23,
+          "type": "dwell",
+          "description": "User is reading the task instructions on the Askable Sessions page as they are revealed.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen shows a dark background with white text providing instructions for a user testing task."
+        },
+        {
+          "frame_index_start": 5,
+          "frame_index_end": 23,
+          "type": "change_ui_state",
+          "description": "Task instructions are dynamically appearing on the screen with a typing effect.",
+          "confidence": 0.95,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Text content on the page updates frame-by-frame as the instruction message is typed out."
+        },
+        {
+          "frame_index_start": 24,
+          "frame_index_end": 25,
+          "type": "navigate",
+          "description": "The browser navigates from the instructions page to the Figma prototype URL.",
+          "confidence": 1.0,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The browser tab changes from 'Askable Sessions' to 'Loading...' and then to 'Smart Filters Mobile App'."
+        },
+        {
+          "frame_index_start": 26,
+          "frame_index_end": 26,
+          "type": "dwell",
+          "description": "User begins examining the loaded Figma prototype 'Smart Filters Mobile App'.",
+          "confidence": 0.8,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The Figma prototype is fully loaded, showing a mobile app interface with various task and session cards."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 2200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 2200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 4200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 6200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 8200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 10200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 12200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 14200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 16200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 18200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 20200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 22200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 24200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 26200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 28200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 30200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 17,
+          "timestamp_ms": 32200.000000000004,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 18,
+          "timestamp_ms": 34200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 19,
+          "timestamp_ms": 36200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 20,
+          "timestamp_ms": 38200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 21,
+          "timestamp_ms": 40200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 22,
+          "timestamp_ms": 42200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 23,
+          "timestamp_ms": 44200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 24,
+          "timestamp_ms": 46200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 25,
+          "timestamp_ms": 48200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 26,
+          "timestamp_ms": 50200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 27,
+          "timestamp_ms": 50200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 28,
+          "timestamp_ms": 52233.333333333336,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 33212,
+      "output_tokens": 518
+    },
+    {
+      "segment_index": 2,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 5,
+          "type": "dwell",
+          "description": "User dwells on the 'Video Call' session card, likely reading the requirements for the vehicle insurance study.",
+          "confidence": 0.85,
+          "interaction_target": "Video Call session card",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user is viewing a list of opportunities in a mobile app prototype, focusing on a pink card for a video call session."
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 8,
+          "type": "scroll",
+          "description": "User scrolls down the list of opportunities using the scrollbar to view more tasks.",
+          "confidence": 0.95,
+          "interaction_target": "Scrollbar",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The cursor moves to the scrollbar and the list of tasks shifts upwards to reveal new items."
+        },
+        {
+          "frame_index_start": 10,
+          "frame_index_end": 14,
+          "type": "dwell",
+          "description": "User dwells on the 'AI Interview' task card ($60), examining the details of the chatbot evaluation scenario.",
+          "confidence": 0.85,
+          "interaction_target": "AI Interview task card",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The cursor moves over a red card labeled 'AI Interview' and remains there as the user reads the content."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 48200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 50200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 50200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 52233.333333333336,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 54233.333333333336,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 56233.333333333336,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 58233.333333333336,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 60233.333333333336,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 62233.333333333336,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 64233.333333333336,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 66266.66666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 68266.66666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 70266.66666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 72266.66666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 74266.66666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 76200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 78200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 19852,
+      "output_tokens": 474
+    },
+    {
+      "segment_index": 3,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 11,
+          "type": "scroll",
+          "description": "User scrolls through the list of available research opportunities on the page.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 4,
+          "frame_index_end": 8,
+          "type": "dwell",
+          "description": "User pauses to examine the details of the 'Diary Study' opportunity card.",
+          "confidence": 0.85,
+          "interaction_target": "Diary Study card",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 11,
+          "frame_index_end": 16,
+          "type": "dwell",
+          "description": "User pauses to examine the details of the 'AI Interview' opportunity card.",
+          "confidence": 0.9,
+          "interaction_target": "AI Interview card",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 75700.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 76200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 76200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 76700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 77200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 77700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 78200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 78700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 79200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 79700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 80200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 80700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 81200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 81700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 82200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 82700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 83200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 17,
+          "timestamp_ms": 83200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 18,
+          "timestamp_ms": 83700.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 22048,
+      "output_tokens": 202
+    },
+    {
+      "segment_index": 4,
+      "events": [
+        {
+          "frame_index_start": 4,
+          "frame_index_end": 6,
+          "type": "scroll",
+          "description": "User scrolls down the list of available sessions in the mobile app prototype.",
+          "confidence": 0.9,
+          "interaction_target": "Session list",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user scrolls through various session cards like 'Video Call' and 'In Person'."
+        },
+        {
+          "frame_index_start": 8,
+          "frame_index_end": 8,
+          "type": "scroll",
+          "description": "User scrolls further down to view the 'Short tasks & surveys' section.",
+          "confidence": 0.8,
+          "interaction_target": "Session list",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 11,
+          "frame_index_end": 12,
+          "type": "scroll",
+          "description": "User continues scrolling through the session list, moving past the 'Sessions to schedule' header.",
+          "confidence": 0.9,
+          "interaction_target": "Session list",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 82700.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 83200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 83200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 83700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 84200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 84700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 85200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 85700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 86200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 86700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 87200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 87700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 88200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 88700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 89200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 89200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 89700.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 19820,
+      "output_tokens": 275
+    },
+    {
+      "segment_index": 5,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 5,
+          "type": "dwell",
+          "description": "User is examining the 'Sessions to schedule' section on the Figma prototype.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user is looking at various session cards like 'Video Call' and 'In Person' on the Figma prototype page."
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 7,
+          "type": "navigate",
+          "description": "User switches from the Figma prototype tab to the 'Askable Sessions' tab.",
+          "confidence": 1.0,
+          "interaction_target": "Askable Sessions tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user moves the cursor to the browser tab and clicks it, resulting in a page change to the session management interface."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 87200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 89200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 89200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 91200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 93200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 95200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 97200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 99200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 99200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 101200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 12053,
+      "output_tokens": 236
+    },
+    {
+      "segment_index": 6,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 7,
+          "type": "change_ui_state",
+          "description": "The AI moderator's prompt text is progressively revealed on the screen.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 7,
+          "frame_index_end": 7,
+          "type": "hover",
+          "description": "User hovers over the 'Smart Filters Mobile App' browser tab, triggering a tab preview.",
+          "confidence": 0.8,
+          "interaction_target": "Smart Filters Mobile App tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 8,
+          "frame_index_end": 8,
+          "type": "navigate",
+          "description": "User navigates to the 'Smart Filters Mobile App' prototype tab.",
+          "confidence": 1.0,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 10,
+          "frame_index_end": 14,
+          "type": "scroll",
+          "description": "User scrolls down and then back up through the list of research tasks and sessions in the prototype.",
+          "confidence": 0.95,
+          "interaction_target": "Research opportunities list",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 15,
+          "frame_index_end": 15,
+          "type": "navigate",
+          "description": "User navigates back to the 'Askable Sessions' tab.",
+          "confidence": 1.0,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 15,
+          "frame_index_end": 15,
+          "type": "change_ui_state",
+          "description": "A browser feature tooltip ('Split view makes it easier to multitask') appears on the page.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 97200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 99200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 99200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 101200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 103200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 105200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 107200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 109200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 111200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 113200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 115200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 117200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 119200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 121200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 123200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 125200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 126200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 17,
+          "timestamp_ms": 128233.33333333331,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 20982,
+      "output_tokens": 375
+    },
+    {
+      "segment_index": 7,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 3,
+          "type": "click",
+          "description": "User clicks the close button on the 'Split view' informational tooltip",
+          "confidence": 0.9,
+          "interaction_target": "Close button (X)",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 4,
+          "frame_index_end": 7,
+          "type": "change_ui_state",
+          "description": "The central text area dynamically updates as the AI moderator's question is transcribed or displayed",
+          "confidence": 0.95,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Text updates from 'I noticed you mentioned it makes i' to the full question about specific information on the screen."
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 7,
+          "type": "hover",
+          "description": "User hovers over the 'Smart Filters Mobile App' browser tab, triggering the browser's tab preview window",
+          "confidence": 0.9,
+          "interaction_target": "Smart Filters Mobile App browser tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 124200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 126200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 126200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 128233.33333333331,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 130233.33333333331,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 132233.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 134233.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 136233.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 138200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 140200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 12064,
+      "output_tokens": 363
+    },
+    {
+      "segment_index": 8,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 13,
+          "type": "scroll",
+          "description": "User scrolls down through the list of research opportunities, reviewing various cards including 'In Person', 'Diary Study', and 'AI Interview'.",
+          "confidence": 0.9,
+          "interaction_target": "Research opportunities list",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "A vertical list of research task cards with titles, descriptions, and payment amounts."
+        },
+        {
+          "frame_index_start": 15,
+          "frame_index_end": 16,
+          "type": "navigate",
+          "description": "User clicks on the 'Askable Sessions' browser tab to switch away from the Figma prototype.",
+          "confidence": 0.95,
+          "interaction_target": "Askable Sessions tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": "sessions.askable.com",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The browser interface showing the user switching between open tabs."
+        },
+        {
+          "frame_index_start": 16,
+          "frame_index_end": 18,
+          "type": "dwell",
+          "description": "User pauses to read the task instructions displayed on the Askable Sessions page.",
+          "confidence": 0.85,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "A dark screen with centered white text providing specific task-related feedback to the user."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 137700.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 138200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 138200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 138700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 139200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 139700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 140200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 140700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 141200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 141700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 142200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 142700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 143200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 143700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 144200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 144700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 145200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 17,
+          "timestamp_ms": 145700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 18,
+          "timestamp_ms": 146200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 19,
+          "timestamp_ms": 146200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 20,
+          "timestamp_ms": 146700.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 24299,
+      "output_tokens": 367
+    },
+    {
+      "segment_index": 9,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 6,
+          "type": "change_ui_state",
+          "description": "The automated moderator text prompt updates dynamically, presenting a new question to the user.",
+          "confidence": 0.95,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen shows a dark interface with a text prompt being typed out by an AI moderator."
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 7,
+          "type": "navigate",
+          "description": "The active view switches from the Askable Sessions moderator screen back to the Figma prototype page.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The browser tab switches to the Figma prototype showing various research session opportunities."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 144200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 146200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 146200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 148200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 150200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 152200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 154200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 156200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 157200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 159200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 12064,
+      "output_tokens": 292
+    },
+    {
+      "segment_index": 10,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 6,
+          "type": "dwell",
+          "description": "User examines the available study sessions on the Figma prototype page, hovering over the 'Video Call' and 'AI Interview' cards.",
+          "confidence": 0.9,
+          "interaction_target": "Study session cards",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 7,
+          "frame_index_end": 8,
+          "type": "navigate",
+          "description": "User clicks on the 'Askable Sessions' browser tab to switch pages.",
+          "confidence": 1.0,
+          "interaction_target": "Askable Sessions tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 8,
+          "frame_index_end": 9,
+          "type": "dwell",
+          "description": "User reads the task instructions on the Askable Sessions page as the full text is revealed.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 155200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 157200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 157200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 159200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 161200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 163200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 165200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 167200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 169200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 171200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 171200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 173200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 14297,
+      "output_tokens": 236
+    },
+    {
+      "segment_index": 11,
+      "events": [
+        {
+          "frame_index_start": 3,
+          "frame_index_end": 4,
+          "type": "navigate",
+          "description": "User switched to the 'Smart Filters Mobile App' tab to view the prototype",
+          "confidence": 0.95,
+          "interaction_target": "Smart Filters Mobile App tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 5,
+          "frame_index_end": 5,
+          "type": "hover",
+          "description": "User hovered over the 'AI Interview' session card in the prototype",
+          "confidence": 0.9,
+          "interaction_target": "AI Interview card",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Figma prototype showing various research sessions to schedule"
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 7,
+          "type": "navigate",
+          "description": "User switched back to the 'Askable Sessions' tab to read instructions",
+          "confidence": 0.95,
+          "interaction_target": "Askable Sessions tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 7,
+          "frame_index_end": 11,
+          "type": "dwell",
+          "description": "User paused to read the updated task instructions on the screen",
+          "confidence": 0.85,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Black screen with white text instructions being typed out"
+        },
+        {
+          "frame_index_start": 11,
+          "frame_index_end": 12,
+          "type": "navigate",
+          "description": "User switched to the 'Smart Filters Mobile App' tab",
+          "confidence": 0.95,
+          "interaction_target": "Smart Filters Mobile App tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 12,
+          "frame_index_end": 13,
+          "type": "navigate",
+          "description": "User switched back to the 'Askable Sessions' tab",
+          "confidence": 0.95,
+          "interaction_target": "Askable Sessions tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 13,
+          "frame_index_end": 18,
+          "type": "dwell",
+          "description": "User paused to read the instructions as they were being updated on screen",
+          "confidence": 0.85,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 18,
+          "frame_index_end": 19,
+          "type": "navigate",
+          "description": "User switched to the 'Smart Filters Mobile App' tab to examine the prototype again",
+          "confidence": 0.95,
+          "interaction_target": "Smart Filters Mobile App tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 20,
+          "frame_index_end": 22,
+          "type": "hover",
+          "description": "User hovered over the 'AI Interview' card while considering the instructions",
+          "confidence": 0.9,
+          "interaction_target": "AI Interview card",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 23,
+          "frame_index_end": 25,
+          "type": "navigate",
+          "description": "User switched back to the 'Askable Sessions' tab to see the final part of the question",
+          "confidence": 0.95,
+          "interaction_target": "Askable Sessions tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 25,
+          "frame_index_end": 29,
+          "type": "dwell",
+          "description": "User read the final question: 'What specifically about the way those are displayed helps you distinguish between them?'",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 29,
+          "frame_index_end": 30,
+          "type": "navigate",
+          "description": "User switched to the 'Smart Filters Mobile App' tab to answer the question",
+          "confidence": 0.95,
+          "interaction_target": "Smart Filters Mobile App tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 31,
+          "frame_index_end": 32,
+          "type": "hover",
+          "description": "User hovered over the 'AI Interview' card while formulating a response",
+          "confidence": 0.9,
+          "interaction_target": "AI Interview card",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 32,
+          "frame_index_end": 33,
+          "type": "navigate",
+          "description": "User switched back to the 'Askable Sessions' tab",
+          "confidence": 0.95,
+          "interaction_target": "Askable Sessions tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 169100.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 170166.66666666666,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 171200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 172266.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 173333.33333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 174400.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 175466.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 176533.33333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 177600.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 178666.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 179733.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 180800.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 181866.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 182933.33333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 184000.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 185066.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 186133.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 17,
+          "timestamp_ms": 187200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 18,
+          "timestamp_ms": 188266.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 19,
+          "timestamp_ms": 189333.33333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 20,
+          "timestamp_ms": 190400.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 21,
+          "timestamp_ms": 191466.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 22,
+          "timestamp_ms": 192533.33333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 23,
+          "timestamp_ms": 193600.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 24,
+          "timestamp_ms": 194666.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 25,
+          "timestamp_ms": 195733.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 26,
+          "timestamp_ms": 196800.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 27,
+          "timestamp_ms": 197866.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 28,
+          "timestamp_ms": 198933.33333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 29,
+          "timestamp_ms": 200000.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 30,
+          "timestamp_ms": 201066.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 31,
+          "timestamp_ms": 202133.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 32,
+          "timestamp_ms": 203200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 33,
+          "timestamp_ms": 204266.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 34,
+          "timestamp_ms": 205200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 35,
+          "timestamp_ms": 206266.66666666666,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 41040,
+      "output_tokens": 944
+    },
+    {
+      "segment_index": 12,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 7,
+          "type": "change_ui_state",
+          "description": "Task instructions are progressively revealed on the screen while the user reads them.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "A dark screen with white text instructions appearing line by line."
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 7,
+          "type": "dwell",
+          "description": "User pauses to read the instructions being displayed on the Askable Sessions page.",
+          "confidence": 0.8,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 8,
+          "frame_index_end": 8,
+          "type": "navigate",
+          "description": "User switches browser tabs to return to the Figma prototype.",
+          "confidence": 1.0,
+          "interaction_target": "Smart Filters Mobile App tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 9,
+          "frame_index_end": 9,
+          "type": "select",
+          "description": "User highlights the text 'and/or internet' within the 'AI Interview' card on the Figma prototype.",
+          "confidence": 0.9,
+          "interaction_target": "and/or internet text",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 203200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 205200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 205200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 207200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 209200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 211200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 213200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 215200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 217200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 219200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 220200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 222200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 14297,
+      "output_tokens": 452
+    },
+    {
+      "segment_index": 13,
+      "events": [
+        {
+          "frame_index_start": 4,
+          "frame_index_end": 13,
+          "type": "scroll",
+          "description": "User scrolls down through the list of available sessions and then scrolls back up.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user is navigating through a list of research session cards including 'Video Call', 'In Person', 'Diary Study', and 'AI Interview'."
+        },
+        {
+          "frame_index_start": 14,
+          "frame_index_end": 19,
+          "type": "dwell",
+          "description": "User pauses on the 'Sessions to schedule' section, likely reviewing the options.",
+          "confidence": 0.8,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The cursor remains stationary near the 'Sessions to schedule' header while the user examines the content."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 219700.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 220200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 220200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 220700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 221200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 221700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 222200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 222700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 223200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 223700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 224200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 224700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 225200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 225700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 226200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 226700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 227200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 17,
+          "timestamp_ms": 227700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 18,
+          "timestamp_ms": 228200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 19,
+          "timestamp_ms": 228700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 20,
+          "timestamp_ms": 229200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 21,
+          "timestamp_ms": 229200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 22,
+          "timestamp_ms": 229700.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 26530,
+      "output_tokens": 214
+    },
+    {
+      "segment_index": 14,
+      "events": [
+        {
+          "frame_index_start": 5,
+          "frame_index_end": 6,
+          "type": "navigate",
+          "description": "User switched to the 'Askable Sessions' tab",
+          "confidence": 0.9,
+          "interaction_target": "Askable Sessions tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 17,
+          "type": "change_ui_state",
+          "description": "Task instructions and questions from the AI moderator are displayed and updated on the screen",
+          "confidence": 0.8,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 17,
+          "frame_index_end": 18,
+          "type": "navigate",
+          "description": "User switched back to the 'Smart Filters Mobile App' tab to view the prototype",
+          "confidence": 0.9,
+          "interaction_target": "Smart Filters Mobile App tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 19,
+          "frame_index_end": 24,
+          "type": "hover",
+          "description": "User hovers over the 'Video Call' and 'AI Interview' session cards while considering the moderator's question",
+          "confidence": 0.8,
+          "interaction_target": "Session cards",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 228700.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 228966.66666666666,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 229200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 229466.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 229733.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 230000.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 230266.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 230533.33333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 230799.99999999997,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 231066.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 231333.33333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 231600.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 231866.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 232133.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 232400.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 232666.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 232933.33333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 17,
+          "timestamp_ms": 233200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 18,
+          "timestamp_ms": 233466.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 19,
+          "timestamp_ms": 233733.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 20,
+          "timestamp_ms": 234000.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 21,
+          "timestamp_ms": 234266.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 22,
+          "timestamp_ms": 234533.33333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 23,
+          "timestamp_ms": 234799.99999999997,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 24,
+          "timestamp_ms": 235066.66666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 25,
+          "timestamp_ms": 235200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 26,
+          "timestamp_ms": 235466.66666666666,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 30990,
+      "output_tokens": 313
+    },
+    {
+      "segment_index": 15,
+      "events": [
+        {
+          "frame_index_start": 3,
+          "frame_index_end": 4,
+          "type": "scroll",
+          "description": "User scrolls down the page to view more session opportunities.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 5,
+          "frame_index_end": 6,
+          "type": "scroll",
+          "description": "User scrolls further down the list of sessions.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 9,
+          "frame_index_end": 11,
+          "type": "scroll",
+          "description": "User scrolls back up the page towards the top of the 'Sessions to schedule' section.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 12,
+          "frame_index_end": 16,
+          "type": "hover",
+          "description": "User hovers the cursor over the 'Video Call' session card while reviewing the details.",
+          "confidence": 0.85,
+          "interaction_target": "Video Call session card",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 21,
+          "frame_index_end": 22,
+          "type": "navigate",
+          "description": "User clicks on the 'Askable Sessions' browser tab to switch pages.",
+          "confidence": 0.95,
+          "interaction_target": "Askable Sessions tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The browser view switches from the Figma prototype to the Askable Sessions interface."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 234700.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 235200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 235200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 235700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 236200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 236700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 237200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 237700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 238200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 238700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 239200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 239700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 240200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 240700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 241200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 241700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 242200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 17,
+          "timestamp_ms": 242700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 18,
+          "timestamp_ms": 243200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 19,
+          "timestamp_ms": 243700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 20,
+          "timestamp_ms": 244200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 21,
+          "timestamp_ms": 244700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 22,
+          "timestamp_ms": 245200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 23,
+          "timestamp_ms": 245700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 24,
+          "timestamp_ms": 246200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 25,
+          "timestamp_ms": 246200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 26,
+          "timestamp_ms": 246700.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 30990,
+      "output_tokens": 611
+    },
+    {
+      "segment_index": 16,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 5,
+          "type": "dwell",
+          "description": "User reads the task instructions on the Askable Sessions page as they update on screen.",
+          "confidence": 0.9,
+          "interaction_target": "Task instructions",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "A dark screen displaying task instructions for the user to consider while looking at colored labels."
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 6,
+          "type": "navigate",
+          "description": "User switches from the instructions tab to the 'Smart Filters Mobile App' Figma prototype tab.",
+          "confidence": 1.0,
+          "interaction_target": "Smart Filters Mobile App tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The browser tab changes to show a Figma prototype of a mobile app listing various sessions."
+        },
+        {
+          "frame_index_start": 7,
+          "frame_index_end": 7,
+          "type": "scroll",
+          "description": "User scrolls down the Figma prototype to view more session cards like 'AI Interview'.",
+          "confidence": 0.9,
+          "interaction_target": "Figma prototype content",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 8,
+          "frame_index_end": 8,
+          "type": "hover",
+          "description": "User hovers over the 'Askable Sessions' browser tab, causing a tab preview to appear.",
+          "confidence": 0.85,
+          "interaction_target": "Askable Sessions tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 9,
+          "frame_index_end": 9,
+          "type": "navigate",
+          "description": "User switches back to the 'Askable Sessions' tab to review the instructions again.",
+          "confidence": 1.0,
+          "interaction_target": "Askable Sessions tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 244200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 246200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 246200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 248200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 250200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 252200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 254200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 256200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 258200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 260200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 260200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 262200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 14297,
+      "output_tokens": 678
+    },
+    {
+      "segment_index": 17,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 5,
+          "type": "change_ui_state",
+          "description": "Task instructions are progressively displayed on the screen.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 6,
+          "type": "navigate",
+          "description": "User switches from the Askable Sessions tab to the Figma prototype tab.",
+          "confidence": 0.95,
+          "interaction_target": "Smart Filters Mobile App tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 7,
+          "frame_index_end": 7,
+          "type": "scroll",
+          "description": "User scrolls down the list of opportunities in the Figma prototype.",
+          "confidence": 0.85,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 8,
+          "frame_index_end": 10,
+          "type": "hover",
+          "description": "User hovers over different opportunity cards (AI Interview, Diary Study) while examining the list.",
+          "confidence": 0.8,
+          "interaction_target": "Opportunity cards",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 11,
+          "frame_index_end": 11,
+          "type": "scroll",
+          "description": "User scrolls up the list of opportunities.",
+          "confidence": 0.85,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 12,
+          "frame_index_end": 12,
+          "type": "navigate",
+          "description": "User switches back to the Askable Sessions tab.",
+          "confidence": 0.95,
+          "interaction_target": "Askable Sessions tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 13,
+          "frame_index_end": 13,
+          "type": "change_ui_state",
+          "description": "The task instruction text updates to a new question.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 258200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 260200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 260200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 262200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 264200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 266200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 268200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 270200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 272200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 274200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 276200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 278200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 280200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 282200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 282200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 284200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 18757,
+      "output_tokens": 416
+    },
+    {
+      "segment_index": 18,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 5,
+          "type": "change_ui_state",
+          "description": "The task instruction text is progressively revealed on the screen, asking the user about device information in a lunch break scenario.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The central area of the screen displays a text-based task instruction that updates over several frames."
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 6,
+          "type": "hover",
+          "description": "User hovers the cursor over the 'Smart Filters Mobile App' browser tab, which triggers a visual preview of that page.",
+          "confidence": 0.95,
+          "interaction_target": "Smart Filters Mobile App browser tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The cursor is positioned over the third browser tab, and a thumbnail preview of the Figma prototype is visible."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 280200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 282200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 282200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 284200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 286200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 288200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 290200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 291200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 293200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 10950,
+      "output_tokens": 229
+    },
+    {
+      "segment_index": 19,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 7,
+          "type": "dwell",
+          "description": "User is reading the task question on the Askable Sessions page regarding device information.",
+          "confidence": 0.95,
+          "interaction_target": "Task question",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen shows a dark background with a central question about device information and buttons to open or repeat instructions."
+        },
+        {
+          "frame_index_start": 8,
+          "frame_index_end": 8,
+          "type": "navigate",
+          "description": "User switches browser tabs to the 'Smart Filters Mobile App' Figma prototype.",
+          "confidence": 1.0,
+          "interaction_target": "Smart Filters Mobile App tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The browser view changes to show a mobile app prototype titled 'Sessions to schedule'."
+        },
+        {
+          "frame_index_start": 9,
+          "frame_index_end": 9,
+          "type": "dwell",
+          "description": "User examines the 'Sessions to schedule' list in the mobile app prototype.",
+          "confidence": 0.9,
+          "interaction_target": "Sessions list",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user is looking at various session cards like 'Video Call', 'In Person', and 'Diary Study' within the Figma prototype."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 289200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 291200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 291200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 293200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 295200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 297200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 299200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 301200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 303200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 305200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 305200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 307200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 14297,
+      "output_tokens": 469
+    },
+    {
+      "segment_index": 20,
+      "events": [
+        {
+          "frame_index_start": 8,
+          "frame_index_end": 10,
+          "type": "scroll",
+          "description": "User scrolls down the list of opportunities to view more sessions",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 10,
+          "frame_index_end": 12,
+          "type": "scroll",
+          "description": "User scrolls back up the list of opportunities",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 19,
+          "frame_index_end": 20,
+          "type": "scroll",
+          "description": "User scrolls down the list of opportunities again",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 22,
+          "frame_index_end": 23,
+          "type": "scroll",
+          "description": "User scrolls up the list of opportunities",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 29,
+          "frame_index_end": 30,
+          "type": "click",
+          "description": "User clicks the filter icon in the top right corner",
+          "confidence": 0.95,
+          "interaction_target": "Filter icon",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 30,
+          "frame_index_end": 32,
+          "type": "change_ui_state",
+          "description": "The 'Filter Opportunities' modal appears on screen",
+          "confidence": 1.0,
+          "interaction_target": "Filter Opportunities modal",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 304700.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 305200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 305200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 305700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 306200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 306700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 307200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 307700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 308200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 308700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 309200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 309700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 310200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 310700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 311200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 311700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 312200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 17,
+          "timestamp_ms": 312700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 18,
+          "timestamp_ms": 313200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 19,
+          "timestamp_ms": 313700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 20,
+          "timestamp_ms": 314200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 21,
+          "timestamp_ms": 314700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 22,
+          "timestamp_ms": 315200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 23,
+          "timestamp_ms": 315700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 24,
+          "timestamp_ms": 316200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 25,
+          "timestamp_ms": 316700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 26,
+          "timestamp_ms": 317200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 27,
+          "timestamp_ms": 317700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 28,
+          "timestamp_ms": 318200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 29,
+          "timestamp_ms": 318700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 30,
+          "timestamp_ms": 319200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 31,
+          "timestamp_ms": 319700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 32,
+          "timestamp_ms": 320200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 33,
+          "timestamp_ms": 320200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 34,
+          "timestamp_ms": 320700.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 39910,
+      "output_tokens": 447
+    },
+    {
+      "segment_index": 21,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 3,
+          "type": "scroll",
+          "description": "User scrolls down within the 'Filter Opportunities' modal to view more filter options.",
+          "confidence": 0.9,
+          "interaction_target": "Filter Opportunities modal",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user is interacting with a filter modal on a Figma prototype."
+        },
+        {
+          "frame_index_start": 4,
+          "frame_index_end": 4,
+          "type": "select",
+          "description": "User selects the 'Mobile Only' option under the Device category.",
+          "confidence": 0.95,
+          "interaction_target": "Mobile Only radio button",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 5,
+          "frame_index_end": 5,
+          "type": "click",
+          "description": "User clicks the 'Apply Filters' button to update the results.",
+          "confidence": 0.95,
+          "interaction_target": "Apply Filters button",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 6,
+          "type": "change_ui_state",
+          "description": "The filter modal closes, revealing the updated list of opportunities.",
+          "confidence": 0.9,
+          "interaction_target": "Filter Opportunities modal",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 7,
+          "frame_index_end": 9,
+          "type": "navigate",
+          "description": "User navigates to the 'Askable Sessions' tab by clicking it in the browser.",
+          "confidence": 0.95,
+          "interaction_target": "Askable Sessions tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 10,
+          "frame_index_end": 11,
+          "type": "dwell",
+          "description": "User dwells on the 'Askable Sessions' page, likely reading the displayed task instructions.",
+          "confidence": 0.85,
+          "interaction_target": "Task instructions",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 12,
+          "frame_index_end": 12,
+          "type": "navigate",
+          "description": "User navigates back to the 'Smart Filters Mobile App' Figma prototype tab.",
+          "confidence": 0.95,
+          "interaction_target": "Smart Filters Mobile App tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 13,
+          "frame_index_end": 14,
+          "type": "scroll",
+          "description": "User scrolls through the filtered list of opportunities on the main page.",
+          "confidence": 0.9,
+          "interaction_target": "Opportunities list",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 15,
+          "frame_index_end": 15,
+          "type": "navigate",
+          "description": "User navigates back to the 'Askable Sessions' tab.",
+          "confidence": 0.95,
+          "interaction_target": "Askable Sessions tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 318200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 320200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 320200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 322200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 324200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 326200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 328200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 330200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 332200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 334200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 336200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 338200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 340200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 342200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 344200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 346200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 346200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 17,
+          "timestamp_ms": 348200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 20987,
+      "output_tokens": 1170
+    },
+    {
+      "segment_index": 22,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 5,
+          "type": "change_ui_state",
+          "description": "Text instructions on the Askable Sessions page are being dynamically updated and revealed by the AI moderator.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 5,
+          "frame_index_end": 6,
+          "type": "navigate",
+          "description": "User switches browser tabs to return to the Figma prototype titled 'Smart Filters Mobile App'.",
+          "confidence": 1.0,
+          "interaction_target": "Smart Filters Mobile App tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 344200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 346200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 346200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 348200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 350200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 352200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 354200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 355200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 357200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 10950,
+      "output_tokens": 189
+    },
+    {
+      "segment_index": 23,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 10,
+          "type": "dwell",
+          "description": "User examines the list of tasks and sessions in the Figma prototype, moving the cursor over various items.",
+          "confidence": 0.9,
+          "interaction_target": "Short tasks & surveys list",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user is viewing a list of research opportunities in a mobile app prototype."
+        },
+        {
+          "frame_index_start": 11,
+          "frame_index_end": 12,
+          "type": "navigate",
+          "description": "User switches from the prototype tab to the 'Askable Sessions' tab.",
+          "confidence": 0.95,
+          "interaction_target": "Askable Sessions tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user clicks the browser tab for the session moderator tool."
+        },
+        {
+          "frame_index_start": 13,
+          "frame_index_end": 13,
+          "type": "change_ui_state",
+          "description": "The moderator prompt on the Askable Sessions page updates to a new instruction.",
+          "confidence": 0.9,
+          "interaction_target": "Moderator prompt",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The text on the screen changes from a question about filters to a prompt about opportunities."
+        },
+        {
+          "frame_index_start": 14,
+          "frame_index_end": 14,
+          "type": "navigate",
+          "description": "User switches back to the Figma prototype tab to continue the task.",
+          "confidence": 0.95,
+          "interaction_target": "Smart Filters Mobile App tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user returns to the mobile app prototype view."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 353200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 355200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 355200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 357200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 359200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 361200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 363200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 365200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 367200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 369200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 371200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 373200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 375200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 377200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 379200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 380200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 382200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 19872,
+      "output_tokens": 461
+    },
+    {
+      "segment_index": 24,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 10,
+          "type": "scroll",
+          "description": "User scrolls through the list of available opportunities on the page.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 11,
+          "frame_index_end": 14,
+          "type": "hover",
+          "description": "User hovers the cursor over the 'AI Interview' opportunity card.",
+          "confidence": 0.8,
+          "interaction_target": "AI Interview card",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The cursor lingers on the red AI Interview card before moving towards the browser tabs."
+        },
+        {
+          "frame_index_start": 19,
+          "frame_index_end": 21,
+          "type": "navigate",
+          "description": "User clicks on the 'Askable Sessions' browser tab to switch views.",
+          "confidence": 0.95,
+          "interaction_target": "Askable Sessions tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/...",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 21,
+          "frame_index_end": 26,
+          "type": "dwell",
+          "description": "User pauses to read the initial prompt on the Askable Sessions page.",
+          "confidence": 0.8,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen shows a dark background with the text 'As you look at those nine opportunities, what's catching your eye now?'"
+        },
+        {
+          "frame_index_start": 27,
+          "frame_index_end": 31,
+          "type": "change_ui_state",
+          "description": "The prompt text on the screen dynamically updates to a new question.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "Text 'What makes you lean towards a short task right now?' appears word-by-word on the screen."
+        },
+        {
+          "frame_index_start": 32,
+          "frame_index_end": 33,
+          "type": "hover",
+          "description": "User hovers over the 'Smart Filters Mobile App' browser tab, triggering a preview window.",
+          "confidence": 0.85,
+          "interaction_target": "Smart Filters Mobile App tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": null,
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 378966.6666666666,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 379600.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 380200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 380833.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 381466.6666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 382100.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 382733.3333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 383366.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 384000.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 384633.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 385266.6666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 385900.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 386533.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 387166.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 387800.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 388433.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 16,
+          "timestamp_ms": 389066.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 17,
+          "timestamp_ms": 389700.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 18,
+          "timestamp_ms": 390333.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 19,
+          "timestamp_ms": 390966.6666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 20,
+          "timestamp_ms": 391600.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 21,
+          "timestamp_ms": 392233.3333333334,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 22,
+          "timestamp_ms": 392866.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 23,
+          "timestamp_ms": 393500.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 24,
+          "timestamp_ms": 394133.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 25,
+          "timestamp_ms": 394766.6666666666,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 26,
+          "timestamp_ms": 395400.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 27,
+          "timestamp_ms": 396033.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 28,
+          "timestamp_ms": 396666.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 29,
+          "timestamp_ms": 397300.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 30,
+          "timestamp_ms": 397933.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 31,
+          "timestamp_ms": 398566.6666666667,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 32,
+          "timestamp_ms": 399200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 33,
+          "timestamp_ms": 399833.3333333333,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 34,
+          "timestamp_ms": 400200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 35,
+          "timestamp_ms": 400833.3333333333,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 41040,
+      "output_tokens": 631
+    },
+    {
+      "segment_index": 25,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 4,
+          "type": "hover",
+          "description": "User hovers over the 'Smart Filters Mobile App' browser tab, which displays a thumbnail preview of the page content.",
+          "confidence": 0.9,
+          "interaction_target": "Smart Filters Mobile App browser tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user is on the Askable session page where a question is displayed, while hovering over another tab."
+        },
+        {
+          "frame_index_start": 5,
+          "frame_index_end": 7,
+          "type": "change_ui_state",
+          "description": "The task instruction text on the screen updates dynamically to: 'As you look at the options for short tasks, what are you seeing that helps you decide which one to go for?'",
+          "confidence": 0.95,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The central text on the dark background changes as the session progresses."
+        },
+        {
+          "frame_index_start": 8,
+          "frame_index_end": 8,
+          "type": "navigate",
+          "description": "The browser navigates from the Askable session instructions to the Figma prototype page.",
+          "confidence": 1.0,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen now shows a mobile app prototype titled 'Explore' with 'Short tasks & surveys' listed."
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 398200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 400200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 400200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 402200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 404200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 406200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 408200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 410200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 412200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 413200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 415200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 13181,
+      "output_tokens": 447
+    },
+    {
+      "segment_index": 26,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 4,
+          "type": "dwell",
+          "description": "User pauses to examine the 'Short tasks & surveys' section, specifically hovering over the 'AI Interview' task card.",
+          "confidence": 0.85,
+          "interaction_target": "AI Interview card",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The user is viewing a Figma prototype showing various research opportunities."
+        },
+        {
+          "frame_index_start": 5,
+          "frame_index_end": 6,
+          "type": "navigate",
+          "description": "User clicks on the 'Askable Sessions' browser tab to switch from the prototype to the session instructions.",
+          "confidence": 0.95,
+          "interaction_target": "Askable Sessions tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 8,
+          "type": "change_ui_state",
+          "description": "The instruction text on the Askable Sessions page updates dynamically to a new question for the participant.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The central text on the dark background changes from a general question to a specific one about survey time."
+        },
+        {
+          "frame_index_start": 9,
+          "frame_index_end": 10,
+          "type": "navigate",
+          "description": "User clicks on the 'Smart Filters Mobile App' browser tab to return to the Figma prototype.",
+          "confidence": 0.95,
+          "interaction_target": "Smart Filters Mobile App tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 411200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 413200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 413200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 415200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 417200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 419200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 421200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 423200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 425200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 427200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 429200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 429200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 431200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 15412,
+      "output_tokens": 542
+    },
+    {
+      "segment_index": 27,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 5,
+          "type": "dwell",
+          "description": "User examines the 'Short tasks & surveys' section on the Figma prototype, focusing on the 'AI Interview' card.",
+          "confidence": 0.8,
+          "interaction_target": "AI Interview card",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": "art-resin-05325911.figma.site",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 6,
+          "frame_index_end": 6,
+          "type": "navigate",
+          "description": "User switches to the 'Askable Sessions' browser tab.",
+          "confidence": 1.0,
+          "interaction_target": "Askable Sessions tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 7,
+          "frame_index_end": 9,
+          "type": "change_ui_state",
+          "description": "Task instructions text updates dynamically on the Askable Sessions page while the user reads.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 10,
+          "frame_index_end": 10,
+          "type": "navigate",
+          "description": "User switches back to the 'Smart Filters Mobile App' Figma prototype tab.",
+          "confidence": 1.0,
+          "interaction_target": "Smart Filters Mobile App tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 11,
+          "frame_index_end": 12,
+          "type": "dwell",
+          "description": "User examines the prototype content again, likely looking for details mentioned in the instructions.",
+          "confidence": 0.8,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Smart Filters Mobile App",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        },
+        {
+          "frame_index_start": 13,
+          "frame_index_end": 13,
+          "type": "navigate",
+          "description": "User switches back to the 'Askable Sessions' tab.",
+          "confidence": 1.0,
+          "interaction_target": "Askable Sessions tab",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": null,
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 427200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 429200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 429200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 431200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 433200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 435200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 437200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 439200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 8,
+          "timestamp_ms": 441200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 9,
+          "timestamp_ms": 443200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 10,
+          "timestamp_ms": 445200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 11,
+          "timestamp_ms": 447200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 12,
+          "timestamp_ms": 449200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 13,
+          "timestamp_ms": 451200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 14,
+          "timestamp_ms": 452200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 15,
+          "timestamp_ms": 454200.0,
+          "is_context": true
+        }
+      ],
+      "input_tokens": 18757,
+      "output_tokens": 430
+    },
+    {
+      "segment_index": 28,
+      "events": [
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 7,
+          "type": "dwell",
+          "description": "User is dwelling on the Askable Sessions page, reading the AI moderator's transcription as it appears.",
+          "confidence": 0.9,
+          "interaction_target": null,
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": "The screen shows a dark background with white text representing the AI moderator's speech."
+        },
+        {
+          "frame_index_start": 2,
+          "frame_index_end": 7,
+          "type": "change_ui_state",
+          "description": "The AI moderator's speech-to-text transcription updates dynamically on the screen.",
+          "confidence": 1.0,
+          "interaction_target": "AI moderator transcription",
+          "region_of_interest": null,
+          "cursor_position": null,
+          "page_title": "Askable Sessions",
+          "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+          "viewport_width": null,
+          "viewport_height": null,
+          "frame_description": null
+        }
+      ],
+      "frame_refs": [
+        {
+          "frame_index_in_request": 0,
+          "timestamp_ms": 450200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 1,
+          "timestamp_ms": 452200.0,
+          "is_context": true
+        },
+        {
+          "frame_index_in_request": 2,
+          "timestamp_ms": 452200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 3,
+          "timestamp_ms": 454200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 4,
+          "timestamp_ms": 456200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 5,
+          "timestamp_ms": 458200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 6,
+          "timestamp_ms": 460200.0,
+          "is_context": false
+        },
+        {
+          "frame_index_in_request": 7,
+          "timestamp_ms": 462200.0,
+          "is_context": false
+        }
+      ],
+      "input_tokens": 9816,
+      "output_tokens": 227
+    }
+  ],
+  "total_input_tokens": 594749,
+  "total_output_tokens": 12449,
+  "processing_time_ms": 490041.11295801704
+}

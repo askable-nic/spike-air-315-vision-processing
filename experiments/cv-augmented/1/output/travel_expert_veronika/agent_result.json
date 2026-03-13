@@ -1,0 +1,163 @@
+{
+  "session_id": "travel_expert_veronika",
+  "status": "success",
+  "metrics": {
+    "session_id": "travel_expert_veronika",
+    "baseline_count": 75,
+    "experiment_count": 57,
+    "matched_count": 23,
+    "precision": 0.40350877192982454,
+    "recall": 0.30666666666666664,
+    "f1": 0.3484848484848485,
+    "mean_description_similarity": 0.7083760182529243,
+    "mean_start_error_ms": 955.0105101449425,
+    "mean_end_error_ms": 1693.82711884059,
+    "per_type": [
+      {
+        "type": "change_ui_state",
+        "baseline_count": 22,
+        "experiment_count": 12,
+        "matched": 3,
+        "precision": 0.25,
+        "recall": 0.1364,
+        "f1": 0.1765
+      },
+      {
+        "type": "click",
+        "baseline_count": 13,
+        "experiment_count": 4,
+        "matched": 3,
+        "precision": 0.75,
+        "recall": 0.2308,
+        "f1": 0.3529
+      },
+      {
+        "type": "dwell",
+        "baseline_count": 0,
+        "experiment_count": 15,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hover",
+        "baseline_count": 10,
+        "experiment_count": 2,
+        "matched": 1,
+        "precision": 0.5,
+        "recall": 0.1,
+        "f1": 0.1667
+      },
+      {
+        "type": "input_text",
+        "baseline_count": 6,
+        "experiment_count": 4,
+        "matched": 4,
+        "precision": 1.0,
+        "recall": 0.6667,
+        "f1": 0.8
+      },
+      {
+        "type": "navigate",
+        "baseline_count": 11,
+        "experiment_count": 13,
+        "matched": 6,
+        "precision": 0.4615,
+        "recall": 0.5455,
+        "f1": 0.5
+      },
+      {
+        "type": "scroll",
+        "baseline_count": 8,
+        "experiment_count": 4,
+        "matched": 4,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667
+      },
+      {
+        "type": "select",
+        "baseline_count": 5,
+        "experiment_count": 3,
+        "matched": 2,
+        "precision": 0.6667,
+        "recall": 0.4,
+        "f1": 0.5
+      }
+    ],
+    "f1_pass": true,
+    "recall_pass": true,
+    "precision_pass": true
+  },
+  "qualitative": {
+    "overall_severity": "systematic",
+    "summary": "The experiment introduces 15 'dwell' events (absent from baseline) representing user attention/reading moments, while systematically missing the majority of click (10/13), hover (9/10), and change_ui_state (19/22) events. High-value transactional events — navigate, input_text, scroll, and select — are captured at acceptable quality, meaning the broad session narrative is preserved but fine-grained interaction detail is largely lost.",
+    "issues": [
+      {
+        "category": "hallucinated_events",
+        "severity": "systematic",
+        "description": "15 'dwell' events generated with no counterpart in the baseline. These track reading/attention behaviour (e.g. reading instructions, examining flight results) that the baseline annotator never recorded as discrete events. They inflate the experiment event count and consume matching budget without contributing to recall.",
+        "affected_events": [1, 3, 7, 10, 13, 19, 21, 24, 26, 31, 33, 36, 39, 47, 49],
+        "examples": [
+          "Exp idx 1: 'dwell' at 33642ms — 'User is reading the on-screen instructions' (no baseline dwell type exists)",
+          "Exp idx 36: 'dwell' at 213688ms — 'User is examining the flight search results' (baseline has no corresponding event)"
+        ]
+      },
+      {
+        "category": "missing_events",
+        "severity": "systematic",
+        "description": "Only 3 of 13 baseline click events matched. The experiment consistently misses clicks on input fields, filter checkboxes, and intermediate navigation controls. Notable missing clicks: 'From' input activation (baseline idx 22, t=173771ms), 'To' input activation (baseline idx 33, t=181271ms), two '2+ stops' filter toggling clicks (baseline idx 47/49, t=236960/239660ms), 'Select' flight button (baseline idx 45, t=223060ms), and Booking.com destination field click (baseline idx 54, t=300400ms).",
+        "affected_events": [22, 33, 45, 47, 49, 54],
+        "examples": [
+          "Baseline idx 47: click '2+ stops' checkbox at 236960ms — completely absent from experiment",
+          "Baseline idx 49: click '2+ stops' checkbox again at 239660ms to restore results — absent from experiment"
+        ]
+      },
+      {
+        "category": "missing_events",
+        "severity": "systematic",
+        "description": "Only 1 of 10 baseline hover events matched. The experiment nearly entirely omits cursor-positioning behaviour before clicks (hover over 'Open' button, hover over search fields, hover over 'Select' button, hover over sidebar filters, hover over Trello cards). The one matched hover (Trello cards, baseline idx 57) was detected correctly.",
+        "affected_events": [2, 5, 19, 20, 27, 35, 39, 43, 57],
+        "examples": [
+          "Baseline idx 19/20: hover over 'From' field (152831ms) and 'Search' button (158831ms) — both missing",
+          "Baseline idx 39: hover over 'Select' button at 222621ms — missing despite being right before a key click"
+        ]
+      },
+      {
+        "category": "missing_events",
+        "severity": "systematic",
+        "description": "Only 3 of 22 baseline change_ui_state events matched. The experiment misses most dropdown appearances (autocomplete on Google, Skyscanner From/To dropdowns, Booking.com suggestions), loading states (flight skeleton screens, Searching overlays), and the result-expansion after clicking Select. This erases a whole layer of reactive UI feedback from the extracted record.",
+        "affected_events": [0, 1, 11, 15, 22, 24, 26, 30, 32, 34, 38, 41, 42, 45, 47, 53, 55, 63, 67, 75],
+        "examples": [
+          "Baseline idx 11: Google autocomplete suggestions appear at 102181ms — missing",
+          "Baseline idx 42: flight result card expands after click at 223060ms — missing"
+        ]
+      },
+      {
+        "category": "missing_events",
+        "severity": "acceptable",
+        "description": "Two input_text events missed: the long think-aloud response to the task prompt typed during 95681–148831ms (baseline idx 8 and 16), and the short 'sk' typed into the Google search bar (baseline idx 10). The experiment merges the Google typing into a single 'skyscanner' input and entirely misses the think-aloud prompt responses (replacing them with dwell events).",
+        "affected_events": [8, 10, 16],
+        "examples": [
+          "Baseline idx 8: input_text 95681–101381ms typing initial think-aloud response — replaced by dwell in experiment",
+          "Baseline idx 16: input_text 106781–148831ms typing long travel planning response — replaced by dwell in experiment"
+        ]
+      },
+      {
+        "category": "timing_error",
+        "severity": "noise",
+        "description": "Mean start error of ~955ms across matched events is within acceptable range. A few matched events show 1–2s offsets (e.g. navigate to Booking.com: baseline 289664ms vs experiment 289664ms; Booking.com search click: baseline 307800ms vs experiment 312654ms ~4.8s offset). The Booking.com search click offset approaches critical but is isolated.",
+        "affected_events": [69],
+        "examples": [
+          "Baseline idx 69: click 'Search' on Booking.com at 307800ms; experiment has it at 312654ms (~4.8s later)"
+        ]
+      }
+    ],
+    "noise_fraction": 0.1,
+    "acceptable_fraction": 0.15,
+    "systematic_fraction": 0.65,
+    "critical_fraction": 0.1
+  },
+  "error": null
+}

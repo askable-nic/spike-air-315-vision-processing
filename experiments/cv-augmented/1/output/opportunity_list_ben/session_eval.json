@@ -1,0 +1,111 @@
+{
+  "session_id": "opportunity_list_ben",
+  "metrics": {
+    "session_id": "opportunity_list_ben",
+    "baseline_count": 140,
+    "experiment_count": 119,
+    "matched_count": 46,
+    "precision": 0.3865546218487395,
+    "recall": 0.32857142857142857,
+    "f1": 0.3552123552123552,
+    "mean_description_similarity": 0.6006393828175477,
+    "mean_start_error_ms": 1267.650039337476,
+    "mean_end_error_ms": 1108.0744389234005,
+    "per_type": [
+      {
+        "type": "change_ui_state",
+        "baseline_count": 17,
+        "experiment_count": 20,
+        "matched": 4,
+        "precision": 0.2,
+        "recall": 0.2353,
+        "f1": 0.2162
+      },
+      {
+        "type": "click",
+        "baseline_count": 28,
+        "experiment_count": 3,
+        "matched": 3,
+        "precision": 1.0,
+        "recall": 0.1071,
+        "f1": 0.1935
+      },
+      {
+        "type": "dwell",
+        "baseline_count": 0,
+        "experiment_count": 25,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hover",
+        "baseline_count": 24,
+        "experiment_count": 12,
+        "matched": 4,
+        "precision": 0.3333,
+        "recall": 0.1667,
+        "f1": 0.2222
+      },
+      {
+        "type": "input_text",
+        "baseline_count": 14,
+        "experiment_count": 0,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "navigate",
+        "baseline_count": 31,
+        "experiment_count": 38,
+        "matched": 25,
+        "precision": 0.6579,
+        "recall": 0.8065,
+        "f1": 0.7246
+      },
+      {
+        "type": "scroll",
+        "baseline_count": 25,
+        "experiment_count": 19,
+        "matched": 9,
+        "precision": 0.4737,
+        "recall": 0.36,
+        "f1": 0.4091
+      },
+      {
+        "type": "select",
+        "baseline_count": 1,
+        "experiment_count": 2,
+        "matched": 1,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6667
+      }
+    ],
+    "f1_pass": true,
+    "recall_pass": true,
+    "precision_pass": true
+  },
+  "qualitative": null,
+  "cumulative": {
+    "sessions_completed": 1,
+    "cumulative_f1": 0.3552123552123552,
+    "cumulative_recall": 0.32857142857142857,
+    "cumulative_precision": 0.3865546218487395,
+    "cumulative_matched": 46,
+    "cumulative_baseline": 140,
+    "cumulative_experiment": 119,
+    "f1_trend": "stable",
+    "f1_history": [
+      0.3552123552123552
+    ]
+  },
+  "break_decision": {
+    "should_break": false,
+    "reason": "too_early",
+    "explanation": "Only 1 sessions completed, minimum is 2."
+  }
+}

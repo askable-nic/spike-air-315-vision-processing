@@ -1,0 +1,171 @@
+{
+  "session_id": "cfs_home_loan_sasha",
+  "status": "success",
+  "metrics": {
+    "session_id": "cfs_home_loan_sasha",
+    "baseline_count": 187,
+    "experiment_count": 162,
+    "matched_count": 73,
+    "precision": 0.4506172839506173,
+    "recall": 0.39037433155080214,
+    "f1": 0.41833810888252154,
+    "mean_description_similarity": 0.6729856518359861,
+    "mean_start_error_ms": 1285.844748858447,
+    "mean_end_error_ms": 1510.502283105022,
+    "per_type": [
+      {
+        "type": "change_ui_state",
+        "baseline_count": 33,
+        "experiment_count": 12,
+        "matched": 7,
+        "precision": 0.5833,
+        "recall": 0.2121,
+        "f1": 0.3111
+      },
+      {
+        "type": "click",
+        "baseline_count": 32,
+        "experiment_count": 18,
+        "matched": 11,
+        "precision": 0.6111,
+        "recall": 0.3438,
+        "f1": 0.44
+      },
+      {
+        "type": "dwell",
+        "baseline_count": 0,
+        "experiment_count": 26,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hesitate",
+        "baseline_count": 3,
+        "experiment_count": 0,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hover",
+        "baseline_count": 42,
+        "experiment_count": 17,
+        "matched": 9,
+        "precision": 0.5294,
+        "recall": 0.2143,
+        "f1": 0.3051
+      },
+      {
+        "type": "input_text",
+        "baseline_count": 11,
+        "experiment_count": 7,
+        "matched": 7,
+        "precision": 1.0,
+        "recall": 0.6364,
+        "f1": 0.7778
+      },
+      {
+        "type": "navigate",
+        "baseline_count": 26,
+        "experiment_count": 42,
+        "matched": 22,
+        "precision": 0.5238,
+        "recall": 0.8462,
+        "f1": 0.6471
+      },
+      {
+        "type": "scroll",
+        "baseline_count": 28,
+        "experiment_count": 30,
+        "matched": 14,
+        "precision": 0.4667,
+        "recall": 0.5,
+        "f1": 0.4828
+      },
+      {
+        "type": "select",
+        "baseline_count": 12,
+        "experiment_count": 10,
+        "matched": 3,
+        "precision": 0.3,
+        "recall": 0.25,
+        "f1": 0.2727
+      }
+    ],
+    "f1_pass": true,
+    "recall_pass": true,
+    "precision_pass": true
+  },
+  "qualitative": {
+    "overall_severity": "systematic",
+    "summary": "The experiment consistently replaces idle/reading periods with a fabricated 'dwell' event type that does not exist in the baseline, accounting for 26 spurious events. Hover events are severely under-detected (9/42 matched, recall 21%) and hesitate events are entirely absent, suggesting the model does not resolve fine-grained cursor behaviours. Navigate events are over-generated (42 vs 26 baseline), often splitting single navigations or appending redundant entries after page loads.",
+    "issues": [
+      {
+        "category": "hallucinated_events",
+        "severity": "systematic",
+        "description": "The experiment generates 26 'dwell' events (precision 0.0, recall 0.0) that have no counterpart in the baseline. These cover extended idle periods (e.g. 4200–46200ms reading task instructions, 55233–57233ms reading search results) but 'dwell' is not a recognised event type in the baseline schema. These events inflate experiment count while contributing nothing to matched events.",
+        "affected_events": [1, 3, 8, 11],
+        "examples": [
+          "Experiment event 3: dwell 4200–46200ms 'User is reading task instructions' — baseline has no equivalent dwell, the period is simply unannotated idle time",
+          "Experiment event 8: dwell 55233–57233ms 'User pauses to read search results' — baseline has no equivalent"
+        ]
+      },
+      {
+        "category": "missing_events",
+        "severity": "systematic",
+        "description": "Hover events are severely under-detected: only 9 of 42 baseline hovers are matched (recall 21.4%). The experiment captures a small fraction of deliberate cursor pauses over links and UI elements. All 3 baseline 'hesitate' events are also completely absent from the experiment output.",
+        "affected_events": [7, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+        "examples": [
+          "Baseline: hover at 55000–56000ms over 'Repayment calculator' link — experiment has no match at that timestamp",
+          "Baseline: hover at 66075–70975ms over Unloan result — experiment matches roughly but with ~3s timing offset",
+          "Baseline: hesitate at 50350–53150ms 'Sasha pauses after typing' — entirely absent in experiment"
+        ]
+      },
+      {
+        "category": "missing_events",
+        "severity": "systematic",
+        "description": "change_ui_state events are severely under-detected: only 7 of 33 matched (recall 21%). The experiment misses modal appearances, dropdown activations, and page-state transitions that the baseline annotates.",
+        "affected_events": [0, 1, 3, 5],
+        "examples": [
+          "Baseline event 1: change_ui_state 3850–4000ms 'Task description modal appears' — experiment has change_ui_state at 4200ms (offset 350ms, acceptable on its own but typical of broader under-detection pattern)",
+          "Baseline event 5: change_ui_state 49000–49100ms 'Autocomplete dropdown appears' — no equivalent in experiment"
+        ]
+      },
+      {
+        "category": "hallucinated_events",
+        "severity": "systematic",
+        "description": "Navigate events are over-generated (42 experiment vs 26 baseline). The experiment frequently appends extra navigate events after page loads or duplicates a single navigation. For example, around the Unloan click the experiment generates two separate click+navigate sequences (at 73266ms and again at 76266ms) where the baseline records only one.",
+        "affected_events": [12, 13, 14, 15],
+        "examples": [
+          "Experiment events 12–15: two hover+click+navigate sequences at ~73266ms and ~76266ms for the Unloan link — baseline records a single click at 70975ms"
+        ]
+      },
+      {
+        "category": "type_mismatch",
+        "severity": "acceptable",
+        "description": "Select events are poorly captured (3/12 matched, F1 0.27). Several baseline 'select' events (e.g. selecting autocomplete suggestion) are represented in the experiment as 'navigate' or are absent, indicating a type confusion between selection and the navigation it triggers.",
+        "affected_events": [8],
+        "examples": [
+          "Baseline: select at 53350ms 'Sasha selects home loans comparison from autocomplete' — experiment represents this only as navigate at 53233ms, omitting the select action itself"
+        ]
+      },
+      {
+        "category": "timing_error",
+        "severity": "noise",
+        "description": "Matched events show acceptable mean timing offsets (~1.3s start, ~1.5s end). Individual matched events occasionally differ by 1–3s, within the tolerable range for frame-sampled extraction.",
+        "affected_events": [],
+        "examples": [
+          "Baseline click at 70975ms vs experiment click at 73266ms: 2.3s offset — acceptable given frame sampling rate"
+        ]
+      }
+    ],
+    "noise_fraction": 0.05,
+    "acceptable_fraction": 0.15,
+    "systematic_fraction": 0.80,
+    "critical_fraction": 0.0
+  },
+  "error": null
+}

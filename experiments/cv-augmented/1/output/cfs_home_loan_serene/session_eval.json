@@ -1,0 +1,120 @@
+{
+  "session_id": "cfs_home_loan_serene",
+  "metrics": {
+    "session_id": "cfs_home_loan_serene",
+    "baseline_count": 98,
+    "experiment_count": 74,
+    "matched_count": 41,
+    "precision": 0.5540540540540541,
+    "recall": 0.41836734693877553,
+    "f1": 0.47674418604651164,
+    "mean_description_similarity": 0.6855590646704931,
+    "mean_start_error_ms": 1066.2601788617862,
+    "mean_end_error_ms": 1090.2520284552852,
+    "per_type": [
+      {
+        "type": "change_ui_state",
+        "baseline_count": 18,
+        "experiment_count": 4,
+        "matched": 2,
+        "precision": 0.5,
+        "recall": 0.1111,
+        "f1": 0.1818
+      },
+      {
+        "type": "click",
+        "baseline_count": 29,
+        "experiment_count": 9,
+        "matched": 7,
+        "precision": 0.7778,
+        "recall": 0.2414,
+        "f1": 0.3684
+      },
+      {
+        "type": "dwell",
+        "baseline_count": 0,
+        "experiment_count": 11,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hesitate",
+        "baseline_count": 1,
+        "experiment_count": 0,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "hover",
+        "baseline_count": 5,
+        "experiment_count": 0,
+        "matched": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "type": "input_text",
+        "baseline_count": 9,
+        "experiment_count": 10,
+        "matched": 6,
+        "precision": 0.6,
+        "recall": 0.6667,
+        "f1": 0.6316
+      },
+      {
+        "type": "navigate",
+        "baseline_count": 20,
+        "experiment_count": 23,
+        "matched": 16,
+        "precision": 0.6957,
+        "recall": 0.8,
+        "f1": 0.7442
+      },
+      {
+        "type": "scroll",
+        "baseline_count": 12,
+        "experiment_count": 11,
+        "matched": 7,
+        "precision": 0.6364,
+        "recall": 0.5833,
+        "f1": 0.6087
+      },
+      {
+        "type": "select",
+        "baseline_count": 4,
+        "experiment_count": 6,
+        "matched": 3,
+        "precision": 0.5,
+        "recall": 0.75,
+        "f1": 0.6
+      }
+    ],
+    "f1_pass": true,
+    "recall_pass": true,
+    "precision_pass": true
+  },
+  "qualitative": null,
+  "cumulative": {
+    "sessions_completed": 1,
+    "cumulative_f1": 0.47674418604651164,
+    "cumulative_recall": 0.41836734693877553,
+    "cumulative_precision": 0.5540540540540541,
+    "cumulative_matched": 41,
+    "cumulative_baseline": 98,
+    "cumulative_experiment": 74,
+    "f1_trend": "stable",
+    "f1_history": [
+      0.47674418604651164
+    ]
+  },
+  "break_decision": {
+    "should_break": false,
+    "reason": "too_early",
+    "explanation": "Only 1 sessions completed, minimum is 2."
+  }
+}
