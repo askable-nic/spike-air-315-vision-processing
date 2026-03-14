@@ -1,0 +1,342 @@
+{
+  "run_id": "2026-03-14_022252",
+  "timestamp": "2026-03-14T02:54:43.655600+00:00",
+  "config": {
+    "gemini": {
+      "api_key_env": "GEMINI_API_KEY",
+      "model": "gemini-3-flash-preview",
+      "temperature": 0.1,
+      "max_concurrent": 3
+    },
+    "video": {
+      "target_pixels": 2073600,
+      "video_fps": 20
+    },
+    "segmentation": {
+      "max_segment_duration_ms": 75000,
+      "segment_overlap_ms": 5000
+    },
+    "cursor": {
+      "tracking_base_fps": 2.0,
+      "tracking_peak_fps": 15.0,
+      "tracking_displacement_threshold_px": 30.0,
+      "tracking_active_padding_ms": 500,
+      "template_scales": [
+        0.8,
+        1.0,
+        1.25,
+        1.5
+      ],
+      "match_threshold": 0.6,
+      "early_exit_threshold": 0.9,
+      "max_interpolation_gap_ms": 500,
+      "smooth_window": 3,
+      "smooth_displacement_threshold": 10.0
+    },
+    "flow": {
+      "flow_fps": 2.0,
+      "flow_grid_step": 20,
+      "flow_window_size_ms": 1000,
+      "flow_window_step_ms": 500,
+      "resolution_height": 720
+    },
+    "cv_summary": {
+      "summary_window_ms": 250
+    },
+    "merge": {
+      "time_tolerance_ms": 2000,
+      "similarity_threshold": 0.7,
+      "cursor_event_types": [
+        "click",
+        "hover",
+        "dwell",
+        "cursor_thrash",
+        "select",
+        "drag"
+      ]
+    },
+    "token_costs": {
+      "gemini-2.5-flash": {
+        "input_token_cost": 3e-07,
+        "output_token_cost": 2.5e-06
+      },
+      "gemini-3-flash-preview": {
+        "input_token_cost": 5e-07,
+        "output_token_cost": 3e-06
+      }
+    }
+  },
+  "video_path": "/Users/nic/Developer/spike-air-315-vision-processing/input_data/screen_tracks/travel_learner_sophia_jayde.webm",
+  "video_duration_ms": 2220339.943,
+  "video_dimensions": {
+    "width": 1786,
+    "height": 1162
+  },
+  "screen_track_start_offset": 35600,
+  "stages_run": [
+    "normalize",
+    "cursor",
+    "flow",
+    "segment",
+    "prompt",
+    "gemini",
+    "merge"
+  ],
+  "stages_skipped": [],
+  "stop_after": null,
+  "segments": [
+    {
+      "index": 0,
+      "start_ms": 0.0,
+      "end_ms": 79011.33143333333,
+      "event_count": 3,
+      "input_tokens": 97598,
+      "output_tokens": 326
+    },
+    {
+      "index": 1,
+      "start_ms": 69011.33143333333,
+      "end_ms": 153022.66286666665,
+      "event_count": 15,
+      "input_tokens": 103756,
+      "output_tokens": 1667
+    },
+    {
+      "index": 2,
+      "start_ms": 143022.66286666665,
+      "end_ms": 227033.99429999996,
+      "event_count": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "error": "Unterminated string starting at: line 174 column 5 (char 7667)"
+    },
+    {
+      "index": 3,
+      "start_ms": 217033.99429999996,
+      "end_ms": 301045.3257333333,
+      "event_count": 12,
+      "input_tokens": 105822,
+      "output_tokens": 2272
+    },
+    {
+      "index": 4,
+      "start_ms": 291045.3257333333,
+      "end_ms": 375056.65716666664,
+      "event_count": 26,
+      "input_tokens": 102909,
+      "output_tokens": 2313
+    },
+    {
+      "index": 5,
+      "start_ms": 365056.65716666664,
+      "end_ms": 449067.9885999999,
+      "event_count": 5,
+      "input_tokens": 103047,
+      "output_tokens": 684
+    },
+    {
+      "index": 6,
+      "start_ms": 439067.9885999999,
+      "end_ms": 523079.32003333326,
+      "event_count": 3,
+      "input_tokens": 103163,
+      "output_tokens": 516
+    },
+    {
+      "index": 7,
+      "start_ms": 513079.32003333326,
+      "end_ms": 597090.6514666666,
+      "event_count": 3,
+      "input_tokens": 103851,
+      "output_tokens": 466
+    },
+    {
+      "index": 8,
+      "start_ms": 587090.6514666666,
+      "end_ms": 671101.9829,
+      "event_count": 1,
+      "input_tokens": 103786,
+      "output_tokens": 203
+    },
+    {
+      "index": 9,
+      "start_ms": 661101.9829,
+      "end_ms": 745113.3143333333,
+      "event_count": 28,
+      "input_tokens": 103357,
+      "output_tokens": 4863
+    },
+    {
+      "index": 10,
+      "start_ms": 735113.3143333333,
+      "end_ms": 819124.6457666666,
+      "event_count": 5,
+      "input_tokens": 102893,
+      "output_tokens": 838
+    },
+    {
+      "index": 11,
+      "start_ms": 809124.6457666666,
+      "end_ms": 893135.9771999998,
+      "event_count": 6,
+      "input_tokens": 103054,
+      "output_tokens": 637
+    },
+    {
+      "index": 12,
+      "start_ms": 883135.9771999998,
+      "end_ms": 967147.3086333332,
+      "event_count": 28,
+      "input_tokens": 104962,
+      "output_tokens": 2925
+    },
+    {
+      "index": 13,
+      "start_ms": 957147.3086333332,
+      "end_ms": 1041158.6400666665,
+      "event_count": 21,
+      "input_tokens": 103573,
+      "output_tokens": 2781
+    },
+    {
+      "index": 14,
+      "start_ms": 1031158.6400666665,
+      "end_ms": 1115169.9715,
+      "event_count": 13,
+      "input_tokens": 101876,
+      "output_tokens": 1744
+    },
+    {
+      "index": 15,
+      "start_ms": 1105169.9715,
+      "end_ms": 1189181.3029333332,
+      "event_count": 15,
+      "input_tokens": 102677,
+      "output_tokens": 1610
+    },
+    {
+      "index": 16,
+      "start_ms": 1179181.3029333332,
+      "end_ms": 1263192.6343666664,
+      "event_count": 19,
+      "input_tokens": 104426,
+      "output_tokens": 1518
+    },
+    {
+      "index": 17,
+      "start_ms": 1253192.6343666664,
+      "end_ms": 1337203.9658,
+      "event_count": 14,
+      "input_tokens": 102863,
+      "output_tokens": 1510
+    },
+    {
+      "index": 18,
+      "start_ms": 1327203.9658,
+      "end_ms": 1411215.297233333,
+      "event_count": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "error": "Unterminated string starting at: line 211 column 5 (char 7706)"
+    },
+    {
+      "index": 19,
+      "start_ms": 1401215.297233333,
+      "end_ms": 1485226.6286666666,
+      "event_count": 23,
+      "input_tokens": 103433,
+      "output_tokens": 2487
+    },
+    {
+      "index": 20,
+      "start_ms": 1475226.6286666666,
+      "end_ms": 1559237.9600999998,
+      "event_count": 20,
+      "input_tokens": 104604,
+      "output_tokens": 2166
+    },
+    {
+      "index": 21,
+      "start_ms": 1549237.9600999998,
+      "end_ms": 1633249.2915333332,
+      "event_count": 7,
+      "input_tokens": 102014,
+      "output_tokens": 1266
+    },
+    {
+      "index": 22,
+      "start_ms": 1623249.2915333332,
+      "end_ms": 1707260.6229666665,
+      "event_count": 20,
+      "input_tokens": 104388,
+      "output_tokens": 2721
+    },
+    {
+      "index": 23,
+      "start_ms": 1697260.6229666665,
+      "end_ms": 1781271.9543999997,
+      "event_count": 34,
+      "input_tokens": 106293,
+      "output_tokens": 3570
+    },
+    {
+      "index": 24,
+      "start_ms": 1771271.9543999997,
+      "end_ms": 1855283.2858333332,
+      "event_count": 3,
+      "input_tokens": 103274,
+      "output_tokens": 480
+    },
+    {
+      "index": 25,
+      "start_ms": 1845283.2858333332,
+      "end_ms": 1929294.6172666664,
+      "event_count": 16,
+      "input_tokens": 104865,
+      "output_tokens": 1801
+    },
+    {
+      "index": 26,
+      "start_ms": 1919294.6172666664,
+      "end_ms": 2003305.9486999998,
+      "event_count": 23,
+      "input_tokens": 104665,
+      "output_tokens": 3763
+    },
+    {
+      "index": 27,
+      "start_ms": 1993305.9486999998,
+      "end_ms": 2077317.280133333,
+      "event_count": 7,
+      "input_tokens": 102584,
+      "output_tokens": 1298
+    },
+    {
+      "index": 28,
+      "start_ms": 2067317.280133333,
+      "end_ms": 2151328.6115666665,
+      "event_count": 12,
+      "input_tokens": 107543,
+      "output_tokens": 1700
+    },
+    {
+      "index": 29,
+      "start_ms": 2141328.6115666665,
+      "end_ms": 2220339.943,
+      "event_count": 5,
+      "input_tokens": 96188,
+      "output_tokens": 498
+    }
+  ],
+  "cv_analysis": {
+    "cursor_detections": 9948,
+    "cursor_detected": 3634,
+    "flow_windows": 2317
+  },
+  "events_merged": 387,
+  "events_final": 344,
+  "total_input_tokens": 2893464,
+  "total_output_tokens": 48623,
+  "analysis_time_ms": 1033713.3,
+  "total_time_ms": 1911332.8
+}

@@ -1,0 +1,1377 @@
+[
+  {
+    "type": "scroll",
+    "time_start": 357848.0,
+    "time_end": 380848.0,
+    "description": "User scrolls through the task description on the Askable Sessions page, likely reading the instructions.",
+    "confidence": 0.9,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The screen displays a task description for a user testing session on a dark background."
+  },
+  {
+    "type": "scroll",
+    "time_start": 382848.0,
+    "time_end": 398348.0,
+    "description": "User continues scrolling to read the remainder of the task description.",
+    "confidence": 0.9,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user is reading the task instructions which involve booking a flight on the Flight Centre website."
+  },
+  {
+    "type": "click",
+    "time_start": 400048.0,
+    "time_end": 400798.0,
+    "description": "User clicks the 'Open' button at the bottom of the task description to launch the test website.",
+    "confidence": 1.0,
+    "interaction_target": "Open button",
+    "cursor_position": {
+      "x": 770.0,
+      "y": 348.7
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor moves to and activates the 'Open' button located at the bottom center of the page."
+  },
+  {
+    "type": "navigate",
+    "time_start": 400798.0,
+    "time_end": 401898.0,
+    "description": "A new browser tab opens, initially showing about:blank before redirecting to the Flight Centre website.",
+    "confidence": 1.0,
+    "page_title": "about:blank",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "A new browser tab is opened and is currently blank as it begins to load the target URL."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 401898.0,
+    "time_end": 403198.0,
+    "description": "The Flight Centre homepage begins to load, showing the site header and skeleton loaders for the main content area.",
+    "confidence": 1.0,
+    "page_title": "Flight Centre Travel Deals - Book Flights, Hotels & Holidays",
+    "page_location": "https://www.flightcentre.com.au/",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The Flight Centre website header is visible, while the rest of the page content is represented by loading placeholders."
+  },
+  {
+    "type": "scroll",
+    "time_start": 409848.0,
+    "time_end": 410848.0,
+    "description": "Significant horizontal movement detected as the page content renders and the layout settles.",
+    "confidence": 0.7,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The Flight Centre homepage content is populating, causing some layout shifts."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 415698.0,
+    "time_end": 419586.0,
+    "description": "The date picker calendar opens, and a promotional popup for the loyalty program appears over the search widget.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "A calendar interface is visible for date selection, with a 'World360' promotional modal appearing on top of it."
+  },
+  {
+    "type": "click",
+    "time_start": 414048.0,
+    "time_end": 415698.0,
+    "description": "User clicks on the date selection field within the flight search widget to choose travel dates.",
+    "confidence": 0.9,
+    "interaction_target": "Date selection field",
+    "cursor_position": {
+      "x": 1760.8,
+      "y": 944.9
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor is positioned over the date input field in the search widget on the homepage."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 415636.8346666667,
+    "time_end": 415736.8346666667,
+    "description": "A promotional ad overlay for a loyalty program appears over the calendar modal.",
+    "confidence": 0.9,
+    "interaction_target": "Promotional ad overlay",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "A red and white ad for 'World360' loyalty program covers the calendar content."
+  },
+  {
+    "type": "click",
+    "time_start": 420086.8346666667,
+    "time_end": 420186.8346666667,
+    "description": "The user clicks the close button (X) on the promotional ad overlay.",
+    "confidence": 0.9,
+    "interaction_target": "Close button (X)",
+    "cursor_position": {
+      "x": 717.7,
+      "y": 561.4
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor is positioned over the 'X' in the top right corner of the ad overlay."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 420586.8346666667,
+    "time_end": 420686.8346666667,
+    "description": "The promotional ad overlay disappears, revealing the calendar modal again.",
+    "confidence": 0.9,
+    "interaction_target": "Promotional ad overlay",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The ad is gone, and the February/March 2026 calendar is visible again."
+  },
+  {
+    "type": "click",
+    "time_start": 424586.8346666667,
+    "time_end": 424686.8346666667,
+    "description": "The user clicks on the 'One way' tab within the travel dates modal.",
+    "confidence": 0.9,
+    "interaction_target": "One way tab",
+    "cursor_position": {
+      "x": 1040.8,
+      "y": 341.7
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor clicks the 'One way' button at the top of the modal."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 424686.8346666667,
+    "time_end": 424786.8346666667,
+    "description": "The modal state changes to 'One way' selection mode.",
+    "confidence": 0.9,
+    "interaction_target": "Travel dates modal",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The 'One way' button is highlighted in blue."
+  },
+  {
+    "type": "hover",
+    "time_start": 424836.8346666667,
+    "time_end": 424986.8346666667,
+    "description": "The user hovers the cursor over February 5th in the calendar.",
+    "confidence": 0.7,
+    "interaction_target": "February 5th",
+    "cursor_position": {
+      "x": 1040.8,
+      "y": 341.7
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor pauses briefly over the number 5 in the February calendar."
+  },
+  {
+    "type": "hover",
+    "time_start": 429186.8346666667,
+    "time_end": 429386.8346666667,
+    "description": "The user hovers the cursor over February 19th in the calendar.",
+    "confidence": 0.7,
+    "interaction_target": "February 19th",
+    "cursor_position": {
+      "x": 1796.2,
+      "y": 957.7
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor pauses over the number 19."
+  },
+  {
+    "type": "select",
+    "time_start": 430986.8346666667,
+    "time_end": 431086.8346666667,
+    "description": "The user selects February 18th as the departure date.",
+    "confidence": 0.9,
+    "interaction_target": "February 18th",
+    "cursor_position": {
+      "x": 1043.7,
+      "y": 341.7
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The number 18 is highlighted in black to indicate selection."
+  },
+  {
+    "type": "hover",
+    "time_start": 433186.8346666667,
+    "time_end": 433386.8346666667,
+    "description": "The user hovers the cursor over February 21st in the calendar.",
+    "confidence": 0.7,
+    "interaction_target": "February 21st",
+    "cursor_position": {
+      "x": 1043.7,
+      "y": 341.7
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor pauses over the number 21."
+  },
+  {
+    "type": "select",
+    "time_start": 434536.8346666667,
+    "time_end": 434636.8346666667,
+    "description": "The user selects February 21st as the return date.",
+    "confidence": 0.9,
+    "interaction_target": "February 21st",
+    "cursor_position": {
+      "x": 1043.7,
+      "y": 341.7
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The number 21 is highlighted, and the range between 18 and 21 is shaded."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 434636.8346666667,
+    "time_end": 434736.8346666667,
+    "description": "The modal state automatically changes back to 'Return' selection mode after picking a second date.",
+    "confidence": 0.9,
+    "interaction_target": "Return tab",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The 'Return' button at the top of the modal is now highlighted in blue."
+  },
+  {
+    "type": "hover",
+    "time_start": 436236.8346666667,
+    "time_end": 436336.8346666667,
+    "description": "The user hovers the cursor over March 10th in the calendar.",
+    "confidence": 0.7,
+    "interaction_target": "March 10th",
+    "cursor_position": {
+      "x": 1043.7,
+      "y": 341.7
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor moves to the March calendar and pauses over the number 10."
+  },
+  {
+    "type": "click",
+    "time_start": 437486.8346666667,
+    "time_end": 437586.8346666667,
+    "description": "The user clicks the 'Done' button to confirm the selected dates.",
+    "confidence": 0.9,
+    "interaction_target": "Done button",
+    "cursor_position": {
+      "x": 1042.4,
+      "y": 341.7
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor clicks the blue 'Done' button in the bottom right of the modal."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 438736.8346666667,
+    "time_end": 438836.8346666667,
+    "description": "The travel dates modal closes, returning the user to the main search form.",
+    "confidence": 0.9,
+    "interaction_target": "Travel dates modal",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The modal disappears, and the main Flight Centre search page is visible with the selected dates populated."
+  },
+  {
+    "type": "hover",
+    "time_start": 441136.8346666667,
+    "time_end": 441336.8346666667,
+    "description": "The user hovers over the 'From' field which currently shows 'Sydney, Australia'.",
+    "confidence": 0.7,
+    "interaction_target": "Origin field",
+    "cursor_position": {
+      "x": 814.1,
+      "y": 757.2
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor pauses over the origin input field."
+  },
+  {
+    "type": "hover",
+    "time_start": 445836.8346666667,
+    "time_end": 446036.8346666667,
+    "description": "The user hovers over the 'Where to?' destination search field.",
+    "confidence": 0.7,
+    "interaction_target": "Destination field",
+    "cursor_position": {
+      "x": 833.3,
+      "y": 792.6
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor pauses over the destination input field."
+  },
+  {
+    "type": "click",
+    "time_start": 447336.8346666667,
+    "time_end": 447436.8346666667,
+    "description": "The user clicks into the 'Where to?' field to search for a destination.",
+    "confidence": 0.9,
+    "interaction_target": "Destination field",
+    "cursor_position": {
+      "x": 1333.1,
+      "y": 821.7
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor clicks inside the 'Where to?' input box."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 447436.8346666667,
+    "time_end": 447536.8346666667,
+    "description": "A dropdown menu with popular destination suggestions appears below the search field.",
+    "confidence": 0.9,
+    "interaction_target": "Destination dropdown",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "A list of popular cities like Sydney, Melbourne, and Brisbane appears below the input field."
+  },
+  {
+    "type": "hover",
+    "time_start": 448836.8346666667,
+    "time_end": 448986.8346666667,
+    "description": "The user hovers over 'Sydney, Australia' in the popular destinations list.",
+    "confidence": 0.7,
+    "interaction_target": "Sydney suggestion",
+    "cursor_position": {
+      "x": 1831.1,
+      "y": 951.9
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor moves over the first item in the dropdown list."
+  },
+  {
+    "type": "select",
+    "time_start": 450036.8346666667,
+    "time_end": 450136.8346666667,
+    "description": "The user selects 'Melbourne, Australia' from the suggested destinations.",
+    "confidence": 0.9,
+    "interaction_target": "Melbourne suggestion",
+    "cursor_position": {
+      "x": 1831.1,
+      "y": 951.9
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user clicks on the Melbourne entry in the dropdown."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 450136.8346666667,
+    "time_end": 450236.8346666667,
+    "description": "The destination dropdown closes and the search field is updated with the selection.",
+    "confidence": 0.9,
+    "interaction_target": "Destination field",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The dropdown disappears, and 'Melbourne, Australia' is now visible in the destination field."
+  },
+  {
+    "type": "click",
+    "time_start": 469736.8346666667,
+    "time_end": 469836.8346666667,
+    "description": "The user clicks the 'Search flights' button to initiate the search.",
+    "confidence": 0.9,
+    "interaction_target": "Search flights button",
+    "cursor_position": {
+      "x": 1796.2,
+      "y": 957.7
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor clicks the large blue 'Search flights' button."
+  },
+  {
+    "type": "navigate",
+    "time_start": 470786.8346666667,
+    "time_end": 471436.8346666667,
+    "description": "The browser begins navigating to the flight search results page.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre Australia",
+    "page_location": "https://secure.flightcentre.com.au/search/SYD-A/MEL-A/20260218/20260221/1/0/0/ECONOMY",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The screen goes white as the new page starts to load."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 471436.8346666667,
+    "time_end": 472086.8346666667,
+    "description": "A loading skeleton screen appears while the search results are being fetched.",
+    "confidence": 0.9,
+    "interaction_target": "Loading skeleton",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "Grey placeholder boxes and a loading spinner are visible on the page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 474825.6693333333,
+    "time_end": 476475.6693333333,
+    "description": "The search results page begins loading, showing a red header and a white content area.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "secure.flightcentre.com.au/AAXY9kh1/results",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "Red header with Flight Centre logo and search parameters (MEL to SYD, 1 Adult, Economy) over a white background."
+  },
+  {
+    "type": "scroll",
+    "time_start": 475847.6693333333,
+    "time_end": 477347.6693333333,
+    "description": "The page content shifts horizontally as the layout initializes.",
+    "confidence": 0.8,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The white content area is visible below the red header."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 476475.6693333333,
+    "time_end": 490025.6693333333,
+    "description": "A loading screen appears with the message 'Our overhead compartments are stuffed with deals!' and a cycling animation of airline logos.",
+    "confidence": 0.9,
+    "interaction_target": "Loading Overlay",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "'Our overhead compartments are stuffed with deals!' text with airline logos cycling below (Air Canada, Air New Zealand, ANA, Etihad)."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 490025.6693333333,
+    "time_end": 490125.6693333333,
+    "description": "The flight search results for the departing leg (Sydney to Melbourne) are fully loaded and displayed.",
+    "confidence": 0.9,
+    "interaction_target": "Search Results",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "List of flights from SYD to MEL on Wednesday 18 Feb."
+  },
+  {
+    "type": "hover",
+    "time_start": 512225.6693333333,
+    "time_end": 513975.6693333333,
+    "description": "The user hovers the cursor over the price button for flight QF401.",
+    "confidence": 0.8,
+    "interaction_target": "From $307 button",
+    "cursor_position": null,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "Cursor moves to the blue price button for the first flight result."
+  },
+  {
+    "type": "click",
+    "time_start": 513975.6693333333,
+    "time_end": 514025.6693333333,
+    "description": "The user clicks on the price button for flight QF401 to view fare options.",
+    "confidence": 0.9,
+    "interaction_target": "From $307 button",
+    "cursor_position": {
+      "x": 1580.6,
+      "y": 909.4
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The button is clicked, initiating a UI expansion."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 514025.6693333333,
+    "time_end": 514425.6693333333,
+    "description": "The 'Select Departing Fare Type' section expands below the selected flight, showing 'Red Edeal' and 'Economy Flex' options.",
+    "confidence": 0.9,
+    "interaction_target": "Fare Type Selection Panel",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "Two fare cards appear below the Qantas flight details."
+  },
+  {
+    "type": "hover",
+    "time_start": 521325.6693333333,
+    "time_end": 522425.6693333333,
+    "description": "The user hovers over the 'SELECT' button for the 'Red Edeal' fare type.",
+    "confidence": 0.8,
+    "interaction_target": "SELECT button (Red Edeal)",
+    "cursor_position": {
+      "x": 1583.5,
+      "y": 883.3
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "Cursor is positioned over the blue select button for the $307 fare."
+  },
+  {
+    "type": "click",
+    "time_start": 522425.6693333333,
+    "time_end": 522475.6693333333,
+    "description": "The user selects the 'Red Edeal' fare for the departing flight.",
+    "confidence": 0.9,
+    "interaction_target": "SELECT button (Red Edeal)",
+    "cursor_position": {
+      "x": 1583.5,
+      "y": 883.3
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The select button is clicked."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 522475.6693333333,
+    "time_end": 523325.6693333333,
+    "description": "The 'SELECT' button updates to a green checkmark, indicating the fare has been chosen.",
+    "confidence": 0.9,
+    "interaction_target": "Select Button",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The blue button turns green with a white checkmark."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 528075.6693333334,
+    "time_end": 528175.6693333334,
+    "description": "A 'Good choice!' overlay appears, informing the user it is time to choose the return journey.",
+    "confidence": 0.9,
+    "interaction_target": "Transition Overlay",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "A white overlay with 'Good choice!' and 'It's time to choose your flight for your return journey...' text."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 528175.6693333334,
+    "time_end": 534725.6693333334,
+    "description": "A loading spinner appears as the system fetches return flight results.",
+    "confidence": 0.9,
+    "interaction_target": "Loading Spinner",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "A blue circular loading spinner is visible in the center of the screen."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 534725.6693333334,
+    "time_end": 534825.6693333334,
+    "description": "The return flight search results (Melbourne to Sydney) are displayed.",
+    "confidence": 0.9,
+    "interaction_target": "Return Search Results",
+    "page_location": "secure.flightcentre.com.au/AAXY9kh1/results#inbound",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "'Select Return Flight' header with flights from MEL to SYD on Saturday 21 Feb."
+  },
+  {
+    "type": "scroll",
+    "time_start": 540925.6693333334,
+    "time_end": 550047.6693333334,
+    "description": "The user scrolls down through the list of return flight options.",
+    "confidence": 0.9,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user scrolls past the first few return flight results."
+  },
+  {
+    "type": "scroll",
+    "time_start": 553847.504,
+    "time_end": 554847.504,
+    "description": "User scrolls down the search results page to view more flight options.",
+    "confidence": 0.85,
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kH/results#inbound",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "Search results page showing multiple flight options for Melbourne to Sydney."
+  },
+  {
+    "type": "click",
+    "time_start": 554714.504,
+    "time_end": 554814.504,
+    "description": "User clicks on the 6:00 AM Virgin Australia flight to select it.",
+    "confidence": 0.95,
+    "interaction_target": "Virgin Australia flight row (6:00 AM MEL to SYD)",
+    "cursor_position": {
+      "x": 628.2,
+      "y": 548.0
+    },
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kH/results#inbound",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user selects a specific Virgin Australia flight from the list."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 554964.504,
+    "time_end": 555114.504,
+    "description": "The 'Select Returning Fare Type' options expand below the selected flight.",
+    "confidence": 0.9,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "Fare options (Lite, Choice, Flex) expand below the selected flight."
+  },
+  {
+    "type": "hover",
+    "time_start": 555114.504,
+    "time_end": 558347.504,
+    "description": "User hovers over the 'Lite' fare option to review its inclusions.",
+    "confidence": 0.85,
+    "interaction_target": "Lite fare option card",
+    "cursor_position": {
+      "x": 859.5,
+      "y": 824.6
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user compares the inclusions of the Lite, Choice, and Flex fare types."
+  },
+  {
+    "type": "click",
+    "time_start": 563414.504,
+    "time_end": 563514.504,
+    "description": "User clicks the SELECT button for the $157 Lite fare.",
+    "confidence": 0.95,
+    "interaction_target": "SELECT button for Lite fare",
+    "cursor_position": null,
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kH/results#inbound",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user clicks the SELECT button for the Lite fare option."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 563564.504,
+    "time_end": 578714.504,
+    "description": "A loading overlay appears with the text 'All Set! Now let's review your flight selections...' and a spinner.",
+    "confidence": 0.95,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "A loading screen with the message 'All Set! Now let's review your flight selections...' is displayed."
+  },
+  {
+    "type": "navigate",
+    "time_start": 578714.504,
+    "time_end": 584714.504,
+    "description": "Page navigates to the 'Review trip' summary page.",
+    "confidence": 0.95,
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kH/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The 'Review trip' page appears, showing the selected departing and returning flights."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 584714.504,
+    "time_end": 585064.504,
+    "description": "The price summary panel loads and appears on the right side of the page.",
+    "confidence": 0.9,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The price summary panel appears on the right side of the review page."
+  },
+  {
+    "type": "scroll",
+    "time_start": 611347.3386666666,
+    "time_end": 612347.3386666666,
+    "description": "User scrolls down the page to review flight details and available add-ons.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre Travel Details",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kh1/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user is on the 'Review trip' page, looking at flight details for a trip from Melbourne to Sydney."
+  },
+  {
+    "type": "scroll",
+    "time_start": 617347.3386666666,
+    "time_end": 618347.3386666666,
+    "description": "User scrolls further down to the 'Add-ons' section of the page.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre Travel Details",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kh1/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user scrolls past the flight summary to the 'Add-ons' section, specifically looking at the 'Seats' option."
+  },
+  {
+    "type": "hover",
+    "time_start": 618514.3386666666,
+    "time_end": 619747.3386666666,
+    "description": "User hovers over the 'SELECT SEATS' button.",
+    "confidence": 0.9,
+    "interaction_target": "SELECT SEATS button",
+    "cursor_position": {
+      "x": 1389.4,
+      "y": 940.2
+    },
+    "page_title": "Flight Centre Travel Details",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kh1/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor pauses over the blue 'SELECT SEATS' button in the Seats section."
+  },
+  {
+    "type": "click",
+    "time_start": 619747.3386666666,
+    "time_end": 619914.3386666666,
+    "description": "User clicks the 'SELECT SEATS' button.",
+    "confidence": 1.0,
+    "interaction_target": "SELECT SEATS button",
+    "cursor_position": {
+      "x": 1424.9,
+      "y": 727.8
+    },
+    "page_title": "Flight Centre Travel Details",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kh1/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user activates the seat selection process."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 619914.3386666666,
+    "time_end": 624953.3386666666,
+    "description": "A 'Select Seats' overlay appears with a loading spinner and the message 'Loading seat selector'.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The screen transitions to a seat selection interface, initially showing a loading state."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 624953.3386666666,
+    "time_end": 625103.3386666666,
+    "description": "The seat map for the first flight (SYD to MEL) loads and is displayed.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The seat map for the Qantas flight from Sydney to Melbourne becomes visible."
+  },
+  {
+    "type": "hover",
+    "time_start": 628080.3386666666,
+    "time_end": 631847.3386666666,
+    "description": "User hovers over seat 5E on the seat map.",
+    "confidence": 0.9,
+    "interaction_target": "Seat 5E",
+    "cursor_position": {
+      "x": 1304.6,
+      "y": 535.2
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor dwells on seat 5E in the interactive seat map."
+  },
+  {
+    "type": "click",
+    "time_start": 631847.3386666666,
+    "time_end": 632003.3386666666,
+    "description": "User clicks on seat 5E.",
+    "confidence": 1.0,
+    "interaction_target": "Seat 5E",
+    "cursor_position": {
+      "x": 1304.6,
+      "y": 535.2
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user selects seat 5E."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 632003.3386666666,
+    "time_end": 632503.3386666666,
+    "description": "A popup appears for seat 5E showing it is a 'Preferred Seat' costing '$28.00 pp'.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "A small modal window opens over the seat map with pricing details for the selected seat."
+  },
+  {
+    "type": "hover",
+    "time_start": 633247.3386666666,
+    "time_end": 635303.3386666666,
+    "description": "User hovers over the 'CONFIRM SEAT' button in the popup.",
+    "confidence": 0.9,
+    "interaction_target": "CONFIRM SEAT button",
+    "cursor_position": {
+      "x": 1261.0,
+      "y": 645.6
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor moves to and stays on the 'CONFIRM SEAT' button within the seat detail popup."
+  },
+  {
+    "type": "click",
+    "time_start": 635303.3386666666,
+    "time_end": 635453.3386666666,
+    "description": "User clicks 'CONFIRM SEAT' to select seat 5E.",
+    "confidence": 1.0,
+    "interaction_target": "CONFIRM SEAT button",
+    "cursor_position": {
+      "x": 1261.0,
+      "y": 645.6
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user confirms their choice of seat 5E."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 635453.3386666666,
+    "time_end": 635803.3386666666,
+    "description": "Seat 5E is highlighted in green on the map, indicating it has been selected.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The seat map updates to show seat 5E as selected."
+  },
+  {
+    "type": "hover",
+    "time_start": 637303.3386666666,
+    "time_end": 638603.3386666666,
+    "description": "User hovers over seat 5F.",
+    "confidence": 0.9,
+    "interaction_target": "Seat 5F",
+    "cursor_position": {
+      "x": 1261.0,
+      "y": 645.6
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor moves to seat 5F."
+  },
+  {
+    "type": "click",
+    "time_start": 638603.3386666666,
+    "time_end": 638753.3386666666,
+    "description": "User clicks on seat 5F.",
+    "confidence": 1.0,
+    "interaction_target": "Seat 5F",
+    "cursor_position": {
+      "x": 1261.0,
+      "y": 645.6
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user selects seat 5F."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 638753.3386666666,
+    "time_end": 639203.3386666666,
+    "description": "A popup appears for seat 5F.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The seat detail popup appears for seat 5F."
+  },
+  {
+    "type": "hover",
+    "time_start": 639203.3386666666,
+    "time_end": 641303.3386666666,
+    "description": "User hovers over the 'CONFIRM SEAT' button for seat 5F.",
+    "confidence": 0.9,
+    "interaction_target": "CONFIRM SEAT button",
+    "cursor_position": {
+      "x": 1261.0,
+      "y": 645.6
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor dwells on the confirm button for the second seat."
+  },
+  {
+    "type": "click",
+    "time_start": 641303.3386666666,
+    "time_end": 641453.3386666666,
+    "description": "User clicks 'CONFIRM SEAT' for seat 5F.",
+    "confidence": 1.0,
+    "interaction_target": "CONFIRM SEAT button",
+    "cursor_position": {
+      "x": 1261.0,
+      "y": 645.6
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user confirms seat 5F."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 641453.3386666666,
+    "time_end": 641803.3386666666,
+    "description": "Seat 5F is highlighted in green.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The seat map updates to show seat 5F as selected."
+  },
+  {
+    "type": "hover",
+    "time_start": 643303.3386666666,
+    "time_end": 645303.3386666666,
+    "description": "User hovers over seat 4E.",
+    "confidence": 0.9,
+    "interaction_target": "Seat 4E",
+    "cursor_position": null,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor moves to seat 4E."
+  },
+  {
+    "type": "click",
+    "time_start": 645303.3386666666,
+    "time_end": 645453.3386666666,
+    "description": "User clicks on seat 4E.",
+    "confidence": 1.0,
+    "interaction_target": "Seat 4E",
+    "cursor_position": null,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user selects seat 4E."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 645453.3386666666,
+    "time_end": 645903.3386666666,
+    "description": "A popup appears for seat 4E.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The seat detail popup appears for seat 4E."
+  },
+  {
+    "type": "hover",
+    "time_start": 645903.3386666666,
+    "time_end": 648303.3386666666,
+    "description": "User hovers over the 'CONFIRM SEAT' button for seat 4E.",
+    "confidence": 0.9,
+    "interaction_target": "CONFIRM SEAT button",
+    "cursor_position": null,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor dwells on the confirm button for the third seat."
+  },
+  {
+    "type": "click",
+    "time_start": 648303.3386666666,
+    "time_end": 648453.3386666666,
+    "description": "User clicks 'CONFIRM SEAT' for seat 4E.",
+    "confidence": 1.0,
+    "interaction_target": "CONFIRM SEAT button",
+    "cursor_position": null,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user confirms seat 4E."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 648453.3386666666,
+    "time_end": 648803.3386666666,
+    "description": "Seat 4E is highlighted in green.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The seat map updates to show seat 4E as selected."
+  },
+  {
+    "type": "hover",
+    "time_start": 650347.3386666666,
+    "time_end": 651703.3386666666,
+    "description": "User hovers over seat 5C.",
+    "confidence": 0.9,
+    "interaction_target": "Seat 5C",
+    "cursor_position": {
+      "x": 1252.9,
+      "y": 664.2
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor moves to seat 5C."
+  },
+  {
+    "type": "click",
+    "time_start": 651703.3386666666,
+    "time_end": 651853.3386666666,
+    "description": "User clicks on seat 5C.",
+    "confidence": 1.0,
+    "interaction_target": "Seat 5C",
+    "cursor_position": {
+      "x": 1252.9,
+      "y": 664.2
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user selects seat 5C."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 651853.3386666666,
+    "time_end": 652303.3386666666,
+    "description": "A popup appears for seat 5C.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The seat detail popup appears for seat 5C."
+  },
+  {
+    "type": "hover",
+    "time_start": 652303.3386666666,
+    "time_end": 654303.3386666666,
+    "description": "User hovers over the 'CONFIRM SEAT' button for seat 5C.",
+    "confidence": 0.9,
+    "interaction_target": "CONFIRM SEAT button",
+    "cursor_position": {
+      "x": 1252.9,
+      "y": 664.2
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor dwells on the confirm button for the fourth seat."
+  },
+  {
+    "type": "click",
+    "time_start": 654303.3386666666,
+    "time_end": 654453.3386666666,
+    "description": "User clicks 'CONFIRM SEAT' for seat 5C.",
+    "confidence": 1.0,
+    "interaction_target": "CONFIRM SEAT button",
+    "cursor_position": {
+      "x": 1252.9,
+      "y": 664.2
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user confirms seat 5C."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 654453.3386666666,
+    "time_end": 654803.3386666666,
+    "description": "Seat 5C is highlighted in green.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The seat map updates to show seat 5C as selected."
+  },
+  {
+    "type": "click",
+    "time_start": 656847.3386666666,
+    "time_end": 657003.3386666666,
+    "description": "User clicks 'NEXT FLIGHT' to proceed to seat selection for the return flight.",
+    "confidence": 1.0,
+    "interaction_target": "NEXT FLIGHT button",
+    "cursor_position": {
+      "x": 1252.9,
+      "y": 664.2
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user moves to the next stage of seat selection."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 657003.3386666666,
+    "time_end": 657453.3386666666,
+    "description": "A loading spinner appears as the next flight's seat map is prepared.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The interface shows a loading state while switching flights."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 657453.3386666666,
+    "time_end": 657603.3386666666,
+    "description": "The seat map for the second flight (MEL to SYD) loads.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The seat map for the Virgin Australia flight from Melbourne to Sydney becomes visible."
+  },
+  {
+    "type": "hover",
+    "time_start": 659303.3386666666,
+    "time_end": 660803.3386666666,
+    "description": "User hovers over seat 5E on the second seat map.",
+    "confidence": 0.9,
+    "interaction_target": "Seat 5E",
+    "cursor_position": null,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor dwells on seat 5E for the return flight."
+  },
+  {
+    "type": "click",
+    "time_start": 660803.3386666666,
+    "time_end": 660953.3386666666,
+    "description": "User clicks on seat 5E.",
+    "confidence": 1.0,
+    "interaction_target": "Seat 5E",
+    "cursor_position": {
+      "x": 1307.5,
+      "y": 543.3
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user selects seat 5E for the return flight."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 660953.3386666666,
+    "time_end": 661403.3386666666,
+    "description": "A popup appears for seat 5E.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The seat detail popup appears for seat 5E on the return flight."
+  },
+  {
+    "type": "hover",
+    "time_start": 662347.3386666666,
+    "time_end": 663303.3386666666,
+    "description": "User hovers over the 'CONFIRM SEAT' button for seat 5E.",
+    "confidence": 0.9,
+    "interaction_target": "CONFIRM SEAT button",
+    "cursor_position": {
+      "x": 1319.1,
+      "y": 552.6
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor dwells on the confirm button."
+  },
+  {
+    "type": "click",
+    "time_start": 663303.3386666666,
+    "time_end": 663453.3386666666,
+    "description": "User clicks 'CONFIRM SEAT' for seat 5E.",
+    "confidence": 1.0,
+    "interaction_target": "CONFIRM SEAT button",
+    "cursor_position": {
+      "x": 1319.1,
+      "y": 552.6
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user confirms seat 5E for the return flight."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 663453.3386666666,
+    "time_end": 663803.3386666666,
+    "description": "Seat 5E is highlighted in green.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The seat map updates to show seat 5E as selected."
+  },
+  {
+    "type": "hover",
+    "time_start": 664347.3386666666,
+    "time_end": 666303.3386666666,
+    "description": "User hovers over seat 4F.",
+    "confidence": 0.9,
+    "interaction_target": "Seat 4F",
+    "cursor_position": {
+      "x": 1241.3,
+      "y": 655.5
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor moves to seat 4F."
+  },
+  {
+    "type": "click",
+    "time_start": 666303.3386666666,
+    "time_end": 666453.3386666666,
+    "description": "User clicks on seat 4F.",
+    "confidence": 1.0,
+    "interaction_target": "Seat 4F",
+    "cursor_position": {
+      "x": 1241.3,
+      "y": 655.5
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user selects seat 4F for the return flight."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 666453.3386666666,
+    "time_end": 666903.3386666666,
+    "description": "A popup appears for seat 4F.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The seat detail popup appears for seat 4F."
+  },
+  {
+    "type": "hover",
+    "time_start": 666903.3386666666,
+    "time_end": 669603.3386666666,
+    "description": "User hovers over the 'CONFIRM SEAT' button for seat 4F.",
+    "confidence": 0.9,
+    "interaction_target": "CONFIRM SEAT button",
+    "cursor_position": null,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor dwells on the confirm button."
+  },
+  {
+    "type": "click",
+    "time_start": 669603.3386666666,
+    "time_end": 669753.3386666666,
+    "description": "User clicks 'CONFIRM SEAT' for seat 4F.",
+    "confidence": 1.0,
+    "interaction_target": "CONFIRM SEAT button",
+    "cursor_position": null,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user confirms seat 4F for the return flight."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 669753.3386666666,
+    "time_end": 670103.3386666666,
+    "description": "Seat 4F is highlighted in green.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The seat map updates to show seat 4F as selected."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 670892.1733333333,
+    "time_end": 674342.1733333333,
+    "description": "The seat selection modal closes and the seat map updates to reflect the confirmed selection.",
+    "confidence": 0.9,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The modal disappears, returning focus to the main seat selection page."
+  },
+  {
+    "type": "click",
+    "time_start": 673403.3386666666,
+    "time_end": 673553.3386666666,
+    "description": "User clicks 'DONE' to finalize seat selection.",
+    "confidence": 1.0,
+    "interaction_target": "DONE button",
+    "cursor_position": null,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user completes the seat selection process."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 673553.3386666666,
+    "time_end": 674453.3386666666,
+    "description": "A loading spinner appears as the selection is saved.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The interface shows a loading state while saving the selections."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 674453.3386666666,
+    "time_end": 674803.3386666666,
+    "description": "The seat selection overlay closes, returning the user to the main trip review page.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The seat selector overlay disappears."
+  },
+  {
+    "type": "scroll",
+    "time_start": 686842.1733333333,
+    "time_end": 687842.1733333333,
+    "description": "The user scrolls down the page to view the remaining sections and the continue button.",
+    "confidence": 0.85,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The page content moves upwards, revealing the 'Online Captain's Pack' and the 'CONTINUE' button at the bottom."
+  },
+  {
+    "type": "click",
+    "time_start": 693542.1733333333,
+    "time_end": 693742.1733333333,
+    "description": "The user clicks the 'CONTINUE' button at the bottom right of the page.",
+    "confidence": 0.95,
+    "interaction_target": "CONTINUE",
+    "cursor_position": null,
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/AAXY9kH/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor is positioned over the green 'CONTINUE' button at the bottom right."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 693742.1733333333,
+    "time_end": 697842.1733333333,
+    "description": "A loading spinner overlay appears in the center of the screen after clicking continue.",
+    "confidence": 0.9,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "A white overlay with a blue circular loading spinner and the text 'Thanks for confirming your flights' is visible."
+  },
+  {
+    "type": "navigate",
+    "time_start": 697842.1733333333,
+    "time_end": 704042.1733333333,
+    "description": "The page navigates from the baggage and seat selection results to the passenger details page.",
+    "confidence": 0.95,
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/AAXY9kH/passenger",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The screen transitions from the loading overlay to the header of the new 'Travellers' page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 704042.1733333333,
+    "time_end": 713642.1733333333,
+    "description": "The content of the 'Travellers' page loads, including the passenger information form fields.",
+    "confidence": 0.9,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The form fields for passenger name, date of birth, and contact details gradually appear on the page."
+  },
+  {
+    "type": "scroll",
+    "time_start": 720842.1733333333,
+    "time_end": 721842.1733333333,
+    "description": "The user scrolls down the Travellers page to view more of the form.",
+    "confidence": 0.8,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The passenger details form moves upwards as the user scrolls down."
+  },
+  {
+    "type": "scroll",
+    "time_start": 729342.1733333333,
+    "time_end": 730342.1733333333,
+    "description": "The user scrolls further down the Travellers page.",
+    "confidence": 0.8,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The page continues to move upwards, revealing the bottom sections of the traveller information form."
+  }
+]

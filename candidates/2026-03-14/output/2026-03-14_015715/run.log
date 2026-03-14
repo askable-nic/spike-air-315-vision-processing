@@ -1,0 +1,30 @@
+2026-03-14 11:57:15,008 INFO vex_extract.pipeline: === Video Event Extractor ===
+2026-03-14 11:57:15,008 INFO vex_extract.pipeline: Video: /Users/nic/Developer/spike-air-315-vision-processing/input_data/screen_tracks_normalized/flight_centre_booking_james.mp4
+2026-03-14 11:57:15,008 INFO vex_extract.pipeline: Offset: 238982 ms
+2026-03-14 11:57:15,008 INFO vex_extract.pipeline: Run ID: 2026-03-14_015715
+2026-03-14 11:57:15,008 INFO vex_extract.pipeline: Step 1: Normalizing video...
+2026-03-14 11:57:15,008 INFO vex_extract.pipeline:   Using cached normalized video: /Users/nic/Developer/spike-air-315-vision-processing/candidates/2026-03-14/tmp/flight_centre_booking_james_normalized.mp4
+2026-03-14 11:57:15,058 INFO vex_extract.pipeline:   Duration: 176.9s, 1954x1060, 30.0 fps
+2026-03-14 11:57:15,058 INFO vex_extract.pipeline: Step 2: Tracking cursor...
+2026-03-14 11:57:15,059 INFO vex_extract.pipeline:   Using cached cursor trajectory: /Users/nic/Developer/spike-air-315-vision-processing/candidates/2026-03-14/tmp/cv/flight_centre_booking_james_38e642a0_cursor/cursor_trajectory.json
+2026-03-14 11:57:15,061 INFO vex_extract.pipeline:   1418 cursor detections (587 detected)
+2026-03-14 11:57:15,061 INFO vex_extract.pipeline: Step 3: Computing optical flow...
+2026-03-14 11:57:15,062 INFO vex_extract.pipeline:   Using cached flow windows: /Users/nic/Developer/spike-air-315-vision-processing/candidates/2026-03-14/tmp/cv/flight_centre_booking_james_bb5a87ef_38e642a0_flow/flow_windows.json
+2026-03-14 11:57:15,062 INFO vex_extract.pipeline:   352 flow windows
+2026-03-14 11:57:15,063 INFO vex_extract.pipeline: Step 4: Creating video segments...
+2026-03-14 11:57:15,063 INFO vex_extract.pipeline:   3 segments
+2026-03-14 11:57:15,063 INFO vex_extract.pipeline:   Segment 0: cached
+2026-03-14 11:57:15,063 INFO vex_extract.pipeline:   Segment 1: cached
+2026-03-14 11:57:15,063 INFO vex_extract.pipeline:   Segment 2: cached
+2026-03-14 11:57:15,063 INFO vex_extract.pipeline: Step 5: Preparing prompts...
+2026-03-14 11:57:15,064 INFO vex_extract.analysis: Segment 0: prompt prepared (9899 chars)
+2026-03-14 11:57:15,064 INFO vex_extract.analysis: Segment 1: prompt prepared (11166 chars)
+2026-03-14 11:57:15,065 INFO vex_extract.analysis: Segment 2: prompt prepared (10884 chars)
+2026-03-14 11:57:15,065 INFO vex_extract.pipeline:   3 prompts prepared
+2026-03-14 11:57:15,065 INFO vex_extract.pipeline: Step 6: Running Gemini analysis...
+2026-03-14 11:57:15,101 INFO vex_extract.analysis: Segment 0: sending to Gemini...
+2026-03-14 11:57:15,103 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-14 11:57:15,103 INFO vex_extract.analysis: Segment 1: sending to Gemini...
+2026-03-14 11:57:15,114 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-14 11:57:15,115 INFO vex_extract.analysis: Segment 2: sending to Gemini...
+2026-03-14 11:57:15,132 INFO google_genai.models: AFC is enabled with max remote calls: 10.

@@ -1,0 +1,140 @@
+{
+  "run_id": "2026-03-14_020046",
+  "timestamp": "2026-03-14T02:10:01.994020+00:00",
+  "config": {
+    "gemini": {
+      "api_key_env": "GEMINI_API_KEY",
+      "model": "gemini-3-flash-preview",
+      "temperature": 0.1,
+      "max_concurrent": 3
+    },
+    "video": {
+      "target_pixels": 2073600,
+      "video_fps": 20
+    },
+    "segmentation": {
+      "max_segment_duration_ms": 75000,
+      "segment_overlap_ms": 5000
+    },
+    "cursor": {
+      "tracking_base_fps": 2.0,
+      "tracking_peak_fps": 15.0,
+      "tracking_displacement_threshold_px": 30.0,
+      "tracking_active_padding_ms": 500,
+      "template_scales": [
+        0.8,
+        1.0,
+        1.25,
+        1.5
+      ],
+      "match_threshold": 0.6,
+      "early_exit_threshold": 0.9,
+      "max_interpolation_gap_ms": 500,
+      "smooth_window": 3,
+      "smooth_displacement_threshold": 10.0
+    },
+    "flow": {
+      "flow_fps": 2.0,
+      "flow_grid_step": 20,
+      "flow_window_size_ms": 1000,
+      "flow_window_step_ms": 500,
+      "resolution_height": 720
+    },
+    "cv_summary": {
+      "summary_window_ms": 250
+    },
+    "merge": {
+      "time_tolerance_ms": 2000,
+      "similarity_threshold": 0.7,
+      "cursor_event_types": [
+        "click",
+        "hover",
+        "dwell",
+        "cursor_thrash",
+        "select",
+        "drag"
+      ]
+    },
+    "token_costs": {
+      "gemini-2.5-flash": {
+        "input_token_cost": 3e-07,
+        "output_token_cost": 2.5e-06
+      },
+      "gemini-3-flash-preview": {
+        "input_token_cost": 5e-07,
+        "output_token_cost": 3e-06
+      }
+    }
+  },
+  "video_path": "/Users/nic/Developer/spike-air-315-vision-processing/input_data/screen_tracks/travel_expert_veronika.webm",
+  "video_duration_ms": 314947.967,
+  "video_dimensions": {
+    "width": 1916,
+    "height": 1082
+  },
+  "screen_track_start_offset": 33442,
+  "stages_run": [
+    "normalize",
+    "cursor",
+    "flow",
+    "segment",
+    "prompt",
+    "gemini",
+    "merge"
+  ],
+  "stages_skipped": [],
+  "stop_after": null,
+  "segments": [
+    {
+      "index": 0,
+      "start_ms": 0.0,
+      "end_ms": 67989.5934,
+      "event_count": 9,
+      "input_tokens": 95496,
+      "output_tokens": 1022
+    },
+    {
+      "index": 1,
+      "start_ms": 57989.5934,
+      "end_ms": 130979.1868,
+      "event_count": 14,
+      "input_tokens": 103989,
+      "output_tokens": 1005
+    },
+    {
+      "index": 2,
+      "start_ms": 120979.1868,
+      "end_ms": 193968.78019999998,
+      "event_count": 22,
+      "input_tokens": 99175,
+      "output_tokens": 2427
+    },
+    {
+      "index": 3,
+      "start_ms": 183968.78019999998,
+      "end_ms": 256958.3736,
+      "event_count": 27,
+      "input_tokens": 101583,
+      "output_tokens": 2283
+    },
+    {
+      "index": 4,
+      "start_ms": 246958.3736,
+      "end_ms": 314947.967,
+      "event_count": 16,
+      "input_tokens": 91990,
+      "output_tokens": 2196
+    }
+  ],
+  "cv_analysis": {
+    "cursor_detections": 2262,
+    "cursor_detected": 1159,
+    "flow_windows": 405
+  },
+  "events_merged": 88,
+  "events_final": 82,
+  "total_input_tokens": 492233,
+  "total_output_tokens": 8933,
+  "analysis_time_ms": 401338.2,
+  "total_time_ms": 555607.5
+}

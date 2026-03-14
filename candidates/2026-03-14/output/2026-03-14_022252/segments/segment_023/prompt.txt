@@ -1,0 +1,249 @@
+You are a UX research analyst specialising in screen recording analysis. You are watching a video segment from a user testing session and must produce a comprehensive event annotation.
+
+## Session Context
+
+- Study: Screen Recording
+- Participant: User
+- Video segment: 24 of 30
+- Segment time range: 1697260ms to 1781271ms from video start
+
+## Cursor Tracking Data
+
+The following cursor position data was extracted from this video segment via template matching. Each line describes a time span where the cursor was stationary at a position, moved in a straight line between two positions, or was not detected. Coordinates are in pixels from the top-left of the video frame.
+
+Use this data to:
+- Confirm cursor positions when reporting click, hover, and drag events
+- Identify dwell patterns where the cursor holds position over interactive elements
+- Detect cursor movement trajectories that may be subtle in the video
+- Notice rapid back-and-forth movement suggesting cursor thrash
+
+The video is always ground truth — if cursor data conflicts with what you see, trust the video. Short "not-detected" gaps between stationary spans at the same position are tracker noise, not the cursor disappearing.
+
+```
+42-3543ms: not-detected
+3611-3611ms: stationary pos=(23.2,1054.2)
+3679-4903ms: not-detected
+5073-5073ms: stationary pos=(1058.7,267.9)
+5175-6535ms: not-detected
+6603-6603ms: stationary pos=(400.2,745.6)
+6671-6671ms: not-detected
+6739-6739ms: stationary pos=(403.5,748.8)
+6841-7215ms: not-detected
+7283-7351ms: moved from (1557.4,816.6) to (1207.2,852.8)
+7419-7419ms: not-detected
+7487-7589ms: moved from (1204.0,852.8) to (978.0,885.1)
+7657-8337ms: moved from (1623.6,648.8) to (1607.4,594.6)
+8473-8473ms: stationary pos=(1407.3,462.2)
+8541-10716ms: not-detected
+10784-10852ms: moved from (1578.4,1075.5) to (1577.3,1075.5)
+10920-11056ms: stationary pos=(1579.1,1075.5)
+11124-11124ms: stationary pos=(1581.0,1075.5)
+11192-11192ms: not-detected
+11260-11260ms: stationary pos=(1581.5,1075.5)
+11600-11600ms: not-detected
+11668-11770ms: moved from (1581.6,1075.5) to (400.2,765.6)
+11838-11838ms: not-detected
+11906-11906ms: stationary pos=(1133.0,939.9)
+11974-12042ms: not-detected
+12110-12110ms: stationary pos=(1133.0,939.9)
+12178-12178ms: not-detected
+13198-14184ms: stationary pos=(1133.0,939.9)
+15203-15645ms: not-detected
+15713-15849ms: stationary pos=(400.2,762.4)
+15917-18909ms: not-detected
+19011-19589ms: stationary pos=(1284.7,1075.5)
+19691-19963ms: not-detected
+20031-20099ms: moved from (600.4,523.5) to (600.4,507.4)
+20167-20235ms: not-detected
+20303-20303ms: stationary pos=(600.4,478.4)
+20371-20371ms: not-detected
+20439-20439ms: stationary pos=(600.4,465.4)
+20949-21050ms: not-detected
+21118-22036ms: stationary pos=(981.2,765.6)
+22104-22104ms: not-detected
+22648-22716ms: moved from (981.2,765.6) to (1323.4,219.5)
+22784-22784ms: not-detected
+22852-22852ms: stationary pos=(1084.5,490.6)
+23396-23396ms: not-detected
+23464-23634ms: moved from (1326.6,219.5) to (1323.4,219.5)
+23702-23702ms: not-detected
+23804-26490ms: stationary pos=(1475.1,252.4)
+27509-27509ms: not-detected
+28495-28495ms: stationary pos=(1475.1,252.4)
+29515-30501ms: not-detected
+31521-31521ms: stationary pos=(125.2,422.2)
+32507-32507ms: not-detected
+33526-33526ms: stationary pos=(129.1,413.2)
+34512-50082ms: not-detected
+50184-50728ms: stationary pos=(1110.4,345.4)
+50796-50864ms: moved from (1287.9,464.8) to (965.1,819.9)
+50932-51067ms: moved from (600.4,626.8) to (1302.4,474.5)
+51135-51543ms: moved from (1116.8,358.3) to (1110.4,345.4)
+51611-51611ms: not-detected
+51679-51679ms: stationary pos=(1299.2,471.3)
+51747-51747ms: not-detected
+51815-51917ms: stationary pos=(1299.2,471.3)
+51985-51985ms: not-detected
+52053-52053ms: stationary pos=(1299.2,471.3)
+52155-52665ms: not-detected
+52733-52733ms: stationary pos=(600.4,526.8)
+52801-53005ms: not-detected
+53073-53073ms: stationary pos=(23.2,1047.7)
+53141-53141ms: not-detected
+53209-53209ms: stationary pos=(23.2,1051.0)
+53277-53957ms: not-detected
+54025-54909ms: moved from (1133.6,870.2) to (329.2,990.9)
+55045-55215ms: moved from (1081.3,410.6) to (329.2,990.9)
+55419-55929ms: moved from (461.6,323.4) to (329.2,990.9)
+56065-56473ms: moved from (1023.2,703.7) to (1081.3,410.6)
+56541-57866ms: not-detected
+57934-57934ms: stationary pos=(1723.0,522.3)
+58002-58138ms: not-detected
+58274-59226ms: stationary pos=(45.2,917.3)
+59294-59532ms: moved from (45.2,891.5) to (45.2,539.7)
+59600-59736ms: moved from (1504.1,639.1) to (45.2,523.5)
+59804-64087ms: moved from (1504.1,639.1) to (45.2,523.5)
+64257-64631ms: stationary pos=(1525.1,661.7)
+64699-64699ms: stationary pos=(1685.5,337.6)
+64767-64903ms: not-detected
+64971-65277ms: moved from (1471.9,409.9) to (1417.0,426.7)
+65345-65413ms: moved from (23.2,528.1) to (1417.0,426.7)
+65481-65549ms: moved from (1484.8,409.9) to (1417.0,423.5)
+65617-65685ms: moved from (1701.0,345.4) to (1417.0,423.5)
+65753-65821ms: moved from (1696.2,326.0) to (1497.7,426.7)
+65889-65957ms: moved from (1710.7,345.4) to (1497.7,426.7)
+66025-66297ms: moved from (1701.0,345.4) to (1707.5,345.4)
+66433-66433ms: not-detected
+66501-66569ms: moved from (907.0,642.3) to (907.0,641.3)
+66637-66705ms: stationary pos=(907.0,642.0)
+66807-66875ms: stationary pos=(907.0,640.9)
+66943-67147ms: stationary pos=(907.0,639.7)
+67215-67589ms: moved from (907.0,635.9) to (907.0,209.8)
+67657-67929ms: moved from (1630.7,350.5) to (1627.4,295.7)
+67997-68677ms: not-detected
+68745-68881ms: moved from (316.3,452.5) to (316.3,455.8)
+68949-69424ms: not-detected
+69492-69492ms: stationary pos=(729.5,939.9)
+69560-70512ms: not-detected
+70614-70614ms: stationary pos=(1557.4,542.3)
+70682-71090ms: not-detected
+71192-71328ms: stationary pos=(1655.2,790.2)
+71396-71464ms: moved from (1545.5,819.2) to (1655.2,783.7)
+71532-71906ms: not-detected
+72008-72076ms: moved from (1597.8,532.6) to (1541.3,1007.1)
+72144-72144ms: stationary pos=(1560.6,1007.1)
+72212-74218ms: not-detected
+74286-74286ms: stationary pos=(1026.4,268.6)
+74354-74354ms: not-detected
+74422-74422ms: stationary pos=(1026.4,268.6)
+74490-74490ms: not-detected
+74558-74558ms: stationary pos=(1026.4,268.6)
+74626-74626ms: not-detected
+74694-74694ms: stationary pos=(1026.4,268.6)
+74762-74762ms: not-detected
+74830-74966ms: stationary pos=(1184.6,265.3)
+75033-80779ms: stationary pos=(1026.4,268.6)
+80847-81050ms: moved from (1028.6,268.6) to (1032.9,268.6)
+81118-83294ms: not-detected
+```
+
+## Event Types
+
+Detect and classify these interaction event types:
+- **click**: User clicks on a UI element (button, link, menu item, etc.)
+- **hover**: Cursor lingers over an interactive element without clicking
+- **navigate**: Page navigation — URL change, new page load, tab switch
+- **input_text**: User types text into a form field, search box, or text area
+- **select**: User selects from a dropdown, checkbox, radio button, or date picker
+- **cursor_thrash**: Rapid, unfocused cursor movement indicating confusion or frustration
+- **scroll**: User scrolls the page vertically or horizontally
+- **drag**: User drags an element (e.g. slider, drag-and-drop)
+- **hesitate**: Brief pause before an action, suggesting uncertainty
+- **change_ui_state**: A visible UI state change not directly caused by user action (e.g. loading spinner, modal appearing, animation)
+
+## Classification Rules
+
+Apply these rules strictly when deciding event types:
+
+### Click vs Hover
+Only classify as `click` if you see evidence that an element was **activated** — a button depresses, a link opens, a checkbox toggles, a menu item triggers an action. If the cursor pauses over an interactive element and then moves away without activating it, that is a `hover`, not a click. When in doubt, prefer `hover`.
+
+### Action vs Result are separate events
+Every user action (click, input_text) and its visible result (page navigation, UI state change) must be reported as **separate events**. For example: clicking a search button is a `click` event; the search results appearing is a separate `change_ui_state` or `navigate` event. Do not combine an action and its result into a single event.
+
+### When to use `select`
+Use `select` — not `click` or `input_text` — when the user **picks an option from a list**. This includes: dropdown menus, autocomplete suggestions, date picker dates, checkbox/radio options, search result items in a suggestion list. The key indicator is that the user chose from a set of presented options.
+
+### `navigate` vs `change_ui_state`
+A `navigate` event should almost always be the **result of a preceding user interaction** (click, select, input_text + Enter). If the screen changes but there is no clear user action that triggered it (e.g., a page finishes loading, content appears asynchronously, a tab restores itself), use `change_ui_state` instead. Also use `change_ui_state` for visual changes **within the same page** — loading spinners, dropdowns appearing, results updating, modals opening, sections expanding.
+
+### `input_text` vs `change_ui_state`
+When a user types into a field and a dropdown/autocomplete appears in response, report **two events**: the typing action as `input_text`, and the resulting dropdown appearance as a separate `change_ui_state`. Do not merge them.
+
+## Instructions
+
+Report every user interaction, UI state change, and navigation event you can identify in this video segment, even minor ones like scrolls and brief hovers. Be exhaustive — it is better to over-report than miss events. Focus on **actions and state changes**, not on periods where the user is passively reading or waiting without interacting.
+
+Use the cursor tracking data above to:
+- Confirm cursor positions when reporting hover, click, and drag events
+- Identify hover/dwell patterns where the cursor stays stationary over interactive elements
+- Notice cursor thrash patterns from rapid movement in the cursor data
+
+For each event, describe in detail:
+- What the user did
+- What they were looking at
+- What changed on screen
+
+For each event, describe the visual state of the screen at that moment in the frame_description field.
+
+### Hover detection
+
+Pay close attention to cursor movements. When the cursor pauses over an interactive element (button, link, menu item, filter option, card, list item) for even a brief moment before moving on or clicking, report it as a **hover** event. Hovers are important for understanding what the user considered before acting. Even 300ms of cursor stillness over a clickable element counts.
+
+### UI state change detection
+
+Watch carefully for visual changes that happen as side effects of user actions or asynchronously:
+- **Loading states**: spinners, skeleton screens, progress bars, "Searching..." overlays
+- **Elements appearing/disappearing**: dropdowns opening, modals/popups appearing, tooltips showing, buttons becoming visible, menus expanding
+- **Content updates**: search results loading or refreshing, prices updating, list items being filtered, new content rendering
+- **Layout changes**: sidebars appearing, form sections expanding, ads loading, panels opening/closing
+
+Each of these should be a separate **change_ui_state** event, even if they happen immediately after a user action like a click. The click is one event; the resulting UI change is a separate event.
+
+## Timestamp Format
+
+Report timestamps as milliseconds from the start of THIS video segment (not the full recording). Use the video timeline to determine timing.
+
+## Temporal Granularity
+
+- **Clicks**: Mark the exact moment of the click
+- **Navigations**: Start when initiated (click on link), end when new page is fully loaded
+- **Input text**: Start of first keystroke to end of last
+- **Scrolls**: Full scroll duration, not individual scroll increments
+- **Hovers**: Duration the cursor remains over the element
+- **Change UI state**: From the moment the change begins to when it settles
+
+## Event Granularity
+
+Do not report consecutive sub-second events on the same UI element. If the user hovers an element and then immediately clicks it (within ~1s), report only the `click` — the hover is implied. Similarly, do not insert events between an action and its immediate result unless something meaningfully different happens in between.
+
+## Confidence Calibration
+
+- 0.9+: Clearly visible interactions (obvious click, typed text appearing, page navigation)
+- 0.7–0.9: Likely interactions (cursor movement suggests click but exact target unclear)
+- 0.5–0.7: Inferred or partially visible events (scroll direction from content shift, hover from cursor pause)
+
+## Output Format
+
+Return a JSON array of events. Each event must have:
+- `type`: One of the event types listed above
+- `time_start_ms`: Milliseconds from the start of this video segment
+- `time_end_ms`: Milliseconds from the start of this video segment
+- `description`: Clear, specific description of what happened
+- `confidence`: Float 0-1
+
+Optional fields (include when identifiable):
+- `interaction_target`: Label or description of the UI element involved
+- `page_title`: The page title exactly as shown in the browser tab. Only include if you can read the tab text clearly in the video frame. Do not guess or infer the title from page content.
+- `page_location`: The URL exactly as shown in the browser address bar. Transcribe it character-for-character from what is visible. If the URL is not legible, truncated, or the address bar is not visible, omit this field entirely. Never infer or reconstruct a URL from page content.
+- `frame_description`: Brief description of what's visible on screen during this event
