@@ -1,0 +1,621 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start": 241782.0,
+    "time_end": 272882.0,
+    "description": "Task instructions are typed out on the screen, asking the user to book a return domestic flight using the Flight Centre website.",
+    "confidence": 0.95,
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "A dark screen with white text being typed out line by line."
+  },
+  {
+    "type": "click",
+    "time_start": 278132.0,
+    "time_end": 278282.0,
+    "description": "User clicks the 'Open' button to initiate the task and open the Flight Centre website.",
+    "confidence": 0.95,
+    "interaction_target": "Open button",
+    "cursor_position": {
+      "x": 1804.9,
+      "y": 133.1
+    },
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "A dark screen with an 'Open' button in the center."
+  },
+  {
+    "type": "navigate",
+    "time_start": 278682.0,
+    "time_end": 281182.0,
+    "description": "The browser navigates from the instruction page to the Flight Centre homepage.",
+    "confidence": 0.95,
+    "page_title": "Cheap Flights, Hotels, Holidays & Cruises | Flight Centre",
+    "page_location": "https://www.flightcentre.com.au",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The browser tab updates and the Flight Centre website begins to load."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 281182.0,
+    "time_end": 283632.0,
+    "description": "The Flight Centre homepage content loads, including the main promotional banner and the flight search widget.",
+    "confidence": 0.9,
+    "page_title": "Cheap Flights, Hotels, Holidays & Cruises | Flight Centre",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The Flight Centre homepage is visible with a 'Tropical Islands Sale' banner and a search form."
+  },
+  {
+    "type": "click",
+    "time_start": 286782.0,
+    "time_end": 286982.0,
+    "description": "User clicks on the 'Where to?' destination input field in the search widget.",
+    "confidence": 0.95,
+    "interaction_target": "Where to? input field",
+    "cursor_position": {
+      "x": 1542.9,
+      "y": 727.9
+    },
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The cursor is positioned over the destination input field in the flight search widget."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 286982.0,
+    "time_end": 287082.0,
+    "description": "A dropdown menu appears showing popular destination suggestions.",
+    "confidence": 0.9,
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "A dropdown list of cities like Sydney, Melbourne, and Brisbane appears below the destination input."
+  },
+  {
+    "type": "hover",
+    "time_start": 287882.0,
+    "time_end": 288132.0,
+    "description": "User hovers the cursor over the 'Sydney, Australia' option in the destination dropdown.",
+    "confidence": 0.8,
+    "interaction_target": "Sydney, Australia option",
+    "cursor_position": {
+      "x": 1542.9,
+      "y": 727.9
+    },
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The cursor is over the first item in the destination dropdown list."
+  },
+  {
+    "type": "select",
+    "time_start": 289482.0,
+    "time_end": 289532.0,
+    "description": "User selects 'Melbourne, Australia' as the destination city.",
+    "confidence": 0.95,
+    "interaction_target": "Melbourne, Australia option",
+    "cursor_position": {
+      "x": 1542.9,
+      "y": 727.9
+    },
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The user clicks on the Melbourne option in the dropdown."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 289532.0,
+    "time_end": 289682.0,
+    "description": "The destination input field is updated with the selected city and the dropdown closes.",
+    "confidence": 0.9,
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The search widget now shows 'Melbourne, Australia' in the destination field."
+  },
+  {
+    "type": "hover",
+    "time_start": 290332.0,
+    "time_end": 291582.0,
+    "description": "User hovers the cursor over the 'Search flights' button.",
+    "confidence": 0.85,
+    "interaction_target": "Search flights button",
+    "cursor_position": {
+      "x": 1542.9,
+      "y": 727.9
+    },
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The cursor lingers over the blue 'Search flights' button on the right side of the widget."
+  },
+  {
+    "type": "click",
+    "time_start": 291582.0,
+    "time_end": 291632.0,
+    "description": "User clicks on the date selection field to open the calendar.",
+    "confidence": 0.95,
+    "interaction_target": "Date selection field",
+    "cursor_position": {
+      "x": 1542.9,
+      "y": 727.9
+    },
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The cursor clicks on the field showing the current date range."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 291632.0,
+    "time_end": 291782.0,
+    "description": "A date picker modal appears, showing calendars for February and March.",
+    "confidence": 0.9,
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "A calendar overlay appears over the search widget."
+  },
+  {
+    "type": "hover",
+    "time_start": 293632.0,
+    "time_end": 293882.0,
+    "description": "User hovers over March 17 in the calendar.",
+    "confidence": 0.8,
+    "interaction_target": "March 17 date",
+    "cursor_position": {
+      "x": 1542.9,
+      "y": 727.9
+    },
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The cursor moves to the number 17 in the March calendar."
+  },
+  {
+    "type": "hover",
+    "time_start": 296832.0,
+    "time_end": 297082.0,
+    "description": "User hovers over March 20 in the calendar.",
+    "confidence": 0.8,
+    "interaction_target": "March 20 date",
+    "cursor_position": {
+      "x": 1551.7,
+      "y": 618.9
+    },
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The cursor moves to the number 20 in the March calendar."
+  },
+  {
+    "type": "scroll",
+    "time_start": 299482.0,
+    "time_end": 300982.0,
+    "description": "User scrolls horizontally within the date picker or the page to view more dates.",
+    "confidence": 0.9,
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The content within the viewport shifts horizontally."
+  },
+  {
+    "type": "select",
+    "time_start": 300282.0,
+    "time_end": 300332.0,
+    "description": "User selects March 27 as the departure date.",
+    "confidence": 0.95,
+    "interaction_target": "March 27 date",
+    "cursor_position": {
+      "x": 1551.7,
+      "y": 618.9
+    },
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The user clicks on the number 27 in the March calendar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 300332.0,
+    "time_end": 300482.0,
+    "description": "The departure date is updated in the search widget UI.",
+    "confidence": 0.9,
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The date field in the search widget reflects the selection of March 27."
+  },
+  {
+    "type": "click",
+    "time_start": 304287.33866666665,
+    "time_end": 304387.33866666665,
+    "description": "User clicks on March 20th in the calendar to select a departing date.",
+    "confidence": 0.95,
+    "interaction_target": "March 20th date cell",
+    "cursor_position": null,
+    "page_title": "Flight Centre | Your centre for travel.",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The date picker modal is open, showing February and March 2026. The user selects March 20th."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 304387.33866666665,
+    "time_end": 305137.33866666665,
+    "description": "The date picker modal updates its header to 'Returning travel dates' after the departure date is selected.",
+    "confidence": 0.9,
+    "interaction_target": "Date picker modal header",
+    "page_title": "Flight Centre | Your centre for travel.",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The modal title changes from 'Travel dates' to 'Returning travel dates'."
+  },
+  {
+    "type": "hover",
+    "time_start": 305287.33866666665,
+    "time_end": 305787.33866666665,
+    "description": "The cursor lingers over the 'Done' button in the date picker modal.",
+    "confidence": 0.8,
+    "interaction_target": "Done button",
+    "cursor_position": {
+      "x": 1542.9,
+      "y": 727.9
+    },
+    "page_title": "Flight Centre | Your centre for travel.",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The cursor is positioned over the blue 'Done' button at the bottom right of the modal."
+  },
+  {
+    "type": "click",
+    "time_start": 305787.33866666665,
+    "time_end": 305937.33866666665,
+    "description": "User clicks the 'Done' button to confirm the selected dates.",
+    "confidence": 0.95,
+    "interaction_target": "Done button",
+    "cursor_position": {
+      "x": 1542.9,
+      "y": 727.9
+    },
+    "page_title": "Flight Centre | Your centre for travel.",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The user clicks the 'Done' button, closing the date selection modal."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 305937.33866666665,
+    "time_end": 306437.33866666665,
+    "description": "The date picker modal closes, returning the user to the main search interface.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Your centre for travel.",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The modal disappears, revealing the flight search form with the selected dates populated."
+  },
+  {
+    "type": "hover",
+    "time_start": 310337.33866666665,
+    "time_end": 313837.33866666665,
+    "description": "The cursor dwells on the 'Search flights' button before clicking.",
+    "confidence": 0.9,
+    "interaction_target": "Search flights button",
+    "cursor_position": {
+      "x": 1542.9,
+      "y": 727.9
+    },
+    "page_title": "Flight Centre | Your centre for travel.",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The cursor is stationary over the large blue 'Search flights' button."
+  },
+  {
+    "type": "click",
+    "time_start": 313837.33866666665,
+    "time_end": 314037.33866666665,
+    "description": "User clicks the 'Search flights' button to initiate the search.",
+    "confidence": 0.95,
+    "interaction_target": "Search flights button",
+    "cursor_position": {
+      "x": 1902.1,
+      "y": 607.1
+    },
+    "page_title": "Flight Centre | Your centre for travel.",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The user clicks the search button, triggering a page transition."
+  },
+  {
+    "type": "navigate",
+    "time_start": 314037.33866666665,
+    "time_end": 317287.33866666665,
+    "description": "The page navigates to the search results, showing a loading screen with a progress spinner.",
+    "confidence": 0.9,
+    "page_location": "https://www.flightcentre.com.au/engine/search/...",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "A loading screen appears with the text 'Our overhead compartments are stuffed with deals!' and a progress spinner."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 317287.33866666665,
+    "time_end": 317937.33866666665,
+    "description": "The search results page finishes loading, displaying available departing flights.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Select Departing Flight",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The loading screen disappears, and the list of departing flights from Adelaide to Melbourne is displayed."
+  },
+  {
+    "type": "scroll",
+    "time_start": 322237.33866666665,
+    "time_end": 325937.33866666665,
+    "description": "User scrolls down the list of departing flight results.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Select Departing Flight",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The user scrolls vertically to view more flight options further down the page."
+  },
+  {
+    "type": "hover",
+    "time_start": 325937.33866666665,
+    "time_end": 327437.33866666665,
+    "description": "The cursor hovers over the 'Select' button for a Virgin Australia flight priced at $127.",
+    "confidence": 0.8,
+    "interaction_target": "Select button ($127 flight)",
+    "cursor_position": null,
+    "page_title": "Flight Centre | Select Departing Flight",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The cursor pauses over the blue 'Select' button for the 6:15am Virgin Australia flight."
+  },
+  {
+    "type": "click",
+    "time_start": 327437.33866666665,
+    "time_end": 327637.33866666665,
+    "description": "User clicks the 'Select' button for the chosen departing flight.",
+    "confidence": 0.95,
+    "interaction_target": "Select button ($127 flight)",
+    "cursor_position": null,
+    "page_title": "Flight Centre | Select Departing Flight",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The user clicks the button, which expands the flight details to show fare options."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 327637.33866666665,
+    "time_end": 328437.33866666665,
+    "description": "The UI expands to show 'Select Departing Fare Type' options (Lite, Choice, Flex) for the selected flight.",
+    "confidence": 0.9,
+    "interaction_target": "Fare type selection area",
+    "page_title": "Flight Centre | Select Departing Flight",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "A new section opens below the selected flight showing three different fare categories."
+  },
+  {
+    "type": "hover",
+    "time_start": 333237.33866666665,
+    "time_end": 335837.33866666665,
+    "description": "The cursor hovers over the 'Select' button for the 'Lite' fare option.",
+    "confidence": 0.8,
+    "interaction_target": "Select button (Lite fare)",
+    "cursor_position": null,
+    "page_title": "Flight Centre | Select Departing Flight",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The cursor dwells on the 'Select' button under the 'Lite' fare column ($127)."
+  },
+  {
+    "type": "click",
+    "time_start": 335837.33866666665,
+    "time_end": 336037.33866666665,
+    "description": "User clicks the 'Select' button for the 'Lite' fare.",
+    "confidence": 0.95,
+    "interaction_target": "Select button (Lite fare)",
+    "cursor_position": {
+      "x": 27.1,
+      "y": 887.1
+    },
+    "page_title": "Flight Centre | Select Departing Flight",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The user confirms their fare choice by clicking the select button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 336037.33866666665,
+    "time_end": 337937.33866666665,
+    "description": "A 'Good choice!' loading overlay appears while the system prepares the return flight options.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Select Departing Flight",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "A semi-transparent overlay with a spinner and the text 'Good choice! It's time to choose your flight for your return journey' appears."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 337937.33866666665,
+    "time_end": 338937.33866666665,
+    "description": "The page content updates to display 'Select Return Flight' options.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Select Return Flight",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The departing flight results are replaced by return flight results from Melbourne to Adelaide."
+  },
+  {
+    "type": "scroll",
+    "time_start": 349437.33866666665,
+    "time_end": 354937.33866666665,
+    "description": "User scrolls down the list of return flight results.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Select Return Flight",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The user scrolls through the return flight options to compare prices and times."
+  },
+  {
+    "type": "hover",
+    "time_start": 355247.67733333335,
+    "time_end": 355347.67733333335,
+    "description": "The cursor hovers over the origin city field ('MEL') in the search bar while the user reviews flight results.",
+    "confidence": 0.7,
+    "interaction_target": "Origin city field",
+    "cursor_position": {
+      "x": 662.5,
+      "y": 203.8
+    },
+    "page_title": "Flight Centre | Search Results",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "Flight search results page showing various flight options from Melbourne to Adelaide."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 365192.67733333335,
+    "time_end": 365392.67733333335,
+    "description": "A selection panel for returning flight fare types (Lite, Choice, Flex) expands for flight VA223.",
+    "confidence": 0.9,
+    "interaction_target": "Fare type selection panel",
+    "page_title": "Flight Centre | Search Results",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The flight card for VA223 expands to show different fare options and their inclusions."
+  },
+  {
+    "type": "click",
+    "time_start": 366992.67733333335,
+    "time_end": 367192.67733333335,
+    "description": "User clicks the 'SELECT' button for the 'Lite' fare option on the returning flight.",
+    "confidence": 0.95,
+    "interaction_target": "SELECT button (Lite fare)",
+    "cursor_position": null,
+    "page_title": "Flight Centre | Search Results",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The user selects the $177 Lite fare for the returning flight."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 367692.67733333335,
+    "time_end": 371192.67733333335,
+    "description": "A full-screen loading overlay appears with the message 'All Set! Now let's review your flight selections...'.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Search Results",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "A white loading screen with a circular progress indicator and 'All Set!' text."
+  },
+  {
+    "type": "navigate",
+    "time_start": 371192.67733333335,
+    "time_end": 372592.67733333335,
+    "description": "The page transitions from the search results to the 'Review trip' summary page.",
+    "confidence": 0.95,
+    "page_title": "Review trip",
+    "page_location": "https://www.flightcentre.com.au/review/results/...",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The 'Review trip' page loads, showing the selected departing and returning flight details."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 372592.67733333335,
+    "time_end": 373392.67733333335,
+    "description": "The 'Price summary' and 'Add-ons' sections (Seats, Baggage) load and become visible on the Review trip page.",
+    "confidence": 0.9,
+    "page_title": "Review trip",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The right-hand sidebar with price details and the bottom sections for extras appear on the screen."
+  },
+  {
+    "type": "click",
+    "time_start": 390992.67733333335,
+    "time_end": 391192.67733333335,
+    "description": "User clicks the 'SELECT' button for the '24/7 Priority Assistance' add-on in the Online Captain's Pack section.",
+    "confidence": 0.95,
+    "interaction_target": "SELECT button (Priority Assistance)",
+    "cursor_position": {
+      "x": 1187.2,
+      "y": 502.3
+    },
+    "page_title": "Review trip",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The user adds priority assistance to their booking."
+  },
+  {
+    "type": "click",
+    "time_start": 392992.67733333335,
+    "time_end": 393192.67733333335,
+    "description": "User clicks the green 'CONTINUE' button at the bottom of the page to proceed to traveller details.",
+    "confidence": 0.95,
+    "interaction_target": "CONTINUE button",
+    "cursor_position": null,
+    "page_title": "Review trip",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The user confirms their flight selection and add-ons to move to the next step."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 393992.67733333335,
+    "time_end": 396292.67733333335,
+    "description": "A loading overlay appears with the message 'Thanks for confirming your flights. Next up, your traveller details...'.",
+    "confidence": 0.9,
+    "page_title": "Review trip",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "A loading screen appears after clicking continue."
+  },
+  {
+    "type": "navigate",
+    "time_start": 396292.67733333335,
+    "time_end": 398692.67733333335,
+    "description": "The page navigates to the traveller information entry screen.",
+    "confidence": 0.95,
+    "page_title": "Travellers",
+    "page_location": "https://www.flightcentre.com.au/review/results/.../passenger",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The 'Travellers' page loads, initially showing placeholders for the form fields."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 398692.67733333335,
+    "time_end": 399392.67733333335,
+    "description": "The traveller details form fields (Title, First name, Last name, Date of birth) load and appear on the page.",
+    "confidence": 0.9,
+    "page_title": "Travellers",
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The input fields for passenger information become visible."
+  },
+  {
+    "type": "scroll",
+    "time_start": 400981.67733333335,
+    "time_end": 401981.67733333335,
+    "description": "Horizontal scroll detected as the page layout settles during loading.",
+    "confidence": 0.8,
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "The page content shifts slightly to the right."
+  },
+  {
+    "type": "scroll",
+    "time_start": 403481.67733333335,
+    "time_end": 404481.67733333335,
+    "description": "Minor horizontal scroll/shift detected.",
+    "confidence": 0.7,
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "Subtle horizontal movement of the page content."
+  },
+  {
+    "type": "scroll",
+    "time_start": 410481.67733333335,
+    "time_end": 411981.67733333335,
+    "description": "Minor horizontal scroll/shift detected.",
+    "confidence": 0.7,
+    "viewport_width": 1954,
+    "viewport_height": 1060,
+    "frame_description": "Subtle horizontal movement of the page content."
+  }
+]
