@@ -1,0 +1,35 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 7,
+    "type": "change_ui_state",
+    "description": "Task instructions are revealed progressively on the screen, detailing a travel planning scenario from Sunshine Coast to London.",
+    "confidence": 0.9,
+    "interaction_target": "Instruction text",
+    "frame_description": "A dark screen displays white text that appears line by line."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 10,
+    "type": "dwell",
+    "description": "User is reading the initial task instructions.",
+    "confidence": 0.8,
+    "page_title": "Task Instructions"
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 12,
+    "type": "change_ui_state",
+    "description": "The instruction text updates to a new prompt: \"Yes, please think aloud as you go. What are you looking at right now?\"",
+    "confidence": 0.9,
+    "interaction_target": "Instruction text"
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 13,
+    "type": "dwell",
+    "description": "User reads the updated prompt asking for think-aloud feedback.",
+    "confidence": 0.8,
+    "page_title": "Task Instructions"
+  }
+]

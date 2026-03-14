@@ -1,0 +1,49 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 4,
+    "type": "dwell",
+    "description": "User views trending searches before starting a new search.",
+    "confidence": 0.7,
+    "page_title": "Search",
+    "frame_description": "The screen displays a list of trending searches with a keyboard visible at the bottom."
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 19,
+    "type": "input_text",
+    "description": "User types 'home loan australia bank st george' into the search bar, with suggestions updating dynamically.",
+    "confidence": 0.95,
+    "interaction_target": "Search bar",
+    "frame_description": "Text is being entered into the search field, and the list of suggestions changes as the user types."
+  },
+  {
+    "frame_index_start": 20,
+    "frame_index_end": 20,
+    "type": "click",
+    "description": "User clicks on a search suggestion for St. George Bank home loans.",
+    "confidence": 0.8,
+    "interaction_target": "Search suggestion",
+    "frame_description": "The cursor is positioned over a specific search suggestion in the list."
+  },
+  {
+    "frame_index_start": 20,
+    "frame_index_end": 21,
+    "type": "navigate",
+    "description": "The browser navigates to the Google search results page.",
+    "confidence": 0.95,
+    "page_title": "Google Search",
+    "page_location": "google.com",
+    "frame_description": "The screen transitions from the search input interface to a Google search results page."
+  },
+  {
+    "frame_index_start": 22,
+    "frame_index_end": 28,
+    "type": "dwell",
+    "description": "User dwells on the search results page, likely reading the sponsored results from ubank and Suncorp Bank.",
+    "confidence": 0.85,
+    "page_title": "Google Search",
+    "page_location": "google.com",
+    "frame_description": "The user is looking at the search results page without further interaction."
+  }
+]

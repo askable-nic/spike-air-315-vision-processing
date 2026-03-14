@@ -1,0 +1,21 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 12,
+    "type": "dwell",
+    "description": "User is examining the available opportunities on the Explore page as the task cards cycle.",
+    "confidence": 0.8,
+    "page_title": "Explore",
+    "page_location": "Explore Screen",
+    "frame_description": "The Explore page shows various research opportunities. The user remains on this screen while the content in the top section updates automatically."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 12,
+    "type": "change_ui_state",
+    "description": "The task cards in the 'Short tasks & surveys' section are automatically cycling through different available opportunities, such as surveys and AI interviews.",
+    "confidence": 0.95,
+    "interaction_target": "Short tasks & surveys carousel",
+    "page_title": "Explore"
+  }
+]

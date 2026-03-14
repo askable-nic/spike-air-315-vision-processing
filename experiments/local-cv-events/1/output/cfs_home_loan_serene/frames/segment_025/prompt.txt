@@ -1,0 +1,48 @@
+Analyse the following screen recording frames for user interaction events.
+
+**Segment 25** | Time range: 172.2s - 179.2s | FPS: 4.0 | Activity tier: medium | Frames: 35
+
+Frames 0-1 are CONTEXT frames from the previous segment. Frames 33-34 are CONTEXT frames from the next segment. Do NOT report events from context frames.
+
+## Local Event Candidates
+
+The following events were detected locally from cursor tracking and optical flow.
+Please confirm, reject, or modify each candidate based on what you see in the frames.
+
+- **Candidate 1**: dwell | 165200ms-173000ms | confidence=0.70 at cursor (249, 212) | Extended pause (7800ms) near (249, 212)
+- **Candidate 2**: click | 172800ms-173000ms | confidence=0.20 at cursor (247, 212) | Possible click at (247, 212)
+- **Candidate 3**: click | 173000ms-173000ms | confidence=0.20 at cursor (247, 212) | Possible click at (247, 212)
+- **Candidate 4**: hover | 173200ms-174600ms | confidence=0.60 at cursor (202, 14) | Cursor stationary for 1400ms near (202, 14)
+- **Candidate 5**: hesitate | 173200ms-174600ms | confidence=0.50 at cursor (202, 14) | Hesitation (1400ms) near (202, 14) before action
+- **Candidate 6**: click | 174400ms-174600ms | confidence=0.20 at cursor (202, 14) | Possible click at (202, 14)
+- **Candidate 7**: click | 174600ms-174600ms | confidence=0.20 at cursor (202, 14) | Possible click at (202, 14)
+- **Candidate 8**: click | 174800ms-174800ms | confidence=0.20 at cursor (236, 434) | Possible click at (236, 434)
+- **Candidate 9**: click | 175000ms-175000ms | confidence=0.20 at cursor (150, 282) | Possible click at (150, 282)
+- **Candidate 10**: hover | 175200ms-175800ms | confidence=0.60 at cursor (54, 262) | Cursor stationary for 600ms near (54, 262)
+- **Candidate 11**: hesitate | 175200ms-175800ms | confidence=0.50 at cursor (54, 262) | Hesitation (600ms) near (54, 262) before action
+- **Candidate 12**: click | 175600ms-175800ms | confidence=0.20 at cursor (54, 260) | Possible click at (54, 260)
+- **Candidate 13**: click | 175800ms-175800ms | confidence=0.20 at cursor (54, 260) | Possible click at (54, 260)
+- **Candidate 14**: click | 176000ms-176000ms | confidence=0.20 at cursor (162, 432) | Possible click at (162, 432)
+- **Candidate 15**: hover | 176200ms-177000ms | confidence=0.60 at cursor (98, 396) | Cursor stationary for 800ms near (98, 396)
+- **Candidate 16**: hesitate | 176200ms-176800ms | confidence=0.50 at cursor (98, 396) | Hesitation (600ms) near (98, 396) before action
+- **Candidate 17**: click | 176800ms-177000ms | confidence=0.20 at cursor (92, 385) | Possible click at (92, 385)
+- **Candidate 18**: click | 177000ms-177000ms | confidence=0.20 at cursor (90, 382) | Possible click at (90, 382)
+- **Candidate 19**: click | 177200ms-177200ms | confidence=0.20 at cursor (246, 300) | Possible click at (246, 300)
+- **Candidate 20**: click | 177400ms-177400ms | confidence=0.20 at cursor (104, 300) | Possible click at (104, 300)
+- **Candidate 21**: click | 177600ms-177600ms | confidence=0.20 at cursor (228, 470) | Possible click at (228, 470)
+- **Candidate 22**: click | 177800ms-177800ms | confidence=0.20 at cursor (54, 478) | Possible click at (54, 478)
+- **Candidate 23**: click | 178000ms-178000ms | confidence=0.20 at cursor (228, 348) | Possible click at (228, 348)
+- **Candidate 24**: click | 178200ms-178200ms | confidence=0.20 at cursor (136, 312) | Possible click at (136, 312)
+- **Candidate 25**: click | 178400ms-178400ms | confidence=0.20 at cursor (200, 308) | Possible click at (200, 308)
+- **Candidate 26**: hover | 178600ms-179400ms | confidence=0.60 at cursor (138, 308) | Cursor stationary for 800ms near (138, 308)
+- **Candidate 27**: click | 179200ms-179400ms | confidence=0.20 at cursor (138, 308) | Possible click at (138, 308)
+
+
+Examine each frame carefully and identify all user interactions that occurred during this segment. Pay attention to:
+- Cursor position changes between frames
+- UI elements that appear selected or focused
+- Page content changes that indicate navigation or scrolling
+- Text appearing in form fields
+- Visual state changes (modals, dropdowns, loading states)
+
+Return the events as a JSON array.

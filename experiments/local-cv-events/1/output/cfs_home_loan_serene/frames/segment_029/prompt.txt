@@ -1,0 +1,30 @@
+Analyse the following screen recording frames for user interaction events.
+
+**Segment 29** | Time range: 194.2s - 199.2s | FPS: 2.0 | Activity tier: low | Frames: 15
+
+Frames 0-1 are CONTEXT frames from the previous segment. Frames 13-14 are CONTEXT frames from the next segment. Do NOT report events from context frames.
+
+## Local Event Candidates
+
+The following events were detected locally from cursor tracking and optical flow.
+Please confirm, reject, or modify each candidate based on what you see in the frames.
+
+- **Candidate 1**: dwell | 192000ms-195400ms | confidence=0.70 at cursor (226, 28) | Extended pause (3400ms) near (226, 28)
+- **Candidate 2**: click | 195200ms-195400ms | confidence=0.20 at cursor (226, 28) | Possible click at (226, 28)
+- **Candidate 3**: click | 195400ms-195400ms | confidence=0.20 at cursor (226, 28) | Possible click at (226, 28)
+- **Candidate 4**: click | 195600ms-195600ms | confidence=0.20 at cursor (250, 460) | Possible click at (250, 460)
+- **Candidate 5**: dwell | 195800ms-198600ms | confidence=0.70 at cursor (226, 28) | Extended pause (2800ms) near (226, 28)
+- **Candidate 6**: click | 198400ms-198600ms | confidence=0.20 at cursor (226, 28) | Possible click at (226, 28)
+- **Candidate 7**: click | 198600ms-198600ms | confidence=0.20 at cursor (226, 28) | Possible click at (226, 28)
+- **Candidate 8**: hover | 198800ms-199600ms | confidence=0.60 at cursor (256, 508) | Cursor stationary for 800ms near (256, 508)
+- **Candidate 9**: hesitate | 198800ms-199600ms | confidence=0.50 at cursor (256, 508) | Hesitation (800ms) near (256, 508) before action
+
+
+Examine each frame carefully and identify all user interactions that occurred during this segment. Pay attention to:
+- Cursor position changes between frames
+- UI elements that appear selected or focused
+- Page content changes that indicate navigation or scrolling
+- Text appearing in form fields
+- Visual state changes (modals, dropdowns, loading states)
+
+Return the events as a JSON array.

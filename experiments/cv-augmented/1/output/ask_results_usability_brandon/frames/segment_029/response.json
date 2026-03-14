@@ -1,0 +1,42 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 5,
+    "type": "dwell",
+    "description": "User is examining the survey results for the question 'Being able to easily see my monthly or yearly total Askable earnings is beneficial to me.'",
+    "confidence": 0.9,
+    "interaction_target": "Opinion scale results",
+    "page_title": "Askable | Opportunities",
+    "page_location": "app.askable.com/studies/69715d03eb43a65423e15816/results/task/69717e9ffae81a61df5f5a83#filters",
+    "frame_description": "The screen displays a bar chart and individual responses for a specific survey question."
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 6,
+    "type": "click",
+    "description": "User toggles the visibility of a filter in the right sidebar, updating the displayed results from 20 to 5 responses and changing the average rating from 4.4 to 4.6.",
+    "confidence": 0.95,
+    "interaction_target": "Filter visibility toggle (eye icon)",
+    "page_title": "Askable | Opportunities",
+    "frame_description": "The filter state changes to hidden, and the main content area updates to reflect the filtered data."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 7,
+    "type": "dwell",
+    "description": "User reviews the filtered results for the current question.",
+    "confidence": 0.85,
+    "page_title": "Askable | Opportunities",
+    "frame_description": "The screen shows the updated chart and response count after the filter was applied."
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 8,
+    "type": "click",
+    "description": "User clicks on the next question in the left sidebar: 'What other apps do you use that have a wallet or balance...'",
+    "confidence": 0.95,
+    "interaction_target": "Sidebar question navigation item",
+    "page_title": "Askable | Opportunities",
+    "frame_description": "The main content area transitions to display the summary and responses for the newly selected question."
+  }
+]

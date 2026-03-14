@@ -1,0 +1,42 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "dwell",
+    "description": "User examines the 'Choice' fare details for a Virgin Australia flight, including baggage and change fees",
+    "confidence": 0.8,
+    "interaction_target": "Choice fare details",
+    "page_title": "Flight Centre Australia",
+    "frame_description": "Close-up of Virgin Australia Choice fare inclusions"
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 9,
+    "type": "hover",
+    "description": "User hovers the cursor over the 'Fare Rules' link for the 'Lite' fare option",
+    "confidence": 0.9,
+    "interaction_target": "Fare Rules link",
+    "page_title": "Flight Centre Australia",
+    "frame_description": "Cursor positioned over the Fare Rules link in the Lite fare column"
+  },
+  {
+    "frame_index_start": 14,
+    "frame_index_end": 15,
+    "type": "change_ui_state",
+    "description": "The page transitions to the return flight selection screen after an outbound flight is selected",
+    "confidence": 0.9,
+    "interaction_target": "Select Return Flight screen",
+    "page_title": "Flight Centre Australia",
+    "frame_description": "Faded view of the 'Select Return Flight' header during a page transition"
+  },
+  {
+    "frame_index_start": 16,
+    "frame_index_end": 17,
+    "type": "dwell",
+    "description": "User reviews the selected outbound flight summary (7:35am MEL to SYD) at the top of the return flight selection page",
+    "confidence": 0.8,
+    "interaction_target": "Flight summary card",
+    "page_title": "Flight Centre Australia",
+    "frame_description": "Summary card showing the selected outbound flight details"
+  }
+]

@@ -1,0 +1,127 @@
+[
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 4,
+    "type": "navigate",
+    "description": "User navigates from Google search results to the Aussie home loans website.",
+    "confidence": 0.9,
+    "page_title": "Compare low home loan rates",
+    "page_location": "aussie.com.au"
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 7,
+    "type": "scroll",
+    "description": "User scrolls down the Aussie landing page to view more content.",
+    "confidence": 0.9,
+    "interaction_target": "Aussie Landing Page"
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 8,
+    "type": "click",
+    "description": "User clicks the 'I want to refinance' button.",
+    "confidence": 0.8,
+    "interaction_target": "I want to refinance"
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 9,
+    "type": "navigate",
+    "description": "The page loads the first step of the refinancing flow: 'What is your current loan balance?'.",
+    "confidence": 0.9,
+    "page_title": "What is your current loan balance?",
+    "page_location": "aussie.com.au"
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 14,
+    "type": "input_text",
+    "description": "User enters '1,000,000' into the current loan balance field.",
+    "confidence": 0.95,
+    "interaction_target": "Current loan balance input"
+  },
+  {
+    "frame_index_start": 14,
+    "frame_index_end": 15,
+    "type": "click",
+    "description": "User clicks the 'NEXT' button to proceed.",
+    "confidence": 0.9,
+    "interaction_target": "NEXT"
+  },
+  {
+    "frame_index_start": 15,
+    "frame_index_end": 15,
+    "type": "navigate",
+    "description": "The page loads the next step: 'Please tell us more about your current loan.'.",
+    "confidence": 0.9,
+    "page_title": "Please tell us more about your current loan.",
+    "page_location": "aussie.com.au"
+  },
+  {
+    "frame_index_start": 21,
+    "frame_index_end": 21,
+    "type": "select",
+    "description": "User toggles the 'I don't know, skip' option for the interest rate field.",
+    "confidence": 0.95,
+    "interaction_target": "I don't know, skip"
+  },
+  {
+    "frame_index_start": 24,
+    "frame_index_end": 24,
+    "type": "select",
+    "description": "User selects 'No' for the question 'Are you currently on a fixed rate?'.",
+    "confidence": 0.95,
+    "interaction_target": "No"
+  },
+  {
+    "frame_index_start": 24,
+    "frame_index_end": 25,
+    "type": "click",
+    "description": "User clicks the 'NEXT' button.",
+    "confidence": 0.9,
+    "interaction_target": "NEXT"
+  },
+  {
+    "frame_index_start": 25,
+    "frame_index_end": 25,
+    "type": "navigate",
+    "description": "The page loads the lender search step: 'Who is your current lender'.",
+    "confidence": 0.9,
+    "page_title": "Who is your current lender",
+    "page_location": "aussie.com.au"
+  },
+  {
+    "frame_index_start": 27,
+    "frame_index_end": 29,
+    "type": "input_text",
+    "description": "User types 'St george' into the lender search box.",
+    "confidence": 0.95,
+    "interaction_target": "Search for your lender"
+  },
+  {
+    "frame_index_start": 30,
+    "frame_index_end": 30,
+    "type": "select",
+    "description": "User selects 'St George' from the search results, dismissing the keyboard.",
+    "confidence": 0.9,
+    "interaction_target": "St George"
+  },
+  {
+    "frame_index_start": 30,
+    "frame_index_end": 31,
+    "type": "navigate",
+    "description": "The page loads the property value step: 'How much do you think your property is worth?'.",
+    "confidence": 0.9,
+    "page_title": "How much do you think your property is worth?",
+    "page_location": "aussie.com.au"
+  },
+  {
+    "frame_index_start": 33,
+    "frame_index_end": 34,
+    "type": "input_text",
+    "description": "User begins typing the property value.",
+    "confidence": 0.9,
+    "interaction_target": "Property worth input"
+  }
+]

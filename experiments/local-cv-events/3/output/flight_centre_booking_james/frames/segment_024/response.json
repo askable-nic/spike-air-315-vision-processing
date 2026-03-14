@@ -1,0 +1,49 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 11,
+    "type": "scroll",
+    "description": "User scrolls down the page to review the 'Online Captain's Pack' and other flight options.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre - Your centre for travel.",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eW2/results#baggage",
+    "frame_description": "The user is scrolling through the baggage and extras selection page."
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 18,
+    "type": "scroll",
+    "description": "User scrolls back up the page to review the flight summary.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre - Your centre for travel.",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eW2/results#baggage"
+  },
+  {
+    "frame_index_start": 21,
+    "frame_index_end": 22,
+    "type": "click",
+    "description": "User clicks the green 'CONTINUE' button to proceed to the next step of the booking process.",
+    "confidence": 1.0,
+    "interaction_target": "CONTINUE button",
+    "page_title": "Flight Centre - Your centre for travel.",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eW2/results#baggage"
+  },
+  {
+    "frame_index_start": 23,
+    "frame_index_end": 32,
+    "type": "change_ui_state",
+    "description": "A loading overlay appears with the message 'Thanks for confirming your flights' and a progress spinner.",
+    "confidence": 1.0,
+    "frame_description": "A modal overlay is visible while the system processes the selection."
+  },
+  {
+    "frame_index_start": 33,
+    "frame_index_end": 36,
+    "type": "navigate",
+    "description": "The page navigates from the baggage selection to the 'Travellers' details entry page.",
+    "confidence": 1.0,
+    "interaction_target": "Travellers details page",
+    "page_title": "Flight Centre - Your centre for travel.",
+    "frame_description": "The UI transitions to the second step of the booking flow: entering traveller information."
+  }
+]

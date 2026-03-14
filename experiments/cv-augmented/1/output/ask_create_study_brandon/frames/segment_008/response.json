@@ -1,0 +1,121 @@
+[
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 7,
+    "type": "click",
+    "description": "User clicks on 'Additional Info' in the left sidebar menu",
+    "confidence": 0.95,
+    "interaction_target": "Additional Info sidebar item",
+    "page_title": "Create a custom screener",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/audience/custom-screener"
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 8,
+    "type": "navigate",
+    "description": "Page navigates to the 'Your timezone' section",
+    "confidence": 1.0,
+    "page_title": "Your timezone",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/additional-info/your-timezone"
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 9,
+    "type": "click",
+    "description": "User clicks the 'Next' button on the timezone page",
+    "confidence": 0.9,
+    "interaction_target": "Next button",
+    "page_title": "Your timezone"
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 10,
+    "type": "navigate",
+    "description": "Page navigates to the 'Description' section",
+    "confidence": 1.0,
+    "page_title": "Short description of who you're looking for",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/additional-info/description"
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 15,
+    "type": "input_text",
+    "description": "User types 'Do you watch TV on streaming services?' into the short description field",
+    "confidence": 0.98,
+    "interaction_target": "Short description text area",
+    "page_title": "Short description of who you're looking for"
+  },
+  {
+    "frame_index_start": 16,
+    "frame_index_end": 16,
+    "type": "click",
+    "description": "User clicks the 'Next' button on the description page",
+    "confidence": 0.9,
+    "interaction_target": "Next button"
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 17,
+    "type": "navigate",
+    "description": "Page navigates to 'Additional instructions' and user immediately clicks 'Next'",
+    "confidence": 0.9,
+    "interaction_target": "Next button",
+    "page_title": "Additional instructions for confirmed participants",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/additional-info/additional-instructions"
+  },
+  {
+    "frame_index_start": 18,
+    "frame_index_end": 18,
+    "type": "navigate",
+    "description": "Page navigates to 'Contacts' and user immediately clicks 'Next'",
+    "confidence": 0.9,
+    "interaction_target": "Next button",
+    "page_title": "Contacts",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/additional-info/contacts"
+  },
+  {
+    "frame_index_start": 19,
+    "frame_index_end": 19,
+    "type": "navigate",
+    "description": "Page navigates to 'Legal & Privacy' and user immediately clicks 'Next'",
+    "confidence": 0.9,
+    "interaction_target": "Next button",
+    "page_title": "Legal & Privacy",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/additional-info/legal-privacy"
+  },
+  {
+    "frame_index_start": 20,
+    "frame_index_end": 20,
+    "type": "navigate",
+    "description": "Page navigates to the 'Session Times' calendar view",
+    "confidence": 1.0,
+    "page_title": "Session Times",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/session-times/calendar"
+  },
+  {
+    "frame_index_start": 23,
+    "frame_index_end": 32,
+    "type": "select",
+    "description": "User selects multiple time slots on the calendar for February 26th and 27th",
+    "confidence": 0.95,
+    "interaction_target": "Calendar time slots",
+    "page_title": "Session Times"
+  },
+  {
+    "frame_index_start": 33,
+    "frame_index_end": 33,
+    "type": "click",
+    "description": "User clicks the 'Next' button to proceed to review",
+    "confidence": 0.9,
+    "interaction_target": "Next button"
+  },
+  {
+    "frame_index_start": 33,
+    "frame_index_end": 33,
+    "type": "navigate",
+    "description": "Page navigates to 'Review & Submit'",
+    "confidence": 1.0,
+    "page_title": "Review & Submit",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/review-submit/confirm-booking"
+  }
+]

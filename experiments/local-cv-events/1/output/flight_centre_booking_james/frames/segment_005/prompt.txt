@@ -1,0 +1,31 @@
+Analyse the following screen recording frames for user interaction events.
+
+**Segment 5** | Time range: 38.2s - 45.2s | FPS: 4.0 | Activity tier: medium | Frames: 35
+
+Frames 0-1 are CONTEXT frames from the previous segment. Frames 33-34 are CONTEXT frames from the next segment. Do NOT report events from context frames.
+
+## Local Event Candidates
+
+The following events were detected locally from cursor tracking and optical flow.
+Please confirm, reject, or modify each candidate based on what you see in the frames.
+
+- **Candidate 1**: dwell | 0ms-39600ms | confidence=0.70 at cursor (984, 73) | Extended pause (39600ms) near (984, 73)
+- **Candidate 2**: click | 39400ms-39600ms | confidence=0.20 at cursor (984, 73) | Possible click at (984, 73)
+- **Candidate 3**: click | 39600ms-39600ms | confidence=0.20 at cursor (984, 73) | Possible click at (984, 73)
+- **Candidate 4**: hover | 39800ms-40800ms | confidence=0.60 at cursor (71, 227) | Cursor stationary for 1000ms near (71, 227)
+- **Candidate 5**: click | 40600ms-40800ms | confidence=0.20 at cursor (71, 228) | Possible click at (71, 228)
+- **Candidate 6**: click | 40800ms-40800ms | confidence=0.20 at cursor (71, 228) | Possible click at (71, 228)
+- **Candidate 7**: hover | 41000ms-42000ms | confidence=0.60 at cursor (565, 180) | Cursor stationary for 1000ms near (565, 180)
+- **Candidate 8**: click | 41800ms-42000ms | confidence=0.20 at cursor (565, 180) | Possible click at (565, 180)
+- **Candidate 9**: click | 42000ms-42000ms | confidence=0.20 at cursor (565, 180) | Possible click at (565, 180)
+- **Candidate 10**: dwell | 42200ms-56200ms | confidence=0.70 at cursor (841, 397) | Extended pause (14000ms) near (841, 397)
+
+
+Examine each frame carefully and identify all user interactions that occurred during this segment. Pay attention to:
+- Cursor position changes between frames
+- UI elements that appear selected or focused
+- Page content changes that indicate navigation or scrolling
+- Text appearing in form fields
+- Visual state changes (modals, dropdowns, loading states)
+
+Return the events as a JSON array.

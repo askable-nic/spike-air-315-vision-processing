@@ -1,0 +1,32 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "change_ui_state",
+    "description": "The UI transitions from a summary view to the passenger details input form.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre Australia",
+    "page_location": "secure.flightcentre.com.au/AAXy9ikH/passenger",
+    "frame_description": "The screen updates to show form fields for passenger name and date of birth."
+  },
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 6,
+    "type": "dwell",
+    "description": "User pauses to read the 'Heads up!' warning and examine the passenger details form fields.",
+    "confidence": 0.8,
+    "page_title": "Flight Centre Australia",
+    "page_location": "secure.flightcentre.com.au/AAXy9ikH/passenger",
+    "frame_description": "The passenger details form is visible with a warning message at the top."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 7,
+    "type": "scroll",
+    "description": "User scrolls down the page to reveal additional form sections for rewards and contact information.",
+    "confidence": 0.95,
+    "page_title": "Flight Centre Australia",
+    "page_location": "secure.flightcentre.com.au/AAXy9ikH/passenger",
+    "frame_description": "The view shifts downward, bringing the phone number and email fields into view."
+  }
+]

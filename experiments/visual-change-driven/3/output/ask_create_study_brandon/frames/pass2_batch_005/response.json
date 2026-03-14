@@ -1,0 +1,40 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "click",
+    "description": "User clicks the 'Next' button on the 'Give your study a title' page to proceed.",
+    "confidence": 1.0,
+    "interaction_target": "Next button",
+    "page_title": "Give your study a title",
+    "page_location": "app.askable.com/booking-setup/create",
+    "frame_description": "The cursor is positioned over the 'Next' button while the study title 'TV Streaming - Discovery' is entered."
+  },
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "navigate",
+    "description": "The application navigates from the study title setup to the research method selection page.",
+    "confidence": 1.0,
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/project-setup/research-type?research-type=null"
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "select",
+    "description": "User selects 'Video Call' as the moderated research method.",
+    "confidence": 0.9,
+    "interaction_target": "Video Call card",
+    "page_title": "How will you be conducting your research?",
+    "frame_description": "The cursor is over the 'Video Call' option, which is highlighted with a blue selection border."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "navigate",
+    "description": "The application navigates to the 'Device requirements' setup page.",
+    "confidence": 1.0,
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/project-setup/devices",
+    "frame_description": "The screen transitions from the research method selection to the device requirements selection."
+  }
+]

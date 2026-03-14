@@ -1,0 +1,83 @@
+You are analysing a screen recording for user interaction events.
+
+**Batch 22** | Time range: 430.7s - 470.9s | Frames: 34
+
+## Current page context
+Page: What's the purpose of your loan? - Unloan
+Location: unloan.com.au/apply
+Description: The start of the Unloan application process asking for the loan purpose.
+Interactive elements: Continue button, View full product features link
+
+## Moments to analyse
+
+The following frames show moments where either the screen content changed or the
+cursor was positioned over a UI element.
+
+For interaction moments (before/after pairs), determine:
+1. What event type best describes what happened (click, hover, navigate, input_text,
+   select, change_ui_state, drag, etc.)
+2. What UI element was involved (button label, link text, form field, etc.)
+3. A clear description of the user action
+
+For pre_scene_change moments (before/after pairs captured just before a page
+navigation or major screen transition), determine:
+1. What user action most likely triggered the scene change. Look for:
+   - Elements in a hover or active/pressed state (highlighted buttons, underlined
+     links, focused form controls)
+   - Cursor position if visible — but note the cursor may not be present (e.g.
+     mobile devices, keyboard navigation, touch input)
+   - Any visual difference between the before and after frames that indicates an
+     element was activated (colour change, ripple effect, depression)
+2. Identify the specific UI element (button label, link text, menu item, etc.)
+3. Set the event type to "click" or "navigate" as appropriate
+
+For cursor position moments (single frame), determine:
+1. What UI element is under or near the cursor
+2. Whether this appears to be a hover, a click (if context suggests it), or
+   just the cursor resting
+3. A brief description of the element and its context
+
+If a moment shows no meaningful interaction (e.g. a minor visual artifact or the
+cursor resting in a non-interactive area), omit it from the results.
+
+## Frame annotations
+
+[Frame 0 | 430417ms | moment 0 (interaction) | before]
+[Frame 1 | 431183ms | moment 0 (interaction) | after]
+[Frame 2 | 432017ms | moment 1 (interaction) | before]
+[Frame 3 | 434383ms | moment 1 (interaction) | after]
+[Frame 4 | 436283ms | moment 2 (interaction) | before]
+[Frame 5 | 437050ms | moment 2 (interaction) | after]
+[Frame 6 | 439483ms | moment 3 (interaction) | before]
+[Frame 7 | 440250ms | moment 3 (interaction) | after]
+[Frame 8 | 441350ms | moment 4 (interaction) | before]
+[Frame 9 | 442383ms | moment 4 (interaction) | after]
+[Frame 10 | 445350ms | moment 5 (interaction) | before]
+[Frame 11 | 446650ms | moment 5 (interaction) | after]
+[Frame 12 | 448017ms | moment 6 (interaction) | before]
+[Frame 13 | 448783ms | moment 6 (interaction) | after]
+[Frame 14 | 448817ms | moment 7 (interaction) | before]
+[Frame 15 | 450117ms | moment 7 (interaction) | after]
+[Frame 16 | 450417ms | moment 8 (interaction) | before]
+[Frame 17 | 451717ms | moment 8 (interaction) | after]
+[Frame 18 | 451750ms | moment 9 (interaction) | before]
+[Frame 19 | 452517ms | moment 9 (interaction) | after]
+[Frame 20 | 452817ms | moment 10 (interaction) | before]
+[Frame 21 | 453583ms | moment 10 (interaction) | after]
+[Frame 22 | 456017ms | moment 11 (interaction) | before]
+[Frame 23 | 457850ms | moment 11 (interaction) | after]
+[Frame 24 | 458150ms | moment 12 (interaction) | before]
+[Frame 25 | 461850ms | moment 12 (interaction) | after]
+[Frame 26 | 461883ms | moment 13 (interaction) | before]
+[Frame 27 | 462650ms | moment 13 (interaction) | after]
+[Frame 28 | 464550ms | moment 14 (interaction) | before]
+[Frame 29 | 465317ms | moment 14 (interaction) | after]
+[Frame 30 | 466950ms | moment 15 (interaction) | before]
+[Frame 31 | 467717ms | moment 15 (interaction) | after]
+[Frame 32 | 468817ms | moment 16 (interaction) | before]
+[Frame 33 | 471183ms | moment 16 (interaction) | after]
+
+Use frame indices relative to this batch (starting from 0). For short interactions,
+frame_index_start and frame_index_end may be the same.
+
+Return events as a JSON array.

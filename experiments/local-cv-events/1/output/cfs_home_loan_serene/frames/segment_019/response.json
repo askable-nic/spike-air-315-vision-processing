@@ -1,0 +1,82 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 8,
+    "type": "change_ui_state",
+    "description": "The Aussie website displays a loading screen with an animated house logo and the text 'Loading.... You're moving along nicely.'",
+    "confidence": 0.95,
+    "page_title": "Aussie Home Loans",
+    "frame_description": "A purple and white loading screen with a house icon animation."
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 9,
+    "type": "hover",
+    "description": "User hovers the cursor over the 'I want to buy a home' button on the Aussie home loan rates page.",
+    "confidence": 0.8,
+    "interaction_target": "I want to buy a home",
+    "page_title": "Aussie Home Loans",
+    "frame_description": "The Aussie home loan rates page is visible with two main call-to-action buttons."
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 9,
+    "type": "click",
+    "description": "User clicks the 'I want to buy a home' button, which triggers a navigation.",
+    "confidence": 0.9,
+    "interaction_target": "I want to buy a home",
+    "page_title": "Aussie Home Loans"
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 10,
+    "type": "navigate",
+    "description": "The browser navigates to a Google search results page for 'home loan australia bank st george'.",
+    "confidence": 1.0,
+    "page_title": "home loan australia bank st george - Google Search",
+    "frame_description": "Google search results page showing various bank home loan offers."
+  },
+  {
+    "frame_index_start": 14,
+    "frame_index_end": 20,
+    "type": "scroll",
+    "description": "User scrolls down through the Google search results to view more sponsored and organic listings.",
+    "confidence": 0.95,
+    "page_title": "home loan australia bank st george - Google Search"
+  },
+  {
+    "frame_index_start": 21,
+    "frame_index_end": 21,
+    "type": "navigate",
+    "description": "User navigates to the ubank home loans landing page.",
+    "confidence": 1.0,
+    "page_title": "Home Loans | ubank",
+    "frame_description": "The ubank home loans page with a bright teal background and 'Apply now' button."
+  },
+  {
+    "frame_index_start": 21,
+    "frame_index_end": 27,
+    "type": "dwell",
+    "description": "User pauses on the ubank landing page, with the cursor resting near the 'Apply now' button, likely reading the interest rate information.",
+    "confidence": 0.85,
+    "interaction_target": "Apply now",
+    "page_title": "Home Loans | ubank"
+  },
+  {
+    "frame_index_start": 28,
+    "frame_index_end": 31,
+    "type": "scroll",
+    "description": "User scrolls down the ubank page to reveal different loan categories like 'I'm buying' and 'I'm refinancing'.",
+    "confidence": 0.95,
+    "page_title": "Home Loans | ubank"
+  },
+  {
+    "frame_index_start": 32,
+    "frame_index_end": 34,
+    "type": "dwell",
+    "description": "User pauses to examine the various loan options and calculators available on the ubank page.",
+    "confidence": 0.8,
+    "page_title": "Home Loans | ubank",
+    "frame_description": "A grid of options including 'I'm buying', 'I'm refinancing', and 'Calculators' is visible."
+  }
+]

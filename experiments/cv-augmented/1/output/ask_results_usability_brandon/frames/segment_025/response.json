@@ -1,0 +1,64 @@
+[
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 4,
+    "type": "click",
+    "description": "User clicks on the 'I would prefer my transaction history to show' task in the sidebar to view its results",
+    "confidence": 0.95,
+    "interaction_target": "I would prefer my transaction history to show",
+    "page_title": "Askable | Studies / Participant App: Wallet Core Flows & Expectations",
+    "page_location": "app.askable.com/studies/69715d03eb43a65423e15816/results/task/69717c92b768fa96162c8fa0#filters"
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 12,
+    "type": "dwell",
+    "description": "User examines the survey results and individual responses for the transaction history preference question",
+    "confidence": 0.85,
+    "page_title": "Askable | Studies / Participant App: Wallet Core Flows & Expectations"
+  },
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 15,
+    "type": "hover",
+    "description": "User hovers over the 'Show filter' icon in the Filters panel, triggering a tooltip",
+    "confidence": 0.9,
+    "interaction_target": "Show filter icon",
+    "frame_description": "Tooltip 'Show filter' is visible over the eye icon in the right-hand sidebar"
+  },
+  {
+    "frame_index_start": 16,
+    "frame_index_end": 16,
+    "type": "click",
+    "description": "User clicks the 'Show filter' icon, which applies a filter and updates the data visualization",
+    "confidence": 0.95,
+    "interaction_target": "Show filter icon",
+    "frame_description": "The bar chart percentages change from 65%/35% to 80%/20% and a blue badge appears on the Filters button"
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 21,
+    "type": "dwell",
+    "description": "User reviews the filtered survey results",
+    "confidence": 0.8,
+    "page_title": "Askable | Studies / Participant App: Wallet Core Flows & Expectations"
+  },
+  {
+    "frame_index_start": 22,
+    "frame_index_end": 23,
+    "type": "click",
+    "description": "User clicks the 'Show filter' icon again to remove the active filter",
+    "confidence": 0.95,
+    "interaction_target": "Show filter icon",
+    "frame_description": "The data visualization reverts to the original 65%/35% distribution"
+  },
+  {
+    "frame_index_start": 24,
+    "frame_index_end": 25,
+    "type": "click",
+    "description": "User clicks on the 'What other types of withdrawal methods would be desirable?' task in the sidebar",
+    "confidence": 0.95,
+    "interaction_target": "What other types of withdrawal methods would be desirable?",
+    "page_location": "app.askable.com/studies/69715d03eb43a65423e15816/results/task/697181f0805c74d117c05c26#filters"
+  }
+]

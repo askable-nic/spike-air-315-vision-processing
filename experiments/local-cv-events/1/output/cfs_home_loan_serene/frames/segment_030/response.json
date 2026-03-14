@@ -1,0 +1,40 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 7,
+    "type": "dwell",
+    "description": "User pauses with the cursor at the top of the screen while viewing home loan calculation results.",
+    "confidence": 0.8,
+    "interaction_target": "Home loan calculator results",
+    "page_title": "Home Loans - St.George",
+    "frame_description": "The screen shows a St.George home loan calculator with results indicating potential savings of $49 monthly."
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 10,
+    "type": "hover",
+    "description": "User moves the cursor over the 'Your savings could be' section of the results.",
+    "confidence": 0.7,
+    "interaction_target": "Savings calculation results",
+    "page_title": "Home Loans - St.George"
+  },
+  {
+    "frame_index_start": 14,
+    "frame_index_end": 30,
+    "type": "scroll",
+    "description": "User scrolls down the page to view the 'Basic Variable Rate Owner Occupier Home Loan' details and the 'Extra monthly repayments' section.",
+    "confidence": 0.9,
+    "interaction_target": "Home loan details page",
+    "page_title": "Home Loans - St.George",
+    "frame_description": "The page content moves upwards as the user scrolls down to reveal more detailed loan information and an extra repayments calculator."
+  },
+  {
+    "frame_index_start": 31,
+    "frame_index_end": 35,
+    "type": "dwell",
+    "description": "User pauses with the cursor at the top of the screen after scrolling down the page.",
+    "confidence": 0.8,
+    "interaction_target": "Extra monthly repayments section",
+    "page_title": "Home Loans - St.George"
+  }
+]

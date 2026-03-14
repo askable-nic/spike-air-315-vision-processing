@@ -1,0 +1,48 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 5,
+    "type": "click",
+    "description": "User clicked the 'Begin task' button to initiate the task.",
+    "confidence": 0.95,
+    "interaction_target": "Begin task button",
+    "frame_description": "The screen shows a task instruction with a 'Begin task' button highlighted by a heatmap."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 6,
+    "type": "change_ui_state",
+    "description": "The screen transitioned from the task start page to the 'Explore' dashboard.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "frame_description": "The UI changes to show the 'Explore' page with various task opportunities."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 9,
+    "type": "dwell",
+    "description": "User paused to examine the 'Explore' page content before interacting further.",
+    "confidence": 0.7,
+    "page_title": "Explore",
+    "frame_description": "The user remains on the top section of the Explore page."
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 14,
+    "type": "scroll",
+    "description": "User scrolled through the 'Explore' page to view different task opportunities, including scrolling down and briefly back up.",
+    "confidence": 0.85,
+    "page_title": "Explore",
+    "frame_description": "The page content moves vertically as the user explores the list of opportunities."
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 14,
+    "type": "hover",
+    "description": "User hovered over the 'Video call' opportunity card, indicated by the heatmap focus during scrolling.",
+    "confidence": 0.8,
+    "interaction_target": "Video call opportunity card",
+    "page_title": "Explore",
+    "frame_description": "A heatmap appears over the 'Video call' card as the user scrolls past or pauses on it."
+  }
+]

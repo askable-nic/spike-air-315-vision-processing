@@ -1,0 +1,92 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 2,
+    "type": "change_ui_state",
+    "description": "The 'Select Seats' modal is open and shows a loading spinner for the seat selector.",
+    "confidence": 0.95,
+    "page_title": "Flight Centre Australia",
+    "page_location": "secure.flightcentre.com.au/AAXy9ikH/results#baggage",
+    "frame_description": "Loading spinner visible in the seat selection modal."
+  },
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 3,
+    "type": "change_ui_state",
+    "description": "The seat map for Flight 1 (SYD to MEL) finishes loading.",
+    "confidence": 0.9,
+    "interaction_target": "Seat Map",
+    "frame_description": "Seat map for the first flight leg is now visible."
+  },
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 16,
+    "type": "dwell",
+    "description": "User examines the seat map for the first flight leg without making a selection.",
+    "confidence": 0.8,
+    "interaction_target": "Seat Map",
+    "frame_description": "User moves cursor over the seat map while reviewing options."
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 17,
+    "type": "click",
+    "description": "User clicks the 'NEXT FLIGHT' button to move to the seat selection for the return leg.",
+    "confidence": 0.95,
+    "interaction_target": "NEXT FLIGHT",
+    "frame_description": "Cursor clicks the blue 'NEXT FLIGHT' button at the bottom right of the modal."
+  },
+  {
+    "frame_index_start": 18,
+    "frame_index_end": 19,
+    "type": "change_ui_state",
+    "description": "Loading spinner appears while the seat map for the second flight leg loads.",
+    "confidence": 0.95,
+    "frame_description": "Loading seat selector message and spinner for Flight 2."
+  },
+  {
+    "frame_index_start": 20,
+    "frame_index_end": 20,
+    "type": "change_ui_state",
+    "description": "The seat map for Flight 2 (MEL to SYD) finishes loading.",
+    "confidence": 0.9,
+    "interaction_target": "Seat Map",
+    "frame_description": "Seat map for the second flight leg is now visible."
+  },
+  {
+    "frame_index_start": 23,
+    "frame_index_end": 23,
+    "type": "click",
+    "description": "User clicks on seat '5E' in the seat map.",
+    "confidence": 0.9,
+    "interaction_target": "Seat 5E",
+    "frame_description": "User selects a specific seat, triggering a confirmation popover."
+  },
+  {
+    "frame_index_start": 24,
+    "frame_index_end": 24,
+    "type": "click",
+    "description": "User clicks the 'CONFIRM SEAT' button in the selection popover.",
+    "confidence": 0.95,
+    "interaction_target": "CONFIRM SEAT",
+    "frame_description": "Cursor clicks the blue 'CONFIRM SEAT' button."
+  },
+  {
+    "frame_index_start": 25,
+    "frame_index_end": 25,
+    "type": "click",
+    "description": "User clicks the 'DONE' button to finalize seat selection and close the modal.",
+    "confidence": 0.95,
+    "interaction_target": "DONE",
+    "frame_description": "Cursor clicks the 'DONE' button at the bottom right."
+  },
+  {
+    "frame_index_start": 27,
+    "frame_index_end": 27,
+    "type": "change_ui_state",
+    "description": "The seat selection modal closes and the main page updates to show the selected seat 'Preferred 5E' and a total of $28.00.",
+    "confidence": 0.95,
+    "interaction_target": "Seats section",
+    "frame_description": "The main baggage page now displays the confirmed seat selection details."
+  }
+]

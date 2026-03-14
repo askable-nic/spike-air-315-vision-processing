@@ -1,0 +1,29 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 13,
+    "type": "dwell",
+    "description": "User dwells on the Webjet homepage, likely reviewing the pre-filled flight search details or the initial hero image.",
+    "confidence": 0.9,
+    "page_title": "Webjet | Your go-to for going",
+    "page_location": "webjet.com.au",
+    "frame_description": "The homepage shows a flight search widget over a hero image of rice terraces."
+  },
+  {
+    "frame_index_start": 14,
+    "frame_index_end": 14,
+    "type": "change_ui_state",
+    "description": "The hero image on the homepage automatically transitions from the rice terraces image to an image of the Eiffel Tower.",
+    "confidence": 1.0,
+    "interaction_target": "Hero Image Carousel",
+    "frame_description": "The background image behind the search widget changes to the Eiffel Tower."
+  },
+  {
+    "frame_index_start": 15,
+    "frame_index_end": 22,
+    "type": "hesitate",
+    "description": "User moves the cursor slowly towards the top navigation bar and browser tabs without performing an action, suggesting uncertainty or preparation for a new navigation.",
+    "confidence": 0.8,
+    "frame_description": "The cursor drifts upwards from the center of the screen towards the top menu."
+  }
+]

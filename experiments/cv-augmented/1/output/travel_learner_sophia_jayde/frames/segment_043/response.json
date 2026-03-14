@@ -1,0 +1,88 @@
+[
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 4,
+    "type": "input_text",
+    "description": "User types 'lon' into the location search field",
+    "confidence": 0.9,
+    "interaction_target": "Start where? search box",
+    "page_title": "Campervan Hire UK | RV & Motorhome Rental | Camplify",
+    "page_location": "camplify.co.uk"
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 5,
+    "type": "hover",
+    "description": "User hovers over 'London' in the suggested locations dropdown",
+    "confidence": 0.8,
+    "interaction_target": "London suggestion"
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 7,
+    "type": "click",
+    "description": "User clicks the 'Accept' button on the cookie consent banner",
+    "confidence": 0.95,
+    "interaction_target": "Accept button",
+    "frame_description": "A cookie consent modal is visible over the main page content"
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 11,
+    "type": "select",
+    "description": "User selects 'London' from the suggested locations dropdown",
+    "confidence": 0.9,
+    "interaction_target": "London suggestion"
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 13,
+    "type": "click",
+    "description": "User clicks on the date range picker field to open the calendar",
+    "confidence": 0.9,
+    "interaction_target": "From - to date field"
+  },
+  {
+    "frame_index_start": 14,
+    "frame_index_end": 20,
+    "type": "click",
+    "description": "User clicks the next month arrow in the calendar multiple times to navigate to November 2026",
+    "confidence": 0.9,
+    "interaction_target": "Next month arrow",
+    "frame_description": "Calendar modal is open showing month navigation"
+  },
+  {
+    "frame_index_start": 21,
+    "frame_index_end": 22,
+    "type": "select",
+    "description": "User selects a date range from November 9th to November 15th, 2026",
+    "confidence": 0.95,
+    "interaction_target": "Calendar dates November 9 and 15"
+  },
+  {
+    "frame_index_start": 23,
+    "frame_index_end": 23,
+    "type": "click",
+    "description": "User clicks the 'Find your van' button to initiate the search",
+    "confidence": 0.95,
+    "interaction_target": "Find your van button"
+  },
+  {
+    "frame_index_start": 24,
+    "frame_index_end": 26,
+    "type": "navigate",
+    "description": "Page navigates to the search results for London",
+    "confidence": 1.0,
+    "page_location": "camplify.co.uk/s/london?checkin=2026-11-09&checkout=2026-11-15&berthsMin=2&page=1",
+    "frame_description": "Screen goes white then loads the search results page"
+  },
+  {
+    "frame_index_start": 27,
+    "frame_index_end": 31,
+    "type": "dwell",
+    "description": "User dwells on the search results page, examining available campervan listings",
+    "confidence": 0.8,
+    "page_title": "London Campervan Hire | RV & Motorhome Rental | Camplify",
+    "frame_description": "Search results page showing various van listings like 'Papillon' and 'The Mobile Retreat'"
+  }
+]

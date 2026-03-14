@@ -1,0 +1,45 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 5,
+    "type": "hover",
+    "description": "User hovers over the 'MAV Fixed | OO P&I | $150k + (3 Year Fixed)' loan option in the list.",
+    "confidence": 0.9,
+    "interaction_target": "MAV Fixed | OO P&I | $150k + (3 Year Fixed) row",
+    "page_title": "Mortgage Choice - Home Loan Comparison"
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 6,
+    "type": "click",
+    "description": "User clicks on the loan row to view more details.",
+    "confidence": 0.95,
+    "interaction_target": "MAV Fixed | OO P&I | $150k + (3 Year Fixed) row"
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 9,
+    "type": "navigate",
+    "description": "The page navigates to the detailed view for the selected CBA home loan.",
+    "confidence": 1.0,
+    "page_title": "MAV Fixed | OO P&I | $150k + Home Loan from CBA",
+    "frame_description": "A transition screen followed by the product detail page."
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 18,
+    "type": "dwell",
+    "description": "User pauses to examine the interest rates and product features on the detail page.",
+    "confidence": 0.8,
+    "page_title": "MAV Fixed | OO P&I | $150k + Home Loan from CBA"
+  },
+  {
+    "frame_index_start": 19,
+    "frame_index_end": 32,
+    "type": "scroll",
+    "description": "User scrolls down the page to read the 'Details for this CBA home loan' section and view 'Home loans from other lenders'.",
+    "confidence": 1.0,
+    "interaction_target": "Page body",
+    "frame_description": "The page content moves vertically as the user scrolls."
+  }
+]

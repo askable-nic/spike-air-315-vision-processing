@@ -1,0 +1,100 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 10,
+    "type": "click",
+    "description": "User clicks an option within the 'Jump to' dropdown menu on the St. George bank website",
+    "confidence": 0.9,
+    "interaction_target": "Jump to menu item",
+    "page_title": "Home Loans - St.George Bank",
+    "frame_description": "The user interacts with a dropdown menu at the top of the page."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 11,
+    "type": "navigate",
+    "description": "The page navigates to 'Home loan calculators and tools'",
+    "confidence": 1.0,
+    "page_title": "Home loan calculators and tools",
+    "frame_description": "A new page loads showing various home loan calculation tools."
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 15,
+    "type": "click",
+    "description": "User clicks the browser's back button to return to search results",
+    "confidence": 0.8,
+    "interaction_target": "Browser back button",
+    "frame_description": "The cursor moves towards the top left of the screen before the page transitions."
+  },
+  {
+    "frame_index_start": 16,
+    "frame_index_end": 16,
+    "type": "navigate",
+    "description": "The page navigates back to the Google search results for 'homelone australia bank st george'",
+    "confidence": 1.0,
+    "page_title": "homelone australia bank st george - Google Search",
+    "frame_description": "The browser returns to the previous Google search results page."
+  },
+  {
+    "frame_index_start": 16,
+    "frame_index_end": 29,
+    "type": "scroll",
+    "description": "User scrolls down through the Google search results",
+    "confidence": 0.9,
+    "frame_description": "The user is reviewing different bank options in the search results."
+  },
+  {
+    "frame_index_start": 30,
+    "frame_index_end": 30,
+    "type": "click",
+    "description": "User clicks on the search bar to modify the search query",
+    "confidence": 0.9,
+    "interaction_target": "Google search bar",
+    "frame_description": "The cursor is positioned over the search input field."
+  },
+  {
+    "frame_index_start": 42,
+    "frame_index_end": 55,
+    "type": "input_text",
+    "description": "User modifies the search query to 'homelone australia banks'",
+    "confidence": 0.9,
+    "interaction_target": "Google search bar",
+    "frame_description": "The keyboard is visible and the text in the search bar changes."
+  },
+  {
+    "frame_index_start": 56,
+    "frame_index_end": 56,
+    "type": "click",
+    "description": "User clicks the search button to execute the new query",
+    "confidence": 0.9,
+    "interaction_target": "Search button",
+    "frame_description": "The user triggers a new search."
+  },
+  {
+    "frame_index_start": 57,
+    "frame_index_end": 57,
+    "type": "navigate",
+    "description": "The page navigates to the new search results for 'homelone australia banks'",
+    "confidence": 1.0,
+    "page_title": "homelone australia banks - Google Search",
+    "frame_description": "New search results appear on the screen."
+  },
+  {
+    "frame_index_start": 57,
+    "frame_index_end": 64,
+    "type": "dwell",
+    "description": "User pauses to examine the updated search results",
+    "confidence": 0.8,
+    "frame_description": "The cursor remains relatively stationary as the user reads the new results."
+  },
+  {
+    "frame_index_start": 65,
+    "frame_index_end": 66,
+    "type": "click",
+    "description": "User clicks back into the search bar",
+    "confidence": 0.9,
+    "interaction_target": "Google search bar",
+    "frame_description": "The search suggestions overlay reappears after the user clicks the search bar."
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 27,
+    "type": "dwell",
+    "description": "User spends time reading and examining different task cards on the Explore page, moving the cursor over various opportunities.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "frame_description": "The Explore page is visible with several task cards like 'AI Interview' and 'Survey'."
+  },
+  {
+    "frame_index_start": 28,
+    "frame_index_end": 28,
+    "type": "click",
+    "description": "User clicks the filter icon in the top right corner of the screen.",
+    "confidence": 0.8,
+    "interaction_target": "Filter icon",
+    "page_title": "Explore"
+  },
+  {
+    "frame_index_start": 29,
+    "frame_index_end": 30,
+    "type": "change_ui_state",
+    "description": "The 'Filter Opportunities' modal overlay appears on the screen after the user clicks the filter icon.",
+    "confidence": 1.0,
+    "page_title": "Explore",
+    "frame_description": "A modal titled 'Filter Opportunities' is displayed over the Explore page."
+  }
+]

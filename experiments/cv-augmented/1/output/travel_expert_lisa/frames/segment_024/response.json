@@ -1,0 +1,56 @@
+[
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 8,
+    "type": "click",
+    "description": "User clicked on the 'Going To' input field to see destination options",
+    "confidence": 0.9,
+    "interaction_target": "Going To input field",
+    "page_title": "Webjet | Your go-to for going",
+    "page_location": "webjet.com.au",
+    "frame_description": "The destination dropdown menu appears showing recent searches and popular airports."
+  },
+  {
+    "frame_index_start": 18,
+    "frame_index_end": 18,
+    "type": "click",
+    "description": "User clicked the clear button in the 'Going To' input field",
+    "confidence": 0.9,
+    "interaction_target": "Clear button in Going To field",
+    "page_title": "Webjet | Your go-to for going",
+    "page_location": "webjet.com.au"
+  },
+  {
+    "frame_index_start": 19,
+    "frame_index_end": 21,
+    "type": "input_text",
+    "description": "User typed 'london' into the 'Going To' destination field",
+    "confidence": 0.95,
+    "interaction_target": "Going To input field",
+    "page_title": "Webjet | Your go-to for going",
+    "page_location": "webjet.com.au",
+    "frame_description": "The user types 'lon' and then 'london', triggering a filtered list of airport results."
+  },
+  {
+    "frame_index_start": 25,
+    "frame_index_end": 25,
+    "type": "select",
+    "description": "User selected 'All Airports (LON)' from the destination dropdown",
+    "confidence": 0.9,
+    "interaction_target": "All Airports (LON) option",
+    "page_title": "Webjet | Your go-to for going",
+    "page_location": "webjet.com.au",
+    "frame_description": "The destination field is populated with the selected London airport option."
+  },
+  {
+    "frame_index_start": 30,
+    "frame_index_end": 30,
+    "type": "click",
+    "description": "User clicked on the 'Select Travel Dates' field to open the calendar",
+    "confidence": 0.95,
+    "interaction_target": "Select Travel Dates field",
+    "page_title": "Webjet | Your go-to for going",
+    "page_location": "webjet.com.au",
+    "frame_description": "A calendar modal opens showing February and March 2026 with flight prices."
+  }
+]

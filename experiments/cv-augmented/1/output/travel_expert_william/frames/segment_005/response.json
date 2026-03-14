@@ -1,0 +1,73 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 4,
+    "type": "dwell",
+    "description": "User examines the search form on the Expedia homepage before interacting.",
+    "confidence": 0.8,
+    "page_title": "Travel with Expedia: Holiday Homes, Hotels, Flights, Cars & Packages",
+    "page_location": "https://www.expedia.com.au/",
+    "frame_description": "Expedia homepage with the 'Packages' tab selected and search fields visible."
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 5,
+    "type": "click",
+    "description": "User clicks on the 'Going to' destination input field.",
+    "confidence": 0.95,
+    "interaction_target": "Going to input field",
+    "page_title": "Travel with Expedia: Holiday Homes, Hotels, Flights, Cars & Packages"
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 6,
+    "type": "input_text",
+    "description": "User types 'london' into the destination search box.",
+    "confidence": 0.9,
+    "interaction_target": "Going to input field",
+    "page_title": "Travel with Expedia: Holiday Homes, Hotels, Flights, Cars & Packages"
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 8,
+    "type": "select",
+    "description": "User selects 'London England, United Kingdom' from the search suggestions dropdown.",
+    "confidence": 0.95,
+    "interaction_target": "London England, United Kingdom suggestion",
+    "page_title": "Travel with Expedia: Holiday Homes, Hotels, Flights, Cars & Packages"
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 18,
+    "type": "dwell",
+    "description": "User pauses to review the search criteria, moving the cursor over the dates, packages tab, and the location swap icon without clicking.",
+    "confidence": 0.85,
+    "page_title": "Travel with Expedia: Holiday Homes, Hotels, Flights, Cars & Packages"
+  },
+  {
+    "frame_index_start": 19,
+    "frame_index_end": 19,
+    "type": "click",
+    "description": "User selects the 'I only need accommodation for part of my trip' checkbox.",
+    "confidence": 0.95,
+    "interaction_target": "I only need accommodation for part of my trip checkbox",
+    "page_title": "Travel with Expedia: Holiday Homes, Hotels, Flights, Cars & Packages"
+  },
+  {
+    "frame_index_start": 20,
+    "frame_index_end": 20,
+    "type": "click",
+    "description": "User clicks the 'Search' button to initiate the travel search.",
+    "confidence": 0.98,
+    "interaction_target": "Search button",
+    "page_title": "Travel with Expedia: Holiday Homes, Hotels, Flights, Cars & Packages"
+  },
+  {
+    "frame_index_start": 21,
+    "frame_index_end": 21,
+    "type": "change_ui_state",
+    "description": "The page transitions to a loading state with the Expedia logo and a spinner visible.",
+    "confidence": 0.95,
+    "frame_description": "White screen with Expedia logo and a blue loading spinner."
+  }
+]

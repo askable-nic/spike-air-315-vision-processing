@@ -1,0 +1,53 @@
+You are analysing a screen recording for user interaction events.
+
+**Batch 19** | Time range: 349.9s - 352.0s | Frames: 4
+
+## Current page context
+Page: Participant App: Wallet Core Flows & Expectations
+Location: app.askable.com/studies/69715/results
+Description: Results page with the Filters panel open.
+Interactive elements: Filters button, Add filter button
+
+## Moments to analyse
+
+The following frames show moments where either the screen content changed or the
+cursor was positioned over a UI element.
+
+For interaction moments (before/after pairs), determine:
+1. What event type best describes what happened (click, hover, navigate, input_text,
+   select, change_ui_state, drag, etc.)
+2. What UI element was involved (button label, link text, form field, etc.)
+3. A clear description of the user action
+
+For pre_scene_change moments (before/after pairs captured just before a page
+navigation or major screen transition), determine:
+1. What user action most likely triggered the scene change. Look for:
+   - Elements in a hover or active/pressed state (highlighted buttons, underlined
+     links, focused form controls)
+   - Cursor position if visible — but note the cursor may not be present (e.g.
+     mobile devices, keyboard navigation, touch input)
+   - Any visual difference between the before and after frames that indicates an
+     element was activated (colour change, ripple effect, depression)
+2. Identify the specific UI element (button label, link text, menu item, etc.)
+3. Set the event type to "click" or "navigate" as appropriate
+
+For cursor position moments (single frame), determine:
+1. What UI element is under or near the cursor
+2. Whether this appears to be a hover, a click (if context suggests it), or
+   just the cursor resting
+3. A brief description of the element and its context
+
+If a moment shows no meaningful interaction (e.g. a minor visual artifact or the
+cursor resting in a non-interactive area), omit it from the results.
+
+## Frame annotations
+
+[Frame 0 | 349617ms | moment 0 (interaction) | before]
+[Frame 1 | 350383ms | moment 0 (interaction) | after]
+[Frame 2 | 351217ms | moment 1 (interaction) | before]
+[Frame 3 | 352250ms | moment 1 (interaction) | after]
+
+Use frame indices relative to this batch (starting from 0). For short interactions,
+frame_index_start and frame_index_end may be the same.
+
+Return events as a JSON array.

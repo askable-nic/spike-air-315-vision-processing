@@ -1,0 +1,46 @@
+[
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 9,
+    "type": "input_text",
+    "description": "User types 'brisbane' into the 'LEAVING FROM' search field to find departure options",
+    "confidence": 0.9,
+    "interaction_target": "LEAVING FROM input field",
+    "page_title": "Webjet | Your go-to for going",
+    "page_location": "webjet.com.au",
+    "frame_description": "The user updates the search query from 'ber' to 'brisbane', triggering a new list of airport suggestions."
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 11,
+    "type": "hover",
+    "description": "User hovers the cursor over the 'Brisbane (BNE)' suggestion in the dropdown menu",
+    "confidence": 0.9,
+    "interaction_target": "Brisbane (BNE) suggestion",
+    "page_title": "Webjet | Your go-to for going",
+    "page_location": "webjet.com.au",
+    "frame_description": "The cursor moves over the first suggestion in the list, highlighting it."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 12,
+    "type": "click",
+    "description": "User clicks on 'Brisbane (BNE)' to select it as the departure location",
+    "confidence": 0.95,
+    "interaction_target": "Brisbane (BNE) suggestion",
+    "page_title": "Webjet | Your go-to for going",
+    "page_location": "webjet.com.au",
+    "frame_description": "The dropdown menu disappears and the selected location is populated into the input field."
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 17,
+    "type": "dwell",
+    "description": "User pauses after selecting the departure city, likely reviewing the form before proceeding to the destination field",
+    "confidence": 0.8,
+    "interaction_target": "Flight search form",
+    "page_title": "Webjet | Your go-to for going",
+    "page_location": "webjet.com.au",
+    "frame_description": "The user remains on the page with the departure field filled, while the background hero image changes."
+  }
+]

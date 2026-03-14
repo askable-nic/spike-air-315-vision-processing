@@ -1,0 +1,35 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "click",
+    "description": "User clicked the swap button to reverse the origin and destination locations in the search bar.",
+    "confidence": 0.9,
+    "interaction_target": "Swap button (arrows)",
+    "page_title": "London to Ireland - 11 ways to travel",
+    "page_location": "rome2rio.com/map/London/Ireland",
+    "frame_description": "The search bar origin and destination are swapped from 'London to Ireland' to 'Ireland to London'."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 7,
+    "type": "input_text",
+    "description": "User typed 'scot' into the destination search field, triggering a list of location suggestions.",
+    "confidence": 0.95,
+    "interaction_target": "Destination input field",
+    "page_title": "London to Ireland - 11 ways to travel",
+    "page_location": "rome2rio.com/map/London/Ireland",
+    "frame_description": "The user enters text into the search box and a dropdown menu with suggestions like 'Scotland' appears."
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 9,
+    "type": "select",
+    "description": "User selected 'Scotland' from the search suggestions dropdown menu.",
+    "confidence": 0.95,
+    "interaction_target": "Scotland suggestion",
+    "page_title": "London to Ireland - 11 ways to travel",
+    "page_location": "rome2rio.com/map/London/Ireland",
+    "frame_description": "The cursor clicks on the 'Scotland' option in the dropdown, and the destination field is updated with the selection."
+  }
+]

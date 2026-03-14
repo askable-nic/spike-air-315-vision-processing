@@ -1,0 +1,46 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 19,
+    "type": "dwell",
+    "description": "User examines the various travel options and the map for the route from Rome to Palermo.",
+    "confidence": 0.9,
+    "page_title": "Rome to Palermo - 8 ways to travel",
+    "page_location": "rome2rio.com/map/Rome/Palermo",
+    "frame_description": "The Rome2Rio interface shows a map of Italy with a route from Rome to Palermo and a sidebar listing travel options like flying, driving, and train."
+  },
+  {
+    "frame_index_start": 20,
+    "frame_index_end": 21,
+    "type": "click",
+    "description": "User clicks on the 'Train' travel option in the sidebar.",
+    "confidence": 0.95,
+    "interaction_target": "Train travel option",
+    "page_title": "Rome to Palermo - 8 ways to travel",
+    "page_location": "rome2rio.com/map/Rome/Palermo"
+  },
+  {
+    "frame_index_start": 21,
+    "frame_index_end": 22,
+    "type": "navigate",
+    "description": "The page navigates to show specific train schedules for the Rome to Palermo route.",
+    "confidence": 0.95,
+    "page_location": "rome2rio.com/map/Rome/Palermo#r/Train/s/0"
+  },
+  {
+    "frame_index_start": 21,
+    "frame_index_end": 21,
+    "type": "change_ui_state",
+    "description": "A loading overlay appears with the text 'Loading results for 12 February'.",
+    "confidence": 0.98,
+    "frame_description": "The sidebar content is replaced by a loading message while the map remains visible."
+  },
+  {
+    "frame_index_start": 22,
+    "frame_index_end": 22,
+    "type": "change_ui_state",
+    "description": "The train schedules load and are displayed in the sidebar, showing departure times and prices.",
+    "confidence": 0.98,
+    "frame_description": "The sidebar now lists specific train departures such as 07:26 and 07:40 with associated costs."
+  }
+]

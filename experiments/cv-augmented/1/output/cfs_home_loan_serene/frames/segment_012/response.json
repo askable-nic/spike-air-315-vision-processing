@@ -1,0 +1,40 @@
+[
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 4,
+    "type": "click",
+    "description": "User clicks on the search bar to edit the search query.",
+    "confidence": 0.9,
+    "interaction_target": "Search bar",
+    "page_title": "homelone australia banks - Google Search",
+    "frame_description": "The user taps the search input field, causing the mobile keyboard to appear."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 7,
+    "type": "select",
+    "description": "User selects the misspelled word 'homelone' in the search bar to correct it.",
+    "confidence": 0.9,
+    "interaction_target": "homelone",
+    "frame_description": "Selection handles appear around the word 'homelone' and a context menu (Cut, Copy, Paste) is displayed."
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 14,
+    "type": "input_text",
+    "description": "User types 'refinancing' to replace the misspelled word in the search query.",
+    "confidence": 0.95,
+    "interaction_target": "Search bar",
+    "frame_description": "The text in the search bar changes from 're' to 'refinancing' as the user types on the keyboard."
+  },
+  {
+    "frame_index_start": 14,
+    "frame_index_end": 15,
+    "type": "navigate",
+    "description": "User executes the search for 'refinancing australia banks'.",
+    "confidence": 0.9,
+    "interaction_target": "Search button",
+    "page_title": "refinancing australia banks - Google Search",
+    "frame_description": "The search results page updates to show results for the new query 'refinancing australia banks'."
+  }
+]

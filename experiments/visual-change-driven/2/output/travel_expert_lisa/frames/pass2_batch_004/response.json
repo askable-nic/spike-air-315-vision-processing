@@ -1,0 +1,29 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "dwell",
+    "description": "User dwells on the screen with the cursor positioned over the 'Repeat the task instructions' button.",
+    "confidence": 0.9,
+    "interaction_target": "Repeat the task instructions button",
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/ai-mod/699fd69145953d08ad8c04ad",
+    "frame_description": "The user is viewing the main session screen with a prompt and two interactive buttons at the bottom."
+  },
+  {
+    "frame_index_start": 1,
+    "frame_index_end": 2,
+    "type": "click",
+    "description": "User clicks the 'Repeat the task instructions' button, initiating a UI transition.",
+    "confidence": 0.8,
+    "interaction_target": "Repeat the task instructions button"
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 4,
+    "type": "change_ui_state",
+    "description": "The UI state changes significantly, first zooming in on the button and then shifting it to the right edge of the screen as the system processes the request.",
+    "confidence": 0.9,
+    "frame_description": "The screen content undergoes a zoom and translation animation, moving the focus of the interface."
+  }
+]

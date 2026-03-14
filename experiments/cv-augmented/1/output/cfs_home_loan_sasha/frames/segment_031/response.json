@@ -1,0 +1,55 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 4,
+    "type": "dwell",
+    "description": "User examines the 'Let's find your property' page before interacting with the address field",
+    "confidence": 0.8,
+    "page_title": "unloan.",
+    "frame_description": "The user is on the property details step of the loan application."
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 9,
+    "type": "input_text",
+    "description": "User types '11 dwyer st' into the property address search field and reviews the suggested results",
+    "confidence": 0.95,
+    "interaction_target": "What's your property address?",
+    "page_title": "unloan."
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 10,
+    "type": "select",
+    "description": "User selects '11 Dwyer Street, Cavendish VIC 3314' from the address suggestions dropdown",
+    "confidence": 0.9,
+    "interaction_target": "What's your property address?",
+    "page_title": "unloan."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 11,
+    "type": "select",
+    "description": "User selects 'House' from the Property type dropdown menu",
+    "confidence": 0.9,
+    "interaction_target": "Property type",
+    "page_title": "unloan."
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 12,
+    "type": "input_text",
+    "description": "User enters '$ 800,000' into the estimated property value field",
+    "confidence": 0.95,
+    "interaction_target": "Estimated property value",
+    "page_title": "unloan."
+  },
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 13,
+    "type": "dwell",
+    "description": "User pauses briefly after completing the form fields before moving to the next step",
+    "confidence": 0.7,
+    "page_title": "unloan."
+  }
+]

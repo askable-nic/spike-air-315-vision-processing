@@ -1,0 +1,22 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 2,
+    "type": "dwell",
+    "description": "User pauses to examine the 'Short tasks' section on the Explore page, focusing on the available opportunities.",
+    "confidence": 0.9,
+    "interaction_target": "Short tasks section",
+    "page_title": "Explore",
+    "frame_description": "The Explore screen shows a 'Short tasks' section with a pink card offering $25 for app feedback."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "scroll",
+    "description": "User scrolls horizontally through the 'Short tasks' carousel, moving the $25 task card to the left to reveal a new $8 task card.",
+    "confidence": 0.95,
+    "interaction_target": "Short tasks carousel",
+    "page_title": "Explore",
+    "frame_description": "The carousel has shifted horizontally; the pink card is now on the left and a yellow card with a $8 reward is visible on the right."
+  }
+]

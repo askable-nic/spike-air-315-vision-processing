@@ -1,0 +1,60 @@
+[
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 4,
+    "type": "click",
+    "description": "User clicks on the 'Search for your lender' input field to activate the keyboard",
+    "confidence": 0.85,
+    "interaction_target": "Search for your lender input field",
+    "page_title": "Who is your current lender",
+    "frame_description": "The user transitions from hovering over the NEXT button to focusing the input field, causing the mobile keyboard to appear."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 10,
+    "type": "input_text",
+    "description": "User types 'St george' into the lender search field",
+    "confidence": 0.95,
+    "interaction_target": "Search for your lender input field",
+    "page_title": "Who is your current lender",
+    "frame_description": "Characters appear in the input field as the user types on the virtual keyboard."
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 11,
+    "type": "select",
+    "description": "User selects the 'St George' suggestion from the search results",
+    "confidence": 0.9,
+    "interaction_target": "St George suggestion",
+    "page_title": "Who is your current lender",
+    "frame_description": "The user taps the suggested lender name, which populates the field and dismisses the keyboard."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 11,
+    "type": "click",
+    "description": "User clicks the 'NEXT' button to proceed",
+    "confidence": 0.9,
+    "interaction_target": "NEXT button",
+    "page_title": "Who is your current lender",
+    "frame_description": "The cursor is positioned over the purple NEXT button as the page begins to transition."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 12,
+    "type": "navigate",
+    "description": "Navigation from the lender selection page to the property value question",
+    "confidence": 0.95,
+    "page_title": "How much do you think your property is worth?",
+    "frame_description": "The screen content changes to the next step in the flow."
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 14,
+    "type": "dwell",
+    "description": "User pauses on the property value page, likely reading the new prompt",
+    "confidence": 0.8,
+    "page_title": "How much do you think your property is worth?",
+    "frame_description": "The user remains on the new page without immediate interaction."
+  }
+]

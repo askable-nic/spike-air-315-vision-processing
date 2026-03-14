@@ -1,0 +1,73 @@
+[
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 8,
+    "type": "click",
+    "description": "User clicks on the 'Top 15 Home Loan Rates' search result for aussie.com.au",
+    "confidence": 0.9,
+    "interaction_target": "Top 15 Home Loan Rates",
+    "page_title": "Google Search Results",
+    "frame_description": "The user selects the Aussie home loan comparison link from the search results."
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 9,
+    "type": "navigate",
+    "description": "Navigation to aussie.com.au",
+    "confidence": 1.0,
+    "page_location": "https://www.aussie.com.au/home-loan",
+    "frame_description": "The browser transitions from Google search results to the Aussie website."
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 16,
+    "type": "dwell",
+    "description": "User examines the Aussie home page",
+    "confidence": 0.8,
+    "page_title": "Compare low home loan rates | Aussie",
+    "frame_description": "The user pauses to read the options on the landing page."
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 18,
+    "type": "click",
+    "description": "User clicks the 'I want to refinance' button",
+    "confidence": 0.9,
+    "interaction_target": "I want to refinance",
+    "frame_description": "The user selects the refinance option to proceed with the loan comparison."
+  },
+  {
+    "frame_index_start": 19,
+    "frame_index_end": 19,
+    "type": "change_ui_state",
+    "description": "Loading screen appears",
+    "confidence": 1.0,
+    "frame_description": "A transition screen with the Aussie logo and a loading message is displayed."
+  },
+  {
+    "frame_index_start": 19,
+    "frame_index_end": 20,
+    "type": "navigate",
+    "description": "Navigation to the loan balance question page",
+    "confidence": 1.0,
+    "frame_description": "The application moves to the next step in the flow."
+  },
+  {
+    "frame_index_start": 24,
+    "frame_index_end": 25,
+    "type": "click",
+    "description": "User clicks on the loan balance input field to bring up the keyboard",
+    "confidence": 0.9,
+    "interaction_target": "Loan balance input field",
+    "frame_description": "The user focuses the text input field to enter their current loan balance."
+  },
+  {
+    "frame_index_start": 29,
+    "frame_index_end": 34,
+    "type": "input_text",
+    "description": "User types '1,000,000' into the loan balance input field",
+    "confidence": 1.0,
+    "interaction_target": "What is your current loan balance?",
+    "frame_description": "The user enters a numerical value into the form field using the on-screen keyboard."
+  }
+]

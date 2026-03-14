@@ -1,0 +1,231 @@
+You are analysing a screen recording for user interaction events.
+
+**Batch 13** | Time range: 644.8s - 744.1s | Frames: 182
+
+## Current page context
+Page: Rome to Palermo - 8 ways to travel
+Location: rome2rio.com/map/Rome/Palermo#r/Train/s/0
+Description: Rome2Rio train schedule page showing specific departure times and prices, with a map highlighting the train route and stops.
+Interactive elements: Train departure (07:26 - 19:10, A$45-180), Fastest train option (07:40 - 19:10, A$45-180), Cotton On clothing ads on the right, Map route markers for Rome Termini and Palermo Centrale
+
+## Moments to analyse
+
+The following frames show moments where either the screen content changed or the
+cursor was positioned over a UI element.
+
+For interaction moments (before/after pairs), determine:
+1. What event type best describes what happened (click, hover, navigate, input_text,
+   select, change_ui_state, drag, etc.)
+2. What UI element was involved (button label, link text, form field, etc.)
+3. A clear description of the user action
+
+For pre_scene_change moments (before/after pairs captured just before a page
+navigation or major screen transition), determine:
+1. What user action most likely triggered the scene change. Look for:
+   - Elements in a hover or active/pressed state (highlighted buttons, underlined
+     links, focused form controls)
+   - Cursor position if visible — but note the cursor may not be present (e.g.
+     mobile devices, keyboard navigation, touch input)
+   - Any visual difference between the before and after frames that indicates an
+     element was activated (colour change, ripple effect, depression)
+2. Identify the specific UI element (button label, link text, menu item, etc.)
+3. Set the event type to "click" or "navigate" as appropriate
+
+For cursor position moments (single frame), determine:
+1. What UI element is under or near the cursor
+2. Whether this appears to be a hover, a click (if context suggests it), or
+   just the cursor resting
+3. A brief description of the element and its context
+
+If a moment shows no meaningful interaction (e.g. a minor visual artifact or the
+cursor resting in a non-interactive area), omit it from the results.
+
+## Frame annotations
+
+[Frame 0 | 644555ms | moment 0 (interaction) | before | cursor at (743, 799)]
+[Frame 1 | 646380ms | moment 0 (interaction) | after | cursor at (743, 799)]
+[Frame 2 | 646560ms | moment 1 (interaction) | before | cursor at (743, 799)]
+[Frame 3 | 648386ms | moment 1 (interaction) | after | cursor at (743, 799)]
+[Frame 4 | 648566ms | moment 2 (interaction) | before | cursor at (743, 799)]
+[Frame 5 | 650392ms | moment 2 (interaction) | after | cursor at (743, 799)]
+[Frame 6 | 650572ms | moment 3 (interaction) | before | cursor at (743, 800)]
+[Frame 7 | 653383ms | moment 3 (interaction) | after | cursor at (743, 800)]
+[Frame 8 | 653563ms | moment 4 (interaction) | before | cursor at (743, 799)]
+[Frame 9 | 655389ms | moment 4 (interaction) | after | cursor at (743, 799)]
+[Frame 10 | 655569ms | moment 5 (interaction) | before | cursor at (743, 810)]
+[Frame 11 | 656375ms | moment 5 (interaction) | after | cursor at (743, 810)]
+[Frame 12 | 656589ms | moment 6 (interaction) | before | cursor at (743, 810)]
+[Frame 13 | 657394ms | moment 6 (interaction) | after | cursor at (743, 810)]
+[Frame 14 | 657574ms | moment 7 (interaction) | before | cursor at (743, 810)]
+[Frame 15 | 658380ms | moment 7 (interaction) | after | cursor at (743, 810)]
+[Frame 16 | 658594ms | moment 8 (interaction) | before | cursor at (743, 812)]
+[Frame 17 | 659400ms | moment 8 (interaction) | after | cursor at (743, 812)]
+[Frame 18 | 659580ms | moment 9 (interaction) | before | cursor at (743, 812)]
+[Frame 19 | 660386ms | moment 9 (interaction) | after | cursor at (743, 812)]
+[Frame 20 | 660566ms | moment 10 (interaction) | before | cursor at (743, 812)]
+[Frame 21 | 661372ms | moment 10 (interaction) | after | cursor at (743, 812)]
+[Frame 22 | 661586ms | moment 11 (interaction) | before | cursor at (743, 812)]
+[Frame 23 | 662392ms | moment 11 (interaction) | after | cursor at (743, 812)]
+[Frame 24 | 662572ms | moment 12 (interaction) | before | cursor at (743, 812)]
+[Frame 25 | 663377ms | moment 12 (interaction) | after | cursor at (743, 812)]
+[Frame 26 | 663557ms | moment 13 (interaction) | before | cursor at (743, 812)]
+[Frame 27 | 664363ms | moment 13 (interaction) | after | cursor at (743, 812)]
+[Frame 28 | 664543ms | moment 14 (interaction) | before | cursor at (743, 812)]
+[Frame 29 | 665349ms | moment 14 (interaction) | after | cursor at (743, 812)]
+[Frame 30 | 665563ms | moment 15 (interaction) | before | cursor at (743, 812)]
+[Frame 31 | 666335ms | moment 15 (interaction) | after | cursor at (743, 812)]
+[Frame 32 | 666583ms | moment 16 (interaction) | before | cursor at (743, 812)]
+[Frame 33 | 667389ms | moment 16 (interaction) | after | cursor at (743, 812)]
+[Frame 34 | 667569ms | moment 17 (interaction) | before | cursor at (743, 812)]
+[Frame 35 | 668375ms | moment 17 (interaction) | after | cursor at (743, 812)]
+[Frame 36 | 668555ms | moment 18 (interaction) | before | cursor at (743, 812)]
+[Frame 37 | 669360ms | moment 18 (interaction) | after | cursor at (743, 812)]
+[Frame 38 | 669574ms | moment 19 (interaction) | before | cursor at (743, 812)]
+[Frame 39 | 670380ms | moment 19 (interaction) | after | cursor at (743, 812)]
+[Frame 40 | 670560ms | moment 20 (interaction) | before | cursor at (743, 812)]
+[Frame 41 | 671366ms | moment 20 (interaction) | after | cursor at (743, 812)]
+[Frame 42 | 671546ms | moment 21 (interaction) | before | cursor at (743, 812)]
+[Frame 43 | 672352ms | moment 21 (interaction) | after | cursor at (743, 812)]
+[Frame 44 | 672566ms | moment 22 (interaction) | before | cursor at (743, 812)]
+[Frame 45 | 673372ms | moment 22 (interaction) | after | cursor at (743, 812)]
+[Frame 46 | 673552ms | moment 23 (interaction) | before | cursor at (743, 812)]
+[Frame 47 | 674358ms | moment 23 (interaction) | after | cursor at (743, 812)]
+[Frame 48 | 674572ms | moment 24 (interaction) | before | cursor at (743, 812)]
+[Frame 49 | 675377ms | moment 24 (interaction) | after | cursor at (743, 812)]
+[Frame 50 | 675557ms | moment 25 (interaction) | before | cursor at (743, 812)]
+[Frame 51 | 676363ms | moment 25 (interaction) | after | cursor at (743, 812)]
+[Frame 52 | 676577ms | moment 26 (interaction) | before | cursor at (743, 805)]
+[Frame 53 | 677383ms | moment 26 (interaction) | after | cursor at (743, 805)]
+[Frame 54 | 677563ms | moment 27 (interaction) | before | cursor at (743, 803)]
+[Frame 55 | 678369ms | moment 27 (interaction) | after | cursor at (743, 803)]
+[Frame 56 | 678583ms | moment 28 (interaction) | before | cursor at (743, 802)]
+[Frame 57 | 679389ms | moment 28 (interaction) | after | cursor at (743, 802)]
+[Frame 58 | 679569ms | moment 29 (interaction) | before | cursor at (743, 802)]
+[Frame 59 | 680375ms | moment 29 (interaction) | after | cursor at (743, 802)]
+[Frame 60 | 680589ms | moment 30 (interaction) | before | cursor at (743, 802)]
+[Frame 61 | 681394ms | moment 30 (interaction) | after | cursor at (743, 802)]
+[Frame 62 | 681574ms | moment 31 (interaction) | before | cursor at (743, 802)]
+[Frame 63 | 682380ms | moment 31 (interaction) | after | cursor at (743, 802)]
+[Frame 64 | 682560ms | moment 32 (interaction) | before | cursor at (743, 802)]
+[Frame 65 | 683366ms | moment 32 (interaction) | after | cursor at (743, 802)]
+[Frame 66 | 683580ms | moment 33 (interaction) | before | cursor at (743, 802)]
+[Frame 67 | 684386ms | moment 33 (interaction) | after | cursor at (743, 802)]
+[Frame 68 | 684566ms | moment 34 (interaction) | before | cursor at (743, 802)]
+[Frame 69 | 685372ms | moment 34 (interaction) | after | cursor at (743, 802)]
+[Frame 70 | 685586ms | moment 35 (interaction) | before | cursor at (743, 802)]
+[Frame 71 | 686392ms | moment 35 (interaction) | after | cursor at (743, 802)]
+[Frame 72 | 686538ms | moment 36 (interaction) | before | cursor at (743, 802)]
+[Frame 73 | 687309ms | moment 36 (interaction) | after | cursor at (743, 802)]
+[Frame 74 | 687557ms | moment 37 (interaction) | before | cursor at (743, 802)]
+[Frame 75 | 688363ms | moment 37 (interaction) | after | cursor at (743, 802)]
+[Frame 76 | 688543ms | moment 38 (interaction) | before | cursor at (743, 802)]
+[Frame 77 | 689349ms | moment 38 (interaction) | after | cursor at (743, 802)]
+[Frame 78 | 689563ms | moment 39 (interaction) | before | cursor at (743, 802)]
+[Frame 79 | 690369ms | moment 39 (interaction) | after | cursor at (743, 802)]
+[Frame 80 | 690549ms | moment 40 (interaction) | before | cursor at (743, 802)]
+[Frame 81 | 691355ms | moment 40 (interaction) | after | cursor at (743, 802)]
+[Frame 82 | 691569ms | moment 41 (interaction) | before | cursor at (743, 802)]
+[Frame 83 | 692375ms | moment 41 (interaction) | after | cursor at (743, 802)]
+[Frame 84 | 692555ms | moment 42 (interaction) | before | cursor at (743, 802)]
+[Frame 85 | 693360ms | moment 42 (interaction) | after | cursor at (743, 802)]
+[Frame 86 | 693574ms | moment 43 (interaction) | before | cursor at (743, 802)]
+[Frame 87 | 694380ms | moment 43 (interaction) | after | cursor at (743, 802)]
+[Frame 88 | 694560ms | moment 44 (interaction) | before | cursor at (743, 802)]
+[Frame 89 | 695366ms | moment 44 (interaction) | after | cursor at (743, 802)]
+[Frame 90 | 695580ms | moment 45 (interaction) | before | cursor at (743, 802)]
+[Frame 91 | 696386ms | moment 45 (interaction) | after | cursor at (743, 802)]
+[Frame 92 | 696566ms | moment 46 (interaction) | before | cursor at (743, 802)]
+[Frame 93 | 697372ms | moment 46 (interaction) | after | cursor at (743, 802)]
+[Frame 94 | 697586ms | moment 47 (interaction) | before | cursor at (743, 802)]
+[Frame 95 | 698392ms | moment 47 (interaction) | after | cursor at (743, 802)]
+[Frame 96 | 698572ms | moment 48 (interaction) | before | cursor at (743, 802)]
+[Frame 97 | 699377ms | moment 48 (interaction) | after | cursor at (743, 802)]
+[Frame 98 | 699591ms | moment 49 (interaction) | before | cursor at (743, 802)]
+[Frame 99 | 700397ms | moment 49 (interaction) | after | cursor at (743, 802)]
+[Frame 100 | 700577ms | moment 50 (interaction) | before | cursor at (743, 802)]
+[Frame 101 | 701349ms | moment 50 (interaction) | after | cursor at (743, 802)]
+[Frame 102 | 701563ms | moment 51 (interaction) | before | cursor at (743, 802)]
+[Frame 103 | 702369ms | moment 51 (interaction) | after | cursor at (743, 802)]
+[Frame 104 | 702549ms | moment 52 (interaction) | before | cursor at (743, 802)]
+[Frame 105 | 703355ms | moment 52 (interaction) | after | cursor at (743, 802)]
+[Frame 106 | 703569ms | moment 53 (interaction) | before | cursor at (743, 802)]
+[Frame 107 | 704375ms | moment 53 (interaction) | after | cursor at (743, 802)]
+[Frame 108 | 704555ms | moment 54 (interaction) | before | cursor at (743, 802)]
+[Frame 109 | 705360ms | moment 54 (interaction) | after | cursor at (743, 802)]
+[Frame 110 | 705540ms | moment 55 (interaction) | before | cursor at (743, 802)]
+[Frame 111 | 706346ms | moment 55 (interaction) | after | cursor at (743, 802)]
+[Frame 112 | 706560ms | moment 56 (interaction) | before | cursor at (743, 802)]
+[Frame 113 | 707366ms | moment 56 (interaction) | after | cursor at (743, 802)]
+[Frame 114 | 707546ms | moment 57 (interaction) | before | cursor at (743, 802)]
+[Frame 115 | 708352ms | moment 57 (interaction) | after | cursor at (743, 802)]
+[Frame 116 | 708566ms | moment 58 (interaction) | before | cursor at (743, 802)]
+[Frame 117 | 709372ms | moment 58 (interaction) | after | cursor at (743, 802)]
+[Frame 118 | 709552ms | moment 59 (interaction) | before | cursor at (743, 802)]
+[Frame 119 | 710358ms | moment 59 (interaction) | after | cursor at (743, 802)]
+[Frame 120 | 710572ms | moment 60 (interaction) | before | cursor at (743, 802)]
+[Frame 121 | 711377ms | moment 60 (interaction) | after | cursor at (743, 802)]
+[Frame 122 | 711557ms | moment 61 (interaction) | before | cursor at (743, 802)]
+[Frame 123 | 712363ms | moment 61 (interaction) | after | cursor at (743, 802)]
+[Frame 124 | 712577ms | moment 62 (interaction) | before | cursor at (743, 802)]
+[Frame 125 | 713383ms | moment 62 (interaction) | after | cursor at (743, 802)]
+[Frame 126 | 713563ms | moment 63 (interaction) | before | cursor at (743, 802)]
+[Frame 127 | 714369ms | moment 63 (interaction) | after | cursor at (743, 802)]
+[Frame 128 | 714583ms | moment 64 (interaction) | before | cursor at (743, 802)]
+[Frame 129 | 715389ms | moment 64 (interaction) | after | cursor at (743, 802)]
+[Frame 130 | 715569ms | moment 65 (interaction) | before | cursor at (743, 802)]
+[Frame 131 | 716375ms | moment 65 (interaction) | after | cursor at (743, 802)]
+[Frame 132 | 716555ms | moment 66 (interaction) | before | cursor at (743, 802)]
+[Frame 133 | 717360ms | moment 66 (interaction) | after | cursor at (743, 802)]
+[Frame 134 | 717540ms | moment 67 (interaction) | before | cursor at (743, 802)]
+[Frame 135 | 718346ms | moment 67 (interaction) | after | cursor at (743, 802)]
+[Frame 136 | 718560ms | moment 68 (interaction) | before | cursor at (743, 802)]
+[Frame 137 | 719366ms | moment 68 (interaction) | after | cursor at (743, 802)]
+[Frame 138 | 719546ms | moment 69 (interaction) | before | cursor at (743, 802)]
+[Frame 139 | 720352ms | moment 69 (interaction) | after | cursor at (743, 802)]
+[Frame 140 | 720566ms | moment 70 (interaction) | before | cursor at (743, 802)]
+[Frame 141 | 721372ms | moment 70 (interaction) | after | cursor at (743, 802)]
+[Frame 142 | 721484ms | moment 71 (interaction) | before | cursor at (743, 802)]
+[Frame 143 | 722562ms | moment 71 (interaction) | after | cursor at (743, 802)]
+[Frame 144 | 722572ms | moment 72 (interaction) | before | cursor at (743, 802)]
+[Frame 145 | 723377ms | moment 72 (interaction) | after | cursor at (743, 802)]
+[Frame 146 | 723557ms | moment 73 (interaction) | before | cursor at (743, 802)]
+[Frame 147 | 724363ms | moment 73 (interaction) | after | cursor at (743, 802)]
+[Frame 148 | 724475ms | moment 74 (interaction) | before | cursor at (743, 802)]
+[Frame 149 | 725553ms | moment 74 (interaction) | after | cursor at (743, 802)]
+[Frame 150 | 725563ms | moment 75 (interaction) | before | cursor at (743, 802)]
+[Frame 151 | 726369ms | moment 75 (interaction) | after | cursor at (743, 802)]
+[Frame 152 | 726583ms | moment 76 (interaction) | before | cursor at (743, 802)]
+[Frame 153 | 727389ms | moment 76 (interaction) | after | cursor at (743, 802)]
+[Frame 154 | 727569ms | moment 77 (interaction) | before | cursor at (743, 802)]
+[Frame 155 | 728375ms | moment 77 (interaction) | after | cursor at (743, 802)]
+[Frame 156 | 728589ms | moment 78 (interaction) | before | cursor at (743, 802)]
+[Frame 157 | 729394ms | moment 78 (interaction) | after | cursor at (743, 802)]
+[Frame 158 | 729574ms | moment 79 (interaction) | before | cursor at (743, 802)]
+[Frame 159 | 730380ms | moment 79 (interaction) | after | cursor at (743, 802)]
+[Frame 160 | 730594ms | moment 80 (interaction) | before | cursor at (743, 802)]
+[Frame 161 | 731366ms | moment 80 (interaction) | after | cursor at (743, 802)]
+[Frame 162 | 731546ms | moment 81 (interaction) | before | cursor at (745, 801)]
+[Frame 163 | 733372ms | moment 81 (interaction) | after | cursor at (745, 801)]
+[Frame 164 | 733586ms | moment 82 (interaction) | before | cursor at (743, 802)]
+[Frame 165 | 734358ms | moment 82 (interaction) | after | cursor at (743, 802)]
+[Frame 166 | 734572ms | moment 83 (interaction) | before | cursor at (743, 802)]
+[Frame 167 | 735343ms | moment 83 (interaction) | after | cursor at (743, 802)]
+[Frame 168 | 735591ms | moment 84 (interaction) | before | cursor at (743, 802)]
+[Frame 169 | 736397ms | moment 84 (interaction) | after | cursor at (743, 802)]
+[Frame 170 | 736543ms | moment 85 (interaction) | before | cursor at (743, 802)]
+[Frame 171 | 737349ms | moment 85 (interaction) | after | cursor at (743, 802)]
+[Frame 172 | 737563ms | moment 86 (interaction) | before | cursor at (743, 802)]
+[Frame 173 | 738369ms | moment 86 (interaction) | after | cursor at (743, 802)]
+[Frame 174 | 738583ms | moment 87 (interaction) | before | cursor at (743, 802)]
+[Frame 175 | 739389ms | moment 87 (interaction) | after | cursor at (743, 802)]
+[Frame 176 | 739569ms | moment 88 (interaction) | before | cursor at (743, 802)]
+[Frame 177 | 740375ms | moment 88 (interaction) | after | cursor at (743, 802)]
+[Frame 178 | 740555ms | moment 89 (interaction) | before | cursor at (743, 812)]
+[Frame 179 | 742346ms | moment 89 (interaction) | after | cursor at (743, 812)]
+[Frame 180 | 742526ms | moment 90 (interaction) | before | cursor at (743, 810)]
+[Frame 181 | 744352ms | moment 90 (interaction) | after | cursor at (743, 810)]
+
+Use frame indices relative to this batch (starting from 0). For short interactions,
+frame_index_start and frame_index_end may be the same.
+
+Return events as a JSON array.

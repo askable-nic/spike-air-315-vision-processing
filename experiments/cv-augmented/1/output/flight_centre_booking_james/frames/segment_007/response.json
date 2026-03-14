@@ -1,0 +1,40 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 4,
+    "type": "change_ui_state",
+    "description": "A loading spinner appears with the message 'Thanks for confirming your flights' after the user clicked continue on the previous screen.",
+    "confidence": 0.9,
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eWZ/results#baggage",
+    "frame_description": "Loading overlay visible on the baggage selection page."
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 12,
+    "type": "navigate",
+    "description": "The page navigates from the baggage results to the passenger details entry page.",
+    "confidence": 1.0,
+    "page_title": "Travellers",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eWZ/passenger",
+    "frame_description": "URL changes and the 'Travellers' page content loads, showing form fields for passenger information."
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 16,
+    "type": "dwell",
+    "description": "User pauses on the Travellers page, likely reading the 'Heads up!' warning message regarding personal details.",
+    "confidence": 0.8,
+    "page_title": "Travellers",
+    "frame_description": "The Travellers page is fully loaded and the user is examining the content."
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 20,
+    "type": "navigate",
+    "description": "User switches browser tabs to the Askable session page in response to a prompt.",
+    "confidence": 1.0,
+    "interaction_target": "Askable browser tab",
+    "page_title": "What's making you hesitate there",
+    "frame_description": "The active tab changes to the Askable session interface."
+  }
+]

@@ -1,0 +1,83 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "navigate",
+    "description": "User navigates from Google search results to the Skyscanner website",
+    "confidence": 0.9,
+    "page_title": "Google",
+    "page_location": "google.com"
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 20,
+    "type": "dwell",
+    "description": "User reads the task instructions regarding planning a holiday from the Sunshine Coast to London",
+    "confidence": 0.95,
+    "page_title": "Task Instructions",
+    "frame_description": "A dark overlay displays the task scenario and instructions to the user"
+  },
+  {
+    "frame_index_start": 20,
+    "frame_index_end": 21,
+    "type": "click",
+    "description": "User clicks the 'Open' button to dismiss the instructions and return to the Skyscanner website",
+    "confidence": 0.9,
+    "interaction_target": "Open button",
+    "page_title": "Task Instructions"
+  },
+  {
+    "frame_index_start": 22,
+    "frame_index_end": 22,
+    "type": "input_text",
+    "description": "User types 'sunsh' into the origin search field",
+    "confidence": 0.9,
+    "interaction_target": "From input field",
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search.",
+    "page_location": "skyscanner.com.au"
+  },
+  {
+    "frame_index_start": 22,
+    "frame_index_end": 23,
+    "type": "select",
+    "description": "User selects 'Sunshine Coast (MCY)' from the origin dropdown menu",
+    "confidence": 0.9,
+    "interaction_target": "Sunshine Coast (MCY) suggestion",
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search."
+  },
+  {
+    "frame_index_start": 24,
+    "frame_index_end": 24,
+    "type": "input_text",
+    "description": "User types 'london' into the destination search field",
+    "confidence": 0.9,
+    "interaction_target": "To input field",
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search."
+  },
+  {
+    "frame_index_start": 24,
+    "frame_index_end": 25,
+    "type": "click",
+    "description": "User clicks the 'Search' button to initiate the flight search",
+    "confidence": 0.9,
+    "interaction_target": "Search button",
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search."
+  },
+  {
+    "frame_index_start": 25,
+    "frame_index_end": 34,
+    "type": "change_ui_state",
+    "description": "The search results page updates as flight options are retrieved from different providers",
+    "confidence": 0.95,
+    "page_title": "Skyscanner | Search Results",
+    "frame_description": "The results page shows a loading progress bar and flight cards appearing as they are found"
+  },
+  {
+    "frame_index_start": 26,
+    "frame_index_end": 34,
+    "type": "dwell",
+    "description": "User dwells on the search results page while waiting for all flight options to load",
+    "confidence": 0.85,
+    "page_title": "Skyscanner | Search Results"
+  }
+]

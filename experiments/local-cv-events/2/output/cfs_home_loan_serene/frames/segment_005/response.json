@@ -1,0 +1,50 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 6,
+    "type": "input_text",
+    "description": "User enters '1,000,000' into the 'What is your current loan balance?' input field",
+    "confidence": 1.0,
+    "interaction_target": "What is your current loan balance? input field",
+    "page_title": "What is your current loan balance?",
+    "frame_description": "The user types a loan amount into the text field using the on-screen keyboard."
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 11,
+    "type": "click",
+    "description": "User clicks the 'NEXT' button to proceed to the next step of the loan application",
+    "confidence": 0.9,
+    "interaction_target": "NEXT button",
+    "page_title": "What is your current loan balance?",
+    "frame_description": "The user finishes entering the amount and taps the purple 'NEXT' button."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 11,
+    "type": "navigate",
+    "description": "The application navigates to the next screen: 'Please tell us more about your current loan.'",
+    "confidence": 1.0,
+    "page_title": "Please tell us more about your current loan.",
+    "frame_description": "The screen transitions to a new form asking for interest rate and fixed rate details."
+  },
+  {
+    "frame_index_start": 16,
+    "frame_index_end": 17,
+    "type": "click",
+    "description": "User clicks on the 'Estimate interest rate' input field to focus it",
+    "confidence": 0.95,
+    "interaction_target": "Estimate interest rate input field",
+    "page_title": "Please tell us more about your current loan.",
+    "frame_description": "The cursor moves to the interest rate field, and the field gains a blue focus border while the keyboard appears."
+  },
+  {
+    "frame_index_start": 18,
+    "frame_index_end": 32,
+    "type": "dwell",
+    "description": "User pauses on the page after focusing the interest rate field, likely considering the value to enter",
+    "confidence": 0.9,
+    "page_title": "Please tell us more about your current loan.",
+    "frame_description": "The user remains on the screen with the keyboard open but does not type any characters for several seconds."
+  }
+]

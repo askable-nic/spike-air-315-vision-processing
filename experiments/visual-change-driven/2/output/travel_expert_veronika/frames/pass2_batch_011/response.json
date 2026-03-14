@@ -1,0 +1,24 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 4,
+    "type": "input_text",
+    "description": "User types 'london' into the 'Where are you going?' search field.",
+    "confidence": 0.95,
+    "interaction_target": "Where are you going? search field",
+    "page_title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+    "page_location": "booking.com",
+    "frame_description": "The search input field updates from 'lo' to 'lon' and then to 'london' as the user types."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "select",
+    "description": "User selects 'London, Greater London, United Kingdom' from the autocomplete suggestions.",
+    "confidence": 0.9,
+    "interaction_target": "Search suggestion",
+    "page_title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+    "page_location": "booking.com",
+    "frame_description": "The input text in the search field changes from the typed 'london' to the full formatted location string."
+  }
+]

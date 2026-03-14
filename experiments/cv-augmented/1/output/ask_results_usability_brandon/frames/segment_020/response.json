@@ -1,0 +1,97 @@
+[
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 4,
+    "type": "click",
+    "description": "User clicks on 'View your transaction history' in the left sidebar",
+    "confidence": 1.0,
+    "interaction_target": "View your transaction history sidebar item",
+    "page_title": "I can easily find and understand the information I need on the transaction history page.",
+    "frame_description": "The cursor moves to the sidebar and selects a different task result to view."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 4,
+    "type": "navigate",
+    "description": "Navigation to the 'View your transaction history' prototype test results page",
+    "confidence": 1.0,
+    "page_title": "View your transaction history",
+    "page_location": "app.askable.com/studies/69715d03eb43a65423e15816/results/task/6971639f40157bde5254d2d0",
+    "frame_description": "The main content area updates to show metrics and path analysis for the selected task."
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 7,
+    "type": "click",
+    "description": "User clicks on a prototype screen thumbnail in the Path analysis section",
+    "confidence": 0.9,
+    "interaction_target": "Prototype screen thumbnail",
+    "page_title": "View your transaction history",
+    "frame_description": "The user selects a specific path to view more detailed recordings or heatmaps."
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 9,
+    "type": "change_ui_state",
+    "description": "A modal overlay opens showing detailed path metrics and heatmaps",
+    "confidence": 1.0,
+    "interaction_target": "Path details modal",
+    "frame_description": "A large modal appears over the main content, displaying 'Path 1' details."
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 11,
+    "type": "click",
+    "description": "User clicks the 'X' close button on the path details modal",
+    "confidence": 1.0,
+    "interaction_target": "Close button (X)",
+    "frame_description": "The cursor moves to the top right of the modal and clicks the close icon, returning to the main task results page."
+  },
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 14,
+    "type": "hover",
+    "description": "User hovers over the 'Misclick rate' info icon, triggering a tooltip",
+    "confidence": 0.9,
+    "interaction_target": "Misclick rate info icon",
+    "frame_description": "A tooltip appears explaining the misclick rate metric: 'Percentage of clicks outside the Figma hotspots'."
+  },
+  {
+    "frame_index_start": 16,
+    "frame_index_end": 17,
+    "type": "scroll",
+    "description": "User scrolls down the page to view more path analysis results",
+    "confidence": 0.9,
+    "frame_description": "The page content shifts upwards, revealing 'Path 2' and 'Path 3' results."
+  },
+  {
+    "frame_index_start": 25,
+    "frame_index_end": 26,
+    "type": "click",
+    "description": "User clicks on 'I can easily find and understand...' in the sidebar",
+    "confidence": 1.0,
+    "interaction_target": "Opinion scale task sidebar item",
+    "page_title": "View your transaction history",
+    "frame_description": "The user navigates back to a previous task's results."
+  },
+  {
+    "frame_index_start": 27,
+    "frame_index_end": 27,
+    "type": "click",
+    "description": "User clicks on 'Where would you expect to...' in the sidebar",
+    "confidence": 1.0,
+    "interaction_target": "Card sort task sidebar item",
+    "page_title": "Where would you expect to find this information?",
+    "page_location": "app.askable.com/studies/69715d03eb43a65423e15816/results/task/697165fbd11dec6071c1ffb0",
+    "frame_description": "The user selects the card sort task results from the sidebar."
+  },
+  {
+    "frame_index_start": 30,
+    "frame_index_end": 33,
+    "type": "dwell",
+    "description": "User dwells on the card sort results table",
+    "confidence": 0.8,
+    "page_title": "Where would you expect to find this information?",
+    "frame_description": "The cursor remains stationary as the user examines the 'Cards and categories' data."
+  }
+]

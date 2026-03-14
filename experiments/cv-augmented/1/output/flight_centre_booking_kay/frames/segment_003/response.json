@@ -1,0 +1,80 @@
+[
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 7,
+    "type": "select",
+    "description": "User selects February 18th as the departure date in the travel dates calendar modal",
+    "confidence": 0.9,
+    "interaction_target": "February 18th",
+    "page_title": "Flight Centre Travel Deals - Cheap Flights, Holidays & Cruises",
+    "page_location": "flightcentre.com.au"
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 9,
+    "type": "select",
+    "description": "User selects February 21st as the return date in the travel dates calendar modal",
+    "confidence": 0.9,
+    "interaction_target": "February 21st",
+    "page_title": "Flight Centre Travel Deals - Cheap Flights, Holidays & Cruises",
+    "page_location": "flightcentre.com.au"
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 11,
+    "type": "click",
+    "description": "User clicks the 'Done' button to confirm the selected travel dates",
+    "confidence": 1.0,
+    "interaction_target": "Done",
+    "page_title": "Flight Centre Travel Deals - Cheap Flights, Holidays & Cruises",
+    "page_location": "flightcentre.com.au"
+  },
+  {
+    "frame_index_start": 15,
+    "frame_index_end": 15,
+    "type": "click",
+    "description": "User clicks the 'Where to?' destination input field to open the search dropdown",
+    "confidence": 1.0,
+    "interaction_target": "Where to?",
+    "page_title": "Flight Centre Travel Deals - Cheap Flights, Holidays & Cruises",
+    "page_location": "flightcentre.com.au"
+  },
+  {
+    "frame_index_start": 16,
+    "frame_index_end": 16,
+    "type": "select",
+    "description": "User selects 'Melbourne, Australia' from the destination suggestions dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Melbourne, Australia",
+    "page_title": "Flight Centre Travel Deals - Cheap Flights, Holidays & Cruises",
+    "page_location": "flightcentre.com.au"
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 25,
+    "type": "dwell",
+    "description": "User pauses on the search form, likely reviewing the selected flight details before proceeding",
+    "confidence": 0.8,
+    "page_title": "Flight Centre Travel Deals - Cheap Flights, Holidays & Cruises",
+    "page_location": "flightcentre.com.au"
+  },
+  {
+    "frame_index_start": 26,
+    "frame_index_end": 26,
+    "type": "click",
+    "description": "User clicks the 'Search flights' button",
+    "confidence": 1.0,
+    "interaction_target": "Search flights",
+    "page_title": "Flight Centre Travel Deals - Cheap Flights, Holidays & Cruises",
+    "page_location": "flightcentre.com.au"
+  },
+  {
+    "frame_index_start": 27,
+    "frame_index_end": 27,
+    "type": "navigate",
+    "description": "Page navigates to the flight search results page",
+    "confidence": 0.9,
+    "page_location": "secure.flightcentre.com.au/AAXy9ikH/results",
+    "frame_description": "The screen goes white as the new page begins to load"
+  }
+]

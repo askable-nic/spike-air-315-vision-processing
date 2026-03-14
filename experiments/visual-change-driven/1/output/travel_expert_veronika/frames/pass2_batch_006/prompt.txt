@@ -1,0 +1,39 @@
+You are analysing a screen recording for user interaction events.
+
+**Batch 6** | Time range: 198.5s - 198.8s | Frames: 2
+
+## Current page context
+Page: Skyscanner Search Results
+Location: skyscanner.com.au
+Description: The flight search results page, showing various flight deals.
+Interactive elements: Select button, Explore hotels button, Baggage filters, Departure times filters
+
+## Moments to analyse
+
+The following frames show moments where either the screen content changed or the
+cursor was positioned over a UI element.
+
+For interaction moments (before/after pairs), determine:
+1. What event type best describes what happened (click, hover, navigate, input_text,
+   select, change_ui_state, drag, etc.)
+2. What UI element was involved (button label, link text, form field, etc.)
+3. A clear description of the user action
+
+For cursor position moments (single frame), determine:
+1. What UI element is under or near the cursor
+2. Whether this appears to be a hover, a click (if context suggests it), or
+   just the cursor resting
+3. A brief description of the element and its context
+
+If a moment shows no meaningful interaction (e.g. a minor visual artifact or the
+cursor resting in a non-interactive area), omit it from the results.
+
+## Frame annotations
+
+[Frame 0 | 198253ms | moment 0 (interaction) | before]
+[Frame 1 | 199039ms | moment 0 (interaction) | after]
+
+Use frame indices relative to this batch (starting from 0). For short interactions,
+frame_index_start and frame_index_end may be the same.
+
+Return events as a JSON array.

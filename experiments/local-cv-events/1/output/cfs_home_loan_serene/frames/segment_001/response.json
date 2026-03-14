@@ -1,0 +1,37 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 9,
+    "type": "dwell",
+    "description": "User spends time reading the research task instructions on the overlay regarding home loan search behavior.",
+    "confidence": 0.9,
+    "interaction_target": "Task instructions overlay",
+    "page_title": "Google",
+    "frame_description": "A dark overlay with white text displays task instructions over a Google search page."
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 10,
+    "type": "click",
+    "description": "User clicks the 'Start task' button to dismiss the instructions and begin the research session.",
+    "confidence": 0.8,
+    "interaction_target": "Start task button"
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 11,
+    "type": "dwell",
+    "description": "User pauses briefly to look at the 'Trending searches' list before starting to type.",
+    "confidence": 0.7,
+    "page_title": "Google Search"
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 12,
+    "type": "input_text",
+    "description": "User types 'home' into the Google search input field, triggering search suggestions.",
+    "confidence": 0.9,
+    "interaction_target": "Search input field",
+    "frame_description": "The search bar now contains the word 'home' and a list of suggestions like 'home loan calculator' is visible."
+  }
+]

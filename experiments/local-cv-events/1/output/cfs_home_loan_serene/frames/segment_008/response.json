@@ -1,0 +1,50 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "select",
+    "description": "User selects 'St George' from the lender suggestions",
+    "confidence": 0.9,
+    "interaction_target": "St George suggestion",
+    "page_title": "Who is your current lender",
+    "frame_description": "The user selects a lender from the provided list of suggestions."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "change_ui_state",
+    "description": "The screen transitions to the next question: 'How much do you think your property is worth?'",
+    "confidence": 0.95,
+    "page_title": "How much do you think your property is worth?",
+    "frame_description": "The UI automatically advances to the next step in the form after a selection is made."
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 12,
+    "type": "dwell",
+    "description": "User pauses on the property value question screen",
+    "confidence": 0.85,
+    "page_title": "How much do you think your property is worth?",
+    "frame_description": "The user remains on the screen for a few seconds before interacting with the input field."
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 13,
+    "type": "click",
+    "description": "User clicks the input field to enter the property value",
+    "confidence": 0.9,
+    "interaction_target": "Property value input field",
+    "page_title": "How much do you think your property is worth?",
+    "frame_description": "The user taps the input field, causing the keyboard to appear and the field to gain focus."
+  },
+  {
+    "frame_index_start": 19,
+    "frame_index_end": 23,
+    "type": "input_text",
+    "description": "User types '1.10' into the property value input field",
+    "confidence": 0.95,
+    "interaction_target": "Property value input field",
+    "page_title": "How much do you think your property is worth?",
+    "frame_description": "The user enters a numeric value into the text field using the on-screen keyboard."
+  }
+]

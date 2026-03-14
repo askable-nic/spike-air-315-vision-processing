@@ -1,0 +1,41 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 11,
+    "type": "dwell",
+    "description": "User pauses on the 'Travellers' page, likely reading the form requirements or instructions for entering passenger details.",
+    "confidence": 0.9,
+    "interaction_target": "Travellers form",
+    "page_title": "Travellers | Flight Centre",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eW2/passenger",
+    "frame_description": "The user is on the passenger details page of the Flight Centre booking flow."
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 12,
+    "type": "click",
+    "description": "User clicks on the 'Askable' browser tab to switch away from the booking site.",
+    "confidence": 0.85,
+    "interaction_target": "Askable browser tab",
+    "frame_description": "The cursor moves to the browser tab bar and clicks on a different tab."
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 13,
+    "type": "navigate",
+    "description": "Page navigation occurs as the user switches to the Askable session tab.",
+    "confidence": 1.0,
+    "page_title": "Askable | User Testing",
+    "frame_description": "The screen content changes from the Flight Centre website to the Askable session interface."
+  },
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 23,
+    "type": "dwell",
+    "description": "User dwells on the Askable session page, reading the prompt 'What's making you hesitate there'.",
+    "confidence": 0.8,
+    "interaction_target": "Askable prompt",
+    "page_title": "Askable | User Testing",
+    "frame_description": "The user is looking at a dark screen with a prompt from the user testing platform."
+  }
+]

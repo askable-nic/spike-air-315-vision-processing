@@ -1,0 +1,53 @@
+[
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 3,
+    "type": "click",
+    "description": "User clicks the 'Submit study' button to finalize the booking setup.",
+    "confidence": 0.95,
+    "interaction_target": "Submit study",
+    "page_title": "Draft - TV Streaming - Discovery",
+    "frame_description": "The cursor is positioned over the black 'Submit study' button on the review page."
+  },
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 4,
+    "type": "navigate",
+    "description": "The application navigates from the review screen to the participants dashboard.",
+    "confidence": 1.0,
+    "page_location": "app.askable.com/bookings/699e7b7bbc6efe02a95a4768/participants/all"
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 11,
+    "type": "dwell",
+    "description": "User examines the participants dashboard, which displays a notification that the study is currently in review.",
+    "confidence": 0.8,
+    "page_title": "TV Streaming - Discovery"
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 10,
+    "type": "change_ui_state",
+    "description": "The screen briefly turns white, indicating a page refresh or a temporary loading state during the session.",
+    "confidence": 0.9,
+    "frame_description": "A blank white screen is visible between page states."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 11,
+    "type": "click",
+    "description": "User clicks on the 'Settings' tab in the study dashboard navigation.",
+    "confidence": 0.9,
+    "interaction_target": "Settings",
+    "frame_description": "The cursor is over the 'Settings' option in the top right navigation menu."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 12,
+    "type": "navigate",
+    "description": "The application navigates to the study settings page.",
+    "confidence": 1.0,
+    "page_location": "app.askable.com/bookings/699e7b7bbc6efe02a95a4768/settings"
+  }
+]

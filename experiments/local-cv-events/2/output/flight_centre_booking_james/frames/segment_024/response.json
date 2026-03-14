@@ -1,0 +1,45 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 11,
+    "type": "dwell",
+    "description": "User dwells on the 'SELECT SEATS' button, likely considering whether to select seats.",
+    "confidence": 0.9,
+    "interaction_target": "SELECT SEATS button",
+    "page_title": "Flight Centre - Baggage and Add-ons",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eW2/results#baggage"
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 21,
+    "type": "hesitate",
+    "description": "User pauses briefly with the cursor near the 'CONTINUE' button before proceeding.",
+    "confidence": 0.8,
+    "interaction_target": "CONTINUE button"
+  },
+  {
+    "frame_index_start": 22,
+    "frame_index_end": 22,
+    "type": "click",
+    "description": "User clicks the 'CONTINUE' button to proceed to the next step of the booking process.",
+    "confidence": 0.95,
+    "interaction_target": "CONTINUE button"
+  },
+  {
+    "frame_index_start": 23,
+    "frame_index_end": 34,
+    "type": "change_ui_state",
+    "description": "A loading overlay with the message 'Thanks for confirming your flights' and a spinner appears while the next page loads.",
+    "confidence": 1.0,
+    "frame_description": "Loading overlay with spinner"
+  },
+  {
+    "frame_index_start": 35,
+    "frame_index_end": 36,
+    "type": "navigate",
+    "description": "The page navigates to the traveller details entry screen.",
+    "confidence": 1.0,
+    "page_title": "Flight Centre - Traveller Details",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eW2/passenger"
+  }
+]

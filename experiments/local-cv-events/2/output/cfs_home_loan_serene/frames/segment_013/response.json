@@ -1,0 +1,60 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 4,
+    "type": "dwell",
+    "description": "User pauses on the income selection screen with the cursor over the 'I run my own business' option.",
+    "confidence": 0.8,
+    "interaction_target": "I run my own business",
+    "page_title": "Aussie Home Loans",
+    "frame_description": "The screen displays a question 'How do you earn your income?' with three selectable options."
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 6,
+    "type": "navigate",
+    "description": "The page navigates back from the income selection screen to the first name input screen.",
+    "confidence": 0.9,
+    "page_title": "Aussie Home Loans",
+    "frame_description": "The UI transitions from the income question back to the 'One last thing, what's your first name?' screen."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 11,
+    "type": "dwell",
+    "description": "User pauses on the name input screen, with the cursor lingering near the 'GET MY HOME LOAN MATCHES' button.",
+    "confidence": 0.8,
+    "interaction_target": "GET MY HOME LOAN MATCHES",
+    "page_title": "Aussie Home Loans",
+    "frame_description": "The screen shows a text input field for the user's first name and a large purple action button."
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 13,
+    "type": "click",
+    "description": "User clicks on the 'Type your first name here' input field to activate it for text entry.",
+    "confidence": 0.9,
+    "interaction_target": "Type your first name here",
+    "page_title": "Aussie Home Loans",
+    "frame_description": "The cursor moves to the input field, which then gains a blue focus border."
+  },
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 13,
+    "type": "change_ui_state",
+    "description": "The mobile on-screen keyboard appears as the input field is focused.",
+    "confidence": 1.0,
+    "interaction_target": "Type your first name here",
+    "page_title": "Aussie Home Loans",
+    "frame_description": "A standard iOS-style keyboard slides up from the bottom of the screen."
+  },
+  {
+    "frame_index_start": 14,
+    "frame_index_end": 23,
+    "type": "dwell",
+    "description": "User pauses with the keyboard open, moving the cursor over the keyboard area without entering text yet.",
+    "confidence": 0.7,
+    "page_title": "Aussie Home Loans",
+    "frame_description": "The keyboard remains visible at the bottom of the screen while the input field remains empty."
+  }
+]

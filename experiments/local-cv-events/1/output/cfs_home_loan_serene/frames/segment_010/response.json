@@ -1,0 +1,38 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 4,
+    "type": "input_text",
+    "description": "User enters the final digit '0' into the property value field, updating the amount from $110,000 to $1,100,000.",
+    "confidence": 0.9,
+    "interaction_target": "Property value input field",
+    "page_title": "Aussie - Property Value",
+    "frame_description": "The user is using a numeric keyboard on a mobile device to enter a property value."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 6,
+    "type": "click",
+    "description": "User clicks the 'NEXT' button to proceed to the next step of the refinancing form.",
+    "confidence": 0.8,
+    "interaction_target": "NEXT button",
+    "page_title": "Aussie - Property Value"
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 7,
+    "type": "navigate",
+    "description": "The application navigates from the property value question to the 'What's your refinancing goal?' question.",
+    "confidence": 1.0,
+    "page_location": "What's your refinancing goal?"
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 12,
+    "type": "dwell",
+    "description": "User pauses on the new page to read through the refinancing goal options such as 'Decrease repayments' and 'Pay off loan faster'.",
+    "confidence": 0.9,
+    "page_title": "Aussie - Refinancing Goal",
+    "frame_description": "A list of refinancing goals is displayed with several selectable options."
+  }
+]

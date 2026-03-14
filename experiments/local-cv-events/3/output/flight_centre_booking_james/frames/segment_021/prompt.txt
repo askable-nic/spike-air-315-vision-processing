@@ -1,0 +1,24 @@
+Analyse the following screen recording frames for user interaction events.
+
+**Segment 21** | Time range: 135.2s - 143.2s | FPS: 2.0 | Activity tier: low | Frames: 21
+
+Frames 0-1 are CONTEXT frames from the previous segment. Frames 19-20 are CONTEXT frames from the next segment. Do NOT report events from context frames.
+
+## Local Event Candidates
+
+The following events were detected locally from cursor tracking and optical flow.
+Please confirm, reject, or modify each candidate based on what you see in the frames.
+
+- **Candidate 1**: hover | 135300ms-137000ms | confidence=0.60 at cursor (127, 207) | Cursor stationary for 1700ms near (127, 207)
+- **Candidate 2**: click | 136900ms-137000ms | confidence=0.35 at cursor (127, 207) | Possible click at (127, 207)
+- **Candidate 3**: click | 137000ms-137000ms | confidence=0.35 at cursor (127, 207) | Possible click at (127, 207)
+
+
+Examine each frame carefully and identify all user interactions that occurred during this segment. Pay attention to:
+- Cursor position changes between frames
+- UI elements that appear selected or focused
+- Page content changes that indicate navigation or scrolling
+- Text appearing in form fields
+- Visual state changes (modals, dropdowns, loading states)
+
+Return the events as a JSON array.

@@ -1,0 +1,35 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 7,
+    "type": "dwell",
+    "description": "User examines the 'Travel dates' calendar, hovering over various dates in March 2026 while deciding on a flight range.",
+    "confidence": 0.9,
+    "interaction_target": "Travel dates calendar",
+    "page_title": "Flight Centre - Your centre for cruises.",
+    "page_location": "https://www.flightcentre.com.au",
+    "frame_description": "The user is browsing the calendar in the travel dates modal."
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 8,
+    "type": "select",
+    "description": "User selects March 20 and March 22 as travel dates, which updates the selection from the previous February date.",
+    "confidence": 0.8,
+    "interaction_target": "March 20 and March 22 dates",
+    "page_title": "Flight Centre - Your centre for cruises.",
+    "page_location": "https://www.flightcentre.com.au",
+    "frame_description": "The calendar selection updates to March 20-22 and the price estimate at the bottom changes."
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 9,
+    "type": "hover",
+    "description": "User hovers over the 'Done' button in the travel dates modal after finalizing the date selection.",
+    "confidence": 0.9,
+    "interaction_target": "Done button",
+    "page_title": "Flight Centre - Your centre for cruises.",
+    "page_location": "https://www.flightcentre.com.au",
+    "frame_description": "The cursor moves to the 'Done' button at the bottom right of the modal."
+  }
+]

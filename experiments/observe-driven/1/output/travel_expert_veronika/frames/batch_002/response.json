@@ -1,0 +1,64 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 31,
+    "type": "change_ui_state",
+    "description": "Instructional text for a user study task is being revealed line-by-line on the screen. The text describes a task involving planning a long-haul trip, looking at flights, dates, and routes.",
+    "confidence": 0.95,
+    "frame_description": "A dark screen with white text appearing progressively, describing a travel planning task."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 6,
+    "type": "hover",
+    "description": "User hovers the cursor over the video overlay in the top right corner while reading the instructions.",
+    "confidence": 0.8,
+    "interaction_target": "Video overlay",
+    "frame_description": "Cursor is stationary over the video feed of the participant in the top right corner."
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 8,
+    "type": "hover",
+    "description": "User hovers the cursor over the newly revealed text, likely reading along with the prompt.",
+    "confidence": 0.8,
+    "interaction_target": "Instructional text",
+    "frame_description": "Cursor is positioned over the text 'look at flights, explore'."
+  },
+  {
+    "frame_index_start": 15,
+    "frame_index_end": 16,
+    "type": "hover",
+    "description": "User hovers the cursor over the video overlay in the top right corner.",
+    "confidence": 0.8,
+    "interaction_target": "Video overlay",
+    "frame_description": "Cursor returns to the top right corner over the video feed."
+  },
+  {
+    "frame_index_start": 22,
+    "frame_index_end": 23,
+    "type": "hover",
+    "description": "User hovers the cursor over the video overlay in the top right corner.",
+    "confidence": 0.8,
+    "interaction_target": "Video overlay",
+    "frame_description": "Cursor is stationary in the top right corner."
+  },
+  {
+    "frame_index_start": 27,
+    "frame_index_end": 29,
+    "type": "hover",
+    "description": "User hovers the cursor over the video overlay in the top right corner for an extended period while the final lines of text appear.",
+    "confidence": 0.9,
+    "interaction_target": "Video overlay",
+    "frame_description": "Cursor remains in the top right corner as the prompt reveal nears completion."
+  },
+  {
+    "frame_index_start": 30,
+    "frame_index_end": 31,
+    "type": "hover",
+    "description": "User hovers the cursor over the bottom of the instructional text as the reveal finishes.",
+    "confidence": 0.8,
+    "interaction_target": "Instructional text",
+    "frame_description": "Cursor moves back to the text area at the bottom of the screen."
+  }
+]

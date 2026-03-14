@@ -1,0 +1,47 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 11,
+    "type": "dwell",
+    "description": "User dwells on the flight search results page, likely reviewing the options.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner | Search Results",
+    "frame_description": "The user is looking at a list of flight deals from Sunshine Coast to London."
+  },
+  {
+    "frame_index_start": 27,
+    "frame_index_end": 28,
+    "type": "navigate",
+    "description": "User navigates to a Jira workspace page.",
+    "confidence": 1.0,
+    "page_title": "Veronika Scislowski's workspace | Jira",
+    "frame_description": "The screen transitions from a white loading state to a Jira workspace dashboard."
+  },
+  {
+    "frame_index_start": 59,
+    "frame_index_end": 60,
+    "type": "navigate",
+    "description": "User navigates to the Booking.com homepage.",
+    "confidence": 1.0,
+    "page_title": "Booking.com | Official site | The best hotels & accommodation",
+    "frame_description": "The screen transitions from a white loading state to the Booking.com homepage with a promotional modal visible."
+  },
+  {
+    "frame_index_start": 62,
+    "frame_index_end": 63,
+    "type": "click",
+    "description": "User clicks the close button ('X') on the 'Genius' membership modal on Booking.com.",
+    "confidence": 0.9,
+    "interaction_target": "Close button ('X')",
+    "page_title": "Booking.com | Official site | The best hotels & accommodation",
+    "frame_description": "The cursor is positioned over the close icon of the modal, and in the subsequent frame, the modal is no longer visible."
+  },
+  {
+    "frame_index_start": 100,
+    "frame_index_end": 100,
+    "type": "change_ui_state",
+    "description": "A task instruction overlay appears on the screen.",
+    "confidence": 0.9,
+    "frame_description": "A dark overlay with task-related options like 'Open' and 'Repeat the task instructions' appears over the current page."
+  }
+]

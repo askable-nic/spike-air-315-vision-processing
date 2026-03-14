@@ -1,0 +1,126 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 2,
+    "type": "change_ui_state",
+    "description": "The 'Filter Opportunities' modal appears on screen",
+    "confidence": 1.0,
+    "interaction_target": "Filter Opportunities modal",
+    "page_title": "Explore",
+    "frame_description": "A modal overlay titled 'Filter Opportunities' appears over the Explore page content."
+  },
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 10,
+    "type": "dwell",
+    "description": "User examines the filter options in the modal",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "frame_description": "The user pauses to read the various filter categories like Task Type, Duration, and Pay Rate."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 11,
+    "type": "select",
+    "description": "User selects the 'Under 10 min' duration filter",
+    "confidence": 1.0,
+    "interaction_target": "Under 10 min button",
+    "frame_description": "The 'Under 10 min' button is highlighted blue upon selection."
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 12,
+    "type": "select",
+    "description": "User selects the '10-30 min' duration filter",
+    "confidence": 1.0,
+    "interaction_target": "10-30 min button",
+    "frame_description": "The '10-30 min' button is highlighted blue upon selection."
+  },
+  {
+    "frame_index_start": 14,
+    "frame_index_end": 18,
+    "type": "drag",
+    "description": "User adjusts the maximum pay rate using the slider",
+    "confidence": 1.0,
+    "interaction_target": "Pay Rate slider right handle",
+    "frame_description": "The user drags the right handle of the pay rate slider, changing the upper bound of the filter."
+  },
+  {
+    "frame_index_start": 19,
+    "frame_index_end": 19,
+    "type": "scroll",
+    "description": "User scrolls down within the filter modal to see more options",
+    "confidence": 1.0,
+    "frame_description": "The content within the modal shifts upwards, revealing 'DEVICE' and 'ADVANCED OPTIONS' sections."
+  },
+  {
+    "frame_index_start": 20,
+    "frame_index_end": 21,
+    "type": "dwell",
+    "description": "User reviews the device and advanced filter options",
+    "confidence": 0.9,
+    "frame_description": "The user pauses to look at the newly revealed filter options at the bottom of the modal."
+  },
+  {
+    "frame_index_start": 22,
+    "frame_index_end": 26,
+    "type": "drag",
+    "description": "User adjusts the minimum pay rate using the slider",
+    "confidence": 1.0,
+    "interaction_target": "Pay Rate slider left handle",
+    "frame_description": "The user drags the left handle of the pay rate slider to increase the minimum pay requirement."
+  },
+  {
+    "frame_index_start": 27,
+    "frame_index_end": 30,
+    "type": "drag",
+    "description": "User adjusts the maximum pay rate using the slider",
+    "confidence": 1.0,
+    "interaction_target": "Pay Rate slider right handle",
+    "frame_description": "The user fine-tunes the maximum pay rate by dragging the right slider handle."
+  },
+  {
+    "frame_index_start": 31,
+    "frame_index_end": 35,
+    "type": "drag",
+    "description": "User adjusts the maximum pay rate using the slider",
+    "confidence": 1.0,
+    "interaction_target": "Pay Rate slider right handle",
+    "frame_description": "Another adjustment to the maximum pay rate slider handle."
+  },
+  {
+    "frame_index_start": 36,
+    "frame_index_end": 38,
+    "type": "hover",
+    "description": "User hovers over the duration filter options",
+    "confidence": 0.8,
+    "frame_description": "The cursor moves back up towards the duration buttons without clicking."
+  },
+  {
+    "frame_index_start": 39,
+    "frame_index_end": 45,
+    "type": "drag",
+    "description": "User adjusts the minimum pay rate using the slider",
+    "confidence": 1.0,
+    "interaction_target": "Pay Rate slider left handle",
+    "frame_description": "The user drags the left handle of the pay rate slider again."
+  },
+  {
+    "frame_index_start": 46,
+    "frame_index_end": 48,
+    "type": "drag",
+    "description": "User adjusts the maximum pay rate using the slider",
+    "confidence": 1.0,
+    "interaction_target": "Pay Rate slider right handle",
+    "frame_description": "A final adjustment to the right handle of the pay rate slider."
+  },
+  {
+    "frame_index_start": 49,
+    "frame_index_end": 49,
+    "type": "click",
+    "description": "User clicks the chevron to expand the 'ADVANCED OPTIONS' section",
+    "confidence": 1.0,
+    "interaction_target": "Advanced Options expand button",
+    "frame_description": "The user clicks the downward-facing arrow next to 'ADVANCED OPTIONS', expanding the section to show more filters."
+  }
+]

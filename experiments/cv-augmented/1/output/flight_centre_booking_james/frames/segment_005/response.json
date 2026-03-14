@@ -1,0 +1,64 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 6,
+    "type": "dwell",
+    "description": "User examines departing flight options from Adelaide (ADL) to Melbourne (MEL) on the results page.",
+    "confidence": 0.9,
+    "page_title": "Select Departing Flight",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eWZ/results",
+    "frame_description": "The user is viewing a list of available departing flights with various airlines and prices."
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 7,
+    "type": "click",
+    "description": "User clicks on the '$127' price button for the 6:10am Virgin Australia flight to view fare options.",
+    "confidence": 0.95,
+    "interaction_target": "From $127 button",
+    "page_title": "Select Departing Flight"
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 8,
+    "type": "change_ui_state",
+    "description": "The 'Select Departing Fare Type' section expands, showing Lite, Choice, and Flex fare options.",
+    "confidence": 0.95,
+    "frame_description": "A modal or expanded section appears showing different fare classes for the selected flight."
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 9,
+    "type": "click",
+    "description": "User clicks the 'SELECT' button for the 'Lite' fare type priced at $127.",
+    "confidence": 0.95,
+    "interaction_target": "SELECT button (Lite fare)",
+    "page_title": "Select Departing Flight"
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 10,
+    "type": "change_ui_state",
+    "description": "A loading screen appears with the message 'Good choice! It's time to choose your flight for your return journey...'",
+    "confidence": 0.95,
+    "frame_description": "The screen transitions to a loading state with a spinner."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 11,
+    "type": "navigate",
+    "description": "The page content updates to show return flight options from Melbourne (MEL) to Adelaide (ADL).",
+    "confidence": 0.95,
+    "page_title": "Select Return Flight",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eWZ/results#inbound"
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 14,
+    "type": "dwell",
+    "description": "User examines the list of available return flights.",
+    "confidence": 0.9,
+    "page_title": "Select Return Flight",
+    "frame_description": "The user is looking at return flight results, including Jetstar and Virgin Australia options."
+  }
+]

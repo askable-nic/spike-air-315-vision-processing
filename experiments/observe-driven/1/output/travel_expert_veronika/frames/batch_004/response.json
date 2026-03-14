@@ -1,0 +1,56 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 5,
+    "type": "dwell",
+    "description": "User pauses while reading task instructions on the screen, with the cursor parked in the top right corner.",
+    "confidence": 0.9,
+    "frame_description": "The screen displays text instructions regarding flight preferences and search criteria."
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 10,
+    "type": "click",
+    "description": "User clicks the 'Open' button on the UI overlay.",
+    "confidence": 0.9,
+    "interaction_target": "Open button",
+    "frame_description": "A circular 'Open' button with an external link icon is visible and interacted with."
+  },
+  {
+    "frame_index_start": 14,
+    "frame_index_end": 17,
+    "type": "click",
+    "description": "User clicks the 'Open' button again to trigger navigation.",
+    "confidence": 0.9,
+    "interaction_target": "Open button",
+    "frame_description": "The user interacts with the 'Open' button a second time."
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 18,
+    "type": "navigate",
+    "description": "The page navigates from the instruction screen to the Google homepage.",
+    "confidence": 1.0,
+    "page_title": "Google",
+    "page_location": "https://www.google.com",
+    "frame_description": "The screen transitions from a dark instruction page to the white Google search interface."
+  },
+  {
+    "frame_index_start": 18,
+    "frame_index_end": 20,
+    "type": "dwell",
+    "description": "User dwells on the Google homepage after navigation.",
+    "confidence": 0.9,
+    "page_title": "Google",
+    "frame_description": "The Google search page is fully loaded and visible."
+  },
+  {
+    "frame_index_start": 30,
+    "frame_index_end": 31,
+    "type": "hover",
+    "description": "User hovers over the 'Open' button next to the 'Repeat the task instructions' prompt.",
+    "confidence": 0.8,
+    "interaction_target": "Open button",
+    "frame_description": "A UI element at the bottom of the screen appears with the text 'Repeat the task instructions' and an 'Open' button."
+  }
+]

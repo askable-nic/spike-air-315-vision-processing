@@ -1,0 +1,39 @@
+[
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 6,
+    "type": "click",
+    "description": "User clicks the 'X' button to close the recordings and heat map overlay modal",
+    "confidence": 0.95,
+    "interaction_target": "Close button",
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "app.askable.com/studies/69715d03eb43a65423e15816/results/task/69715d7ed11dec6071c18421",
+    "frame_description": "The user moves the cursor to the top right of the modal and clicks the close icon, revealing the main results dashboard."
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 7,
+    "type": "hover",
+    "description": "User hovers over the 'Make a withdrawal from your...' task in the left-hand navigation sidebar",
+    "confidence": 0.85,
+    "interaction_target": "Make a withdrawal from your... task item",
+    "frame_description": "The cursor lingers briefly over the second prototype test task in the sidebar."
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 8,
+    "type": "click",
+    "description": "User clicks on the 'What do you think a reasonable minimum withdrawal amount would be?' task in the sidebar",
+    "confidence": 0.95,
+    "interaction_target": "What do you think a reason... task item",
+    "frame_description": "The user selects a multiple-choice question from the sidebar, causing the main content area to update with the corresponding survey results."
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 8,
+    "type": "change_ui_state",
+    "description": "The main dashboard content updates to display the results for the selected multiple-choice question",
+    "confidence": 0.9,
+    "frame_description": "The screen transitions from showing task paths/heatmaps to showing a bar chart of survey responses."
+  }
+]

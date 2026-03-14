@@ -1,0 +1,52 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 4,
+    "type": "input_text",
+    "description": "User types 'Rome, Italy' into the 'TRAVEL FROM' input field",
+    "confidence": 0.9,
+    "interaction_target": "TRAVEL FROM input field",
+    "page_title": "Rome2Rio: discover how to get anywhere",
+    "page_location": "rome2rio.com"
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 11,
+    "type": "input_text",
+    "description": "User types 'palermo, Italy' into the 'TO' input field",
+    "confidence": 0.9,
+    "interaction_target": "TO input field",
+    "page_title": "Rome2Rio: discover how to get anywhere",
+    "page_location": "rome2rio.com"
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 13,
+    "type": "select",
+    "description": "User selects 'Palermo, Italy' from the location suggestions dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Palermo, Italy suggestion",
+    "page_title": "Rome2Rio: discover how to get anywhere",
+    "page_location": "rome2rio.com"
+  },
+  {
+    "frame_index_start": 14,
+    "frame_index_end": 15,
+    "type": "click",
+    "description": "User clicks the 'See all options' button to search for travel routes",
+    "confidence": 1.0,
+    "interaction_target": "See all options button",
+    "page_title": "Rome2Rio: discover how to get anywhere",
+    "page_location": "rome2rio.com"
+  },
+  {
+    "frame_index_start": 15,
+    "frame_index_end": 16,
+    "type": "navigate",
+    "description": "Page navigates to the search results for travel from Rome to Palermo",
+    "confidence": 1.0,
+    "page_title": "Rome to Palermo",
+    "page_location": "https://www.rome2rio.com/map/Rome/Palermo",
+    "frame_description": "The search results page begins to load with placeholders visible"
+  }
+]

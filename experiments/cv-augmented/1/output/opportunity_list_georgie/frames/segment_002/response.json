@@ -1,0 +1,38 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 8,
+    "type": "dwell",
+    "description": "User reads the task instructions presented on the screen regarding the prototype and thinking aloud.",
+    "confidence": 0.9,
+    "frame_description": "Black screen with white text instructions being revealed sequentially."
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 10,
+    "type": "navigate",
+    "description": "The screen transitions from the instruction page to the mobile app prototype 'Explore' screen.",
+    "confidence": 1.0,
+    "page_title": "Explore",
+    "frame_description": "A white transition screen followed by the loading of the mobile app interface."
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 11,
+    "type": "dwell",
+    "description": "User examines the 'Explore' page of the prototype, viewing various task cards like 'AI Interview' and 'Video Call'.",
+    "confidence": 0.9,
+    "interaction_target": "Explore page",
+    "page_title": "Explore",
+    "frame_description": "Mobile app interface showing 'Short tasks & surveys' and 'Sessions to schedule' sections."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 11,
+    "type": "hover",
+    "description": "User moves the cursor over the 'AI Interview' task card.",
+    "confidence": 0.8,
+    "interaction_target": "AI Interview card",
+    "page_title": "Explore"
+  }
+]

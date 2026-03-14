@@ -1,0 +1,48 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 35,
+    "type": "dwell",
+    "description": "User dwells on the search results for London to Ireland, likely reading the different travel options provided by Rome2Rio.",
+    "confidence": 0.8,
+    "page_title": "London to Ireland",
+    "page_location": "rome2rio.com/map/London/Ireland",
+    "frame_description": "The screen shows various travel options (Fly, Train, Bus, Drive) from London to Ireland with a map of Europe on the right."
+  },
+  {
+    "frame_index_start": 37,
+    "frame_index_end": 37,
+    "type": "click",
+    "description": "User clicks on the destination input field to enter a new location.",
+    "confidence": 0.9,
+    "interaction_target": "Destination input field",
+    "page_title": "London to Ireland"
+  },
+  {
+    "frame_index_start": 38,
+    "frame_index_end": 39,
+    "type": "input_text",
+    "description": "User types \"scotland\" into the destination search box.",
+    "confidence": 1.0,
+    "interaction_target": "Destination input field",
+    "page_title": "London to Ireland"
+  },
+  {
+    "frame_index_start": 40,
+    "frame_index_end": 40,
+    "type": "click",
+    "description": "User clicks the search button to update the travel route.",
+    "confidence": 1.0,
+    "interaction_target": "Search button",
+    "page_title": "London to Ireland"
+  },
+  {
+    "frame_index_start": 41,
+    "frame_index_end": 42,
+    "type": "navigate",
+    "description": "The page updates to show travel options from Ireland to Scotland.",
+    "confidence": 1.0,
+    "page_title": "Ireland to Scotland",
+    "page_location": "rome2rio.com/map/Ireland/Scotland"
+  }
+]

@@ -1,0 +1,45 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 9,
+    "type": "dwell",
+    "description": "User pauses on the 'Search flights' button before clicking",
+    "confidence": 0.7,
+    "interaction_target": "Search flights button",
+    "page_title": "Flight Centre | Your centre for travel.",
+    "page_location": "https://www.flightcentre.com.au"
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 9,
+    "type": "click",
+    "description": "User clicks the 'Search flights' button to initiate flight search",
+    "confidence": 0.9,
+    "interaction_target": "Search flights button",
+    "page_title": "Flight Centre | Your centre for travel.",
+    "page_location": "https://www.flightcentre.com.au"
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 13,
+    "type": "navigate",
+    "description": "Page navigates from the homepage to the search results page",
+    "confidence": 1.0,
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eWZ/results"
+  },
+  {
+    "frame_index_start": 20,
+    "frame_index_end": 35,
+    "type": "change_ui_state",
+    "description": "A loading modal appears with the message 'Our overhead compartments are stuffed with deals!' and cycles through airline logos",
+    "confidence": 1.0,
+    "frame_description": "Loading screen with spinner and airline logos (Qatar, Philippine Airlines)"
+  },
+  {
+    "frame_index_start": 20,
+    "frame_index_end": 35,
+    "type": "dwell",
+    "description": "User waits for the flight search results to load",
+    "confidence": 0.8
+  }
+]

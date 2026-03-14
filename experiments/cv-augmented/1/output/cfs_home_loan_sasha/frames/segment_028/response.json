@@ -1,0 +1,45 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "navigate",
+    "description": "User navigates to Google search results for 'home loans comparison'",
+    "confidence": 0.9,
+    "page_title": "home loans comparison - Google Search",
+    "page_location": "https://www.google.com/search?q=home+loans+comparison"
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 16,
+    "type": "scroll",
+    "description": "User scrolls through Google search results to find a relevant link",
+    "confidence": 0.95,
+    "page_title": "home loans comparison - Google Search"
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 17,
+    "type": "click",
+    "description": "User clicks on the 'Choosing a home loan' link from Moneysmart",
+    "confidence": 0.9,
+    "interaction_target": "Choosing a home loan",
+    "page_title": "home loans comparison - Google Search"
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 18,
+    "type": "navigate",
+    "description": "User navigates to the Moneysmart 'Choosing a home loan' page",
+    "confidence": 0.95,
+    "page_title": "Choosing a home loan - Moneysmart.gov.au",
+    "page_location": "https://moneysmart.gov.au/home-loans/choosing-a-home-loan"
+  },
+  {
+    "frame_index_start": 19,
+    "frame_index_end": 33,
+    "type": "scroll",
+    "description": "User scrolls through the Moneysmart article to read about repayment types and interest rates",
+    "confidence": 0.95,
+    "page_title": "Choosing a home loan - Moneysmart.gov.au"
+  }
+]

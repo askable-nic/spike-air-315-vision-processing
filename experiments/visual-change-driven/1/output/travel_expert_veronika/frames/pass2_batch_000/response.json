@@ -1,0 +1,35 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "change_ui_state",
+    "description": "Instruction text begins to appear on the screen, prompting the user to start the session.",
+    "confidence": 0.9,
+    "frame_description": "A dark screen with white text appearing at the bottom."
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 13,
+    "type": "change_ui_state",
+    "description": "Instruction text updates to provide a specific scenario: planning a holiday from the Sunshine Coast to London.",
+    "confidence": 0.9,
+    "frame_description": "The text on screen changes to describe the travel planning task."
+  },
+  {
+    "frame_index_start": 18,
+    "frame_index_end": 35,
+    "type": "change_ui_state",
+    "description": "Instruction text continues to reveal details about the task, including exploring flights, dates, and comparing routes.",
+    "confidence": 0.9,
+    "frame_description": "The instruction text progressively reveals more details about the research task."
+  },
+  {
+    "frame_index_start": 36,
+    "frame_index_end": 37,
+    "type": "change_ui_state",
+    "description": "An 'Open' button appears in the top right corner, signaling the next step in the process.",
+    "confidence": 0.9,
+    "interaction_target": "Open button",
+    "frame_description": "A circular 'Open' button appears at the top right of the screen."
+  }
+]

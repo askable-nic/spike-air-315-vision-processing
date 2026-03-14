@@ -1,0 +1,130 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 5,
+    "type": "dwell",
+    "description": "User pauses cursor over the 'Best' flight option on the search results page",
+    "confidence": 0.8,
+    "interaction_target": "Best flight option",
+    "page_title": "Flight Search Results"
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 10,
+    "type": "navigate",
+    "description": "User switches browser tabs from flight search to Trello",
+    "confidence": 0.9,
+    "page_title": "Trello"
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 12,
+    "type": "click",
+    "description": "User clicks on the 'Japan' board in Trello",
+    "confidence": 0.9,
+    "interaction_target": "Japan board",
+    "page_title": "Trello"
+  },
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 14,
+    "type": "scroll",
+    "description": "User scrolls the Trello board horizontally to view more lists",
+    "confidence": 0.8,
+    "page_title": "Japan | Trello"
+  },
+  {
+    "frame_index_start": 16,
+    "frame_index_end": 17,
+    "type": "navigate",
+    "description": "User switches browser tabs back to the flight search results",
+    "confidence": 0.9,
+    "page_title": "Flight Search Results"
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 18,
+    "type": "hesitate",
+    "description": "User pauses briefly before switching tabs again",
+    "confidence": 0.7
+  },
+  {
+    "frame_index_start": 18,
+    "frame_index_end": 19,
+    "type": "navigate",
+    "description": "User switches browser tabs to Booking.com",
+    "confidence": 0.9,
+    "page_title": "Booking.com"
+  },
+  {
+    "frame_index_start": 19,
+    "frame_index_end": 20,
+    "type": "change_ui_state",
+    "description": "A 'Genius' sign-in modal appears on the Booking.com homepage",
+    "confidence": 0.9,
+    "interaction_target": "Genius sign-in modal"
+  },
+  {
+    "frame_index_start": 20,
+    "frame_index_end": 21,
+    "type": "click",
+    "description": "User clicks to close the sign-in modal",
+    "confidence": 0.8,
+    "interaction_target": "Close button"
+  },
+  {
+    "frame_index_start": 21,
+    "frame_index_end": 22,
+    "type": "click",
+    "description": "User clicks into the destination search box",
+    "confidence": 0.9,
+    "interaction_target": "Destination search box"
+  },
+  {
+    "frame_index_start": 22,
+    "frame_index_end": 22,
+    "type": "input_text",
+    "description": "User types 'london' into the destination field",
+    "confidence": 0.9,
+    "interaction_target": "Destination search box"
+  },
+  {
+    "frame_index_start": 23,
+    "frame_index_end": 23,
+    "type": "select",
+    "description": "User selects 'Central London' from the search suggestions dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Central London suggestion"
+  },
+  {
+    "frame_index_start": 23,
+    "frame_index_end": 24,
+    "type": "click",
+    "description": "User clicks the 'Search' button",
+    "confidence": 0.9,
+    "interaction_target": "Search button"
+  },
+  {
+    "frame_index_start": 24,
+    "frame_index_end": 24,
+    "type": "navigate",
+    "description": "Page navigates to hotel search results for London",
+    "confidence": 0.9,
+    "page_title": "London: 6,959 properties found"
+  },
+  {
+    "frame_index_start": 25,
+    "frame_index_end": 31,
+    "type": "scroll",
+    "description": "User scrolls down through the hotel search results",
+    "confidence": 0.9
+  },
+  {
+    "frame_index_start": 31,
+    "frame_index_end": 32,
+    "type": "navigate",
+    "description": "User navigates to the task completion transition screen",
+    "confidence": 0.9,
+    "page_title": "What are you thinking about doing next?"
+  }
+]

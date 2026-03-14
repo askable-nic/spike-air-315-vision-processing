@@ -1,0 +1,81 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 10,
+    "type": "input_text",
+    "description": "User types and deletes search queries in the location input field, including 'london' and 'irel'.",
+    "confidence": 0.9,
+    "interaction_target": "Location search input",
+    "page_title": "Caravan, Motorhome and Campervan Hire",
+    "page_location": "camplify.com.au"
+  },
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 18,
+    "type": "navigate",
+    "description": "User navigates to Google search results for 'camplify'.",
+    "confidence": 1.0,
+    "page_title": "camplify - Google Search",
+    "page_location": "google.com/search?q=camplify"
+  },
+  {
+    "frame_index_start": 19,
+    "frame_index_end": 19,
+    "type": "click",
+    "description": "User clicks on the 'Camplify Global' search result link.",
+    "confidence": 0.9,
+    "interaction_target": "Camplify Global link",
+    "page_title": "camplify - Google Search"
+  },
+  {
+    "frame_index_start": 20,
+    "frame_index_end": 20,
+    "type": "navigate",
+    "description": "User navigates to the Camplify Global homepage.",
+    "confidence": 1.0,
+    "page_location": "camplify.com"
+  },
+  {
+    "frame_index_start": 21,
+    "frame_index_end": 21,
+    "type": "scroll",
+    "description": "User scrolls down the page to view the global community sections.",
+    "confidence": 0.9,
+    "page_location": "camplify.com"
+  },
+  {
+    "frame_index_start": 22,
+    "frame_index_end": 22,
+    "type": "click",
+    "description": "User clicks on the 'United Kingdom' community card.",
+    "confidence": 0.9,
+    "interaction_target": "United Kingdom card",
+    "page_location": "camplify.com"
+  },
+  {
+    "frame_index_start": 23,
+    "frame_index_end": 24,
+    "type": "navigate",
+    "description": "User navigates to the Camplify UK website.",
+    "confidence": 1.0,
+    "page_location": "camplify.co.uk"
+  },
+  {
+    "frame_index_start": 25,
+    "frame_index_end": 27,
+    "type": "input_text",
+    "description": "User types 'londo' into the search input field on the UK site.",
+    "confidence": 0.9,
+    "interaction_target": "Search input field",
+    "page_location": "camplify.co.uk"
+  },
+  {
+    "frame_index_start": 28,
+    "frame_index_end": 29,
+    "type": "change_ui_state",
+    "description": "A Honey browser extension modal appears offering rewards.",
+    "confidence": 1.0,
+    "interaction_target": "Honey extension modal",
+    "page_location": "camplify.co.uk"
+  }
+]

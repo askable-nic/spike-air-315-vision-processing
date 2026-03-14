@@ -1,0 +1,50 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "navigate",
+    "description": "User navigates from the 'Short description' step to the 'Additional Instructions' step within the booking setup.",
+    "confidence": 0.9,
+    "page_title": "Booking - Discovery",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/additional-info/description",
+    "frame_description": "The screen transitions from the description input fields to a page titled 'Additional Instructions'."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 4,
+    "type": "click",
+    "description": "User clicks the 'Next' button on the Contacts page.",
+    "confidence": 0.95,
+    "interaction_target": "Next",
+    "page_title": "Booking - Discovery",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/additional-info/contacts",
+    "frame_description": "The cursor is positioned directly over the 'Next' button at the bottom of the Contacts list."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "navigate",
+    "description": "The page navigates from the Contacts section to the Legal & Privacy section.",
+    "confidence": 0.95,
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/additional-info/legal-privacy",
+    "frame_description": "The UI changes from the contact list to the Legal & Privacy selection screen."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 7,
+    "type": "navigate",
+    "description": "The user navigates from the Legal & Privacy section to the Calendar view for session times.",
+    "confidence": 0.9,
+    "page_title": "Booking - Discovery",
+    "frame_description": "The screen transitions from the legal agreement options to a calendar interface."
+  },
+  {
+    "frame_index_start": 32,
+    "frame_index_end": 33,
+    "type": "change_ui_state",
+    "description": "Available time slots appear on the right side of the calendar interface, likely triggered by the selection of a date.",
+    "confidence": 0.85,
+    "interaction_target": "February 25",
+    "frame_description": "The calendar shows February 25th selected, and in the subsequent frame, specific time slots (9 AM, 10 AM, 11 AM) become visible."
+  }
+]

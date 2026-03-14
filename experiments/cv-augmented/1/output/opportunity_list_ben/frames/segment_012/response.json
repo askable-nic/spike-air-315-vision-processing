@@ -1,0 +1,39 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 7,
+    "type": "change_ui_state",
+    "description": "Task instructions are progressively revealed on the screen while the user reads them.",
+    "confidence": 0.9,
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+    "frame_description": "A dark screen with white text instructions appearing line by line."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 7,
+    "type": "dwell",
+    "description": "User pauses to read the instructions being displayed on the Askable Sessions page.",
+    "confidence": 0.8,
+    "page_title": "Askable Sessions"
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 8,
+    "type": "navigate",
+    "description": "User switches browser tabs to return to the Figma prototype.",
+    "confidence": 1.0,
+    "interaction_target": "Smart Filters Mobile App tab",
+    "page_title": "Smart Filters Mobile App",
+    "page_location": "art-resin-05325911.figma.site"
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 9,
+    "type": "select",
+    "description": "User highlights the text 'and/or internet' within the 'AI Interview' card on the Figma prototype.",
+    "confidence": 0.9,
+    "interaction_target": "and/or internet text",
+    "page_title": "Smart Filters Mobile App"
+  }
+]

@@ -1,0 +1,48 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 6,
+    "type": "input_text",
+    "description": "User finishes typing 'refinancing' into the search bar as suggestions update.",
+    "confidence": 0.9,
+    "interaction_target": "Google Search Bar",
+    "page_title": "Google Search",
+    "frame_description": "The user is interacting with the Google search bar on a mobile device, with the keyboard visible and search suggestions updating."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 7,
+    "type": "navigate",
+    "description": "User navigates from search suggestions to the search results page.",
+    "confidence": 0.95,
+    "page_title": "refinancing australia banks - Google Search",
+    "frame_description": "The screen transitions from the search input view to the search results page."
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 15,
+    "type": "dwell",
+    "description": "User dwells on the search results page, reviewing the Macquarie Bank sponsored result.",
+    "confidence": 0.85,
+    "page_title": "refinancing australia banks - Google Search",
+    "frame_description": "The user is looking at the search results, with the Macquarie Bank ad prominently displayed."
+  },
+  {
+    "frame_index_start": 15,
+    "frame_index_end": 15,
+    "type": "click",
+    "description": "User clicks on the Macquarie Bank 'Home Loan Refinance' link.",
+    "confidence": 0.9,
+    "interaction_target": "Macquarie Bank Home Loan Refinance link",
+    "page_title": "refinancing australia banks - Google Search"
+  },
+  {
+    "frame_index_start": 15,
+    "frame_index_end": 16,
+    "type": "navigate",
+    "description": "User navigates to the Macquarie Bank website.",
+    "confidence": 0.95,
+    "page_title": "Refinance your home loan | Macquarie",
+    "frame_description": "The page loads the Macquarie Bank home loan refinance landing page."
+  }
+]

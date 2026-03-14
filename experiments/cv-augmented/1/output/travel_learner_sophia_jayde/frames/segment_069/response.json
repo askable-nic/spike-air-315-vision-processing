@@ -1,0 +1,44 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 42,
+    "type": "dwell",
+    "description": "User is reading the travel advice for Italy on the Smartraveller website, specifically looking at the Travel and Local contacts sections.",
+    "confidence": 0.9,
+    "page_title": "Italy Travel Advice & Safety | Smartraveller",
+    "page_location": "smarttraveller.gov.au/destinations/europe/italy",
+    "frame_description": "The Italy travel advice page is visible with sections on Travel and Local contacts."
+  },
+  {
+    "frame_index_start": 23,
+    "frame_index_end": 23,
+    "type": "hover",
+    "description": "User hovers over the 'Get an electronic travel authorisation (ETA) to visit the UK' browser tab.",
+    "confidence": 0.8,
+    "interaction_target": "Get an electronic travel authorisation (ETA) to visit the UK tab"
+  },
+  {
+    "frame_index_start": 43,
+    "frame_index_end": 43,
+    "type": "click",
+    "description": "User clicks the 'New Tab' button in the browser.",
+    "confidence": 1.0,
+    "interaction_target": "New Tab button"
+  },
+  {
+    "frame_index_start": 43,
+    "frame_index_end": 44,
+    "type": "navigate",
+    "description": "User navigates to a new tab, opening the Google search page.",
+    "confidence": 1.0,
+    "page_title": "New Tab"
+  },
+  {
+    "frame_index_start": 44,
+    "frame_index_end": 44,
+    "type": "input_text",
+    "description": "User types 'travel insurance' into the browser's address bar/search field.",
+    "confidence": 1.0,
+    "interaction_target": "Address bar / Search field"
+  }
+]

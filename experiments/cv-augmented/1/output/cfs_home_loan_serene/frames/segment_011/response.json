@@ -1,0 +1,47 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 15,
+    "type": "scroll",
+    "description": "User scrolls down through the search results for 'homelone australia bank st george' to view different bank offers and then scrolls back up to the top.",
+    "confidence": 0.95,
+    "page_title": "Google Search",
+    "frame_description": "The user is browsing through sponsored and organic search results for home loans."
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 17,
+    "type": "click",
+    "description": "User clicks on the search bar to modify the current search query.",
+    "confidence": 0.9,
+    "interaction_target": "Search bar",
+    "page_title": "Google Search"
+  },
+  {
+    "frame_index_start": 18,
+    "frame_index_end": 26,
+    "type": "input_text",
+    "description": "User modifies the search query by deleting 'st george' and adding an 's' to 'bank', changing the query to 'homelone australia banks'.",
+    "confidence": 0.98,
+    "interaction_target": "Search bar",
+    "page_title": "Google Search"
+  },
+  {
+    "frame_index_start": 27,
+    "frame_index_end": 29,
+    "type": "navigate",
+    "description": "User triggers a new search, leading to a page load for the updated query 'homelone australia banks'.",
+    "confidence": 0.95,
+    "page_title": "Google Search",
+    "frame_description": "The screen dims as the new search results page loads."
+  },
+  {
+    "frame_index_start": 30,
+    "frame_index_end": 32,
+    "type": "dwell",
+    "description": "User pauses to examine the new search results, which now feature Macquarie Bank as a sponsored result.",
+    "confidence": 0.9,
+    "page_title": "Google Search",
+    "frame_description": "The user is looking at the top of the new search results page."
+  }
+]

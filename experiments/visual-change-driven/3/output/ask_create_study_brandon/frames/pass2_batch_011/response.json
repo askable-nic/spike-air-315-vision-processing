@@ -1,0 +1,33 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "click",
+    "description": "User clicked the 'Next' button to move from sourcing participants to participant location.",
+    "confidence": 1.0,
+    "interaction_target": "Next button",
+    "page_title": "Audience",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/audience/panel",
+    "frame_description": "The user is on the 'How would you like to source participants' screen and clicks 'Next' with 'Askable Panel' selected."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "select",
+    "description": "User changed the participant location selection from Australia to United States.",
+    "confidence": 0.9,
+    "interaction_target": "Location selection field",
+    "page_title": "Audience",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/audience/participant-locations",
+    "frame_description": "The selected location in the input field changes from 'Australia' to 'United States', and the map view updates accordingly."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 7,
+    "type": "navigate",
+    "description": "The page navigated from Participant location to Demographic filters.",
+    "confidence": 0.9,
+    "page_title": "Audience",
+    "frame_description": "The screen transitions from the map-based location selection to the demographic filters configuration page."
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "select",
+    "description": "User selects \"London, England\" from the search suggestions dropdown in the origin input field.",
+    "confidence": 1.0,
+    "interaction_target": "London, England suggestion",
+    "page_title": "Rome to Ireland - 10 ways to travel",
+    "page_location": "rome2rio.com/map/Rome/Ireland",
+    "frame_description": "The user is interacting with the origin search box, selecting a specific location from the autocomplete suggestions."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "dwell",
+    "description": "User dwells on the search results for travel from London to Ireland, likely reading the first flight option.",
+    "confidence": 0.9,
+    "interaction_target": "Fly London Heathrow to Dublin Airport option",
+    "page_title": "London to Ireland - 11 ways to travel",
+    "page_location": "rome2rio.com/map/London/Ireland",
+    "frame_description": "The cursor remains stationary over the first search result for several seconds."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "hover",
+    "description": "User hovers the cursor over the price link for the flight option.",
+    "confidence": 0.8,
+    "interaction_target": "A$125-345 > link",
+    "page_title": "London to Ireland - 11 ways to travel",
+    "page_location": "rome2rio.com/map/London/Ireland",
+    "frame_description": "The cursor is positioned directly over the interactive price element of the first result."
+  }
+]

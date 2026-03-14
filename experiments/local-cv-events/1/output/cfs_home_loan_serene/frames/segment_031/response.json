@@ -1,0 +1,92 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 2,
+    "type": "click",
+    "description": "User clicked the 'Apply Online' button",
+    "confidence": 0.9,
+    "interaction_target": "Apply Online button",
+    "page_title": "Home Loan Repayment Calculator",
+    "frame_description": "The cursor is positioned over the red 'Apply Online' button at the bottom of the screen."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 6,
+    "type": "hesitate",
+    "description": "User paused with the cursor at the top of the screen, likely waiting for a page load or deciding on the next action",
+    "confidence": 0.7,
+    "frame_description": "The cursor remains stationary at the top of the screen near the address bar area."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 7,
+    "type": "navigate",
+    "description": "Page navigated to 'Home loan calculators and tools'",
+    "confidence": 0.9,
+    "page_title": "Home loan calculators and tools",
+    "frame_description": "The screen content transitions from the repayment calculator to a page listing various home loan tools."
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 9,
+    "type": "navigate",
+    "description": "User navigated to Google search results for home loans",
+    "confidence": 0.9,
+    "page_title": "Google Search Results",
+    "frame_description": "The browser transitions from the bank's website to a Google search results page."
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 20,
+    "type": "scroll",
+    "description": "User scrolled through the Google search results",
+    "confidence": 0.8,
+    "page_title": "Google Search Results",
+    "frame_description": "The user is vertically scrolling through various bank and broker search results for home loans."
+  },
+  {
+    "frame_index_start": 24,
+    "frame_index_end": 24,
+    "type": "click",
+    "description": "User clicked on the search bar to edit the query",
+    "confidence": 0.8,
+    "interaction_target": "Google search bar",
+    "frame_description": "The keyboard appears on screen as the user interacts with the search input field."
+  },
+  {
+    "frame_index_start": 24,
+    "frame_index_end": 30,
+    "type": "input_text",
+    "description": "User edited the search query from 'homelone australia bank st george' to 'homelone australia banks'",
+    "confidence": 0.9,
+    "interaction_target": "Search bar",
+    "frame_description": "The text in the search bar is modified, deleting 'st george' and adding 's' to 'bank'."
+  },
+  {
+    "frame_index_start": 31,
+    "frame_index_end": 31,
+    "type": "click",
+    "description": "User clicked the search button on the keyboard",
+    "confidence": 0.9,
+    "interaction_target": "Keyboard search button",
+    "frame_description": "The blue 'search' button on the virtual keyboard is highlighted as it is pressed."
+  },
+  {
+    "frame_index_start": 31,
+    "frame_index_end": 32,
+    "type": "navigate",
+    "description": "Page navigated to new search results for 'homelone australia banks'",
+    "confidence": 0.9,
+    "page_title": "Google Search Results",
+    "frame_description": "The search results page refreshes to show results for the updated query."
+  },
+  {
+    "frame_index_start": 32,
+    "frame_index_end": 35,
+    "type": "dwell",
+    "description": "User paused to examine the new search results",
+    "confidence": 0.8,
+    "page_title": "Google Search Results",
+    "frame_description": "The user remains on the search results page, likely reading the top results for Macquarie Bank."
+  }
+]

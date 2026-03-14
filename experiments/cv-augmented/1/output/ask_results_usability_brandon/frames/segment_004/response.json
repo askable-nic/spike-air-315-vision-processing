@@ -1,0 +1,56 @@
+[
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "click",
+    "description": "User clicks on the 'Locate your Askable wallet' task in the sidebar menu.",
+    "confidence": 0.9,
+    "interaction_target": "Locate your Askable wallet",
+    "page_title": "Askable | Results",
+    "frame_description": "The cursor is positioned over the second item in the left sidebar, and the main content area begins to update."
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 6,
+    "type": "navigate",
+    "description": "The application navigates to the results page for the 'Locate your Askable wallet' prototype test.",
+    "confidence": 0.95,
+    "page_location": "app.askable.com/studies/69715d03eb43a65423e15816/results/task/69715d7ed11dec6071c18421#main",
+    "frame_description": "The main content area refreshes to show the 'Locate your Askable wallet' task results, including misclick rate and path analysis."
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 14,
+    "type": "hover",
+    "description": "User hovers the cursor over the 'Locate your Askable wallet' sidebar item while viewing its results.",
+    "confidence": 0.85,
+    "interaction_target": "Locate your Askable wallet",
+    "frame_description": "The cursor remains stationary over the selected sidebar item."
+  },
+  {
+    "frame_index_start": 16,
+    "frame_index_end": 17,
+    "type": "click",
+    "description": "User clicks on the 'Make a withdrawal from your Wallet' task in the sidebar menu.",
+    "confidence": 0.9,
+    "interaction_target": "Make a withdrawal from you...",
+    "frame_description": "The cursor moves down to the third sidebar item and clicks it, triggering a page update."
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 18,
+    "type": "navigate",
+    "description": "The application navigates to the results page for the 'Make a withdrawal from your Wallet' prototype test.",
+    "confidence": 0.95,
+    "page_location": "app.askable.com/studies/69715d03eb43a65423e15816/results/task/6971605140157bde52549d69#main",
+    "frame_description": "The main content area updates to show the results for the withdrawal task."
+  },
+  {
+    "frame_index_start": 20,
+    "frame_index_end": 21,
+    "type": "scroll",
+    "description": "User scrolls down the results page to view additional path analysis details.",
+    "confidence": 0.9,
+    "frame_description": "The page content shifts upwards as the user scrolls down."
+  }
+]

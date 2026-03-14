@@ -1,0 +1,73 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 4,
+    "type": "dwell",
+    "description": "User dwells on a flight result, with the cursor positioned near a 'Select' button.",
+    "confidence": 0.8,
+    "interaction_target": "Select button",
+    "page_title": "Skyscanner | Search Flights",
+    "frame_description": "The user is viewing flight search results, specifically looking at a deal with Virgin Australia."
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 8,
+    "type": "scroll",
+    "description": "User interacts with the scrollbar on the right side of the page to navigate through flight results.",
+    "confidence": 0.9,
+    "interaction_target": "Scrollbar",
+    "frame_description": "The cursor is positioned on the far right edge of the screen, moving vertically."
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 9,
+    "type": "change_ui_state",
+    "description": "The page content shifts as the user scrolls down to view more flight options.",
+    "confidence": 0.9,
+    "frame_description": "A significant visual shift in the flight results list is visible."
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 14,
+    "type": "hover",
+    "description": "User moves the cursor across the screen, hovering over various flight result elements.",
+    "confidence": 0.7,
+    "frame_description": "The cursor moves from the scrollbar area back towards the center of the flight results."
+  },
+  {
+    "frame_index_start": 15,
+    "frame_index_end": 17,
+    "type": "click",
+    "description": "User clicks the 'Select' button for a flight deal priced at $3,556.",
+    "confidence": 0.8,
+    "interaction_target": "Select button ($3,556 deal)",
+    "frame_description": "The cursor is directly over the 'Select' button for a specific flight result."
+  },
+  {
+    "frame_index_start": 18,
+    "frame_index_end": 23,
+    "type": "click",
+    "description": "User clicks a UI element in the top right corner of the screen.",
+    "confidence": 0.7,
+    "interaction_target": "Top-right UI control",
+    "frame_description": "The cursor is positioned in the extreme top-right corner, likely interacting with a close button or browser control."
+  },
+  {
+    "frame_index_start": 25,
+    "frame_index_end": 26,
+    "type": "click",
+    "description": "User clicks a UI element in the top left corner, possibly the browser's back button or a site logo.",
+    "confidence": 0.7,
+    "interaction_target": "Top-left UI control",
+    "frame_description": "The cursor is positioned in the extreme top-left corner of the interface."
+  },
+  {
+    "frame_index_start": 27,
+    "frame_index_end": 31,
+    "type": "dwell",
+    "description": "User dwells on a sidebar advertisement or informational section titled 'America the Beautiful'.",
+    "confidence": 0.8,
+    "interaction_target": "America the Beautiful section",
+    "frame_description": "The cursor is stationary over a large image/ad for 'America the Beautiful' featuring a mountain lake."
+  }
+]

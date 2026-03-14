@@ -1,0 +1,67 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "input_text",
+    "description": "User types 'web' into the Google search bar",
+    "confidence": 0.95,
+    "interaction_target": "Search bar",
+    "page_title": "Google",
+    "page_location": "google.com"
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "input_text",
+    "description": "User completes typing 'webjet' into the search bar",
+    "confidence": 0.95,
+    "interaction_target": "Search bar",
+    "page_title": "Google",
+    "page_location": "google.com"
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 4,
+    "type": "click",
+    "description": "User clicks on the 'webjet' search suggestion",
+    "confidence": 0.9,
+    "interaction_target": "webjet suggestion",
+    "page_title": "Google",
+    "page_location": "google.com"
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "navigate",
+    "description": "Page navigates to Google search results for 'webjet'",
+    "confidence": 1.0,
+    "page_title": "webjet - Google Search",
+    "page_location": "google.com/search?q=webjet"
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 7,
+    "type": "change_ui_state",
+    "description": "The 'Askable Sessions' browser tab becomes highlighted",
+    "confidence": 0.8,
+    "interaction_target": "Askable Sessions tab",
+    "page_title": "webjet - Google Search"
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 9,
+    "type": "hover",
+    "description": "User hovers over the 'Askable Sessions' tab, triggering a status tooltip",
+    "confidence": 0.9,
+    "interaction_target": "Askable Sessions tab",
+    "frame_description": "A tooltip appears showing tab sharing status and memory usage"
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 11,
+    "type": "change_ui_state",
+    "description": "The tab status tooltip disappears as the cursor moves away",
+    "confidence": 0.85,
+    "interaction_target": "Askable Sessions tab"
+  }
+]

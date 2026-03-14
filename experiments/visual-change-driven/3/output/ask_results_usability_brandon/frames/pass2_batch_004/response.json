@@ -1,0 +1,34 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "click",
+    "description": "User cleared the search input, resetting the studies list from the previous filter 'particip'.",
+    "confidence": 0.9,
+    "interaction_target": "Search input",
+    "page_title": "Studies",
+    "page_location": "app.askable.com/studies",
+    "frame_description": "The search field is cleared of text, and the list of studies updates to show unfiltered results."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "input_text",
+    "description": "User typed 'pa' into the search input to filter the studies list.",
+    "confidence": 1.0,
+    "interaction_target": "Search input",
+    "page_title": "Studies",
+    "page_location": "app.askable.com/studies",
+    "frame_description": "The characters 'pa' appear in the search input field."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "dwell",
+    "description": "User pauses to review the filtered list of studies matching the term 'pa'.",
+    "confidence": 0.8,
+    "page_title": "Studies",
+    "page_location": "app.askable.com/studies",
+    "frame_description": "The studies list displays results starting with 'Askable Product Team' and 'Variant Comparison'."
+  }
+]

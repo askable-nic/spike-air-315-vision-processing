@@ -1,0 +1,68 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "input_text",
+    "description": "User types 'web' into the Google search bar",
+    "confidence": 0.9,
+    "interaction_target": "Search bar",
+    "page_title": "Google",
+    "page_location": "google.com",
+    "frame_description": "The search bar shows 'web' with suggestions appearing below."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "input_text",
+    "description": "User finishes typing 'webjet' into the Google search bar",
+    "confidence": 0.9,
+    "interaction_target": "Search bar",
+    "page_title": "Google",
+    "page_location": "google.com",
+    "frame_description": "The search bar now contains 'webjet' and the suggestions have updated."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "navigate",
+    "description": "User clicks on the 'webjet' search suggestion, navigating to the Google search results page",
+    "confidence": 0.95,
+    "interaction_target": "webjet search suggestion",
+    "page_title": "Google",
+    "page_location": "google.com",
+    "frame_description": "The cursor is positioned over the first search suggestion before the page transitions to search results."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 7,
+    "type": "hover",
+    "description": "User hovers over the 'Askable Sessions' browser tab",
+    "confidence": 0.85,
+    "interaction_target": "Askable Sessions tab",
+    "page_title": "webjet - Google Search",
+    "page_location": "google.com/search?q=webjet",
+    "frame_description": "The cursor moves to the top of the browser window, highlighting the 'Askable Sessions' tab."
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 9,
+    "type": "change_ui_state",
+    "description": "A tab preview tooltip appears for the 'Askable Sessions' tab",
+    "confidence": 0.9,
+    "interaction_target": "Askable Sessions tab",
+    "page_title": "webjet - Google Search",
+    "page_location": "google.com/search?q=webjet",
+    "frame_description": "A small popover window appears showing details for the hovered tab."
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 11,
+    "type": "change_ui_state",
+    "description": "The tab preview tooltip disappears",
+    "confidence": 0.9,
+    "interaction_target": "Askable Sessions tab",
+    "page_title": "webjet - Google Search",
+    "page_location": "google.com/search?q=webjet",
+    "frame_description": "The tab preview popover is no longer visible on the screen."
+  }
+]

@@ -1,0 +1,44 @@
+You are analysing a screen recording for user interaction events.
+
+**Batch 6** | Time range: 151.9s - 161.1s | Frames: 7
+
+## Current page context
+Page: Skyscanner - Millions of cheap flights. One simple search.
+Location: skyscanner.com.au
+Description: The Skyscanner homepage with a destination dropdown showing London options.
+Interactive elements: London (Any), London Heathrow (LHR), London Gatwick (LGW), London Stansted (STN), London Luton (LTN), London City (LCY), Explore everywhere
+
+## Moments to analyse
+
+The following frames show moments where either the screen content changed or the
+cursor was positioned over a UI element.
+
+For interaction moments (before/after pairs), determine:
+1. What event type best describes what happened (click, hover, navigate, input_text,
+   select, change_ui_state, drag, etc.)
+2. What UI element was involved (button label, link text, form field, etc.)
+3. A clear description of the user action
+
+For cursor position moments (single frame), determine:
+1. What UI element is under or near the cursor
+2. Whether this appears to be a hover, a click (if context suggests it), or
+   just the cursor resting
+3. A brief description of the element and its context
+
+If a moment shows no meaningful interaction (e.g. a minor visual artifact or the
+cursor resting in a non-interactive area), omit it from the results.
+
+## Frame annotations
+
+[Frame 0 | 151698ms | moment 0 (interaction) | before | cursor at (228, 859)]
+[Frame 1 | 153107ms | moment 0 (interaction) | after | cursor at (228, 859)]
+[Frame 2 | 157738ms | moment 1 (cursor_stop) | single | cursor at (686, 656)]
+[Frame 3 | 158258ms | moment 2 (interaction) | before | cursor at (810, 672)]
+[Frame 4 | 159588ms | moment 2 (interaction) | after | cursor at (810, 672)]
+[Frame 5 | 159888ms | moment 3 (interaction) | before | cursor at (51, 180)]
+[Frame 6 | 161321ms | moment 3 (interaction) | after | cursor at (51, 180)]
+
+Use frame indices relative to this batch (starting from 0). For short interactions,
+frame_index_start and frame_index_end may be the same.
+
+Return events as a JSON array.

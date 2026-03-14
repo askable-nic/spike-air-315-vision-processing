@@ -1,0 +1,51 @@
+[
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 4,
+    "type": "click",
+    "description": "User clicks on the lender search input field to activate the keyboard.",
+    "confidence": 0.8,
+    "interaction_target": "Search for your lender input field",
+    "page_title": "Aussie - Who is your current lender",
+    "frame_description": "The user taps the search input box, causing the mobile keyboard to appear."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 10,
+    "type": "input_text",
+    "description": "User types 'St george' into the search field.",
+    "confidence": 0.95,
+    "interaction_target": "Search for your lender input field",
+    "page_title": "Aussie - Who is your current lender",
+    "frame_description": "Characters appear in the search box as the user types on the virtual keyboard."
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 11,
+    "type": "select",
+    "description": "User selects the 'St George' suggestion from the dropdown list.",
+    "confidence": 0.9,
+    "interaction_target": "St George suggestion",
+    "page_title": "Aussie - Who is your current lender",
+    "frame_description": "The user taps the 'St George' suggestion, which populates the field and dismisses the keyboard."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 11,
+    "type": "click",
+    "description": "User clicks the 'NEXT' button to proceed.",
+    "confidence": 0.85,
+    "interaction_target": "NEXT button",
+    "page_title": "Aussie - Who is your current lender",
+    "frame_description": "The cursor is positioned over the purple 'NEXT' button as the user initiates the transition to the next screen."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 12,
+    "type": "navigate",
+    "description": "The page navigates to the next question regarding property value.",
+    "confidence": 0.95,
+    "page_title": "Aussie - How much do you think your property is worth?",
+    "frame_description": "The screen content changes from the lender selection to the property value input screen."
+  }
+]

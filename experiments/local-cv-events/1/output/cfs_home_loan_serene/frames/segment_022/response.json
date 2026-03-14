@@ -1,0 +1,66 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 5,
+    "type": "dwell",
+    "description": "User pauses cursor over the 'An investment' property type button on the home loan calculator page.",
+    "confidence": 0.8,
+    "interaction_target": "An investment button",
+    "page_title": "ubank - Home Loan Calculator",
+    "frame_description": "The cursor is stationary over a button in a form."
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 8,
+    "type": "navigate",
+    "description": "User navigates back to the ubank homepage.",
+    "confidence": 0.9,
+    "page_title": "ubank homepage",
+    "frame_description": "The page content changes from a calculator form to the main homepage with service icons."
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 12,
+    "type": "dwell",
+    "description": "User pauses on the ubank homepage with the cursor near the logo.",
+    "confidence": 0.8,
+    "page_title": "ubank homepage",
+    "frame_description": "The cursor remains stationary on the homepage."
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 13,
+    "type": "navigate",
+    "description": "User navigates to Google search results for 'homelone australia bank st george'.",
+    "confidence": 1.0,
+    "page_title": "homelone australia bank st george - Google Search",
+    "frame_description": "The screen transitions from the ubank site to a Google search results page."
+  },
+  {
+    "frame_index_start": 16,
+    "frame_index_end": 29,
+    "type": "scroll",
+    "description": "User scrolls down through the Google search results.",
+    "confidence": 0.9,
+    "page_title": "homelone australia bank st george - Google Search",
+    "frame_description": "The page content moves vertically, revealing more search results for different banks."
+  },
+  {
+    "frame_index_start": 30,
+    "frame_index_end": 31,
+    "type": "change_ui_state",
+    "description": "The search results page updates with a 'Searching...' status at the bottom.",
+    "confidence": 0.8,
+    "page_title": "homelone australia bank st george - Google Search",
+    "frame_description": "A loading indicator or status message appears at the bottom of the search results."
+  },
+  {
+    "frame_index_start": 32,
+    "frame_index_end": 36,
+    "type": "dwell",
+    "description": "User pauses while the search results page finishes loading or while reading the results.",
+    "confidence": 0.7,
+    "page_title": "homelone australia bank st george - Google Search",
+    "frame_description": "The cursor is stationary while the page remains on the search results."
+  }
+]

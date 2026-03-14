@@ -1,0 +1,71 @@
+[
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "scroll",
+    "description": "User scrolls down the Explore page to view more content.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "frame_description": "The screen content shifts upwards, revealing the 'Short tasks' section."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 7,
+    "type": "select",
+    "description": "User selects the 'Diary Study' filter chip, updating the results.",
+    "confidence": 0.8,
+    "interaction_target": "Diary Study filter chip",
+    "page_title": "Explore"
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 9,
+    "type": "click",
+    "description": "User clicks the 'x' on the 'Diary Study' filter chip to remove it.",
+    "confidence": 0.9,
+    "interaction_target": "Diary Study filter close button",
+    "page_title": "Explore"
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 11,
+    "type": "click",
+    "description": "User clicks the 'x' on the 'AI Interview' filter chip to remove it.",
+    "confidence": 0.9,
+    "interaction_target": "AI Interview filter close button",
+    "page_title": "Explore"
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 13,
+    "type": "hover",
+    "description": "User hovers the cursor over the close button of the 'Survey' filter chip.",
+    "confidence": 0.8,
+    "interaction_target": "Survey filter close button",
+    "page_title": "Explore"
+  },
+  {
+    "frame_index_start": 14,
+    "frame_index_end": 21,
+    "type": "scroll",
+    "description": "User scrolls down the page, moving past the 'Short tasks' section.",
+    "confidence": 0.9,
+    "page_title": "Explore"
+  },
+  {
+    "frame_index_start": 24,
+    "frame_index_end": 27,
+    "type": "scroll",
+    "description": "User continues scrolling down the Explore page to view more session cards.",
+    "confidence": 0.9,
+    "page_title": "Explore"
+  },
+  {
+    "frame_index_start": 32,
+    "frame_index_end": 35,
+    "type": "scroll",
+    "description": "User scrolls further down the Explore page.",
+    "confidence": 0.9,
+    "page_title": "Explore"
+  }
+]

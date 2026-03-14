@@ -1,0 +1,49 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 10,
+    "type": "dwell",
+    "description": "User dwells on the instruction screen, reading the task prompt 'What are you thinking right now?' and subsequent instructions as they appear.",
+    "confidence": 0.9,
+    "page_title": "Task Instructions",
+    "frame_description": "A dark overlay screen with white text providing instructions and prompts to the user."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 11,
+    "type": "navigate",
+    "description": "User navigates to the Google search homepage.",
+    "confidence": 0.95,
+    "page_title": "Google",
+    "page_location": "https://www.google.com",
+    "frame_description": "The Google search homepage is visible with the cursor in the search bar."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 12,
+    "type": "input_text",
+    "description": "User types 'skyscanner' into the Google search bar.",
+    "confidence": 1.0,
+    "interaction_target": "Search bar",
+    "page_title": "Google",
+    "frame_description": "The search bar contains the text 'skyscanner'."
+  },
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 13,
+    "type": "navigate",
+    "description": "User navigates to the Google search results page for 'skyscanner'.",
+    "confidence": 0.95,
+    "page_title": "skyscanner - Google Search",
+    "frame_description": "Search results for Skyscanner are displayed, including links for flight deals and cheap flights."
+  },
+  {
+    "frame_index_start": 14,
+    "frame_index_end": 14,
+    "type": "navigate",
+    "description": "User navigates back to the task instruction screen to review the scenario details.",
+    "confidence": 0.95,
+    "page_title": "Task Instructions",
+    "frame_description": "The dark instruction screen reappears with detailed task text about planning a holiday to London."
+  }
+]

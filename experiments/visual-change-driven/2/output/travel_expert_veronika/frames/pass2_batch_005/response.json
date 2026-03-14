@@ -1,0 +1,24 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "input_text",
+    "description": "User types 'sunsh' into the 'From' origin field, replacing the previous value 'Sydney (SYD)'",
+    "confidence": 0.95,
+    "interaction_target": "From field",
+    "page_title": "Skyscanner - Millions of cheap flights. One simple search.",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "The user is entering a new origin city in the flight search form."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "select",
+    "description": "User selects 'Sunshine Coast (MCY)' from the search suggestions, which populates the field and automatically moves focus to the 'To' destination field",
+    "confidence": 0.9,
+    "interaction_target": "Sunshine Coast (MCY) suggestion",
+    "page_title": "Skyscanner - Millions of cheap flights. One simple search.",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "The origin is confirmed as Sunshine Coast and the destination field is now active."
+  }
+]

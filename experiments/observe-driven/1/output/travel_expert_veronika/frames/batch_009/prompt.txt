@@ -1,0 +1,101 @@
+Analyse the following screen recording frames for user interaction events.
+
+**Batch 9** | Time range: 108.5s - 115.4s | Frames: 18
+
+## Frame sampling
+
+These frames are NOT uniformly sampled. Each frame was selected for a specific reason:
+- **event start / event end**: Frames at the start and end of a locally detected cursor event (click candidate, hover, hesitation, etc.). These are often cropped to a region of interest around the cursor position.
+- **event mid**: Midpoint of a detected dwell event, cropped to the cursor region.
+- **visual change**: Frames before and after a detected visual transition (possible navigation or UI state change). These are full-frame captures.
+- **baseline**: A frame inserted to ensure temporal coverage during gaps with no detected events. Full-frame capture.
+
+## Frame annotations
+
+[Frame 0 | 108488ms | event start | cursor at (633, 727)]
+[Frame 1 | 108755ms | event end | cursor at (633, 727)]
+[Frame 2 | 109088ms | event start | cursor at (1113, 793)]
+[Frame 3 | 109354ms | event end | cursor at (1113, 793)]
+[Frame 4 | 109688ms | event start | cursor at (1113, 793)]
+[Frame 5 | 109955ms | event end | cursor at (1113, 793)]
+[Frame 6 | 110287ms | event start | cursor at (633, 745)]
+[Frame 7 | 110555ms | event end | cursor at (1113, 793)]
+[Frame 8 | 110888ms | event start | cursor at (1710, 18)]
+[Frame 9 | 111088ms | event start | cursor at (1404, 934)]
+[Frame 10 | 111421ms | event start | cursor at (1710, 18)]
+[Frame 11 | 111822ms | event start | cursor at (1707, 18)]
+[Frame 12 | 112088ms | event end | cursor at (1707, 18)]
+[Frame 13 | 112294ms | event start | cursor at (495, 760)]
+[Frame 14 | 112555ms | event start | cursor at (249, 853)]
+[Frame 15 | 113088ms | event start | cursor at (636, 745)]
+[Frame 16 | 113355ms | event start | cursor at (249, 853)]
+[Frame 17 | 115402ms | visual change]
+
+## Local Event Candidates
+
+The following events were detected locally from cursor tracking and optical flow.
+Please confirm, reject, or modify each candidate based on what you see in the frames.
+
+- **Candidate 1**: dwell | 107155ms-108755ms | confidence=0.70 at cursor (652, 723) | Extended pause (1600ms) near (652, 723)
+- **Candidate 2**: hesitate | 107366ms-108755ms | confidence=0.50 at cursor (635, 726) | Hesitation (1389ms) near (635, 726) before action
+- **Candidate 3**: click | 108488ms-108755ms | confidence=0.20 at cursor (633, 727) | Possible click at (633, 727)
+- **Candidate 4**: click | 108555ms-108755ms | confidence=0.20 at cursor (633, 727) | Possible click at (633, 727)
+- **Candidate 5**: click | 108688ms-108755ms | confidence=0.20 at cursor (633, 727) | Possible click at (633, 727)
+- **Candidate 6**: click | 108755ms-108755ms | confidence=0.20 at cursor (633, 727) | Possible click at (633, 727)
+- **Candidate 7**: hover | 108888ms-109354ms | confidence=0.60 at cursor (1113, 793) | Cursor stationary for 466ms near (1113, 793)
+- **Candidate 8**: hesitate | 108888ms-109354ms | confidence=0.50 at cursor (1113, 793) | Hesitation (466ms) near (1113, 793) before action
+- **Candidate 9**: click | 109088ms-109354ms | confidence=0.20 at cursor (1113, 793) | Possible click at (1113, 793)
+- **Candidate 10**: click | 109155ms-109354ms | confidence=0.20 at cursor (1113, 793) | Possible click at (1113, 793)
+- **Candidate 11**: click | 109287ms-109354ms | confidence=0.20 at cursor (1113, 793) | Possible click at (1113, 793)
+- **Candidate 12**: click | 109354ms-109354ms | confidence=0.20 at cursor (1113, 793) | Possible click at (1113, 793)
+- **Candidate 13**: click | 109421ms-109421ms | confidence=0.20 at cursor (636, 742) | Possible click at (636, 742)
+- **Candidate 14**: hover | 109488ms-109955ms | confidence=0.60 at cursor (1113, 793) | Cursor stationary for 467ms near (1113, 793)
+- **Candidate 15**: hesitate | 109488ms-109955ms | confidence=0.50 at cursor (1113, 793) | Hesitation (467ms) near (1113, 793) before action
+- **Candidate 16**: click | 109688ms-109955ms | confidence=0.20 at cursor (1113, 793) | Possible click at (1113, 793)
+- **Candidate 17**: click | 109755ms-109955ms | confidence=0.20 at cursor (1113, 793) | Possible click at (1113, 793)
+- **Candidate 18**: click | 109888ms-109955ms | confidence=0.20 at cursor (1113, 793) | Possible click at (1113, 793)
+- **Candidate 19**: click | 109955ms-109955ms | confidence=0.20 at cursor (1113, 793) | Possible click at (1113, 793)
+- **Candidate 20**: click | 110088ms-110155ms | confidence=0.20 at cursor (522, 757) | Possible click at (522, 757)
+- **Candidate 21**: click | 110155ms-110155ms | confidence=0.20 at cursor (522, 757) | Possible click at (522, 757)
+- **Candidate 22**: click | 110287ms-110355ms | confidence=0.20 at cursor (633, 745) | Possible click at (633, 745)
+- **Candidate 23**: click | 110355ms-110355ms | confidence=0.20 at cursor (633, 745) | Possible click at (633, 745)
+- **Candidate 24**: click | 110422ms-110555ms | confidence=0.20 at cursor (1113, 793) | Possible click at (1113, 793)
+- **Candidate 25**: click | 110555ms-110555ms | confidence=0.20 at cursor (1113, 793) | Possible click at (1113, 793)
+- **Candidate 26**: click | 110688ms-110688ms | confidence=0.20 at cursor (1431, 892) | Possible click at (1431, 892)
+- **Candidate 27**: hover | 110755ms-111021ms | confidence=0.60 at cursor (1710, 18) | Cursor stationary for 266ms near (1710, 18)
+- **Candidate 28**: click | 110755ms-111021ms | confidence=0.20 at cursor (1710, 18) | Possible click at (1710, 18)
+- **Candidate 29**: click | 110888ms-111021ms | confidence=0.20 at cursor (1710, 18) | Possible click at (1710, 18)
+- **Candidate 30**: click | 111021ms-111021ms | confidence=0.20 at cursor (1710, 18) | Possible click at (1710, 18)
+- **Candidate 31**: click | 111088ms-111288ms | confidence=0.20 at cursor (1404, 934) | Possible click at (1404, 934)
+- **Candidate 32**: click | 111221ms-111288ms | confidence=0.20 at cursor (1403, 935) | Possible click at (1403, 935)
+- **Candidate 33**: click | 111288ms-111288ms | confidence=0.20 at cursor (1401, 934) | Possible click at (1401, 934)
+- **Candidate 34**: hover | 111421ms-112088ms | confidence=0.60 at cursor (1710, 18) | Cursor stationary for 667ms near (1710, 18)
+- **Candidate 35**: hesitate | 111421ms-112088ms | confidence=0.50 at cursor (1710, 18) | Hesitation (667ms) near (1710, 18) before action
+- **Candidate 36**: click | 111822ms-112088ms | confidence=0.20 at cursor (1707, 18) | Possible click at (1707, 18)
+- **Candidate 37**: click | 111955ms-112088ms | confidence=0.20 at cursor (1707, 18) | Possible click at (1707, 18)
+- **Candidate 38**: click | 112088ms-112088ms | confidence=0.20 at cursor (1707, 18) | Possible click at (1707, 18)
+- **Candidate 39**: click | 112157ms-112157ms | confidence=0.20 at cursor (717, 739) | Possible click at (717, 739)
+- **Candidate 40**: click | 112294ms-112294ms | confidence=0.20 at cursor (495, 760) | Possible click at (495, 760)
+- **Candidate 41**: click | 112422ms-112422ms | confidence=0.20 at cursor (282, 823) | Possible click at (282, 823)
+- **Candidate 42**: click | 112555ms-112555ms | confidence=0.20 at cursor (249, 853) | Possible click at (249, 853)
+- **Candidate 43**: hover | 112688ms-113288ms | confidence=0.60 at cursor (636, 745) | Cursor stationary for 600ms near (636, 745)
+- **Candidate 44**: hesitate | 112688ms-113288ms | confidence=0.50 at cursor (636, 745) | Hesitation (600ms) near (636, 745) before action
+- **Candidate 45**: click | 113088ms-113288ms | confidence=0.20 at cursor (636, 745) | Possible click at (636, 745)
+- **Candidate 46**: click | 113221ms-113288ms | confidence=0.20 at cursor (636, 745) | Possible click at (636, 745)
+- **Candidate 47**: click | 113288ms-113288ms | confidence=0.20 at cursor (636, 745) | Possible click at (636, 745)
+- **Candidate 48**: click | 113355ms-113355ms | confidence=0.20 at cursor (249, 853) | Possible click at (249, 853)
+- **Candidate 49**: click | 113422ms-113422ms | confidence=0.20 at cursor (789, 760) | Possible click at (789, 760)
+- **Candidate 50**: dwell | 115402ms-142496ms | confidence=0.70 at cursor (225, 859) | Extended pause (27094ms) near (225, 859)
+
+
+## Your task
+
+Examine each frame carefully and:
+
+1. **Confirm or reject cursor events**: For frames labelled as event candidates (start/end/mid), verify whether the event actually occurred based on what you see. Describe the interaction target and what happened.
+2. **Identify navigate and change_ui_state events**: For visual change frames, determine if a page navigation occurred (URL change, new page load) or if a UI state changed (modal appearing, loading state, dropdown opening).
+3. **Note any additional events**: For baseline frames, report any visible interactions or state changes.
+
+Use frame indices relative to this batch (starting from 0). For short interactions, frame_index_start and frame_index_end may be the same.
+
+Return the events as a JSON array.

@@ -1,0 +1,61 @@
+You are analysing a screen recording for user interaction events.
+
+**Batch 1** | Time range: 22.0s - 33.1s | Frames: 12
+
+## Current page context
+Page: Rooms | Askable Sessions
+Location: sessions.askable.com/rooms/jbd-bpku-6q6
+Description: Askable video chat interface showing two participants, Sophia and Jayde, on the left sidebar. The main area displays a screen share of the same window, creating a recursive 'hall of mirrors' effect.
+Interactive elements: Sophia's video feed, Jayde's video feed, Stop sharing button, Hide button, Mute button, Camera toggle, Settings icon
+
+## Moments to analyse
+
+The following frames show moments where either the screen content changed or the
+cursor was positioned over a UI element.
+
+For interaction moments (before/after pairs), determine:
+1. What event type best describes what happened (click, hover, navigate, input_text,
+   select, change_ui_state, drag, etc.)
+2. What UI element was involved (button label, link text, form field, etc.)
+3. A clear description of the user action
+
+For pre_scene_change moments (before/after pairs captured just before a page
+navigation or major screen transition), determine:
+1. What user action most likely triggered the scene change. Look for:
+   - Elements in a hover or active/pressed state (highlighted buttons, underlined
+     links, focused form controls)
+   - Cursor position if visible — but note the cursor may not be present (e.g.
+     mobile devices, keyboard navigation, touch input)
+   - Any visual difference between the before and after frames that indicates an
+     element was activated (colour change, ripple effect, depression)
+2. Identify the specific UI element (button label, link text, menu item, etc.)
+3. Set the event type to "click" or "navigate" as appropriate
+
+For cursor position moments (single frame), determine:
+1. What UI element is under or near the cursor
+2. Whether this appears to be a hover, a click (if context suggests it), or
+   just the cursor resting
+3. A brief description of the element and its context
+
+If a moment shows no meaningful interaction (e.g. a minor visual artifact or the
+cursor resting in a non-interactive area), omit it from the results.
+
+## Frame annotations
+
+[Frame 0 | 21778ms | moment 0 (interaction) | before | cursor at (261, 942)]
+[Frame 1 | 22584ms | moment 0 (interaction) | after | cursor at (261, 942)]
+[Frame 2 | 22900ms | moment 1 (interaction) | before | cursor at (261, 939)]
+[Frame 3 | 25066ms | moment 1 (interaction) | after | cursor at (261, 939)]
+[Frame 4 | 25416ms | moment 2 (interaction) | before | cursor at (261, 916)]
+[Frame 5 | 27581ms | moment 2 (interaction) | after | cursor at (261, 916)]
+[Frame 6 | 27625ms | moment 3 (interaction) | before | cursor at (261, 920)]
+[Frame 7 | 29791ms | moment 3 (interaction) | after | cursor at (261, 920)]
+[Frame 8 | 30107ms | moment 4 (interaction) | before | cursor at (261, 926)]
+[Frame 9 | 31593ms | moment 4 (interaction) | after | cursor at (261, 926)]
+[Frame 10 | 32317ms | moment 5 (interaction) | before | cursor at (261, 955)]
+[Frame 11 | 33394ms | moment 5 (interaction) | after | cursor at (261, 955)]
+
+Use frame indices relative to this batch (starting from 0). For short interactions,
+frame_index_start and frame_index_end may be the same.
+
+Return events as a JSON array.

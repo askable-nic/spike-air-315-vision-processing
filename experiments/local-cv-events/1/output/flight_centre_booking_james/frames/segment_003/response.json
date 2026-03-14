@@ -1,0 +1,22 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 12,
+    "type": "dwell",
+    "description": "User remains stationary while reading the task instructions as they are dynamically revealed on the screen. The cursor is positioned over the browser's tab bar.",
+    "confidence": 0.9,
+    "interaction_target": "Task instructions",
+    "page_title": "Askable | Opportunity",
+    "page_location": "https://sessions.askable.com/ai-mod/698c043bd82edc4df44a0e3c",
+    "frame_description": "A dark screen displaying white text instructions that are being typed out word-by-word. A small video feed of the participant is visible in the top right corner."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 12,
+    "type": "change_ui_state",
+    "description": "The task instruction text is being progressively revealed on the screen, adding new words in each frame to simulate a typing effect.",
+    "confidence": 1.0,
+    "interaction_target": "Task instructions text",
+    "frame_description": "The central text block updates continuously as the task description 'Imagine you need to book a return domestic flight...' is displayed."
+  }
+]

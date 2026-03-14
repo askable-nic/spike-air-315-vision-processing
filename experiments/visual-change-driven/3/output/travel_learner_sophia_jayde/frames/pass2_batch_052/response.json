@@ -1,0 +1,31 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "navigate",
+    "description": "User navigated from the Policy type selection page to the Destinations page.",
+    "confidence": 0.9,
+    "page_location": "comparethemarket.com.au/travel/compare/KYqDvlthA/destinations",
+    "frame_description": "The screen transitions from the policy type selection to the destination input page."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "click",
+    "description": "User clicked the back button on the Destinations page to return to the previous step.",
+    "confidence": 0.95,
+    "interaction_target": "Back button",
+    "page_title": "Policy type",
+    "frame_description": "The cursor is positioned over the back arrow icon, and the page content changes back to the Policy type selection."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "hover",
+    "description": "User hovered over the 'Annual cover' button on the Policy type page.",
+    "confidence": 0.8,
+    "interaction_target": "Annual cover button",
+    "page_title": "Policy type",
+    "frame_description": "The cursor rests over the 'Annual cover' selection button."
+  }
+]

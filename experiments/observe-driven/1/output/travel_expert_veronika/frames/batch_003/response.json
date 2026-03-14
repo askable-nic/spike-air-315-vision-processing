@@ -1,0 +1,62 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 8,
+    "type": "dwell",
+    "description": "User reads the first part of the task instructions regarding planning a long-haul trip, moving the cursor along the text as they read.",
+    "confidence": 0.95,
+    "interaction_target": "Instruction text",
+    "page_title": "Task Instructions",
+    "frame_description": "A dark screen displaying white text with task instructions."
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 12,
+    "type": "click",
+    "description": "User moves the cursor to the top right corner and clicks the 'Next' button to reveal more instructions.",
+    "confidence": 0.85,
+    "interaction_target": "Next button",
+    "page_title": "Task Instructions",
+    "frame_description": "The cursor is positioned in the top right corner near a video overlay of the user."
+  },
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 23,
+    "type": "dwell",
+    "description": "User reads the second part of the instructions about the planning process, tools used, and evaluating options.",
+    "confidence": 0.95,
+    "interaction_target": "Instruction text",
+    "page_title": "Task Instructions",
+    "frame_description": "The instruction text has updated to show new lines of information."
+  },
+  {
+    "frame_index_start": 24,
+    "frame_index_end": 25,
+    "type": "click",
+    "description": "User clicks the 'Next' button in the top right corner again to advance the instructions.",
+    "confidence": 0.85,
+    "interaction_target": "Next button",
+    "page_title": "Task Instructions",
+    "frame_description": "The cursor returns to the top right corner interaction area."
+  },
+  {
+    "frame_index_start": 26,
+    "frame_index_end": 30,
+    "type": "dwell",
+    "description": "User reads the final part of the instructions about opening the website and comparing options.",
+    "confidence": 0.95,
+    "interaction_target": "Instruction text",
+    "page_title": "Task Instructions",
+    "frame_description": "The final lines of the task instructions are visible on the screen."
+  },
+  {
+    "frame_index_start": 31,
+    "frame_index_end": 31,
+    "type": "click",
+    "description": "User clicks the 'Next' button to finish reading instructions and proceed to the task.",
+    "confidence": 0.85,
+    "interaction_target": "Next button",
+    "page_title": "Task Instructions",
+    "frame_description": "Final click in the top right corner to dismiss the instruction modal."
+  }
+]

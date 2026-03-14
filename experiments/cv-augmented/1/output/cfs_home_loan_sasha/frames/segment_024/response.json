@@ -1,0 +1,22 @@
+[
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 3,
+    "type": "change_ui_state",
+    "description": "A 'We are here to help' chat prompt appears in the bottom right corner of the screen.",
+    "confidence": 0.9,
+    "interaction_target": "Chat prompt",
+    "page_title": "Compare ANZ home loans",
+    "frame_description": "The ANZ home loan comparison page is visible, and a chat invitation modal pops up in the lower right corner."
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 5,
+    "type": "select",
+    "description": "User selects the 'Variable' loan type radio button, which triggers an 'Updating results' loading state.",
+    "confidence": 1.0,
+    "interaction_target": "Variable radio button",
+    "page_title": "Compare ANZ home loans",
+    "frame_description": "The user clicks the 'Variable' option under 'The loan type I need is:', causing a loading spinner to appear as the results filter."
+  }
+]

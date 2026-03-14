@@ -1,0 +1,65 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 5,
+    "type": "select",
+    "description": "User selects March 1st as the departure date in the calendar",
+    "confidence": 0.9,
+    "interaction_target": "March 1st",
+    "page_title": "Webjet | Your go-to for going",
+    "page_location": "webjet.com.au",
+    "frame_description": "The user hovers over and then selects the 1st of March in the departure date calendar modal."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 10,
+    "type": "select",
+    "description": "User selects March 22nd as the return date in the calendar",
+    "confidence": 0.9,
+    "interaction_target": "March 22nd",
+    "page_title": "Webjet | Your go-to for going",
+    "page_location": "webjet.com.au",
+    "frame_description": "The user moves the cursor to and selects the 22nd of March as the return date."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 13,
+    "type": "click",
+    "description": "User clicks the 'Done' button to confirm date selection",
+    "confidence": 0.95,
+    "interaction_target": "Done button",
+    "page_title": "Webjet | Your go-to for going",
+    "page_location": "webjet.com.au",
+    "frame_description": "The user clicks the 'Done' button at the bottom of the calendar modal to finalize their date choices."
+  },
+  {
+    "frame_index_start": 15,
+    "frame_index_end": 19,
+    "type": "click",
+    "description": "User clicks the 'Search Flights' button",
+    "confidence": 0.95,
+    "interaction_target": "Search Flights button",
+    "page_title": "Webjet | Your go-to for going",
+    "page_location": "webjet.com.au",
+    "frame_description": "After the calendar modal closes, the user clicks the primary 'Search Flights' button on the main search form."
+  },
+  {
+    "frame_index_start": 20,
+    "frame_index_end": 20,
+    "type": "navigate",
+    "description": "Page navigates to the flight search results page",
+    "confidence": 1.0,
+    "page_title": "WebJet",
+    "page_location": "services.webjet.com.au/web/flights/search/",
+    "frame_description": "The browser navigates to the search results subdomain."
+  },
+  {
+    "frame_index_start": 21,
+    "frame_index_end": 31,
+    "type": "change_ui_state",
+    "description": "Loading animation (plane flying between cities) is displayed while searching for flights",
+    "confidence": 0.9,
+    "page_title": "Flight Search",
+    "frame_description": "A loading screen appears with an animated plane flying between Brisbane and London while flight options are being retrieved."
+  }
+]

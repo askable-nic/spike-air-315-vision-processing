@@ -1,0 +1,41 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 16,
+    "type": "dwell",
+    "description": "User is on the Askable Sessions page, likely listening to or reading task instructions while the system processes input.",
+    "confidence": 0.9,
+    "page_title": "Askable Sessions",
+    "page_location": "https://sessions.askable.com/ai-mod/699fd69145953d08ad8c04ad",
+    "frame_description": "The screen displays 'I hear you. What are you going to do next?' with buttons for 'Open' and 'Repeat the task instructions'."
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 17,
+    "type": "change_ui_state",
+    "description": "The message on the Askable Sessions screen changes to 'Yes, please go ahead.'",
+    "confidence": 1.0,
+    "page_title": "Askable Sessions",
+    "frame_description": "The central text on the dark background updates to confirm the user can proceed."
+  },
+  {
+    "frame_index_start": 18,
+    "frame_index_end": 18,
+    "type": "navigate",
+    "description": "User switches browser tabs back to the WebJet flight search results page.",
+    "confidence": 1.0,
+    "page_title": "Flight Search",
+    "page_location": "https://services.webjet.com.au/web/flights/search/",
+    "frame_description": "The browser view changes from the Askable session to the WebJet flight results page."
+  },
+  {
+    "frame_index_start": 19,
+    "frame_index_end": 20,
+    "type": "dwell",
+    "description": "User examines the flight search results, specifically looking at the airline options and prices.",
+    "confidence": 0.8,
+    "page_title": "Flight Search",
+    "page_location": "https://services.webjet.com.au/web/flights/search/",
+    "frame_description": "The user is viewing a list of flights from Maroochydore to London, with various airline logos and prices visible."
+  }
+]

@@ -1,0 +1,91 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 5,
+    "type": "hover",
+    "description": "User hovers over different question type options in the dropdown menu, including 'Multiple choice', 'Short answer', and 'Copy from other study'.",
+    "confidence": 0.9,
+    "interaction_target": "Add another custom question menu",
+    "page_title": "Draft - TV Streaming - Discovery",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/audience/custom-screener"
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 6,
+    "type": "click",
+    "description": "User clicks on the 'Copy from other study' option in the dropdown menu.",
+    "confidence": 1.0,
+    "interaction_target": "Copy from other study",
+    "page_title": "Draft - TV Streaming - Discovery",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/audience/custom-screener"
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 8,
+    "type": "change_ui_state",
+    "description": "A modal titled 'Select a study to copy from' appears with a loading spinner.",
+    "confidence": 0.95,
+    "frame_description": "Modal overlay with loading animation."
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 12,
+    "type": "hover",
+    "description": "User hovers over various studies in the list within the 'Select a study to copy from' modal.",
+    "confidence": 0.85,
+    "interaction_target": "Study list items",
+    "page_title": "Draft - TV Streaming - Discovery"
+  },
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 13,
+    "type": "click",
+    "description": "User clicks the 'X' button to close the 'Select a study to copy from' modal.",
+    "confidence": 1.0,
+    "interaction_target": "Close button (X)",
+    "page_title": "Draft - TV Streaming - Discovery"
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 17,
+    "type": "click",
+    "description": "User clicks the '+ Add another custom question' button to reopen the question type menu.",
+    "confidence": 1.0,
+    "interaction_target": "+ Add another custom question",
+    "page_title": "Draft - TV Streaming - Discovery"
+  },
+  {
+    "frame_index_start": 18,
+    "frame_index_end": 23,
+    "type": "hover",
+    "description": "User hovers over 'Multiple choice' and 'Short answer' options in the dropdown menu.",
+    "confidence": 0.9,
+    "interaction_target": "Add another custom question menu"
+  },
+  {
+    "frame_index_start": 24,
+    "frame_index_end": 24,
+    "type": "click",
+    "description": "User clicks on the 'Short answer' option in the dropdown menu.",
+    "confidence": 1.0,
+    "interaction_target": "Short answer",
+    "page_title": "Draft - TV Streaming - Discovery"
+  },
+  {
+    "frame_index_start": 25,
+    "frame_index_end": 27,
+    "type": "change_ui_state",
+    "description": "The 'Short answer' question creation modal appears on screen.",
+    "confidence": 0.95,
+    "frame_description": "Short answer modal with text input fields."
+  },
+  {
+    "frame_index_start": 28,
+    "frame_index_end": 28,
+    "type": "input_text",
+    "description": "User begins typing a question, entering 'Wha' into the 'Screener question' field.",
+    "confidence": 1.0,
+    "interaction_target": "Screener question field",
+    "page_title": "Draft - TV Streaming - Discovery"
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "input_text",
+    "description": "User continues typing in the destination search field, changing the input from 'lon' to 'lond'.",
+    "confidence": 0.9,
+    "interaction_target": "To",
+    "page_title": "Skyscanner - Millions of cheap flights. One simple search.",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "The user is interacting with the destination input field on the Skyscanner homepage."
+  },
+  {
+    "frame_index_start": 1,
+    "frame_index_end": 2,
+    "type": "navigate",
+    "description": "The page navigates from the search input screen to a loading state for the flight search results.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner - Millions of cheap flights. One simple search.",
+    "frame_description": "The screen transitions to a skeleton loading state as the search results are fetched."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 6,
+    "type": "change_ui_state",
+    "description": "The flight search results page loads incrementally, transitioning from a skeleton screen to displaying flight options and filters.",
+    "confidence": 0.95,
+    "page_title": "Skyscanner - Millions of cheap flights. One simple search.",
+    "frame_description": "The UI updates as flight data and filter options (like 'Stops' and 'Departure times') become visible on the results page."
+  }
+]

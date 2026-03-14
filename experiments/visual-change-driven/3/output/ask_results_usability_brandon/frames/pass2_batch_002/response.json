@@ -1,0 +1,24 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "click",
+    "description": "User clicked on the search input field to focus it, as indicated by the appearance of the text insertion cursor.",
+    "confidence": 0.9,
+    "interaction_target": "Search input",
+    "page_title": "Studies",
+    "page_location": "app.askable.com/studies",
+    "frame_description": "The search input field transitions from an unfocused state to a focused state with a visible text cursor."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "click",
+    "description": "User clicked away from the search input field, causing it to lose focus and the text cursor to disappear.",
+    "confidence": 0.8,
+    "interaction_target": "Search input",
+    "page_title": "Studies",
+    "page_location": "app.askable.com/studies",
+    "frame_description": "The text cursor is removed from the search input field, indicating a loss of focus."
+  }
+]

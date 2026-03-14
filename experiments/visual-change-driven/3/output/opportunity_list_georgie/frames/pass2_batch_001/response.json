@@ -1,0 +1,39 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "scroll",
+    "description": "User scrolls down the Explore page to view more research sessions.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "frame_description": "The list of research opportunities shifts upwards, revealing more items in the 'Sessions to schedule' section."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "scroll",
+    "description": "User continues scrolling down the Explore page to browse available tasks.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "frame_description": "The screen content moves vertically as the user scrolls through the list of cards."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 7,
+    "type": "scroll",
+    "description": "User scrolls back up to the top of the Explore page.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "frame_description": "The 'Short tasks & surveys' section becomes visible again at the top of the screen."
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 13,
+    "type": "click",
+    "description": "User clicks on a task card to view its details.",
+    "confidence": 0.8,
+    "interaction_target": "Task card",
+    "page_title": "Explore",
+    "frame_description": "The cursor is positioned over a task card before the screen transitions to a new view showing task details like pay ($8)."
+  }
+]

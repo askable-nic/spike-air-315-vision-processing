@@ -1,0 +1,53 @@
+[
+  {
+    "frame_index_start": 1,
+    "frame_index_end": 1,
+    "type": "hover",
+    "description": "User hovers the cursor over the 'Open' button within the task instruction overlay.",
+    "confidence": 0.85,
+    "interaction_target": "Open button",
+    "frame_description": "A dark overlay showing task instructions with an 'Open' button and a 'Repeat the task instructions' button."
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 18,
+    "type": "hover",
+    "description": "User hovers over the 'Repeat the task instructions' button.",
+    "confidence": 0.8,
+    "interaction_target": "Repeat the task instructions button",
+    "frame_description": "The cursor is positioned over the 'Repeat the task instructions' button at the bottom of the instruction text."
+  },
+  {
+    "frame_index_start": 19,
+    "frame_index_end": 21,
+    "type": "dwell",
+    "description": "User pauses for several seconds to read the detailed task instructions about planning a holiday to London.",
+    "confidence": 0.95,
+    "frame_description": "The cursor remains relatively stationary over the instruction text while the user reads."
+  },
+  {
+    "frame_index_start": 24,
+    "frame_index_end": 24,
+    "type": "click",
+    "description": "User clicks in the extreme top right corner of the screen.",
+    "confidence": 0.7,
+    "interaction_target": "Top right corner UI element",
+    "frame_description": "Full screen view showing the user's video feed in the top right; the cursor is at the very edge of the screen."
+  },
+  {
+    "frame_index_start": 26,
+    "frame_index_end": 26,
+    "type": "click",
+    "description": "User clicks again in the top right corner, possibly attempting to close an overlay or interact with recording controls.",
+    "confidence": 0.7,
+    "interaction_target": "Top right corner UI element"
+  },
+  {
+    "frame_index_start": 30,
+    "frame_index_end": 30,
+    "type": "click",
+    "description": "A third click in the top right corner of the screen.",
+    "confidence": 0.7,
+    "interaction_target": "Top right corner UI element"
+  }
+]

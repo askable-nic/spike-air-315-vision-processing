@@ -1,0 +1,37 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "select",
+    "description": "User selects the 'Two of us' option for the question 'Who is this loan for?'",
+    "confidence": 0.95,
+    "interaction_target": "Two of us radio button",
+    "page_title": "Tell us about your loan",
+    "frame_description": "The user clicks the radio button which triggers a UI state change."
+  },
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 3,
+    "type": "change_ui_state",
+    "description": "Form expands to show name input fields and a co-borrower warning message after selection",
+    "confidence": 0.9,
+    "page_title": "Tell us about your loan"
+  },
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 5,
+    "type": "input_text",
+    "description": "User enters 'serene' into the 'What's your first name?' input field",
+    "confidence": 0.95,
+    "interaction_target": "What's your first name? input field",
+    "page_title": "Tell us about your loan"
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 7,
+    "type": "scroll",
+    "description": "User scrolls down the page to reveal the rest of the loan application form",
+    "confidence": 0.9,
+    "page_title": "Tell us about your loan"
+  }
+]

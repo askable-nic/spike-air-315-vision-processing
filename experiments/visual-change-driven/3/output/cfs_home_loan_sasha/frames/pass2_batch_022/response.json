@@ -1,0 +1,85 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "click",
+    "description": "User clicked the 'Live in' loan purpose card to select it.",
+    "confidence": 0.95,
+    "interaction_target": "Live in card",
+    "page_title": "What's the purpose of your loan? - Unloan",
+    "page_location": "unloan.com.au/apply",
+    "frame_description": "The user selects the 'Live in' option for their loan purpose."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "navigate",
+    "description": "The application navigates to the property details section.",
+    "confidence": 0.9,
+    "page_title": "Let's find your property",
+    "frame_description": "The screen transitions from loan purpose to property address entry."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "click",
+    "description": "User clicked into the 'What's your property address?' input field to focus it.",
+    "confidence": 0.9,
+    "interaction_target": "What's your property address?",
+    "frame_description": "The cursor is placed inside the address search box."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 11,
+    "type": "input_text",
+    "description": "User typed '11 dwyer st' into the property address field.",
+    "confidence": 0.95,
+    "interaction_target": "What's your property address?",
+    "frame_description": "The user types an address, triggering autocomplete suggestions."
+  },
+  {
+    "frame_index_start": 14,
+    "frame_index_end": 15,
+    "type": "select",
+    "description": "User selected '11 Dwyer Street, Cavendish VIC 3314' from the address suggestions.",
+    "confidence": 0.9,
+    "interaction_target": "11 Dwyer Street, Cavendish VIC 3314 suggestion",
+    "frame_description": "The user clicks a specific address from the dropdown list."
+  },
+  {
+    "frame_index_start": 16,
+    "frame_index_end": 17,
+    "type": "select",
+    "description": "User selected 'House' from the Property type dropdown.",
+    "confidence": 0.85,
+    "interaction_target": "Property type dropdown",
+    "frame_description": "The property type is set to 'House'."
+  },
+  {
+    "frame_index_start": 24,
+    "frame_index_end": 25,
+    "type": "navigate",
+    "description": "The application navigates to the 'Tell us about your loan' section.",
+    "confidence": 0.9,
+    "page_title": "Tell us about your loan",
+    "frame_description": "The screen transitions to the next step of the application."
+  },
+  {
+    "frame_index_start": 26,
+    "frame_index_end": 27,
+    "type": "select",
+    "description": "User selected the 'Two of us' radio button for the 'Who is this loan for?' question.",
+    "confidence": 0.95,
+    "interaction_target": "Two of us radio button",
+    "frame_description": "Selecting 'Two of us' reveals additional name fields for a co-borrower."
+  },
+  {
+    "frame_index_start": 30,
+    "frame_index_end": 31,
+    "type": "input_text",
+    "description": "User typed 'serene' into the 'What's your first name?' field.",
+    "confidence": 0.95,
+    "interaction_target": "What's your first name?",
+    "frame_description": "The user begins entering their personal details."
+  }
+]

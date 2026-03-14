@@ -1,0 +1,37 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 10,
+    "type": "dwell",
+    "description": "User is examining the 'Explore' page and reviewing available research tasks.",
+    "confidence": 0.9,
+    "interaction_target": "Explore page",
+    "page_title": "Explore",
+    "frame_description": "The user is looking at a list of study cards including 'AI Interview' and 'Video Call'."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "change_ui_state",
+    "description": "The 'Short tasks & surveys' section updates, replacing the streaming service survey with an AI Interview task.",
+    "confidence": 0.85,
+    "interaction_target": "Short tasks & surveys section",
+    "page_title": "Explore"
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 11,
+    "type": "change_ui_state",
+    "description": "The screen transitions from the Explore page to a task completion message instructing the user to close the website task.",
+    "confidence": 0.95,
+    "interaction_target": "Task completion screen"
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 12,
+    "type": "change_ui_state",
+    "description": "The screen switches from the instruction message to a full-screen view of the user's webcam.",
+    "confidence": 0.95,
+    "interaction_target": "Webcam view"
+  }
+]

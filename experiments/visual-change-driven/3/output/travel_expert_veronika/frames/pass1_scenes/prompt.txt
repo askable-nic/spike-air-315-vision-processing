@@ -1,0 +1,14 @@
+Describe the page or screen shown in each frame. These frames are taken from a
+screen recording at key moments (page navigations, scroll positions, and periodic
+baselines).
+
+For each frame, provide:
+- page_title: The title or heading of the page
+- page_location: The URL or path visible in the browser (if any)
+- page_description: A brief description of the page layout, content, and
+  key UI elements visible
+- visible_interactive_elements: List of buttons, links, form fields, or other
+  interactive elements visible on the page
+
+Return a JSON array with one entry per frame, using the frame_index and
+timestamp_ms from the frame label.

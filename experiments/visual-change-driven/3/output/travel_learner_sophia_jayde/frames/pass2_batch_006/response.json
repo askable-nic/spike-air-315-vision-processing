@@ -1,0 +1,24 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "click",
+    "description": "User clicks on the Palermo flight pin on the map to view specific flight details",
+    "confidence": 0.9,
+    "interaction_target": "Palermo A$987 map pin",
+    "page_title": "Melbourne to Sicily | Explore",
+    "page_location": "google.com/travel/explore",
+    "frame_description": "The user selects a specific destination from the map view."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "change_ui_state",
+    "description": "The flight results sidebar finishes loading, transitioning from skeleton screens to displaying actual flight options like Turkish Airlines",
+    "confidence": 0.95,
+    "interaction_target": "Flight results sidebar",
+    "page_title": "Melbourne to Sicily | Explore",
+    "page_location": "google.com/travel/explore",
+    "frame_description": "The UI updates to show the requested flight information."
+  }
+]

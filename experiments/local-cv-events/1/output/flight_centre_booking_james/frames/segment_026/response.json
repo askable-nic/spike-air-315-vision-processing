@@ -1,0 +1,32 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 12,
+    "type": "dwell",
+    "description": "User dwells on the passenger details section of the Flight Centre booking page, specifically near the 'Adult 1' label.",
+    "confidence": 0.9,
+    "interaction_target": "Travellers section",
+    "page_title": "Flight Centre",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eW2/passenger",
+    "frame_description": "The user is viewing the 'Travellers' form on the Flight Centre website with the cursor stationary."
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 13,
+    "type": "navigate",
+    "description": "The browser navigates to an Askable research session page, likely an automated trigger from the research tool due to user hesitation.",
+    "confidence": 0.9,
+    "page_location": "https://sessions.askable.com/ai-mod/696c043bd82edc4df44a0e3c",
+    "frame_description": "The page transitions from the booking form to a dark research prompt overlay."
+  },
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 23,
+    "type": "dwell",
+    "description": "User dwells on the Askable prompt 'What's making you hesitate there' after the page transition.",
+    "confidence": 0.9,
+    "page_title": "Askable",
+    "page_location": "https://sessions.askable.com/ai-mod/696c043bd82edc4df44a0e3c",
+    "frame_description": "A dark overlay with a research question is visible on the screen while the cursor remains still in the upper right area."
+  }
+]

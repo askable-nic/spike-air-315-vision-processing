@@ -1,0 +1,172 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "navigate",
+    "description": "User navigates from the 'Tool' setup step to the 'Quota' step",
+    "confidence": 1.0,
+    "page_title": "Draft - TV Streaming - Discovery",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/project-setup/quota"
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 8,
+    "type": "input_text",
+    "description": "User changes the number of participants from 12 to 5 in the quota input field",
+    "confidence": 0.95,
+    "interaction_target": "How many participants do you need?",
+    "frame_description": "User interacts with the numeric input field on the Quota page"
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 12,
+    "type": "click",
+    "description": "User clicks the 'Next' button on the Quota page",
+    "confidence": 1.0,
+    "interaction_target": "Next"
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 13,
+    "type": "navigate",
+    "description": "User navigates to the 'Session format' step",
+    "confidence": 1.0,
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/project-setup/session-format"
+  },
+  {
+    "frame_index_start": 15,
+    "frame_index_end": 15,
+    "type": "click",
+    "description": "User clicks the 'Next' button on the Session format page",
+    "confidence": 1.0,
+    "interaction_target": "Next"
+  },
+  {
+    "frame_index_start": 15,
+    "frame_index_end": 16,
+    "type": "navigate",
+    "description": "User navigates to the 'Session duration' step",
+    "confidence": 1.0,
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/project-setup/session-duration"
+  },
+  {
+    "frame_index_start": 19,
+    "frame_index_end": 19,
+    "type": "click",
+    "description": "User clicks the 'Next' button on the Session duration page",
+    "confidence": 1.0,
+    "interaction_target": "Next"
+  },
+  {
+    "frame_index_start": 19,
+    "frame_index_end": 20,
+    "type": "navigate",
+    "description": "User navigates to the 'Participant selection' step",
+    "confidence": 1.0,
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/project-setup/participant-selection"
+  },
+  {
+    "frame_index_start": 32,
+    "frame_index_end": 32,
+    "type": "click",
+    "description": "User clicks the 'Next' button on the Participant selection page",
+    "confidence": 1.0,
+    "interaction_target": "Next"
+  },
+  {
+    "frame_index_start": 32,
+    "frame_index_end": 33,
+    "type": "navigate",
+    "description": "User navigates to the 'Audience' -> 'Panel' step",
+    "confidence": 1.0,
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/audience/panel"
+  },
+  {
+    "frame_index_start": 36,
+    "frame_index_end": 36,
+    "type": "click",
+    "description": "User clicks the 'Next' button on the Audience Panel page",
+    "confidence": 1.0,
+    "interaction_target": "Next"
+  },
+  {
+    "frame_index_start": 36,
+    "frame_index_end": 37,
+    "type": "navigate",
+    "description": "User navigates to the 'Participant location' step",
+    "confidence": 1.0,
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/audience/participant-locations"
+  },
+  {
+    "frame_index_start": 38,
+    "frame_index_end": 39,
+    "type": "input_text",
+    "description": "User types 'United st' into the location search field",
+    "confidence": 0.9,
+    "interaction_target": "Location"
+  },
+  {
+    "frame_index_start": 40,
+    "frame_index_end": 41,
+    "type": "select",
+    "description": "User selects 'United States' from the location dropdown results",
+    "confidence": 0.95,
+    "interaction_target": "USA"
+  },
+  {
+    "frame_index_start": 42,
+    "frame_index_end": 42,
+    "type": "click",
+    "description": "User clicks the 'Next' button on the Participant location page",
+    "confidence": 1.0,
+    "interaction_target": "Next"
+  },
+  {
+    "frame_index_start": 42,
+    "frame_index_end": 43,
+    "type": "navigate",
+    "description": "User navigates to the 'Demographic filters' step",
+    "confidence": 1.0,
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/audience/demographic-filters"
+  },
+  {
+    "frame_index_start": 49,
+    "frame_index_end": 52,
+    "type": "select",
+    "description": "User changes the exclusion filter to 'Don't exclude anyone'",
+    "confidence": 0.95,
+    "interaction_target": "Exclude people you've already spoken to"
+  },
+  {
+    "frame_index_start": 54,
+    "frame_index_end": 54,
+    "type": "click",
+    "description": "User clicks the 'Next' button on the Demographic filters page",
+    "confidence": 1.0,
+    "interaction_target": "Next"
+  },
+  {
+    "frame_index_start": 54,
+    "frame_index_end": 55,
+    "type": "navigate",
+    "description": "User navigates to the 'Custom screener' step",
+    "confidence": 1.0,
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/audience/custom-screener"
+  },
+  {
+    "frame_index_start": 57,
+    "frame_index_end": 57,
+    "type": "click",
+    "description": "User clicks 'Add a custom screening question'",
+    "confidence": 1.0,
+    "interaction_target": "Add a custom screening question"
+  },
+  {
+    "frame_index_start": 58,
+    "frame_index_end": 58,
+    "type": "change_ui_state",
+    "description": "A 'Multiple Choice' screener question modal appears on screen",
+    "confidence": 1.0,
+    "frame_description": "Modal overlay for creating a multiple choice screener question"
+  }
+]

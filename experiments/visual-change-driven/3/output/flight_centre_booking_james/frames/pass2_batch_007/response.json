@@ -1,0 +1,40 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "navigate",
+    "description": "The page transitions from the loading screen to the 'Review trip' page.",
+    "confidence": 0.95,
+    "page_title": "Flight Centre",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eWZ/results#baggage",
+    "frame_description": "The 'All Set!' loading screen disappears and the flight review page loads."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "dwell",
+    "description": "User pauses to review the departing flight details on the 'Review trip' page.",
+    "confidence": 0.8,
+    "interaction_target": "Departing Flight details",
+    "page_title": "Flight Centre",
+    "frame_description": "The cursor rests over the flight information area while the user reads."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "scroll",
+    "description": "User scrolls down the page to view the 'Add-ons' and 'Baggage' sections.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre",
+    "frame_description": "The view shifts downwards, revealing the baggage information under the 'Add-ons' header."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 7,
+    "type": "scroll",
+    "description": "User scrolls further down the page to reveal the 'Seats' selection section.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre",
+    "frame_description": "The page content moves up, bringing the 'Seats' section into view."
+  }
+]

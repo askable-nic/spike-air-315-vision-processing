@@ -1,0 +1,33 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "change_ui_state",
+    "description": "A loading spinner appears on the screen while flight results are being fetched.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eWZ/results",
+    "frame_description": "Loading screen with text 'Our overhead compartments are stuffed with deals!'"
+  },
+  {
+    "frame_index_start": 1,
+    "frame_index_end": 2,
+    "type": "navigate",
+    "description": "The loading screen transitions to the flight results page.",
+    "confidence": 0.95,
+    "page_title": "Flight Centre",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eWZ/results",
+    "frame_description": "Transition from loading screen to results page with airline filters."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 2,
+    "type": "hover",
+    "description": "Cursor is positioned near the 'Jetstar' airline filter checkbox.",
+    "confidence": 0.8,
+    "interaction_target": "Jetstar checkbox",
+    "page_title": "Flight Centre",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eWZ/results",
+    "frame_description": "Flight results page showing airline filters."
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "change_ui_state",
+    "description": "Instruction text begins to appear on the screen, starting with a greeting.",
+    "confidence": 0.9,
+    "frame_description": "A dark screen with white text appearing at the bottom."
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 13,
+    "type": "change_ui_state",
+    "description": "A significant portion of the task scenario text is displayed, outlining a holiday planning task.",
+    "confidence": 1.0,
+    "frame_description": "A large block of white text on a dark background describing a travel planning scenario."
+  },
+  {
+    "frame_index_start": 22,
+    "frame_index_end": 35,
+    "type": "change_ui_state",
+    "description": "The remaining task instructions are revealed incrementally, providing more detail on the planning process.",
+    "confidence": 1.0,
+    "frame_description": "The instruction text continues to populate the screen line by line."
+  },
+  {
+    "frame_index_start": 36,
+    "frame_index_end": 37,
+    "type": "change_ui_state",
+    "description": "The browser interface appears, showing the final task prompt and an 'Open' button to begin the session.",
+    "confidence": 1.0,
+    "interaction_target": "Open button",
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/ai-mod/699fd69145953d08ad8c04ad",
+    "frame_description": "A Chrome browser window is visible with a final instruction and a prominent 'Open' button."
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 4,
+    "type": "input_text",
+    "description": "User types 'camden' into the destination search field to filter results",
+    "confidence": 0.95,
+    "interaction_target": "Destination search box",
+    "page_title": "Hostels in London",
+    "page_location": "hostelworld.com/pwa/s?q=London, England",
+    "frame_description": "The user enters text into the search bar, triggering a dropdown of location suggestions."
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 5,
+    "type": "select",
+    "description": "User selects 'Camden, London, England' from the search suggestions dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Camden, London, England suggestion",
+    "page_title": "Hostels in London",
+    "page_location": "hostelworld.com/pwa/s?q=London, England",
+    "frame_description": "The search field updates to the selected location, initiating a new search."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 6,
+    "type": "change_ui_state",
+    "description": "The page displays loading placeholders while fetching updated hostel results for Camden",
+    "confidence": 0.95,
+    "page_title": "Hostels in London",
+    "frame_description": "Skeleton screens are visible as the content area refreshes with new data."
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 9,
+    "type": "dwell",
+    "description": "User reviews the updated search results and map for hostels in the Camden area",
+    "confidence": 0.85,
+    "page_title": "Hostels in London",
+    "page_location": "hostelworld.com/pwa/s?q=Camden, London, England",
+    "frame_description": "The user pauses to examine the newly loaded list of 4 properties and their locations on the map."
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 11,
+    "type": "scroll",
+    "description": "User scrolls down the list of hostel results to view more options",
+    "confidence": 0.95,
+    "interaction_target": "Hostel results list",
+    "page_title": "Hostels in London",
+    "page_location": "hostelworld.com/pwa/s?q=Camden, London, England",
+    "frame_description": "The list of hostels (Palmers Lodge, Smart Camden Inn, Phoenix Hostel) moves upward as the user scrolls."
+  }
+]

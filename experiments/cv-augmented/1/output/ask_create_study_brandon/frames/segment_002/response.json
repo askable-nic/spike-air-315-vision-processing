@@ -1,0 +1,52 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 4,
+    "type": "dwell",
+    "description": "User examines the 'Multiple Choice' screener question modal before beginning to enter content",
+    "confidence": 0.85,
+    "interaction_target": "Multiple Choice modal",
+    "page_title": "Draft - TV Streaming - Discovery",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/audience/custom-screener"
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 16,
+    "type": "input_text",
+    "description": "User types the screener question: 'Which best describes you habits for how you interact with TV streaming services?'",
+    "confidence": 0.95,
+    "interaction_target": "Screener question text area",
+    "page_title": "Draft - TV Streaming - Discovery",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/audience/custom-screener"
+  },
+  {
+    "frame_index_start": 18,
+    "frame_index_end": 29,
+    "type": "input_text",
+    "description": "User fills out four multiple choice answer options: 'I don't use them at all', 'I use them a few times per week', 'I use them daily', and 'I use them multiple times per day'",
+    "confidence": 0.95,
+    "interaction_target": "Answer input fields",
+    "page_title": "Draft - TV Streaming - Discovery",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/audience/custom-screener"
+  },
+  {
+    "frame_index_start": 31,
+    "frame_index_end": 31,
+    "type": "click",
+    "description": "User clicks the 'Save' button to confirm the screener question and close the modal",
+    "confidence": 0.98,
+    "interaction_target": "Save button",
+    "page_title": "Draft - TV Streaming - Discovery",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/audience/custom-screener"
+  },
+  {
+    "frame_index_start": 32,
+    "frame_index_end": 32,
+    "type": "navigate",
+    "description": "The application navigates to the 'Additional Info' section after the screener question is saved",
+    "confidence": 0.9,
+    "page_title": "Draft - TV Streaming - Discovery",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/additional-info/your-timezone",
+    "frame_description": "The modal is closed, and the sidebar indicates the user is now in the 'Additional Info' section"
+  }
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 4,
+    "type": "hover",
+    "description": "User hovers over the 'AI Interview' and 'Diary Study' filter tags at the top of the Explore page",
+    "confidence": 0.9,
+    "interaction_target": "Filter tags",
+    "page_title": "Explore",
+    "frame_description": "The cursor moves to the filter section where several active filters are displayed."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "click",
+    "description": "User clicks to remove the 'Diary Study' and 'AI Interview' filters",
+    "confidence": 0.95,
+    "interaction_target": "Filter close buttons",
+    "page_title": "Explore",
+    "frame_description": "The user interacts with the 'x' icons on the filter tags to clear them."
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 5,
+    "type": "change_ui_state",
+    "description": "The list of opportunities updates, reducing from 8 to 4 visible items as filters are modified",
+    "confidence": 1.0,
+    "page_title": "Explore",
+    "frame_description": "The screen content refreshes to show a new set of opportunity cards based on the updated filters."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 6,
+    "type": "dwell",
+    "description": "User pauses to examine the updated list of opportunities, specifically a survey card",
+    "confidence": 0.85,
+    "page_title": "Explore",
+    "frame_description": "The cursor rests over a blue 'Survey' card titled 'Review online grocery shopping experience'."
+  }
+]

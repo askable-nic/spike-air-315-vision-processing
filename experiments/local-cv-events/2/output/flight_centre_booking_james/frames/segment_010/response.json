@@ -1,0 +1,46 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 11,
+    "type": "dwell",
+    "description": "User pauses the cursor over the 'Done' button in the travel dates calendar modal, likely reviewing the selected dates.",
+    "confidence": 0.85,
+    "interaction_target": "Done button",
+    "page_title": "Flight Centre | Your centre for travel.",
+    "page_location": "https://www.flightcentre.com.au",
+    "frame_description": "A calendar modal is open over the Flight Centre homepage, showing selected travel dates in March 2026."
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 12,
+    "type": "click",
+    "description": "User clicks the 'Done' button to confirm the selected travel dates and close the calendar modal.",
+    "confidence": 0.95,
+    "interaction_target": "Done button",
+    "page_title": "Flight Centre | Your centre for travel.",
+    "page_location": "https://www.flightcentre.com.au",
+    "frame_description": "The cursor is positioned directly over the blue 'Done' button at the bottom of the date picker modal."
+  },
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 23,
+    "type": "dwell",
+    "description": "User moves the cursor to and lingers over the close button of the Honey rewards popup in the top right corner.",
+    "confidence": 0.85,
+    "interaction_target": "Close button ('x')",
+    "page_title": "Flight Centre | Your centre for travel.",
+    "page_location": "https://www.flightcentre.com.au",
+    "frame_description": "The date picker modal has closed, and the cursor is now hovering over the 'x' button of a rewards notification popup."
+  },
+  {
+    "frame_index_start": 24,
+    "frame_index_end": 24,
+    "type": "click",
+    "description": "User clicks the close button ('x') on the Honey rewards popup to dismiss it.",
+    "confidence": 0.95,
+    "interaction_target": "Close button ('x')",
+    "page_title": "Flight Centre | Your centre for travel.",
+    "page_location": "https://www.flightcentre.com.au",
+    "frame_description": "The cursor is on the close icon of the rewards popup; the popup disappears in the subsequent frame."
+  }
+]

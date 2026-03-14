@@ -1,0 +1,42 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 4,
+    "type": "dwell",
+    "description": "User pauses to examine the 'Short tasks & surveys' section, specifically hovering over the 'AI Interview' task card.",
+    "confidence": 0.85,
+    "interaction_target": "AI Interview card",
+    "page_title": "Smart Filters Mobile App",
+    "page_location": "art-resin-05325911.figma.site",
+    "frame_description": "The user is viewing a Figma prototype showing various research opportunities."
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 6,
+    "type": "navigate",
+    "description": "User clicks on the 'Askable Sessions' browser tab to switch from the prototype to the session instructions.",
+    "confidence": 0.95,
+    "interaction_target": "Askable Sessions tab",
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e"
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 8,
+    "type": "change_ui_state",
+    "description": "The instruction text on the Askable Sessions page updates dynamically to a new question for the participant.",
+    "confidence": 0.9,
+    "page_title": "Askable Sessions",
+    "frame_description": "The central text on the dark background changes from a general question to a specific one about survey time."
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 10,
+    "type": "navigate",
+    "description": "User clicks on the 'Smart Filters Mobile App' browser tab to return to the Figma prototype.",
+    "confidence": 0.95,
+    "interaction_target": "Smart Filters Mobile App tab",
+    "page_title": "Smart Filters Mobile App",
+    "page_location": "art-resin-05325911.figma.site"
+  }
+]

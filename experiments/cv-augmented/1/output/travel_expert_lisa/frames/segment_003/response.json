@@ -1,0 +1,34 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 13,
+    "type": "hesitate",
+    "description": "User moves the cursor across the flight search widget, pausing briefly over the 'Dates' section before returning to the 'Leaving From' input field.",
+    "confidence": 0.85,
+    "interaction_target": "Flight Search Widget",
+    "page_title": "Webjet | Your go-to for going somewhere",
+    "page_location": "webjet.com.au"
+  },
+  {
+    "frame_index_start": 14,
+    "frame_index_end": 14,
+    "type": "click",
+    "description": "User clicks on the 'Leaving From' input field, which opens the airport selection dropdown.",
+    "confidence": 0.95,
+    "interaction_target": "Leaving From input field",
+    "page_title": "Webjet | Your go-to for going somewhere",
+    "page_location": "webjet.com.au",
+    "frame_description": "The airport selection dropdown appears with common Australian cities listed."
+  },
+  {
+    "frame_index_start": 16,
+    "frame_index_end": 17,
+    "type": "input_text",
+    "description": "User types 'sun' into the 'Leaving From' field to search for a specific airport.",
+    "confidence": 1.0,
+    "interaction_target": "Leaving From input field",
+    "page_title": "Webjet | Your go-to for going somewhere",
+    "page_location": "webjet.com.au",
+    "frame_description": "The dropdown filters to show results matching 'sun', such as Sunshine Coast (MCY)."
+  }
+]

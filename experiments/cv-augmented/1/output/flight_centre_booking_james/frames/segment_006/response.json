@@ -1,0 +1,68 @@
+[
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 14,
+    "type": "click",
+    "description": "User clicked the 'From $177' button for the 12:10pm flight to view fare options.",
+    "confidence": 0.9,
+    "interaction_target": "From $177 button",
+    "page_title": "Flight Centre - Select Return Flight",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eWZ/results#inbound"
+  },
+  {
+    "frame_index_start": 15,
+    "frame_index_end": 16,
+    "type": "click",
+    "description": "User clicked the 'SELECT' button for the 'Lite' fare type.",
+    "confidence": 0.95,
+    "interaction_target": "SELECT button (Lite fare)",
+    "page_title": "Flight Centre - Select Return Flight"
+  },
+  {
+    "frame_index_start": 16,
+    "frame_index_end": 18,
+    "type": "change_ui_state",
+    "description": "A loading screen appears with the message 'All Set! Now let's review your flight selections...'",
+    "confidence": 1.0,
+    "frame_description": "Loading overlay visible"
+  },
+  {
+    "frame_index_start": 18,
+    "frame_index_end": 19,
+    "type": "navigate",
+    "description": "The page navigates from the flight selection results to the 'Review trip' page.",
+    "confidence": 1.0,
+    "page_title": "Flight Centre - Review trip",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eWZ/results#baggage"
+  },
+  {
+    "frame_index_start": 21,
+    "frame_index_end": 22,
+    "type": "scroll",
+    "description": "User scrolls down the 'Review trip' page to view add-ons.",
+    "confidence": 0.9
+  },
+  {
+    "frame_index_start": 26,
+    "frame_index_end": 27,
+    "type": "scroll",
+    "description": "User scrolls down further to view the 'Seats' and 'Online Captain's Pack' sections.",
+    "confidence": 0.9
+  },
+  {
+    "frame_index_start": 30,
+    "frame_index_end": 31,
+    "type": "scroll",
+    "description": "User scrolls to the bottom of the page to find the continue button.",
+    "confidence": 0.9
+  },
+  {
+    "frame_index_start": 33,
+    "frame_index_end": 34,
+    "type": "click",
+    "description": "User clicked the green 'CONTINUE' button at the bottom of the review page.",
+    "confidence": 0.95,
+    "interaction_target": "CONTINUE button",
+    "page_title": "Flight Centre - Review trip"
+  }
+]

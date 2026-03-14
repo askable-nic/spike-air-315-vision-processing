@@ -1,0 +1,33 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "dwell",
+    "description": "User waits while the flight search results are loading, with the cursor resting near the bottom right of the screen.",
+    "confidence": 0.8,
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "A loading screen for flight results showing skeleton loaders and a 'Searching' indicator."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "select",
+    "description": "User selects the '2+ stops' filter checkbox in the sidebar to filter flight results.",
+    "confidence": 0.9,
+    "interaction_target": "2+ stops checkbox",
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "The user interacts with the sidebar filters while flight results begin to populate."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "change_ui_state",
+    "description": "Flight search results populate the page, replacing the skeleton loaders and updating the provider count.",
+    "confidence": 0.95,
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "The UI transitions from a loading state to displaying specific flight options and prices."
+  }
+]

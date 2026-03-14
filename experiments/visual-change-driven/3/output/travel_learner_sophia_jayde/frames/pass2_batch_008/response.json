@@ -1,0 +1,39 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "change_ui_state",
+    "description": "The browser's top menu bar becomes visible, indicating a change in window focus or system-level interaction.",
+    "confidence": 0.8,
+    "page_title": "Melbourne to Palermo | Google Flights",
+    "page_location": "google.com/travel/flights"
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "navigate",
+    "description": "User navigates away from the flight search results to a new Google search tab.",
+    "confidence": 0.9,
+    "interaction_target": "New Tab",
+    "page_title": "Melbourne to Palermo | Google Flights"
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "input_text",
+    "description": "User searches for 'rometorio' (Rome2Rio) in the browser address bar, leading to a Google search results page.",
+    "confidence": 0.9,
+    "interaction_target": "Address bar",
+    "page_title": "Google",
+    "frame_description": "The user types a search query into the address bar and executes the search."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 9,
+    "type": "dwell",
+    "description": "User pauses to examine the search results for 'Rome2Rio', with the cursor remaining nearly stationary over the content.",
+    "confidence": 0.7,
+    "page_title": "rometorio - Google Search",
+    "frame_description": "Zoomed-in view of the search results page where the user is reading information."
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 7,
+    "type": "dwell",
+    "description": "User examines the travel dates calendar, moving the cursor slowly over various dates in March 2026 including the 11th, 20th, and 21st.",
+    "confidence": 0.9,
+    "interaction_target": "Travel dates calendar",
+    "page_title": "Flight Centre - Your centre for cruises.",
+    "page_location": "https://www.flightcentre.com.au",
+    "frame_description": "A calendar modal is open over the Flight Centre homepage, showing February and March 2026."
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 8,
+    "type": "select",
+    "description": "User selects a date range in the calendar, with March 20 and March 22 becoming highlighted in black.",
+    "confidence": 0.85,
+    "interaction_target": "March 22 date cell",
+    "page_title": "Flight Centre - Your centre for cruises.",
+    "page_location": "https://www.flightcentre.com.au"
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 9,
+    "type": "hover",
+    "description": "User moves the cursor to hover over the 'Done' button after selecting the travel dates.",
+    "confidence": 0.9,
+    "interaction_target": "Done button",
+    "page_title": "Flight Centre - Your centre for cruises.",
+    "page_location": "https://www.flightcentre.com.au"
+  }
+]

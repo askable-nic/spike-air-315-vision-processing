@@ -1,0 +1,116 @@
+[
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 4,
+    "type": "click",
+    "description": "User clicks the browser address bar to focus it",
+    "confidence": 0.9,
+    "interaction_target": "Address bar",
+    "page_title": "Get an electronic travel authorisation (ETA) to visit the UK - GOV.UK",
+    "page_location": "www.gov.uk/eta"
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 7,
+    "type": "input_text",
+    "description": "User types 'smart traveller' into the browser address bar",
+    "confidence": 1.0,
+    "interaction_target": "Address bar"
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 8,
+    "type": "navigate",
+    "description": "User navigates to Google search results for 'smart traveller'",
+    "confidence": 1.0,
+    "page_title": "smart traveller - Google Search",
+    "page_location": "google.com/search?q=smart+traveller"
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 12,
+    "type": "click",
+    "description": "User clicks on the 'Smartraveller Advice | Travel Advice For Overseas' search result",
+    "confidence": 0.9,
+    "interaction_target": "Smartraveller Advice link",
+    "page_title": "smart traveller - Google Search"
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 12,
+    "type": "navigate",
+    "description": "User navigates to the Smartraveller homepage",
+    "confidence": 1.0,
+    "page_title": "Homepage | Smartraveller",
+    "page_location": "smartraveller.gov.au"
+  },
+  {
+    "frame_index_start": 16,
+    "frame_index_end": 17,
+    "type": "click",
+    "description": "User clicks on the 'Search topic or destination' input field on the Smartraveller homepage",
+    "confidence": 0.9,
+    "interaction_target": "Search input field",
+    "page_title": "Homepage | Smartraveller"
+  },
+  {
+    "frame_index_start": 18,
+    "frame_index_end": 21,
+    "type": "input_text",
+    "description": "User types 'italy' into the search field",
+    "confidence": 1.0,
+    "interaction_target": "Search input field"
+  },
+  {
+    "frame_index_start": 22,
+    "frame_index_end": 23,
+    "type": "select",
+    "description": "User selects the 'Italy' suggestion from the search dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Italy suggestion"
+  },
+  {
+    "frame_index_start": 23,
+    "frame_index_end": 23,
+    "type": "navigate",
+    "description": "User navigates to search results for 'Italy' on Smartraveller",
+    "confidence": 1.0,
+    "page_title": "Search | Smartraveller",
+    "page_location": "smartraveller.gov.au/search?search=Italy"
+  },
+  {
+    "frame_index_start": 26,
+    "frame_index_end": 27,
+    "type": "click",
+    "description": "User clicks on the 'Italy' search result link",
+    "confidence": 0.9,
+    "interaction_target": "Italy link",
+    "page_title": "Search | Smartraveller"
+  },
+  {
+    "frame_index_start": 27,
+    "frame_index_end": 27,
+    "type": "navigate",
+    "description": "User navigates to the Italy travel advice page",
+    "confidence": 1.0,
+    "page_title": "Italy Travel Advice & Safety | Smartraveller",
+    "page_location": "smartraveller.gov.au/destinations/europe/italy"
+  },
+  {
+    "frame_index_start": 28,
+    "frame_index_end": 30,
+    "type": "scroll",
+    "description": "User scrolls down the Italy travel advice page to view more content",
+    "confidence": 0.9,
+    "page_title": "Italy Travel Advice & Safety | Smartraveller"
+  },
+  {
+    "frame_index_start": 30,
+    "frame_index_end": 31,
+    "type": "click",
+    "description": "User clicks on 'Local emergency contacts' in the page navigation menu",
+    "confidence": 0.9,
+    "interaction_target": "Local emergency contacts menu item",
+    "page_title": "Italy Travel Advice & Safety | Smartraveller"
+  }
+]

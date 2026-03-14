@@ -1,0 +1,41 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 2,
+    "type": "click",
+    "description": "User clicks on the 'St George' suggestion in the lender search field.",
+    "confidence": 0.9,
+    "interaction_target": "St George suggestion",
+    "page_title": "Who is your current lender",
+    "frame_description": "The user selects the suggested lender from the dropdown list."
+  },
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 5,
+    "type": "navigate",
+    "description": "The page navigates from the lender selection to the property worth question.",
+    "confidence": 1.0,
+    "page_title": "How much do you think your property is worth?",
+    "frame_description": "The UI transitions to the next step of the form after the lender is selected."
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 13,
+    "type": "click",
+    "description": "User clicks on the property worth input field to focus it and bring up the keyboard.",
+    "confidence": 0.9,
+    "interaction_target": "Property worth input field",
+    "page_title": "How much do you think your property is worth?",
+    "frame_description": "The cursor moves to the input box and the mobile keyboard appears."
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 23,
+    "type": "input_text",
+    "description": "User types '1.10' into the property worth input field using the on-screen keyboard.",
+    "confidence": 0.95,
+    "interaction_target": "Property worth input field",
+    "page_title": "How much do you think your property is worth?",
+    "frame_description": "The user interacts with the numeric keyboard to enter a value."
+  }
+]

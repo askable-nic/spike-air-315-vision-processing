@@ -1,0 +1,33 @@
+[
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 3,
+    "type": "change_ui_state",
+    "description": "A task instruction modal appears on the screen, overlaying the Google homepage.",
+    "confidence": 0.95,
+    "page_title": "Google",
+    "page_location": "https://www.google.com",
+    "frame_description": "The screen shows a detailed task description for a UX research study about home loans."
+  },
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 24,
+    "type": "dwell",
+    "description": "User is reading the task instructions regarding searching for and evaluating home loan options.",
+    "confidence": 0.9,
+    "interaction_target": "Task instruction overlay",
+    "page_title": "Google",
+    "page_location": "https://www.google.com",
+    "frame_description": "User remains on the task instruction screen for approximately 42 seconds."
+  },
+  {
+    "frame_index_start": 25,
+    "frame_index_end": 25,
+    "type": "change_ui_state",
+    "description": "The task instruction modal is dismissed, revealing the Google homepage again.",
+    "confidence": 0.95,
+    "page_title": "Google",
+    "page_location": "https://www.google.com",
+    "frame_description": "The Google search interface is visible with a cursor positioned near the center."
+  }
+]

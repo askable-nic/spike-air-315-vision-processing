@@ -1,0 +1,45 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 7,
+    "type": "dwell",
+    "description": "User is reading the task instructions on the overlay modal.",
+    "confidence": 0.9,
+    "page_title": "Google",
+    "frame_description": "A task instruction overlay is visible over the Google search homepage."
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 8,
+    "type": "scroll",
+    "description": "User scrolls down within the task instruction modal to read more content.",
+    "confidence": 0.8,
+    "interaction_target": "Task instruction modal"
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 9,
+    "type": "click",
+    "description": "User clicks the 'Start task' button, dismissing the instruction overlay.",
+    "confidence": 0.9,
+    "interaction_target": "Start task button",
+    "page_title": "Google"
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 10,
+    "type": "click",
+    "description": "User clicks on the Google search input field to initiate a search.",
+    "confidence": 0.9,
+    "interaction_target": "Search bar",
+    "frame_description": "The mobile keyboard appears and the search bar becomes active."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 11,
+    "type": "dwell",
+    "description": "User pauses briefly to look at the trending searches list before starting to type.",
+    "confidence": 0.8,
+    "page_title": "Google Search"
+  }
+]

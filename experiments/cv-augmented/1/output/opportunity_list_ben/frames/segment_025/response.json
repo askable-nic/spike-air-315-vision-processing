@@ -1,0 +1,32 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 4,
+    "type": "hover",
+    "description": "User hovers over the 'Smart Filters Mobile App' browser tab, which displays a thumbnail preview of the page content.",
+    "confidence": 0.9,
+    "interaction_target": "Smart Filters Mobile App browser tab",
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+    "frame_description": "The user is on the Askable session page where a question is displayed, while hovering over another tab."
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 7,
+    "type": "change_ui_state",
+    "description": "The task instruction text on the screen updates dynamically to: 'As you look at the options for short tasks, what are you seeing that helps you decide which one to go for?'",
+    "confidence": 0.95,
+    "page_title": "Askable Sessions",
+    "frame_description": "The central text on the dark background changes as the session progresses."
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 8,
+    "type": "navigate",
+    "description": "The browser navigates from the Askable session instructions to the Figma prototype page.",
+    "confidence": 1.0,
+    "page_title": "Smart Filters Mobile App",
+    "page_location": "art-resin-05325911.figma.site",
+    "frame_description": "The screen now shows a mobile app prototype titled 'Explore' with 'Short tasks & surveys' listed."
+  }
+]

@@ -1,0 +1,69 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 6,
+    "type": "dwell",
+    "description": "User pauses on the 'current loan' page with the keyboard open, likely considering the interest rate input.",
+    "confidence": 0.9,
+    "page_title": "Please tell us more about your current loan.",
+    "frame_description": "The user is on a form page with an input field for 'Estimate interest rate' focused and the numeric keyboard visible."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 7,
+    "type": "select",
+    "description": "User selects the 'I don't know, skip' toggle, which dismisses the keyboard and reveals the rest of the form.",
+    "confidence": 0.8,
+    "interaction_target": "I don't know, skip toggle",
+    "page_title": "Please tell us more about your current loan.",
+    "frame_description": "The keyboard disappears and the 'I don't know, skip' toggle state changes to active (purple)."
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 13,
+    "type": "hesitate",
+    "description": "User pauses briefly before selecting an option for the fixed rate question.",
+    "confidence": 0.7,
+    "page_title": "Please tell us more about your current loan.",
+    "frame_description": "The cursor lingers near the center of the screen while the user decides on the next action."
+  },
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 14,
+    "type": "select",
+    "description": "User selects 'No' in response to 'Are you currently on a fixed rate?'.",
+    "confidence": 0.9,
+    "interaction_target": "No radio button",
+    "page_title": "Please tell us more about your current loan.",
+    "frame_description": "The 'No' option is highlighted with a purple selection indicator."
+  },
+  {
+    "frame_index_start": 14,
+    "frame_index_end": 15,
+    "type": "navigate",
+    "description": "The application automatically navigates to the next step after the selection.",
+    "confidence": 1.0,
+    "page_title": "Who is your current lender",
+    "frame_description": "The screen transitions from the loan details form to a lender search screen."
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 18,
+    "type": "click",
+    "description": "User clicks on the search input field to begin searching for their lender.",
+    "confidence": 0.9,
+    "interaction_target": "Search for your lender input",
+    "page_title": "Who is your current lender",
+    "frame_description": "The search bar becomes focused with a blue border and the keyboard appears."
+  },
+  {
+    "frame_index_start": 18,
+    "frame_index_end": 20,
+    "type": "input_text",
+    "description": "User types 'St' into the lender search field.",
+    "confidence": 1.0,
+    "interaction_target": "Search for your lender input",
+    "page_title": "Who is your current lender",
+    "frame_description": "Characters 'S' and then 't' appear in the search bar as the user interacts with the keyboard."
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 8,
+    "type": "dwell",
+    "description": "User dwells on the initial screen with the cursor positioned over a browser tab.",
+    "confidence": 0.8,
+    "interaction_target": "Browser Tab",
+    "frame_description": "A dark screen with an 'Open' button in the center and a small video feed in the top right."
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 13,
+    "type": "navigate",
+    "description": "The browser navigates to the Flight Centre homepage, as seen by the URL change in the address bar.",
+    "confidence": 0.9,
+    "page_location": "https://www.flightcentre.com.au",
+    "frame_description": "The URL bar updates to flightcentre.com.au while the page begins to load."
+  },
+  {
+    "frame_index_start": 14,
+    "frame_index_end": 30,
+    "type": "change_ui_state",
+    "description": "The Flight Centre homepage loads, transitioning from skeleton placeholders to full content including the search widget and promotional banners.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Your centre for travel",
+    "frame_description": "Visual progression of the website loading from empty containers to a fully rendered homepage."
+  },
+  {
+    "frame_index_start": 20,
+    "frame_index_end": 32,
+    "type": "dwell",
+    "description": "User dwells on the Flight Centre homepage while it finishes loading and becomes interactive, with the cursor remaining stationary.",
+    "confidence": 0.8,
+    "page_title": "Flight Centre | Your centre for travel",
+    "frame_description": "The user waits for the search widget to populate and the page to become fully interactive."
+  }
+]

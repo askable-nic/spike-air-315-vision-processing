@@ -1,0 +1,40 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "change_ui_state",
+    "description": "The screen transitions from a blank white page to a loading screen featuring a meerkat illustration.",
+    "confidence": 0.9,
+    "page_title": "comparethemarket",
+    "frame_description": "Loading screen appears with a meerkat character."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "navigate",
+    "description": "The loading process completes, and the user is navigated to the first question of the flow: 'How can we help you?'.",
+    "confidence": 0.9,
+    "page_title": "comparethemarket",
+    "frame_description": "Transition from loading screen to the first selection screen."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "hover",
+    "description": "User hovers the cursor over the 'I want to refinance' option, which highlights with a blue border.",
+    "confidence": 0.9,
+    "interaction_target": "I want to refinance",
+    "page_title": "comparethemarket",
+    "frame_description": "Cursor moves over the refinance option."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 7,
+    "type": "click",
+    "description": "User clicks on the 'I want to refinance' option, triggering a transition to the next step in the process.",
+    "confidence": 1.0,
+    "interaction_target": "I want to refinance",
+    "page_title": "comparethemarket",
+    "frame_description": "User selects the refinance option and the page changes to the address input field."
+  }
+]

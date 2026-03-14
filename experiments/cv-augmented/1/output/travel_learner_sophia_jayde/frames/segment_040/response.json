@@ -1,0 +1,56 @@
+[
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 6,
+    "type": "click",
+    "description": "User clicks on the 'Camplify: Caravan Hire - Campervans & Motorhomes Australia' search result link.",
+    "confidence": 0.9,
+    "interaction_target": "Camplify: Caravan Hire - Campervans & Motorhomes Australia",
+    "page_title": "camplify - Google Search",
+    "page_location": "https://www.google.com/search?q=camplify"
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 6,
+    "type": "navigate",
+    "description": "Page navigates to the Camplify homepage.",
+    "confidence": 1.0,
+    "page_title": "Caravan, Motorhome and Campervan Hire | Camplify",
+    "page_location": "https://www.camplify.com.au/"
+  },
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 17,
+    "type": "scroll",
+    "description": "User scrolls down the Camplify homepage to view more content.",
+    "confidence": 0.9,
+    "page_title": "Caravan, Motorhome and Campervan Hire | Camplify"
+  },
+  {
+    "frame_index_start": 18,
+    "frame_index_end": 18,
+    "type": "change_ui_state",
+    "description": "A Honey browser extension popup appears on the screen offering rewards.",
+    "confidence": 1.0,
+    "interaction_target": "Honey extension popup",
+    "frame_description": "A modal from the Honey extension is visible on the right side of the screen."
+  },
+  {
+    "frame_index_start": 23,
+    "frame_index_end": 24,
+    "type": "click",
+    "description": "User clicks the close button on the Honey extension popup to dismiss it.",
+    "confidence": 0.9,
+    "interaction_target": "Close button",
+    "frame_description": "The cursor is positioned over the 'x' in the top right corner of the Honey popup."
+  },
+  {
+    "frame_index_start": 28,
+    "frame_index_end": 28,
+    "type": "click",
+    "description": "User clicks into the 'Start where?' search input field to begin a search.",
+    "confidence": 0.9,
+    "interaction_target": "Start where? input field",
+    "page_title": "Caravan, Motorhome and Campervan Hire | Camplify"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 10,
+    "type": "dwell",
+    "description": "User pauses on the 'Done' button in the travel dates calendar modal",
+    "confidence": 0.9,
+    "interaction_target": "Done button",
+    "page_title": "Flight Centre - Your centre for travel",
+    "page_location": "https://www.flightcentre.com.au",
+    "frame_description": "The travel dates calendar modal is open with dates selected, and the cursor is resting on the 'Done' button."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 11,
+    "type": "click",
+    "description": "User clicks the 'Done' button to confirm selected travel dates",
+    "confidence": 0.95,
+    "interaction_target": "Done button",
+    "page_title": "Flight Centre - Your centre for travel",
+    "page_location": "https://www.flightcentre.com.au"
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 12,
+    "type": "change_ui_state",
+    "description": "The travel dates calendar modal closes, returning to the main search form",
+    "confidence": 1.0,
+    "frame_description": "The calendar modal has disappeared, and the main flight search interface is visible again with the selected dates populated."
+  },
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 27,
+    "type": "dwell",
+    "description": "User hovers and pauses over the 'Search flights' button",
+    "confidence": 0.9,
+    "interaction_target": "Search flights button",
+    "page_title": "Flight Centre - Your centre for travel",
+    "page_location": "https://www.flightcentre.com.au",
+    "frame_description": "The cursor moves to and remains stationary on the 'Search flights' button."
+  }
+]

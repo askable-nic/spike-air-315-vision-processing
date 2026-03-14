@@ -1,0 +1,31 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 7,
+    "type": "change_ui_state",
+    "description": "A loading screen is displayed with rotating airline logos (Qatar Airways, Philippine Airlines) while flight results are being fetched.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eWZ/results",
+    "frame_description": "The screen shows a central loading modal over a background image of a beach and blue sky."
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 8,
+    "type": "navigate",
+    "description": "The flight search results page finishes loading, transitioning from the loading state to the 'Select Departing Flight' view.",
+    "confidence": 0.95,
+    "page_title": "Select Departing Flight",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eWZ/results",
+    "frame_description": "The loading modal disappears and is replaced by a list of flight options from Adelaide to Melbourne."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 12,
+    "type": "dwell",
+    "description": "The user remains stationary, first waiting for the results to load and then beginning to review the flight options presented on the screen.",
+    "confidence": 0.8,
+    "interaction_target": "Flight search results",
+    "page_title": "Select Departing Flight"
+  }
+]

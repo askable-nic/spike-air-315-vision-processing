@@ -1,0 +1,54 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 12,
+    "type": "dwell",
+    "description": "User dwells on the Add-ons page, cursor stationary at the top right of the screen.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre - Add-ons",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eW2/results#baggage",
+    "frame_description": "The user is viewing the baggage and seat selection options on the Flight Centre website."
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 21,
+    "type": "hover",
+    "description": "User hovers over the 'CONTINUE' button at the bottom of the Add-ons section.",
+    "confidence": 0.9,
+    "interaction_target": "CONTINUE button",
+    "page_title": "Flight Centre - Add-ons"
+  },
+  {
+    "frame_index_start": 21,
+    "frame_index_end": 21,
+    "type": "click",
+    "description": "User clicks the 'CONTINUE' button to proceed to the next step of the booking process.",
+    "confidence": 0.9,
+    "interaction_target": "CONTINUE button",
+    "page_title": "Flight Centre - Add-ons"
+  },
+  {
+    "frame_index_start": 23,
+    "frame_index_end": 32,
+    "type": "change_ui_state",
+    "description": "A loading overlay appears with the message 'Thanks for confirming your flights' and a progress spinner.",
+    "confidence": 0.95,
+    "frame_description": "The UI transitions to a loading state after the user clicks continue."
+  },
+  {
+    "frame_index_start": 24,
+    "frame_index_end": 32,
+    "type": "dwell",
+    "description": "User waits while the flight confirmation loading screen is displayed.",
+    "confidence": 0.8
+  },
+  {
+    "frame_index_start": 33,
+    "frame_index_end": 35,
+    "type": "navigate",
+    "description": "The page navigates from the Add-ons selection to the Travellers details entry page.",
+    "confidence": 0.95,
+    "page_title": "Travellers",
+    "page_location": "https://secure.flightcentre.com.au/0Wrj0eW2/passenger"
+  }
+]

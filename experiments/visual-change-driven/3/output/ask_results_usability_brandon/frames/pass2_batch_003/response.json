@@ -1,0 +1,24 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "input_text",
+    "description": "User types 'partic' into the search input field on the Studies page.",
+    "confidence": 0.9,
+    "interaction_target": "Search input",
+    "page_title": "Studies",
+    "page_location": "app.askable.com/studies",
+    "frame_description": "The search input field changes from empty to containing the text 'partic'."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "input_text",
+    "description": "User finishes typing 'participant app' into the search input, filtering the studies list to a single matching result.",
+    "confidence": 0.95,
+    "interaction_target": "Search input",
+    "page_title": "Studies",
+    "page_location": "app.askable.com/studies",
+    "frame_description": "The search text is completed, and the list of studies below updates to show only the 'BCA - Participant App Screen Reader Test' study."
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 9,
+    "type": "dwell",
+    "description": "User dwells on the Google Flights homepage, appearing to read the 'Flexible? Discover the best flight deals with AI' section.",
+    "confidence": 0.8,
+    "page_title": "Find Cheap Flights Worldwide",
+    "page_location": "google.com/travel/flights"
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 11,
+    "type": "input_text",
+    "description": "User clicks the 'Where to?' input field and types 'Sicily'.",
+    "confidence": 0.9,
+    "interaction_target": "Where to? input field",
+    "page_title": "Find Cheap Flights Worldwide"
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 12,
+    "type": "select",
+    "description": "User selects 'Sicily, Italy' from the destination suggestions dropdown.",
+    "confidence": 0.9,
+    "interaction_target": "Sicily, Italy suggestion",
+    "page_title": "Find Cheap Flights Worldwide"
+  },
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 14,
+    "type": "select",
+    "description": "User clicks the trip type dropdown and changes the selection from 'Round trip' to 'One way'.",
+    "confidence": 0.9,
+    "interaction_target": "Trip type dropdown",
+    "page_title": "Find Cheap Flights Worldwide"
+  },
+  {
+    "frame_index_start": 15,
+    "frame_index_end": 15,
+    "type": "click",
+    "description": "User clicks the 'Departure' date field to open the calendar picker.",
+    "confidence": 0.9,
+    "interaction_target": "Departure date field",
+    "page_title": "Find Cheap Flights Worldwide"
+  },
+  {
+    "frame_index_start": 16,
+    "frame_index_end": 17,
+    "type": "click",
+    "description": "User clicks the next month arrow in the calendar twice to navigate from February/March to September/October.",
+    "confidence": 0.9,
+    "interaction_target": "Calendar next month button",
+    "page_title": "Find Cheap Flights Worldwide"
+  },
+  {
+    "frame_index_start": 18,
+    "frame_index_end": 19,
+    "type": "select",
+    "description": "User hovers over and then clicks to select October 19th as the departure date.",
+    "confidence": 0.9,
+    "interaction_target": "October 19th on calendar",
+    "page_title": "Find Cheap Flights Worldwide"
+  }
+]

@@ -1,0 +1,13 @@
+This is a low-activity segment from a screen recording. The user appears mostly idle during this period.
+
+**Segment 21** | Time range: 320.2s - 346.2s | FPS: 0.5 | Activity tier: idle | Frames: 18
+
+Frames 0-1 are CONTEXT frames from the previous segment. Frames 16-17 are CONTEXT frames from the next segment. Do NOT report events from context frames.
+
+For this idle segment, focus on capturing:
+1. What page or screen is currently visible (page_title, page_location)
+2. Any subtle UI state changes (loading indicators, notifications, auto-refresh)
+3. If the user appears to be reading/examining specific content (dwell event)
+4. Any error states or unusual visual conditions
+
+Only report events you can clearly identify. If the screen is truly idle with no changes, return an empty array [].

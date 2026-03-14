@@ -1,0 +1,65 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 5,
+    "type": "input_text",
+    "description": "User types 'sunsh' into the 'From' field to search for Sunshine Coast airport",
+    "confidence": 0.9,
+    "interaction_target": "From input field",
+    "page_title": "Skyscanner",
+    "frame_description": "The user is entering their departure city in the search form."
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 6,
+    "type": "select",
+    "description": "User selects 'Sunshine Coast (MCY)' from the origin dropdown",
+    "confidence": 0.95,
+    "interaction_target": "Sunshine Coast (MCY) option",
+    "frame_description": "The user picks the specific airport from the suggested list."
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 9,
+    "type": "change_ui_state",
+    "description": "A user testing prompt appears on screen asking the user to think aloud",
+    "confidence": 1.0,
+    "frame_description": "An overlay from the testing platform briefly interrupts the task."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 17,
+    "type": "input_text",
+    "description": "User types 'london' into the 'To' field",
+    "confidence": 0.9,
+    "interaction_target": "To input field",
+    "frame_description": "The user enters their destination city."
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 18,
+    "type": "select",
+    "description": "User selects 'London (Any)' from the destination dropdown",
+    "confidence": 0.95,
+    "interaction_target": "London (Any) option",
+    "frame_description": "The user selects the general London area for their destination."
+  },
+  {
+    "frame_index_start": 20,
+    "frame_index_end": 20,
+    "type": "click",
+    "description": "User clicks the 'Search' button to find flights",
+    "confidence": 1.0,
+    "interaction_target": "Search button",
+    "frame_description": "The user initiates the flight search."
+  },
+  {
+    "frame_index_start": 21,
+    "frame_index_end": 26,
+    "type": "navigate",
+    "description": "Page navigates to search results and begins loading flight options",
+    "confidence": 1.0,
+    "page_location": "search results page",
+    "frame_description": "The application transitions to the results view and shows a loading state."
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 7,
+    "type": "dwell",
+    "description": "User dwells on the Google search results page for 'refinancing australia banks', likely reviewing the sponsored results.",
+    "confidence": 0.8,
+    "page_title": "refinancing australia banks - Google Search",
+    "page_location": "google.com",
+    "frame_description": "Google search results page showing sponsored results for Macquarie Bank."
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 8,
+    "type": "navigate",
+    "description": "User clicks on the Macquarie Bank 'Home Loan Refinance' search result and navigates to their website.",
+    "confidence": 0.9,
+    "interaction_target": "Macquarie Bank Home Loan Refinance link",
+    "page_title": "refinancing australia banks - Google Search",
+    "frame_description": "Transition from Google search results to the Macquarie Bank landing page."
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 15,
+    "type": "dwell",
+    "description": "User examines the Macquarie Bank refinance page, with the cursor moving over the main heading and hero image.",
+    "confidence": 0.85,
+    "page_title": "Refinance your home loan | Macquarie",
+    "frame_description": "Macquarie Bank landing page for home loan refinancing."
+  },
+  {
+    "frame_index_start": 16,
+    "frame_index_end": 17,
+    "type": "navigate",
+    "description": "User navigates back to the Google search results page.",
+    "confidence": 0.9,
+    "page_title": "Refinance your home loan | Macquarie",
+    "frame_description": "Transition back to Google search results."
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 21,
+    "type": "scroll",
+    "description": "User scrolls down the search results page to view more bank options like ubank, Heritage Bank, and ANZ.",
+    "confidence": 0.95,
+    "page_title": "refinancing australia banks - Google Search",
+    "frame_description": "Scrolling through various sponsored search results for home loan refinancing."
+  },
+  {
+    "frame_index_start": 22,
+    "frame_index_end": 32,
+    "type": "dwell",
+    "description": "User pauses scrolling to read the descriptions of the search results for ubank and Heritage Bank.",
+    "confidence": 0.8,
+    "page_title": "refinancing australia banks - Google Search",
+    "frame_description": "Stationary view of search results for ubank and Heritage Bank."
+  },
+  {
+    "frame_index_start": 33,
+    "frame_index_end": 36,
+    "type": "change_ui_state",
+    "description": "A task instruction modal appears on the screen, and the user begins reading the instructions.",
+    "confidence": 1.0,
+    "interaction_target": "Task instruction modal",
+    "frame_description": "An overlay modal appears with detailed task instructions for the user to follow."
+  }
+]

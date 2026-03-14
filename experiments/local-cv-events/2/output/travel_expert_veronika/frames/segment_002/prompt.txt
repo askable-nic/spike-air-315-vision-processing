@@ -1,0 +1,28 @@
+Analyse the following screen recording frames for user interaction events.
+
+**Segment 2** | Time range: 33.2s - 39.2s | FPS: 4.0 | Activity tier: medium | Frames: 30
+
+Frames 0-1 are CONTEXT frames from the previous segment. Frames 28-29 are CONTEXT frames from the next segment. Do NOT report events from context frames.
+
+## Local Event Candidates
+
+The following events were detected locally from cursor tracking and optical flow.
+Please confirm, reject, or modify each candidate based on what you see in the frames.
+
+- **Candidate 1**: dwell | 33050ms-36086ms | confidence=0.70 at cursor (1748, 342) | Extended pause (3036ms) near (1748, 342)
+- **Candidate 2**: click | 35736ms-35852ms | confidence=0.30 at cursor (1747, 342) | Possible click at (1747, 342)
+- **Candidate 3**: click | 35852ms-35852ms | confidence=0.30 at cursor (1747, 342) | Possible click at (1747, 342)
+- **Candidate 4**: click | 35969ms-35969ms | confidence=0.30 at cursor (1739, 349) | Possible click at (1739, 349)
+- **Candidate 5**: click | 36086ms-36086ms | confidence=0.30 at cursor (1748, 342) | Possible click at (1748, 342)
+- **Candidate 6**: click | 36203ms-36203ms | confidence=0.30 at cursor (1707, 378) | Possible click at (1707, 378)
+- **Candidate 7**: click | 36320ms-36320ms | confidence=0.30 at cursor (1710, 363) | Possible click at (1710, 363)
+
+
+Examine each frame carefully and identify all user interactions that occurred during this segment. Pay attention to:
+- Cursor position changes between frames
+- UI elements that appear selected or focused
+- Page content changes that indicate navigation or scrolling
+- Text appearing in form fields
+- Visual state changes (modals, dropdowns, loading states)
+
+Return the events as a JSON array.

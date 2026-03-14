@@ -1,0 +1,30 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "click",
+    "description": "User clicks the 'Next' button on the 'Device requirements' page, which triggers a navigation to the tool selection step.",
+    "confidence": 1.0,
+    "interaction_target": "Next button",
+    "page_title": "Device requirements",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/project-setup/devices"
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "scroll",
+    "description": "User scrolls down the 'Which tool will you use to conduct the remote research?' page to view more options.",
+    "confidence": 0.9,
+    "page_title": "Which tool will you use to conduct the remote research?",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/project-setup/tool"
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 7,
+    "type": "navigate",
+    "description": "The page navigates from the tool selection step to the 'Quota' step.",
+    "confidence": 1.0,
+    "page_title": "Quota",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/project-setup/quota"
+  }
+]

@@ -1,0 +1,38 @@
+Analyse the following screen recording frames for user interaction events.
+
+**Segment 18** | Time range: 116.2s - 128.2s | FPS: 2.691645133505599 | Activity tier: medium | Frames: 37
+
+Frames 0-1 are CONTEXT frames from the previous segment. Frames 35-36 are CONTEXT frames from the next segment. Do NOT report events from context frames.
+
+## Local Event Candidates
+
+The following events were detected locally from cursor tracking and optical flow.
+Please confirm, reject, or modify each candidate based on what you see in the frames.
+
+- **Candidate 1**: hover | 115400ms-116200ms | confidence=0.60 at cursor (277, 466) | Cursor stationary for 800ms near (277, 466)
+- **Candidate 2**: hesitate | 115400ms-116200ms | confidence=0.50 at cursor (277, 466) | Hesitation (800ms) near (277, 466) before action
+- **Candidate 3**: click | 116000ms-116200ms | confidence=0.20 at cursor (277, 466) | Possible click at (277, 466)
+- **Candidate 4**: click | 116200ms-116200ms | confidence=0.20 at cursor (277, 466) | Possible click at (277, 466)
+- **Candidate 5**: click | 116400ms-116400ms | confidence=0.20 at cursor (172, 458) | Possible click at (172, 458)
+- **Candidate 6**: hover | 116600ms-117200ms | confidence=0.60 at cursor (277, 466) | Cursor stationary for 600ms near (277, 466)
+- **Candidate 7**: hesitate | 116600ms-117200ms | confidence=0.50 at cursor (277, 466) | Hesitation (600ms) near (277, 466) before action
+- **Candidate 8**: click | 117000ms-117200ms | confidence=0.20 at cursor (277, 466) | Possible click at (277, 466)
+- **Candidate 9**: click | 117200ms-117200ms | confidence=0.20 at cursor (277, 466) | Possible click at (277, 466)
+- **Candidate 10**: click | 117400ms-117400ms | confidence=0.20 at cursor (158, 458) | Possible click at (158, 458)
+- **Candidate 11**: hover | 117600ms-118200ms | confidence=0.60 at cursor (277, 466) | Cursor stationary for 600ms near (277, 466)
+- **Candidate 12**: hesitate | 117600ms-118000ms | confidence=0.50 at cursor (277, 466) | Hesitation (400ms) near (277, 466) before action
+- **Candidate 13**: click | 117800ms-118000ms | confidence=0.20 at cursor (277, 466) | Possible click at (277, 466)
+- **Candidate 14**: click | 118000ms-118000ms | confidence=0.20 at cursor (277, 466) | Possible click at (277, 466)
+- **Candidate 15**: click | 118200ms-118200ms | confidence=0.20 at cursor (277, 485) | Possible click at (277, 485)
+- **Candidate 16**: click | 118400ms-118400ms | confidence=0.20 at cursor (277, 524) | Possible click at (277, 524)
+- **Candidate 17**: dwell | 125400ms-128800ms | confidence=0.70 at cursor (146, 581) | Extended pause (3400ms) near (146, 581)
+
+
+Examine each frame carefully and identify all user interactions that occurred during this segment. Pay attention to:
+- Cursor position changes between frames
+- UI elements that appear selected or focused
+- Page content changes that indicate navigation or scrolling
+- Text appearing in form fields
+- Visual state changes (modals, dropdowns, loading states)
+
+Return the events as a JSON array.

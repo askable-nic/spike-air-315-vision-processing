@@ -1,0 +1,50 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "input_text",
+    "description": "User types \"sunsh\" into the \"From\" input field",
+    "confidence": 0.9,
+    "interaction_target": "From input field",
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au"
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "select",
+    "description": "User selects \"Sunshine Coast (MCY)\" from the autocomplete suggestions",
+    "confidence": 0.9,
+    "interaction_target": "Sunshine Coast (MCY) suggestion",
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au"
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 7,
+    "type": "input_text",
+    "description": "User types \"lond\" into the \"To\" input field",
+    "confidence": 0.9,
+    "interaction_target": "To input field",
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au"
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 9,
+    "type": "navigate",
+    "description": "User initiates search and navigates to the results page",
+    "confidence": 0.8,
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au"
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 14,
+    "type": "change_ui_state",
+    "description": "Search results page loads and updates as flight data is retrieved from providers",
+    "confidence": 0.9,
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au"
+  }
+]

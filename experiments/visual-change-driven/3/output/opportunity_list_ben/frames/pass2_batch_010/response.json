@@ -1,0 +1,44 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 3,
+    "type": "scroll",
+    "description": "User scrolls up through the session list, moving past the 'AI Interview' card to view 'In Person' and 'Diary Study' options.",
+    "confidence": 0.95,
+    "interaction_target": "Session list",
+    "page_title": "Smart Filters Mobile App",
+    "page_location": "art-resin-05325911.figma.site",
+    "frame_description": "The session list scrolls vertically, revealing different task cards."
+  },
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 6,
+    "type": "dwell",
+    "description": "User pauses to read the details of the 'In Person' and 'Diary Study' session cards.",
+    "confidence": 0.85,
+    "page_title": "Smart Filters Mobile App",
+    "page_location": "art-resin-05325911.figma.site",
+    "frame_description": "The screen remains static on the 'In Person' and 'Diary Study' cards."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 9,
+    "type": "scroll",
+    "description": "User scrolls back down the list to return to the top of the session feed.",
+    "confidence": 0.95,
+    "interaction_target": "Session list",
+    "page_title": "Smart Filters Mobile App",
+    "page_location": "art-resin-05325911.figma.site",
+    "frame_description": "The list scrolls downwards, bringing the 'AI Interview' card back into view."
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 11,
+    "type": "dwell",
+    "description": "User stops scrolling and dwells on the 'AI Interview' and 'Video Call' cards.",
+    "confidence": 0.85,
+    "page_title": "Smart Filters Mobile App",
+    "page_location": "art-resin-05325911.figma.site",
+    "frame_description": "The screen is stationary at the top of the session list."
+  }
+]

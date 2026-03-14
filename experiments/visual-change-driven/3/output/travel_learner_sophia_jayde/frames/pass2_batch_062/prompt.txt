@@ -1,0 +1,75 @@
+You are analysing a screen recording for user interaction events.
+
+**Batch 62** | Time range: 2184.8s - 2219.8s | Frames: 26
+
+## Current page context
+Page: Your details
+Location: comparethemarket.com.au/travel/compare/KyqDvlthA/contact-details
+Description: Compare the Market contact details form for the user to enter their name and email to see comparison results.
+Interactive elements: First name input, Last name input, Email input, Terms and Privacy checkbox, See results button
+
+## Moments to analyse
+
+The following frames show moments where either the screen content changed or the
+cursor was positioned over a UI element.
+
+For interaction moments (before/after pairs), determine:
+1. What event type best describes what happened (click, hover, navigate, input_text,
+   select, change_ui_state, drag, etc.)
+2. What UI element was involved (button label, link text, form field, etc.)
+3. A clear description of the user action
+
+For pre_scene_change moments (before/after pairs captured just before a page
+navigation or major screen transition), determine:
+1. What user action most likely triggered the scene change. Look for:
+   - Elements in a hover or active/pressed state (highlighted buttons, underlined
+     links, focused form controls)
+   - Cursor position if visible — but note the cursor may not be present (e.g.
+     mobile devices, keyboard navigation, touch input)
+   - Any visual difference between the before and after frames that indicates an
+     element was activated (colour change, ripple effect, depression)
+2. Identify the specific UI element (button label, link text, menu item, etc.)
+3. Set the event type to "click" or "navigate" as appropriate
+
+For cursor position moments (single frame), determine:
+1. What UI element is under or near the cursor
+2. Whether this appears to be a hover, a click (if context suggests it), or
+   just the cursor resting
+3. A brief description of the element and its context
+
+If a moment shows no meaningful interaction (e.g. a minor visual artifact or the
+cursor resting in a non-interactive area), omit it from the results.
+
+## Frame annotations
+
+[Frame 0 | 2184600ms | moment 0 (interaction) | before | cursor at (1472, 423)]
+[Frame 1 | 2186494ms | moment 0 (interaction) | after | cursor at (1472, 423)]
+[Frame 2 | 2186843ms | moment 1 (interaction) | before | cursor at (1472, 423)]
+[Frame 3 | 2189009ms | moment 1 (interaction) | after | cursor at (1472, 423)]
+[Frame 4 | 2189053ms | moment 2 (interaction) | before | cursor at (1472, 423)]
+[Frame 5 | 2190097ms | moment 2 (interaction) | after | cursor at (1472, 423)]
+[Frame 6 | 2190141ms | moment 3 (interaction) | before | cursor at (1472, 423)]
+[Frame 7 | 2192613ms | moment 3 (interaction) | after | cursor at (1472, 423)]
+[Frame 8 | 2193744ms | moment 4 (interaction) | before | cursor at (1472, 423)]
+[Frame 9 | 2194550ms | moment 4 (interaction) | after | cursor at (1472, 423)]
+[Frame 10 | 2196260ms | moment 5 (interaction) | before | cursor at (1472, 423)]
+[Frame 11 | 2199242ms | moment 5 (interaction) | after | cursor at (1472, 423)]
+[Frame 12 | 2199319ms | moment 6 (interaction) | before | cursor at (1472, 423)]
+[Frame 13 | 2203151ms | moment 6 (interaction) | after | cursor at (1472, 423)]
+[Frame 14 | 2203229ms | moment 7 (interaction) | before | cursor at (1472, 423)]
+[Frame 15 | 2204001ms | moment 7 (interaction) | after | cursor at (1472, 423)]
+[Frame 16 | 2204317ms | moment 8 (interaction) | before | cursor at (1472, 423)]
+[Frame 17 | 2207060ms | moment 8 (interaction) | after | cursor at (1472, 423)]
+[Frame 18 | 2207104ms | moment 9 (interaction) | before | cursor at (1472, 423)]
+[Frame 19 | 2208420ms | moment 9 (interaction) | after | cursor at (1472, 423)]
+[Frame 20 | 2209314ms | moment 10 (interaction) | before | cursor at (1472, 423)]
+[Frame 21 | 2211208ms | moment 10 (interaction) | after | cursor at (1472, 423)]
+[Frame 22 | 2211251ms | moment 11 (interaction) | before | cursor at (1472, 423)]
+[Frame 23 | 2213723ms | moment 11 (interaction) | after | cursor at (1472, 423)]
+[Frame 24 | 2214311ms | moment 12 (interaction) | before | cursor at (1472, 423)]
+[Frame 25 | 2220012ms | moment 12 (interaction) | after | cursor at (1472, 423)]
+
+Use frame indices relative to this batch (starting from 0). For short interactions,
+frame_index_start and frame_index_end may be the same.
+
+Return events as a JSON array.

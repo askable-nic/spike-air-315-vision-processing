@@ -1,0 +1,46 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "change_ui_state",
+    "description": "The user successfully initiates screen sharing, causing the UI to update from instructions to a 'Perfect!' confirmation message.",
+    "confidence": 0.9,
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+    "frame_description": "A dark screen with white text instructions transitioning to a success message."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 2,
+    "type": "hover",
+    "description": "The cursor rests near the browser's screen sharing notification bar at the bottom of the screen.",
+    "confidence": 0.7,
+    "interaction_target": "Stop sharing / Hide notification bar"
+  },
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 12,
+    "type": "change_ui_state",
+    "description": "Task instructions are progressively revealed to the user on the screen.",
+    "confidence": 0.9,
+    "frame_description": "Text instructions appearing line by line on a dark background."
+  },
+  {
+    "frame_index_start": 21,
+    "frame_index_end": 22,
+    "type": "navigate",
+    "description": "The browser navigates from a blank page to the Figma prototype URL.",
+    "confidence": 1.0,
+    "page_location": "art-resin-05325911.figma.site",
+    "frame_description": "The address bar updates from about:blank to the Figma site URL."
+  },
+  {
+    "frame_index_start": 23,
+    "frame_index_end": 24,
+    "type": "change_ui_state",
+    "description": "The Figma prototype 'Smart Filters' page content begins to load and become visible.",
+    "confidence": 0.9,
+    "page_title": "Smart Filters",
+    "frame_description": "The Figma prototype interface appears on the screen."
+  }
+]

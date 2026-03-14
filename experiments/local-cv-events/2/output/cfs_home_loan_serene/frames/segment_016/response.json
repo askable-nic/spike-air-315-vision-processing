@@ -1,0 +1,37 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 6,
+    "type": "dwell",
+    "description": "User pauses on the screen, likely reading the error message 'Please provide an Australian mobile phone number'.",
+    "confidence": 0.9,
+    "page_title": "Your home loan options await!",
+    "frame_description": "The screen shows a mobile number input field with an error message and a disabled 'PROTECT MY ACCOUNT' button."
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 7,
+    "type": "click",
+    "description": "User clicks on the mobile number input field to begin entry.",
+    "confidence": 0.9,
+    "interaction_target": "Mobile number input field",
+    "frame_description": "The input field gains a blue focus border and the numeric keypad appears at the bottom of the screen."
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 7,
+    "type": "change_ui_state",
+    "description": "The numeric keypad and a suggested phone number appear after the input field is focused.",
+    "confidence": 0.95,
+    "frame_description": "A numeric keyboard and a suggested phone number '0490 024 490' are now visible."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 11,
+    "type": "hover",
+    "description": "User moves the cursor over the suggested phone number '0490 024 490' above the keypad.",
+    "confidence": 0.8,
+    "interaction_target": "Suggested phone number",
+    "frame_description": "The cursor is positioned directly over the auto-fill suggestion for the phone number."
+  }
+]

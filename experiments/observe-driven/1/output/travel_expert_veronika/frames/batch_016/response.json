@@ -1,0 +1,75 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 3,
+    "type": "click",
+    "description": "User clicks the right arrow to advance the return date in the flight search results.",
+    "confidence": 0.8,
+    "interaction_target": "Date picker next arrow",
+    "page_title": "Flight Search Results",
+    "frame_description": "The user is on a flight search results page and interacts with the date selection carousel at the top."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 6,
+    "type": "dwell",
+    "description": "User pauses to examine the flight search results.",
+    "confidence": 0.9,
+    "page_title": "Flight Search Results",
+    "frame_description": "Full view of flight results from Virgin Australia and Qantas."
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 8,
+    "type": "click",
+    "description": "User clicks the right arrow on the date picker again.",
+    "confidence": 0.8,
+    "interaction_target": "Date picker next arrow"
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 9,
+    "type": "navigate",
+    "description": "User navigates from the flight search page to Trello.",
+    "confidence": 0.95,
+    "page_title": "Trello",
+    "frame_description": "The screen transitions to a white loading state with the Trello logo."
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 11,
+    "type": "change_ui_state",
+    "description": "A 'Try Trello Premium' promotional popover appears in the sidebar.",
+    "confidence": 0.9,
+    "interaction_target": "Trello Sidebar",
+    "frame_description": "The Trello workspace sidebar is visible, and a promotional box for Trello Premium appears."
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 22,
+    "type": "hover",
+    "description": "User hovers over the 'Start free trial' link in the Trello Premium popover, suggesting hesitation or interest.",
+    "confidence": 0.85,
+    "interaction_target": "Start free trial link",
+    "frame_description": "The cursor moves around the 'Start free trial' link within the promotional popover."
+  },
+  {
+    "frame_index_start": 23,
+    "frame_index_end": 24,
+    "type": "navigate",
+    "description": "User navigates to the 'Japan' Trello board.",
+    "confidence": 0.95,
+    "page_title": "Japan | Trello",
+    "frame_description": "The screen transitions to show a Trello board titled 'Japan' with various lists and cards."
+  },
+  {
+    "frame_index_start": 25,
+    "frame_index_end": 31,
+    "type": "dwell",
+    "description": "User examines cards on the 'Japan' Trello board, focusing on the 'Fresh Seafood at Nijo Market' card.",
+    "confidence": 0.9,
+    "interaction_target": "Fresh Seafood at Nijo Market card",
+    "page_title": "Japan | Trello",
+    "frame_description": "The user is looking at travel planning cards on the Trello board."
+  }
+]

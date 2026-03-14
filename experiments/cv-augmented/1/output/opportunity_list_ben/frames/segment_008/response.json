@@ -1,0 +1,31 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 13,
+    "type": "scroll",
+    "description": "User scrolls down through the list of research opportunities, reviewing various cards including 'In Person', 'Diary Study', and 'AI Interview'.",
+    "confidence": 0.9,
+    "interaction_target": "Research opportunities list",
+    "page_title": "Smart Filters Mobile App",
+    "frame_description": "A vertical list of research task cards with titles, descriptions, and payment amounts."
+  },
+  {
+    "frame_index_start": 15,
+    "frame_index_end": 16,
+    "type": "navigate",
+    "description": "User clicks on the 'Askable Sessions' browser tab to switch away from the Figma prototype.",
+    "confidence": 0.95,
+    "interaction_target": "Askable Sessions tab",
+    "page_location": "sessions.askable.com",
+    "frame_description": "The browser interface showing the user switching between open tabs."
+  },
+  {
+    "frame_index_start": 16,
+    "frame_index_end": 18,
+    "type": "dwell",
+    "description": "User pauses to read the task instructions displayed on the Askable Sessions page.",
+    "confidence": 0.85,
+    "page_title": "Askable Sessions",
+    "frame_description": "A dark screen with centered white text providing specific task-related feedback to the user."
+  }
+]

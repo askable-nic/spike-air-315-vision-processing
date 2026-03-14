@@ -1,0 +1,48 @@
+[
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 6,
+    "type": "click",
+    "description": "User clicks on the flight option to view available fare types (Lite, Choice)",
+    "confidence": 0.85,
+    "interaction_target": "From $127 button",
+    "page_title": "Select Departing Flight",
+    "frame_description": "The user selects a specific flight time to expand the fare options."
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 7,
+    "type": "change_ui_state",
+    "description": "Fare options (Lite, Choice) are displayed for the selected flight",
+    "confidence": 1.0,
+    "interaction_target": "Select Departing Fare Type section",
+    "frame_description": "The UI updates to show different baggage and change policy options for the selected flight."
+  },
+  {
+    "frame_index_start": 15,
+    "frame_index_end": 16,
+    "type": "click",
+    "description": "User clicks the 'SELECT' button for the 'Lite' fare option",
+    "confidence": 0.9,
+    "interaction_target": "SELECT button",
+    "frame_description": "The 'SELECT' button for the $127 Lite fare turns green with a checkmark, indicating it has been clicked."
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 18,
+    "type": "navigate",
+    "description": "The page transitions to the return flight selection screen after a brief loading state",
+    "confidence": 1.0,
+    "page_title": "Select Return Flight",
+    "frame_description": "A 'Good choice!' loading overlay appears before the return flight options are loaded."
+  },
+  {
+    "frame_index_start": 19,
+    "frame_index_end": 26,
+    "type": "dwell",
+    "description": "User dwells on the 'Select Return Flight' page, reviewing available flights from Melbourne to Adelaide",
+    "confidence": 0.8,
+    "page_title": "Select Return Flight",
+    "frame_description": "The user pauses to examine the list of return flights and their prices."
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 7,
+    "type": "input_text",
+    "description": "User types 'london' into the destination search field",
+    "confidence": 0.9,
+    "interaction_target": "Destination input field",
+    "page_title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations"
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 8,
+    "type": "select",
+    "description": "User selects 'London, Greater London, United Kingdom' from the search suggestions dropdown",
+    "confidence": 0.85,
+    "interaction_target": "Search suggestion: London",
+    "page_title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations"
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 9,
+    "type": "click",
+    "description": "User clicks the 'Search' button to find properties in London",
+    "confidence": 0.95,
+    "interaction_target": "Search button",
+    "page_title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations"
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 11,
+    "type": "navigate",
+    "description": "Page navigates from the homepage to the search results page for London",
+    "confidence": 1.0,
+    "page_title": "London: 6,959 properties found",
+    "frame_description": "The search results page loads showing various hotel and apartment listings in London."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 13,
+    "type": "scroll",
+    "description": "User scrolls down to view property listings and then back up to the top of the page",
+    "confidence": 0.9,
+    "page_title": "London: 6,959 properties found"
+  },
+  {
+    "frame_index_start": 15,
+    "frame_index_end": 18,
+    "type": "scroll",
+    "description": "User scrolls down through the search results and filters, then returns to the top",
+    "confidence": 0.9,
+    "page_title": "London: 6,959 properties found"
+  },
+  {
+    "frame_index_start": 18,
+    "frame_index_end": 20,
+    "type": "dwell",
+    "description": "User pauses at the top of the search results page, likely examining the first few property listings",
+    "confidence": 0.7,
+    "page_title": "London: 6,959 properties found"
+  }
+]

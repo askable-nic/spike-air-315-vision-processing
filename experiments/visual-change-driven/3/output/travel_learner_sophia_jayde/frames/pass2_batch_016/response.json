@@ -1,0 +1,32 @@
+[
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "change_ui_state",
+    "description": "The video call interface updates to display a second participant's video feed below the first.",
+    "confidence": 0.9,
+    "interaction_target": "Video call layout",
+    "page_title": "Askable Sessions",
+    "frame_description": "Video call screen showing participant 'Sophia' and a new participant feed appearing below."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 7,
+    "type": "change_ui_state",
+    "description": "The screen recording view shifts to include the browser's address bar and navigation tabs.",
+    "confidence": 0.9,
+    "interaction_target": "Browser UI",
+    "page_location": "sessions.askable.com/rooms",
+    "frame_description": "Browser interface becomes visible, showing the address bar and category tabs like 'Mathematics' and 'Humanities'."
+  },
+  {
+    "frame_index_start": 16,
+    "frame_index_end": 17,
+    "type": "navigate",
+    "description": "The browser navigates to a specific Askable room URL: sessions.askable.com/rooms/jbd-bpku-6q6.",
+    "confidence": 0.95,
+    "interaction_target": "Address bar",
+    "page_location": "sessions.askable.com/rooms/jbd-bpku-6q6",
+    "frame_description": "The URL in the address bar updates to include a specific room ID, and a picture-in-picture window of the task page appears on the right."
+  }
+]

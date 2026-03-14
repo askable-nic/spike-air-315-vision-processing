@@ -1,0 +1,20 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "navigate",
+    "description": "The page navigates to the hotel search results for London, as indicated by the URL and tab title change.",
+    "confidence": 0.95,
+    "page_location": "https://www.expedia.com.au/Hotel-Search",
+    "frame_description": "The browser header shows a URL change and the tab title updating to 'London (and vicinity), England'."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "change_ui_state",
+    "description": "The search results page updates its state, displaying a search progress bar ('Select stay') and a promotional banner about best prices.",
+    "confidence": 0.9,
+    "interaction_target": "Search results content area",
+    "frame_description": "New UI elements like the 'Select stay' progress indicator and a dark blue price guarantee banner appear on the page."
+  }
+]

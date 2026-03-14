@@ -1,0 +1,85 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "navigate",
+    "description": "User navigates from Google search results to a Skyscanner flight deals page.",
+    "confidence": 0.95,
+    "page_title": "Skyscanner",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "Transition from Google search to Skyscanner flight deals."
+  },
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 4,
+    "type": "navigate",
+    "description": "User navigates to the task instruction screen.",
+    "confidence": 0.95,
+    "frame_description": "Transition from Skyscanner to a dark task instruction screen."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 23,
+    "type": "dwell",
+    "description": "User spends time reading the task instructions regarding planning a holiday to London.",
+    "confidence": 0.85,
+    "frame_description": "User is on the task instruction screen with a dark background and white text."
+  },
+  {
+    "frame_index_start": 23,
+    "frame_index_end": 24,
+    "type": "navigate",
+    "description": "User navigates from the instructions to the Skyscanner flight search homepage.",
+    "confidence": 0.95,
+    "page_title": "Skyscanner | Flights, Hotels, Cars",
+    "page_location": "skyscanner.com.au",
+    "frame_description": "Transition from instructions back to the Skyscanner homepage."
+  },
+  {
+    "frame_index_start": 24,
+    "frame_index_end": 25,
+    "type": "select",
+    "description": "User selects 'Sunshine Coast (MCY)' as the departure airport from the origin dropdown.",
+    "confidence": 0.9,
+    "interaction_target": "From input field",
+    "page_title": "Skyscanner",
+    "frame_description": "The origin dropdown is open with 'Sunshine Coast (MCY)' highlighted."
+  },
+  {
+    "frame_index_start": 25,
+    "frame_index_end": 27,
+    "type": "input_text",
+    "description": "User types 'London' into the destination field.",
+    "confidence": 0.95,
+    "interaction_target": "To input field",
+    "page_title": "Skyscanner",
+    "frame_description": "The destination field shows 'londo' being typed."
+  },
+  {
+    "frame_index_start": 27,
+    "frame_index_end": 28,
+    "type": "navigate",
+    "description": "User initiates a search for flights from Sunshine Coast to London, navigating to the results page.",
+    "confidence": 0.95,
+    "page_title": "Skyscanner | Search Results",
+    "frame_description": "Transition from the search form to the flight results page."
+  },
+  {
+    "frame_index_start": 28,
+    "frame_index_end": 31,
+    "type": "change_ui_state",
+    "description": "The page displays a loading spinner while searching for flight results from various providers.",
+    "confidence": 0.9,
+    "interaction_target": "Searching spinner",
+    "frame_description": "The search results page shows a 'Searching' status with a loading animation."
+  },
+  {
+    "frame_index_start": 32,
+    "frame_index_end": 39,
+    "type": "dwell",
+    "description": "User examines the flight search results and an advertisement for 'Visit the USA'.",
+    "confidence": 0.85,
+    "page_title": "Skyscanner | Search Results",
+    "frame_description": "Flight search results are visible alongside a large vertical advertisement."
+  }
+]

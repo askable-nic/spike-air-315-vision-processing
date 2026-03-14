@@ -1,0 +1,47 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 8,
+    "type": "dwell",
+    "description": "User dwells on the browser tab area while the page is blank.",
+    "confidence": 0.7,
+    "interaction_target": "Browser tab",
+    "frame_description": "The screen is dark/blank with the cursor positioned in the tab bar area."
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 8,
+    "type": "click",
+    "description": "Possible click on a browser tab or link to initiate navigation to the Flight Centre website.",
+    "confidence": 0.4,
+    "interaction_target": "Browser tab",
+    "page_location": "about:blank"
+  },
+  {
+    "frame_index_start": 9,
+    "frame_index_end": 14,
+    "type": "navigate",
+    "description": "The browser navigates to the Flight Centre homepage.",
+    "confidence": 0.9,
+    "page_location": "https://www.flightcentre.com.au",
+    "frame_description": "The page transitions from blank to showing the Flight Centre header and loading placeholders."
+  },
+  {
+    "frame_index_start": 19,
+    "frame_index_end": 32,
+    "type": "dwell",
+    "description": "User dwells on the center of the page while content and promotional banners load.",
+    "confidence": 0.8,
+    "page_title": "Flight Centre | Your centre for travel.",
+    "frame_description": "The cursor remains stationary over the main content area as the 'Tropical Islands Sale' banner becomes visible."
+  },
+  {
+    "frame_index_start": 30,
+    "frame_index_end": 32,
+    "type": "change_ui_state",
+    "description": "The flight search widget appears on the screen over the promotional banner.",
+    "confidence": 0.9,
+    "interaction_target": "Search flights widget",
+    "frame_description": "A blue 'Search flights' button and date selection fields appear in a white box on the page."
+  }
+]

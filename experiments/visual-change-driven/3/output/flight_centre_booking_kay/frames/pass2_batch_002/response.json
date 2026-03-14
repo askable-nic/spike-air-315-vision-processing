@@ -1,0 +1,24 @@
+[
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 13,
+    "type": "select",
+    "description": "User selects February 18th as the departure date in the calendar, causing the modal header to change to 'Returning travel dates'",
+    "confidence": 0.95,
+    "interaction_target": "Date 18",
+    "page_title": "Flight Centre Travel Deals",
+    "page_location": "flightcentre.com.au",
+    "frame_description": "The 'Travel dates' calendar modal is open. The user clicks on the 18th of February."
+  },
+  {
+    "frame_index_start": 16,
+    "frame_index_end": 17,
+    "type": "select",
+    "description": "User selects February 21st as the return date in the calendar",
+    "confidence": 0.95,
+    "interaction_target": "Date 21",
+    "page_title": "Flight Centre Travel Deals",
+    "page_location": "flightcentre.com.au",
+    "frame_description": "The 'Returning travel dates' calendar modal is open. The user clicks on the 21st of February."
+  }
+]

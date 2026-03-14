@@ -1,0 +1,24 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "select",
+    "description": "User navigates the date picker calendar from February 2026 to October 2026.",
+    "confidence": 0.95,
+    "interaction_target": "Date picker month navigation",
+    "page_title": "Hostels Worldwide - Online Hostel Bookings",
+    "page_location": "hostelworld.com",
+    "frame_description": "The date picker month changes from February to October while the cursor remains on the navigation control."
+  },
+  {
+    "frame_index_start": 1,
+    "frame_index_end": 7,
+    "type": "dwell",
+    "description": "User dwells on the date picker after navigating to October 2026, likely reviewing available dates.",
+    "confidence": 0.8,
+    "interaction_target": "Date picker calendar",
+    "page_title": "Hostels Worldwide - Online Hostel Bookings",
+    "page_location": "hostelworld.com",
+    "frame_description": "The user remains on the October 2026 calendar view for several seconds."
+  }
+]

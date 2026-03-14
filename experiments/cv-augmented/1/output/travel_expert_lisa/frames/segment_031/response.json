@@ -1,0 +1,42 @@
+[
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 7,
+    "type": "click",
+    "description": "User clicks the 'Done' button on the date picker modal to confirm their travel dates",
+    "confidence": 0.9,
+    "interaction_target": "Done button",
+    "page_title": "Webjet | Your go-to for going",
+    "page_location": "webjet.com.au",
+    "frame_description": "The user moves the cursor to the 'Done' button in the bottom right of the calendar modal and clicks it."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 12,
+    "type": "click",
+    "description": "User clicks the 'Search Flights' button to begin the flight search process",
+    "confidence": 0.9,
+    "interaction_target": "Search Flights button",
+    "page_title": "Webjet | Your go-to for going",
+    "page_location": "webjet.com.au",
+    "frame_description": "After closing the date picker, the user clicks the primary 'Search Flights' call to action."
+  },
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 14,
+    "type": "navigate",
+    "description": "The browser navigates from the homepage to the flight search results page",
+    "confidence": 1.0,
+    "page_location": "services.webjet.com.au/web/flights/",
+    "frame_description": "The URL changes and the page content transitions to the search results interface."
+  },
+  {
+    "frame_index_start": 15,
+    "frame_index_end": 19,
+    "type": "change_ui_state",
+    "description": "A loading animation featuring a plane flying between Brisbane and London is displayed while results are fetched",
+    "confidence": 1.0,
+    "page_title": "Flight Search",
+    "frame_description": "The search results page shows a 'Available airfares will be displayed shortly' message with a progress animation."
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 9,
+    "type": "hover",
+    "description": "User hovers over various home loan options, specifically looking at fixed rate details for different lenders on the Mortgage Choice comparison page.",
+    "confidence": 0.9,
+    "interaction_target": "Home loan comparison table",
+    "page_title": "Mortgage Choice",
+    "frame_description": "A list of home loan products with details like repayments, interest rates, and features."
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 10,
+    "type": "navigate",
+    "description": "User navigates from the Mortgage Choice website to the task instruction and completion screen.",
+    "confidence": 1.0,
+    "page_title": "Task",
+    "frame_description": "The screen transitions from the mortgage site to a white page with task instructions."
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 12,
+    "type": "dwell",
+    "description": "User reviews the task instructions on the final screen and moves the cursor towards the 'End Task' button.",
+    "confidence": 0.9,
+    "interaction_target": "End Task button",
+    "page_title": "Task",
+    "frame_description": "A task summary page with instructions and an 'End Task' button at the bottom."
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 5,
+    "type": "scroll",
+    "description": "User swipes horizontally through the 'Short tasks & surveys' carousel to browse available tasks.",
+    "confidence": 0.9,
+    "interaction_target": "Short tasks & surveys carousel",
+    "page_title": "Explore",
+    "frame_description": "The user is browsing through horizontal cards in the top section of the Explore page."
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 12,
+    "type": "scroll",
+    "description": "User scrolls down the Explore page to view more available sessions in the 'Sessions to schedule' section.",
+    "confidence": 0.95,
+    "interaction_target": "Explore page",
+    "page_title": "Explore",
+    "frame_description": "The user scrolls vertically to see more content further down the page."
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 17,
+    "type": "dwell",
+    "description": "User pauses at the bottom of the page, likely reading the 'Video Call' session details.",
+    "confidence": 0.85,
+    "interaction_target": "Sessions to schedule list",
+    "page_title": "Explore",
+    "frame_description": "The screen remains static at the bottom of the list for several frames."
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 20,
+    "type": "scroll",
+    "description": "User scrolls back up to the top of the Explore page.",
+    "confidence": 0.9,
+    "interaction_target": "Explore page",
+    "page_title": "Explore",
+    "frame_description": "The user scrolls vertically back to the top of the screen."
+  }
+]

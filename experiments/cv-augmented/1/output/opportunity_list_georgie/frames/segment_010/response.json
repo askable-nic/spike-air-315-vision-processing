@@ -1,0 +1,62 @@
+[
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 6,
+    "type": "click",
+    "description": "User clicked the 'Save these preferences' toggle switch to enable it.",
+    "confidence": 0.9,
+    "interaction_target": "Save these preferences toggle",
+    "page_title": "Explore",
+    "frame_description": "The cursor is positioned over the toggle switch, which changes from grey to blue as a modal appears."
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 6,
+    "type": "change_ui_state",
+    "description": "A 'Remember Preferences' informational modal appeared after the user enabled the toggle.",
+    "confidence": 1.0,
+    "interaction_target": "Remember Preferences modal",
+    "page_title": "Explore",
+    "frame_description": "A white modal overlay appears on the screen with the title 'Remember Preferences'."
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 9,
+    "type": "click",
+    "description": "User clicked the close button (X) on the 'Remember Preferences' modal.",
+    "confidence": 0.8,
+    "interaction_target": "Close button",
+    "page_title": "Explore",
+    "frame_description": "The cursor is over the 'X' icon in the top right of the modal, and the modal begins to fade out in the next frame."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 12,
+    "type": "click",
+    "description": "User clicked the 'Save these preferences' toggle switch again to disable it.",
+    "confidence": 0.9,
+    "interaction_target": "Save these preferences toggle",
+    "page_title": "Explore",
+    "frame_description": "The cursor clicks the blue toggle, which then returns to a grey (off) state."
+  },
+  {
+    "frame_index_start": 20,
+    "frame_index_end": 23,
+    "type": "scroll",
+    "description": "User scrolled the page vertically to reveal the 'Short tasks & surveys' section.",
+    "confidence": 1.0,
+    "interaction_target": "Page content",
+    "page_title": "Explore",
+    "frame_description": "The cards on the screen shift upwards, bringing a new section into view at the top."
+  },
+  {
+    "frame_index_start": 31,
+    "frame_index_end": 33,
+    "type": "scroll",
+    "description": "User scrolled horizontally through the 'Short tasks & surveys' card carousel.",
+    "confidence": 1.0,
+    "interaction_target": "Short tasks & surveys carousel",
+    "page_title": "Explore",
+    "frame_description": "The horizontal list of task cards shifts to the left, showing different opportunities."
+  }
+]

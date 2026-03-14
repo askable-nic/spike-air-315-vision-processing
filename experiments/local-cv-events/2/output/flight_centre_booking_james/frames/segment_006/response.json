@@ -1,0 +1,41 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "change_ui_state",
+    "description": "The flight search widget transitions from a loading skeleton state to a fully interactive form.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre | Your centre for travel.",
+    "page_location": "https://www.flightcentre.com.au",
+    "frame_description": "The search bar elements appear after a brief loading period."
+  },
+  {
+    "frame_index_start": 4,
+    "frame_index_end": 5,
+    "type": "click",
+    "description": "User clicks the 'Where to?' destination input field, triggering the popular destinations dropdown menu.",
+    "confidence": 0.85,
+    "interaction_target": "Where to? input field",
+    "page_title": "Flight Centre | Your centre for travel.",
+    "page_location": "https://www.flightcentre.com.au"
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 6,
+    "type": "select",
+    "description": "User selects 'Melbourne, Australia' from the destination dropdown menu, updating the search field.",
+    "confidence": 0.9,
+    "interaction_target": "Melbourne, Australia option",
+    "page_title": "Flight Centre | Your centre for travel.",
+    "page_location": "https://www.flightcentre.com.au"
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 6,
+    "type": "change_ui_state",
+    "description": "A Honey browser extension popup appears in the top right corner of the browser window.",
+    "confidence": 0.95,
+    "page_title": "Flight Centre | Your centre for travel.",
+    "page_location": "https://www.flightcentre.com.au"
+  }
+]

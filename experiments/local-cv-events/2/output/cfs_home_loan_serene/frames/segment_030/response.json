@@ -1,0 +1,50 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 14,
+    "type": "dwell",
+    "description": "User dwells on the savings summary section, likely reading the calculated monthly savings ($49) and repayments ($2,466).",
+    "confidence": 0.9,
+    "interaction_target": "Savings summary",
+    "page_title": "Home Loan Repayment Calculator",
+    "frame_description": "The screen displays a summary of potential savings and new repayments when switching to St.George."
+  },
+  {
+    "frame_index_start": 14,
+    "frame_index_end": 17,
+    "type": "scroll",
+    "description": "User scrolls down the page to view more details of the home loan offer.",
+    "confidence": 0.8,
+    "page_title": "Home Loan Repayment Calculator",
+    "frame_description": "The page content moves upwards, revealing interest rate details."
+  },
+  {
+    "frame_index_start": 18,
+    "frame_index_end": 27,
+    "type": "dwell",
+    "description": "User pauses to examine the interest rate (5.54% p.a.) and comparison rate (5.55% p.a.) details for the Basic Variable Rate Home Loan.",
+    "confidence": 0.8,
+    "interaction_target": "Interest rate details",
+    "page_title": "Home Loan Repayment Calculator",
+    "frame_description": "The cursor is stationary over the interest rate information section."
+  },
+  {
+    "frame_index_start": 27,
+    "frame_index_end": 36,
+    "type": "scroll",
+    "description": "User scrolls further down to the bottom of the calculator results.",
+    "confidence": 0.8,
+    "page_title": "Home Loan Repayment Calculator",
+    "frame_description": "The page scrolls down to show the 'Extra monthly repayments' section."
+  },
+  {
+    "frame_index_start": 37,
+    "frame_index_end": 44,
+    "type": "dwell",
+    "description": "User dwells on the 'Want to pay off your home loan sooner?' section, near the extra monthly repayments input field.",
+    "confidence": 0.8,
+    "interaction_target": "Extra monthly repayments section",
+    "page_title": "Home Loan Repayment Calculator",
+    "frame_description": "The cursor lingers near the input field for extra monthly repayments at the bottom of the calculator."
+  }
+]

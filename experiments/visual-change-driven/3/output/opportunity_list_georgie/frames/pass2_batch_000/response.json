@@ -1,0 +1,57 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "click",
+    "description": "User clicks the screen sharing button as instructed by the on-screen text.",
+    "confidence": 0.95,
+    "interaction_target": "screen sharing button",
+    "page_title": "Screen Sharing Instructions",
+    "frame_description": "The screen displays instructions to share the window, which changes to a success message after the interaction."
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "change_ui_state",
+    "description": "The instruction text updates to reveal more details about the upcoming task.",
+    "confidence": 0.9,
+    "page_title": "Screen Sharing Instructions",
+    "frame_description": "Text on screen expands from 'Now I'm going' to 'Now I'm going to show you a prototype with new filtering'."
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 11,
+    "type": "change_ui_state",
+    "description": "The instruction text continues to reveal the task scenario.",
+    "confidence": 0.9,
+    "page_title": "Screen Sharing Instructions",
+    "frame_description": "Text updates to include 'explore the prototype to f'."
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 13,
+    "type": "change_ui_state",
+    "description": "The instruction text reveals the full task description and testing reminders.",
+    "confidence": 0.9,
+    "page_title": "Screen Sharing Instructions",
+    "frame_description": "The text block expands significantly to explain the scenario and the 'think aloud' protocol."
+  },
+  {
+    "frame_index_start": 14,
+    "frame_index_end": 15,
+    "type": "change_ui_state",
+    "description": "The screen transitions to a new set of instructions focusing on the 'think aloud' process.",
+    "confidence": 0.9,
+    "page_title": "Screen Sharing Instructions",
+    "frame_description": "The previous task description is replaced by instructions to share thoughts while working."
+  },
+  {
+    "frame_index_start": 18,
+    "frame_index_end": 19,
+    "type": "change_ui_state",
+    "description": "The screen transitions to the final instruction before opening the prototype website.",
+    "confidence": 0.9,
+    "page_title": "Screen Sharing Instructions",
+    "frame_description": "The text changes to inform the user that the website will be opened in their browser."
+  }
+]

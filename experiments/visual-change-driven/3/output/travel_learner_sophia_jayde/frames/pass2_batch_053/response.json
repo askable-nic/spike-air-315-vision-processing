@@ -1,0 +1,60 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 2,
+    "type": "select",
+    "description": "User enters or selects the departure date '09/11/2026' in the Departure Date input field",
+    "confidence": 0.9,
+    "interaction_target": "Departure Date input",
+    "page_title": "Travel dates",
+    "page_location": "comparethemarket.com.au/travel/compare/KYqDvlthA/single-trip-dates"
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "click",
+    "description": "User clicks the calendar icon within the Departure Date field to open the date picker",
+    "confidence": 0.9,
+    "interaction_target": "Calendar icon",
+    "page_title": "Travel dates",
+    "page_location": "comparethemarket.com.au/travel/compare/KYqDvlthA/single-trip-dates"
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 7,
+    "type": "navigate",
+    "description": "User navigates from the 'Travel dates' page to the 'Travellers' page, likely by clicking a 'Continue' button",
+    "confidence": 1.0,
+    "page_title": "Travellers",
+    "page_location": "comparethemarket.com.au/travel/compare/KYqDvlthA/travellers-ages"
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 9,
+    "type": "hover",
+    "description": "User hovers the cursor over the input field for entering adult traveller ages",
+    "confidence": 0.8,
+    "interaction_target": "Adult age input field",
+    "page_title": "Travellers",
+    "page_location": "comparethemarket.com.au/travel/compare/KYqDvlthA/travellers-ages"
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 12,
+    "type": "input_text",
+    "description": "User enters the ages '24' and '24' for two adult travellers into the input field",
+    "confidence": 0.9,
+    "interaction_target": "Adult age input field",
+    "page_title": "Travellers",
+    "page_location": "comparethemarket.com.au/travel/compare/KYqDvlthA/travellers-ages"
+  },
+  {
+    "frame_index_start": 12,
+    "frame_index_end": 13,
+    "type": "navigate",
+    "description": "User navigates from the 'Travellers' page to the 'Cover levels' page",
+    "confidence": 1.0,
+    "page_title": "Cover levels",
+    "page_location": "comparethemarket.com.au/travel/compare/KYqDvlthA/cover-levels"
+  }
+]

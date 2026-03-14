@@ -1,0 +1,32 @@
+Analyse the following screen recording frames for user interaction events.
+
+**Segment 25** | Time range: 156.2s - 162.2s | FPS: 2.0 | Activity tier: low | Frames: 17
+
+Frames 0-1 are CONTEXT frames from the previous segment. Frames 15-16 are CONTEXT frames from the next segment. Do NOT report events from context frames.
+
+## Local Event Candidates
+
+The following events were detected locally from cursor tracking and optical flow.
+Please confirm, reject, or modify each candidate based on what you see in the frames.
+
+- **Candidate 1**: hover | 155500ms-157300ms | confidence=0.60 at cursor (531, 84) | Cursor stationary for 1800ms near (531, 84)
+- **Candidate 2**: hesitate | 155500ms-157300ms | confidence=0.50 at cursor (531, 84) | Hesitation (1800ms) near (531, 84) before action
+- **Candidate 3**: click | 157100ms-157300ms | confidence=0.30 at cursor (533, 84) | Possible click at (533, 84)
+- **Candidate 4**: click | 157200ms-157300ms | confidence=0.30 at cursor (533, 84) | Possible click at (533, 84)
+- **Candidate 5**: click | 157300ms-157300ms | confidence=0.30 at cursor (533, 84) | Possible click at (533, 84)
+- **Candidate 6**: click | 158000ms-158000ms | confidence=0.30 at cursor (649, 482) | Possible click at (649, 482)
+- **Candidate 7**: click | 158100ms-158100ms | confidence=0.30 at cursor (650, 475) | Possible click at (650, 475)
+- **Candidate 8**: click | 158200ms-158200ms | confidence=0.30 at cursor (670, 473) | Possible click at (670, 473)
+- **Candidate 9**: click | 158300ms-158300ms | confidence=0.30 at cursor (653, 472) | Possible click at (653, 472)
+- **Candidate 10**: click | 158400ms-158400ms | confidence=0.30 at cursor (751, 463) | Possible click at (751, 463)
+- **Candidate 11**: click | 158500ms-158500ms | confidence=0.30 at cursor (798, 484) | Possible click at (798, 484)
+
+
+Examine each frame carefully and identify all user interactions that occurred during this segment. Pay attention to:
+- Cursor position changes between frames
+- UI elements that appear selected or focused
+- Page content changes that indicate navigation or scrolling
+- Text appearing in form fields
+- Visual state changes (modals, dropdowns, loading states)
+
+Return the events as a JSON array.

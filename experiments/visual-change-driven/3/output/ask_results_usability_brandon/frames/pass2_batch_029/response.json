@@ -1,0 +1,36 @@
+[
+  {
+    "frame_index_start": 0,
+    "frame_index_end": 1,
+    "type": "change_ui_state",
+    "description": "The view switched from the 'Individual responses' list to the summary view showing the average rating and distribution chart for the current question.",
+    "confidence": 0.9,
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "app.askable.com/studies/69715/results"
+  },
+  {
+    "frame_index_start": 6,
+    "frame_index_end": 7,
+    "type": "change_ui_state",
+    "description": "The average rating updated from 4.4 to 4.6, indicating a change in the applied filters or data set.",
+    "confidence": 0.8,
+    "page_title": "Participant App: Wallet Core Flows & Expectations"
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 9,
+    "type": "change_ui_state",
+    "description": "The average rating updated from 4.6 back to 4.4 and the chart distribution changed, likely due to a filter being removed or modified.",
+    "confidence": 0.8,
+    "page_title": "Participant App: Wallet Core Flows & Expectations"
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 11,
+    "type": "click",
+    "description": "User clicked on the 'withdrawal from you...' question in the sidebar to view its results, navigating away from the 'Being able to easily see my monthly or yearly...' question.",
+    "confidence": 0.95,
+    "interaction_target": "withdrawal from you...",
+    "page_title": "Participant App: Wallet Core Flows & Expectations"
+  }
+]

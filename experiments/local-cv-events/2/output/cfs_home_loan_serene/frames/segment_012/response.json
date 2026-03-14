@@ -1,0 +1,88 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 4,
+    "type": "select",
+    "description": "User selects the 'Major lender' option on the lender features screen",
+    "confidence": 0.95,
+    "interaction_target": "Major lender",
+    "page_title": "Are any of the following important to you when choosing a lender?",
+    "frame_description": "The 'Major lender' icon is highlighted and then selected with a purple border."
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 6,
+    "type": "select",
+    "description": "User selects the 'Offset/Redraw' option",
+    "confidence": 0.9,
+    "interaction_target": "Offset/Redraw",
+    "page_title": "Are any of the following important to you when choosing a lender?",
+    "frame_description": "The 'Offset/Redraw' icon shows a grey highlight indicating interaction."
+  },
+  {
+    "frame_index_start": 7,
+    "frame_index_end": 8,
+    "type": "navigate",
+    "description": "The page transitions from the lender features screen to the credit history question",
+    "confidence": 0.95,
+    "page_title": "What do you think your credit history is?",
+    "frame_description": "The screen scrolls or transitions to a new question about credit history."
+  },
+  {
+    "frame_index_start": 8,
+    "frame_index_end": 9,
+    "type": "select",
+    "description": "User selects 'Excellent - No Issues' from the credit history options",
+    "confidence": 0.95,
+    "interaction_target": "Excellent - No Issues",
+    "page_title": "What do you think your credit history is?",
+    "frame_description": "The 'Excellent - No Issues' button is selected with a purple border."
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 13,
+    "type": "dwell",
+    "description": "User pauses briefly after selecting their credit history",
+    "confidence": 0.85,
+    "page_title": "What do you think your credit history is?",
+    "frame_description": "The cursor remains stationary on the selected credit history option."
+  },
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 14,
+    "type": "navigate",
+    "description": "The page transitions to the income source question",
+    "confidence": 0.95,
+    "page_title": "How do you earn your income?",
+    "frame_description": "The screen transitions to show income earning options."
+  },
+  {
+    "frame_index_start": 14,
+    "frame_index_end": 16,
+    "type": "select",
+    "description": "User selects 'Other' as their income source",
+    "confidence": 0.95,
+    "interaction_target": "Other",
+    "page_title": "How do you earn your income?",
+    "frame_description": "The 'Other' button is highlighted and then selected."
+  },
+  {
+    "frame_index_start": 17,
+    "frame_index_end": 18,
+    "type": "navigate",
+    "description": "The page transitions to the final name input screen",
+    "confidence": 0.95,
+    "page_title": "One last thing, what's your first name?",
+    "frame_description": "The screen transitions to the final step of the form."
+  },
+  {
+    "frame_index_start": 19,
+    "frame_index_end": 20,
+    "type": "dwell",
+    "description": "User pauses on the name input screen before typing",
+    "confidence": 0.8,
+    "interaction_target": "Type your first name here",
+    "page_title": "One last thing, what's your first name?",
+    "frame_description": "The cursor is positioned near the name input field."
+  }
+]

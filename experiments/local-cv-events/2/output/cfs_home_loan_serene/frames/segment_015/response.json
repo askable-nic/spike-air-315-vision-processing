@@ -1,0 +1,40 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 10,
+    "type": "input_text",
+    "description": "User finishes entering their first name 'JANE DO' into the input field",
+    "confidence": 0.9,
+    "interaction_target": "First name input field",
+    "page_title": "One last thing, what's your first name?",
+    "frame_description": "The user is typing their name into the text box while the mobile keyboard is visible."
+  },
+  {
+    "frame_index_start": 10,
+    "frame_index_end": 11,
+    "type": "click",
+    "description": "User clicks the 'GET MY HOME LOAN MATCHES' button",
+    "confidence": 0.8,
+    "interaction_target": "GET MY HOME LOAN MATCHES button",
+    "page_title": "One last thing, what's your first name?",
+    "frame_description": "The cursor moves towards the purple action button and the screen begins to transition."
+  },
+  {
+    "frame_index_start": 11,
+    "frame_index_end": 14,
+    "type": "navigate",
+    "description": "Page navigates from the name entry screen to the phone number verification screen",
+    "confidence": 0.9,
+    "page_title": "Your home loan options await!",
+    "frame_description": "The screen transitions through a white loading state to a new page."
+  },
+  {
+    "frame_index_start": 15,
+    "frame_index_end": 27,
+    "type": "dwell",
+    "description": "User pauses on the phone number verification screen, likely reading the requirement for an Australian mobile number",
+    "confidence": 0.9,
+    "page_title": "Your home loan options await!",
+    "frame_description": "The user remains on the new screen where a phone number input and an error message are visible."
+  }
+]

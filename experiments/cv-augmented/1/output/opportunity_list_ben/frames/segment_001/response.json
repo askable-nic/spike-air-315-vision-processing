@@ -1,0 +1,39 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 23,
+    "type": "dwell",
+    "description": "User is reading the task instructions on the Askable Sessions page as they are revealed.",
+    "confidence": 0.9,
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/ai-mod/698c05e92b10ed78662f9a9e",
+    "frame_description": "The screen shows a dark background with white text providing instructions for a user testing task."
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 23,
+    "type": "change_ui_state",
+    "description": "Task instructions are dynamically appearing on the screen with a typing effect.",
+    "confidence": 0.95,
+    "frame_description": "Text content on the page updates frame-by-frame as the instruction message is typed out."
+  },
+  {
+    "frame_index_start": 24,
+    "frame_index_end": 25,
+    "type": "navigate",
+    "description": "The browser navigates from the instructions page to the Figma prototype URL.",
+    "confidence": 1.0,
+    "page_location": "art-resin-05325911.figma.site",
+    "frame_description": "The browser tab changes from 'Askable Sessions' to 'Loading...' and then to 'Smart Filters Mobile App'."
+  },
+  {
+    "frame_index_start": 26,
+    "frame_index_end": 26,
+    "type": "dwell",
+    "description": "User begins examining the loaded Figma prototype 'Smart Filters Mobile App'.",
+    "confidence": 0.8,
+    "page_title": "Smart Filters Mobile App",
+    "page_location": "art-resin-05325911.figma.site",
+    "frame_description": "The Figma prototype is fully loaded, showing a mobile app interface with various task and session cards."
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 12,
+    "type": "dwell",
+    "description": "User examines Google search results for home loans, lingering on the Aussie.com.au result.",
+    "confidence": 0.85,
+    "page_title": "home loan - Google Search",
+    "page_location": "https://www.google.com.au/search?q=home+loan",
+    "frame_description": "Google search results page showing sponsored results for home loans."
+  },
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 13,
+    "type": "click",
+    "description": "User clicks on the aussie.com.au search result titled 'Top 15 Home Loan Rates'.",
+    "confidence": 0.95,
+    "interaction_target": "Top 15 Home Loan Rates link",
+    "page_title": "home loan - Google Search",
+    "page_location": "https://www.google.com.au/search?q=home+loan"
+  },
+  {
+    "frame_index_start": 13,
+    "frame_index_end": 14,
+    "type": "navigate",
+    "description": "Page navigates from Google search results to the Aussie home page.",
+    "confidence": 1.0,
+    "page_location": "https://www.aussie.com.au/home-loan"
+  },
+  {
+    "frame_index_start": 14,
+    "frame_index_end": 28,
+    "type": "hesitate",
+    "description": "User pauses on the Aussie landing page, hovering over the 'I want to refinance' option before selecting it.",
+    "confidence": 0.8,
+    "interaction_target": "I want to refinance button",
+    "page_title": "Compare low home loan rates | Aussie",
+    "page_location": "https://www.aussie.com.au/home-loan"
+  },
+  {
+    "frame_index_start": 29,
+    "frame_index_end": 29,
+    "type": "click",
+    "description": "User clicks the 'I want to refinance' button.",
+    "confidence": 0.95,
+    "interaction_target": "I want to refinance button",
+    "page_title": "Compare low home loan rates | Aussie",
+    "page_location": "https://www.aussie.com.au/home-loan"
+  },
+  {
+    "frame_index_start": 30,
+    "frame_index_end": 32,
+    "type": "change_ui_state",
+    "description": "A loading screen with a spinner and the text 'Loading... You're moving along nicely.' appears.",
+    "confidence": 1.0,
+    "frame_description": "White loading screen with a purple animated logo and progress text."
+  },
+  {
+    "frame_index_start": 32,
+    "frame_index_end": 33,
+    "type": "navigate",
+    "description": "Page navigates to the first step of the refinance flow.",
+    "confidence": 1.0,
+    "page_title": "Aussie - Refinance",
+    "page_location": "https://www.aussie.com.au/refinance/step1"
+  },
+  {
+    "frame_index_start": 33,
+    "frame_index_end": 39,
+    "type": "dwell",
+    "description": "User reads the question 'What is your current loan balance?'.",
+    "confidence": 0.85,
+    "page_title": "Aussie - Refinance",
+    "page_location": "https://www.aussie.com.au/refinance/step1",
+    "frame_description": "Form page asking for the user's current loan balance."
+  },
+  {
+    "frame_index_start": 40,
+    "frame_index_end": 40,
+    "type": "click",
+    "description": "User clicks on the text input field to enter their loan balance, triggering the on-screen keyboard.",
+    "confidence": 0.95,
+    "interaction_target": "What is your current loan balance? input field",
+    "page_title": "Aussie - Refinance",
+    "page_location": "https://www.aussie.com.au/refinance/step1"
+  },
+  {
+    "frame_index_start": 41,
+    "frame_index_end": 57,
+    "type": "input_text",
+    "description": "User types '1000000' into the loan balance input field using the on-screen keyboard.",
+    "confidence": 0.95,
+    "interaction_target": "On-screen keyboard",
+    "page_title": "Aussie - Refinance",
+    "page_location": "https://www.aussie.com.au/refinance/step1"
+  }
+]

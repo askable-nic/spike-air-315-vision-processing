@@ -1,0 +1,47 @@
+[
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 2,
+    "type": "click",
+    "description": "User clicks the 'Next' button on the 'Create a custom screener' page.",
+    "confidence": 0.9,
+    "interaction_target": "Next button",
+    "page_title": "Create a custom screener",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/audience/custom-screener"
+  },
+  {
+    "frame_index_start": 2,
+    "frame_index_end": 3,
+    "type": "navigate",
+    "description": "The application navigates to the 'Your timezone' section under 'Additional Info'.",
+    "confidence": 1.0,
+    "page_title": "Your timezone",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/additional-info/your-timezone"
+  },
+  {
+    "frame_index_start": 3,
+    "frame_index_end": 4,
+    "type": "navigate",
+    "description": "The user navigates back to the 'Custom screener' section.",
+    "confidence": 1.0,
+    "page_title": "Create a custom screener",
+    "page_location": "app.askable.com/booking-setup/699e7b7bbc6efe02a95a4768/audience/custom-screener"
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 5,
+    "type": "click",
+    "description": "User clicks the '+ Add another custom question' link to expand question options.",
+    "confidence": 0.9,
+    "interaction_target": "+ Add another custom question",
+    "page_title": "Create a custom screener"
+  },
+  {
+    "frame_index_start": 5,
+    "frame_index_end": 5,
+    "type": "change_ui_state",
+    "description": "A dropdown menu appears with options: 'Multiple choice', 'Short answer', and 'Copy from other study'.",
+    "confidence": 0.95,
+    "frame_description": "Dropdown menu visible below the custom question list."
+  }
+]
