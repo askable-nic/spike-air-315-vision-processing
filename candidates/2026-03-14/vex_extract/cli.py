@@ -32,12 +32,16 @@ _SKIPPABLE = ("cursor", "flow", "segment", "prompt", "gemini", "merge")
     multiple=True,
     help="Skip a stage (repeatable). Downstream stages degrade gracefully.",
 )
+@click.option("--no-cursor", is_flag=True, default=False, help="Skip cursor tracking entirely.")
+@click.option("--no-flow", is_flag=True, default=False, help="Skip optical flow analysis.")
 def cli(
     video: Path,
     offset: int,
     config_path: Path | None,
     stop_after: str | None,
     skip_stages: tuple[str, ...],
+    no_cursor: bool,
+    no_flow: bool,
 ) -> None:
     """Extract user interaction events from a screen recording video.
 
@@ -64,6 +68,10 @@ def cli(
 
       # Skip all CV, just run Gemini analysis:
       python -m vex_extract --video v.mp4 --offset 0 --skip cursor --skip flow
+
+      # Convenience flags for skipping CV stages:
+      python -m vex_extract --video v.mp4 --offset 0 --no-cursor
+      python -m vex_extract --video v.mp4 --offset 0 --no-cursor --no-flow
     """
     app_root = Path(__file__).resolve().parent.parent
     load_dotenv(app_root / ".env")
@@ -72,7 +80,8 @@ def cli(
         config_path = app_root / "config.yaml"
     config = load_config(config_path)
 
-    skip = frozenset(skip_stages)
+    extra_skips = (("cursor",) if no_cursor else ()) + (("flow",) if no_flow else ())
+    skip = frozenset(skip_stages + extra_skips)
 
     # Only require API key if gemini stage will actually run
     needs_gemini = "gemini" not in skip and (

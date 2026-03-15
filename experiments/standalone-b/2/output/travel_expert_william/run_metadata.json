@@ -1,0 +1,156 @@
+{
+  "run_id": "2026-03-15_100035",
+  "timestamp": "2026-03-15T10:03:41.142692+00:00",
+  "config": {
+    "gemini": {
+      "api_key_env": "GEMINI_API_KEY",
+      "model": "gemini-3-flash-preview",
+      "temperature": 0.1,
+      "max_concurrent": 3
+    },
+    "video": {
+      "target_pixels": 2073600,
+      "video_fps": 20
+    },
+    "segmentation": {
+      "max_segment_duration_ms": 75000,
+      "segment_overlap_ms": 5000
+    },
+    "cursor": {
+      "tracking_base_fps": 2.0,
+      "tracking_peak_fps": 15.0,
+      "tracking_displacement_threshold_px": 30.0,
+      "tracking_active_padding_ms": 500,
+      "template_scales": [
+        0.8,
+        1.0,
+        1.25,
+        1.5
+      ],
+      "match_threshold": 0.6,
+      "early_exit_threshold": 0.9,
+      "static_filter_duration_ms": 3000,
+      "static_filter_tolerance_px": 1.0,
+      "max_interpolation_gap_ms": 500,
+      "smooth_window": 3,
+      "smooth_displacement_threshold": 10.0
+    },
+    "flow": {
+      "flow_fps": 2.0,
+      "flow_grid_step": 20,
+      "flow_window_size_ms": 1000,
+      "flow_window_step_ms": 500,
+      "resolution_height": 720
+    },
+    "cv_summary": {
+      "summary_window_ms": 250
+    },
+    "merge": {
+      "time_tolerance_ms": 2000,
+      "similarity_threshold": 0.7,
+      "cursor_event_types": [
+        "click",
+        "hover",
+        "dwell",
+        "cursor_thrash",
+        "select",
+        "drag"
+      ]
+    },
+    "token_costs": {
+      "gemini-2.5-flash": {
+        "input_token_cost": 3e-07,
+        "output_token_cost": 2.5e-06
+      },
+      "gemini-3-flash-preview": {
+        "input_token_cost": 5e-07,
+        "output_token_cost": 3e-06
+      }
+    }
+  },
+  "video_path": "/Users/nic/Developer/spike-air-315-vision-processing/input_data/screen_tracks/travel_expert_william.webm",
+  "video_duration_ms": 358134.0,
+  "video_dimensions": {
+    "width": 1874,
+    "height": 1106
+  },
+  "screen_track_start_offset": 29884,
+  "stages_run": [
+    "normalize",
+    "segment",
+    "prompt",
+    "gemini",
+    "merge"
+  ],
+  "stages_skipped": [
+    "cursor",
+    "flow"
+  ],
+  "stop_after": null,
+  "segments": [
+    {
+      "index": 0,
+      "start_ms": 0.0,
+      "end_ms": 76626.8,
+      "duration_ms": 76626.8,
+      "event_count": 9,
+      "input_tokens": 94753,
+      "output_tokens": 1523,
+      "analysis_ms": 46665.3
+    },
+    {
+      "index": 1,
+      "start_ms": 66626.8,
+      "end_ms": 148253.6,
+      "duration_ms": 81626.8,
+      "event_count": 31,
+      "input_tokens": 99866,
+      "output_tokens": 4842,
+      "analysis_ms": 77466.2
+    },
+    {
+      "index": 2,
+      "start_ms": 138253.6,
+      "end_ms": 219880.40000000002,
+      "duration_ms": 81626.8,
+      "event_count": 30,
+      "input_tokens": 99867,
+      "output_tokens": 4163,
+      "analysis_ms": 99308.5
+    },
+    {
+      "index": 3,
+      "start_ms": 209880.40000000002,
+      "end_ms": 291507.2,
+      "duration_ms": 81626.8,
+      "event_count": 10,
+      "input_tokens": 99087,
+      "output_tokens": 1647,
+      "analysis_ms": 76454.7
+    },
+    {
+      "index": 4,
+      "start_ms": 281507.2,
+      "end_ms": 358134.0,
+      "duration_ms": 76626.8,
+      "event_count": 27,
+      "input_tokens": 93447,
+      "output_tokens": 7394,
+      "analysis_ms": 108582.8
+    }
+  ],
+  "cv_analysis": {
+    "cursor_detections": 0,
+    "cursor_detected": 0,
+    "flow_windows": 0
+  },
+  "events_merged": 107,
+  "events_final": 83,
+  "total_input_tokens": 487020,
+  "total_output_tokens": 19569,
+  "timing": {
+    "gemini_analysis_ms": 186060.9,
+    "total_ms": 186128.0,
+    "video_duration_ms": 358134.0
+  }
+}

@@ -10,6 +10,7 @@ Usage:
         --iteration 1 \\
         [--sessions id1,id2] \\
         [--force] \\
+        [--no-cursor] [--no-flow] \\
         [-- --stop-after flow --skip cursor]
 """
 from __future__ import annotations
@@ -35,10 +36,17 @@ def parse_args(argv: Sequence[str]) -> tuple[argparse.Namespace, list[str]]:
     parser.add_argument("--iteration", required=True, help="Iteration number/name")
     parser.add_argument("--sessions", default=None, help="Comma-separated session identifiers to target")
     parser.add_argument("--force", action="store_true", help="Rerun sessions that already have results")
+    parser.add_argument("--no-cursor", action="store_true", help="Skip cursor tracking entirely")
+    parser.add_argument("--no-flow", action="store_true", help="Skip optical flow analysis")
     args, extra = parser.parse_known_args(argv)
     # Strip leading '--' separator if the user used it to delimit pass-through args
     if extra and extra[0] == "--":
         extra = extra[1:]
+    # Translate convenience flags into pass-through args
+    if args.no_cursor:
+        extra.append("--no-cursor")
+    if args.no_flow:
+        extra.append("--no-flow")
     return args, extra
 
 

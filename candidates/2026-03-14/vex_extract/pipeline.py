@@ -417,6 +417,7 @@ def run_pipeline(
             prompt_template=prompt_template,
             config=config,
             run_dir=run_dir,
+            cursor_skipped="cursor" in skip,
         )
         logger.info("  %d prompts prepared", len(prepared_prompts))
 

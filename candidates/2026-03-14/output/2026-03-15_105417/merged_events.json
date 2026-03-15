@@ -1,0 +1,4303 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start": 425786.0,
+    "time_end": 425786.0,
+    "description": "Initial screen state showing the Askable dashboard with a list of studies, a sidebar on the left, and a search bar at the top.",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The Askable dashboard is visible. The sidebar contains links for 'Studies' and 'Project Delivery'. The main area shows a table of studies with columns for Title, Type, Status, Quota, Closing date, Created date, and Created by."
+  },
+  {
+    "type": "hover",
+    "time_start": 428536.0,
+    "time_end": 431036.0,
+    "description": "User hovers over various study titles in the list, specifically lingering on 'Askable Help Center - Existing Structure Card Sort'.",
+    "confidence": 0.8,
+    "interaction_target": "Askable Help Center - Existing Structure Card Sort",
+    "cursor_position": {
+      "x": 400,
+      "y": 350
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "click",
+    "time_start": 431136.0,
+    "time_end": 431136.0,
+    "description": "User clicks on the 'Askable | Opportunities' browser tab.",
+    "confidence": 0.9,
+    "interaction_target": "Askable | Opportunities",
+    "cursor_position": {
+      "x": 430,
+      "y": 15
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "navigate",
+    "time_start": 431136.0,
+    "time_end": 431786.0,
+    "description": "Navigation to the Opportunities page.",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Askable | Opportunities",
+    "page_location": "https://my-dev.askable.com/opportunities/d99e352d-e2b3-3fe9-822d-22e2422d5284",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The screen now shows a specific opportunity titled 'Internal AI Mod website test' with an 'Apply' button at the bottom."
+  },
+  {
+    "type": "hover",
+    "time_start": 431786.0,
+    "time_end": 432636.0,
+    "description": "User hovers over the 'Apply' button on the Opportunities page.",
+    "confidence": 0.9,
+    "interaction_target": "Apply",
+    "cursor_position": {
+      "x": 500,
+      "y": 960
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "click",
+    "time_start": 432636.0,
+    "time_end": 432636.0,
+    "description": "User clicks on the 'Askable | Studies' browser tab.",
+    "confidence": 0.9,
+    "interaction_target": "Askable | Studies",
+    "cursor_position": {
+      "x": 250,
+      "y": 15
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "navigate",
+    "time_start": 432636.0,
+    "time_end": 433086.0,
+    "description": "Navigation back to the Studies page.",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Askable | Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "click",
+    "time_start": 438086.0,
+    "time_end": 438086.0,
+    "description": "User clicks on the search input field.",
+    "confidence": 0.9,
+    "interaction_target": "Search",
+    "cursor_position": {
+      "x": 280,
+      "y": 130
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "input_text",
+    "time_start": 438086.0,
+    "time_end": 440386.0,
+    "description": "User types 'in studies' into the search field.",
+    "confidence": 1.0,
+    "interaction_target": "Search",
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 438886.0,
+    "time_end": 440586.0,
+    "description": "The list of studies filters in real-time as the user types the search query.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "click",
+    "time_start": 464186.0,
+    "time_end": 464186.0,
+    "description": "User clicks the checkbox for the 'Askable Help Center - Existing Structure Card Sort' study.",
+    "confidence": 0.9,
+    "interaction_target": "Checkbox",
+    "cursor_position": {
+      "x": 195,
+      "y": 225
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 464186.0,
+    "time_end": 464386.0,
+    "description": "The checkbox state changes to checked and the row is highlighted.",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "click",
+    "time_start": 465786.0,
+    "time_end": 465786.0,
+    "description": "User clicks the checkbox to deselect the study.",
+    "confidence": 0.9,
+    "interaction_target": "Checkbox",
+    "cursor_position": {
+      "x": 195,
+      "y": 225
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 465786.0,
+    "time_end": 465986.0,
+    "description": "The checkbox state changes to unchecked.",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "click",
+    "time_start": 477886.0,
+    "time_end": 477886.0,
+    "description": "User clicks on the search input field.",
+    "confidence": 0.9,
+    "interaction_target": "Search",
+    "cursor_position": {
+      "x": 280,
+      "y": 130
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "input_text",
+    "time_start": 477886.0,
+    "time_end": 484686.0,
+    "description": "User clears the previous search and types 'participant.app wait'.",
+    "confidence": 1.0,
+    "interaction_target": "Search",
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 483686.0,
+    "time_end": 483886.0,
+    "description": "Search results update to show 'No matching results for \"participant.app wa\"'.",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "input_text",
+    "time_start": 485786.0,
+    "time_end": 487986.0,
+    "description": "User clears the search field and types 'participant app'.",
+    "confidence": 1.0,
+    "interaction_target": "Search",
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "click",
+    "time_start": 488786.0,
+    "time_end": 488786.0,
+    "description": "User clicks the 'Reset' button.",
+    "confidence": 0.9,
+    "interaction_target": "Reset",
+    "cursor_position": {
+      "x": 530,
+      "y": 130
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 488786.0,
+    "time_end": 488986.0,
+    "description": "Search is reset, and the full list of studies is restored in the table.",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 494558.22222222225,
+    "time_end": 494608.22222222225,
+    "description": "Search results update for 'participant app w'",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user is on the Studies page and has started typing in the search box."
+  },
+  {
+    "type": "input_text",
+    "time_start": 494558.22222222225,
+    "time_end": 495508.22222222225,
+    "description": "User types 'participant app wall' into the search box",
+    "confidence": 0.95,
+    "interaction_target": "participant app",
+    "cursor_position": null,
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The search box contains 'participant app wall'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 495558.22222222225,
+    "time_end": 495608.22222222225,
+    "description": "Search results update for 'participant app wall'",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The results area shows 'No matching results for \"participant app wall\"'."
+  },
+  {
+    "type": "input_text",
+    "time_start": 495908.22222222225,
+    "time_end": 496208.22222222225,
+    "description": "User deletes ' wall' from the search box",
+    "confidence": 0.95,
+    "interaction_target": "participant app wall",
+    "cursor_position": null,
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The search box content is being edited."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 496208.22222222225,
+    "time_end": 496258.22222222225,
+    "description": "Search results update for 'participant app'",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The results area updates to show studies matching 'participant app'."
+  },
+  {
+    "type": "input_text",
+    "time_start": 496358.22222222225,
+    "time_end": 496558.22222222225,
+    "description": "User deletes ' app' from the search box",
+    "confidence": 0.95,
+    "interaction_target": "participant app",
+    "cursor_position": null,
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The search box content is being edited."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 496558.22222222225,
+    "time_end": 496608.22222222225,
+    "description": "Search results update for 'participant'",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The results area updates to show studies matching 'participant'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 496708.22222222225,
+    "time_end": 496758.22222222225,
+    "description": "Search results update for 'parti'",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The results area updates to show studies matching 'parti'."
+  },
+  {
+    "type": "input_text",
+    "time_start": 496758.22222222225,
+    "time_end": 497558.22222222225,
+    "description": "User types 'particp' into the search box",
+    "confidence": 0.95,
+    "interaction_target": "parti",
+    "cursor_position": null,
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The search box contains 'particp'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 497558.22222222225,
+    "time_end": 497608.22222222225,
+    "description": "Search results update for 'particp'",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The results area updates to show studies matching 'particp'."
+  },
+  {
+    "type": "click",
+    "time_start": 498508.22222222225,
+    "time_end": 498508.22222222225,
+    "description": "User clicks the 'Reset' button to clear the search box",
+    "confidence": 0.95,
+    "interaction_target": "Reset",
+    "cursor_position": {
+      "x": 518,
+      "y": 158
+    },
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the 'X' icon in the search box."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 498558.22222222225,
+    "time_end": 498608.22222222225,
+    "description": "Search results update to show all studies",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The full list of studies is visible again."
+  },
+  {
+    "type": "click",
+    "time_start": 499908.22222222225,
+    "time_end": 499908.22222222225,
+    "description": "User clicks on the team selector dropdown 'Askable Product Team'",
+    "confidence": 0.95,
+    "interaction_target": "Askable Product Team",
+    "cursor_position": {
+      "x": 103,
+      "y": 158
+    },
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the team name in the top left."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 499958.22222222225,
+    "time_end": 500008.22222222225,
+    "description": "Team selector menu opens",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "A dropdown menu has appeared below the team name."
+  },
+  {
+    "type": "click",
+    "time_start": 499986.0,
+    "time_end": 499986.0,
+    "description": "User clicks on the 'Askable Product Team' dropdown in the sidebar.",
+    "confidence": 0.9,
+    "interaction_target": "Askable Product Team",
+    "cursor_position": {
+      "x": 100,
+      "y": 80
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 499986.0,
+    "time_end": 500186.0,
+    "description": "Team selection dropdown menu appears.",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "hover",
+    "time_start": 500186.0,
+    "time_end": 500686.0,
+    "description": "User hovers over the 'Switch team' menu item.",
+    "confidence": 0.9,
+    "interaction_target": "Switch team",
+    "cursor_position": {
+      "x": 100,
+      "y": 180
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "click",
+    "time_start": 500658.22222222225,
+    "time_end": 500658.22222222225,
+    "description": "User clicks on 'Switch team...'",
+    "confidence": 0.95,
+    "interaction_target": "Switch team...",
+    "cursor_position": {
+      "x": 103,
+      "y": 243
+    },
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the 'Switch team...' menu item."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 500686.0,
+    "time_end": 500886.0,
+    "description": "Sub-menu showing available teams appears.",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 500708.22222222225,
+    "time_end": 500758.22222222225,
+    "description": "Team list sub-menu appears",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "A secondary menu showing a list of teams has appeared."
+  },
+  {
+    "type": "hover",
+    "time_start": 500886.0,
+    "time_end": 504008.0,
+    "description": "User hovers over various team names in the switch team sub-menu.",
+    "confidence": 0.8,
+    "interaction_target": null,
+    "cursor_position": {
+      "x": 250,
+      "y": 400
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "hover",
+    "time_start": 501258.22222222225,
+    "time_end": 501358.22222222225,
+    "description": "User hovers over 'Askable - Flight Centre'",
+    "confidence": 0.85,
+    "interaction_target": "Askable - Flight Centre",
+    "cursor_position": {
+      "x": 245,
+      "y": 373
+    },
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the 'Askable - Flight Centre' team name."
+  },
+  {
+    "type": "hover",
+    "time_start": 501858.22222222225,
+    "time_end": 501958.22222222225,
+    "description": "User hovers over 'Askable - Psychographic'",
+    "confidence": 0.85,
+    "interaction_target": "Askable - Psychographic",
+    "cursor_position": {
+      "x": 245,
+      "y": 488
+    },
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the 'Askable - Psychographic' team name."
+  },
+  {
+    "type": "hover",
+    "time_start": 502158.22222222225,
+    "time_end": 502258.22222222225,
+    "description": "User hovers over 'Askable Finance & Banking'",
+    "confidence": 0.85,
+    "interaction_target": "Askable Finance & Banking",
+    "cursor_position": {
+      "x": 245,
+      "y": 545
+    },
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the 'Askable Finance & Banking' team name."
+  },
+  {
+    "type": "hover",
+    "time_start": 502408.22222222225,
+    "time_end": 502508.22222222225,
+    "description": "User hovers over 'Askable healthcare stream'",
+    "confidence": 0.85,
+    "interaction_target": "Askable healthcare stream",
+    "cursor_position": {
+      "x": 245,
+      "y": 603
+    },
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the 'Askable healthcare stream' team name."
+  },
+  {
+    "type": "hover",
+    "time_start": 503158.22222222225,
+    "time_end": 503258.22222222225,
+    "description": "User hovers over 'Askable Innovation'",
+    "confidence": 0.85,
+    "interaction_target": "Askable Innovation",
+    "cursor_position": {
+      "x": 245,
+      "y": 660
+    },
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the 'Askable Innovation' team name."
+  },
+  {
+    "type": "hover",
+    "time_start": 503358.22222222225,
+    "time_end": 503458.22222222225,
+    "description": "User hovers over 'Askable Motor insurance stream'",
+    "confidence": 0.85,
+    "interaction_target": "Askable Motor insurance stream",
+    "cursor_position": {
+      "x": 245,
+      "y": 718
+    },
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the 'Askable Motor insurance stream' team name."
+  },
+  {
+    "type": "hover",
+    "time_start": 503658.22222222225,
+    "time_end": 503758.22222222225,
+    "description": "User hovers over 'Askable Product Team - D25'",
+    "confidence": 0.85,
+    "interaction_target": "Askable Product Team - D25",
+    "cursor_position": {
+      "x": 245,
+      "y": 775
+    },
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the 'Askable Product Team - D25' team name."
+  },
+  {
+    "type": "hover",
+    "time_start": 504008.22222222225,
+    "time_end": 504108.22222222225,
+    "description": "User hovers over 'Askable Product Team - D26'",
+    "confidence": 0.85,
+    "interaction_target": "Askable Product Team - D26",
+    "cursor_position": {
+      "x": 245,
+      "y": 833
+    },
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the 'Askable Product Team - D26' team name."
+  },
+  {
+    "type": "click",
+    "time_start": 504258.22222222225,
+    "time_end": 504258.22222222225,
+    "description": "User selects 'Askable Product Team' from the list",
+    "confidence": 0.95,
+    "interaction_target": "Askable Product Team",
+    "cursor_position": {
+      "x": 245,
+      "y": 804
+    },
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the 'Askable Product Team' name in the list."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 504358.22222222225,
+    "time_end": 504408.22222222225,
+    "description": "Team selector menu closes",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The dropdown menu has disappeared."
+  },
+  {
+    "type": "click",
+    "time_start": 504858.22222222225,
+    "time_end": 504858.22222222225,
+    "description": "User clicks on the study 'Copy of AI Mod V2 Test'",
+    "confidence": 0.95,
+    "interaction_target": "Copy of AI Mod V2 Test",
+    "cursor_position": {
+      "x": 270,
+      "y": 603
+    },
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the study title 'Copy of AI Mod V2 Test'."
+  },
+  {
+    "type": "navigate",
+    "time_start": 505258.22222222225,
+    "time_end": 506008.22222222225,
+    "description": "Page navigates to the study details",
+    "confidence": 0.95,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The page is reloading."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 505608.22222222225,
+    "time_end": 506008.22222222225,
+    "description": "Content loads on the studies page",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The list of studies for the selected team is loading."
+  },
+  {
+    "type": "click",
+    "time_start": 506458.22222222225,
+    "time_end": 506458.22222222225,
+    "description": "User clicks in the search box",
+    "confidence": 0.95,
+    "interaction_target": "Search",
+    "cursor_position": {
+      "x": 313,
+      "y": 158
+    },
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is inside the search box."
+  },
+  {
+    "type": "input_text",
+    "time_start": 506658.22222222225,
+    "time_end": 508508.22222222225,
+    "description": "User types 'wallet' into the search box",
+    "confidence": 0.95,
+    "interaction_target": "Search",
+    "cursor_position": null,
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The search box contains 'wallet'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 509058.22222222225,
+    "time_end": 509108.22222222225,
+    "description": "Search results update for 'wallet'",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The results area updates to show studies matching 'wallet'."
+  },
+  {
+    "type": "input_text",
+    "time_start": 509158.22222222225,
+    "time_end": 510458.22222222225,
+    "description": "User types 'participant' into the search box",
+    "confidence": 0.95,
+    "interaction_target": "wallet",
+    "cursor_position": null,
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The search box contains 'participant'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 510658.22222222225,
+    "time_end": 510708.22222222225,
+    "description": "Search results update for 'participant'",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The results area updates to show studies matching 'participant'."
+  },
+  {
+    "type": "input_text",
+    "time_start": 510758.22222222225,
+    "time_end": 510858.22222222225,
+    "description": "User types 'app' into the search box",
+    "confidence": 0.95,
+    "interaction_target": "participant",
+    "cursor_position": null,
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The search box contains 'participant app'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 511108.22222222225,
+    "time_end": 511158.22222222225,
+    "description": "Search results update for 'participant app'",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The results area updates to show studies matching 'participant app'."
+  },
+  {
+    "type": "click",
+    "time_start": 513658.22222222225,
+    "time_end": 513658.22222222225,
+    "description": "User clicks on the study 'Participant App: Wallet Core Flows & Expectations'",
+    "confidence": 0.95,
+    "interaction_target": "Participant App: Wallet Core Flows & Expectations",
+    "cursor_position": {
+      "x": 270,
+      "y": 243
+    },
+    "page_title": "Studies",
+    "page_location": "https://app.askable.com/studies",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the study title."
+  },
+  {
+    "type": "navigate",
+    "time_start": 528708.2222222222,
+    "time_end": 529458.2222222222,
+    "description": "Page navigates to study results",
+    "confidence": 0.95,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": "https://app.askable.com/studies/66715d30ab43a85423e15916/results",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The screen is white as the new page loads."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 529408.2222222222,
+    "time_end": 529458.2222222222,
+    "description": "Results page UI appears",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66715d30ab43a85423e15916/results",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The sidebar and header of the results page are visible."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 529458.2222222222,
+    "time_end": 529558.2222222222,
+    "description": "Results page content loads",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66715d30ab43a85423e15916/results",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The charts and data on the results page are loading."
+  },
+  {
+    "type": "click",
+    "time_start": 538458.2222222222,
+    "time_end": 538458.2222222222,
+    "description": "User clicks on task 'Locate your Askable wallet'",
+    "confidence": 0.95,
+    "interaction_target": "Locate your Askable wallet",
+    "cursor_position": {
+      "x": 133,
+      "y": 243
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66715d30ab43a85423e15916/results",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the task name in the sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 538708.2222222222,
+    "time_end": 538758.2222222222,
+    "description": "Task details for 'Locate your Askable wallet' load",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66715d30ab43a85423e15916/results",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The main area updates with path analysis for the task."
+  },
+  {
+    "type": "click",
+    "time_start": 559258.2222222222,
+    "time_end": 559258.2222222222,
+    "description": "User clicks on task 'How important is it to you to be able to pool your Askable earnings before withdrawing?'",
+    "confidence": 0.95,
+    "interaction_target": "How important is it to you to be able to pool your Askable earnings before withdrawing?",
+    "cursor_position": {
+      "x": 133,
+      "y": 158
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66715d30ab43a85423e15916/results",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the task name in the sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 559508.2222222222,
+    "time_end": 559558.2222222222,
+    "description": "Task details for 'How important is it to you...' load",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66715d30ab43a85423e15916/results",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The main area updates with opinion scale results."
+  },
+  {
+    "type": "click",
+    "time_start": 560258.2222222222,
+    "time_end": 560258.2222222222,
+    "description": "User clicks on task 'Locate your Askable wallet'",
+    "confidence": 0.95,
+    "interaction_target": "Locate your Askable wallet",
+    "cursor_position": {
+      "x": 133,
+      "y": 243
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66715d30ab43a85423e15916/results",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the task name in the sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 560508.2222222222,
+    "time_end": 560558.2222222222,
+    "description": "Task details for 'Locate your Askable wallet' load",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66715d30ab43a85423e15916/results",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The main area updates with path analysis."
+  },
+  {
+    "type": "click",
+    "time_start": 564008.2222222222,
+    "time_end": 564008.2222222222,
+    "description": "User clicks on task 'Make a withdrawal from your Wallet'",
+    "confidence": 0.95,
+    "interaction_target": "Make a withdrawal from your Wallet",
+    "cursor_position": {
+      "x": 133,
+      "y": 329
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66715d30ab43a85423e15916/results",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the task name in the sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 564358.2222222222,
+    "time_end": 564408.2222222222,
+    "description": "Task details for 'Make a withdrawal from your Wallet' load",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66715d30ab43a85423e15916/results",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The main area updates with path analysis for the withdrawal task."
+  },
+  {
+    "type": "hover",
+    "time_start": 568480.4444444445,
+    "time_end": 569330.4444444445,
+    "description": "Hover over 'Make a withdrawal from your Wallet' in the sidebar",
+    "confidence": 0.9,
+    "interaction_target": "Make a withdrawal from your Wallet",
+    "cursor_position": {
+      "x": 150,
+      "y": 170
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user is on the Results tab of a study, looking at the sidebar of tasks."
+  },
+  {
+    "type": "hover",
+    "time_start": 569480.4444444445,
+    "time_end": 570330.4444444445,
+    "description": "Hover over 'Locate your Askable wallet' in the sidebar",
+    "confidence": 0.9,
+    "interaction_target": "Locate your Askable wallet",
+    "cursor_position": {
+      "x": 150,
+      "y": 130
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is positioned over the second item in the sidebar list."
+  },
+  {
+    "type": "hover",
+    "time_start": 570480.4444444445,
+    "time_end": 571630.4444444445,
+    "description": "Hover over 'Make a withdrawal from your Wallet' in the sidebar",
+    "confidence": 0.9,
+    "interaction_target": "Make a withdrawal from your Wallet",
+    "cursor_position": {
+      "x": 150,
+      "y": 170
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor returns to the third item in the sidebar list."
+  },
+  {
+    "type": "hover",
+    "time_start": 571780.4444444445,
+    "time_end": 573230.4444444445,
+    "description": "Hover over 'View your transaction history' in the sidebar",
+    "confidence": 0.9,
+    "interaction_target": "View your transaction history",
+    "cursor_position": {
+      "x": 150,
+      "y": 210
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the fourth item in the sidebar list."
+  },
+  {
+    "type": "hover",
+    "time_start": 573358.2222222222,
+    "time_end": 574358.2222222222,
+    "description": "User hovers over task 'What do you think a reason...'",
+    "confidence": 0.85,
+    "interaction_target": "What do you think a reason...",
+    "cursor_position": {
+      "x": 133,
+      "y": 415
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66715d30ab43a85423e15916/results",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the task name in the sidebar."
+  },
+  {
+    "type": "hover",
+    "time_start": 573380.4444444445,
+    "time_end": 574430.4444444445,
+    "description": "Hover over 'What do you think a reason...' in the sidebar",
+    "confidence": 0.9,
+    "interaction_target": "What do you think a reason...",
+    "cursor_position": {
+      "x": 150,
+      "y": 250
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the fifth item in the sidebar list."
+  },
+  {
+    "type": "hover",
+    "time_start": 574580.4444444445,
+    "time_end": 575130.4444444445,
+    "description": "Hover over 'I can easily find and underst...' in the sidebar",
+    "confidence": 0.9,
+    "interaction_target": "I can easily find and underst...",
+    "cursor_position": {
+      "x": 150,
+      "y": 290
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the sixth item in the sidebar list."
+  },
+  {
+    "type": "hover",
+    "time_start": 575280.4444444445,
+    "time_end": 575880.4444444445,
+    "description": "Hover over 'Where would you expect to...' in the sidebar",
+    "confidence": 0.9,
+    "interaction_target": "Where would you expect to...",
+    "cursor_position": {
+      "x": 150,
+      "y": 330
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the seventh item in the sidebar list."
+  },
+  {
+    "type": "click",
+    "time_start": 575308.2222222222,
+    "time_end": 575308.2222222222,
+    "description": "User clicks on task 'Where would you expect to find this information?'",
+    "confidence": 0.95,
+    "interaction_target": "Where would you expect to find this information?",
+    "cursor_position": {
+      "x": 133,
+      "y": 718
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66715d30ab43a85423e15916/results",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the task name in the sidebar."
+  },
+  {
+    "type": "click",
+    "time_start": 575880.4444444445,
+    "time_end": 575880.4444444445,
+    "description": "Click on 'Where would you expect to find this information?' in the sidebar",
+    "confidence": 1.0,
+    "interaction_target": "Where would you expect to find this information?",
+    "cursor_position": {
+      "x": 150,
+      "y": 330
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user activates the card sort question results."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 575880.4444444445,
+    "time_end": 575980.4444444445,
+    "description": "Main content area updates to show card sort results",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The central panel now displays 'Where would you expect to find this information?' with card sort data."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 575908.2222222222,
+    "time_end": 575958.2222222222,
+    "description": "Task details for 'Where would you expect to find this information?' load",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66715d30ab43a85423e15916/results",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The main area updates with card sort results."
+  },
+  {
+    "type": "hover",
+    "time_start": 577280.4444444445,
+    "time_end": 577630.4444444445,
+    "description": "Hover over 'View your transaction history' in the sidebar",
+    "confidence": 0.9,
+    "interaction_target": "View your transaction history",
+    "cursor_position": {
+      "x": 150,
+      "y": 210
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor moves back up the sidebar list."
+  },
+  {
+    "type": "hover",
+    "time_start": 577780.4444444445,
+    "time_end": 579330.4444444445,
+    "description": "Hover over 'Where would you expect to...' in the sidebar",
+    "confidence": 0.9,
+    "interaction_target": "Where would you expect to...",
+    "cursor_position": {
+      "x": 150,
+      "y": 330
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the seventh item in the sidebar list."
+  },
+  {
+    "type": "hover",
+    "time_start": 579480.4444444445,
+    "time_end": 580330.4444444445,
+    "description": "Hover over 'I would prefer my transactio...' in the sidebar",
+    "confidence": 0.9,
+    "interaction_target": "I would prefer my transactio...",
+    "cursor_position": {
+      "x": 150,
+      "y": 370
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the eighth item in the sidebar list."
+  },
+  {
+    "type": "hover",
+    "time_start": 580480.4444444445,
+    "time_end": 581280.4444444445,
+    "description": "Hover over 'Where would you expect to...' in the sidebar",
+    "confidence": 0.9,
+    "interaction_target": "Where would you expect to...",
+    "cursor_position": {
+      "x": 150,
+      "y": 330
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor moves back up the sidebar list."
+  },
+  {
+    "type": "hover",
+    "time_start": 581430.4444444445,
+    "time_end": 581930.4444444445,
+    "description": "Hover over 'Locate your Askable wallet' in the sidebar",
+    "confidence": 0.9,
+    "interaction_target": "Locate your Askable wallet",
+    "cursor_position": {
+      "x": 150,
+      "y": 130
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the second item in the sidebar list."
+  },
+  {
+    "type": "click",
+    "time_start": 582080.4444444445,
+    "time_end": 582080.4444444445,
+    "description": "Click on 'How important is it to you...' in the sidebar",
+    "confidence": 1.0,
+    "interaction_target": "How important is it to you to be able to pool your Askable earnings before withdrawing?",
+    "cursor_position": {
+      "x": 150,
+      "y": 90
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user activates the opinion scale question results."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 582080.4444444445,
+    "time_end": 582180.4444444445,
+    "description": "Main content area updates to show opinion scale results",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The central panel now displays 'How important is it to you...' with a bar chart of responses."
+  },
+  {
+    "type": "hover",
+    "time_start": 582680.4444444445,
+    "time_end": 583080.4444444445,
+    "description": "Hover over 'Filters' button",
+    "confidence": 0.9,
+    "interaction_target": "Filters",
+    "cursor_position": {
+      "x": 920,
+      "y": 110
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is positioned over the Filters button."
+  },
+  {
+    "type": "click",
+    "time_start": 583080.4444444445,
+    "time_end": 583080.4444444445,
+    "description": "Click on 'Filters' button",
+    "confidence": 1.0,
+    "interaction_target": "Filters",
+    "cursor_position": {
+      "x": 920,
+      "y": 110
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user activates the filters panel."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 583080.4444444445,
+    "time_end": 583280.4444444445,
+    "description": "Filters sidebar opens",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "A new panel titled 'Filters' is visible on the right."
+  },
+  {
+    "type": "hover",
+    "time_start": 583630.4444444445,
+    "time_end": 583880.4444444445,
+    "description": "Hover over 'Select filter' dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Select filter",
+    "cursor_position": {
+      "x": 850,
+      "y": 190
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the dropdown field in the Filters sidebar."
+  },
+  {
+    "type": "click",
+    "time_start": 583880.4444444445,
+    "time_end": 583880.4444444445,
+    "description": "Click on 'Select filter' dropdown",
+    "confidence": 1.0,
+    "interaction_target": "Select filter",
+    "cursor_position": {
+      "x": 850,
+      "y": 190
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user opens the list of available filters."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 583880.4444444445,
+    "time_end": 584080.4444444445,
+    "description": "Filter dropdown menu opens",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "A list of options like 'Participants', 'Age', 'Location' is now visible below the dropdown field."
+  },
+  {
+    "type": "hover",
+    "time_start": 584180.4444444445,
+    "time_end": 584280.4444444445,
+    "description": "Hover over 'Participants' in dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Participants",
+    "cursor_position": {
+      "x": 850,
+      "y": 230
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the first item in the dropdown list."
+  },
+  {
+    "type": "hover",
+    "time_start": 584330.4444444445,
+    "time_end": 584630.4444444445,
+    "description": "Hover over 'Language' in dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Language",
+    "cursor_position": {
+      "x": 850,
+      "y": 310
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the fifth item in the dropdown list."
+  },
+  {
+    "type": "hover",
+    "time_start": 584730.4444444445,
+    "time_end": 584830.4444444445,
+    "description": "Hover over 'Operating system' in dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Operating system",
+    "cursor_position": {
+      "x": 850,
+      "y": 430
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the eighth item in the dropdown list."
+  },
+  {
+    "type": "hover",
+    "time_start": 584880.4444444445,
+    "time_end": 584980.4444444445,
+    "description": "Hover over 'Completion date' in dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Completion date",
+    "cursor_position": {
+      "x": 850,
+      "y": 470
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the tenth item in the dropdown list."
+  },
+  {
+    "type": "hover",
+    "time_start": 585030.4444444445,
+    "time_end": 585130.4444444445,
+    "description": "Hover over 'Study blocks' in dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Study blocks",
+    "cursor_position": {
+      "x": 850,
+      "y": 510
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the eleventh item in the dropdown list."
+  },
+  {
+    "type": "hover",
+    "time_start": 585180.4444444445,
+    "time_end": 585680.4444444445,
+    "description": "Hover over 'Screener questions' in dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Screener questions",
+    "cursor_position": {
+      "x": 850,
+      "y": 550
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the last item in the dropdown list."
+  },
+  {
+    "type": "hover",
+    "time_start": 585780.4444444445,
+    "time_end": 586580.4444444445,
+    "description": "Hover over 'Completion date' in dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Completion date",
+    "cursor_position": {
+      "x": 850,
+      "y": 470
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor moves up the dropdown list."
+  },
+  {
+    "type": "hover",
+    "time_start": 586680.4444444445,
+    "time_end": 587480.4444444445,
+    "description": "Hover over 'Screener questions' in dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Screener questions",
+    "cursor_position": {
+      "x": 850,
+      "y": 550
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor returns to the last item in the dropdown list."
+  },
+  {
+    "type": "select",
+    "time_start": 587580.4444444445,
+    "time_end": 587580.4444444445,
+    "description": "Select 'Location' from filter dropdown",
+    "confidence": 1.0,
+    "interaction_target": "Location",
+    "cursor_position": {
+      "x": 850,
+      "y": 270
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user chooses the Location filter category."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 587580.4444444445,
+    "time_end": 587680.4444444445,
+    "description": "Location filter options appear",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The Filters sidebar now shows a search box and a list of locations."
+  },
+  {
+    "type": "hover",
+    "time_start": 588630.4444444445,
+    "time_end": 591930.4444444445,
+    "description": "Hover over 'Have you participate in multiple studies on Askable?' filter",
+    "confidence": 0.9,
+    "interaction_target": "Have you participate in multiple studies on Askable?",
+    "cursor_position": {
+      "x": 850,
+      "y": 230
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over a specific screener question in the filter list."
+  },
+  {
+    "type": "click",
+    "time_start": 592030.4444444445,
+    "time_end": 592030.4444444445,
+    "description": "Click on 'Have you participate in multiple studies on Askable?' filter",
+    "confidence": 1.0,
+    "interaction_target": "Have you participate in multiple studies on Askable?",
+    "cursor_position": {
+      "x": 850,
+      "y": 230
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user selects this question to define filter criteria."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 592030.4444444445,
+    "time_end": 592130.4444444445,
+    "description": "Filter criteria options appear for the screener question",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The sidebar now shows 'is exactly' and a 'Select answer' field."
+  },
+  {
+    "type": "click",
+    "time_start": 593380.4444444445,
+    "time_end": 593380.4444444445,
+    "description": "Click on question text in filter sidebar",
+    "confidence": 1.0,
+    "interaction_target": "Have you participate in multiple studies on Askable?",
+    "cursor_position": {
+      "x": 850,
+      "y": 230
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user clicks the question header in the filter panel."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 593380.4444444445,
+    "time_end": 593480.4444444445,
+    "description": "Question answer dropdown opens",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "A list of answers like 'Yes, many' is visible."
+  },
+  {
+    "type": "hover",
+    "time_start": 593830.4444444445,
+    "time_end": 597030.4444444445,
+    "description": "Hover over answer option in dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Have you participate in multiple studies on Askable?",
+    "cursor_position": {
+      "x": 850,
+      "y": 310
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over one of the answer choices."
+  },
+  {
+    "type": "hover",
+    "time_start": 597630.4444444445,
+    "time_end": 598880.4444444445,
+    "description": "Hover over 'Recruit' tab",
+    "confidence": 0.9,
+    "interaction_target": "Recruit",
+    "cursor_position": {
+      "x": 520,
+      "y": 60
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the Recruit tab in the main navigation bar."
+  },
+  {
+    "type": "click",
+    "time_start": 598980.4444444445,
+    "time_end": 598980.4444444445,
+    "description": "Click on 'Recruit' tab",
+    "confidence": 1.0,
+    "interaction_target": "Recruit",
+    "cursor_position": {
+      "x": 520,
+      "y": 60
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user switches to the Recruit view."
+  },
+  {
+    "type": "navigate",
+    "time_start": 598980.4444444445,
+    "time_end": 599480.4444444445,
+    "description": "Navigate to Recruit tab",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/recruit/participants",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The screen now shows a list of participants with columns like 'Name', 'Status', 'Rating'."
+  },
+  {
+    "type": "hover",
+    "time_start": 599730.4444444445,
+    "time_end": 599830.4444444445,
+    "description": "Hover over participant 'Michael Jones'",
+    "confidence": 0.9,
+    "interaction_target": "Michael Jones",
+    "cursor_position": {
+      "x": 200,
+      "y": 350
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/recruit/participants",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the first row of the participant table."
+  },
+  {
+    "type": "hover",
+    "time_start": 599880.4444444445,
+    "time_end": 600480.4444444445,
+    "description": "Hover over 'View response' button",
+    "confidence": 0.9,
+    "interaction_target": "View response",
+    "cursor_position": {
+      "x": 600,
+      "y": 350
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/recruit/participants",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the button in the 'Results' column."
+  },
+  {
+    "type": "hover",
+    "time_start": 600580.4444444445,
+    "time_end": 600680.4444444445,
+    "description": "Hover over location 'Newtown'",
+    "confidence": 0.9,
+    "interaction_target": "Newtown",
+    "cursor_position": {
+      "x": 550,
+      "y": 350
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/recruit/participants",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the location cell for the second participant."
+  },
+  {
+    "type": "hover",
+    "time_start": 600730.4444444445,
+    "time_end": 601180.4444444445,
+    "description": "Hover over voice sample icon",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": {
+      "x": 650,
+      "y": 350
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/recruit/participants",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the speaker icon in the 'Voice sample' column."
+  },
+  {
+    "type": "hover",
+    "time_start": 601280.4444444445,
+    "time_end": 601480.4444444445,
+    "description": "Hover over industry 'Education & Training'",
+    "confidence": 0.9,
+    "interaction_target": "Education & Training",
+    "cursor_position": {
+      "x": 750,
+      "y": 350
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/recruit/participants",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the industry cell."
+  },
+  {
+    "type": "hover",
+    "time_start": 601580.4444444445,
+    "time_end": 602380.4444444445,
+    "description": "Hover over job title 'Director of Strategy'",
+    "confidence": 0.9,
+    "interaction_target": "Director of Strategy",
+    "cursor_position": {
+      "x": 850,
+      "y": 350
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/recruit/participants",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the job title cell."
+  },
+  {
+    "type": "scroll",
+    "time_start": 602480.4444444445,
+    "time_end": 602680.4444444445,
+    "description": "Scroll participant table horizontally to the right",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The table content shifts left, revealing columns like 'Work type', 'Marital status'."
+  },
+  {
+    "type": "hover",
+    "time_start": 603630.4444444445,
+    "time_end": 604180.4444444445,
+    "description": "Hover over pagination indicator",
+    "confidence": 0.9,
+    "interaction_target": "1 - 50 of 524",
+    "cursor_position": {
+      "x": 900,
+      "y": 200
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/recruit/participants",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the text showing the number of participants."
+  },
+  {
+    "type": "hover",
+    "time_start": 604280.4444444445,
+    "time_end": 609380.4444444445,
+    "description": "Hover over screener question column header",
+    "confidence": 0.9,
+    "interaction_target": "Have you participate in multiple studies on Askable?",
+    "cursor_position": {
+      "x": 900,
+      "y": 300
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/recruit/participants",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the header of the last column."
+  },
+  {
+    "type": "hover",
+    "time_start": 609480.4444444445,
+    "time_end": 610180.4444444445,
+    "description": "Hover over pagination indicator",
+    "confidence": 0.9,
+    "interaction_target": "1 - 50 of 524",
+    "cursor_position": {
+      "x": 900,
+      "y": 200
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/recruit/participants",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor returns to the pagination text."
+  },
+  {
+    "type": "hover",
+    "time_start": 610280.4444444445,
+    "time_end": 610980.4444444445,
+    "description": "Hover over screener question column header",
+    "confidence": 0.9,
+    "interaction_target": "Have you participate in multiple studies on Askable?",
+    "cursor_position": {
+      "x": 900,
+      "y": 300
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/recruit/participants",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor returns to the header of the last column."
+  },
+  {
+    "type": "hover",
+    "time_start": 611580.4444444445,
+    "time_end": 611780.4444444445,
+    "description": "Hover over language 'English (Native)'",
+    "confidence": 0.9,
+    "interaction_target": "English (Native)",
+    "cursor_position": {
+      "x": 700,
+      "y": 350
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/recruit/participants",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the language cell."
+  },
+  {
+    "type": "scroll",
+    "time_start": 611830.4444444445,
+    "time_end": 612030.4444444445,
+    "description": "Scroll participant table horizontally to the left",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The table content shifts right, revealing the original columns."
+  },
+  {
+    "type": "hover",
+    "time_start": 612630.4444444445,
+    "time_end": 612980.4444444445,
+    "description": "Hover over industry 'Education & Training'",
+    "confidence": 0.9,
+    "interaction_target": "Education & Training",
+    "cursor_position": {
+      "x": 550,
+      "y": 350
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/recruit/participants",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the industry cell."
+  },
+  {
+    "type": "hover",
+    "time_start": 613080.4444444445,
+    "time_end": 613480.4444444445,
+    "description": "Hover over voice sample icon",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": {
+      "x": 750,
+      "y": 350
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/recruit/participants",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the speaker icon."
+  },
+  {
+    "type": "hover",
+    "time_start": 613580.4444444445,
+    "time_end": 613980.4444444445,
+    "description": "Hover over location 'Newtown'",
+    "confidence": 0.9,
+    "interaction_target": "Newtown",
+    "cursor_position": {
+      "x": 550,
+      "y": 350
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/recruit/participants",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the location cell."
+  },
+  {
+    "type": "click",
+    "time_start": 614030.4444444445,
+    "time_end": 614030.4444444445,
+    "description": "Click on browser tab 'Jobable | Opportunities'",
+    "confidence": 1.0,
+    "interaction_target": "Jobable | Opportunities",
+    "cursor_position": {
+      "x": 450,
+      "y": 20
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/recruit/participants",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user switches to another open tab."
+  },
+  {
+    "type": "navigate",
+    "time_start": 614030.4444444445,
+    "time_end": 614130.4444444445,
+    "description": "Switch to 'Jobable | Opportunities' tab",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Jobable | Opportunities",
+    "page_location": "https://my-dev.askable.com/opportunities/9993da2e3db3f8428523",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The screen now shows an opportunity page for 'Internal AI Mod website test'."
+  },
+  {
+    "type": "click",
+    "time_start": 615480.4444444445,
+    "time_end": 615480.4444444445,
+    "description": "Click on browser tab 'Participant App...'",
+    "confidence": 1.0,
+    "interaction_target": "Participant App: Wallet Core Flows & Expectations",
+    "cursor_position": {
+      "x": 250,
+      "y": 20
+    },
+    "page_title": "Jobable | Opportunities",
+    "page_location": "https://my-dev.askable.com/opportunities/9993da2e3db3f8428523",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user switches back to the study results tab."
+  },
+  {
+    "type": "navigate",
+    "time_start": 615480.4444444445,
+    "time_end": 615580.4444444445,
+    "description": "Switch back to 'Participant App...' tab",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/recruit/participants",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The screen returns to the participant list in the Recruit tab."
+  },
+  {
+    "type": "hover",
+    "time_start": 615930.4444444445,
+    "time_end": 616180.4444444445,
+    "description": "Hover over 'Results' tab",
+    "confidence": 0.9,
+    "interaction_target": "Results",
+    "cursor_position": {
+      "x": 580,
+      "y": 60
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/recruit/participants",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the Results tab in the main navigation bar."
+  },
+  {
+    "type": "click",
+    "time_start": 616280.4444444445,
+    "time_end": 616280.4444444445,
+    "description": "Click on 'Results' tab",
+    "confidence": 1.0,
+    "interaction_target": "Results",
+    "cursor_position": {
+      "x": 580,
+      "y": 60
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/recruit/participants",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user switches back to the Results view."
+  },
+  {
+    "type": "navigate",
+    "time_start": 616280.4444444445,
+    "time_end": 616380.4444444445,
+    "description": "Navigate to Results tab",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The screen returns to the opinion scale question results."
+  },
+  {
+    "type": "hover",
+    "time_start": 618280.4444444445,
+    "time_end": 618730.4444444445,
+    "description": "Hover over 'Filters' button",
+    "confidence": 0.9,
+    "interaction_target": "Filters",
+    "cursor_position": {
+      "x": 920,
+      "y": 110
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the Filters button."
+  },
+  {
+    "type": "click",
+    "time_start": 618830.4444444445,
+    "time_end": 618830.4444444445,
+    "description": "Click on 'Filters' button",
+    "confidence": 1.0,
+    "interaction_target": "Filters",
+    "cursor_position": {
+      "x": 920,
+      "y": 110
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user opens the filters panel again."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 618830.4444444445,
+    "time_end": 619030.4444444445,
+    "description": "Filters sidebar opens",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The Filters panel is visible on the right."
+  },
+  {
+    "type": "hover",
+    "time_start": 619930.4444444445,
+    "time_end": 620580.4444444445,
+    "description": "Hover over close icon in Filters sidebar",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": {
+      "x": 960,
+      "y": 150
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the 'X' icon in the top right of the sidebar."
+  },
+  {
+    "type": "hover",
+    "time_start": 620680.4444444445,
+    "time_end": 620830.4444444445,
+    "description": "Hover over 'Select filter' dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Select filter",
+    "cursor_position": {
+      "x": 850,
+      "y": 190
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the dropdown field."
+  },
+  {
+    "type": "hover",
+    "time_start": 620930.4444444445,
+    "time_end": 621530.4444444445,
+    "description": "Hover over 'Participants' in dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Participants",
+    "cursor_position": {
+      "x": 850,
+      "y": 230
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the first item in the dropdown list."
+  },
+  {
+    "type": "hover",
+    "time_start": 621630.4444444445,
+    "time_end": 621880.4444444445,
+    "description": "Hover over 'Completion date' in dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Completion date",
+    "cursor_position": {
+      "x": 850,
+      "y": 470
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the tenth item in the dropdown list."
+  },
+  {
+    "type": "hover",
+    "time_start": 621980.4444444445,
+    "time_end": 622630.4444444445,
+    "description": "Hover over 'Study blocks' in dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Study blocks",
+    "cursor_position": {
+      "x": 850,
+      "y": 510
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the eleventh item in the dropdown list."
+  },
+  {
+    "type": "hover",
+    "time_start": 622730.4444444445,
+    "time_end": 623630.4444444445,
+    "description": "Hover over 'Completion date' in dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Completion date",
+    "cursor_position": {
+      "x": 850,
+      "y": 470
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor moves up the dropdown list."
+  },
+  {
+    "type": "hover",
+    "time_start": 623730.4444444445,
+    "time_end": 623880.4444444445,
+    "description": "Hover over 'Industry' in dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Industry",
+    "cursor_position": {
+      "x": 850,
+      "y": 350
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the sixth item in the dropdown list."
+  },
+  {
+    "type": "hover",
+    "time_start": 623980.4444444445,
+    "time_end": 624380.4444444445,
+    "description": "Hover over 'Language' in dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Language",
+    "cursor_position": {
+      "x": 850,
+      "y": 310
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the fifth item in the dropdown list."
+  },
+  {
+    "type": "hover",
+    "time_start": 624480.4444444445,
+    "time_end": 624930.4444444445,
+    "description": "Hover over 'Gender' in dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Gender",
+    "cursor_position": {
+      "x": 850,
+      "y": 270
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the fourth item in the dropdown list."
+  },
+  {
+    "type": "hover",
+    "time_start": 625030.4444444445,
+    "time_end": 625230.4444444445,
+    "description": "Hover over 'Operating system' in dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Operating system",
+    "cursor_position": {
+      "x": 850,
+      "y": 430
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the eighth item in the dropdown list."
+  },
+  {
+    "type": "hover",
+    "time_start": 625330.4444444445,
+    "time_end": 625680.4444444445,
+    "description": "Hover over 'Select filter' dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Select filter",
+    "cursor_position": {
+      "x": 850,
+      "y": 190
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor returns to the dropdown field."
+  },
+  {
+    "type": "hover",
+    "time_start": 625780.4444444445,
+    "time_end": 626230.4444444445,
+    "description": "Hover over 'Location' in dropdown",
+    "confidence": 0.9,
+    "interaction_target": "Location",
+    "cursor_position": {
+      "x": 850,
+      "y": 270
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the third item in the dropdown list."
+  },
+  {
+    "type": "hover",
+    "time_start": 626330.4444444445,
+    "time_end": 626630.4444444445,
+    "description": "Hover over close icon in Filters sidebar",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": {
+      "x": 960,
+      "y": 150
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/studies/66f195b035b42e51816/results/task/66f195b035b42e51816#main",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the 'X' icon."
+  },
+  {
+    "type": "hover",
+    "time_start": 640652.6666666666,
+    "time_end": 641102.6666666666,
+    "description": "Hover over the 'Filters' button",
+    "confidence": 0.85,
+    "interaction_target": "Filters",
+    "cursor_position": {
+      "x": 925,
+      "y": 215
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user is viewing the results of a study, specifically a bar chart for a question about pooling earnings."
+  },
+  {
+    "type": "click",
+    "time_start": 641102.6666666666,
+    "time_end": 641102.6666666666,
+    "description": "Click on the 'Filters' button",
+    "confidence": 0.95,
+    "interaction_target": "Filters",
+    "cursor_position": {
+      "x": 925,
+      "y": 215
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user clicks the 'Filters' button in the top right."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 641102.6666666666,
+    "time_end": 641402.6666666666,
+    "description": "Filters sidebar opens",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "A sidebar with filtering options appears on the right."
+  },
+  {
+    "type": "hover",
+    "time_start": 641452.6666666666,
+    "time_end": 642102.6666666666,
+    "description": "Hover over the 'Select filter' dropdown",
+    "confidence": 0.85,
+    "interaction_target": "Select filter",
+    "cursor_position": {
+      "x": 850,
+      "y": 300
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is positioned over the 'Select filter' dropdown in the sidebar."
+  },
+  {
+    "type": "click",
+    "time_start": 642102.6666666666,
+    "time_end": 642102.6666666666,
+    "description": "Click on the 'Select filter' dropdown",
+    "confidence": 0.95,
+    "interaction_target": "Select filter",
+    "cursor_position": {
+      "x": 850,
+      "y": 300
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user clicks the dropdown menu in the sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 642102.6666666666,
+    "time_end": 642452.6666666666,
+    "description": "Filter options list expands",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "A dropdown menu with various filter categories is visible."
+  },
+  {
+    "type": "hover",
+    "time_start": 643052.6666666666,
+    "time_end": 643802.6666666666,
+    "description": "Hover over 'Participants' filter option",
+    "confidence": 0.85,
+    "interaction_target": "Participants",
+    "cursor_position": {
+      "x": 850,
+      "y": 340
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the 'Participants' item in the dropdown list."
+  },
+  {
+    "type": "select",
+    "time_start": 643802.6666666666,
+    "time_end": 643802.6666666666,
+    "description": "Select 'Participants' filter",
+    "confidence": 0.95,
+    "interaction_target": "Participants",
+    "cursor_position": {
+      "x": 850,
+      "y": 340
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user clicks on 'Participants' in the dropdown."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 643802.6666666666,
+    "time_end": 643902.6666666666,
+    "description": "Participants filter added to sidebar",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The dropdown closes and the sidebar updates with the new filter."
+  },
+  {
+    "type": "hover",
+    "time_start": 651352.6666666666,
+    "time_end": 651752.6666666666,
+    "description": "Hover over 'Select filter' dropdown",
+    "confidence": 0.85,
+    "interaction_target": "Select filter",
+    "cursor_position": {
+      "x": 850,
+      "y": 300
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor returns to the 'Select filter' dropdown."
+  },
+  {
+    "type": "click",
+    "time_start": 651752.6666666666,
+    "time_end": 651752.6666666666,
+    "description": "Click on the 'Select filter' dropdown",
+    "confidence": 0.95,
+    "interaction_target": "Select filter",
+    "cursor_position": {
+      "x": 850,
+      "y": 300
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user clicks the dropdown menu in the sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 651752.6666666666,
+    "time_end": 652052.6666666666,
+    "description": "Filter options list expands",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The dropdown menu is visible again."
+  },
+  {
+    "type": "hover",
+    "time_start": 656352.6666666666,
+    "time_end": 656902.6666666666,
+    "description": "Hover over 'Study blocks' filter option",
+    "confidence": 0.85,
+    "interaction_target": "Study blocks",
+    "cursor_position": {
+      "x": 850,
+      "y": 700
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over 'Study blocks' in the dropdown list."
+  },
+  {
+    "type": "select",
+    "time_start": 656902.6666666666,
+    "time_end": 656902.6666666666,
+    "description": "Select 'Study blocks' filter",
+    "confidence": 0.95,
+    "interaction_target": "Study blocks",
+    "cursor_position": {
+      "x": 850,
+      "y": 700
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user clicks on 'Study blocks' in the dropdown."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 656902.6666666666,
+    "time_end": 657452.6666666666,
+    "description": "Study questions list appears",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "A list of questions from the study is now visible in the sidebar."
+  },
+  {
+    "type": "hover",
+    "time_start": 657802.6666666666,
+    "time_end": 658452.6666666666,
+    "description": "Hover over a specific study question",
+    "confidence": 0.85,
+    "interaction_target": "How important is it to you to be able to pool your Askable earnings before withdrawing?",
+    "cursor_position": {
+      "x": 850,
+      "y": 350
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the first question in the study blocks list."
+  },
+  {
+    "type": "select",
+    "time_start": 658452.6666666666,
+    "time_end": 658452.6666666666,
+    "description": "Select study question for filtering",
+    "confidence": 0.95,
+    "interaction_target": "How important is it to you to be able to pool your Askable earnings before withdrawing?",
+    "cursor_position": {
+      "x": 850,
+      "y": 350
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user clicks on the question in the list."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 658452.6666666666,
+    "time_end": 659452.6666666666,
+    "description": "Filter configuration UI appears",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The sidebar shows options to configure the rating filter for the selected question."
+  },
+  {
+    "type": "input_text",
+    "time_start": 661552.6666666666,
+    "time_end": 662102.6666666666,
+    "description": "Type '5' into the rating filter input",
+    "confidence": 0.95,
+    "interaction_target": "Rating",
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The value '5' is entered into the rating input field in the sidebar."
+  },
+  {
+    "type": "hover",
+    "time_start": 667852.6666666666,
+    "time_end": 668902.6666666666,
+    "description": "Hover over 'Apply filter' button",
+    "confidence": 0.85,
+    "interaction_target": "Apply filter",
+    "cursor_position": {
+      "x": 780,
+      "y": 470
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the 'Apply filter' button."
+  },
+  {
+    "type": "click",
+    "time_start": 668902.6666666666,
+    "time_end": 668902.6666666666,
+    "description": "Click on 'Apply filter' button",
+    "confidence": 0.95,
+    "interaction_target": "Apply filter",
+    "cursor_position": {
+      "x": 780,
+      "y": 470
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user clicks the 'Apply filter' button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 668902.6666666666,
+    "time_end": 670002.6666666666,
+    "description": "Results update based on applied filter",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The bar chart in the main area updates to show only the filtered data."
+  },
+  {
+    "type": "hover",
+    "time_start": 674652.6666666666,
+    "time_end": 678602.6666666666,
+    "description": "Hover over 'Locate your Askable wallet' task",
+    "confidence": 0.85,
+    "interaction_target": "Locate your Askable wallet",
+    "cursor_position": {
+      "x": 150,
+      "y": 380
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the second task in the left sidebar."
+  },
+  {
+    "type": "click",
+    "time_start": 678602.6666666666,
+    "time_end": 678602.6666666666,
+    "description": "Click on 'Locate your Askable wallet' task",
+    "confidence": 0.95,
+    "interaction_target": "Locate your Askable wallet",
+    "cursor_position": {
+      "x": 150,
+      "y": 380
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user clicks the task in the left sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 678602.6666666666,
+    "time_end": 678902.6666666666,
+    "description": "Task results load",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The main area now displays results for the 'Locate your Askable wallet' task."
+  },
+  {
+    "type": "scroll",
+    "time_start": 678902.6666666666,
+    "time_end": 683552.6666666666,
+    "description": "Scroll down the task results page",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The page content moves upwards as the user scrolls down."
+  },
+  {
+    "type": "hover",
+    "time_start": 683552.6666666666,
+    "time_end": 684502.6666666666,
+    "description": "Hover over 'X' to remove filter",
+    "confidence": 0.85,
+    "interaction_target": "X",
+    "cursor_position": {
+      "x": 950,
+      "y": 215
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the close icon on the filter tag in the sidebar."
+  },
+  {
+    "type": "click",
+    "time_start": 684502.6666666666,
+    "time_end": 684502.6666666666,
+    "description": "Click on 'X' to remove filter",
+    "confidence": 0.95,
+    "interaction_target": "X",
+    "cursor_position": {
+      "x": 950,
+      "y": 215
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user clicks the close icon on the filter tag."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 684502.6666666666,
+    "time_end": 685452.6666666666,
+    "description": "Filter removed and results update",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The filter tag disappears and the results area updates."
+  },
+  {
+    "type": "hover",
+    "time_start": 710752.6666666666,
+    "time_end": 711252.6666666666,
+    "description": "Hover over 'Heat map' tab",
+    "confidence": 0.85,
+    "interaction_target": "Heat map",
+    "cursor_position": {
+      "x": 650,
+      "y": 310
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the 'Heat map' tab."
+  },
+  {
+    "type": "click",
+    "time_start": 711252.6666666666,
+    "time_end": 711252.6666666666,
+    "description": "Click on 'Heat map' tab",
+    "confidence": 0.95,
+    "interaction_target": "Heat map",
+    "cursor_position": {
+      "x": 650,
+      "y": 310
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user clicks the 'Heat map' tab."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 711252.6666666666,
+    "time_end": 711952.6666666666,
+    "description": "Heat map view loads",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The recordings view is replaced by a heat map visualization."
+  },
+  {
+    "type": "hover",
+    "time_start": 713674.8888888889,
+    "time_end": 714174.8888888889,
+    "description": "Cursor hovers over the 'Begin task' button on the Task #1 overlay.",
+    "confidence": 0.9,
+    "interaction_target": "Begin task",
+    "cursor_position": {
+      "x": 465,
+      "y": 525
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "A 'Task #1' overlay is visible over a mobile app prototype. The cursor is centered on the 'Begin task' button."
+  },
+  {
+    "type": "click",
+    "time_start": 714174.8888888889,
+    "time_end": 714174.8888888889,
+    "description": "User clicks the 'Begin task' button.",
+    "confidence": 1.0,
+    "interaction_target": "Begin task",
+    "cursor_position": {
+      "x": 465,
+      "y": 525
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The 'Begin task' button is clicked, and the overlay begins to fade."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 714174.8888888889,
+    "time_end": 718724.8888888889,
+    "description": "The 'Task #1' overlay fades out, revealing the 'Explore' screen of the mobile app prototype.",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Askable | Opportunities",
+    "page_location": "app.askable.com/studies/60795d308ab4b9a542e1b91b/results/task/607f15d77e11dc007c1b4211?firstTaskBlock=...",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The task overlay is gone, and the 'Explore' screen of the app prototype is fully visible, showing various tasks and opportunities."
+  },
+  {
+    "type": "scroll",
+    "time_start": 720774.8888888889,
+    "time_end": 721674.8888888889,
+    "description": "User scrolls down the 'Explore' page.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The content on the mobile app prototype shifts upwards as the user scrolls down."
+  },
+  {
+    "type": "hover",
+    "time_start": 726174.8888888889,
+    "time_end": 728674.8888888889,
+    "description": "Cursor hovers over the 'Video call' opportunity card.",
+    "confidence": 0.8,
+    "interaction_target": "Video call",
+    "cursor_position": {
+      "x": 430,
+      "y": 700
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is positioned over a purple card labeled 'Video call' in the 'Opportunities to schedule' section."
+  },
+  {
+    "type": "click",
+    "time_start": 728674.8888888889,
+    "time_end": 728674.8888888889,
+    "description": "User clicks the profile icon in the bottom navigation bar.",
+    "confidence": 1.0,
+    "interaction_target": "Profile",
+    "cursor_position": {
+      "x": 465,
+      "y": 950
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the rightmost icon in the bottom navigation bar of the app prototype."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 728674.8888888889,
+    "time_end": 740224.8888888889,
+    "description": "The app screen transitions to the 'Profile' page.",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The 'Explore' screen is replaced by the 'Profile' screen, which shows the user's wallet balance and settings."
+  },
+  {
+    "type": "click",
+    "time_start": 744474.8888888889,
+    "time_end": 744474.8888888889,
+    "description": "User clicks the close button (X) on the prototype viewer.",
+    "confidence": 1.0,
+    "interaction_target": "Close",
+    "cursor_position": {
+      "x": 960,
+      "y": 250
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the 'X' button in the top right corner of the dark overlay containing the mobile prototype."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 744474.8888888889,
+    "time_end": 746724.8888888889,
+    "description": "The prototype viewer closes, revealing the Askable study results dashboard.",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Askable | Participant App Wallet Core Flows & Expectations",
+    "page_location": "app.askable.com/studies/60795d308ab4b9a542e1b91b/results/task/607f15d77e11dc007c1b4211?firstTaskBlock=...",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The dark overlay and mobile prototype are gone, showing the 'Results' tab of the Askable study with 'Path analysis' data."
+  },
+  {
+    "type": "scroll",
+    "time_start": 754424.8888888889,
+    "time_end": 758474.8888888889,
+    "description": "User scrolls down the 'Results' page.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The page content scrolls vertically, moving past the 'Path analysis' section."
+  },
+  {
+    "type": "click",
+    "time_start": 758474.8888888889,
+    "time_end": 758474.8888888889,
+    "description": "User clicks on the question 'What do you think a reason...' in the sidebar.",
+    "confidence": 1.0,
+    "interaction_target": "What do you think a reason...",
+    "cursor_position": {
+      "x": 150,
+      "y": 450
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over a list item in the left sidebar containing the text 'What do you think a reason...'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 758474.8888888889,
+    "time_end": 758574.8888888889,
+    "description": "The main content area updates to show results for the selected question.",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The main view now displays a bar chart and individual responses for the question 'What do you think a reasonable minimum withdrawal amount would be?'."
+  },
+  {
+    "type": "click",
+    "time_start": 773874.8888888889,
+    "time_end": 773874.8888888889,
+    "description": "User clicks the 'Filters' button.",
+    "confidence": 1.0,
+    "interaction_target": "Filters",
+    "cursor_position": {
+      "x": 930,
+      "y": 210
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the 'Filters' button located in the top right of the results section."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 773874.8888888889,
+    "time_end": 774524.8888888889,
+    "description": "The 'Filters' sidebar opens.",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "A sidebar titled 'Filters' is now visible on the right side of the screen."
+  },
+  {
+    "type": "click",
+    "time_start": 775674.8888888889,
+    "time_end": 775674.8888888889,
+    "description": "User clicks the 'Hide filter' icon on an active filter.",
+    "confidence": 1.0,
+    "interaction_target": "Hide filter",
+    "cursor_position": {
+      "x": 960,
+      "y": 280
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the eye icon next to the filter 'How important is it to you to be able t...'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 775674.8888888889,
+    "time_end": 777524.8888888889,
+    "description": "The filter is hidden and the results update.",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The filter is removed from the sidebar, and the data in the main results view refreshes."
+  },
+  {
+    "type": "scroll",
+    "time_start": 791197.1111111111,
+    "time_end": 792597.1111111111,
+    "description": "User scrolls down the sidebar question list.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.maze.co/studies/661780/results/661780218fcc61001499114e/task/661780218fcc61001499114f?taskBlock...",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The sidebar shows a list of questions from the user testing session. The main content area displays results for the question 'What do you think a reasonable minimum withdrawal amount would be?'."
+  },
+  {
+    "type": "click",
+    "time_start": 792897.1111111111,
+    "time_end": 792897.1111111111,
+    "description": "User clicks on the question 'Where would you expect to find the \"Withdraw\" button?' in the sidebar.",
+    "confidence": 0.9,
+    "interaction_target": "Where would you expect to find the 'Withdraw' button?",
+    "cursor_position": {
+      "x": 120,
+      "y": 500
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.maze.co/studies/661780/results/661780218fcc61001499114e/task/661780218fcc61001499114f?taskBlock...",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is positioned over the question 'Where would you expect to find the \"Withdraw\" button?' in the sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 792897.1111111111,
+    "time_end": 793397.1111111111,
+    "description": "The main content area updates to display results for 'Where would you expect to find the \"Withdraw\" button?'.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.maze.co/studies/661780/results/661780218fcc61001499114e/task/661780218fcc610014991152?taskBlock...",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The main content area now shows a bar chart and individual responses for the question about the 'Withdraw' button location."
+  },
+  {
+    "type": "click",
+    "time_start": 810497.1111111111,
+    "time_end": 810497.1111111111,
+    "description": "User clicks on the question 'What would you be more likely to do?' in the sidebar.",
+    "confidence": 0.9,
+    "interaction_target": "What would you be more likely to do?",
+    "cursor_position": {
+      "x": 120,
+      "y": 340
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.maze.co/studies/661780/results/661780218fcc61001499114e/task/661780218fcc610014991152?taskBlock...",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the question 'What would you be more likely to do?' in the sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 810497.1111111111,
+    "time_end": 810997.1111111111,
+    "description": "The main content area updates to display results for 'What would you be more likely to do?'.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.maze.co/studies/661780/results/661780218fcc61001499114e/task/661780218fcc610014991151?taskBlock...",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The main content area updates with a bar chart showing responses for the question 'What would you be more likely to do?'."
+  },
+  {
+    "type": "hover",
+    "time_start": 813497.1111111111,
+    "time_end": 814797.1111111111,
+    "description": "User hovers over 'View your transaction history' in the sidebar.",
+    "confidence": 0.8,
+    "interaction_target": "View your transaction history",
+    "cursor_position": {
+      "x": 120,
+      "y": 630
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.maze.co/studies/661780/results/661780218fcc61001499114e/task/661780218fcc610014991151?taskBlock...",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor lingers over the 'View your transaction history' item in the sidebar."
+  },
+  {
+    "type": "click",
+    "time_start": 814797.1111111111,
+    "time_end": 814797.1111111111,
+    "description": "User clicks on 'View your transaction history' in the sidebar.",
+    "confidence": 0.9,
+    "interaction_target": "View your transaction history",
+    "cursor_position": {
+      "x": 120,
+      "y": 630
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.maze.co/studies/661780/results/661780218fcc61001499114e/task/661780218fcc610014991151?taskBlock...",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor clicks on the 'View your transaction history' item."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 814797.1111111111,
+    "time_end": 815297.1111111111,
+    "description": "The main content area updates to display the path analysis for 'View your transaction history'.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.maze.co/studies/661780/results/661780218fcc61001499114e/task/661780218fcc610014991150?taskBlock...",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The main content area displays 'Path analysis' with metrics like misclick rate and average duration, along with screen flow diagrams."
+  },
+  {
+    "type": "scroll",
+    "time_start": 829897.1111111111,
+    "time_end": 831897.1111111111,
+    "description": "User scrolls down the path analysis view.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.maze.co/studies/661780/results/661780218fcc61001499114e/task/661780218fcc610014991150?taskBlock...",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user scrolls down the page to view more paths in the path analysis section."
+  },
+  {
+    "type": "click",
+    "time_start": 852597.1111111111,
+    "time_end": 852597.1111111111,
+    "description": "User clicks on the question 'I can easily find and understand the information I need on the transaction history page.' in the sidebar.",
+    "confidence": 0.9,
+    "interaction_target": "I can easily find and understand the information I need on the transaction history page.",
+    "cursor_position": {
+      "x": 120,
+      "y": 680
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.maze.co/studies/661780/results/661780218fcc61001499114e/task/661780218fcc610014991150?taskBlock...",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor clicks on the long question text in the sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 852597.1111111111,
+    "time_end": 853097.1111111111,
+    "description": "The main content area updates to display results for the information clarity question.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.maze.co/studies/661780/results/661780218fcc61001499114e/task/661780218fcc610014991153?taskBlock...",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The main content area shows a bar chart for the Likert scale question about information clarity."
+  },
+  {
+    "type": "scroll",
+    "time_start": 854397.1111111111,
+    "time_end": 855397.1111111111,
+    "description": "User scrolls down to the individual responses section.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.maze.co/studies/661780/results/661780218fcc61001499114e/task/661780218fcc610014991153?taskBlock...",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user scrolls down to see the table of individual responses."
+  },
+  {
+    "type": "click",
+    "time_start": 862097.1111111111,
+    "time_end": 862097.1111111111,
+    "description": "User clicks on 'View your transaction history' in the sidebar.",
+    "confidence": 0.9,
+    "interaction_target": "View your transaction history",
+    "cursor_position": {
+      "x": 120,
+      "y": 630
+    },
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.maze.co/studies/661780/results/661780218fcc61001499114e/task/661780218fcc610014991153?taskBlock...",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor clicks on the 'View your transaction history' item in the sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 862097.1111111111,
+    "time_end": 862597.1111111111,
+    "description": "The main content area updates back to the path analysis for 'View your transaction history'.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.maze.co/studies/661780/results/661780218fcc61001499114e/task/661780218fcc610014991150?taskBlock...",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The main content area returns to the path analysis view."
+  },
+  {
+    "type": "click",
+    "time_start": 863469.3333333333,
+    "time_end": 863469.3333333333,
+    "description": "Click on the question 'I can easily find and understand...' in the sidebar",
+    "confidence": 0.95,
+    "interaction_target": "I can easily find and understand the information I need on the transaction history page.",
+    "cursor_position": {
+      "x": 175,
+      "y": 715
+    },
+    "page_title": "Participant App Wallet Cor...",
+    "page_location": "app.askable.com/studies/60795d30ab439a542e1581fe/results/task/607f1830f4015702b525d2d0?filters=taskBlock-",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user is viewing the summary of study results on the Askable platform."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 863469.3333333333,
+    "time_end": 863669.3333333333,
+    "description": "Main content area updates to show results for the selected question",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The results for 'I can easily find and understand...' are now displayed."
+  },
+  {
+    "type": "scroll",
+    "time_start": 864397.1111111111,
+    "time_end": 865897.1111111111,
+    "description": "User scrolls down the path analysis view.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.maze.co/studies/661780/results/661780218fcc61001499114e/task/661780218fcc610014991150?taskBlock...",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user scrolls down to examine different paths in the analysis."
+  },
+  {
+    "type": "click",
+    "time_start": 867669.3333333333,
+    "time_end": 867669.3333333333,
+    "description": "Click on 'View your transaction history' in the sidebar",
+    "confidence": 0.95,
+    "interaction_target": "View your transaction history",
+    "cursor_position": {
+      "x": 175,
+      "y": 685
+    },
+    "page_title": "Participant App Wallet Cor...",
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 867669.3333333333,
+    "time_end": 867869.3333333333,
+    "description": "Main content area updates to show 'View your transaction history' results",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The path analysis for the transaction history task is visible."
+  },
+  {
+    "type": "click",
+    "time_start": 870169.3333333333,
+    "time_end": 870169.3333333333,
+    "description": "Click on the 'Heat map' button for Path 1",
+    "confidence": 0.95,
+    "interaction_target": "Heat map",
+    "cursor_position": {
+      "x": 615,
+      "y": 215
+    },
+    "page_title": "Participant App Wallet Cor...",
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 870169.3333333333,
+    "time_end": 872519.3333333333,
+    "description": "Heat map overlay opens",
+    "confidence": 0.95,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "A full-screen heat map view is displayed over the results page."
+  },
+  {
+    "type": "click",
+    "time_start": 872519.3333333333,
+    "time_end": 872519.3333333333,
+    "description": "Click the 'Close' button on the heat map overlay",
+    "confidence": 0.95,
+    "interaction_target": "Close",
+    "cursor_position": {
+      "x": 975,
+      "y": 95
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 872519.3333333333,
+    "time_end": 872919.3333333333,
+    "description": "Heat map overlay closes",
+    "confidence": 0.95,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The summary results page is visible again."
+  },
+  {
+    "type": "hover",
+    "time_start": 873769.3333333333,
+    "time_end": 874719.3333333333,
+    "description": "Hover over the 'Misclick rate' info icon",
+    "confidence": 0.8,
+    "interaction_target": "Misclick rate info icon",
+    "cursor_position": {
+      "x": 235,
+      "y": 315
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 873819.3333333333,
+    "time_end": 874719.3333333333,
+    "description": "Tooltip for 'Misclick rate' appears",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "A small black tooltip is visible near the cursor."
+  },
+  {
+    "type": "click",
+    "time_start": 882969.3333333333,
+    "time_end": 882969.3333333333,
+    "description": "Click on 'I can easily find and understand...' in the sidebar",
+    "confidence": 0.95,
+    "interaction_target": "I can easily find and understand the information I need on the transaction history page.",
+    "cursor_position": {
+      "x": 175,
+      "y": 715
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 882969.3333333333,
+    "time_end": 883169.3333333333,
+    "description": "Main content area updates",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "click",
+    "time_start": 883569.3333333333,
+    "time_end": 883569.3333333333,
+    "description": "Click on 'Where would you expect to find this information?' in the sidebar",
+    "confidence": 0.95,
+    "interaction_target": "Where would you expect to find this information?",
+    "cursor_position": {
+      "x": 175,
+      "y": 745
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 883569.3333333333,
+    "time_end": 883769.3333333333,
+    "description": "Main content area updates to show card sort results",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "Card sort results are displayed."
+  },
+  {
+    "type": "scroll",
+    "time_start": 885319.3333333333,
+    "time_end": 886019.3333333333,
+    "description": "Scroll down the results page",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "scroll",
+    "time_start": 892969.3333333333,
+    "time_end": 893319.3333333333,
+    "description": "Scroll down to the Similarity matrix",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "scroll",
+    "time_start": 894519.3333333333,
+    "time_end": 895369.3333333333,
+    "description": "Scroll to the bottom of the page",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "scroll",
+    "time_start": 905419.3333333333,
+    "time_end": 905919.3333333333,
+    "description": "Scroll up to the Agreement matrix",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "click",
+    "time_start": 925419.3333333333,
+    "time_end": 925419.3333333333,
+    "description": "Click the 'Hide filter' icon",
+    "confidence": 0.9,
+    "interaction_target": "Hide filter icon",
+    "cursor_position": {
+      "x": 955,
+      "y": 135
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 925419.3333333333,
+    "time_end": 925619.3333333333,
+    "description": "Filter is hidden, UI updates",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "click",
+    "time_start": 931869.3333333333,
+    "time_end": 931869.3333333333,
+    "description": "Click the 'Show filter' icon",
+    "confidence": 0.9,
+    "interaction_target": "Show filter icon",
+    "cursor_position": {
+      "x": 955,
+      "y": 135
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 931869.3333333333,
+    "time_end": 932069.3333333333,
+    "description": "Filter is shown, UI updates",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "click",
+    "time_start": 933541.5555555555,
+    "time_end": 933541.5555555555,
+    "description": "Click on the trash icon to delete the active filter.",
+    "confidence": 0.95,
+    "interaction_target": "trash icon",
+    "cursor_position": {
+      "x": 950,
+      "y": 110
+    },
+    "page_title": "Looppanel | Opportunities",
+    "page_location": "https://app.looppanel.com/projects/66f1b9a482e5491618e16e8a/results/task/66f1b9b082e5491618e16f8a?tab=results",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user is viewing the results page with a filter applied in the right sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 933591.5555555555,
+    "time_end": 933841.5555555555,
+    "description": "The filter is removed from the sidebar and results update.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The filter sidebar no longer shows the deleted filter, and the results list refreshes."
+  },
+  {
+    "type": "hover",
+    "time_start": 933719.3333333333,
+    "time_end": 934119.3333333333,
+    "description": "Hover over a cell in the Agreement matrix",
+    "confidence": 0.7,
+    "interaction_target": "Agreement matrix cell",
+    "cursor_position": {
+      "x": 450,
+      "y": 815
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "scroll",
+    "time_start": 934591.5555555555,
+    "time_end": 935591.5555555555,
+    "description": "Scroll down the results page.",
+    "confidence": 0.8,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The page content moves upwards as the user scrolls down."
+  },
+  {
+    "type": "click",
+    "time_start": 936369.3333333333,
+    "time_end": 936369.3333333333,
+    "description": "Click on 'I would prefer my transaction history to show:' in the sidebar",
+    "confidence": 0.95,
+    "interaction_target": "I would prefer my transaction history to show:",
+    "cursor_position": {
+      "x": 175,
+      "y": 875
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 936369.3333333333,
+    "time_end": 936569.3333333333,
+    "description": "Main content area updates to show multiple-choice results",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "Results for the preference question are displayed."
+  },
+  {
+    "type": "click",
+    "time_start": 939291.5555555555,
+    "time_end": 939291.5555555555,
+    "description": "Click on the task 'I would prefer my transaction history to show:' in the left sidebar.",
+    "confidence": 0.95,
+    "interaction_target": "I would prefer my transaction history to show:",
+    "cursor_position": {
+      "x": 150,
+      "y": 520
+    },
+    "page_title": "Looppanel | Opportunities",
+    "page_location": "https://app.looppanel.com/projects/66f1b9a482e5491618e16e8a/results/task/66f1b9b082e5491618e16f8a?tab=results",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the task item in the left sidebar."
+  },
+  {
+    "type": "navigate",
+    "time_start": 939291.5555555555,
+    "time_end": 939841.5555555555,
+    "description": "Navigate to the results for the task 'I would prefer my transaction history to show:'.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Looppanel | Opportunities",
+    "page_location": "https://app.looppanel.com/projects/66f1b9a482e5491618e16e8a/results/task/66f1b9b082e5491618e16f8b?tab=results",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The main content area updates with new charts and data for the selected task."
+  },
+  {
+    "type": "scroll",
+    "time_start": 948341.5555555555,
+    "time_end": 954991.5555555555,
+    "description": "Scroll down through individual responses.",
+    "confidence": 0.8,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The list of individual participant responses scrolls vertically."
+  },
+  {
+    "type": "click",
+    "time_start": 955991.5555555555,
+    "time_end": 955991.5555555555,
+    "description": "Click on the '+ Add filter' button.",
+    "confidence": 0.95,
+    "interaction_target": "+ Add filter",
+    "cursor_position": {
+      "x": 850,
+      "y": 170
+    },
+    "page_title": "Looppanel | Opportunities",
+    "page_location": "https://app.looppanel.com/projects/66f1b9a482e5491618e16e8a/results/task/66f1b9b082e5491618e16f8b?tab=results",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the 'Add filter' button in the right sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 956041.5555555555,
+    "time_end": 956341.5555555555,
+    "description": "The filter selection menu appears.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "A new UI element for adding filters is visible on the right side of the screen."
+  },
+  {
+    "type": "click",
+    "time_start": 963291.5555555555,
+    "time_end": 963291.5555555555,
+    "description": "Click on the task 'What other types of withdrawal methods would be desirable?' in the left sidebar.",
+    "confidence": 0.95,
+    "interaction_target": "What other types of withdrawal methods would be desirable?",
+    "cursor_position": {
+      "x": 150,
+      "y": 580
+    },
+    "page_title": "Looppanel | Opportunities",
+    "page_location": "https://app.looppanel.com/projects/66f1b9a482e5491618e16e8a/results/task/66f1b9b082e5491618e16f8b?tab=results",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor is over the eighth task item in the left sidebar."
+  },
+  {
+    "type": "navigate",
+    "time_start": 963291.5555555555,
+    "time_end": 963841.5555555555,
+    "description": "Navigate to the results for the task 'What other types of withdrawal methods would be desirable?'.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Looppanel | Opportunities",
+    "page_location": "https://app.looppanel.com/projects/66f1b9a482e5491618e16e8a/results/task/66f1b9b082e5491618e16f8c?tab=results",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The main content area updates with a text summary and a list of individual responses."
+  },
+  {
+    "type": "scroll",
+    "time_start": 978341.5555555555,
+    "time_end": 982341.5555555555,
+    "description": "Scroll down the results page.",
+    "confidence": 0.8,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user scrolls past the summary section to the individual responses list."
+  },
+  {
+    "type": "click",
+    "time_start": 982591.5555555555,
+    "time_end": 982591.5555555555,
+    "description": "Click on the task 'What other types of withdrawal methods would be desirable?' again.",
+    "confidence": 0.95,
+    "interaction_target": "What other types of withdrawal methods would be desirable?",
+    "cursor_position": {
+      "x": 150,
+      "y": 580
+    },
+    "page_title": "Looppanel | Opportunities",
+    "page_location": "https://app.looppanel.com/projects/66f1b9a482e5491618e16e8a/results/task/66f1b9b082e5491618e16f8c?tab=results",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The cursor clicks the already selected task in the sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 982841.5555555555,
+    "time_end": 983341.5555555555,
+    "description": "The page content refreshes.",
+    "confidence": 0.8,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The results area shows a brief loading or refresh state."
+  },
+  {
+    "type": "scroll",
+    "time_start": 996341.5555555555,
+    "time_end": 998341.5555555555,
+    "description": "Scroll down through individual responses.",
+    "confidence": 0.8,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The list of participant responses scrolls further down."
+  },
+  {
+    "type": "scroll",
+    "time_start": 1008341.5555555555,
+    "time_end": 1011341.5555555555,
+    "description": "Scroll down through individual responses.",
+    "confidence": 0.8,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user reaches the end of the visible responses list."
+  },
+  {
+    "type": "scroll",
+    "time_start": 1014913.7777777778,
+    "time_end": 1016763.7777777778,
+    "description": "User scrolls down to view individual responses for the question 'What other types of withdrawal methods would be desirable?'.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user is scrolling down the 'Results' page of the Askable platform, specifically within the 'Individual responses' section."
+  },
+  {
+    "type": "click",
+    "time_start": 1018013.7777777778,
+    "time_end": 1018113.7777777778,
+    "description": "User clicks on the question 'Being able to easily see my monthly or yearly total Askable earnings is beneficial to me.' in the sidebar.",
+    "confidence": 1.0,
+    "interaction_target": "Being able to easily see my monthly or yearly total Askable earnings is beneficial to me.",
+    "cursor_position": {
+      "x": 154,
+      "y": 948
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 1018113.7777777778,
+    "time_end": 1019313.7777777778,
+    "description": "The main content area updates to display the results for the newly selected question.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The UI transitions to show a bar chart summary and a list of individual responses for the 'Askable earnings' question."
+  },
+  {
+    "type": "click",
+    "time_start": 1026863.7777777778,
+    "time_end": 1027563.7777777778,
+    "description": "User clicks the filter icon in the top right of the content area.",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": {
+      "x": 953,
+      "y": 152
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 1027563.7777777778,
+    "time_end": 1027863.7777777778,
+    "description": "The 'Filters' sidebar panel opens on the right side of the screen.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "A sidebar titled 'Filters' is now visible on the right, showing an existing filter condition."
+  },
+  {
+    "type": "click",
+    "time_start": 1031863.7777777778,
+    "time_end": 1032713.7777777778,
+    "description": "User clicks the close button (X) on the filter sidebar.",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": {
+      "x": 972,
+      "y": 98
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 1032713.7777777778,
+    "time_end": 1033113.7777777778,
+    "description": "The filter sidebar panel closes.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The 'Filters' sidebar is no longer visible, and the main content area expands back to its full width."
+  },
+  {
+    "type": "click",
+    "time_start": 1033113.7777777778,
+    "time_end": 1034463.7777777778,
+    "description": "User clicks on the question 'What other apps do you use that have a wallet or balance you can withdraw from?' in the sidebar.",
+    "confidence": 1.0,
+    "interaction_target": "What other apps do you use that have a wallet or balance you can withdraw from?",
+    "cursor_position": {
+      "x": 154,
+      "y": 982
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 1034463.7777777778,
+    "time_end": 1035663.7777777778,
+    "description": "The main content area updates with results for the 'What other apps...' question.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The screen now shows a text summary and individual responses for the question regarding other wallet apps."
+  },
+  {
+    "type": "scroll",
+    "time_start": 1053113.7777777778,
+    "time_end": 1063913.7777777778,
+    "description": "User scrolls down through the list of individual responses.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user is scrolling through a table of participant responses, including names, answers, and completion dates."
+  },
+  {
+    "type": "click",
+    "time_start": 1063913.7777777778,
+    "time_end": 1064963.7777777778,
+    "description": "User clicks the '+10 more' button at the bottom of the responses list.",
+    "confidence": 1.0,
+    "interaction_target": "+10 more",
+    "cursor_position": {
+      "x": 452,
+      "y": 945
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 1064963.7777777778,
+    "time_end": 1065463.7777777778,
+    "description": "The list of individual responses expands to show more items.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "Additional rows of participant responses appear in the table."
+  },
+  {
+    "type": "scroll",
+    "time_start": 1065463.7777777778,
+    "time_end": 1067563.7777777778,
+    "description": "User scrolls back to the top of the page.",
+    "confidence": 0.9,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The user scrolls up past the individual responses and summary section to the top of the page."
+  },
+  {
+    "type": "click",
+    "time_start": 1070013.7777777778,
+    "time_end": 1070913.7777777778,
+    "description": "User clicks on the 'Build' tab in the top navigation bar.",
+    "confidence": 1.0,
+    "interaction_target": "Build",
+    "cursor_position": {
+      "x": 505,
+      "y": 55
+    },
+    "page_title": null,
+    "page_location": null,
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": null
+  },
+  {
+    "type": "navigate",
+    "time_start": 1070913.7777777778,
+    "time_end": 1072063.7777777778,
+    "description": "Page navigates from the 'Results' tab to the 'Build' tab.",
+    "confidence": 1.0,
+    "interaction_target": null,
+    "cursor_position": null,
+    "page_title": "Participant App: Wallet Core Flows & Expectations",
+    "page_location": "https://app.askable.com/projects/66077e49f8a01d15f5ab381f/build",
+    "viewport_width": 1818,
+    "viewport_height": 1140,
+    "frame_description": "The screen transitions to the survey builder interface, showing the sequence of questions and logic."
+  }
+]

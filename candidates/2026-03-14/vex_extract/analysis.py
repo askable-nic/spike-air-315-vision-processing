@@ -72,6 +72,23 @@ Use the optical flow data above to:
 - Distinguish user-initiated scrolling from static periods
 """
 
+_GEMINI_CURSOR_SECTION = """\
+## Cursor Position Reporting
+
+Local cursor tracking is not available for this run. For cursor-related events, you must report the cursor's pixel coordinates from the video frame.
+
+For each event of type **click**, **hover**, **dwell**, **cursor_thrash**, **select**, or **drag**, include `cursor_x` and `cursor_y` fields with the cursor's position in pixels from the top-left corner of the video frame.
+
+- **click / hover / dwell / select**: report the cursor position at the moment of the event
+- **cursor_thrash / drag**: report the approximate midpoint of the cursor's movement range
+- For other event types (navigate, input_text, scroll, hesitate, change_ui_state), omit cursor_x and cursor_y
+
+"""
+
+_CURSOR_OUTPUT_FIELDS = """\
+- `cursor_x`: The cursor's X pixel coordinate from the left edge of the video frame. Include for click, hover, dwell, cursor_thrash, select, and drag events.
+- `cursor_y`: The cursor's Y pixel coordinate from the top edge of the video frame. Include for click, hover, dwell, cursor_thrash, select, and drag events."""
+
 _FIRST_SEGMENT_SECTION = """\
 ### Initial screen state
 
@@ -80,25 +97,34 @@ This is the **first segment** of the recording. You must return a `change_ui_sta
 """
 
 
-_VIDEO_ANALYSIS_SCHEMA = {
-    "type": "ARRAY",
-    "items": {
-        "type": "OBJECT",
-        "properties": {
-            "thinking": {"type": "STRING"},
-            "type": {"type": "STRING"},
-            "time_start_ms": {"type": "NUMBER"},
-            "time_end_ms": {"type": "NUMBER"},
-            "description": {"type": "STRING"},
-            "confidence": {"type": "NUMBER"},
-            "interaction_target": {"type": "STRING"},
-            "page_title": {"type": "STRING"},
-            "page_location": {"type": "STRING"},
-            "frame_description": {"type": "STRING"},
+def _build_video_analysis_schema(include_cursor_coords: bool = False) -> dict:
+    """Build the Gemini response schema, optionally adding cursor coordinate fields."""
+    properties: dict[str, dict] = {
+        "thinking": {"type": "STRING"},
+        "type": {"type": "STRING"},
+        "time_start_ms": {"type": "NUMBER"},
+        "time_end_ms": {"type": "NUMBER"},
+        "description": {"type": "STRING"},
+        "confidence": {"type": "NUMBER"},
+        "interaction_target": {"type": "STRING"},
+        "page_title": {"type": "STRING"},
+        "page_location": {"type": "STRING"},
+        "frame_description": {"type": "STRING"},
+    }
+    if include_cursor_coords:
+        properties["cursor_x"] = {"type": "NUMBER"}
+        properties["cursor_y"] = {"type": "NUMBER"}
+    return {
+        "type": "ARRAY",
+        "items": {
+            "type": "OBJECT",
+            "properties": properties,
+            "required": ["thinking", "type", "time_start_ms", "time_end_ms", "description", "confidence"],
         },
-        "required": ["thinking", "type", "time_start_ms", "time_end_ms", "description", "confidence"],
-    },
-}
+    }
+
+
+_VIDEO_ANALYSIS_SCHEMA = _build_video_analysis_schema()
 
 
 def render_prompt(
@@ -108,10 +134,13 @@ def render_prompt(
     cursor_summary: str | None,
     flow_summary: str | None,
     video_fps: int,
+    cursor_skipped: bool = False,
 ) -> str:
     """Fill placeholder variables in the prompt template.
 
     CV sections are included only when their summary is not None.
+    When cursor_skipped is True, Gemini is instructed to report cursor
+    coordinates directly in the response.
     """
     # Build conditional CV blocks
     cv_parts: list[str] = []
@@ -133,6 +162,8 @@ def render_prompt(
         cv_usage = ""
 
     first_segment_section = _FIRST_SEGMENT_SECTION if segment.index == 0 else ""
+    cursor_reporting_section = _GEMINI_CURSOR_SECTION if cursor_skipped else ""
+    cursor_output_fields = _CURSOR_OUTPUT_FIELDS if cursor_skipped else ""
 
     result = template
     variables = {
@@ -144,6 +175,8 @@ def render_prompt(
         "cv_sections": cv_sections,
         "cv_usage_instructions": cv_usage,
         "first_segment_section": first_segment_section,
+        "cursor_reporting_section": cursor_reporting_section,
+        "cursor_output_fields": cursor_output_fields,
     }
     for key, value in variables.items():
         result = result.replace(f"{{{key}}}", str(value))
@@ -153,7 +186,7 @@ def render_prompt(
 class PreparedSegment:
     """Prompt and CV summaries rendered for a single segment, ready for Gemini."""
 
-    __slots__ = ("segment", "rendered_prompt", "cursor_summary", "flow_summary", "output_dir")
+    __slots__ = ("segment", "rendered_prompt", "cursor_summary", "flow_summary", "output_dir", "response_schema")
 
     def __init__(
         self,
@@ -162,12 +195,14 @@ class PreparedSegment:
         cursor_summary: str | None,
         flow_summary: str | None,
         output_dir: Path,
+        response_schema: dict,
     ) -> None:
         self.segment = segment
         self.rendered_prompt = rendered_prompt
         self.cursor_summary = cursor_summary
         self.flow_summary = flow_summary
         self.output_dir = output_dir
+        self.response_schema = response_schema
 
 
 def prepare_all_prompts(
@@ -177,8 +212,10 @@ def prepare_all_prompts(
     prompt_template: str,
     config: AppConfig,
     run_dir: Path,
+    cursor_skipped: bool = False,
 ) -> tuple[PreparedSegment, ...]:
     """Render prompts and save artifacts for every segment. No API calls."""
+    response_schema = _build_video_analysis_schema(include_cursor_coords=cursor_skipped)
     prepared: list[PreparedSegment] = []
 
     for segment in segments:
@@ -194,6 +231,7 @@ def prepare_all_prompts(
             cursor_summary=cursor_text,
             flow_summary=flow_text,
             video_fps=config.video.video_fps,
+            cursor_skipped=cursor_skipped,
         )
 
         output_dir = run_dir / "segments" / f"segment_{segment.index:03d}"
@@ -215,7 +253,7 @@ def prepare_all_prompts(
             "segment_end_ms": segment.end_ms,
             "cv_summary_lines": cv_summary_lines,
             "response_mime_type": "application/json",
-            "response_schema": _VIDEO_ANALYSIS_SCHEMA,
+            "response_schema": response_schema,
             "system_prompt_length": len(rendered),
         }
         (output_dir / "request.json").write_text(json.dumps(request_record, indent=2))
@@ -226,7 +264,7 @@ def prepare_all_prompts(
             (output_dir / "flow_summary.txt").write_text(flow_text)
 
         logger.info("Segment %d: prompt prepared (%d chars)", segment.index, len(rendered))
-        prepared.append(PreparedSegment(segment, rendered, cursor_text, flow_text, output_dir))
+        prepared.append(PreparedSegment(segment, rendered, cursor_text, flow_text, output_dir, response_schema))
 
     return tuple(prepared)
 
@@ -252,7 +290,7 @@ async def _analyse_one(
             model=config.gemini.model,
             system_prompt=prep.rendered_prompt,
             content_parts=[video_part],
-            response_schema=_VIDEO_ANALYSIS_SCHEMA,
+            response_schema=prep.response_schema,
             temperature=config.gemini.temperature,
         )
 

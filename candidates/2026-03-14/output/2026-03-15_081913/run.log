@@ -1,0 +1,74 @@
+2026-03-15 18:19:13,556 INFO vex_extract.pipeline: === Video Event Extractor ===
+2026-03-15 18:19:13,556 INFO vex_extract.pipeline: Video: /Users/nic/Developer/spike-air-315-vision-processing/input_data/screen_tracks/travel_expert_lisa.webm
+2026-03-15 18:19:13,556 INFO vex_extract.pipeline: Offset: 29690 ms
+2026-03-15 18:19:13,556 INFO vex_extract.pipeline: Run ID: 2026-03-15_081913
+2026-03-15 18:19:13,556 INFO vex_extract.pipeline: Skipping: cursor, flow
+2026-03-15 18:19:13,556 INFO vex_extract.pipeline: Step 1: Normalizing video...
+2026-03-15 18:19:13,556 INFO vex_extract.pipeline:   Using cached normalized video: /Users/nic/Developer/spike-air-315-vision-processing/candidates/2026-03-14/tmp/travel_expert_lisa_normalized.mp4
+2026-03-15 18:19:13,584 INFO vex_extract.pipeline:   Duration: 656.3s, 1790x1158, 29.4 fps
+2026-03-15 18:19:13,584 INFO vex_extract.pipeline: Step 2: Cursor tracking — SKIPPED
+2026-03-15 18:19:13,584 INFO vex_extract.pipeline: Step 3: Optical flow — SKIPPED
+2026-03-15 18:19:13,584 INFO vex_extract.pipeline: Step 4: Creating video segments...
+2026-03-15 18:19:13,585 INFO vex_extract.pipeline:   9 segments
+2026-03-15 18:19:13,585 INFO vex_extract.pipeline:   Segment 0: cached
+2026-03-15 18:19:13,585 INFO vex_extract.pipeline:   Segment 1: cached
+2026-03-15 18:19:13,585 INFO vex_extract.pipeline:   Segment 2: cached
+2026-03-15 18:19:13,585 INFO vex_extract.pipeline:   Segment 3: cached
+2026-03-15 18:19:13,585 INFO vex_extract.pipeline:   Segment 4: cached
+2026-03-15 18:19:13,585 INFO vex_extract.pipeline:   Segment 5: cached
+2026-03-15 18:19:13,585 INFO vex_extract.pipeline:   Segment 6: cached
+2026-03-15 18:19:13,585 INFO vex_extract.pipeline:   Segment 7: cached
+2026-03-15 18:19:13,585 INFO vex_extract.pipeline:   Segment 8: cached
+2026-03-15 18:19:13,585 INFO vex_extract.pipeline: Step 5: Preparing prompts...
+2026-03-15 18:19:13,586 INFO vex_extract.analysis: Segment 0: prompt prepared (8666 chars)
+2026-03-15 18:19:13,586 INFO vex_extract.analysis: Segment 1: prompt prepared (8179 chars)
+2026-03-15 18:19:13,586 INFO vex_extract.analysis: Segment 2: prompt prepared (8180 chars)
+2026-03-15 18:19:13,587 INFO vex_extract.analysis: Segment 3: prompt prepared (8180 chars)
+2026-03-15 18:19:13,587 INFO vex_extract.analysis: Segment 4: prompt prepared (8180 chars)
+2026-03-15 18:19:13,587 INFO vex_extract.analysis: Segment 5: prompt prepared (8180 chars)
+2026-03-15 18:19:13,587 INFO vex_extract.analysis: Segment 6: prompt prepared (8180 chars)
+2026-03-15 18:19:13,588 INFO vex_extract.analysis: Segment 7: prompt prepared (8180 chars)
+2026-03-15 18:19:13,588 INFO vex_extract.analysis: Segment 8: prompt prepared (8180 chars)
+2026-03-15 18:19:13,588 INFO vex_extract.pipeline:   9 prompts prepared
+2026-03-15 18:19:13,588 INFO vex_extract.pipeline: Step 6: Running Gemini analysis...
+2026-03-15 18:19:13,620 INFO vex_extract.analysis: Segment 0: sending to Gemini...
+2026-03-15 18:19:13,621 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-15 18:19:13,621 INFO vex_extract.analysis: Segment 1: sending to Gemini...
+2026-03-15 18:19:13,637 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-15 18:19:13,637 INFO vex_extract.analysis: Segment 2: sending to Gemini...
+2026-03-15 18:19:13,706 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-15 18:20:36,857 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent "HTTP/1.1 200 OK"
+2026-03-15 18:20:36,934 INFO vex_extract.analysis: Segment 0: 18 events, 95,520 in / 2,188 out tokens, 83.3s
+2026-03-15 18:20:36,934 INFO vex_extract.analysis: Segment 3: sending to Gemini...
+2026-03-15 18:20:36,937 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-15 18:20:39,852 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent "HTTP/1.1 200 OK"
+2026-03-15 18:20:39,885 INFO vex_extract.analysis: Segment 2: 13 events, 101,354 in / 1,992 out tokens, 86.2s
+2026-03-15 18:20:39,885 INFO vex_extract.analysis: Segment 4: sending to Gemini...
+2026-03-15 18:20:39,891 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-15 18:20:56,660 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent "HTTP/1.1 200 OK"
+2026-03-15 18:20:56,698 INFO vex_extract.analysis: Segment 1: 19 events, 101,533 in / 2,714 out tokens, 103.1s
+2026-03-15 18:20:56,698 INFO vex_extract.analysis: Segment 5: sending to Gemini...
+2026-03-15 18:20:56,702 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-15 18:21:49,294 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent "HTTP/1.1 200 OK"
+2026-03-15 18:21:49,297 INFO vex_extract.analysis: Segment 5: 14 events, 101,954 in / 2,218 out tokens, 52.6s
+2026-03-15 18:21:49,297 INFO vex_extract.analysis: Segment 6: sending to Gemini...
+2026-03-15 18:21:49,300 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-15 18:21:56,360 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent "HTTP/1.1 200 OK"
+2026-03-15 18:21:56,364 INFO vex_extract.analysis: Segment 4: 30 events, 101,654 in / 3,919 out tokens, 76.5s
+2026-03-15 18:21:56,364 INFO vex_extract.analysis: Segment 7: sending to Gemini...
+2026-03-15 18:21:56,368 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-15 18:22:03,755 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent "HTTP/1.1 200 OK"
+2026-03-15 18:22:03,833 INFO vex_extract.analysis: Segment 3: 25 events, 99,854 in / 2,375 out tokens, 86.9s
+2026-03-15 18:22:03,833 INFO vex_extract.analysis: Segment 8: sending to Gemini...
+2026-03-15 18:22:03,835 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-15 18:22:41,417 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent "HTTP/1.1 200 OK"
+2026-03-15 18:22:41,420 INFO vex_extract.analysis: Segment 6: 10 events, 98,894 in / 1,430 out tokens, 52.1s
+2026-03-15 18:22:50,325 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent "HTTP/1.1 200 OK"
+2026-03-15 18:22:50,329 INFO vex_extract.analysis: Segment 7: 24 events, 101,354 in / 2,391 out tokens, 54.0s
+2026-03-15 18:23:10,498 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent "HTTP/1.1 200 OK"
+2026-03-15 18:23:10,503 INFO vex_extract.analysis: Segment 8: 19 events, 94,274 in / 2,069 out tokens, 66.7s
+2026-03-15 18:23:10,504 INFO vex_extract.pipeline:   Analysis complete: 172 raw events in 236.9s
+2026-03-15 18:23:10,504 INFO vex_extract.pipeline: Steps 7-8: Merging events and enriching cursor positions...
+2026-03-15 18:23:10,515 INFO vex_extract.merge: Merge: 172 merged -> 148 overlap-dedup -> 141 final
+2026-03-15 18:23:10,516 INFO vex_extract.pipeline: Step 9: Saving output...
+2026-03-15 18:23:10,516 INFO vex_extract.pipeline: Done! 141 events in 237.0s. Output: /Users/nic/Developer/spike-air-315-vision-processing/candidates/2026-03-14/output/2026-03-15_081913

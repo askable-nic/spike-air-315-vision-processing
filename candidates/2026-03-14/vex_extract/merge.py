@@ -21,7 +21,11 @@ def adjust_timestamps(
     segment: VideoSegment,
     screen_track_start_offset: float,
 ) -> list[ResolvedEvent]:
-    """Convert segment-relative timestamps to absolute ResolvedEvents."""
+    """Convert segment-relative timestamps to absolute ResolvedEvents.
+
+    If Gemini provided cursor_x/cursor_y fields (when local cursor tracking
+    was skipped), they are mapped into the cursor_position dict.
+    """
     resolved: list[ResolvedEvent] = []
     for raw in events:
         abs_start = raw["time_start_ms"] + segment.start_ms + screen_track_start_offset
@@ -31,6 +35,13 @@ def adjust_timestamps(
         if event_type not in VALID_EVENT_TYPES:
             event_type = "change_ui_state"
 
+        cursor_position = None
+        if raw.get("cursor_x") is not None and raw.get("cursor_y") is not None:
+            cursor_position = {
+                "x": round(raw["cursor_x"], 1),
+                "y": round(raw["cursor_y"], 1),
+            }
+
         resolved.append(ResolvedEvent(
             type=event_type,
             time_start=abs_start,
@@ -38,6 +49,7 @@ def adjust_timestamps(
             description=raw.get("description", ""),
             confidence=raw.get("confidence", 0.5),
             interaction_target=raw.get("interaction_target"),
+            cursor_position=cursor_position,
             page_title=raw.get("page_title"),
             page_location=raw.get("page_location"),
             frame_description=raw.get("frame_description"),
@@ -155,10 +167,8 @@ def enrich_cursor_positions(
     For cursor_thrash/drag: average positions across the event's time range.
     """
     if not cursor_trajectory:
-        return [
-            e.model_copy(update={"cursor_position": None}) if e.type in cursor_event_types else e
-            for e in events
-        ]
+        # No CV data — preserve any Gemini-provided cursor positions as-is
+        return events
 
     enriched: list[ResolvedEvent] = []
     for event in events:

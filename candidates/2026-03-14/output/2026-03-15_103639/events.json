@@ -1,0 +1,965 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start": 349348.0,
+    "time_end": 349348.0,
+    "description": "Initial screen state: Askable session page with screen sharing instructions.",
+    "confidence": 1.0,
+    "page_title": "Askable Sessions",
+    "page_location": "sessions.askable.com/u-mod/69fc043bd82edc4df144a0e3c",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "Dark screen with white text 'Please click the screen sharing button that appears, and choose the option to share this window.' Participant video feed in top right."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 351598.0,
+    "time_end": 351648.0,
+    "description": "Text updates to 'Perfect!'",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The central text on the dark screen changes to 'Perfect!'"
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 352148.0,
+    "time_end": 352348.0,
+    "description": "Task instructions appear on screen.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "A block of text appears describing the task: booking a return domestic flight within Australia using Flight Centre."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 380548.0,
+    "time_end": 380848.0,
+    "description": "'Please think aloud...' instruction appears.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "New text appears below the task instructions: 'Please think aloud as you work through this...'"
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 389048.0,
+    "time_end": 389348.0,
+    "description": "Text updates to 'I'm going to open the website...'",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The instructional text is replaced by 'I'm going to open the website in your browser now...'"
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 395548.0,
+    "time_end": 395848.0,
+    "description": "'Open' button appears.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "A grey button with the text 'Open' and an external link icon appears in the center of the screen."
+  },
+  {
+    "type": "click",
+    "time_start": 400098.0,
+    "time_end": 400098.0,
+    "description": "User clicks the 'Open' button.",
+    "confidence": 0.9,
+    "interaction_target": "Open",
+    "cursor_position": {
+      "x": 640,
+      "y": 680
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor is positioned over the 'Open' button at the moment of the click."
+  },
+  {
+    "type": "navigate",
+    "time_start": 400848.0,
+    "time_end": 404898.0,
+    "description": "Navigation to Flight Centre homepage.",
+    "confidence": 1.0,
+    "page_title": "Flight Centre Travel Deals - Book Flights, Holidays & More",
+    "page_location": "flightcentre.com.au",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "A new browser tab opens and loads the Flight Centre website."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 404898.0,
+    "time_end": 405348.0,
+    "description": "Flight Centre homepage finishes loading.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The Flight Centre homepage is fully rendered, showing a red header and a 'UK & EUROPE SALE' banner."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 410598.0,
+    "time_end": 410848.0,
+    "description": "Qantas flights sale banner appears.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "A large banner for 'QANTAS FLIGHTS SALE' appears in the middle of the page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 414048.0,
+    "time_end": 414348.0,
+    "description": "'Travel dates' calendar modal appears.",
+    "confidence": 1.0,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "A modal window titled 'Travel dates' with a calendar view appears over the homepage."
+  },
+  {
+    "type": "hover",
+    "time_start": 414036.8346666667,
+    "time_end": 418086.8346666667,
+    "description": "User hovers over the close button (X) on the advertisement overlay.",
+    "confidence": 0.9,
+    "interaction_target": "X",
+    "cursor_position": {
+      "x": 725,
+      "y": 315
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046
+  },
+  {
+    "type": "click",
+    "time_start": 418086.8346666667,
+    "time_end": 420086.8346666667,
+    "description": "User clicks the close button (X) to dismiss the advertisement overlay.",
+    "confidence": 0.95,
+    "interaction_target": "X",
+    "cursor_position": {
+      "x": 725,
+      "y": 315
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 420086.8346666667,
+    "time_end": 420586.8346666667,
+    "description": "Advertisement overlay closes, revealing the calendar.",
+    "confidence": 0.95,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The advertisement overlay is gone, and the February and March 2026 calendars are fully visible."
+  },
+  {
+    "type": "hover",
+    "time_start": 420586.8346666667,
+    "time_end": 430986.8346666667,
+    "description": "User hovers over February 18th in the calendar.",
+    "confidence": 0.9,
+    "interaction_target": "18",
+    "cursor_position": {
+      "x": 315,
+      "y": 775
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046
+  },
+  {
+    "type": "click",
+    "time_start": 430986.8346666667,
+    "time_end": 432986.8346666667,
+    "description": "User selects February 18th in the calendar.",
+    "confidence": 0.95,
+    "interaction_target": "18",
+    "cursor_position": {
+      "x": 315,
+      "y": 775
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046
+  },
+  {
+    "type": "click",
+    "time_start": 436186.8346666667,
+    "time_end": 437386.8346666667,
+    "description": "User selects February 21st in the calendar.",
+    "confidence": 0.95,
+    "interaction_target": "21",
+    "cursor_position": {
+      "x": 425,
+      "y": 775
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046
+  },
+  {
+    "type": "click",
+    "time_start": 437386.8346666667,
+    "time_end": 438736.8346666667,
+    "description": "User clicks the 'Done' button to confirm date selection.",
+    "confidence": 0.95,
+    "interaction_target": "Done",
+    "cursor_position": {
+      "x": 815,
+      "y": 965
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 438736.8346666667,
+    "time_end": 441136.8346666667,
+    "description": "Date picker modal closes, and selected dates are updated in the search form.",
+    "confidence": 0.95,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The homepage is visible again, with 'Wed, 18 Feb - Sat, 21 Feb' shown in the date field of the search bar."
+  },
+  {
+    "type": "hover",
+    "time_start": 441136.8346666667,
+    "time_end": 447336.8346666667,
+    "description": "User hovers over the 'Where to?' destination input field.",
+    "confidence": 0.9,
+    "interaction_target": "Where to?",
+    "cursor_position": {
+      "x": 415,
+      "y": 705
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046
+  },
+  {
+    "type": "click",
+    "time_start": 447336.8346666667,
+    "time_end": 450036.8346666667,
+    "description": "User clicks the 'Where to?' destination input field.",
+    "confidence": 0.95,
+    "interaction_target": "Where to?",
+    "cursor_position": {
+      "x": 415,
+      "y": 705
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 450036.8346666667,
+    "time_end": 450786.8346666667,
+    "description": "Destination suggestion dropdown appears.",
+    "confidence": 0.95,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "A dropdown menu has appeared below the 'Where to?' field, listing popular cities like Sydney, Melbourne, and Brisbane."
+  },
+  {
+    "type": "hover",
+    "time_start": 450786.8346666667,
+    "time_end": 455836.8346666667,
+    "description": "User hovers over 'Melbourne, Australia' in the destination suggestions.",
+    "confidence": 0.9,
+    "interaction_target": "Melbourne, Australia",
+    "cursor_position": {
+      "x": 415,
+      "y": 845
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046
+  },
+  {
+    "type": "select",
+    "time_start": 455836.8346666667,
+    "time_end": 465986.8346666667,
+    "description": "User selects 'Melbourne, Australia' from the destination suggestions.",
+    "confidence": 0.95,
+    "interaction_target": "Melbourne, Australia",
+    "cursor_position": {
+      "x": 415,
+      "y": 845
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 465986.8346666667,
+    "time_end": 469636.8346666667,
+    "description": "Destination dropdown closes, and 'Melbourne, Australia' is set in the search field.",
+    "confidence": 0.95,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The search bar now shows 'Melbourne, Australia' in the destination field."
+  },
+  {
+    "type": "click",
+    "time_start": 469636.8346666667,
+    "time_end": 470786.8346666667,
+    "description": "User clicks the 'Search flights' button.",
+    "confidence": 0.95,
+    "interaction_target": "Search flights",
+    "cursor_position": {
+      "x": 865,
+      "y": 705
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046
+  },
+  {
+    "type": "navigate",
+    "time_start": 470786.8346666667,
+    "time_end": 476436.8346666667,
+    "description": "Navigation to the flight search results page begins.",
+    "confidence": 0.95,
+    "page_location": "https://secure.flightcentre.com.au/search/SYD-A/MEL-A/20260218/20260221/1/0/0/ECONOMY",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The screen goes white as the new page begins to load."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 476436.8346666667,
+    "time_end": 484825.8346666667,
+    "description": "Loading screen for flight search results is displayed.",
+    "confidence": 0.95,
+    "page_title": "Flight Centre Australia",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "A loading screen is visible with the text 'Our overhead compartments are stuffed with deals!' and a progress spinner."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 490125.6693333333,
+    "time_end": 490625.6693333333,
+    "description": "Search results for Sydney to Melbourne are displayed.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre Travel Deals | Cheap Flights, Holidays & Hotels",
+    "page_location": "https://secure.flightcentre.com.au/AAXY9kh1/results",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The search results page is fully loaded, showing 'Select Departing Flight' and a list of available flights."
+  },
+  {
+    "type": "hover",
+    "time_start": 512225.6693333333,
+    "time_end": 514025.6693333333,
+    "description": "User hovers over the price button for the Qantas flight QF401.",
+    "confidence": 0.9,
+    "interaction_target": "From $307",
+    "cursor_position": {
+      "x": 1170,
+      "y": 445
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046
+  },
+  {
+    "type": "click",
+    "time_start": 514025.6693333333,
+    "time_end": 514075.6693333333,
+    "description": "User clicks the price button to expand fare options.",
+    "confidence": 0.9,
+    "interaction_target": "From $307",
+    "cursor_position": {
+      "x": 1170,
+      "y": 445
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 514075.6693333333,
+    "time_end": 514825.6693333333,
+    "description": "Fare types 'Red Edeal' and 'Economy Flex' are displayed below the flight row.",
+    "confidence": 0.9,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The flight row has expanded to reveal two columns with different fare rules and prices."
+  },
+  {
+    "type": "select",
+    "time_start": 522425.6693333333,
+    "time_end": 523275.6693333333,
+    "description": "User selects the 'Red Edeal' fare for $307.",
+    "confidence": 0.9,
+    "interaction_target": "SELECT",
+    "cursor_position": {
+      "x": 285,
+      "y": 635
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 523275.6693333333,
+    "time_end": 523825.6693333333,
+    "description": "Selection is confirmed with a green checkmark appearing on the button.",
+    "confidence": 0.9,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The 'SELECT' button for the $307 fare now shows a green checkmark."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 528125.6693333334,
+    "time_end": 531975.6693333334,
+    "description": "Loading overlay appears with 'Good choice!' message and a spinner.",
+    "confidence": 0.9,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "A white overlay with the text 'Good choice!' and a blue loading spinner covers the results."
+  },
+  {
+    "type": "navigate",
+    "time_start": 531975.6693333334,
+    "time_end": 534725.6693333334,
+    "description": "Page transitions to return flight selection.",
+    "confidence": 0.9,
+    "page_location": "https://secure.flightcentre.com.au/AAXY9kh1/results#inbound",
+    "viewport_width": 1982,
+    "viewport_height": 1046
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 534725.6693333334,
+    "time_end": 535325.6693333334,
+    "description": "'Select Return Flight' results are displayed.",
+    "confidence": 0.9,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The header now reads 'Select Return Flight' and shows flights from Melbourne to Sydney."
+  },
+  {
+    "type": "hover",
+    "time_start": 539125.6693333334,
+    "time_end": 539825.6693333334,
+    "description": "User hovers over the 'CHANGE' link next to the selected departing flight summary.",
+    "confidence": 0.9,
+    "interaction_target": "CHANGE",
+    "cursor_position": {
+      "x": 1215,
+      "y": 295
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046
+  },
+  {
+    "type": "scroll",
+    "time_start": 540064.504,
+    "time_end": 542464.504,
+    "description": "User scrolls down the search results page to explore available flights.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre Australia | #1 for Travel",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kh/#results#inbound",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "Search results page for flights from Melbourne to Sydney."
+  },
+  {
+    "type": "hover",
+    "time_start": 545714.504,
+    "time_end": 546514.504,
+    "description": "User hovers over the sort dropdown menu.",
+    "confidence": 0.8,
+    "interaction_target": "Departure Time (Earliest)",
+    "cursor_position": {
+      "x": 915,
+      "y": 315
+    },
+    "page_title": "Flight Centre Australia | #1 for Travel",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kh/#results#inbound",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "Search results page with the sort dropdown highlighted by the cursor."
+  },
+  {
+    "type": "hover",
+    "time_start": 550914.504,
+    "time_end": 554714.504,
+    "description": "User hovers over the Virgin Australia flight departing at 6:00 AM.",
+    "confidence": 0.8,
+    "interaction_target": "6:00am",
+    "cursor_position": {
+      "x": 565,
+      "y": 725
+    },
+    "page_title": "Flight Centre Australia | #1 for Travel",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kh/#results#inbound",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "Search results page with the cursor over the 6:00 AM Virgin Australia flight row."
+  },
+  {
+    "type": "select",
+    "time_start": 554714.504,
+    "time_end": 554714.504,
+    "description": "User selects the Virgin Australia flight departing at 6:00 AM.",
+    "confidence": 0.9,
+    "interaction_target": "6:00am",
+    "cursor_position": {
+      "x": 565,
+      "y": 725
+    },
+    "page_title": "Flight Centre Australia | #1 for Travel",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kh/#results#inbound",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The flight row is clicked, initiating an expansion of the row."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 554714.504,
+    "time_end": 555064.504,
+    "description": "The flight row expands to display fare types: Lite, Choice, and Flex.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre Australia | #1 for Travel",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kh/#results#inbound",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The UI updates to show the fare options for the selected flight."
+  },
+  {
+    "type": "hover",
+    "time_start": 555114.504,
+    "time_end": 556914.504,
+    "description": "User hovers over the 'Lite' fare option card.",
+    "confidence": 0.8,
+    "interaction_target": "Lite",
+    "cursor_position": {
+      "x": 300,
+      "y": 700
+    },
+    "page_title": "Flight Centre Australia | #1 for Travel",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kh/#results#inbound",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor is positioned over the 'Lite' fare details."
+  },
+  {
+    "type": "hover",
+    "time_start": 560914.504,
+    "time_end": 563414.504,
+    "description": "User hovers back over the 'Lite' fare option card.",
+    "confidence": 0.8,
+    "interaction_target": "Lite",
+    "cursor_position": {
+      "x": 300,
+      "y": 700
+    },
+    "page_title": "Flight Centre Australia | #1 for Travel",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kh/#results#inbound",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor returns to the 'Lite' fare card."
+  },
+  {
+    "type": "select",
+    "time_start": 563414.504,
+    "time_end": 563414.504,
+    "description": "User selects the 'Lite' fare option.",
+    "confidence": 0.9,
+    "interaction_target": "SELECT",
+    "cursor_position": {
+      "x": 415,
+      "y": 965
+    },
+    "page_title": "Flight Centre Australia | #1 for Travel",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kh/#results#inbound",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The 'SELECT' button under the 'Lite' fare is clicked."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 563414.504,
+    "time_end": 578714.504,
+    "description": "The 'SELECT' button changes to a green 'SELECTED' state.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre Australia | #1 for Travel",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kh/#results#inbound",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The button visual state updates to green."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 578714.504,
+    "time_end": 583014.504,
+    "description": "A loading overlay with the text 'All Set! Now let's review your flight selections...' appears.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre Australia | #1 for Travel",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kh/#results#inbound",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "A pink loading overlay covers the screen."
+  },
+  {
+    "type": "navigate",
+    "time_start": 583014.504,
+    "time_end": 583014.504,
+    "description": "The page navigates to the 'Review trip' summary page.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre Australia | #1 for Travel",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kh/#results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The 'Review trip' page is displayed with flight details and price summary."
+  },
+  {
+    "type": "scroll",
+    "time_start": 584514.504,
+    "time_end": 585314.504,
+    "description": "User scrolls down the 'Review trip' page.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre Australia | #1 for Travel",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kh/#results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user scrolls to see the price summary on the right side of the page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 611403.3386666666,
+    "time_end": 612303.3386666666,
+    "description": "The flight details sections for both departing and returning flights expand to show more information.",
+    "confidence": 0.9,
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/aaxk9hk#/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The 'Review trip' page showing expanded flight details for Qantas and Virgin Australia flights."
+  },
+  {
+    "type": "scroll",
+    "time_start": 612303.3386666666,
+    "time_end": 618203.3386666666,
+    "description": "User scrolls down the page to view the 'Add-ons' and 'Baggage' sections.",
+    "confidence": 1.0,
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/aaxk9hk#/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The page scrolls down, revealing the 'Add-ons' section and baggage information."
+  },
+  {
+    "type": "scroll",
+    "time_start": 620203.3386666666,
+    "time_end": 620703.3386666666,
+    "description": "User scrolls further down to the 'Seats' section.",
+    "confidence": 1.0,
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/aaxk9hk#/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The 'Seats' section becomes visible at the bottom of the screen."
+  },
+  {
+    "type": "hover",
+    "time_start": 622103.3386666666,
+    "time_end": 623353.3386666666,
+    "description": "Cursor hovers over the 'SELECT SEATS' button.",
+    "confidence": 0.9,
+    "interaction_target": "SELECT SEATS",
+    "cursor_position": {
+      "x": 550,
+      "y": 925
+    },
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/aaxk9hk#/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor is positioned over the blue 'SELECT SEATS' button in the Seats section."
+  },
+  {
+    "type": "click",
+    "time_start": 623353.3386666666,
+    "time_end": 623453.3386666666,
+    "description": "User clicks the 'SELECT SEATS' button.",
+    "confidence": 1.0,
+    "interaction_target": "SELECT SEATS",
+    "cursor_position": {
+      "x": 550,
+      "y": 925
+    },
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/aaxk9hk#/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The 'SELECT SEATS' button is activated."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 624953.3386666666,
+    "time_end": 628053.3386666666,
+    "description": "A loading spinner appears as the seat selection interface is being prepared.",
+    "confidence": 1.0,
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/aaxk9hk#/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The screen shows a 'Loading seat selector' message with a blue progress spinner."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 628053.3386666666,
+    "time_end": 628803.3386666666,
+    "description": "The seat map for Flight 1 (SYD -> MEL) appears on the screen.",
+    "confidence": 1.0,
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/aaxk9hk#/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The seat selection interface is now visible, showing the aircraft layout and available seats."
+  },
+  {
+    "type": "hover",
+    "time_start": 638353.3386666666,
+    "time_end": 639553.3386666666,
+    "description": "Cursor hovers over seat 5E on the seat map.",
+    "confidence": 0.9,
+    "interaction_target": "5E",
+    "cursor_position": {
+      "x": 550,
+      "y": 885
+    },
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/aaxk9hk#/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor is positioned over seat 5E in the seat map."
+  },
+  {
+    "type": "click",
+    "time_start": 639553.3386666666,
+    "time_end": 639653.3386666666,
+    "description": "User clicks on seat 5E.",
+    "confidence": 1.0,
+    "interaction_target": "5E",
+    "cursor_position": {
+      "x": 550,
+      "y": 885
+    },
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/aaxk9hk#/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "Seat 5E is clicked on the seat map."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 666953.3386666666,
+    "time_end": 667803.3386666666,
+    "description": "A seat confirmation popup appears for seat 5E.",
+    "confidence": 1.0,
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/aaxk9hk#/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "A small modal window is displayed over the seat map, showing details for seat 5E."
+  },
+  {
+    "type": "hover",
+    "time_start": 666953.3386666666,
+    "time_end": 669653.3386666666,
+    "description": "Cursor hovers over the 'CONFIRM SEAT' button in the popup.",
+    "confidence": 0.9,
+    "interaction_target": "CONFIRM SEAT",
+    "cursor_position": {
+      "x": 650,
+      "y": 665
+    },
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/aaxk9hk#/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor is over the blue 'CONFIRM SEAT' button in the modal."
+  },
+  {
+    "type": "click",
+    "time_start": 669653.3386666666,
+    "time_end": 669753.3386666666,
+    "description": "User clicks the 'CONFIRM SEAT' button.",
+    "confidence": 1.0,
+    "interaction_target": "CONFIRM SEAT",
+    "cursor_position": {
+      "x": 650,
+      "y": 665
+    },
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/aaxk9hk#/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The 'CONFIRM SEAT' button is clicked."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 670853.3386666666,
+    "time_end": 671803.3386666666,
+    "description": "The confirmation popup closes and seat 5E is marked as selected on the map.",
+    "confidence": 1.0,
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/aaxk9hk#/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The seat map is visible again, with seat 5E highlighted in green."
+  },
+  {
+    "type": "hesitate",
+    "time_start": 671342.1733333333,
+    "time_end": 672992.1733333333,
+    "description": "User pauses to review the seat map after confirming their selection.",
+    "confidence": 0.7,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The user is looking at the seat map with the selected seat highlighted."
+  },
+  {
+    "type": "hover",
+    "time_start": 672953.3386666666,
+    "time_end": 673553.3386666666,
+    "description": "Cursor hovers over the 'DONE' button.",
+    "confidence": 0.9,
+    "interaction_target": "DONE",
+    "cursor_position": {
+      "x": 950,
+      "y": 965
+    },
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/aaxk9hk#/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor is positioned over the 'DONE' button in the bottom right corner."
+  },
+  {
+    "type": "click",
+    "time_start": 672992.1733333333,
+    "time_end": 674392.1733333333,
+    "description": "Click on the 'DONE' button to complete seat selection for the flight.",
+    "confidence": 1.0,
+    "interaction_target": "DONE",
+    "cursor_position": {
+      "x": 944,
+      "y": 953
+    },
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kH/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor is over the 'DONE' button at the bottom right of the seat selection section."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 674453.3386666666,
+    "time_end": 674703.3386666666,
+    "description": "The seat selection interface closes.",
+    "confidence": 1.0,
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/aaxk9hk#/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The seat selection overlay disappears, revealing the main page."
+  },
+  {
+    "type": "scroll",
+    "time_start": 687692.1733333333,
+    "time_end": 689792.1733333333,
+    "description": "User scrolls down the page to view the 'Online Captain's Pack' and 'CONTINUE' button.",
+    "confidence": 0.9,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The page content moves upwards as the user scrolls down."
+  },
+  {
+    "type": "hover",
+    "time_start": 689792.1733333333,
+    "time_end": 693692.1733333333,
+    "description": "Cursor hovers over the 'CONTINUE' button.",
+    "confidence": 0.8,
+    "interaction_target": "CONTINUE",
+    "cursor_position": {
+      "x": 632,
+      "y": 953
+    },
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The cursor is stationary over the green 'CONTINUE' button at the bottom of the page."
+  },
+  {
+    "type": "click",
+    "time_start": 693692.1733333333,
+    "time_end": 697842.1733333333,
+    "description": "Click on the 'CONTINUE' button.",
+    "confidence": 1.0,
+    "interaction_target": "CONTINUE",
+    "cursor_position": {
+      "x": 632,
+      "y": 953
+    },
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kH/results#baggage",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The 'CONTINUE' button is clicked, and the page begins to transition."
+  },
+  {
+    "type": "navigate",
+    "time_start": 697842.1733333333,
+    "time_end": 699392.1733333333,
+    "description": "Navigation to the passenger details page.",
+    "confidence": 1.0,
+    "page_title": "Flight Centre Australia | Cheap Flights, Hotels, Holidays & Cruises",
+    "page_location": "https://secure.flightcentre.com.au/AAXy9kH/passenger",
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The URL in the address bar changes to the passenger details page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 699392.1733333333,
+    "time_end": 704042.1733333333,
+    "description": "Loading overlay with 'Thanks for confirming your flights' message appears.",
+    "confidence": 0.9,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "A white overlay with a loading spinner and the text 'Thanks for confirming your flights' is visible."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 704042.1733333333,
+    "time_end": 711442.1733333333,
+    "description": "Passenger details page starts loading with skeleton screens.",
+    "confidence": 0.9,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The page layout for passenger details is visible, but content is still loading, shown by gray placeholder boxes."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 711442.1733333333,
+    "time_end": 713642.1733333333,
+    "description": "Passenger details form and price summary are fully rendered.",
+    "confidence": 0.9,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The passenger details form is visible, and the price summary panel on the right shows the total booking cost."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 713642.1733333333,
+    "time_end": 740781.1733333333,
+    "description": "Passenger details page is fully loaded and ready for input.",
+    "confidence": 0.9,
+    "viewport_width": 1982,
+    "viewport_height": 1046,
+    "frame_description": "The complete passenger details page is displayed, including the form and the updated price summary."
+  }
+]

@@ -69,7 +69,7 @@ Watch carefully for visual changes that happen as side effects of user actions o
 
 Each of these should be a separate **change_ui_state** event, even if they happen immediately after a user action like a click. The click is one event; the resulting UI change is a separate event.
 
-{first_segment_section}## Timestamp Format
+{first_segment_section}{cursor_reporting_section}## Timestamp Format
 
 Report timestamps as milliseconds from the start of THIS video segment (not the full recording). Use the video timeline to determine timing.
 
@@ -107,3 +107,4 @@ Optional fields (include when identifiable):
 - `page_title`: The page title exactly as shown in the browser tab. Only include if you can read the tab text clearly in the video frame. Do not guess or infer the title from page content.
 - `page_location`: The URL exactly as shown in the browser address bar. Transcribe it character-for-character from what is visible. If the URL is not legible, truncated, or the address bar is not visible, omit this field entirely. Never infer or reconstruct a URL from page content.
 - `frame_description`: Brief description of what's visible on screen during this event
+{cursor_output_fields}
