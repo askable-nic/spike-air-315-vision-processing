@@ -4,10 +4,47 @@ You are a UX research analyst specialising in screen recording analysis. You are
 
 - Study: Screen Recording
 - Participant: User
-- Video segment: {segment_index} of {total_segments}
-- Segment time range: {segment_start_ms}ms to {segment_end_ms}ms from video start
+- Video segment: 3 of 6
+- Segment time range: 142788ms to 226683ms from video start
 
-{cv_sections}
+## Cursor Tracking Data
+
+The following cursor position data was extracted from this video segment via template matching. Each line describes a time span where the cursor was stationary at a position, moved in a straight line between two positions, or was not detected. Coordinates are in pixels from the top-left of the video frame.
+
+Use this data to:
+- Confirm cursor positions when reporting click, hover, and drag events
+- Identify dwell patterns where the cursor holds position over interactive elements
+- Detect cursor movement trajectories that may be subtle in the video
+- Notice rapid back-and-forth movement suggesting cursor thrash
+
+The video is always ground truth — if cursor data conflicts with what you see, trust the video. Short "not-detected" gaps between stationary spans at the same position are tracker noise, not the cursor disappearing.
+
+```
+44-39844ms: not-detected
+39911-39911ms: stationary pos=(1008.1,340.7)
+39977-74777ms: not-detected
+74844-74977ms: stationary pos=(935.8,555.8)
+75044-75311ms: stationary pos=(326.7,609.1)
+75377-83844ms: not-detected
+```
+
+## Optical Flow Data
+
+The following scroll/pan data was extracted from this video segment using optical flow analysis. Each line describes a time span where significant uniform motion was detected across the viewport, indicating the user was scrolling. Magnitude reflects scroll speed (higher = faster).
+
+Use this data to:
+- Detect scroll events that may be subtle or fast in the video
+- Determine scroll direction and duration precisely
+- Distinguish user-initiated scrolling from static periods
+
+```
+30711-31711ms: scroll-right magnitude=15.3
+38211-39711ms: scroll-right magnitude=9.0
+41711-42711ms: scroll-right magnitude=28.5
+68211-69711ms: scroll-right magnitude=6.3
+74211-75211ms: scroll-right magnitude=56.0
+```
+
 ## Event Types
 
 Detect and classify these interaction event types:
@@ -47,7 +84,12 @@ When a user types into a field and a dropdown/autocomplete appears in response, 
 
 Report every user interaction, UI state change, and navigation event you can identify in this video segment, even minor ones like scrolls and brief hovers. Be exhaustive — it is better to over-report than miss events. Focus on **actions and state changes**, not on periods where the user is passively reading or waiting without interacting.
 
-{cv_usage_instructions}
+Use the cursor tracking and optical flow data above to:
+- Confirm cursor positions when reporting hover, click, and drag events
+- Detect scroll events that may be subtle in the video — the flow data gives precise scroll direction and timing
+- Identify hover/dwell patterns where the cursor stays stationary over interactive elements
+- Notice cursor thrash patterns from rapid movement in the cursor data
+
 For each event, describe in detail:
 - What the user did
 - What they were looking at
@@ -69,7 +111,7 @@ Watch carefully for visual changes that happen as side effects of user actions o
 
 Each of these should be a separate **change_ui_state** event, even if they happen immediately after a user action like a click. The click is one event; the resulting UI change is a separate event.
 
-{first_segment_section}## Timestamp Format
+## Timestamp Format
 
 Report timestamps as milliseconds from the start of THIS video segment (not the full recording). Use the video timeline to determine timing.
 

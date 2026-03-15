@@ -84,6 +84,7 @@ _VIDEO_ANALYSIS_SCHEMA = {
     "items": {
         "type": "OBJECT",
         "properties": {
+            "thinking": {"type": "STRING"},
             "type": {"type": "STRING"},
             "time_start_ms": {"type": "NUMBER"},
             "time_end_ms": {"type": "NUMBER"},
@@ -94,7 +95,7 @@ _VIDEO_ANALYSIS_SCHEMA = {
             "page_location": {"type": "STRING"},
             "frame_description": {"type": "STRING"},
         },
-        "required": ["type", "time_start_ms", "time_end_ms", "description", "confidence"],
+        "required": ["thinking", "type", "time_start_ms", "time_end_ms", "description", "confidence"],
     },
 }
 
