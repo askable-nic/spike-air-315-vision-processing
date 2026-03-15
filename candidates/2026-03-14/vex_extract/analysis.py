@@ -71,6 +71,13 @@ Use the optical flow data above to:
 - Distinguish user-initiated scrolling from static periods
 """
 
+_FIRST_SEGMENT_SECTION = """\
+### Initial screen state
+
+This is the **first segment** of the recording. You must return a `change_ui_state` event at `time_start_ms: 0` and `time_end_ms: 0` describing the initial screen state visible in roughly the first second of video. Use the first second rather than the very first frame, as the opening frame is often more compressed while the screen-sharing connection stabilises. Describe what application or page is shown, the overall layout, and any notable UI elements visible.
+
+"""
+
 
 _VIDEO_ANALYSIS_SCHEMA = {
     "type": "ARRAY",
@@ -123,6 +130,8 @@ def render_prompt(
     else:
         cv_usage = ""
 
+    first_segment_section = _FIRST_SEGMENT_SECTION if segment.index == 0 else ""
+
     result = template
     variables = {
         "segment_index": segment.index + 1,
@@ -132,6 +141,7 @@ def render_prompt(
         "video_fps": video_fps,
         "cv_sections": cv_sections,
         "cv_usage_instructions": cv_usage,
+        "first_segment_section": first_segment_section,
     }
     for key, value in variables.items():
         result = result.replace(f"{{{key}}}", str(value))

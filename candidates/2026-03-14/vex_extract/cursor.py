@@ -299,9 +299,67 @@ def track_cursor(
         len(merged), sum(1 for d in merged if d.detected),
     )
 
-    interpolated = interpolate_trajectory(tuple(merged), config.max_interpolation_gap_ms)
+    filtered = filter_static_detections(
+        tuple(merged), config.static_filter_duration_ms, config.static_filter_tolerance_px,
+    )
+    interpolated = interpolate_trajectory(filtered, config.max_interpolation_gap_ms)
     smoothed = smooth_trajectory(interpolated, config.smooth_window, config.smooth_displacement_threshold)
     return smoothed
+
+
+def filter_static_detections(
+    detections: tuple[CursorDetection, ...],
+    max_static_duration_ms: float,
+    tolerance_px: float = 1.0,
+) -> tuple[CursorDetection, ...]:
+    """Remove runs of detections at an identical position lasting longer than max_static_duration_ms.
+
+    Static UI elements (icon buttons, etc.) produce template matches at the exact same
+    pixel position across many frames.  A real cursor shows at least sub-pixel jitter
+    from video encoding artifacts, so perfectly-static runs are almost certainly false
+    positives.
+    """
+    if not detections:
+        return detections
+
+    result = list(detections)
+
+    run_start = 0
+    while run_start < len(result):
+        if not result[run_start].detected:
+            run_start += 1
+            continue
+
+        # Walk forward while position stays within tolerance
+        ref_x = result[run_start].x
+        ref_y = result[run_start].y
+        run_end = run_start + 1
+        while run_end < len(result) and result[run_end].detected:
+            dx = abs(result[run_end].x - ref_x)
+            dy = abs(result[run_end].y - ref_y)
+            if dx > tolerance_px or dy > tolerance_px:
+                break
+            run_end += 1
+
+        run_duration = result[run_end - 1].timestamp_ms - result[run_start].timestamp_ms
+        if run_duration >= max_static_duration_ms:
+            logger.info(
+                "  Cursor: filtering %d static detections at (%.1f, %.1f) spanning %.0fms",
+                run_end - run_start, ref_x, ref_y, run_duration,
+            )
+            for i in range(run_start, run_end):
+                result[i] = CursorDetection(
+                    timestamp_ms=result[i].timestamp_ms,
+                    x=0.0,
+                    y=0.0,
+                    confidence=0.0,
+                    template_id="",
+                    detected=False,
+                )
+
+        run_start = run_end
+
+    return tuple(result)
 
 
 def interpolate_trajectory(

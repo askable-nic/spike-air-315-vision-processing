@@ -4,10 +4,57 @@ You are a UX research analyst specialising in screen recording analysis. You are
 
 - Study: Screen Recording
 - Participant: User
-- Video segment: {segment_index} of {total_segments}
-- Segment time range: {segment_start_ms}ms to {segment_end_ms}ms from video start
+- Video segment: 4 of 6
+- Segment time range: 216683ms to 300577ms from video start
 
-{cv_sections}
+## Cursor Tracking Data
+
+The following cursor position data was extracted from this video segment via template matching. Each line describes a time span where the cursor was stationary at a position, moved in a straight line between two positions, or was not detected. Coordinates are in pixels from the top-left of the video frame.
+
+Use this data to:
+- Confirm cursor positions when reporting click, hover, and drag events
+- Identify dwell patterns where the cursor holds position over interactive elements
+- Detect cursor movement trajectories that may be subtle in the video
+- Notice rapid back-and-forth movement suggesting cursor thrash
+
+The video is always ground truth — if cursor data conflicts with what you see, trust the video. Short "not-detected" gaps between stationary spans at the same position are tracker noise, not the cursor disappearing.
+
+```
+16-883ms: not-detected
+949-1083ms: stationary pos=(935.8,555.8)
+1149-1416ms: stationary pos=(326.7,609.1)
+1483-37483ms: not-detected
+37549-37683ms: moved from (453.0,881.2) to (453.0,843.2)
+37749-37816ms: not-detected
+37883-39316ms: stationary pos=(95.8,1042.4)
+39816-41149ms: stationary pos=(1418.6,553.9)
+41216-41816ms: moved from (1415.4,281.1) to (1418.6,690.3)
+41883-43016ms: stationary pos=(1418.6,420.6)
+43083-43549ms: stationary pos=(1418.6,760.1)
+43616-43683ms: moved from (1418.6,420.6) to (1418.6,760.1)
+43749-43816ms: stationary pos=(1418.6,420.6)
+43883-45416ms: stationary pos=(1418.6,760.1)
+45483-75149ms: not-detected
+75216-75216ms: stationary pos=(342.6,1053.2)
+75316-83883ms: not-detected
+```
+
+## Optical Flow Data
+
+The following scroll/pan data was extracted from this video segment using optical flow analysis. Each line describes a time span where significant uniform motion was detected across the viewport, indicating the user was scrolling. Magnitude reflects scroll speed (higher = faster).
+
+Use this data to:
+- Detect scroll events that may be subtle or fast in the video
+- Determine scroll direction and duration precisely
+- Distinguish user-initiated scrolling from static periods
+
+```
+316-1316ms: scroll-right magnitude=56.0
+64816-65816ms: scroll-right magnitude=6.7
+69816-70816ms: scroll-right magnitude=56.8
+74316-75316ms: scroll-right magnitude=62.9
+```
+
 ## Event Types
 
 Detect and classify these interaction event types:
@@ -27,9 +74,7 @@ Detect and classify these interaction event types:
 Apply these rules strictly when deciding event types:
 
 ### Click vs Hover
-Only classify as `click` if you see a **direct, visible consequence** of the element being activated — for example, a button depresses or changes state, a new page loads, a menu opens, a checkbox toggles, or content updates. The cursor being near or over an element is not evidence of a click. If the cursor pauses over an element and then moves away with no visible state change to that element or the page, that is a `hover`. When in doubt, prefer `hover`.
-
-When reporting a click, the `interaction_target` must be the element that was **activated and produced the consequence** — not a nearby element the cursor passed over. If a menu expands after a click, the target is the element that triggered the expansion, not the items revealed by it.
+Only classify as `click` if you see evidence that an element was **activated** — a button depresses, a link opens, a checkbox toggles, a menu item triggers an action. If the cursor pauses over an interactive element and then moves away without activating it, that is a `hover`, not a click. When in doubt, prefer `hover`.
 
 ### Action vs Result are separate events
 Every user action (click, input_text) and its visible result (page navigation, UI state change) must be reported as **separate events**. For example: clicking a search button is a `click` event; the search results appearing is a separate `change_ui_state` or `navigate` event. Do not combine an action and its result into a single event.
@@ -47,7 +92,12 @@ When a user types into a field and a dropdown/autocomplete appears in response, 
 
 Report every user interaction, UI state change, and navigation event you can identify in this video segment, even minor ones like scrolls and brief hovers. Be exhaustive — it is better to over-report than miss events. Focus on **actions and state changes**, not on periods where the user is passively reading or waiting without interacting.
 
-{cv_usage_instructions}
+Use the cursor tracking and optical flow data above to:
+- Confirm cursor positions when reporting hover, click, and drag events
+- Detect scroll events that may be subtle in the video — the flow data gives precise scroll direction and timing
+- Identify hover/dwell patterns where the cursor stays stationary over interactive elements
+- Notice cursor thrash patterns from rapid movement in the cursor data
+
 For each event, describe in detail:
 - What the user did
 - What they were looking at
@@ -69,7 +119,7 @@ Watch carefully for visual changes that happen as side effects of user actions o
 
 Each of these should be a separate **change_ui_state** event, even if they happen immediately after a user action like a click. The click is one event; the resulting UI change is a separate event.
 
-{first_segment_section}## Timestamp Format
+## Timestamp Format
 
 Report timestamps as milliseconds from the start of THIS video segment (not the full recording). Use the video timeline to determine timing.
 
