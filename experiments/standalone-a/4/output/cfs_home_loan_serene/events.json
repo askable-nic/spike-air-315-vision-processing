@@ -1,0 +1,839 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start": 0.0,
+    "time_end": 0.0,
+    "description": "Initial screen state: A task description overlay is visible, providing instructions for the user testing session. Behind it, the Google homepage is partially visible.",
+    "confidence": 1.0,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "A task description overlay is shown over a blurred Google search page."
+  },
+  {
+    "type": "click",
+    "time_start": 15800.0,
+    "time_end": 15866.0,
+    "description": "User clicks the 'Start task' button to begin the study.",
+    "confidence": 1.0,
+    "interaction_target": "Start task",
+    "cursor_position": {
+      "x": 627.2,
+      "y": 1719.6
+    },
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user clicks the 'Start task' button at the bottom of the overlay."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 15866.0,
+    "time_end": 16000.0,
+    "description": "The task description overlay disappears, revealing the Google search homepage.",
+    "confidence": 1.0,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The Google homepage is now fully visible after the overlay is dismissed."
+  },
+  {
+    "type": "click",
+    "time_start": 17100.0,
+    "time_end": 17166.0,
+    "description": "User clicks on the Google search bar to activate it.",
+    "confidence": 1.0,
+    "interaction_target": "Search bar",
+    "cursor_position": {
+      "x": 848.0,
+      "y": 1532.3
+    },
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user clicks the search bar on the Google homepage."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 17166.0,
+    "time_end": 17233.0,
+    "description": "The mobile keyboard appears and a 'Trending searches' list is displayed.",
+    "confidence": 1.0,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The keyboard is visible at the bottom of the screen, and trending search suggestions appear below the search bar."
+  },
+  {
+    "type": "input_text",
+    "time_start": 17233.0,
+    "time_end": 28066.0,
+    "description": "User types 'homelone australia bank st george' into the search bar.",
+    "confidence": 1.0,
+    "interaction_target": "Search bar",
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The search query 'homelone australia bank st george' is typed into the input field."
+  },
+  {
+    "type": "click",
+    "time_start": 28000.0,
+    "time_end": 28066.0,
+    "description": "User clicks the search button on the keyboard to execute the search.",
+    "confidence": 1.0,
+    "interaction_target": "search",
+    "cursor_position": {
+      "x": 749.1,
+      "y": 1776.1
+    },
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user clicks the search icon on the mobile keyboard."
+  },
+  {
+    "type": "navigate",
+    "time_start": 28066.0,
+    "time_end": 28700.0,
+    "description": "The page navigates to the Google search results for 'homelone australia bank st george'.",
+    "confidence": 1.0,
+    "page_location": "google.com",
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The Google search results page loads."
+  },
+  {
+    "type": "scroll",
+    "time_start": 32633.0,
+    "time_end": 41833.0,
+    "description": "User scrolls down through the search results.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user is scrolling down the list of search results on Google."
+  },
+  {
+    "type": "hover",
+    "time_start": 41900.0,
+    "time_end": 43266.0,
+    "description": "User hovers over the 'Aussie' search result.",
+    "confidence": 0.8,
+    "interaction_target": "Aussie",
+    "cursor_position": {
+      "x": 733.2,
+      "y": 712.6
+    },
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The cursor lingers over the Aussie Home Loans search result."
+  },
+  {
+    "type": "click",
+    "time_start": 43266.0,
+    "time_end": 43333.0,
+    "description": "User clicks on the 'Aussie' search result.",
+    "confidence": 1.0,
+    "interaction_target": "Aussie",
+    "cursor_position": {
+      "x": 733.2,
+      "y": 712.6
+    },
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user clicks the link for Aussie Home Loans."
+  },
+  {
+    "type": "navigate",
+    "time_start": 43333.0,
+    "time_end": 45900.0,
+    "description": "The page navigates to the Aussie Home Loans website.",
+    "confidence": 1.0,
+    "page_location": "aussie.com.au",
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The Aussie Home Loans homepage loads."
+  },
+  {
+    "type": "click",
+    "time_start": 48400.0,
+    "time_end": 48466.0,
+    "description": "User clicks the 'I want to refinance' button.",
+    "confidence": 1.0,
+    "interaction_target": "I want to refinance",
+    "cursor_position": {
+      "x": 150.2,
+      "y": 1678.3
+    },
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user clicks the refinance option on the Aussie homepage."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 48566.0,
+    "time_end": 48966.0,
+    "description": "A loading screen appears with the message 'Loading... You're moving along nicely.'",
+    "confidence": 1.0,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "A purple loading screen is displayed."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 48966.0,
+    "time_end": 49066.0,
+    "description": "The first question of the form appears: 'What is your current loan balance?'.",
+    "confidence": 1.0,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The screen updates to show a question about the user's current loan balance."
+  },
+  {
+    "type": "click",
+    "time_start": 51400.0,
+    "time_end": 51500.0,
+    "description": "User clicks on the loan balance input field.",
+    "confidence": 0.9,
+    "interaction_target": "Loan balance input field",
+    "cursor_position": {
+      "x": 66.0,
+      "y": 1964.5
+    },
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user taps the text box to enter their loan balance."
+  },
+  {
+    "type": "input_text",
+    "time_start": 51500.0,
+    "time_end": 52000.0,
+    "description": "User types '1000000' into the loan balance field.",
+    "confidence": 1.0,
+    "interaction_target": "Loan balance input field",
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The value '$ 1,000,000' is entered into the input field."
+  },
+  {
+    "type": "click",
+    "time_start": 52000.0,
+    "time_end": 52100.0,
+    "description": "User clicks the 'NEXT' button.",
+    "confidence": 1.0,
+    "interaction_target": "NEXT",
+    "cursor_position": null,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user clicks the purple 'NEXT' button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 52100.0,
+    "time_end": 52500.0,
+    "description": "The next question appears: 'Please tell us more about your current loan.'",
+    "confidence": 1.0,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The screen transitions to a new set of questions about the current loan."
+  },
+  {
+    "type": "hesitate",
+    "time_start": 52500.0,
+    "time_end": 60800.0,
+    "description": "User hesitates for several seconds while reading the questions on the screen.",
+    "confidence": 0.7,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user is looking at the screen without interacting."
+  },
+  {
+    "type": "click",
+    "time_start": 60800.0,
+    "time_end": 60900.0,
+    "description": "User clicks the 'No' radio button.",
+    "confidence": 1.0,
+    "interaction_target": "No",
+    "cursor_position": null,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user selects the 'No' option for the fixed rate question."
+  },
+  {
+    "type": "navigate",
+    "time_start": 61233.33325,
+    "time_end": 61383.33325,
+    "description": "Page transitions to 'Who is your current lender'.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The screen changes from the loan details form to a lender search page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 61400.0,
+    "time_end": 61800.0,
+    "description": "The next question appears: 'Who is your current lender'.",
+    "confidence": 1.0,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The screen updates to ask for the user's current lender."
+  },
+  {
+    "type": "input_text",
+    "time_start": 63100.0,
+    "time_end": 64983.0,
+    "description": "User types 'St george' into the lender search field.",
+    "confidence": 1.0,
+    "interaction_target": "Search for your lender",
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user types 'St george' into the search box."
+  },
+  {
+    "type": "select",
+    "time_start": 65483.33325,
+    "time_end": 65583.33325,
+    "description": "User selects 'St George' from the search results dropdown.",
+    "confidence": 0.9,
+    "interaction_target": "St George",
+    "cursor_position": {
+      "x": 66.0,
+      "y": 1964.5
+    },
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "A list of suggested lenders is visible, and the user taps on the 'St George' entry."
+  },
+  {
+    "type": "navigate",
+    "time_start": 65583.33325,
+    "time_end": 66333.33325,
+    "description": "Page transitions to 'How much do you think your property is worth?'.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The screen changes to a new question about property value with a currency input field."
+  },
+  {
+    "type": "input_text",
+    "time_start": 68583.33325,
+    "time_end": 70183.33325,
+    "description": "User types '1100000' into the property value field.",
+    "confidence": 0.9,
+    "interaction_target": "$",
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user enters a numerical value into the property worth input field."
+  },
+  {
+    "type": "click",
+    "time_start": 70183.33325,
+    "time_end": 70333.33325,
+    "description": "User clicks the purple 'NEXT' button.",
+    "confidence": 0.9,
+    "interaction_target": "NEXT",
+    "cursor_position": null,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The property value is entered, and the user clicks the 'NEXT' button at the bottom."
+  },
+  {
+    "type": "navigate",
+    "time_start": 70333.33325,
+    "time_end": 76283.33325,
+    "description": "Page transitions to 'What's your refinancing goal?'.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The screen changes to a list of refinancing goals like 'Decrease repayments' and 'Pay off loan faster'."
+  },
+  {
+    "type": "click",
+    "time_start": 80133.33325,
+    "time_end": 80283.33325,
+    "description": "User clicks the 'Pay off loan faster' button.",
+    "confidence": 0.9,
+    "interaction_target": "Pay off loan faster",
+    "cursor_position": null,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user taps the button labeled 'Pay off loan faster'."
+  },
+  {
+    "type": "navigate",
+    "time_start": 80283.33325,
+    "time_end": 80383.33325,
+    "description": "Page transitions to 'How will this property be used?'.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The screen changes to a question about whether the property is a home or investment."
+  },
+  {
+    "type": "navigate",
+    "time_start": 81633.33325,
+    "time_end": 81733.33325,
+    "description": "Page transitions to 'Are any of the following important to you when choosing a lender?'.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The screen changes to a multi-select list of features like 'Offset/Redraw' and 'Major lender'."
+  },
+  {
+    "type": "click",
+    "time_start": 86633.33325,
+    "time_end": 86733.33325,
+    "description": "User clicks the 'Major lender' option.",
+    "confidence": 0.9,
+    "interaction_target": "Major lender",
+    "cursor_position": null,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user taps the 'Major lender' icon/button."
+  },
+  {
+    "type": "navigate",
+    "time_start": 88633.33325,
+    "time_end": 89483.33325,
+    "description": "Page transitions to 'What do you think your credit history is?'.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The screen changes to a list of credit history options."
+  },
+  {
+    "type": "click",
+    "time_start": 90733.33325,
+    "time_end": 90883.33325,
+    "description": "User clicks the 'Excellent - No issues' button.",
+    "confidence": 0.9,
+    "interaction_target": "Excellent - No issues",
+    "cursor_position": null,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user taps the button labeled 'Excellent - No issues'."
+  },
+  {
+    "type": "click",
+    "time_start": 93833.33325,
+    "time_end": 93983.33325,
+    "description": "User clicks the 'I'm an employee' button.",
+    "confidence": 0.9,
+    "interaction_target": "I'm an employee",
+    "cursor_position": {
+      "x": 238.5,
+      "y": 1460.4
+    },
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user taps the button labeled 'I'm an employee'."
+  },
+  {
+    "type": "navigate",
+    "time_start": 93983.33325,
+    "time_end": 94083.33325,
+    "description": "Page transitions to 'One last thing, what's your first name?'.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The screen changes to a page with a first name input field."
+  },
+  {
+    "type": "input_text",
+    "time_start": 98283.33325,
+    "time_end": 101783.33325,
+    "description": "User types 'Jane Doe' into the name input field.",
+    "confidence": 0.9,
+    "interaction_target": "Type your first name here",
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user types their name into the text input field."
+  },
+  {
+    "type": "click",
+    "time_start": 102133.33325,
+    "time_end": 102283.33325,
+    "description": "User clicks the 'GET MY HOME LOAN MATCHES' button.",
+    "confidence": 0.9,
+    "interaction_target": "GET MY HOME LOAN MATCHES",
+    "cursor_position": {
+      "x": 66.0,
+      "y": 1964.5
+    },
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user clicks the large purple button at the bottom of the screen."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 102283.33325,
+    "time_end": 102883.33325,
+    "description": "Loading screen with message 'Loading.... You're moving along nicely.' appears.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "A white screen with a purple animated logo and loading text is visible."
+  },
+  {
+    "type": "navigate",
+    "time_start": 102883.33325,
+    "time_end": 103033.33325,
+    "description": "Page transitions to 'Your home loan options await!'.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The screen changes to a page asking for a mobile phone number to access results."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 103033.33325,
+    "time_end": 103133.33325,
+    "description": "Mobile phone number input field appears.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "An input field with a country code selector (+61) appears on the screen."
+  },
+  {
+    "type": "input_text",
+    "time_start": 109183.33325,
+    "time_end": 117383.33325,
+    "description": "User types '9346464848' into the phone number field.",
+    "confidence": 0.9,
+    "interaction_target": "Mobile phone number",
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user types their phone number into the input field."
+  },
+  {
+    "type": "input_text",
+    "time_start": 114966.6665,
+    "time_end": 117366.6665,
+    "description": "User types an Australian mobile phone number into the input field.",
+    "confidence": 0.9,
+    "interaction_target": "044 223 8885",
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "Aussie home loan options page with a phone number input field and a mobile numeric keypad visible."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 119066.6665,
+    "time_end": 119116.6665,
+    "description": "An error message 'Something Went Wrong' appears on the screen.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "A red alert box with an exclamation icon and error text is now visible above the main button."
+  },
+  {
+    "type": "click",
+    "time_start": 118233.33325,
+    "time_end": 118383.33325,
+    "description": "User clicks the 'PROTECT MY ACCOUNT' button.",
+    "confidence": 0.9,
+    "interaction_target": "PROTECT MY ACCOUNT",
+    "cursor_position": null,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user clicks the purple 'PROTECT MY ACCOUNT' button."
+  },
+  {
+    "type": "click",
+    "time_start": 125066.6665,
+    "time_end": 125166.6665,
+    "description": "User clicks the 'PROTECT MY ACCOUNT' button again.",
+    "confidence": 0.9,
+    "interaction_target": "PROTECT MY ACCOUNT",
+    "cursor_position": null,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The button is pressed a second time."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 125266.6665,
+    "time_end": 129066.6665,
+    "description": "A loading screen with a house icon animation and the text 'Loading.... You're moving along nicely.' appears.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "A purple house icon animates on a white background with loading text below it."
+  },
+  {
+    "type": "navigate",
+    "time_start": 129066.6665,
+    "time_end": 129566.6665,
+    "description": "The page navigates to Google search results for 'home loan australia bank st george'.",
+    "confidence": 0.9,
+    "page_title": "home loan australia bank st george - Google Search",
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "Google search results page is displayed."
+  },
+  {
+    "type": "scroll",
+    "time_start": 129566.6665,
+    "time_end": 130766.6665,
+    "description": "User scrolls down through the search results.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The search results page moves vertically as the user scrolls."
+  },
+  {
+    "type": "click",
+    "time_start": 130766.6665,
+    "time_end": 130966.6665,
+    "description": "User clicks on the ubank search result.",
+    "confidence": 0.9,
+    "interaction_target": "Compare Home Loan Rates",
+    "cursor_position": null,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The ubank search result link is activated."
+  },
+  {
+    "type": "navigate",
+    "time_start": 130966.6665,
+    "time_end": 133966.6665,
+    "description": "The page navigates to the ubank Home loans page.",
+    "confidence": 0.9,
+    "page_title": "Home loans | ubank",
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The ubank home loans landing page loads, showing interest rates and 'Apply now' buttons."
+  },
+  {
+    "type": "scroll",
+    "time_start": 133966.6665,
+    "time_end": 172566.6665,
+    "description": "User scrolls through the ubank home loans page to explore content.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The page content moves as the user explores the landing page."
+  },
+  {
+    "type": "click",
+    "time_start": 172566.6665,
+    "time_end": 173066.6665,
+    "description": "User clicks on 'Calculators and tools'.",
+    "confidence": 0.9,
+    "interaction_target": "Calculators and tools",
+    "cursor_position": null,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The 'Calculators and tools' card is clicked."
+  },
+  {
+    "type": "navigate",
+    "time_start": 173066.6665,
+    "time_end": 179366.6665,
+    "description": "The page navigates to the ubank Home loan calculators and tools page.",
+    "confidence": 0.9,
+    "page_title": "Home loan calculators and tools | ubank",
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The calculators landing page loads."
+  },
+  {
+    "type": "scroll",
+    "time_start": 174949.99975000002,
+    "time_end": 179449.99975000002,
+    "description": "User scrolls down the page to locate the refinance calculator.",
+    "confidence": 0.9,
+    "page_title": "Home loan calculators and tools - St.George",
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user is on the St. George home loan calculators page, scrolling past the repayment calculator."
+  },
+  {
+    "type": "click",
+    "time_start": 179366.6665,
+    "time_end": 180266.6665,
+    "description": "User clicks on 'Refinance calculator'.",
+    "confidence": 0.9,
+    "interaction_target": "Refinance calculator",
+    "cursor_position": null,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The 'Refinance calculator' link is selected."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 180266.6665,
+    "time_end": 184949.6665,
+    "description": "The Refinance calculator form appears on the screen.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The page now displays the 'Refinance calculator' form with fields like 'Amount left to pay' and 'Loan type'."
+  },
+  {
+    "type": "click",
+    "time_start": 185832.99975000002,
+    "time_end": 186149.99975000002,
+    "description": "User clicks on the 'Loan term left' dropdown menu.",
+    "confidence": 0.9,
+    "interaction_target": "20",
+    "cursor_position": null,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user clicks the dropdown menu currently showing '20' years."
+  },
+  {
+    "type": "select",
+    "time_start": 186149.99975000002,
+    "time_end": 189799.99975000002,
+    "description": "User selects '25' from the loan term dropdown list.",
+    "confidence": 0.9,
+    "interaction_target": "25",
+    "cursor_position": null,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user picks '25' from the list of years in the dropdown."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 189949.99975000002,
+    "time_end": 191849.99975000002,
+    "description": "A 'Need help?' chat modal pops up over the calculator.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "A green and white 'Need help?' modal appears in the center of the screen."
+  },
+  {
+    "type": "scroll",
+    "time_start": 197949.99975000002,
+    "time_end": 206949.99975000002,
+    "description": "User scrolls down to view the refinance calculation results.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user scrolls down to the bottom of the refinance calculator results."
+  },
+  {
+    "type": "navigate",
+    "time_start": 207249.99975000002,
+    "time_end": 208149.99975000002,
+    "description": "User navigates back to Google search results.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The screen transitions from the St. George site back to Google search results."
+  },
+  {
+    "type": "scroll",
+    "time_start": 208149.99975000002,
+    "time_end": 213249.99975000002,
+    "description": "User scrolls through Google search results.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user is browsing through various bank links on the Google search results page."
+  },
+  {
+    "type": "input_text",
+    "time_start": 213249.99975000002,
+    "time_end": 217549.99975000002,
+    "description": "User types 'home loan australia banks' into the Google search bar.",
+    "confidence": 0.9,
+    "interaction_target": "homeloan australia bank st george",
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The keyboard is active as the user types a new search query."
+  },
+  {
+    "type": "navigate",
+    "time_start": 217549.99975000002,
+    "time_end": 218449.99975000002,
+    "description": "User submits the search and navigates to the results page.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The search results page refreshes with new content."
+  },
+  {
+    "type": "scroll",
+    "time_start": 218449.99975000002,
+    "time_end": 219949.99975000002,
+    "description": "User scrolls through the updated search results.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user is scanning the new search results."
+  },
+  {
+    "type": "input_text",
+    "time_start": 219949.99975000002,
+    "time_end": 225249.99975000002,
+    "description": "User types 'refinancing australia banks' into the search bar.",
+    "confidence": 0.9,
+    "interaction_target": "home loan australia banks",
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user is editing the search query in the Google search bar."
+  },
+  {
+    "type": "navigate",
+    "time_start": 225249.99975000002,
+    "time_end": 225949.99975000002,
+    "description": "User navigates to the results for the 'refinancing' query.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The page loads new search results for refinancing."
+  },
+  {
+    "type": "scroll",
+    "time_start": 225949.99975000002,
+    "time_end": 230049.99975000002,
+    "description": "User scrolls through the refinancing search results.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user is looking at search results, including an ad for Macquarie Bank."
+  },
+  {
+    "type": "click",
+    "time_start": 230049.99975000002,
+    "time_end": 230349.99975000002,
+    "description": "User clicks on the Macquarie Bank 'Home Loan Refinance' result.",
+    "confidence": 0.9,
+    "interaction_target": "Macquarie Bank Home Loan Refinance",
+    "cursor_position": {
+      "x": 36.5,
+      "y": 816.2
+    },
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user clicks the top search result for Macquarie Bank."
+  },
+  {
+    "type": "navigate",
+    "time_start": 230049.99975000002,
+    "time_end": 232949.99975000002,
+    "description": "User navigates to the Macquarie Bank refinance page.",
+    "confidence": 0.9,
+    "page_title": "Refinance your home loan | Macquarie",
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The Macquarie Bank home loan page loads."
+  },
+  {
+    "type": "scroll",
+    "time_start": 232949.99975000002,
+    "time_end": 238449.99975000002,
+    "description": "User scrolls down the Macquarie Bank refinance page.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "The user is reading the content on the Macquarie Bank page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 238449.99975000002,
+    "time_end": 239933.99975000002,
+    "description": "The task instruction overlay appears on the screen.",
+    "confidence": 0.9,
+    "viewport_width": 978,
+    "viewport_height": 2120,
+    "frame_description": "A large blue overlay with task instructions appears over the browser window."
+  }
+]

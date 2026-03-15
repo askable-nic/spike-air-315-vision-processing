@@ -1,0 +1,187 @@
+{
+  "run_id": "2026-03-15_070539",
+  "timestamp": "2026-03-15T07:17:04.115639+00:00",
+  "config": {
+    "gemini": {
+      "api_key_env": "GEMINI_API_KEY",
+      "model": "gemini-3-flash-preview",
+      "temperature": 0.1,
+      "max_concurrent": 3
+    },
+    "video": {
+      "target_pixels": 2073600,
+      "video_fps": 20
+    },
+    "segmentation": {
+      "max_segment_duration_ms": 75000,
+      "segment_overlap_ms": 5000
+    },
+    "cursor": {
+      "tracking_base_fps": 2.0,
+      "tracking_peak_fps": 15.0,
+      "tracking_displacement_threshold_px": 30.0,
+      "tracking_active_padding_ms": 500,
+      "template_scales": [
+        0.8,
+        1.0,
+        1.25,
+        1.5
+      ],
+      "match_threshold": 0.6,
+      "early_exit_threshold": 0.9,
+      "static_filter_duration_ms": 3000,
+      "static_filter_tolerance_px": 1.0,
+      "max_interpolation_gap_ms": 500,
+      "smooth_window": 3,
+      "smooth_displacement_threshold": 10.0
+    },
+    "flow": {
+      "flow_fps": 2.0,
+      "flow_grid_step": 20,
+      "flow_window_size_ms": 1000,
+      "flow_window_step_ms": 500,
+      "resolution_height": 720
+    },
+    "cv_summary": {
+      "summary_window_ms": 250
+    },
+    "merge": {
+      "time_tolerance_ms": 2000,
+      "similarity_threshold": 0.7,
+      "cursor_event_types": [
+        "click",
+        "hover",
+        "dwell",
+        "cursor_thrash",
+        "select",
+        "drag"
+      ]
+    },
+    "token_costs": {
+      "gemini-2.5-flash": {
+        "input_token_cost": 3e-07,
+        "output_token_cost": 2.5e-06
+      },
+      "gemini-3-flash-preview": {
+        "input_token_cost": 5e-07,
+        "output_token_cost": 3e-06
+      }
+    }
+  },
+  "video_path": "/Users/nic/Developer/spike-air-315-vision-processing/input_data/screen_tracks/cfs_home_loan_sasha.mp4",
+  "video_duration_ms": 549800.0,
+  "video_dimensions": {
+    "width": 1912,
+    "height": 1084
+  },
+  "screen_track_start_offset": 0,
+  "stages_run": [
+    "normalize",
+    "cursor",
+    "flow",
+    "segment",
+    "prompt",
+    "gemini",
+    "merge"
+  ],
+  "stages_skipped": [],
+  "stop_after": null,
+  "segments": [
+    {
+      "index": 0,
+      "start_ms": 0.0,
+      "end_ms": 73725.0,
+      "duration_ms": 73725.0,
+      "event_count": 10,
+      "input_tokens": 99954,
+      "output_tokens": 1114,
+      "analysis_ms": 47467.9
+    },
+    {
+      "index": 1,
+      "start_ms": 63725.0,
+      "end_ms": 142450.0,
+      "duration_ms": 78725.0,
+      "event_count": 13,
+      "input_tokens": 107554,
+      "output_tokens": 1958,
+      "analysis_ms": 77241.4
+    },
+    {
+      "index": 2,
+      "start_ms": 132450.0,
+      "end_ms": 211175.0,
+      "duration_ms": 78725.0,
+      "event_count": 28,
+      "input_tokens": 106967,
+      "output_tokens": 3040,
+      "analysis_ms": 94498.0
+    },
+    {
+      "index": 3,
+      "start_ms": 201175.0,
+      "end_ms": 279900.0,
+      "duration_ms": 78725.0,
+      "event_count": 13,
+      "input_tokens": 107994,
+      "output_tokens": 1864,
+      "analysis_ms": 72396.7
+    },
+    {
+      "index": 4,
+      "start_ms": 269900.0,
+      "end_ms": 348625.0,
+      "duration_ms": 78725.0,
+      "event_count": 20,
+      "input_tokens": 107865,
+      "output_tokens": 2704,
+      "analysis_ms": 62493.7
+    },
+    {
+      "index": 5,
+      "start_ms": 338625.0,
+      "end_ms": 417350.0,
+      "duration_ms": 78725.0,
+      "event_count": 17,
+      "input_tokens": 109319,
+      "output_tokens": 2233,
+      "analysis_ms": 60672.1
+    },
+    {
+      "index": 6,
+      "start_ms": 407350.0,
+      "end_ms": 486075.0,
+      "duration_ms": 78725.0,
+      "event_count": 29,
+      "input_tokens": 107413,
+      "output_tokens": 3882,
+      "analysis_ms": 74333.6
+    },
+    {
+      "index": 7,
+      "start_ms": 476075.0,
+      "end_ms": 549800.0,
+      "duration_ms": 73725.0,
+      "event_count": 13,
+      "input_tokens": 100185,
+      "output_tokens": 1728,
+      "analysis_ms": 58262.5
+    }
+  ],
+  "cv_analysis": {
+    "cursor_detections": 6017,
+    "cursor_detected": 1132,
+    "flow_windows": 1098
+  },
+  "events_merged": 143,
+  "events_final": 128,
+  "total_input_tokens": 847251,
+  "total_output_tokens": 18523,
+  "timing": {
+    "cursor_tracking_ms": 478995.0,
+    "optical_flow_ms": 7472.5,
+    "gemini_analysis_ms": 198011.0,
+    "total_ms": 684581.7,
+    "video_duration_ms": 549800.0
+  }
+}

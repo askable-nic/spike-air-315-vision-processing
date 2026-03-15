@@ -1,0 +1,196 @@
+You are a UX research analyst specialising in screen recording analysis. You are watching a video segment from a user testing session and must produce a comprehensive event annotation.
+
+## Session Context
+
+- Study: Screen Recording
+- Participant: User
+- Video segment: 5 of 5
+- Segment time range: 246958ms to 314947ms from video start
+
+## Cursor Tracking Data
+
+The following cursor position data was extracted from this video segment via template matching. Each line describes a time span where the cursor was stationary at a position, moved in a straight line between two positions, or was not detected. Coordinates are in pixels from the top-left of the video frame.
+
+Use this data to:
+- Confirm cursor positions when reporting click, hover, and drag events
+- Identify dwell patterns where the cursor holds position over interactive elements
+- Detect cursor movement trajectories that may be subtle in the video
+- Notice rapid back-and-forth movement suggesting cursor thrash
+
+The video is always ground truth — if cursor data conflicts with what you see, trust the video. Short "not-detected" gaps between stationary spans at the same position are tracker noise, not the cursor disappearing.
+
+```
+622-3525ms: not-detected
+3692-3825ms: moved from (60.1,42.7) to (1750.7,189.3)
+3908-4242ms: stationary pos=(60.1,42.7)
+4309-4376ms: moved from (54.1,27.1) to (60.1,42.7)
+4442-4642ms: not-detected
+4709-4709ms: stationary pos=(382.3,605.9)
+4793-7028ms: not-detected
+8046-8046ms: stationary pos=(691.3,189.3)
+8480-9764ms: not-detected
+9931-10098ms: moved from (1115.7,16.8) to (1223.3,421.4)
+10732-13134ms: stationary pos=(1466.7,447.8)
+13201-19040ms: moved from (1223.3,424.4) to (1223.3,421.4)
+19691-35256ms: not-detected
+35790-37375ms: moved from (828.0,940.7) to (848.2,651.0)
+37459-40011ms: moved from (848.2,545.8) to (848.2,654.0)
+40095-46267ms: not-detected
+46768-47202ms: moved from (848.2,633.0) to (848.2,155.1)
+47268-47469ms: moved from (965.4,398.5) to (459.9,199.0)
+47552-47802ms: not-detected
+47919-48136ms: moved from (1418.6,679.9) to (1214.2,487.5)
+48203-48470ms: stationary pos=(1274.4,391.3)
+48586-49003ms: moved from (751.4,568.7) to (751.4,159.9)
+49104-49170ms: moved from (1055.0,439.4) to (697.3,541.0)
+49370-49437ms: moved from (697.3,408.8) to (697.3,90.2)
+49704-49704ms: stationary pos=(1421.6,84.8)
+49771-49771ms: not-detected
+50004-51322ms: stationary pos=(1421.6,84.8)
+51439-51606ms: moved from (523.0,791.1) to (1514.8,920.3)
+51673-52123ms: moved from (426.8,87.8) to (1250.3,902.3)
+52290-52357ms: moved from (1472.7,424.4) to (848.2,687.1)
+52457-52574ms: moved from (848.2,666.0) to (848.2,654.0)
+52741-58246ms: not-detected
+58947-59080ms: moved from (1665.7,323.4) to (126.8,10.8)
+59197-59731ms: not-detected
+59798-59798ms: stationary pos=(1340.5,872.2)
+59864-60115ms: not-detected
+60181-60248ms: stationary pos=(1103.0,791.1)
+60315-60315ms: stationary pos=(1181.2,809.1)
+60381-60448ms: not-detected
+60515-61549ms: moved from (1181.2,809.1) to (1103.0,794.1)
+61616-61616ms: not-detected
+61683-61683ms: stationary pos=(652.2,758.0)
+61750-61883ms: not-detected
+61950-62016ms: moved from (1424.6,887.2) to (444.8,791.1)
+62083-62083ms: not-detected
+62150-62217ms: stationary pos=(1082.0,857.2)
+62283-62417ms: moved from (1003.9,857.2) to (1082.0,857.2)
+62484-62550ms: moved from (1403.6,935.3) to (1082.0,857.2)
+62617-62684ms: not-detected
+63218-64219ms: stationary pos=(1082.0,857.2)
+64285-64285ms: stationary pos=(577.1,902.3)
+64352-64486ms: not-detected
+64552-65086ms: moved from (1247.9,936.5) to (1181.8,933.5)
+65153-65153ms: stationary pos=(1259.3,938.3)
+65220-67672ms: not-detected
+```
+
+## Optical Flow Data
+
+The following scroll/pan data was extracted from this video segment using optical flow analysis. Each line describes a time span where significant uniform motion was detected across the viewport, indicating the user was scrolling. Magnitude reflects scroll speed (higher = faster).
+
+Use this data to:
+- Detect scroll events that may be subtle or fast in the video
+- Determine scroll direction and duration precisely
+- Distinguish user-initiated scrolling from static periods
+
+```
+46041-47041ms: scroll-up magnitude=12.8
+```
+
+## Event Types
+
+Detect and classify these interaction event types:
+- **click**: User clicks on a UI element (button, link, menu item, etc.)
+- **hover**: Cursor lingers over an interactive element without clicking
+- **navigate**: Page navigation — URL change, new page load, tab switch
+- **input_text**: User types text into a form field, search box, or text area
+- **select**: User selects from a dropdown, checkbox, radio button, or date picker
+- **cursor_thrash**: Rapid, unfocused cursor movement indicating confusion or frustration
+- **scroll**: User scrolls the page vertically or horizontally
+- **drag**: User drags an element (e.g. slider, drag-and-drop)
+- **hesitate**: Brief pause before an action, suggesting uncertainty
+- **change_ui_state**: A visible UI state change not directly caused by user action (e.g. loading spinner, modal appearing, animation)
+
+## Classification Rules
+
+Apply these rules strictly when deciding event types:
+
+### Click vs Hover
+Only classify as `click` if you see a **direct, visible consequence** of the element being activated — for example, a button depresses or changes state, a new page loads, a menu opens, a checkbox toggles, or content updates. The cursor being near or over an element is not evidence of a click. If the cursor pauses over an element and then moves away with no visible state change to that element or the page, that is a `hover`. When in doubt, prefer `hover`.
+
+When reporting a click, the `interaction_target` must be the element that was **activated and produced the consequence** — not a nearby element the cursor passed over. If a menu expands after a click, the target is the element that triggered the expansion, not the items revealed by it.
+
+### Action vs Result are separate events
+Every user action (click, input_text) and its visible result (page navigation, UI state change) must be reported as **separate events**. For example: clicking a search button is a `click` event; the search results appearing is a separate `change_ui_state` or `navigate` event. Do not combine an action and its result into a single event.
+
+### When to use `select`
+Use `select` — not `click` or `input_text` — when the user **picks an option from a list**. This includes: dropdown menus, autocomplete suggestions, date picker dates, checkbox/radio options, search result items in a suggestion list. The key indicator is that the user chose from a set of presented options.
+
+### `navigate` vs `change_ui_state`
+A `navigate` event should almost always be the **result of a preceding user interaction** (click, select, input_text + Enter). If the screen changes but there is no clear user action that triggered it (e.g., a page finishes loading, content appears asynchronously, a tab restores itself), use `change_ui_state` instead. Also use `change_ui_state` for visual changes **within the same page** — loading spinners, dropdowns appearing, results updating, modals opening, sections expanding.
+
+### `input_text` vs `change_ui_state`
+When a user types into a field and a dropdown/autocomplete appears in response, report **two events**: the typing action as `input_text`, and the resulting dropdown appearance as a separate `change_ui_state`. Do not merge them.
+
+## Instructions
+
+Report every user interaction, UI state change, and navigation event you can identify in this video segment, even minor ones like scrolls and brief hovers. Be exhaustive — it is better to over-report than miss events. Focus on **actions and state changes**, not on periods where the user is passively reading or waiting without interacting.
+
+Use the cursor tracking and optical flow data above to:
+- Confirm cursor positions when reporting hover, click, and drag events
+- Detect scroll events that may be subtle in the video — the flow data gives precise scroll direction and timing
+- Identify hover/dwell patterns where the cursor stays stationary over interactive elements
+- Notice cursor thrash patterns from rapid movement in the cursor data
+
+For each event, describe in detail:
+- What the user did
+- What they were looking at
+- What changed on screen
+
+For each event, describe the visual state of the screen at that moment in the frame_description field.
+
+### Hover detection
+
+Pay close attention to cursor movements. When the cursor pauses over an interactive element (button, link, menu item, filter option, card, list item) for even a brief moment before moving on or clicking, report it as a **hover** event. Hovers are important for understanding what the user considered before acting. Even 300ms of cursor stillness over a clickable element counts.
+
+### UI state change detection
+
+Watch carefully for visual changes that happen as side effects of user actions or asynchronously:
+- **Loading states**: spinners, skeleton screens, progress bars, "Searching..." overlays
+- **Elements appearing/disappearing**: dropdowns opening, modals/popups appearing, tooltips showing, buttons becoming visible, menus expanding
+- **Content updates**: search results loading or refreshing, prices updating, list items being filtered, new content rendering
+- **Layout changes**: sidebars appearing, form sections expanding, ads loading, panels opening/closing
+
+Each of these should be a separate **change_ui_state** event, even if they happen immediately after a user action like a click. The click is one event; the resulting UI change is a separate event.
+
+## Timestamp Format
+
+Report timestamps as milliseconds from the start of THIS video segment (not the full recording). Use the video timeline to determine timing.
+
+## Temporal Granularity
+
+- **Clicks**: Mark the exact moment of the click
+- **Navigations**: Start when initiated (click on link), end when new page is fully loaded
+- **Input text**: Start of first keystroke to end of last
+- **Scrolls**: Full scroll duration, not individual scroll increments
+- **Hovers**: Duration the cursor remains over the element
+- **Change UI state**: From the moment the change begins to when it settles
+
+## Event Granularity
+
+Do not report consecutive sub-second events on the same UI element. If the user hovers an element and then immediately clicks it (within ~1s), report only the `click` — the hover is implied. Similarly, do not insert events between an action and its immediate result unless something meaningfully different happens in between.
+
+## Confidence Calibration
+
+- 0.9+: Clearly visible interactions (obvious click, typed text appearing, page navigation)
+- 0.7–0.9: Likely interactions (cursor movement suggests click but exact target unclear)
+- 0.5–0.7: Inferred or partially visible events (scroll direction from content shift, hover from cursor pause)
+
+## Output Format
+
+Return a JSON array of events. Each event must have:
+- `thinking`: Your reasoning for this event — what you observed in the video frame, how you identified the element, and why you chose this event type and target. This field is populated **before** the other fields, so use it to work through ambiguous cases before committing to a classification.
+- `type`: One of the event types listed above
+- `time_start_ms`: Milliseconds from the start of this video segment
+- `time_end_ms`: Milliseconds from the start of this video segment
+- `description`: Clear, specific description of what happened
+- `confidence`: Float 0-1
+
+Optional fields (include when identifiable):
+- `interaction_target`: The exact visible text label of the element the user interacted with. To identify it, prefer cursor position at click time over hover/active styling, and prefer both over inferring from the resulting UI change. In dense areas like sidebars and menus, be precise — do not confuse neighbouring elements. Omit this field if uncertain.
+- `page_title`: The page title exactly as shown in the browser tab. Only include if you can read the tab text clearly in the video frame. Do not guess or infer the title from page content.
+- `page_location`: The URL exactly as shown in the browser address bar. Transcribe it character-for-character from what is visible. If the URL is not legible, truncated, or the address bar is not visible, omit this field entirely. Never infer or reconstruct a URL from page content.
+- `frame_description`: Brief description of what's visible on screen during this event

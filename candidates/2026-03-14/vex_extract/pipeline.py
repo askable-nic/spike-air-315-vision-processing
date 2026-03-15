@@ -67,7 +67,9 @@ def _save_output(
     segment_results: list[tuple[VideoSegment, list[dict], dict]] | None,
     merged_snapshot: list | None,
     final_events: list | None,
-    analysis_time_ms: float,
+    cursor_time_ms: float | None,
+    flow_time_ms: float | None,
+    analysis_time_ms: float | None,
     t0: float,
     run_id: str,
     stages_run: list[str],
@@ -116,15 +118,20 @@ def _save_output(
         for segment, raw_events, token_usage in segment_results:
             total_input_tokens += token_usage.get("input_tokens", 0)
             total_output_tokens += token_usage.get("output_tokens", 0)
-            segment_metadata.append({
+            seg_entry: dict = {
                 "index": segment.index,
                 "start_ms": segment.start_ms,
                 "end_ms": segment.end_ms,
+                "duration_ms": round(segment.end_ms - segment.start_ms, 1),
                 "event_count": len(raw_events),
                 "input_tokens": token_usage.get("input_tokens", 0),
                 "output_tokens": token_usage.get("output_tokens", 0),
-                **({"error": token_usage["error"]} if "error" in token_usage else {}),
-            })
+            }
+            if "analysis_ms" in token_usage:
+                seg_entry["analysis_ms"] = token_usage["analysis_ms"]
+            if "error" in token_usage:
+                seg_entry["error"] = token_usage["error"]
+            segment_metadata.append(seg_entry)
 
     total_time_ms = (time.monotonic() - t0) * 1000
     run_metadata: dict = {
@@ -148,8 +155,13 @@ def _save_output(
         "events_final": len(output_events),
         "total_input_tokens": total_input_tokens,
         "total_output_tokens": total_output_tokens,
-        "analysis_time_ms": round(analysis_time_ms, 1),
-        "total_time_ms": round(total_time_ms, 1),
+        "timing": {
+            **({"cursor_tracking_ms": round(cursor_time_ms, 1)} if cursor_time_ms is not None else {}),
+            **({"optical_flow_ms": round(flow_time_ms, 1)} if flow_time_ms is not None else {}),
+            **({"gemini_analysis_ms": round(analysis_time_ms, 1)} if analysis_time_ms is not None else {}),
+            "total_ms": round(total_time_ms, 1),
+            "video_duration_ms": getattr(meta, "duration_ms", None),
+        },
     }
     (run_dir / "run_metadata.json").write_text(json.dumps(run_metadata, indent=2))
 
@@ -208,7 +220,9 @@ def run_pipeline(
     segment_results: list[tuple[VideoSegment, list[dict], dict]] | None = None
     merged_snapshot: list | None = None
     final_events: list | None = None
-    analysis_time_ms = 0.0
+    analysis_time_ms: float | None = None
+    cursor_time_ms: float | None = None
+    flow_time_ms: float | None = None
     meta = None
 
     def _done(stage: str) -> bool:
@@ -233,6 +247,7 @@ def run_pipeline(
                      offset=offset, cursor_trajectory=cursor_trajectory,
                      flow_windows=flow_windows, segment_results=segment_results,
                      merged_snapshot=merged_snapshot, final_events=final_events,
+                     cursor_time_ms=cursor_time_ms, flow_time_ms=flow_time_ms,
                      analysis_time_ms=analysis_time_ms, t0=t0, run_id=run_id,
                      stages_run=stages_run, stages_skipped=stages_skipped,
                      stop_after=stop_after)
@@ -256,6 +271,7 @@ def run_pipeline(
             raw = json.loads(cursor_cache_path.read_text())
             cursor_trajectory = tuple(CursorDetection(**d) for d in raw)
         else:
+            t_cursor = time.monotonic()
             templates_dir = app_root / "cursor_templates"
             cursor_trajectory = track_cursor(
                 video_path=norm_path,
@@ -263,6 +279,7 @@ def run_pipeline(
                 templates_dir=templates_dir,
                 total_duration_ms=meta.duration_ms,
             )
+            cursor_time_ms = (time.monotonic() - t_cursor) * 1000
             cursor_cache_path.parent.mkdir(parents=True, exist_ok=True)
             cursor_cache_path.write_text(
                 json.dumps([d.model_dump() for d in cursor_trajectory], indent=2)
@@ -270,7 +287,10 @@ def run_pipeline(
             logger.info("  Cached cursor trajectory: %s", cursor_cache_path)
 
         detected_count = sum(1 for d in cursor_trajectory if d.detected)
-        logger.info("  %d cursor detections (%d detected)", len(cursor_trajectory), detected_count)
+        if cursor_time_ms is not None:
+            logger.info("  %d cursor detections (%d detected) in %.1fs", len(cursor_trajectory), detected_count, cursor_time_ms / 1000)
+        else:
+            logger.info("  %d cursor detections (%d detected) [cached]", len(cursor_trajectory), detected_count)
 
         shutil.copy2(cursor_cache_path, cv_dir / "cursor_trajectory.json")
 
@@ -280,7 +300,8 @@ def run_pipeline(
                          offset=offset, cursor_trajectory=cursor_trajectory,
                          flow_windows=flow_windows, segment_results=segment_results,
                          merged_snapshot=merged_snapshot, final_events=final_events,
-                         analysis_time_ms=analysis_time_ms, t0=t0, run_id=run_id,
+                         cursor_time_ms=cursor_time_ms, flow_time_ms=flow_time_ms,
+                     analysis_time_ms=analysis_time_ms, t0=t0, run_id=run_id,
                          stages_run=stages_run, stages_skipped=stages_skipped,
                          stop_after=stop_after)
             logging.getLogger().removeHandler(file_handler)
@@ -301,19 +322,24 @@ def run_pipeline(
             raw = json.loads(flow_cache_path.read_text())
             flow_windows = tuple(FlowWindow(**fw) for fw in raw)
         else:
+            t_flow = time.monotonic()
             flow_windows = compute_flow_summaries(
                 video_path=norm_path,
                 cursor_trajectory=cursor_trajectory,
                 config=config.flow,
                 total_duration_ms=meta.duration_ms,
             )
+            flow_time_ms = (time.monotonic() - t_flow) * 1000
             flow_cache_path.parent.mkdir(parents=True, exist_ok=True)
             flow_cache_path.write_text(
                 json.dumps([fw.model_dump() for fw in flow_windows], indent=2)
             )
             logger.info("  Cached flow windows: %s", flow_cache_path)
 
-        logger.info("  %d flow windows", len(flow_windows))
+        if flow_time_ms is not None:
+            logger.info("  %d flow windows in %.1fs", len(flow_windows), flow_time_ms / 1000)
+        else:
+            logger.info("  %d flow windows [cached]", len(flow_windows))
 
         shutil.copy2(flow_cache_path, cv_dir / "flow_windows.json")
 
@@ -323,7 +349,8 @@ def run_pipeline(
                          offset=offset, cursor_trajectory=cursor_trajectory,
                          flow_windows=flow_windows, segment_results=segment_results,
                          merged_snapshot=merged_snapshot, final_events=final_events,
-                         analysis_time_ms=analysis_time_ms, t0=t0, run_id=run_id,
+                         cursor_time_ms=cursor_time_ms, flow_time_ms=flow_time_ms,
+                     analysis_time_ms=analysis_time_ms, t0=t0, run_id=run_id,
                          stages_run=stages_run, stages_skipped=stages_skipped,
                          stop_after=stop_after)
             logging.getLogger().removeHandler(file_handler)
@@ -366,7 +393,8 @@ def run_pipeline(
                          offset=offset, cursor_trajectory=cursor_trajectory,
                          flow_windows=flow_windows, segment_results=segment_results,
                          merged_snapshot=merged_snapshot, final_events=final_events,
-                         analysis_time_ms=analysis_time_ms, t0=t0, run_id=run_id,
+                         cursor_time_ms=cursor_time_ms, flow_time_ms=flow_time_ms,
+                     analysis_time_ms=analysis_time_ms, t0=t0, run_id=run_id,
                          stages_run=stages_run, stages_skipped=stages_skipped,
                          stop_after=stop_after)
             logging.getLogger().removeHandler(file_handler)
@@ -398,7 +426,8 @@ def run_pipeline(
                          offset=offset, cursor_trajectory=cursor_trajectory,
                          flow_windows=flow_windows, segment_results=segment_results,
                          merged_snapshot=merged_snapshot, final_events=final_events,
-                         analysis_time_ms=analysis_time_ms, t0=t0, run_id=run_id,
+                         cursor_time_ms=cursor_time_ms, flow_time_ms=flow_time_ms,
+                     analysis_time_ms=analysis_time_ms, t0=t0, run_id=run_id,
                          stages_run=stages_run, stages_skipped=stages_skipped,
                          stop_after=stop_after)
             logging.getLogger().removeHandler(file_handler)
@@ -434,7 +463,8 @@ def run_pipeline(
                          offset=offset, cursor_trajectory=cursor_trajectory,
                          flow_windows=flow_windows, segment_results=segment_results,
                          merged_snapshot=merged_snapshot, final_events=final_events,
-                         analysis_time_ms=analysis_time_ms, t0=t0, run_id=run_id,
+                         cursor_time_ms=cursor_time_ms, flow_time_ms=flow_time_ms,
+                     analysis_time_ms=analysis_time_ms, t0=t0, run_id=run_id,
                          stages_run=stages_run, stages_skipped=stages_skipped,
                          stop_after=stop_after)
             logging.getLogger().removeHandler(file_handler)
@@ -474,6 +504,7 @@ def run_pipeline(
                  offset=offset, cursor_trajectory=cursor_trajectory,
                  flow_windows=flow_windows, segment_results=segment_results,
                  merged_snapshot=merged_snapshot, final_events=final_events,
+                 cursor_time_ms=cursor_time_ms, flow_time_ms=flow_time_ms,
                  analysis_time_ms=analysis_time_ms, t0=t0, run_id=run_id,
                  stages_run=stages_run, stages_skipped=stages_skipped,
                  stop_after=stop_after)

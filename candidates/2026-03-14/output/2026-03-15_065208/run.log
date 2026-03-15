@@ -1,0 +1,537 @@
+2026-03-15 16:52:08,285 INFO vex_extract.pipeline: === Video Event Extractor ===
+2026-03-15 16:52:08,286 INFO vex_extract.pipeline: Video: /Users/nic/Developer/spike-air-315-vision-processing/input_data/screen_tracks/flight_centre_booking_kay.mp4
+2026-03-15 16:52:08,286 INFO vex_extract.pipeline: Offset: 349348 ms
+2026-03-15 16:52:08,286 INFO vex_extract.pipeline: Run ID: 2026-03-15_065208
+2026-03-15 16:52:08,286 INFO vex_extract.pipeline: Step 1: Normalizing video...
+2026-03-15 16:52:08,286 INFO vex_extract.pipeline:   Using cached normalized video: /Users/nic/Developer/spike-air-315-vision-processing/candidates/2026-03-14/tmp/flight_centre_booking_kay_normalized.mp4
+2026-03-15 16:52:08,312 INFO vex_extract.pipeline:   Duration: 391.4s, 1982x1046, 30.0 fps
+2026-03-15 16:52:08,312 INFO vex_extract.pipeline: Step 2: Tracking cursor...
+2026-03-15 16:52:10,247 INFO vex_extract.cursor:   Cursor: pass 1 — matching 783 frames at 2.0 FPS against 6 templates x 4 scales at 360p...
+2026-03-15 16:52:12,523 INFO vex_extract.cursor:   Cursor: 78/783 frames (65 detections)
+2026-03-15 16:52:13,986 INFO vex_extract.cursor:   Cursor: 156/783 frames (140 detections)
+2026-03-15 16:52:15,090 INFO vex_extract.cursor:   Cursor: 234/783 frames (218 detections)
+2026-03-15 16:52:18,981 INFO vex_extract.cursor:   Cursor: 312/783 frames (255 detections)
+2026-03-15 16:52:23,381 INFO vex_extract.cursor:   Cursor: 390/783 frames (285 detections)
+2026-03-15 16:52:28,210 INFO vex_extract.cursor:   Cursor: 468/783 frames (311 detections)
+2026-03-15 16:52:33,941 INFO vex_extract.cursor:   Cursor: 546/783 frames (321 detections)
+2026-03-15 16:52:37,099 INFO vex_extract.cursor:   Cursor: 624/783 frames (375 detections)
+2026-03-15 16:52:42,560 INFO vex_extract.cursor:   Cursor: 702/783 frames (387 detections)
+2026-03-15 16:52:45,638 INFO vex_extract.cursor:   Cursor: 780/783 frames (436 detections)
+2026-03-15 16:52:45,678 INFO vex_extract.cursor:   Cursor: 33 active regions identified
+2026-03-15 16:52:45,792 INFO vex_extract.cursor:   Cursor: pass 2 — 142 frames at 15.0 FPS [500ms-11000ms]
+2026-03-15 16:52:46,477 INFO vex_extract.cursor:   Cursor: 14/142 frames (10 detections)
+2026-03-15 16:52:47,587 INFO vex_extract.cursor:   Cursor: 28/142 frames (10 detections)
+2026-03-15 16:52:48,696 INFO vex_extract.cursor:   Cursor: 42/142 frames (16 detections)
+2026-03-15 16:52:49,738 INFO vex_extract.cursor:   Cursor: 56/142 frames (18 detections)
+2026-03-15 16:52:50,624 INFO vex_extract.cursor:   Cursor: 70/142 frames (24 detections)
+2026-03-15 16:52:51,736 INFO vex_extract.cursor:   Cursor: 84/142 frames (24 detections)
+2026-03-15 16:52:52,846 INFO vex_extract.cursor:   Cursor: 98/142 frames (24 detections)
+2026-03-15 16:52:53,310 INFO vex_extract.cursor:   Cursor: 112/142 frames (36 detections)
+2026-03-15 16:52:53,496 INFO vex_extract.cursor:   Cursor: 126/142 frames (50 detections)
+2026-03-15 16:52:53,683 INFO vex_extract.cursor:   Cursor: 140/142 frames (64 detections)
+2026-03-15 16:52:53,783 INFO vex_extract.cursor:   Cursor: pass 2 — 31 frames at 15.0 FPS [11500ms-13500ms]
+2026-03-15 16:52:53,889 INFO vex_extract.cursor:   Cursor: 3/31 frames (3 detections)
+2026-03-15 16:52:53,930 INFO vex_extract.cursor:   Cursor: 6/31 frames (6 detections)
+2026-03-15 16:52:53,969 INFO vex_extract.cursor:   Cursor: 9/31 frames (9 detections)
+2026-03-15 16:52:54,010 INFO vex_extract.cursor:   Cursor: 12/31 frames (12 detections)
+2026-03-15 16:52:54,049 INFO vex_extract.cursor:   Cursor: 15/31 frames (15 detections)
+2026-03-15 16:52:54,089 INFO vex_extract.cursor:   Cursor: 18/31 frames (18 detections)
+2026-03-15 16:52:54,129 INFO vex_extract.cursor:   Cursor: 21/31 frames (21 detections)
+2026-03-15 16:52:54,170 INFO vex_extract.cursor:   Cursor: 24/31 frames (24 detections)
+2026-03-15 16:52:54,210 INFO vex_extract.cursor:   Cursor: 27/31 frames (27 detections)
+2026-03-15 16:52:54,250 INFO vex_extract.cursor:   Cursor: 30/31 frames (30 detections)
+2026-03-15 16:52:54,377 INFO vex_extract.cursor:   Cursor: pass 2 — 62 frames at 15.0 FPS [16000ms-21000ms]
+2026-03-15 16:52:54,523 INFO vex_extract.cursor:   Cursor: 6/62 frames (6 detections)
+2026-03-15 16:52:54,603 INFO vex_extract.cursor:   Cursor: 12/62 frames (12 detections)
+2026-03-15 16:52:54,682 INFO vex_extract.cursor:   Cursor: 18/62 frames (18 detections)
+2026-03-15 16:52:54,761 INFO vex_extract.cursor:   Cursor: 24/62 frames (24 detections)
+2026-03-15 16:52:54,842 INFO vex_extract.cursor:   Cursor: 30/62 frames (30 detections)
+2026-03-15 16:52:54,922 INFO vex_extract.cursor:   Cursor: 36/62 frames (36 detections)
+2026-03-15 16:52:55,002 INFO vex_extract.cursor:   Cursor: 42/62 frames (42 detections)
+2026-03-15 16:52:55,082 INFO vex_extract.cursor:   Cursor: 48/62 frames (48 detections)
+2026-03-15 16:52:55,162 INFO vex_extract.cursor:   Cursor: 54/62 frames (54 detections)
+2026-03-15 16:52:55,242 INFO vex_extract.cursor:   Cursor: 60/62 frames (60 detections)
+2026-03-15 16:52:55,383 INFO vex_extract.cursor:   Cursor: pass 2 — 19 frames at 15.0 FPS [24000ms-25500ms]
+2026-03-15 16:52:55,463 INFO vex_extract.cursor:   Cursor: 1/19 frames (1 detections)
+2026-03-15 16:52:55,477 INFO vex_extract.cursor:   Cursor: 2/19 frames (2 detections)
+2026-03-15 16:52:55,490 INFO vex_extract.cursor:   Cursor: 3/19 frames (3 detections)
+2026-03-15 16:52:55,503 INFO vex_extract.cursor:   Cursor: 4/19 frames (4 detections)
+2026-03-15 16:52:55,517 INFO vex_extract.cursor:   Cursor: 5/19 frames (5 detections)
+2026-03-15 16:52:55,530 INFO vex_extract.cursor:   Cursor: 6/19 frames (6 detections)
+2026-03-15 16:52:55,543 INFO vex_extract.cursor:   Cursor: 7/19 frames (7 detections)
+2026-03-15 16:52:55,557 INFO vex_extract.cursor:   Cursor: 8/19 frames (8 detections)
+2026-03-15 16:52:55,571 INFO vex_extract.cursor:   Cursor: 9/19 frames (9 detections)
+2026-03-15 16:52:55,584 INFO vex_extract.cursor:   Cursor: 10/19 frames (10 detections)
+2026-03-15 16:52:55,597 INFO vex_extract.cursor:   Cursor: 11/19 frames (11 detections)
+2026-03-15 16:52:55,610 INFO vex_extract.cursor:   Cursor: 12/19 frames (12 detections)
+2026-03-15 16:52:55,623 INFO vex_extract.cursor:   Cursor: 13/19 frames (13 detections)
+2026-03-15 16:52:55,636 INFO vex_extract.cursor:   Cursor: 14/19 frames (14 detections)
+2026-03-15 16:52:55,650 INFO vex_extract.cursor:   Cursor: 15/19 frames (15 detections)
+2026-03-15 16:52:55,663 INFO vex_extract.cursor:   Cursor: 16/19 frames (16 detections)
+2026-03-15 16:52:55,676 INFO vex_extract.cursor:   Cursor: 17/19 frames (17 detections)
+2026-03-15 16:52:55,689 INFO vex_extract.cursor:   Cursor: 18/19 frames (18 detections)
+2026-03-15 16:52:55,859 INFO vex_extract.cursor:   Cursor: pass 2 — 45 frames at 15.0 FPS [30500ms-34000ms]
+2026-03-15 16:52:55,979 INFO vex_extract.cursor:   Cursor: 4/45 frames (4 detections)
+2026-03-15 16:52:56,032 INFO vex_extract.cursor:   Cursor: 8/45 frames (8 detections)
+2026-03-15 16:52:56,085 INFO vex_extract.cursor:   Cursor: 12/45 frames (12 detections)
+2026-03-15 16:52:56,138 INFO vex_extract.cursor:   Cursor: 16/45 frames (16 detections)
+2026-03-15 16:52:56,191 INFO vex_extract.cursor:   Cursor: 20/45 frames (20 detections)
+2026-03-15 16:52:56,245 INFO vex_extract.cursor:   Cursor: 24/45 frames (24 detections)
+2026-03-15 16:52:56,298 INFO vex_extract.cursor:   Cursor: 28/45 frames (28 detections)
+2026-03-15 16:52:56,352 INFO vex_extract.cursor:   Cursor: 32/45 frames (32 detections)
+2026-03-15 16:52:56,405 INFO vex_extract.cursor:   Cursor: 36/45 frames (36 detections)
+2026-03-15 16:52:56,459 INFO vex_extract.cursor:   Cursor: 40/45 frames (40 detections)
+2026-03-15 16:52:56,512 INFO vex_extract.cursor:   Cursor: 44/45 frames (44 detections)
+2026-03-15 16:52:56,702 INFO vex_extract.cursor:   Cursor: pass 2 — 22 frames at 15.0 FPS [41000ms-42500ms]
+2026-03-15 16:52:56,796 INFO vex_extract.cursor:   Cursor: 2/22 frames (2 detections)
+2026-03-15 16:52:56,823 INFO vex_extract.cursor:   Cursor: 4/22 frames (4 detections)
+2026-03-15 16:52:56,849 INFO vex_extract.cursor:   Cursor: 6/22 frames (6 detections)
+2026-03-15 16:52:56,875 INFO vex_extract.cursor:   Cursor: 8/22 frames (8 detections)
+2026-03-15 16:52:56,902 INFO vex_extract.cursor:   Cursor: 10/22 frames (10 detections)
+2026-03-15 16:52:56,928 INFO vex_extract.cursor:   Cursor: 12/22 frames (12 detections)
+2026-03-15 16:52:56,955 INFO vex_extract.cursor:   Cursor: 14/22 frames (14 detections)
+2026-03-15 16:52:56,981 INFO vex_extract.cursor:   Cursor: 16/22 frames (16 detections)
+2026-03-15 16:52:57,008 INFO vex_extract.cursor:   Cursor: 18/22 frames (18 detections)
+2026-03-15 16:52:57,035 INFO vex_extract.cursor:   Cursor: 20/22 frames (20 detections)
+2026-03-15 16:52:57,254 INFO vex_extract.cursor:   Cursor: pass 2 — 22 frames at 15.0 FPS [45500ms-47000ms]
+2026-03-15 16:52:57,347 INFO vex_extract.cursor:   Cursor: 2/22 frames (2 detections)
+2026-03-15 16:52:57,373 INFO vex_extract.cursor:   Cursor: 4/22 frames (4 detections)
+2026-03-15 16:52:57,400 INFO vex_extract.cursor:   Cursor: 6/22 frames (6 detections)
+2026-03-15 16:52:57,427 INFO vex_extract.cursor:   Cursor: 8/22 frames (8 detections)
+2026-03-15 16:52:57,454 INFO vex_extract.cursor:   Cursor: 10/22 frames (10 detections)
+2026-03-15 16:52:57,480 INFO vex_extract.cursor:   Cursor: 12/22 frames (12 detections)
+2026-03-15 16:52:57,506 INFO vex_extract.cursor:   Cursor: 14/22 frames (14 detections)
+2026-03-15 16:52:57,533 INFO vex_extract.cursor:   Cursor: 16/22 frames (16 detections)
+2026-03-15 16:52:57,559 INFO vex_extract.cursor:   Cursor: 18/22 frames (18 detections)
+2026-03-15 16:52:57,586 INFO vex_extract.cursor:   Cursor: 20/22 frames (20 detections)
+2026-03-15 16:52:57,856 INFO vex_extract.cursor:   Cursor: pass 2 — 78 frames at 15.0 FPS [49000ms-54500ms]
+2026-03-15 16:52:58,017 INFO vex_extract.cursor:   Cursor: 7/78 frames (7 detections)
+2026-03-15 16:52:58,110 INFO vex_extract.cursor:   Cursor: 14/78 frames (14 detections)
+2026-03-15 16:52:58,204 INFO vex_extract.cursor:   Cursor: 21/78 frames (21 detections)
+2026-03-15 16:52:58,297 INFO vex_extract.cursor:   Cursor: 28/78 frames (28 detections)
+2026-03-15 16:52:58,390 INFO vex_extract.cursor:   Cursor: 35/78 frames (35 detections)
+2026-03-15 16:52:58,890 INFO vex_extract.cursor:   Cursor: 42/78 frames (36 detections)
+2026-03-15 16:52:59,442 INFO vex_extract.cursor:   Cursor: 49/78 frames (36 detections)
+2026-03-15 16:52:59,667 INFO vex_extract.cursor:   Cursor: 56/78 frames (42 detections)
+2026-03-15 16:52:59,759 INFO vex_extract.cursor:   Cursor: 63/78 frames (49 detections)
+2026-03-15 16:52:59,852 INFO vex_extract.cursor:   Cursor: 70/78 frames (56 detections)
+2026-03-15 16:52:59,945 INFO vex_extract.cursor:   Cursor: 77/78 frames (63 detections)
+2026-03-15 16:53:00,217 INFO vex_extract.cursor:   Cursor: pass 2 — 22 frames at 15.0 FPS [60500ms-62000ms]
+2026-03-15 16:53:00,309 INFO vex_extract.cursor:   Cursor: 2/22 frames (2 detections)
+2026-03-15 16:53:00,335 INFO vex_extract.cursor:   Cursor: 4/22 frames (4 detections)
+2026-03-15 16:53:00,361 INFO vex_extract.cursor:   Cursor: 6/22 frames (6 detections)
+2026-03-15 16:53:00,388 INFO vex_extract.cursor:   Cursor: 8/22 frames (8 detections)
+2026-03-15 16:53:00,414 INFO vex_extract.cursor:   Cursor: 10/22 frames (10 detections)
+2026-03-15 16:53:00,440 INFO vex_extract.cursor:   Cursor: 12/22 frames (12 detections)
+2026-03-15 16:53:00,467 INFO vex_extract.cursor:   Cursor: 14/22 frames (14 detections)
+2026-03-15 16:53:00,493 INFO vex_extract.cursor:   Cursor: 16/22 frames (16 detections)
+2026-03-15 16:53:00,519 INFO vex_extract.cursor:   Cursor: 18/22 frames (18 detections)
+2026-03-15 16:53:00,546 INFO vex_extract.cursor:   Cursor: 20/22 frames (20 detections)
+2026-03-15 16:53:00,858 INFO vex_extract.cursor:   Cursor: pass 2 — 40 frames at 15.0 FPS [64000ms-67000ms]
+2026-03-15 16:53:00,976 INFO vex_extract.cursor:   Cursor: 4/40 frames (4 detections)
+2026-03-15 16:53:01,029 INFO vex_extract.cursor:   Cursor: 8/40 frames (8 detections)
+2026-03-15 16:53:01,082 INFO vex_extract.cursor:   Cursor: 12/40 frames (12 detections)
+2026-03-15 16:53:01,135 INFO vex_extract.cursor:   Cursor: 16/40 frames (16 detections)
+2026-03-15 16:53:01,188 INFO vex_extract.cursor:   Cursor: 20/40 frames (20 detections)
+2026-03-15 16:53:01,241 INFO vex_extract.cursor:   Cursor: 24/40 frames (24 detections)
+2026-03-15 16:53:01,294 INFO vex_extract.cursor:   Cursor: 28/40 frames (28 detections)
+2026-03-15 16:53:01,347 INFO vex_extract.cursor:   Cursor: 32/40 frames (32 detections)
+2026-03-15 16:53:01,400 INFO vex_extract.cursor:   Cursor: 36/40 frames (36 detections)
+2026-03-15 16:53:01,757 INFO vex_extract.cursor:   Cursor: pass 2 — 24 frames at 15.0 FPS [70000ms-72000ms]
+2026-03-15 16:53:01,849 INFO vex_extract.cursor:   Cursor: 2/24 frames (2 detections)
+2026-03-15 16:53:01,876 INFO vex_extract.cursor:   Cursor: 4/24 frames (4 detections)
+2026-03-15 16:53:01,903 INFO vex_extract.cursor:   Cursor: 6/24 frames (6 detections)
+2026-03-15 16:53:01,929 INFO vex_extract.cursor:   Cursor: 8/24 frames (8 detections)
+2026-03-15 16:53:01,956 INFO vex_extract.cursor:   Cursor: 10/24 frames (10 detections)
+2026-03-15 16:53:01,982 INFO vex_extract.cursor:   Cursor: 12/24 frames (12 detections)
+2026-03-15 16:53:02,009 INFO vex_extract.cursor:   Cursor: 14/24 frames (14 detections)
+2026-03-15 16:53:02,114 INFO vex_extract.cursor:   Cursor: 16/24 frames (16 detections)
+2026-03-15 16:53:02,141 INFO vex_extract.cursor:   Cursor: 18/24 frames (18 detections)
+2026-03-15 16:53:02,167 INFO vex_extract.cursor:   Cursor: 20/24 frames (20 detections)
+2026-03-15 16:53:02,194 INFO vex_extract.cursor:   Cursor: 22/24 frames (22 detections)
+2026-03-15 16:53:02,542 INFO vex_extract.cursor:   Cursor: pass 2 — 18 frames at 15.0 FPS [75000ms-76500ms]
+2026-03-15 16:53:02,622 INFO vex_extract.cursor:   Cursor: 1/18 frames (1 detections)
+2026-03-15 16:53:02,635 INFO vex_extract.cursor:   Cursor: 2/18 frames (2 detections)
+2026-03-15 16:53:02,648 INFO vex_extract.cursor:   Cursor: 3/18 frames (3 detections)
+2026-03-15 16:53:02,661 INFO vex_extract.cursor:   Cursor: 4/18 frames (4 detections)
+2026-03-15 16:53:02,674 INFO vex_extract.cursor:   Cursor: 5/18 frames (5 detections)
+2026-03-15 16:53:02,688 INFO vex_extract.cursor:   Cursor: 6/18 frames (6 detections)
+2026-03-15 16:53:02,701 INFO vex_extract.cursor:   Cursor: 7/18 frames (7 detections)
+2026-03-15 16:53:02,715 INFO vex_extract.cursor:   Cursor: 8/18 frames (8 detections)
+2026-03-15 16:53:02,728 INFO vex_extract.cursor:   Cursor: 9/18 frames (9 detections)
+2026-03-15 16:53:02,742 INFO vex_extract.cursor:   Cursor: 10/18 frames (10 detections)
+2026-03-15 16:53:02,755 INFO vex_extract.cursor:   Cursor: 11/18 frames (11 detections)
+2026-03-15 16:53:02,768 INFO vex_extract.cursor:   Cursor: 12/18 frames (12 detections)
+2026-03-15 16:53:02,781 INFO vex_extract.cursor:   Cursor: 13/18 frames (13 detections)
+2026-03-15 16:53:02,795 INFO vex_extract.cursor:   Cursor: 14/18 frames (14 detections)
+2026-03-15 16:53:02,808 INFO vex_extract.cursor:   Cursor: 15/18 frames (15 detections)
+2026-03-15 16:53:02,821 INFO vex_extract.cursor:   Cursor: 16/18 frames (16 detections)
+2026-03-15 16:53:02,835 INFO vex_extract.cursor:   Cursor: 17/18 frames (17 detections)
+2026-03-15 16:53:03,189 INFO vex_extract.cursor:   Cursor: pass 2 — 18 frames at 15.0 FPS [80000ms-81500ms]
+2026-03-15 16:53:03,269 INFO vex_extract.cursor:   Cursor: 1/18 frames (1 detections)
+2026-03-15 16:53:03,282 INFO vex_extract.cursor:   Cursor: 2/18 frames (2 detections)
+2026-03-15 16:53:03,295 INFO vex_extract.cursor:   Cursor: 3/18 frames (3 detections)
+2026-03-15 16:53:03,309 INFO vex_extract.cursor:   Cursor: 4/18 frames (4 detections)
+2026-03-15 16:53:03,322 INFO vex_extract.cursor:   Cursor: 5/18 frames (5 detections)
+2026-03-15 16:53:03,335 INFO vex_extract.cursor:   Cursor: 6/18 frames (6 detections)
+2026-03-15 16:53:03,349 INFO vex_extract.cursor:   Cursor: 7/18 frames (7 detections)
+2026-03-15 16:53:03,362 INFO vex_extract.cursor:   Cursor: 8/18 frames (8 detections)
+2026-03-15 16:53:03,375 INFO vex_extract.cursor:   Cursor: 9/18 frames (9 detections)
+2026-03-15 16:53:03,388 INFO vex_extract.cursor:   Cursor: 10/18 frames (10 detections)
+2026-03-15 16:53:03,402 INFO vex_extract.cursor:   Cursor: 11/18 frames (11 detections)
+2026-03-15 16:53:03,415 INFO vex_extract.cursor:   Cursor: 12/18 frames (12 detections)
+2026-03-15 16:53:03,428 INFO vex_extract.cursor:   Cursor: 13/18 frames (13 detections)
+2026-03-15 16:53:03,442 INFO vex_extract.cursor:   Cursor: 14/18 frames (14 detections)
+2026-03-15 16:53:03,455 INFO vex_extract.cursor:   Cursor: 15/18 frames (15 detections)
+2026-03-15 16:53:03,468 INFO vex_extract.cursor:   Cursor: 16/18 frames (16 detections)
+2026-03-15 16:53:03,481 INFO vex_extract.cursor:   Cursor: 17/18 frames (17 detections)
+2026-03-15 16:53:03,874 INFO vex_extract.cursor:   Cursor: pass 2 — 18 frames at 15.0 FPS [88500ms-90000ms]
+2026-03-15 16:53:03,953 INFO vex_extract.cursor:   Cursor: 1/18 frames (1 detections)
+2026-03-15 16:53:03,966 INFO vex_extract.cursor:   Cursor: 2/18 frames (2 detections)
+2026-03-15 16:53:03,980 INFO vex_extract.cursor:   Cursor: 3/18 frames (3 detections)
+2026-03-15 16:53:03,993 INFO vex_extract.cursor:   Cursor: 4/18 frames (4 detections)
+2026-03-15 16:53:04,007 INFO vex_extract.cursor:   Cursor: 5/18 frames (5 detections)
+2026-03-15 16:53:04,020 INFO vex_extract.cursor:   Cursor: 6/18 frames (6 detections)
+2026-03-15 16:53:04,033 INFO vex_extract.cursor:   Cursor: 7/18 frames (7 detections)
+2026-03-15 16:53:04,047 INFO vex_extract.cursor:   Cursor: 8/18 frames (8 detections)
+2026-03-15 16:53:04,060 INFO vex_extract.cursor:   Cursor: 9/18 frames (9 detections)
+2026-03-15 16:53:04,073 INFO vex_extract.cursor:   Cursor: 10/18 frames (10 detections)
+2026-03-15 16:53:04,086 INFO vex_extract.cursor:   Cursor: 11/18 frames (11 detections)
+2026-03-15 16:53:04,099 INFO vex_extract.cursor:   Cursor: 12/18 frames (12 detections)
+2026-03-15 16:53:04,112 INFO vex_extract.cursor:   Cursor: 13/18 frames (13 detections)
+2026-03-15 16:53:04,126 INFO vex_extract.cursor:   Cursor: 14/18 frames (14 detections)
+2026-03-15 16:53:04,139 INFO vex_extract.cursor:   Cursor: 15/18 frames (15 detections)
+2026-03-15 16:53:04,152 INFO vex_extract.cursor:   Cursor: 16/18 frames (16 detections)
+2026-03-15 16:53:04,165 INFO vex_extract.cursor:   Cursor: 17/18 frames (17 detections)
+2026-03-15 16:53:04,596 INFO vex_extract.cursor:   Cursor: pass 2 — 24 frames at 15.0 FPS [96000ms-98000ms]
+2026-03-15 16:53:04,687 INFO vex_extract.cursor:   Cursor: 2/24 frames (2 detections)
+2026-03-15 16:53:04,714 INFO vex_extract.cursor:   Cursor: 4/24 frames (4 detections)
+2026-03-15 16:53:04,740 INFO vex_extract.cursor:   Cursor: 6/24 frames (6 detections)
+2026-03-15 16:53:04,766 INFO vex_extract.cursor:   Cursor: 8/24 frames (8 detections)
+2026-03-15 16:53:04,792 INFO vex_extract.cursor:   Cursor: 10/24 frames (10 detections)
+2026-03-15 16:53:04,819 INFO vex_extract.cursor:   Cursor: 12/24 frames (12 detections)
+2026-03-15 16:53:04,845 INFO vex_extract.cursor:   Cursor: 14/24 frames (14 detections)
+2026-03-15 16:53:04,871 INFO vex_extract.cursor:   Cursor: 16/24 frames (16 detections)
+2026-03-15 16:53:04,897 INFO vex_extract.cursor:   Cursor: 18/24 frames (18 detections)
+2026-03-15 16:53:04,923 INFO vex_extract.cursor:   Cursor: 20/24 frames (20 detections)
+2026-03-15 16:53:04,949 INFO vex_extract.cursor:   Cursor: 22/24 frames (22 detections)
+2026-03-15 16:53:05,434 INFO vex_extract.cursor:   Cursor: pass 2 — 24 frames at 15.0 FPS [105500ms-107500ms]
+2026-03-15 16:53:05,526 INFO vex_extract.cursor:   Cursor: 2/24 frames (2 detections)
+2026-03-15 16:53:05,552 INFO vex_extract.cursor:   Cursor: 4/24 frames (4 detections)
+2026-03-15 16:53:05,579 INFO vex_extract.cursor:   Cursor: 6/24 frames (6 detections)
+2026-03-15 16:53:05,605 INFO vex_extract.cursor:   Cursor: 8/24 frames (8 detections)
+2026-03-15 16:53:05,631 INFO vex_extract.cursor:   Cursor: 10/24 frames (10 detections)
+2026-03-15 16:53:05,658 INFO vex_extract.cursor:   Cursor: 12/24 frames (12 detections)
+2026-03-15 16:53:05,684 INFO vex_extract.cursor:   Cursor: 14/24 frames (14 detections)
+2026-03-15 16:53:05,710 INFO vex_extract.cursor:   Cursor: 16/24 frames (16 detections)
+2026-03-15 16:53:05,737 INFO vex_extract.cursor:   Cursor: 18/24 frames (18 detections)
+2026-03-15 16:53:05,764 INFO vex_extract.cursor:   Cursor: 20/24 frames (20 detections)
+2026-03-15 16:53:05,790 INFO vex_extract.cursor:   Cursor: 22/24 frames (22 detections)
+2026-03-15 16:53:06,295 INFO vex_extract.cursor:   Cursor: pass 2 — 18 frames at 15.0 FPS [111000ms-112500ms]
+2026-03-15 16:53:06,373 INFO vex_extract.cursor:   Cursor: 1/18 frames (1 detections)
+2026-03-15 16:53:06,386 INFO vex_extract.cursor:   Cursor: 2/18 frames (2 detections)
+2026-03-15 16:53:06,400 INFO vex_extract.cursor:   Cursor: 3/18 frames (3 detections)
+2026-03-15 16:53:06,413 INFO vex_extract.cursor:   Cursor: 4/18 frames (4 detections)
+2026-03-15 16:53:06,426 INFO vex_extract.cursor:   Cursor: 5/18 frames (5 detections)
+2026-03-15 16:53:06,440 INFO vex_extract.cursor:   Cursor: 6/18 frames (6 detections)
+2026-03-15 16:53:06,453 INFO vex_extract.cursor:   Cursor: 7/18 frames (7 detections)
+2026-03-15 16:53:06,466 INFO vex_extract.cursor:   Cursor: 8/18 frames (8 detections)
+2026-03-15 16:53:06,479 INFO vex_extract.cursor:   Cursor: 9/18 frames (9 detections)
+2026-03-15 16:53:06,492 INFO vex_extract.cursor:   Cursor: 10/18 frames (10 detections)
+2026-03-15 16:53:06,506 INFO vex_extract.cursor:   Cursor: 11/18 frames (11 detections)
+2026-03-15 16:53:06,519 INFO vex_extract.cursor:   Cursor: 12/18 frames (12 detections)
+2026-03-15 16:53:06,532 INFO vex_extract.cursor:   Cursor: 13/18 frames (13 detections)
+2026-03-15 16:53:06,546 INFO vex_extract.cursor:   Cursor: 14/18 frames (14 detections)
+2026-03-15 16:53:06,559 INFO vex_extract.cursor:   Cursor: 15/18 frames (15 detections)
+2026-03-15 16:53:06,572 INFO vex_extract.cursor:   Cursor: 16/18 frames (16 detections)
+2026-03-15 16:53:06,586 INFO vex_extract.cursor:   Cursor: 17/18 frames (17 detections)
+2026-03-15 16:53:07,093 INFO vex_extract.cursor:   Cursor: pass 2 — 18 frames at 15.0 FPS [116000ms-117500ms]
+2026-03-15 16:53:07,172 INFO vex_extract.cursor:   Cursor: 1/18 frames (1 detections)
+2026-03-15 16:53:07,186 INFO vex_extract.cursor:   Cursor: 2/18 frames (2 detections)
+2026-03-15 16:53:07,198 INFO vex_extract.cursor:   Cursor: 3/18 frames (3 detections)
+2026-03-15 16:53:07,212 INFO vex_extract.cursor:   Cursor: 4/18 frames (4 detections)
+2026-03-15 16:53:07,225 INFO vex_extract.cursor:   Cursor: 5/18 frames (5 detections)
+2026-03-15 16:53:07,239 INFO vex_extract.cursor:   Cursor: 6/18 frames (6 detections)
+2026-03-15 16:53:07,252 INFO vex_extract.cursor:   Cursor: 7/18 frames (7 detections)
+2026-03-15 16:53:07,266 INFO vex_extract.cursor:   Cursor: 8/18 frames (8 detections)
+2026-03-15 16:53:07,279 INFO vex_extract.cursor:   Cursor: 9/18 frames (9 detections)
+2026-03-15 16:53:07,292 INFO vex_extract.cursor:   Cursor: 10/18 frames (10 detections)
+2026-03-15 16:53:07,305 INFO vex_extract.cursor:   Cursor: 11/18 frames (11 detections)
+2026-03-15 16:53:07,318 INFO vex_extract.cursor:   Cursor: 12/18 frames (12 detections)
+2026-03-15 16:53:07,331 INFO vex_extract.cursor:   Cursor: 13/18 frames (13 detections)
+2026-03-15 16:53:07,344 INFO vex_extract.cursor:   Cursor: 14/18 frames (14 detections)
+2026-03-15 16:53:07,357 INFO vex_extract.cursor:   Cursor: 15/18 frames (15 detections)
+2026-03-15 16:53:07,370 INFO vex_extract.cursor:   Cursor: 16/18 frames (16 detections)
+2026-03-15 16:53:07,383 INFO vex_extract.cursor:   Cursor: 17/18 frames (17 detections)
+2026-03-15 16:53:07,965 INFO vex_extract.cursor:   Cursor: pass 2 — 90 frames at 15.0 FPS [120500ms-128000ms]
+2026-03-15 16:53:08,150 INFO vex_extract.cursor:   Cursor: 9/90 frames (9 detections)
+2026-03-15 16:53:08,547 INFO vex_extract.cursor:   Cursor: 18/90 frames (14 detections)
+2026-03-15 16:53:09,262 INFO vex_extract.cursor:   Cursor: 27/90 frames (14 detections)
+2026-03-15 16:53:09,972 INFO vex_extract.cursor:   Cursor: 36/90 frames (14 detections)
+2026-03-15 16:53:10,681 INFO vex_extract.cursor:   Cursor: 45/90 frames (14 detections)
+2026-03-15 16:53:11,405 INFO vex_extract.cursor:   Cursor: 54/90 frames (15 detections)
+2026-03-15 16:53:12,119 INFO vex_extract.cursor:   Cursor: 63/90 frames (15 detections)
+2026-03-15 16:53:12,833 INFO vex_extract.cursor:   Cursor: 72/90 frames (15 detections)
+2026-03-15 16:53:13,547 INFO vex_extract.cursor:   Cursor: 81/90 frames (16 detections)
+2026-03-15 16:53:14,520 INFO vex_extract.cursor:   Cursor: pass 2 — 391 frames at 15.0 FPS [140000ms-166000ms]
+2026-03-15 16:53:16,897 INFO vex_extract.cursor:   Cursor: 39/391 frames (12 detections)
+2026-03-15 16:53:19,989 INFO vex_extract.cursor:   Cursor: 78/391 frames (12 detections)
+2026-03-15 16:53:23,075 INFO vex_extract.cursor:   Cursor: 117/391 frames (12 detections)
+2026-03-15 16:53:26,162 INFO vex_extract.cursor:   Cursor: 156/391 frames (12 detections)
+2026-03-15 16:53:29,246 INFO vex_extract.cursor:   Cursor: 195/391 frames (12 detections)
+2026-03-15 16:53:32,331 INFO vex_extract.cursor:   Cursor: 234/391 frames (12 detections)
+2026-03-15 16:53:35,420 INFO vex_extract.cursor:   Cursor: 273/391 frames (12 detections)
+2026-03-15 16:53:38,508 INFO vex_extract.cursor:   Cursor: 312/391 frames (12 detections)
+2026-03-15 16:53:41,589 INFO vex_extract.cursor:   Cursor: 351/391 frames (12 detections)
+2026-03-15 16:53:43,487 INFO vex_extract.cursor:   Cursor: 390/391 frames (31 detections)
+2026-03-15 16:53:44,396 INFO vex_extract.cursor:   Cursor: pass 2 — 256 frames at 15.0 FPS [178000ms-195000ms]
+2026-03-15 16:53:45,536 INFO vex_extract.cursor:   Cursor: 25/256 frames (14 detections)
+2026-03-15 16:53:47,519 INFO vex_extract.cursor:   Cursor: 50/256 frames (14 detections)
+2026-03-15 16:53:49,510 INFO vex_extract.cursor:   Cursor: 75/256 frames (14 detections)
+2026-03-15 16:53:51,491 INFO vex_extract.cursor:   Cursor: 100/256 frames (14 detections)
+2026-03-15 16:53:53,468 INFO vex_extract.cursor:   Cursor: 125/256 frames (14 detections)
+2026-03-15 16:53:55,442 INFO vex_extract.cursor:   Cursor: 150/256 frames (14 detections)
+2026-03-15 16:53:57,418 INFO vex_extract.cursor:   Cursor: 175/256 frames (14 detections)
+2026-03-15 16:53:59,398 INFO vex_extract.cursor:   Cursor: 200/256 frames (14 detections)
+2026-03-15 16:54:01,402 INFO vex_extract.cursor:   Cursor: 225/256 frames (16 detections)
+2026-03-15 16:54:02,808 INFO vex_extract.cursor:   Cursor: 250/256 frames (28 detections)
+2026-03-15 16:54:03,764 INFO vex_extract.cursor:   Cursor: pass 2 — 121 frames at 15.0 FPS [198500ms-206500ms]
+2026-03-15 16:54:03,989 INFO vex_extract.cursor:   Cursor: 12/121 frames (12 detections)
+2026-03-15 16:54:04,756 INFO vex_extract.cursor:   Cursor: 24/121 frames (15 detections)
+2026-03-15 16:54:05,708 INFO vex_extract.cursor:   Cursor: 36/121 frames (15 detections)
+2026-03-15 16:54:06,653 INFO vex_extract.cursor:   Cursor: 48/121 frames (15 detections)
+2026-03-15 16:54:07,604 INFO vex_extract.cursor:   Cursor: 60/121 frames (15 detections)
+2026-03-15 16:54:08,554 INFO vex_extract.cursor:   Cursor: 72/121 frames (15 detections)
+2026-03-15 16:54:09,503 INFO vex_extract.cursor:   Cursor: 84/121 frames (15 detections)
+2026-03-15 16:54:10,452 INFO vex_extract.cursor:   Cursor: 96/121 frames (15 detections)
+2026-03-15 16:54:11,360 INFO vex_extract.cursor:   Cursor: 108/121 frames (18 detections)
+2026-03-15 16:54:11,651 INFO vex_extract.cursor:   Cursor: 120/121 frames (29 detections)
+2026-03-15 16:54:12,610 INFO vex_extract.cursor:   Cursor: pass 2 — 151 frames at 15.0 FPS [209500ms-219500ms]
+2026-03-15 16:54:12,954 INFO vex_extract.cursor:   Cursor: 15/151 frames (14 detections)
+2026-03-15 16:54:14,142 INFO vex_extract.cursor:   Cursor: 30/151 frames (14 detections)
+2026-03-15 16:54:15,323 INFO vex_extract.cursor:   Cursor: 45/151 frames (14 detections)
+2026-03-15 16:54:16,510 INFO vex_extract.cursor:   Cursor: 60/151 frames (14 detections)
+2026-03-15 16:54:17,693 INFO vex_extract.cursor:   Cursor: 75/151 frames (14 detections)
+2026-03-15 16:54:18,878 INFO vex_extract.cursor:   Cursor: 90/151 frames (14 detections)
+2026-03-15 16:54:20,062 INFO vex_extract.cursor:   Cursor: 105/151 frames (14 detections)
+2026-03-15 16:54:21,250 INFO vex_extract.cursor:   Cursor: 120/151 frames (14 detections)
+2026-03-15 16:54:22,434 INFO vex_extract.cursor:   Cursor: 135/151 frames (14 detections)
+2026-03-15 16:54:22,962 INFO vex_extract.cursor:   Cursor: 150/151 frames (25 detections)
+2026-03-15 16:54:24,399 INFO vex_extract.cursor:   Cursor: pass 2 — 756 frames at 15.0 FPS [220500ms-273000ms]
+2026-03-15 16:54:29,552 INFO vex_extract.cursor:   Cursor: 75/756 frames (13 detections)
+2026-03-15 16:54:35,306 INFO vex_extract.cursor:   Cursor: 150/756 frames (17 detections)
+2026-03-15 16:54:39,769 INFO vex_extract.cursor:   Cursor: 225/756 frames (43 detections)
+2026-03-15 16:54:45,689 INFO vex_extract.cursor:   Cursor: 300/756 frames (43 detections)
+2026-03-15 16:54:51,623 INFO vex_extract.cursor:   Cursor: 375/756 frames (43 detections)
+2026-03-15 16:54:57,543 INFO vex_extract.cursor:   Cursor: 450/756 frames (43 detections)
+2026-03-15 16:55:03,472 INFO vex_extract.cursor:   Cursor: 525/756 frames (43 detections)
+2026-03-15 16:55:09,390 INFO vex_extract.cursor:   Cursor: 600/756 frames (43 detections)
+2026-03-15 16:55:15,309 INFO vex_extract.cursor:   Cursor: 675/756 frames (43 detections)
+2026-03-15 16:55:18,906 INFO vex_extract.cursor:   Cursor: 750/756 frames (83 detections)
+2026-03-15 16:55:20,117 INFO vex_extract.cursor:   Cursor: pass 2 — 43 frames at 15.0 FPS [276500ms-280000ms]
+2026-03-15 16:55:20,236 INFO vex_extract.cursor:   Cursor: 4/43 frames (4 detections)
+2026-03-15 16:55:20,290 INFO vex_extract.cursor:   Cursor: 8/43 frames (8 detections)
+2026-03-15 16:55:20,343 INFO vex_extract.cursor:   Cursor: 12/43 frames (12 detections)
+2026-03-15 16:55:20,396 INFO vex_extract.cursor:   Cursor: 16/43 frames (16 detections)
+2026-03-15 16:55:20,449 INFO vex_extract.cursor:   Cursor: 20/43 frames (20 detections)
+2026-03-15 16:55:20,502 INFO vex_extract.cursor:   Cursor: 24/43 frames (24 detections)
+2026-03-15 16:55:20,634 INFO vex_extract.cursor:   Cursor: 28/43 frames (28 detections)
+2026-03-15 16:55:20,688 INFO vex_extract.cursor:   Cursor: 32/43 frames (32 detections)
+2026-03-15 16:55:20,741 INFO vex_extract.cursor:   Cursor: 36/43 frames (36 detections)
+2026-03-15 16:55:20,794 INFO vex_extract.cursor:   Cursor: 40/43 frames (40 detections)
+2026-03-15 16:55:21,960 INFO vex_extract.cursor:   Cursor: pass 2 — 19 frames at 15.0 FPS [283000ms-284500ms]
+2026-03-15 16:55:22,039 INFO vex_extract.cursor:   Cursor: 1/19 frames (1 detections)
+2026-03-15 16:55:22,053 INFO vex_extract.cursor:   Cursor: 2/19 frames (2 detections)
+2026-03-15 16:55:22,066 INFO vex_extract.cursor:   Cursor: 3/19 frames (3 detections)
+2026-03-15 16:55:22,157 INFO vex_extract.cursor:   Cursor: 4/19 frames (4 detections)
+2026-03-15 16:55:22,171 INFO vex_extract.cursor:   Cursor: 5/19 frames (5 detections)
+2026-03-15 16:55:22,184 INFO vex_extract.cursor:   Cursor: 6/19 frames (6 detections)
+2026-03-15 16:55:22,197 INFO vex_extract.cursor:   Cursor: 7/19 frames (7 detections)
+2026-03-15 16:55:22,210 INFO vex_extract.cursor:   Cursor: 8/19 frames (8 detections)
+2026-03-15 16:55:22,224 INFO vex_extract.cursor:   Cursor: 9/19 frames (9 detections)
+2026-03-15 16:55:22,237 INFO vex_extract.cursor:   Cursor: 10/19 frames (10 detections)
+2026-03-15 16:55:22,250 INFO vex_extract.cursor:   Cursor: 11/19 frames (11 detections)
+2026-03-15 16:55:22,263 INFO vex_extract.cursor:   Cursor: 12/19 frames (12 detections)
+2026-03-15 16:55:22,276 INFO vex_extract.cursor:   Cursor: 13/19 frames (13 detections)
+2026-03-15 16:55:22,290 INFO vex_extract.cursor:   Cursor: 14/19 frames (14 detections)
+2026-03-15 16:55:22,303 INFO vex_extract.cursor:   Cursor: 15/19 frames (15 detections)
+2026-03-15 16:55:22,317 INFO vex_extract.cursor:   Cursor: 16/19 frames (16 detections)
+2026-03-15 16:55:22,330 INFO vex_extract.cursor:   Cursor: 17/19 frames (17 detections)
+2026-03-15 16:55:22,343 INFO vex_extract.cursor:   Cursor: 18/19 frames (18 detections)
+2026-03-15 16:55:23,594 INFO vex_extract.cursor:   Cursor: pass 2 — 55 frames at 15.0 FPS [307500ms-312000ms]
+2026-03-15 16:55:23,727 INFO vex_extract.cursor:   Cursor: 5/55 frames (5 detections)
+2026-03-15 16:55:24,003 INFO vex_extract.cursor:   Cursor: 10/55 frames (7 detections)
+2026-03-15 16:55:24,399 INFO vex_extract.cursor:   Cursor: 15/55 frames (7 detections)
+2026-03-15 16:55:24,794 INFO vex_extract.cursor:   Cursor: 20/55 frames (7 detections)
+2026-03-15 16:55:25,190 INFO vex_extract.cursor:   Cursor: 25/55 frames (7 detections)
+2026-03-15 16:55:25,587 INFO vex_extract.cursor:   Cursor: 30/55 frames (7 detections)
+2026-03-15 16:55:25,985 INFO vex_extract.cursor:   Cursor: 35/55 frames (7 detections)
+2026-03-15 16:55:26,382 INFO vex_extract.cursor:   Cursor: 40/55 frames (7 detections)
+2026-03-15 16:55:26,781 INFO vex_extract.cursor:   Cursor: 45/55 frames (7 detections)
+2026-03-15 16:55:27,113 INFO vex_extract.cursor:   Cursor: 50/55 frames (9 detections)
+2026-03-15 16:55:28,405 INFO vex_extract.cursor:   Cursor: pass 2 — 19 frames at 15.0 FPS [313000ms-314500ms]
+2026-03-15 16:55:28,484 INFO vex_extract.cursor:   Cursor: 1/19 frames (1 detections)
+2026-03-15 16:55:28,497 INFO vex_extract.cursor:   Cursor: 2/19 frames (2 detections)
+2026-03-15 16:55:28,511 INFO vex_extract.cursor:   Cursor: 3/19 frames (3 detections)
+2026-03-15 16:55:28,524 INFO vex_extract.cursor:   Cursor: 4/19 frames (4 detections)
+2026-03-15 16:55:28,538 INFO vex_extract.cursor:   Cursor: 5/19 frames (5 detections)
+2026-03-15 16:55:28,551 INFO vex_extract.cursor:   Cursor: 6/19 frames (6 detections)
+2026-03-15 16:55:28,564 INFO vex_extract.cursor:   Cursor: 7/19 frames (7 detections)
+2026-03-15 16:55:28,578 INFO vex_extract.cursor:   Cursor: 8/19 frames (8 detections)
+2026-03-15 16:55:28,591 INFO vex_extract.cursor:   Cursor: 9/19 frames (9 detections)
+2026-03-15 16:55:28,605 INFO vex_extract.cursor:   Cursor: 10/19 frames (10 detections)
+2026-03-15 16:55:28,618 INFO vex_extract.cursor:   Cursor: 11/19 frames (11 detections)
+2026-03-15 16:55:28,631 INFO vex_extract.cursor:   Cursor: 12/19 frames (12 detections)
+2026-03-15 16:55:28,644 INFO vex_extract.cursor:   Cursor: 13/19 frames (13 detections)
+2026-03-15 16:55:28,658 INFO vex_extract.cursor:   Cursor: 14/19 frames (14 detections)
+2026-03-15 16:55:28,671 INFO vex_extract.cursor:   Cursor: 15/19 frames (15 detections)
+2026-03-15 16:55:28,685 INFO vex_extract.cursor:   Cursor: 16/19 frames (16 detections)
+2026-03-15 16:55:28,698 INFO vex_extract.cursor:   Cursor: 17/19 frames (17 detections)
+2026-03-15 16:55:28,711 INFO vex_extract.cursor:   Cursor: 18/19 frames (18 detections)
+2026-03-15 16:55:30,294 INFO vex_extract.cursor:   Cursor: pass 2 — 469 frames at 15.0 FPS [316500ms-355500ms]
+2026-03-15 16:55:33,550 INFO vex_extract.cursor:   Cursor: 46/469 frames (7 detections)
+2026-03-15 16:55:37,196 INFO vex_extract.cursor:   Cursor: 92/469 frames (7 detections)
+2026-03-15 16:55:40,655 INFO vex_extract.cursor:   Cursor: 138/469 frames (11 detections)
+2026-03-15 16:55:44,300 INFO vex_extract.cursor:   Cursor: 184/469 frames (11 detections)
+2026-03-15 16:55:47,949 INFO vex_extract.cursor:   Cursor: 230/469 frames (11 detections)
+2026-03-15 16:55:51,605 INFO vex_extract.cursor:   Cursor: 276/469 frames (12 detections)
+2026-03-15 16:55:55,137 INFO vex_extract.cursor:   Cursor: 322/469 frames (15 detections)
+2026-03-15 16:55:58,779 INFO vex_extract.cursor:   Cursor: 368/469 frames (15 detections)
+2026-03-15 16:56:02,429 INFO vex_extract.cursor:   Cursor: 414/469 frames (15 detections)
+2026-03-15 16:56:06,072 INFO vex_extract.cursor:   Cursor: 460/469 frames (16 detections)
+2026-03-15 16:56:07,698 INFO vex_extract.cursor:   Cursor: pass 2 — 151 frames at 15.0 FPS [361500ms-374000ms]
+2026-03-15 16:56:08,436 INFO vex_extract.cursor:   Cursor: 15/151 frames (8 detections)
+2026-03-15 16:56:09,626 INFO vex_extract.cursor:   Cursor: 30/151 frames (8 detections)
+2026-03-15 16:56:10,817 INFO vex_extract.cursor:   Cursor: 45/151 frames (8 detections)
+2026-03-15 16:56:12,007 INFO vex_extract.cursor:   Cursor: 60/151 frames (8 detections)
+2026-03-15 16:56:13,193 INFO vex_extract.cursor:   Cursor: 75/151 frames (8 detections)
+2026-03-15 16:56:14,383 INFO vex_extract.cursor:   Cursor: 90/151 frames (8 detections)
+2026-03-15 16:56:15,571 INFO vex_extract.cursor:   Cursor: 105/151 frames (8 detections)
+2026-03-15 16:56:16,761 INFO vex_extract.cursor:   Cursor: 120/151 frames (8 detections)
+2026-03-15 16:56:17,950 INFO vex_extract.cursor:   Cursor: 135/151 frames (8 detections)
+2026-03-15 16:56:18,281 INFO vex_extract.cursor:   Cursor: 150/151 frames (22 detections)
+2026-03-15 16:56:19,772 INFO vex_extract.cursor:   Cursor: pass 2 — 19 frames at 15.0 FPS [374500ms-376000ms]
+2026-03-15 16:56:19,851 INFO vex_extract.cursor:   Cursor: 1/19 frames (1 detections)
+2026-03-15 16:56:19,865 INFO vex_extract.cursor:   Cursor: 2/19 frames (2 detections)
+2026-03-15 16:56:19,878 INFO vex_extract.cursor:   Cursor: 3/19 frames (3 detections)
+2026-03-15 16:56:19,891 INFO vex_extract.cursor:   Cursor: 4/19 frames (4 detections)
+2026-03-15 16:56:19,905 INFO vex_extract.cursor:   Cursor: 5/19 frames (5 detections)
+2026-03-15 16:56:19,918 INFO vex_extract.cursor:   Cursor: 6/19 frames (6 detections)
+2026-03-15 16:56:19,932 INFO vex_extract.cursor:   Cursor: 7/19 frames (7 detections)
+2026-03-15 16:56:19,946 INFO vex_extract.cursor:   Cursor: 8/19 frames (8 detections)
+2026-03-15 16:56:19,959 INFO vex_extract.cursor:   Cursor: 9/19 frames (9 detections)
+2026-03-15 16:56:19,972 INFO vex_extract.cursor:   Cursor: 10/19 frames (10 detections)
+2026-03-15 16:56:19,985 INFO vex_extract.cursor:   Cursor: 11/19 frames (11 detections)
+2026-03-15 16:56:19,999 INFO vex_extract.cursor:   Cursor: 12/19 frames (12 detections)
+2026-03-15 16:56:20,012 INFO vex_extract.cursor:   Cursor: 13/19 frames (13 detections)
+2026-03-15 16:56:20,027 INFO vex_extract.cursor:   Cursor: 14/19 frames (14 detections)
+2026-03-15 16:56:20,041 INFO vex_extract.cursor:   Cursor: 15/19 frames (15 detections)
+2026-03-15 16:56:20,054 INFO vex_extract.cursor:   Cursor: 16/19 frames (16 detections)
+2026-03-15 16:56:20,068 INFO vex_extract.cursor:   Cursor: 17/19 frames (17 detections)
+2026-03-15 16:56:20,081 INFO vex_extract.cursor:   Cursor: 18/19 frames (18 detections)
+2026-03-15 16:56:21,599 INFO vex_extract.cursor:   Cursor: pass 2 — 67 frames at 15.0 FPS [376500ms-382000ms]
+2026-03-15 16:56:21,745 INFO vex_extract.cursor:   Cursor: 6/67 frames (6 detections)
+2026-03-15 16:56:21,825 INFO vex_extract.cursor:   Cursor: 12/67 frames (12 detections)
+2026-03-15 16:56:21,904 INFO vex_extract.cursor:   Cursor: 18/67 frames (18 detections)
+2026-03-15 16:56:21,984 INFO vex_extract.cursor:   Cursor: 24/67 frames (24 detections)
+2026-03-15 16:56:22,064 INFO vex_extract.cursor:   Cursor: 30/67 frames (30 detections)
+2026-03-15 16:56:22,143 INFO vex_extract.cursor:   Cursor: 36/67 frames (36 detections)
+2026-03-15 16:56:22,223 INFO vex_extract.cursor:   Cursor: 42/67 frames (42 detections)
+2026-03-15 16:56:22,303 INFO vex_extract.cursor:   Cursor: 48/67 frames (48 detections)
+2026-03-15 16:56:22,383 INFO vex_extract.cursor:   Cursor: 54/67 frames (54 detections)
+2026-03-15 16:56:22,463 INFO vex_extract.cursor:   Cursor: 60/67 frames (60 detections)
+2026-03-15 16:56:22,543 INFO vex_extract.cursor:   Cursor: 66/67 frames (66 detections)
+2026-03-15 16:56:24,081 INFO vex_extract.cursor:   Cursor: pass 2 — 19 frames at 15.0 FPS [383000ms-384500ms]
+2026-03-15 16:56:24,160 INFO vex_extract.cursor:   Cursor: 1/19 frames (1 detections)
+2026-03-15 16:56:24,173 INFO vex_extract.cursor:   Cursor: 2/19 frames (2 detections)
+2026-03-15 16:56:24,187 INFO vex_extract.cursor:   Cursor: 3/19 frames (3 detections)
+2026-03-15 16:56:24,200 INFO vex_extract.cursor:   Cursor: 4/19 frames (4 detections)
+2026-03-15 16:56:24,213 INFO vex_extract.cursor:   Cursor: 5/19 frames (5 detections)
+2026-03-15 16:56:24,226 INFO vex_extract.cursor:   Cursor: 6/19 frames (6 detections)
+2026-03-15 16:56:24,239 INFO vex_extract.cursor:   Cursor: 7/19 frames (7 detections)
+2026-03-15 16:56:24,253 INFO vex_extract.cursor:   Cursor: 8/19 frames (8 detections)
+2026-03-15 16:56:24,266 INFO vex_extract.cursor:   Cursor: 9/19 frames (9 detections)
+2026-03-15 16:56:24,279 INFO vex_extract.cursor:   Cursor: 10/19 frames (10 detections)
+2026-03-15 16:56:24,293 INFO vex_extract.cursor:   Cursor: 11/19 frames (11 detections)
+2026-03-15 16:56:24,306 INFO vex_extract.cursor:   Cursor: 12/19 frames (12 detections)
+2026-03-15 16:56:24,319 INFO vex_extract.cursor:   Cursor: 13/19 frames (13 detections)
+2026-03-15 16:56:24,332 INFO vex_extract.cursor:   Cursor: 14/19 frames (14 detections)
+2026-03-15 16:56:24,346 INFO vex_extract.cursor:   Cursor: 15/19 frames (15 detections)
+2026-03-15 16:56:24,359 INFO vex_extract.cursor:   Cursor: 16/19 frames (16 detections)
+2026-03-15 16:56:24,372 INFO vex_extract.cursor:   Cursor: 17/19 frames (17 detections)
+2026-03-15 16:56:24,386 INFO vex_extract.cursor:   Cursor: 18/19 frames (18 detections)
+2026-03-15 16:56:24,400 INFO vex_extract.cursor:   Cursor: merged 3539 detections (1288 detected)
+2026-03-15 16:56:24,400 INFO vex_extract.cursor:   Cursor: filtering 29 static detections at (770.0, 241.2) spanning 4833ms
+2026-03-15 16:56:24,400 INFO vex_extract.cursor:   Cursor: filtering 24 static detections at (770.0, 313.8) spanning 6100ms
+2026-03-15 16:56:24,400 INFO vex_extract.cursor:   Cursor: filtering 32 static detections at (769.4, 356.8) spanning 8233ms
+2026-03-15 16:56:24,400 INFO vex_extract.cursor:   Cursor: filtering 19 static detections at (769.4, 490.5) spanning 3867ms
+2026-03-15 16:56:24,400 INFO vex_extract.cursor:   Cursor: filtering 20 static detections at (770.0, 313.8) spanning 3067ms
+2026-03-15 16:56:24,400 INFO vex_extract.cursor:   Cursor: filtering 32 static detections at (833.3, 792.6) spanning 7367ms
+2026-03-15 16:56:24,400 INFO vex_extract.cursor:   Cursor: filtering 22 static detections at (618.9, 552.6) spanning 4300ms
+2026-03-15 16:56:24,400 INFO vex_extract.cursor:   Cursor: filtering 14 static detections at (1766.6, 350.1) spanning 3233ms
+2026-03-15 16:56:24,400 INFO vex_extract.cursor:   Cursor: filtering 18 static detections at (1043.7, 341.7) spanning 6467ms
+2026-03-15 16:56:24,400 INFO vex_extract.cursor:   Cursor: filtering 18 static detections at (814.1, 757.2) spanning 6067ms
+2026-03-15 16:56:24,401 INFO vex_extract.cursor:   Cursor: filtering 14 static detections at (1831.1, 951.9) spanning 6500ms
+2026-03-15 16:56:24,401 INFO vex_extract.cursor:   Cursor: filtering 17 static detections at (1796.2, 957.7) spanning 3433ms
+2026-03-15 16:56:24,401 INFO vex_extract.cursor:   Cursor: filtering 23 static detections at (142.4, 924.0) spanning 11000ms
+2026-03-15 16:56:24,401 INFO vex_extract.cursor:   Cursor: filtering 20 static detections at (1586.4, 883.3) spanning 3867ms
+2026-03-15 16:56:24,401 INFO vex_extract.cursor:   Cursor: filtering 29 static detections at (1583.5, 883.3) spanning 9233ms
+2026-03-15 16:56:24,401 INFO vex_extract.cursor:   Cursor: filtering 36 static detections at (1485.3, 890.8) spanning 5367ms
+2026-03-15 16:56:24,401 INFO vex_extract.cursor:   Cursor: filtering 21 static detections at (1304.6, 535.2) spanning 3767ms
+2026-03-15 16:56:24,401 INFO vex_extract.cursor:   Cursor: filtering 23 static detections at (1261.0, 645.6) spanning 8100ms
+2026-03-15 16:56:24,401 INFO vex_extract.cursor:   Cursor: filtering 9 static detections at (1252.9, 664.2) spanning 4000ms
+2026-03-15 16:56:24,401 INFO vex_extract.cursor:   Cursor: filtering 28 static detections at (854.2, 282.4) spanning 7267ms
+2026-03-15 16:56:24,401 INFO vex_extract.cursor:   Cursor: filtering 58 static detections at (670.6, 981.5) spanning 5167ms
+2026-03-15 16:56:24,401 INFO vex_extract.cursor:   Cursor: filtering 13 static detections at (1800.9, 525.3) spanning 6000ms
+2026-03-15 16:56:24,409 INFO vex_extract.pipeline:   Cached cursor trajectory: /Users/nic/Developer/spike-air-315-vision-processing/candidates/2026-03-14/tmp/cv/flight_centre_booking_kay_2fc83d38_cursor/cursor_trajectory.json
+2026-03-15 16:56:24,409 INFO vex_extract.pipeline:   3539 cursor detections (769 detected) in 256.1s
+2026-03-15 16:56:24,410 INFO vex_extract.pipeline: Step 3: Computing optical flow...
+2026-03-15 16:56:26,483 INFO vex_extract.flow:   Flow: computing across 782 frame pairs...
+2026-03-15 16:56:29,433 INFO vex_extract.pipeline:   Cached flow windows: /Users/nic/Developer/spike-air-315-vision-processing/candidates/2026-03-14/tmp/cv/flight_centre_booking_kay_bb5a87ef_2fc83d38_flow/flow_windows.json
+2026-03-15 16:56:29,433 INFO vex_extract.pipeline:   781 flow windows in 5.0s
+2026-03-15 16:56:29,433 INFO vex_extract.pipeline: Step 4: Creating video segments...
+2026-03-15 16:56:29,433 INFO vex_extract.pipeline:   6 segments
+2026-03-15 16:56:29,433 INFO vex_extract.pipeline:   Segment 0: cached
+2026-03-15 16:56:29,433 INFO vex_extract.pipeline:   Segment 1: cached
+2026-03-15 16:56:29,434 INFO vex_extract.pipeline:   Segment 2: cached
+2026-03-15 16:56:29,434 INFO vex_extract.pipeline:   Segment 3: cached
+2026-03-15 16:56:29,434 INFO vex_extract.pipeline:   Segment 4: cached
+2026-03-15 16:56:29,434 INFO vex_extract.pipeline:   Segment 5: cached
+2026-03-15 16:56:29,434 INFO vex_extract.pipeline: Step 5: Preparing prompts...
+2026-03-15 16:56:29,435 INFO vex_extract.analysis: Segment 0: prompt prepared (13111 chars)
+2026-03-15 16:56:29,436 INFO vex_extract.analysis: Segment 1: prompt prepared (12210 chars)
+2026-03-15 16:56:29,437 INFO vex_extract.analysis: Segment 2: prompt prepared (10838 chars)
+2026-03-15 16:56:29,437 INFO vex_extract.analysis: Segment 3: prompt prepared (11165 chars)
+2026-03-15 16:56:29,438 INFO vex_extract.analysis: Segment 4: prompt prepared (11838 chars)
+2026-03-15 16:56:29,439 INFO vex_extract.analysis: Segment 5: prompt prepared (10838 chars)
+2026-03-15 16:56:29,439 INFO vex_extract.pipeline:   6 prompts prepared
+2026-03-15 16:56:29,439 INFO vex_extract.pipeline: Step 6: Running Gemini analysis...
+2026-03-15 16:56:29,476 INFO vex_extract.analysis: Segment 0: sending to Gemini...
+2026-03-15 16:56:29,478 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-15 16:56:29,478 INFO vex_extract.analysis: Segment 1: sending to Gemini...
+2026-03-15 16:56:29,490 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-15 16:56:29,490 INFO vex_extract.analysis: Segment 2: sending to Gemini...
+2026-03-15 16:56:29,502 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-15 16:57:25,465 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent "HTTP/1.1 200 OK"
+2026-03-15 16:57:25,481 INFO vex_extract.analysis: Segment 2: 8 events, 102,202 in / 1,505 out tokens, 56.0s
+2026-03-15 16:57:25,481 INFO vex_extract.analysis: Segment 3: sending to Gemini...
+2026-03-15 16:57:25,483 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-15 16:57:42,244 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent "HTTP/1.1 200 OK"
+2026-03-15 16:57:42,306 INFO vex_extract.analysis: Segment 0: 13 events, 96,837 in / 1,621 out tokens, 72.8s
+2026-03-15 16:57:42,306 INFO vex_extract.analysis: Segment 4: sending to Gemini...
+2026-03-15 16:57:42,308 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-15 16:57:53,617 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent "HTTP/1.1 200 OK"
+2026-03-15 16:57:53,654 INFO vex_extract.analysis: Segment 1: 27 events, 103,155 in / 2,554 out tokens, 84.2s
+2026-03-15 16:57:53,655 INFO vex_extract.analysis: Segment 5: sending to Gemini...
+2026-03-15 16:57:53,657 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-15 16:58:38,570 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent "HTTP/1.1 200 OK"
+2026-03-15 16:58:38,581 INFO vex_extract.analysis: Segment 3: 14 events, 102,408 in / 1,959 out tokens, 73.1s
+2026-03-15 16:58:39,391 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent "HTTP/1.1 200 OK"
+2026-03-15 16:58:39,401 INFO vex_extract.analysis: Segment 4: 19 events, 102,856 in / 2,710 out tokens, 57.1s
+2026-03-15 16:58:46,762 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent "HTTP/1.1 200 OK"
+2026-03-15 16:58:46,766 INFO vex_extract.analysis: Segment 5: 15 events, 95,463 in / 2,071 out tokens, 53.1s
+2026-03-15 16:58:46,767 INFO vex_extract.pipeline:   Analysis complete: 96 raw events in 137.3s
+2026-03-15 16:58:46,767 INFO vex_extract.pipeline: Steps 7-8: Merging events and enriching cursor positions...
+2026-03-15 16:58:46,772 INFO vex_extract.merge: Merge: 96 merged -> 84 overlap-dedup -> 81 final
+2026-03-15 16:58:46,777 INFO vex_extract.pipeline: Step 9: Saving output...
+2026-03-15 16:58:46,777 INFO vex_extract.pipeline: Done! 81 events in 398.5s. Output: /Users/nic/Developer/spike-air-315-vision-processing/candidates/2026-03-14/output/2026-03-15_065208

@@ -1,0 +1,41 @@
+2026-03-15 16:46:40,222 INFO vex_extract.pipeline: === Video Event Extractor ===
+2026-03-15 16:46:40,222 INFO vex_extract.pipeline: Video: /Users/nic/Developer/spike-air-315-vision-processing/input_data/screen_tracks/opportunity_list_ben.mp4
+2026-03-15 16:46:40,222 INFO vex_extract.pipeline: Offset: 182908 ms
+2026-03-15 16:46:40,222 INFO vex_extract.pipeline: Run ID: 2026-03-15_064640
+2026-03-15 16:46:40,223 INFO vex_extract.pipeline: Step 1: Normalizing video...
+2026-03-15 16:46:40,223 INFO vex_extract.pipeline:   Using cached normalized video: /Users/nic/Developer/spike-air-315-vision-processing/candidates/2026-03-14/tmp/opportunity_list_ben_normalized.mp4
+2026-03-15 16:46:40,246 INFO vex_extract.pipeline:   Duration: 463.4s, 1922x1078, 30.0 fps
+2026-03-15 16:46:40,246 INFO vex_extract.pipeline: Step 2: Tracking cursor...
+2026-03-15 16:46:40,247 INFO vex_extract.pipeline:   Using cached cursor trajectory: /Users/nic/Developer/spike-air-315-vision-processing/candidates/2026-03-14/tmp/cv/opportunity_list_ben_2fc83d38_cursor/cursor_trajectory.json
+2026-03-15 16:46:40,251 INFO vex_extract.pipeline:   3096 cursor detections (716 detected) [cached]
+2026-03-15 16:46:40,251 INFO vex_extract.pipeline: Step 3: Computing optical flow...
+2026-03-15 16:46:40,251 INFO vex_extract.pipeline:   Using cached flow windows: /Users/nic/Developer/spike-air-315-vision-processing/candidates/2026-03-14/tmp/cv/opportunity_list_ben_bb5a87ef_2fc83d38_flow/flow_windows.json
+2026-03-15 16:46:40,253 INFO vex_extract.pipeline:   925 flow windows [cached]
+2026-03-15 16:46:40,253 INFO vex_extract.pipeline: Step 4: Creating video segments...
+2026-03-15 16:46:40,253 INFO vex_extract.pipeline:   7 segments
+2026-03-15 16:46:40,253 INFO vex_extract.pipeline:   Segment 0: cached
+2026-03-15 16:46:40,253 INFO vex_extract.pipeline:   Segment 1: cached
+2026-03-15 16:46:40,253 INFO vex_extract.pipeline:   Segment 2: cached
+2026-03-15 16:46:40,253 INFO vex_extract.pipeline:   Segment 3: cached
+2026-03-15 16:46:40,253 INFO vex_extract.pipeline:   Segment 4: cached
+2026-03-15 16:46:40,253 INFO vex_extract.pipeline:   Segment 5: cached
+2026-03-15 16:46:40,253 INFO vex_extract.pipeline:   Segment 6: cached
+2026-03-15 16:46:40,253 INFO vex_extract.pipeline: Step 5: Preparing prompts...
+2026-03-15 16:46:40,254 INFO vex_extract.analysis: Segment 0: prompt prepared (11952 chars)
+2026-03-15 16:46:40,255 INFO vex_extract.analysis: Segment 1: prompt prepared (10922 chars)
+2026-03-15 16:46:40,255 INFO vex_extract.analysis: Segment 2: prompt prepared (10915 chars)
+2026-03-15 16:46:40,256 INFO vex_extract.analysis: Segment 3: prompt prepared (10901 chars)
+2026-03-15 16:46:40,258 INFO vex_extract.analysis: Segment 4: prompt prepared (11492 chars)
+2026-03-15 16:46:40,258 INFO vex_extract.analysis: Segment 5: prompt prepared (10414 chars)
+2026-03-15 16:46:40,259 INFO vex_extract.analysis: Segment 6: prompt prepared (10879 chars)
+2026-03-15 16:46:40,259 INFO vex_extract.pipeline:   7 prompts prepared
+2026-03-15 16:46:40,259 INFO vex_extract.pipeline: Step 6: Running Gemini analysis...
+2026-03-15 16:46:40,295 INFO vex_extract.analysis: Segment 0: sending to Gemini...
+2026-03-15 16:46:40,296 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-15 16:46:40,296 INFO vex_extract.analysis: Segment 1: sending to Gemini...
+2026-03-15 16:46:40,305 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-15 16:46:40,305 INFO vex_extract.analysis: Segment 2: sending to Gemini...
+2026-03-15 16:46:40,316 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-15 16:47:27,129 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent "HTTP/1.1 200 OK"
+2026-03-15 16:47:41,937 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent "HTTP/1.1 200 OK"
+2026-03-15 16:47:45,645 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent "HTTP/1.1 200 OK"

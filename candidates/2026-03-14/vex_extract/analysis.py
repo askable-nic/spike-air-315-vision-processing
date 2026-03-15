@@ -3,6 +3,7 @@ from __future__ import annotations
 import asyncio
 import json
 import logging
+import time
 from pathlib import Path
 from typing import Any
 
@@ -239,6 +240,7 @@ async def _analyse_one(
     """Send a single prepared segment to Gemini and save the response."""
     async with semaphore:
         logger.info("Segment %d: sending to Gemini...", prep.segment.index)
+        t_seg = time.monotonic()
         video_bytes = prep.segment.path.read_bytes()
         video_part = types.Part(
             inline_data=types.Blob(data=video_bytes, mime_type="video/mp4"),
@@ -254,18 +256,21 @@ async def _analyse_one(
             temperature=config.gemini.temperature,
         )
 
+        segment_analysis_ms = (time.monotonic() - t_seg) * 1000
         raw_events = json.loads(result["text"]) if result["text"] else []
         token_usage = {
             "input_tokens": result["input_tokens"],
             "output_tokens": result["output_tokens"],
+            "analysis_ms": round(segment_analysis_ms, 1),
         }
 
         (prep.output_dir / "response.json").write_text(json.dumps(result, indent=2))
 
         logger.info(
-            "Segment %d: %d events, %s in / %s out tokens",
+            "Segment %d: %d events, %s in / %s out tokens, %.1fs",
             prep.segment.index, len(raw_events),
             f"{result['input_tokens']:,}", f"{result['output_tokens']:,}",
+            segment_analysis_ms / 1000,
         )
 
         return prep.segment, raw_events, token_usage
