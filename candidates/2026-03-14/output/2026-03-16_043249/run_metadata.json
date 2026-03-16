@@ -1,0 +1,263 @@
+{
+  "run_id": "2026-03-16_043249",
+  "timestamp": "2026-03-16T04:45:14.228017+00:00",
+  "config": {
+    "gemini": {
+      "api_key_env": "GEMINI_API_KEY",
+      "model": "gemini-3-flash-preview",
+      "temperature": 0.1,
+      "max_concurrent": 3
+    },
+    "video": {
+      "target_pixels": 2073600,
+      "video_fps": 20
+    },
+    "segmentation": {
+      "max_segment_duration_ms": 75000,
+      "segment_overlap_ms": 5000
+    },
+    "cursor": {
+      "tracking_base_fps": 2.0,
+      "tracking_peak_fps": 5.0,
+      "tracking_displacement_threshold_px": 30.0,
+      "tracking_active_padding_ms": 500,
+      "match_height": 540,
+      "template_scales": [
+        0.3,
+        0.4,
+        0.5,
+        0.8,
+        1.0,
+        1.25,
+        1.5
+      ],
+      "match_threshold": 0.6,
+      "early_exit_threshold": 0.9,
+      "resample_down": "area",
+      "resample_up": "nearest",
+      "static_filter_duration_ms": 3000,
+      "static_filter_tolerance_px": 1.0,
+      "max_interpolation_gap_ms": 500,
+      "smooth_window": 3,
+      "smooth_displacement_threshold": 10.0
+    },
+    "flow": {
+      "flow_fps": 2.0,
+      "flow_grid_step": 20,
+      "flow_window_size_ms": 1000,
+      "flow_window_step_ms": 500,
+      "resolution_height": 720
+    },
+    "cv_summary": {
+      "summary_window_ms": 250
+    },
+    "merge": {
+      "time_tolerance_ms": 2000,
+      "similarity_threshold": 0.7,
+      "cursor_event_types": [
+        "click",
+        "hover",
+        "dwell",
+        "cursor_thrash",
+        "select",
+        "drag"
+      ]
+    },
+    "token_costs": {
+      "gemini-2.5-flash": {
+        "input_token_cost": 3e-07,
+        "output_token_cost": 2.5e-06
+      },
+      "gemini-3-flash-preview": {
+        "input_token_cost": 5e-07,
+        "output_token_cost": 3e-06
+      }
+    }
+  },
+  "video_path": "/Users/nic/Developer/spike-air-315-vision-processing/input_data/screen_tracks/opportunity_list_georgie.mp4",
+  "video_duration_ms": 1088900.0,
+  "video_dimensions": {
+    "width": 1948,
+    "height": 1064
+  },
+  "screen_track_start_offset": 230769,
+  "stages_run": [
+    "normalize",
+    "cursor",
+    "flow",
+    "segment",
+    "prompt",
+    "gemini",
+    "merge"
+  ],
+  "stages_skipped": [],
+  "stop_after": null,
+  "segments": [
+    {
+      "index": 0,
+      "start_ms": 0.0,
+      "end_ms": 77593.33333333333,
+      "duration_ms": 77593.3,
+      "event_count": 20,
+      "input_tokens": 107005,
+      "output_tokens": 3052,
+      "analysis_ms": 57751.7
+    },
+    {
+      "index": 1,
+      "start_ms": 67593.33333333333,
+      "end_ms": 150186.66666666666,
+      "duration_ms": 82593.3,
+      "event_count": 28,
+      "input_tokens": 111997,
+      "output_tokens": 3784,
+      "analysis_ms": 66902.6
+    },
+    {
+      "index": 2,
+      "start_ms": 140186.66666666666,
+      "end_ms": 222780.0,
+      "duration_ms": 82593.3,
+      "event_count": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "error": "Unterminated string starting at: line 188 column 5 (char 8441)"
+    },
+    {
+      "index": 3,
+      "start_ms": 212780.0,
+      "end_ms": 295373.3333333333,
+      "duration_ms": 82593.3,
+      "event_count": 57,
+      "input_tokens": 112867,
+      "output_tokens": 7696,
+      "analysis_ms": 74853.2
+    },
+    {
+      "index": 4,
+      "start_ms": 285373.3333333333,
+      "end_ms": 367966.6666666666,
+      "duration_ms": 82593.3,
+      "event_count": 26,
+      "input_tokens": 113206,
+      "output_tokens": 3615,
+      "analysis_ms": 81257.7
+    },
+    {
+      "index": 5,
+      "start_ms": 357966.6666666666,
+      "end_ms": 440560.0,
+      "duration_ms": 82593.3,
+      "event_count": 17,
+      "input_tokens": 112496,
+      "output_tokens": 2355,
+      "analysis_ms": 58187.3
+    },
+    {
+      "index": 6,
+      "start_ms": 430560.0,
+      "end_ms": 513153.3333333333,
+      "duration_ms": 82593.3,
+      "event_count": 11,
+      "input_tokens": 112610,
+      "output_tokens": 1517,
+      "analysis_ms": 57271.2
+    },
+    {
+      "index": 7,
+      "start_ms": 503153.3333333333,
+      "end_ms": 585746.6666666666,
+      "duration_ms": 82593.3,
+      "event_count": 20,
+      "input_tokens": 111930,
+      "output_tokens": 2685,
+      "analysis_ms": 63086.9
+    },
+    {
+      "index": 8,
+      "start_ms": 575746.6666666666,
+      "end_ms": 658340.0,
+      "duration_ms": 82593.3,
+      "event_count": 29,
+      "input_tokens": 113128,
+      "output_tokens": 3877,
+      "analysis_ms": 67191.5
+    },
+    {
+      "index": 9,
+      "start_ms": 648340.0,
+      "end_ms": 730933.3333333333,
+      "duration_ms": 82593.3,
+      "event_count": 20,
+      "input_tokens": 113127,
+      "output_tokens": 2512,
+      "analysis_ms": 48633.8
+    },
+    {
+      "index": 10,
+      "start_ms": 720933.3333333333,
+      "end_ms": 803526.6666666666,
+      "duration_ms": 82593.3,
+      "event_count": 20,
+      "input_tokens": 113249,
+      "output_tokens": 2523,
+      "analysis_ms": 49401.6
+    },
+    {
+      "index": 11,
+      "start_ms": 793526.6666666666,
+      "end_ms": 876120.0,
+      "duration_ms": 82593.3,
+      "event_count": 13,
+      "input_tokens": 112677,
+      "output_tokens": 1857,
+      "analysis_ms": 61039.7
+    },
+    {
+      "index": 12,
+      "start_ms": 866120.0,
+      "end_ms": 948713.3333333333,
+      "duration_ms": 82593.3,
+      "event_count": 24,
+      "input_tokens": 111521,
+      "output_tokens": 3042,
+      "analysis_ms": 68692.9
+    },
+    {
+      "index": 13,
+      "start_ms": 938713.3333333333,
+      "end_ms": 1021306.6666666666,
+      "duration_ms": 82593.3,
+      "event_count": 17,
+      "input_tokens": 112373,
+      "output_tokens": 2395,
+      "analysis_ms": 62554.7
+    },
+    {
+      "index": 14,
+      "start_ms": 1011306.6666666666,
+      "end_ms": 1088900.0,
+      "duration_ms": 77593.3,
+      "event_count": 9,
+      "input_tokens": 106418,
+      "output_tokens": 1380,
+      "analysis_ms": 53706.1
+    }
+  ],
+  "cv_analysis": {
+    "cursor_detections": 3698,
+    "cursor_detected": 2463,
+    "flow_windows": 2176
+  },
+  "events_merged": 311,
+  "events_final": 215,
+  "total_input_tokens": 1564604,
+  "total_output_tokens": 42290,
+  "timing": {
+    "cursor_tracking_ms": 360086.7,
+    "optical_flow_ms": 14288.5,
+    "gemini_analysis_ms": 369796.7,
+    "total_ms": 744389.3,
+    "video_duration_ms": 1088900.0
+  }
+}

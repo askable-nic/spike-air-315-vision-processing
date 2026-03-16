@@ -1,0 +1,203 @@
+{
+  "run_id": "2026-03-16_050411",
+  "timestamp": "2026-03-16T05:12:56.876513+00:00",
+  "config": {
+    "gemini": {
+      "api_key_env": "GEMINI_API_KEY",
+      "model": "gemini-3-flash-preview",
+      "temperature": 0.1,
+      "max_concurrent": 3
+    },
+    "video": {
+      "target_pixels": 2073600,
+      "video_fps": 20
+    },
+    "segmentation": {
+      "max_segment_duration_ms": 75000,
+      "segment_overlap_ms": 5000
+    },
+    "cursor": {
+      "tracking_base_fps": 2.0,
+      "tracking_peak_fps": 5.0,
+      "tracking_displacement_threshold_px": 30.0,
+      "tracking_active_padding_ms": 500,
+      "match_height": 540,
+      "template_scales": [
+        0.3,
+        0.4,
+        0.5,
+        0.8,
+        1.0,
+        1.25,
+        1.5
+      ],
+      "match_threshold": 0.6,
+      "early_exit_threshold": 0.9,
+      "resample_down": "area",
+      "resample_up": "nearest",
+      "static_filter_duration_ms": 3000,
+      "static_filter_tolerance_px": 1.0,
+      "max_interpolation_gap_ms": 500,
+      "smooth_window": 3,
+      "smooth_displacement_threshold": 10.0
+    },
+    "flow": {
+      "flow_fps": 2.0,
+      "flow_grid_step": 20,
+      "flow_window_size_ms": 1000,
+      "flow_window_step_ms": 500,
+      "resolution_height": 720
+    },
+    "cv_summary": {
+      "summary_window_ms": 250
+    },
+    "merge": {
+      "time_tolerance_ms": 2000,
+      "similarity_threshold": 0.7,
+      "cursor_event_types": [
+        "click",
+        "hover",
+        "dwell",
+        "cursor_thrash",
+        "select",
+        "drag"
+      ]
+    },
+    "token_costs": {
+      "gemini-2.5-flash": {
+        "input_token_cost": 3e-07,
+        "output_token_cost": 2.5e-06
+      },
+      "gemini-3-flash-preview": {
+        "input_token_cost": 5e-07,
+        "output_token_cost": 3e-06
+      }
+    }
+  },
+  "video_path": "/Users/nic/Developer/spike-air-315-vision-processing/input_data/screen_tracks/ask_results_usability_brandon.mp4",
+  "video_duration_ms": 659000.0,
+  "video_dimensions": {
+    "width": 1818,
+    "height": 1140
+  },
+  "screen_track_start_offset": 425786,
+  "stages_run": [
+    "normalize",
+    "cursor",
+    "flow",
+    "segment",
+    "prompt",
+    "gemini",
+    "merge"
+  ],
+  "stages_skipped": [],
+  "stop_after": null,
+  "segments": [
+    {
+      "index": 0,
+      "start_ms": 0.0,
+      "end_ms": 78222.22222222222,
+      "duration_ms": 78222.2,
+      "event_count": 34,
+      "input_tokens": 96318,
+      "output_tokens": 4070,
+      "analysis_ms": 77811.6
+    },
+    {
+      "index": 1,
+      "start_ms": 68222.22222222222,
+      "end_ms": 151444.44444444444,
+      "duration_ms": 83222.2,
+      "event_count": 23,
+      "input_tokens": 102193,
+      "output_tokens": 3406,
+      "analysis_ms": 44217.2
+    },
+    {
+      "index": 2,
+      "start_ms": 141444.44444444444,
+      "end_ms": 224666.66666666666,
+      "duration_ms": 83222.2,
+      "event_count": 45,
+      "input_tokens": 102300,
+      "output_tokens": 4883,
+      "analysis_ms": 82664.8
+    },
+    {
+      "index": 3,
+      "start_ms": 214666.66666666666,
+      "end_ms": 297888.8888888889,
+      "duration_ms": 83222.2,
+      "event_count": 19,
+      "input_tokens": 102250,
+      "output_tokens": 2853,
+      "analysis_ms": 54446.7
+    },
+    {
+      "index": 4,
+      "start_ms": 287888.8888888889,
+      "end_ms": 371111.1111111111,
+      "duration_ms": 83222.2,
+      "event_count": 21,
+      "input_tokens": 102338,
+      "output_tokens": 2906,
+      "analysis_ms": 55844.5
+    },
+    {
+      "index": 5,
+      "start_ms": 361111.1111111111,
+      "end_ms": 444333.3333333333,
+      "duration_ms": 83222.2,
+      "event_count": 28,
+      "input_tokens": 101974,
+      "output_tokens": 3196,
+      "analysis_ms": 100597.2
+    },
+    {
+      "index": 6,
+      "start_ms": 434333.3333333333,
+      "end_ms": 517555.5555555555,
+      "duration_ms": 83222.2,
+      "event_count": 29,
+      "input_tokens": 102140,
+      "output_tokens": 2952,
+      "analysis_ms": 49286.2
+    },
+    {
+      "index": 7,
+      "start_ms": 507555.5555555555,
+      "end_ms": 590777.7777777778,
+      "duration_ms": 83222.2,
+      "event_count": 25,
+      "input_tokens": 101940,
+      "output_tokens": 5260,
+      "analysis_ms": 84137.4
+    },
+    {
+      "index": 8,
+      "start_ms": 580777.7777777778,
+      "end_ms": 659000.0,
+      "duration_ms": 78222.2,
+      "event_count": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "error": "Expecting property name enclosed in double quotes: line 133 column 5 (char 7612)"
+    }
+  ],
+  "cv_analysis": {
+    "cursor_detections": 1363,
+    "cursor_detected": 73,
+    "flow_windows": 1317
+  },
+  "events_merged": 224,
+  "events_final": 179,
+  "total_input_tokens": 811453,
+  "total_output_tokens": 29526,
+  "timing": {
+    "cursor_tracking_ms": 32973.0,
+    "optical_flow_ms": 9577.8,
+    "gemini_analysis_ms": 482973.7,
+    "total_ms": 525660.5,
+    "video_duration_ms": 659000.0
+  }
+}

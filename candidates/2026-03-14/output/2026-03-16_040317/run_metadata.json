@@ -1,0 +1,203 @@
+{
+  "run_id": "2026-03-16_040317",
+  "timestamp": "2026-03-16T04:12:23.531043+00:00",
+  "config": {
+    "gemini": {
+      "api_key_env": "GEMINI_API_KEY",
+      "model": "gemini-3-flash-preview",
+      "temperature": 0.1,
+      "max_concurrent": 3
+    },
+    "video": {
+      "target_pixels": 2073600,
+      "video_fps": 20
+    },
+    "segmentation": {
+      "max_segment_duration_ms": 75000,
+      "segment_overlap_ms": 5000
+    },
+    "cursor": {
+      "tracking_base_fps": 2.0,
+      "tracking_peak_fps": 5.0,
+      "tracking_displacement_threshold_px": 30.0,
+      "tracking_active_padding_ms": 500,
+      "match_height": 540,
+      "template_scales": [
+        0.3,
+        0.4,
+        0.5,
+        0.8,
+        1.0,
+        1.25,
+        1.5
+      ],
+      "match_threshold": 0.6,
+      "early_exit_threshold": 0.9,
+      "resample_down": "area",
+      "resample_up": "nearest",
+      "static_filter_duration_ms": 3000,
+      "static_filter_tolerance_px": 1.0,
+      "max_interpolation_gap_ms": 500,
+      "smooth_window": 3,
+      "smooth_displacement_threshold": 10.0
+    },
+    "flow": {
+      "flow_fps": 2.0,
+      "flow_grid_step": 20,
+      "flow_window_size_ms": 1000,
+      "flow_window_step_ms": 500,
+      "resolution_height": 720
+    },
+    "cv_summary": {
+      "summary_window_ms": 250
+    },
+    "merge": {
+      "time_tolerance_ms": 2000,
+      "similarity_threshold": 0.7,
+      "cursor_event_types": [
+        "click",
+        "hover",
+        "dwell",
+        "cursor_thrash",
+        "select",
+        "drag"
+      ]
+    },
+    "token_costs": {
+      "gemini-2.5-flash": {
+        "input_token_cost": 3e-07,
+        "output_token_cost": 2.5e-06
+      },
+      "gemini-3-flash-preview": {
+        "input_token_cost": 5e-07,
+        "output_token_cost": 3e-06
+      }
+    }
+  },
+  "video_path": "/Users/nic/Developer/spike-air-315-vision-processing/input_data/screen_tracks/travel_expert_lisa.webm",
+  "video_duration_ms": 656260.623,
+  "video_dimensions": {
+    "width": 1790,
+    "height": 1158
+  },
+  "screen_track_start_offset": 29690,
+  "stages_run": [
+    "normalize",
+    "cursor",
+    "flow",
+    "segment",
+    "prompt",
+    "gemini",
+    "merge"
+  ],
+  "stages_skipped": [],
+  "stop_after": null,
+  "segments": [
+    {
+      "index": 0,
+      "start_ms": 0.0,
+      "end_ms": 77917.84700000001,
+      "duration_ms": 77917.8,
+      "event_count": 15,
+      "input_tokens": 96357,
+      "output_tokens": 2635,
+      "analysis_ms": 42810.7
+    },
+    {
+      "index": 1,
+      "start_ms": 67917.84700000001,
+      "end_ms": 150835.69400000002,
+      "duration_ms": 82917.8,
+      "event_count": 21,
+      "input_tokens": 103069,
+      "output_tokens": 2897,
+      "analysis_ms": 70696.5
+    },
+    {
+      "index": 2,
+      "start_ms": 140835.69400000002,
+      "end_ms": 223753.54100000003,
+      "duration_ms": 82917.8,
+      "event_count": 17,
+      "input_tokens": 102961,
+      "output_tokens": 1518,
+      "analysis_ms": 56783.9
+    },
+    {
+      "index": 3,
+      "start_ms": 213753.54100000003,
+      "end_ms": 296671.38800000004,
+      "duration_ms": 82917.8,
+      "event_count": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "error": "Unterminated string starting at: line 124 column 22 (char 5415)"
+    },
+    {
+      "index": 4,
+      "start_ms": 286671.38800000004,
+      "end_ms": 369589.23500000004,
+      "duration_ms": 82917.8,
+      "event_count": 27,
+      "input_tokens": 103552,
+      "output_tokens": 3553,
+      "analysis_ms": 75848.8
+    },
+    {
+      "index": 5,
+      "start_ms": 359589.23500000004,
+      "end_ms": 442507.08200000005,
+      "duration_ms": 82917.8,
+      "event_count": 11,
+      "input_tokens": 103251,
+      "output_tokens": 1771,
+      "analysis_ms": 54802.1
+    },
+    {
+      "index": 6,
+      "start_ms": 432507.08200000005,
+      "end_ms": 515424.92900000006,
+      "duration_ms": 82917.8,
+      "event_count": 7,
+      "input_tokens": 99313,
+      "output_tokens": 886,
+      "analysis_ms": 72147.7
+    },
+    {
+      "index": 7,
+      "start_ms": 505424.92900000006,
+      "end_ms": 588342.7760000001,
+      "duration_ms": 82917.8,
+      "event_count": 19,
+      "input_tokens": 103215,
+      "output_tokens": 2465,
+      "analysis_ms": 53596.6
+    },
+    {
+      "index": 8,
+      "start_ms": 578342.7760000001,
+      "end_ms": 656260.623,
+      "duration_ms": 77917.8,
+      "event_count": 7,
+      "input_tokens": 94895,
+      "output_tokens": 1352,
+      "analysis_ms": 58620.4
+    }
+  ],
+  "cv_analysis": {
+    "cursor_detections": 1714,
+    "cursor_detected": 991,
+    "flow_windows": 757
+  },
+  "events_merged": 124,
+  "events_final": 103,
+  "total_input_tokens": 806613,
+  "total_output_tokens": 17077,
+  "timing": {
+    "cursor_tracking_ms": 116376.7,
+    "optical_flow_ms": 6184.7,
+    "gemini_analysis_ms": 422840.9,
+    "total_ms": 545555.2,
+    "video_duration_ms": 656260.623
+  }
+}

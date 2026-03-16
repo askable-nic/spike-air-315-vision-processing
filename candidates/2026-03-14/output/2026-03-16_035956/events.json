@@ -1,0 +1,1193 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start": 33442.0,
+    "time_end": 33442.0,
+    "description": "Initial screen state: Dark background with white text providing instructions for screen sharing in a Meet call.",
+    "confidence": 1.0,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A dark screen with the text 'Great. To start, please click the \"Share\" button in the Meet call controls and choose to share this window.' is visible."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 34692.0,
+    "time_end": 47292.0,
+    "description": "Task instructions are progressively displayed on the screen, outlining a scenario about planning a holiday from the Sunshine Coast to London.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The screen displays a paragraph of text detailing the user's task: imagining they live on the Sunshine Coast and are planning a trip to London."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 71242.0,
+    "time_end": 73292.0,
+    "description": "An 'Open' button appears in the center of the screen below the instructions.",
+    "confidence": 1.0,
+    "interaction_target": "Open",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A blue button with the text 'Open' and an external link icon appears centered on the dark background."
+  },
+  {
+    "type": "click",
+    "time_start": 74942.0,
+    "time_end": 74942.0,
+    "description": "User clicks the 'Open' button to launch the browser.",
+    "confidence": 1.0,
+    "interaction_target": "Open",
+    "cursor_position": {
+      "x": 515,
+      "y": 344
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is positioned over the 'Open' button, which shows a hover/active state just before the screen transitions."
+  },
+  {
+    "type": "navigate",
+    "time_start": 78592.0,
+    "time_end": 79492.0,
+    "description": "The browser navigates from the instruction screen to the Google homepage.",
+    "confidence": 1.0,
+    "page_title": "Google",
+    "page_location": "https://www.google.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The screen transitions from the dark instruction page to a white screen as the Google homepage begins to load."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 79492.0,
+    "time_end": 79492.0,
+    "description": "Google homepage is fully loaded and ready for input.",
+    "confidence": 1.0,
+    "page_title": "Google",
+    "page_location": "https://www.google.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The standard Google search page is visible with the logo, search bar, and 'Google Search' and 'I'm Feeling Lucky' buttons."
+  },
+  {
+    "type": "click",
+    "time_start": 81942.0,
+    "time_end": 81942.0,
+    "description": "User clicks on the Google search input field.",
+    "confidence": 1.0,
+    "cursor_position": {
+      "x": 789,
+      "y": 631
+    },
+    "page_title": "Google",
+    "page_location": "https://www.google.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is inside the search bar, and a vertical line (caret) appears, indicating the field is focused."
+  },
+  {
+    "type": "input_text",
+    "time_start": 82442.0,
+    "time_end": 86442.0,
+    "description": "User types 'flights from sunshine coast to london' into the search bar.",
+    "confidence": 1.0,
+    "page_title": "Google",
+    "page_location": "https://www.google.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The text 'flights from sunshine coast to london' appears character-by-character in the search bar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 82942.0,
+    "time_end": 86442.0,
+    "description": "Autocomplete suggestions dropdown appears below the search bar in response to typing.",
+    "confidence": 0.9,
+    "page_title": "Google",
+    "page_location": "https://www.google.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A list of suggested searches related to 'flights from sunshine coast' appears in a white dropdown box below the input field."
+  },
+  {
+    "type": "navigate",
+    "time_start": 86942.0,
+    "time_end": 89242.0,
+    "description": "Browser navigates from the Google homepage to the search results page.",
+    "confidence": 1.0,
+    "page_title": "flights from sunshine coast to london - Google Search",
+    "page_location": "https://www.google.com.au/search?q=flights+from+sunshine+coast+to+london",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The Google homepage disappears and is replaced by the search results page layout."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 89242.0,
+    "time_end": 89242.0,
+    "description": "Search results page for 'flights from sunshine coast to london' is fully loaded.",
+    "confidence": 1.0,
+    "page_title": "flights from sunshine coast to london - Google Search",
+    "page_location": "https://www.google.com.au/search?q=flights+from+sunshine+coast+to+london",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The results page is visible, featuring a Google Flights widget at the top followed by standard search results."
+  },
+  {
+    "type": "scroll",
+    "time_start": 89442.0,
+    "time_end": 90942.0,
+    "description": "User scrolls down the search results page.",
+    "confidence": 1.0,
+    "page_title": "flights from sunshine coast to london - Google Search",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The page content moves upward as the user scrolls down to see more results."
+  },
+  {
+    "type": "hover",
+    "time_start": 91342.0,
+    "time_end": 92342.0,
+    "description": "User hovers the cursor over the flight results section.",
+    "confidence": 0.8,
+    "cursor_position": {
+      "x": 974,
+      "y": 520
+    },
+    "page_title": "flights from sunshine coast to london - Google Search",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is stationary over the Google Flights widget showing various airline options and prices."
+  },
+  {
+    "type": "input_text",
+    "time_start": 95681.5934,
+    "time_end": 100881.5934,
+    "description": "User types the initial task scenario into the thinking prompt text area.",
+    "confidence": 0.9,
+    "interaction_target": "What are you thinking right now?",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A dark overlay with a text input field and a button labeled 'Open'."
+  },
+  {
+    "type": "hover",
+    "time_start": 96742.0,
+    "time_end": 98642.0,
+    "description": "User hovers over a specific flight option in the results list.",
+    "confidence": 0.8,
+    "cursor_position": {
+      "x": 515,
+      "y": 338
+    },
+    "page_title": "flights from sunshine coast to london - Google Search",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is positioned over one of the flight cards in the search results."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 101381.5934,
+    "time_end": 101431.5934,
+    "description": "The thinking prompt overlay closes, revealing the Google homepage.",
+    "confidence": 0.8,
+    "page_title": "Google",
+    "page_location": "https://www.google.com/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The Google homepage with a search bar in the center."
+  },
+  {
+    "type": "input_text",
+    "time_start": 101931.5934,
+    "time_end": 103831.5934,
+    "description": "User types 'skyscanner' into the Google search bar.",
+    "confidence": 0.9,
+    "interaction_target": "Search",
+    "page_title": "Google",
+    "page_location": "https://www.google.com/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The Google search bar with the text 'skyscanner' being entered."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 102181.5934,
+    "time_end": 102431.5934,
+    "description": "Google search suggestions dropdown appears below the search bar.",
+    "confidence": 0.9,
+    "page_title": "Google",
+    "page_location": "https://www.google.com/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A list of search suggestions appearing below the Google search bar."
+  },
+  {
+    "type": "hover",
+    "time_start": 103831.5934,
+    "time_end": 104181.5934,
+    "description": "User hovers over the 'skyscanner' search suggestion in the autocomplete dropdown.",
+    "confidence": 0.8,
+    "interaction_target": "skyscanner",
+    "cursor_position": {
+      "x": 869,
+      "y": 352
+    },
+    "page_title": "Google",
+    "page_location": "https://www.google.com/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is positioned over the first item in the Google search suggestions list."
+  },
+  {
+    "type": "click",
+    "time_start": 104181.5934,
+    "time_end": 104231.5934,
+    "description": "User clicks the 'skyscanner' search suggestion.",
+    "confidence": 0.9,
+    "interaction_target": "skyscanner",
+    "cursor_position": {
+      "x": 869,
+      "y": 352
+    },
+    "page_title": "Google",
+    "page_location": "https://www.google.com/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The 'skyscanner' suggestion is highlighted as the user clicks it."
+  },
+  {
+    "type": "navigate",
+    "time_start": 104181.5934,
+    "time_end": 104481.5934,
+    "description": "Navigation to the Google search results page for 'skyscanner'.",
+    "confidence": 0.9,
+    "page_title": "skyscanner - Google Search",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The screen transitions from the Google homepage to the search results page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 104481.5934,
+    "time_end": 104681.5934,
+    "description": "Search results page content renders and becomes interactive.",
+    "confidence": 0.9,
+    "page_title": "skyscanner - Google Search",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The Google search results page showing links to Skyscanner."
+  },
+  {
+    "type": "hover",
+    "time_start": 105681.5934,
+    "time_end": 105781.5934,
+    "description": "User hovers over the main Skyscanner website link in the search results.",
+    "confidence": 0.8,
+    "interaction_target": "Skyscanner | Find the cheapest flights fast",
+    "cursor_position": {
+      "x": 769,
+      "y": 1034
+    },
+    "page_title": "skyscanner - Google Search",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is over the blue title link of the first organic search result."
+  },
+  {
+    "type": "navigate",
+    "time_start": 105781.5934,
+    "time_end": 106481.5934,
+    "description": "Navigation to the Skyscanner homepage.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner | Find the cheapest flights fast",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The browser begins loading the Skyscanner website."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 106481.5934,
+    "time_end": 106781.5934,
+    "description": "Skyscanner loading screen is displayed.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner | Find the cheapest flights fast",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A dark blue screen with a white Skyscanner logo and a loading spinner."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 106781.5934,
+    "time_end": 106831.5934,
+    "description": "The thinking prompt overlay reappears with full task instructions.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The dark overlay returns, showing a long paragraph of text instructions."
+  },
+  {
+    "type": "input_text",
+    "time_start": 126481.5934,
+    "time_end": 128681.5934,
+    "description": "User types 'Yes, please think aloud as you go. What are you looking at right now?' into the prompt text area.",
+    "confidence": 0.9,
+    "interaction_target": "What are you thinking right now?",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user is typing into the text field within the instruction overlay."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 148831.5934,
+    "time_end": 148881.5934,
+    "description": "The instruction overlay closes, revealing the Skyscanner homepage.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The Skyscanner homepage is visible, showing the flight search form with 'Sydney (SYD)' as the origin."
+  },
+  {
+    "type": "click",
+    "time_start": 173771.1868,
+    "time_end": 173771.1868,
+    "description": "User clicks on the 'From' input field.",
+    "confidence": 0.9,
+    "interaction_target": "Sydney (SYD)",
+    "cursor_position": {
+      "x": 1305,
+      "y": 972
+    },
+    "page_title": "Skyscanner | Find the cheapest flights",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user is on the Skyscanner homepage, looking at the flight search form."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 173971.1868,
+    "time_end": 174071.1868,
+    "description": "A dropdown menu with location suggestions appears below the 'From' field.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The 'From' field is active, and a dropdown list showing 'Sydney (SYD)' and 'Wollongong (WOL)' is visible."
+  },
+  {
+    "type": "input_text",
+    "time_start": 175321.1868,
+    "time_end": 175571.1868,
+    "description": "User types 'sun' into the 'From' input field.",
+    "confidence": 0.9,
+    "interaction_target": "From",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user is typing in the 'From' field, and the text 'sun' is visible."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 175621.1868,
+    "time_end": 175721.1868,
+    "description": "The location suggestions in the dropdown update to show results matching 'sun'.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The dropdown list now shows 'Sunshine Coast (MCY)', 'Surabaya (SUB)', and other locations starting with 'sun'."
+  },
+  {
+    "type": "select",
+    "time_start": 177321.1868,
+    "time_end": 177321.1868,
+    "description": "User selects 'Sunshine Coast (MCY)' from the location dropdown.",
+    "confidence": 0.9,
+    "interaction_target": "Sunshine Coast (MCY)",
+    "cursor_position": {
+      "x": 1305,
+      "y": 973
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user clicks on the 'Sunshine Coast (MCY)' option in the dropdown menu."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 177621.1868,
+    "time_end": 177721.1868,
+    "description": "The 'To' field dropdown appears automatically, showing 'Explore everywhere' and 'Multi-city search' options.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The 'To' field is now highlighted, and its dropdown menu is visible."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 178721.1868,
+    "time_end": 178921.1868,
+    "description": "A 'Yes, please think aloud as you go' overlay appears on the screen.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The main Skyscanner page is obscured by a dark overlay with white text and an 'Open' button."
+  },
+  {
+    "type": "click",
+    "time_start": 180121.1868,
+    "time_end": 180121.1868,
+    "description": "User clicks the 'Open' button on the overlay.",
+    "confidence": 0.9,
+    "interaction_target": "Open",
+    "cursor_position": {
+      "x": 1190,
+      "y": 344
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is over the 'Open' button on the overlay."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 180171.1868,
+    "time_end": 180271.1868,
+    "description": "The think-aloud overlay closes, revealing the search form again.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The overlay is gone, and the Skyscanner homepage is visible again."
+  },
+  {
+    "type": "click",
+    "time_start": 181271.1868,
+    "time_end": 181271.1868,
+    "description": "User clicks on the 'To' input field.",
+    "confidence": 0.9,
+    "interaction_target": "Country, city or airport",
+    "cursor_position": {
+      "x": 988,
+      "y": 246
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is in the 'To' field, which is currently empty."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 181421.1868,
+    "time_end": 181521.1868,
+    "description": "The destination dropdown menu appears.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A dropdown list with common destinations appears below the 'To' field."
+  },
+  {
+    "type": "input_text",
+    "time_start": 181721.1868,
+    "time_end": 181921.1868,
+    "description": "User types 'ond' into the 'To' input field.",
+    "confidence": 0.9,
+    "interaction_target": "To",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The text 'ond' is visible in the 'To' field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 181971.1868,
+    "time_end": 182071.1868,
+    "description": "The destination suggestions update.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The dropdown list updates to show locations matching 'ond'."
+  },
+  {
+    "type": "input_text",
+    "time_start": 185321.1868,
+    "time_end": 185421.1868,
+    "description": "User types 'i' into the 'To' input field.",
+    "confidence": 0.9,
+    "interaction_target": "To",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The text in the 'To' field is now 'ondoni'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 185471.1868,
+    "time_end": 185571.1868,
+    "description": "The destination suggestions update.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The dropdown list updates to show locations matching 'ondoni'."
+  },
+  {
+    "type": "select",
+    "time_start": 187371.1868,
+    "time_end": 187371.1868,
+    "description": "User selects 'London (Any)' from the destination dropdown.",
+    "confidence": 0.9,
+    "interaction_target": "London (Any)",
+    "cursor_position": null,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user clicks on the 'London (Any)' option in the dropdown menu."
+  },
+  {
+    "type": "hover",
+    "time_start": 187821.1868,
+    "time_end": 188821.1868,
+    "description": "User hovers over the 'Search' button.",
+    "confidence": 0.8,
+    "interaction_target": "Search",
+    "cursor_position": {
+      "x": 1707,
+      "y": 136
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is stationary over the blue 'Search' button."
+  },
+  {
+    "type": "click",
+    "time_start": 188871.1868,
+    "time_end": 188871.1868,
+    "description": "User clicks the 'Search' button.",
+    "confidence": 0.9,
+    "interaction_target": "Search",
+    "cursor_position": {
+      "x": 1707,
+      "y": 136
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The 'Search' button is activated."
+  },
+  {
+    "type": "navigate",
+    "time_start": 188921.1868,
+    "time_end": 189221.1868,
+    "description": "The page navigates to the flight search results.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The screen goes white with a loading spinner as the new page loads."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 189221.1868,
+    "time_end": 189321.1868,
+    "description": "The search results page layout loads with skeleton placeholders.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The results page structure is visible, but flight details are represented by grey boxes."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 189371.1868,
+    "time_end": 189471.1868,
+    "description": "A 'Searching...' status message appears.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A small blue bar at the top of the results area says 'Searching...' with a spinner."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 192771.1868,
+    "time_end": 192871.1868,
+    "description": "The 'Searching...' status message disappears.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The 'Searching...' bar is no longer visible."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 193271.1868,
+    "time_end": 193371.1868,
+    "description": "The 'Best', 'Cheapest', and 'Fastest' sorting tabs appear.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "Three tabs showing different price and duration options appear at the top of the results list."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 193571.1868,
+    "time_end": 193721.1868,
+    "description": "The initial flight results are displayed.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The first few flight options are now visible in the results list."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 196521.1868,
+    "time_end": 196621.1868,
+    "description": "A 'Searching Kiwi.com...' status message appears.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A status bar at the top says 'Searching Kiwi.com...'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 197921.1868,
+    "time_end": 198021.1868,
+    "description": "A 'Book Direct with Virgin Australia' result appears.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A Virgin Australia branded flight option appears at the top of the results."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 199471.1868,
+    "time_end": 199621.1868,
+    "description": "The flight results list updates with new information.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The order or content of the flight results list changes slightly."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 201971.1868,
+    "time_end": 202071.1868,
+    "description": "A 'Searching Singapore Airlines...' status message appears.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A status bar at the top says 'Searching Singapore Airlines...'."
+  },
+  {
+    "type": "scroll",
+    "time_start": 202871.1868,
+    "time_end": 203421.1868,
+    "description": "User scrolls down the search results page.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The page content moves upwards as the user scrolls down."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 205371.1868,
+    "time_end": 205521.1868,
+    "description": "The flight results list updates.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The flight results list refreshes."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 208521.1868,
+    "time_end": 208621.1868,
+    "description": "A 'Searching Singapore Airlines...' status message appears.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A status bar at the top says 'Searching Singapore Airlines...'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 211371.1868,
+    "time_end": 211471.1868,
+    "description": "A 'Searching Singapore Airlines...' status message appears.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A status bar at the top says 'Searching Singapore Airlines...'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 212171.1868,
+    "time_end": 212321.1868,
+    "description": "The flight results list updates.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The flight results list refreshes."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 212471.1868,
+    "time_end": 212571.1868,
+    "description": "A '997 results sorted by Best' message appears.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A text line above the results confirms the count and sort order."
+  },
+  {
+    "type": "scroll",
+    "time_start": 214421.1868,
+    "time_end": 222421.1868,
+    "description": "User scrolls down the search results page.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user is browsing through the long list of flight results."
+  },
+  {
+    "type": "click",
+    "time_start": 222871.1868,
+    "time_end": 222871.1868,
+    "description": "User clicks the 'Select' button for a flight.",
+    "confidence": 0.9,
+    "interaction_target": "Select",
+    "cursor_position": {
+      "x": 945,
+      "y": 825
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is over the 'Select' button of a flight result, and the button is clicked."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 222921.1868,
+    "time_end": 223121.1868,
+    "description": "The flight details expand or the page begins a transition.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The selected flight result expands to show more details."
+  },
+  {
+    "type": "scroll",
+    "time_start": 223260.78019999998,
+    "time_end": 223560.78019999998,
+    "description": "Page scrolls down to show more flight details.",
+    "confidence": 0.8,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The flight results list scrolls vertically."
+  },
+  {
+    "type": "click",
+    "time_start": 236960.78019999998,
+    "time_end": 236960.78019999998,
+    "description": "Click on the '2+ stops' filter checkbox in the sidebar.",
+    "confidence": 0.9,
+    "interaction_target": "2+ stops",
+    "cursor_position": {
+      "x": 673,
+      "y": 501
+    },
+    "page_title": "Skyscanner | Cheap Flights | Find the Best Flight Deals",
+    "page_location": "https://www.skyscanner.com.au/transport/flights/mcy/lhr/200627/200712/?adults=1&children=0&infants=0&cabinclass=economy&ref=home#results",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "Skyscanner results page with the sidebar filter section visible on the left."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 237960.78019999998,
+    "time_end": 238410.78019999998,
+    "description": "'Searching...' loading overlay appears and results update.",
+    "confidence": 0.8,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A semi-transparent overlay with a loading message is visible over the flight results."
+  },
+  {
+    "type": "click",
+    "time_start": 239060.78019999998,
+    "time_end": 239060.78019999998,
+    "description": "Uncheck the '2+ stops' filter checkbox.",
+    "confidence": 0.9,
+    "interaction_target": "2+ stops",
+    "cursor_position": {
+      "x": 511,
+      "y": 56
+    },
+    "page_title": "Skyscanner | Cheap Flights | Find the Best Flight Deals",
+    "page_location": "https://www.skyscanner.com.au/transport/flights/mcy/lhr/200627/200712/?adults=1&children=0&infants=0&cabinclass=economy&ref=home#results",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "Skyscanner results page with the cursor over the filter checkbox."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 239460.78019999998,
+    "time_end": 239660.78019999998,
+    "description": "Flight results list updates to show all flights.",
+    "confidence": 0.8,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The flight results list refreshes."
+  },
+  {
+    "type": "scroll",
+    "time_start": 241160.78019999998,
+    "time_end": 242260.78019999998,
+    "description": "Scroll down the sidebar filter section.",
+    "confidence": 0.8,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The left sidebar scrolls vertically."
+  },
+  {
+    "type": "hover",
+    "time_start": 242750.78019999998,
+    "time_end": 243350.78019999998,
+    "description": "Hover over a flight result card.",
+    "confidence": 0.7,
+    "cursor_position": {
+      "x": 913,
+      "y": 681
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "Skyscanner results page with the cursor stationary over a flight card."
+  },
+  {
+    "type": "scroll",
+    "time_start": 245660.78019999998,
+    "time_end": 245960.78019999998,
+    "description": "Scroll up the main flight results list.",
+    "confidence": 0.8,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The flight results list scrolls vertically upwards."
+  },
+  {
+    "type": "navigate",
+    "time_start": 248060.78019999998,
+    "time_end": 250210.78019999998,
+    "description": "Navigate to Google homepage.",
+    "confidence": 0.9,
+    "page_title": "Google",
+    "page_location": "https://www.google.com/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The browser loads the Google homepage."
+  },
+  {
+    "type": "click",
+    "time_start": 250460.78019999998,
+    "time_end": 250460.78019999998,
+    "description": "Click on the Trello shortcut icon.",
+    "confidence": 0.9,
+    "interaction_target": "Trello",
+    "cursor_position": null,
+    "page_title": "Google",
+    "page_location": "https://www.google.com/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "Google new tab page with shortcut icons."
+  },
+  {
+    "type": "navigate",
+    "time_start": 250460.78019999998,
+    "time_end": 251760.78019999998,
+    "description": "Navigate to Trello board.",
+    "confidence": 0.9,
+    "page_title": "Japan | Trello",
+    "page_location": "https://trello.com/b/6N6v6v6v/japan",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The browser loads the Trello board page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 251760.78019999998,
+    "time_end": 252160.78019999998,
+    "description": "Trello board content loads and cards appear.",
+    "confidence": 0.8,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The Trello board 'Japan' is fully rendered with multiple lists of cards."
+  },
+  {
+    "type": "scroll",
+    "time_start": 254060.78019999998,
+    "time_end": 254760.78019999998,
+    "description": "Horizontal scroll to the right on the Trello board.",
+    "confidence": 0.8,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The Trello board scrolls horizontally."
+  },
+  {
+    "type": "scroll",
+    "time_start": 255060.78019999998,
+    "time_end": 255560.78019999998,
+    "description": "Further horizontal scroll to the right.",
+    "confidence": 0.8,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The Trello board scrolls horizontally."
+  },
+  {
+    "type": "hover",
+    "time_start": 256610.78019999998,
+    "time_end": 256860.78019999998,
+    "description": "Hover over the 'Unko Museum' card.",
+    "confidence": 0.7,
+    "interaction_target": "Unko Museum",
+    "cursor_position": null,
+    "page_title": "Japan | Trello",
+    "page_location": "https://trello.com/b/6N6v6v6v/japan",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "Trello board with the cursor over a specific card."
+  },
+  {
+    "type": "hover",
+    "time_start": 278060.7802,
+    "time_end": 278310.7802,
+    "description": "Hover over the 'Historical Village of Hokkaido' card.",
+    "confidence": 0.7,
+    "interaction_target": "Historical Village of Hokkaido",
+    "cursor_position": null,
+    "page_title": "Japan | Trello",
+    "page_location": "https://trello.com/b/6N6v6v6v/japan",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "Trello board with the cursor over a specific card."
+  },
+  {
+    "type": "hover",
+    "time_start": 278760.7802,
+    "time_end": 279060.7802,
+    "description": "Hover over the 'Lake Toyako' card.",
+    "confidence": 0.7,
+    "interaction_target": "Lake Toyako",
+    "cursor_position": null,
+    "page_title": "Japan | Trello",
+    "page_location": "https://trello.com/b/6N6v6v6v/japan",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "Trello board with the cursor over a specific card."
+  },
+  {
+    "type": "hover",
+    "time_start": 279560.7802,
+    "time_end": 279810.7802,
+    "description": "Hover over the 'Kappabashi Street' card.",
+    "confidence": 0.7,
+    "interaction_target": "Kappabashi Street",
+    "cursor_position": null,
+    "page_title": "Japan | Trello",
+    "page_location": "https://trello.com/b/6N6v6v6v/japan",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "Trello board with the cursor over a specific card."
+  },
+  {
+    "type": "navigate",
+    "time_start": 283450.3736,
+    "time_end": 284350.3736,
+    "description": "User navigates from the Trello board to the Google homepage.",
+    "confidence": 0.9,
+    "page_title": "Google",
+    "page_location": "https://www.google.com/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The browser transitions from a Trello board to the Google search homepage."
+  },
+  {
+    "type": "navigate",
+    "time_start": 288450.3736,
+    "time_end": 289700.3736,
+    "description": "User navigates from Google to the Booking.com homepage.",
+    "confidence": 0.9,
+    "page_title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+    "page_location": "https://www.booking.com/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The browser loads the Booking.com homepage."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 290500.3736,
+    "time_end": 290900.3736,
+    "description": "A 'Genius' sign-in modal appears over the Booking.com homepage.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A blue and white modal with the text 'Sign in, save money' is visible in the center of the screen."
+  },
+  {
+    "type": "hover",
+    "time_start": 290900.3736,
+    "time_end": 292950.3736,
+    "description": "User hovers over the close button ('X') of the Genius modal.",
+    "confidence": 0.8,
+    "interaction_target": "Close",
+    "cursor_position": {
+      "x": 289,
+      "y": 363
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is positioned over the 'X' button in the top right corner of the modal."
+  },
+  {
+    "type": "click",
+    "time_start": 292950.3736,
+    "time_end": 293050.3736,
+    "description": "User clicks the 'X' button in the top right corner of the Genius modal to close it.",
+    "confidence": 0.9,
+    "interaction_target": "Close",
+    "cursor_position": {
+      "x": 350,
+      "y": 122
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user clicks the close button on the modal."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 293050.3736,
+    "time_end": 293200.3736,
+    "description": "The Genius sign-in modal disappears, revealing the full Booking.com homepage.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The modal is no longer visible on the page."
+  },
+  {
+    "type": "click",
+    "time_start": 300400.3736,
+    "time_end": 300500.3736,
+    "description": "User clicks the 'X' icon in the destination input field to clear the pre-filled 'Cradle Mountain' text.",
+    "confidence": 0.9,
+    "interaction_target": "Clear destination",
+    "cursor_position": {
+      "x": 495,
+      "y": 126
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user clicks the clear button inside the search input field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 300500.3736,
+    "time_end": 300600.3736,
+    "description": "The destination input field is cleared of text.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The search input field is now empty."
+  },
+  {
+    "type": "input_text",
+    "time_start": 303500.3736,
+    "time_end": 306200.3736,
+    "description": "User types 'london' into the destination search field.",
+    "confidence": 0.9,
+    "interaction_target": "Where are you going?",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The text 'london' is being entered into the search box."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 304650.3736,
+    "time_end": 305200.3736,
+    "description": "A dropdown menu with location suggestions appears below the destination input field as the user types.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A list of suggested locations, including London, is displayed below the search box."
+  },
+  {
+    "type": "select",
+    "time_start": 306500.3736,
+    "time_end": 306650.3736,
+    "description": "User selects the first suggestion, 'London, Greater London, United Kingdom', from the dropdown list.",
+    "confidence": 0.9,
+    "interaction_target": "London, Greater London, United Kingdom",
+    "cursor_position": {
+      "x": 240,
+      "y": 186
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user clicks on the London suggestion in the dropdown."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 306650.3736,
+    "time_end": 306800.3736,
+    "description": "The destination input field is updated with the selected location: 'London, Greater London, United Kingdom'.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The search box now contains the full selected location string."
+  },
+  {
+    "type": "hover",
+    "time_start": 310650.3736,
+    "time_end": 312000.3736,
+    "description": "User hovers over the 'Search' button before clicking it.",
+    "confidence": 0.8,
+    "interaction_target": "Search",
+    "cursor_position": {
+      "x": 555,
+      "y": 561
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is hovering over the blue Search button."
+  },
+  {
+    "type": "click",
+    "time_start": 312000.3736,
+    "time_end": 312150.3736,
+    "description": "User clicks the blue 'Search' button to find accommodations in London.",
+    "confidence": 0.9,
+    "interaction_target": "Search",
+    "cursor_position": null,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user clicks the Search button."
+  },
+  {
+    "type": "navigate",
+    "time_start": 312150.3736,
+    "time_end": 315550.3736,
+    "description": "The page navigates to the search results for London.",
+    "confidence": 0.9,
+    "page_title": "Booking.com : Hotels in London . Book your hotel now!",
+    "page_location": "https://www.booking.com/searchresults.en-gb.html?ss=London&ssne=London&ssne_untouched=London",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The browser loads the search results page showing hotel listings in London."
+  },
+  {
+    "type": "scroll",
+    "time_start": 326400.3736,
+    "time_end": 331400.3736,
+    "description": "User scrolls down the search results page to view different hotel listings.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The page content moves upwards as the user scrolls down through the hotel results."
+  },
+  {
+    "type": "navigate",
+    "time_start": 338650.3736,
+    "time_end": 338800.3736,
+    "description": "The screen transitions to a post-task question screen in the user testing tool.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The Booking.com page is replaced by a dark screen with the text 'What are you thinking about doing next?'"
+  }
+]

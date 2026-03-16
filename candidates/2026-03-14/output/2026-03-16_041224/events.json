@@ -1,0 +1,1007 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start": 29884.0,
+    "time_end": 29884.0,
+    "description": "Initial screen state: Onboarding screen for Askable Sessions with instructions to share the window.",
+    "confidence": 0.9,
+    "page_title": "Askable Sessions",
+    "page_location": "https://sessions.askable.com/join-mod/8991909145853d08ad8c06ad",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "A dark screen with the text 'Great. To start, please click the \"Share\" button in the Meet call controls and choose to share this window.' is displayed."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 31184.0,
+    "time_end": 66784.0,
+    "description": "Introductory transcription text appears on the screen, welcoming the user and explaining the task of planning a holiday to London.",
+    "confidence": 0.9,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "Text is being typed out on the dark background: 'Thank you. I can see your screen now. Imagine you're living on the Sunshine Coast in Queensland and you're planning a holiday to London...'"
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 67734.0,
+    "time_end": 67734.0,
+    "description": "An 'Open' button appears at the bottom of the interface.",
+    "confidence": 0.9,
+    "interaction_target": "Open",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "A circular button with the text 'Open' and an external link icon appears at the bottom center of the screen."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 67984.0,
+    "time_end": 68384.0,
+    "description": "Browser indicates a pop-up was blocked in the address bar and via a notification.",
+    "confidence": 0.9,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "A 'Pop-up blocked' icon appears in the right side of the URL bar, and a small notification appears briefly."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 68734.0,
+    "time_end": 76584.0,
+    "description": "A second block of transcription text appears, instructing the user to think aloud during the task.",
+    "confidence": 0.9,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "New text appears: 'Please remember to think aloud as you work through this task, describing what you are seeing and doing...'"
+  },
+  {
+    "type": "hover",
+    "time_start": 78480.0,
+    "time_end": 79234.0,
+    "description": "User hovers the cursor over the 'Open' button.",
+    "confidence": 0.8,
+    "interaction_target": "Open",
+    "cursor_position": {
+      "x": 868,
+      "y": 632
+    },
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The cursor is positioned directly over the 'Open' button at the bottom of the screen."
+  },
+  {
+    "type": "click",
+    "time_start": 79234.0,
+    "time_end": 79234.0,
+    "description": "User clicks the 'Open' button.",
+    "confidence": 0.9,
+    "interaction_target": "Open",
+    "cursor_position": {
+      "x": 868,
+      "y": 632
+    },
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The 'Open' button is activated by a click."
+  },
+  {
+    "type": "navigate",
+    "time_start": 79584.0,
+    "time_end": 81184.0,
+    "description": "A new tab opens and navigates to Google.",
+    "confidence": 0.9,
+    "page_title": "Google",
+    "page_location": "https://www.google.com/",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The browser switches to a new tab and the Google search homepage loads."
+  },
+  {
+    "type": "hover",
+    "time_start": 81434.0,
+    "time_end": 83484.0,
+    "description": "User hovers over the Google search bar.",
+    "confidence": 0.8,
+    "cursor_position": {
+      "x": 1790,
+      "y": 76
+    },
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The cursor is stationary over the central search input field on the Google homepage."
+  },
+  {
+    "type": "click",
+    "time_start": 83484.0,
+    "time_end": 83484.0,
+    "description": "User clicks on the search bar.",
+    "confidence": 0.9,
+    "cursor_position": {
+      "x": 1092,
+      "y": 343
+    },
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The search bar is focused, indicated by the cursor changing to a text input beam and the field being highlighted."
+  },
+  {
+    "type": "input_text",
+    "time_start": 84934.0,
+    "time_end": 88534.0,
+    "description": "User types 'sunshine coast to london flights' into the search bar.",
+    "confidence": 0.9,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The text 'sunshine coast to london flights' appears in the search bar as the user types."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 88584.0,
+    "time_end": 88584.0,
+    "description": "Autocomplete search suggestions appear below the search bar.",
+    "confidence": 0.9,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "A dropdown menu with various search suggestions related to 'sunshine coast to london flights' appears."
+  },
+  {
+    "type": "click",
+    "time_start": 89184.0,
+    "time_end": 89184.0,
+    "description": "User initiates the search (via Enter key).",
+    "confidence": 0.9,
+    "cursor_position": null,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The search is submitted, and the page begins to transition."
+  },
+  {
+    "type": "navigate",
+    "time_start": 89234.0,
+    "time_end": 90534.0,
+    "description": "The page navigates to the Google search results.",
+    "confidence": 0.9,
+    "page_title": "sunshine coast to london flights - Google Search",
+    "page_location": "https://www.google.com/search?q=sunshine+coast+to+london+flights",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The Google search results page for 'sunshine coast to london flights' is displayed."
+  },
+  {
+    "type": "scroll",
+    "time_start": 91584.0,
+    "time_end": 93184.0,
+    "description": "User scrolls down the search results page.",
+    "confidence": 0.8,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The page content moves vertically as the user scrolls past the initial results."
+  },
+  {
+    "type": "hover",
+    "time_start": 93184.0,
+    "time_end": 94284.0,
+    "description": "User hovers over the Skyscanner search result link.",
+    "confidence": 0.8,
+    "interaction_target": "Flights from Sunshine Coast to London - Skyscanner",
+    "cursor_position": null,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The cursor lingers over the blue link for the Skyscanner website in the search results."
+  },
+  {
+    "type": "click",
+    "time_start": 94284.0,
+    "time_end": 94284.0,
+    "description": "User clicks on the Skyscanner search result.",
+    "confidence": 0.9,
+    "interaction_target": "Flights from Sunshine Coast to London - Skyscanner",
+    "cursor_position": null,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The Skyscanner link is clicked, and the browser begins loading the new page."
+  },
+  {
+    "type": "navigate",
+    "time_start": 94334.0,
+    "time_end": 96534.0,
+    "description": "The page navigates to Skyscanner.",
+    "confidence": 0.9,
+    "page_title": "Cheap Flights from Sunshine Coast to London | Skyscanner",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The Skyscanner homepage loads, showing flight search fields pre-populated with Sunshine Coast and London."
+  },
+  {
+    "type": "scroll",
+    "time_start": 97584.0,
+    "time_end": 99184.0,
+    "description": "User scrolls down the Skyscanner page.",
+    "confidence": 0.8,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The Skyscanner page content moves vertically."
+  },
+  {
+    "type": "hover",
+    "time_start": 99184.0,
+    "time_end": 100284.0,
+    "description": "User hovers over the 'Depart' date input field.",
+    "confidence": 0.8,
+    "interaction_target": "Depart",
+    "cursor_position": null,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The cursor is positioned over the 'Depart' date selection box."
+  },
+  {
+    "type": "click",
+    "time_start": 100284.0,
+    "time_end": 100284.0,
+    "description": "User clicks on the 'Depart' date field.",
+    "confidence": 0.9,
+    "interaction_target": "Depart",
+    "cursor_position": null,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The 'Depart' field is clicked."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 100334.0,
+    "time_end": 100334.0,
+    "description": "A date picker modal opens.",
+    "confidence": 0.9,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "A calendar overlay appears over the flight search form."
+  },
+  {
+    "type": "select",
+    "time_start": 102684.0,
+    "time_end": 102684.0,
+    "description": "User selects a departure date.",
+    "confidence": 0.9,
+    "cursor_position": null,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "A date is clicked and highlighted in the calendar."
+  },
+  {
+    "type": "hover",
+    "time_start": 103984.0,
+    "time_end": 105084.0,
+    "description": "User hovers over the 'Search' button.",
+    "confidence": 0.8,
+    "interaction_target": "Search",
+    "cursor_position": null,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The cursor is positioned over the large 'Search' button on the Skyscanner form."
+  },
+  {
+    "type": "click",
+    "time_start": 105010.8,
+    "time_end": 105010.8,
+    "description": "Click on the Google search bar to focus the input field.",
+    "confidence": 0.95,
+    "interaction_target": "Search",
+    "cursor_position": null,
+    "page_title": "Google",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The Google homepage is visible with the cursor positioned over the central search bar."
+  },
+  {
+    "type": "navigate",
+    "time_start": 105134.0,
+    "time_end": 106510.0,
+    "description": "The page begins navigating to the flight search results.",
+    "confidence": 0.9,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The Skyscanner page begins to reload or transition to show flight results."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 105310.8,
+    "time_end": 105810.8,
+    "description": "The search suggestions dropdown appears below the search bar showing trending topics.",
+    "confidence": 0.9,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "A list of trending searches has appeared in a dropdown menu under the Google search bar."
+  },
+  {
+    "type": "input_text",
+    "time_start": 116210.8,
+    "time_end": 118010.8,
+    "description": "Type 'expedia' into the Google search bar.",
+    "confidence": 1.0,
+    "interaction_target": "Search",
+    "page_title": "Google",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The word 'expedia' is being typed into the search bar, and the suggestions list is updating in real-time."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 118010.8,
+    "time_end": 118310.8,
+    "description": "The search suggestions update to show 'expedia' related queries.",
+    "confidence": 0.9,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The dropdown menu now shows autocomplete suggestions for 'expedia'."
+  },
+  {
+    "type": "select",
+    "time_start": 118510.8,
+    "time_end": 118510.8,
+    "description": "Select the 'expedia' suggestion from the dropdown list.",
+    "confidence": 0.95,
+    "interaction_target": "expedia",
+    "cursor_position": null,
+    "page_title": "Google",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The cursor is clicking on the 'expedia' item within the search suggestions dropdown."
+  },
+  {
+    "type": "navigate",
+    "time_start": 118660.8,
+    "time_end": 118910.8,
+    "description": "Navigate to the Google search results page for 'expedia'.",
+    "confidence": 1.0,
+    "page_title": "expedia - Google Search",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The Google search results page for 'expedia' has loaded, showing various links and ads."
+  },
+  {
+    "type": "hover",
+    "time_start": 118910.8,
+    "time_end": 121410.8,
+    "description": "Hover over the 'Expedia.com.au - Official Site' search result.",
+    "confidence": 0.85,
+    "interaction_target": "Expedia.com.au - Official Site",
+    "cursor_position": {
+      "x": 336,
+      "y": 355
+    },
+    "page_title": "expedia - Google Search",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The cursor is stationary over the first organic search result for Expedia."
+  },
+  {
+    "type": "click",
+    "time_start": 121460.8,
+    "time_end": 121460.8,
+    "description": "Click on the Expedia official site link.",
+    "confidence": 1.0,
+    "interaction_target": "Expedia.com.au - Official Site",
+    "cursor_position": {
+      "x": 752,
+      "y": 514
+    },
+    "page_title": "expedia - Google Search",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The cursor clicks the blue link for the Expedia website."
+  },
+  {
+    "type": "navigate",
+    "time_start": 121510.8,
+    "time_end": 123110.8,
+    "description": "Navigate to the Expedia homepage.",
+    "confidence": 1.0,
+    "page_title": "Travel with Expedia: Hotels, Flights, Cars, Packages & More",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The screen transitions from Google results to the Expedia website loading state."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 123110.8,
+    "time_end": 126710.8,
+    "description": "The Expedia homepage content loads and renders.",
+    "confidence": 0.9,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The main interface of the Expedia website is now visible and fully rendered."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 126710.8,
+    "time_end": 127010.8,
+    "description": "A 'Sign in' promotional overlay appears on the right side of the page.",
+    "confidence": 0.95,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "A blue box prompting the user to sign in for member prices has appeared on the right."
+  },
+  {
+    "type": "hover",
+    "time_start": 126710.8,
+    "time_end": 128110.8,
+    "description": "Hover over the 'Packages' tab in the search menu.",
+    "confidence": 0.8,
+    "interaction_target": "Packages",
+    "cursor_position": null,
+    "page_title": "Travel with Expedia: Hotels, Flights, Cars, Packages & More",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The cursor is positioned over the 'Packages' icon in the central search widget."
+  },
+  {
+    "type": "click",
+    "time_start": 128160.8,
+    "time_end": 128160.8,
+    "description": "Click on the 'Packages' tab.",
+    "confidence": 0.95,
+    "interaction_target": "Packages",
+    "cursor_position": null,
+    "page_title": "Travel with Expedia: Hotels, Flights, Cars, Packages & More",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The 'Packages' tab is clicked, and it becomes the active selection."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 128210.8,
+    "time_end": 128510.8,
+    "description": "The search form UI updates to show package-specific fields.",
+    "confidence": 0.9,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The search widget now shows 'Leaving from' and 'Going to' fields for a package search."
+  },
+  {
+    "type": "click",
+    "time_start": 135660.8,
+    "time_end": 135660.8,
+    "description": "Click on the 'Going to' destination input field.",
+    "confidence": 0.95,
+    "interaction_target": "Going to",
+    "cursor_position": null,
+    "page_title": "Travel with Expedia: Hotels, Flights, Cars, Packages & More",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The cursor is clicking inside the 'Going to' text box."
+  },
+  {
+    "type": "input_text",
+    "time_start": 144110.8,
+    "time_end": 144760.8,
+    "description": "Type 'london' into the 'Going to' field.",
+    "confidence": 1.0,
+    "interaction_target": "Going to",
+    "page_title": "Travel with Expedia: Hotels, Flights, Cars, Packages & More",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The word 'london' is visible in the destination input field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 144760.8,
+    "time_end": 145010.8,
+    "description": "A dropdown list of destination suggestions appears.",
+    "confidence": 0.9,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "A list of locations in London (airports, city center) is shown in a dropdown menu."
+  },
+  {
+    "type": "select",
+    "time_start": 146660.8,
+    "time_end": 146660.8,
+    "description": "Select 'London (LHR - Heathrow)' from the destination suggestions.",
+    "confidence": 0.95,
+    "interaction_target": "London (LHR - Heathrow)",
+    "cursor_position": null,
+    "page_title": "Travel with Expedia: Hotels, Flights, Cars, Packages & More",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The cursor clicks on the Heathrow airport option in the dropdown list."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 146710.8,
+    "time_end": 146910.8,
+    "description": "The destination field updates with the selected location and the dropdown closes.",
+    "confidence": 0.9,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The 'Going to' field now displays 'London (and vicinity), England, United Kingdom'."
+  },
+  {
+    "type": "hesitate",
+    "time_start": 146710.8,
+    "time_end": 172960.8,
+    "description": "User pauses for a long duration before the next interaction, suggesting hesitation or review of the form.",
+    "confidence": 0.7,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The page remains static with the destination field filled; the cursor is mostly stationary."
+  },
+  {
+    "type": "click",
+    "time_start": 172937.6,
+    "time_end": 172937.6,
+    "description": "Click on the 'I only need accommodation for part of my trip' checkbox.",
+    "confidence": 0.95,
+    "interaction_target": "I only need accommodation for part of my trip",
+    "cursor_position": null,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "Expedia homepage with the Packages tab active; the user is interacting with the accommodation checkbox."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 172937.6,
+    "time_end": 174037.6,
+    "description": "The accommodation date selection section expands below the checkbox.",
+    "confidence": 0.9,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The search form on the Expedia homepage expands to reveal additional date input fields."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 173660.8,
+    "time_end": 173910.8,
+    "description": "The checkbox is toggled off, and the extra UI elements are hidden.",
+    "confidence": 0.9,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The checkbox is now empty, and the form has returned to its previous state."
+  },
+  {
+    "type": "hover",
+    "time_start": 174037.6,
+    "time_end": 174937.6,
+    "description": "Hover over the 'Search' button.",
+    "confidence": 0.9,
+    "interaction_target": "Search",
+    "cursor_position": {
+      "x": 1767,
+      "y": 680
+    },
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The cursor is positioned over the blue Search button on the right side of the form."
+  },
+  {
+    "type": "navigate",
+    "time_start": 177410.8,
+    "time_end": 178137.8,
+    "description": "The page begins navigating to the search results, showing a loading screen.",
+    "confidence": 1.0,
+    "page_title": "Travel with Expedia: Hotels, Flights, Cars, Packages & More",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The main page content has disappeared, replaced by a white screen with a central Expedia logo and a loading animation."
+  },
+  {
+    "type": "hover",
+    "time_start": 199145.6,
+    "time_end": 201984.6,
+    "description": "Hover over the first search result card for 'The Zetter Clerkenwell'.",
+    "confidence": 0.9,
+    "interaction_target": "The Zetter Clerkenwell",
+    "cursor_position": {
+      "x": 793,
+      "y": 771
+    },
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The search results page is displayed, and the cursor is resting on the first hotel listing."
+  },
+  {
+    "type": "scroll",
+    "time_start": 208883.6,
+    "time_end": 209883.6,
+    "description": "Scroll down the search results page.",
+    "confidence": 0.85,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The list of hotel search results moves upward as the user scrolls down."
+  },
+  {
+    "type": "scroll",
+    "time_start": 221383.6,
+    "time_end": 222383.6,
+    "description": "Scroll down the results page.",
+    "confidence": 0.85,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The user scrolls further down the list of hotels."
+  },
+  {
+    "type": "hover",
+    "time_start": 229839.6,
+    "time_end": 232091.6,
+    "description": "Hover over the hotel card for 'The Tower Hotel, by Thistle'.",
+    "confidence": 0.9,
+    "interaction_target": "The Tower Hotel, by Thistle",
+    "cursor_position": {
+      "x": 793,
+      "y": 722
+    },
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The cursor is stationary over the listing for The Tower Hotel."
+  },
+  {
+    "type": "hover",
+    "time_start": 239803.40000000002,
+    "time_end": 240268.40000000002,
+    "description": "Cursor hovers over the hotel card for 'The Drey - Kensington, Earl's Court'.",
+    "confidence": 0.8,
+    "interaction_target": "The Drey - Kensington, Earl's Court",
+    "cursor_position": {
+      "x": 793,
+      "y": 732
+    },
+    "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results | Expedia",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The user is viewing hotel search results for London on Expedia."
+  },
+  {
+    "type": "scroll",
+    "time_start": 241383.40000000002,
+    "time_end": 242383.40000000002,
+    "description": "User scrolls up through the hotel search results.",
+    "confidence": 0.9,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The search results list is moving upwards as the user scrolls."
+  },
+  {
+    "type": "hover",
+    "time_start": 246852.6,
+    "time_end": 247336.6,
+    "description": "Hover over 'The Zetter Clerkenwell' hotel card again.",
+    "confidence": 0.9,
+    "interaction_target": "The Zetter Clerkenwell",
+    "cursor_position": {
+      "x": 843,
+      "y": 333
+    },
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The cursor returns to the first hotel listing at the top of the page."
+  },
+  {
+    "type": "click",
+    "time_start": 247314.40000000002,
+    "time_end": 247314.40000000002,
+    "description": "User clicks the 'Very good 8+' guest rating filter.",
+    "confidence": 0.9,
+    "interaction_target": "Very good 8+",
+    "cursor_position": {
+      "x": 843,
+      "y": 333
+    },
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The checkbox for 'Very good 8+' is activated."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 248014.40000000002,
+    "time_end": 252314.40000000002,
+    "description": "Search results refresh to apply the 'Very good 8+' guest rating filter, showing a 'Searching...' overlay.",
+    "confidence": 0.9,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "A loading spinner and 'Searching for thousands of package deals' message are visible over the results area."
+  },
+  {
+    "type": "scroll",
+    "time_start": 258383.40000000002,
+    "time_end": 259383.40000000002,
+    "description": "User scrolls up the page.",
+    "confidence": 0.9,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The page content moves downwards as the user scrolls up."
+  },
+  {
+    "type": "scroll",
+    "time_start": 263883.4,
+    "time_end": 264883.4,
+    "description": "User scrolls up the page.",
+    "confidence": 0.9,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The page content moves downwards."
+  },
+  {
+    "type": "scroll",
+    "time_start": 267883.4,
+    "time_end": 268883.4,
+    "description": "User scrolls down the page.",
+    "confidence": 0.9,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The page content moves upwards."
+  },
+  {
+    "type": "hover",
+    "time_start": 268168.4,
+    "time_end": 271064.4,
+    "description": "Cursor hovers over the price per traveler slider.",
+    "confidence": 0.7,
+    "interaction_target": "Price per traveler",
+    "cursor_position": {
+      "x": 426,
+      "y": 532
+    },
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The cursor is near the price slider in the left sidebar."
+  },
+  {
+    "type": "drag",
+    "time_start": 271064.4,
+    "time_end": 283664.4,
+    "description": "User drags the price slider handle to adjust the maximum price per traveler.",
+    "confidence": 0.9,
+    "interaction_target": "Price per traveler",
+    "cursor_position": {
+      "x": 1332,
+      "y": 556
+    },
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The price slider handle is being moved to the left, decreasing the maximum price."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 283714.4,
+    "time_end": 288714.4,
+    "description": "Search results refresh after the price filter adjustment.",
+    "confidence": 0.9,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The 'Searching...' overlay appears while the results update."
+  },
+  {
+    "type": "drag",
+    "time_start": 290164.4,
+    "time_end": 294764.4,
+    "description": "User drags the price slider handle to further refine the price range.",
+    "confidence": 0.9,
+    "interaction_target": "Price per traveler",
+    "cursor_position": {
+      "x": 1096,
+      "y": 465
+    },
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The price slider handle is moved again."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 294814.4,
+    "time_end": 299614.4,
+    "description": "Search results refresh after the second price filter adjustment.",
+    "confidence": 0.9,
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The loading state is visible as results update."
+  },
+  {
+    "type": "hover",
+    "time_start": 305542.4,
+    "time_end": 306483.4,
+    "description": "Cursor hovers over the 'See more' link under Property class.",
+    "confidence": 0.8,
+    "interaction_target": "See more",
+    "cursor_position": {
+      "x": 543,
+      "y": 1005
+    },
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "The cursor is positioned over the 'See more' link in the sidebar."
+  },
+  {
+    "type": "scroll",
+    "time_start": 319491.2,
+    "time_end": 320491.2,
+    "description": "User scrolls down the search results page.",
+    "confidence": 0.9,
+    "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results | Expedia",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "Expedia search results page showing various hotels in London."
+  },
+  {
+    "type": "scroll",
+    "time_start": 325891.2,
+    "time_end": 327391.2,
+    "description": "User scrolls down the search results page.",
+    "confidence": 0.9,
+    "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results | Expedia",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "Expedia search results page showing various hotels in London."
+  },
+  {
+    "type": "hover",
+    "time_start": 329418.2,
+    "time_end": 330701.2,
+    "description": "User hovers over the hotel listing for The Z Hotel Victoria.",
+    "confidence": 0.8,
+    "interaction_target": "The Z Hotel Victoria",
+    "cursor_position": {
+      "x": 543,
+      "y": 900
+    },
+    "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results | Expedia",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "Expedia search results page with the cursor over The Z Hotel Victoria listing."
+  },
+  {
+    "type": "scroll",
+    "time_start": 330383.2,
+    "time_end": 331383.2,
+    "description": "User scrolls up the page.",
+    "confidence": 0.9,
+    "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results | Expedia",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "Expedia search results page."
+  },
+  {
+    "type": "hover",
+    "time_start": 335691.2,
+    "time_end": 336391.2,
+    "description": "User hovers over the Ibis London Shepherds Bush hotel listing.",
+    "confidence": 0.8,
+    "interaction_target": "Ibis London Shepherds Bush \u2013 Hammersmith",
+    "cursor_position": null,
+    "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results | Expedia",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "Expedia search results page with the cursor over the Ibis London Shepherds Bush listing."
+  },
+  {
+    "type": "scroll",
+    "time_start": 336391.2,
+    "time_end": 338391.2,
+    "description": "User scrolls down the page.",
+    "confidence": 0.9,
+    "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results | Expedia",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "Expedia search results page."
+  },
+  {
+    "type": "hover",
+    "time_start": 341691.2,
+    "time_end": 342691.2,
+    "description": "User hovers over the Hub By Premier Inn hotel listing.",
+    "confidence": 0.8,
+    "interaction_target": "Hub By Premier Inn London Westminster - Westminster Abbey",
+    "cursor_position": null,
+    "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results | Expedia",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "Expedia search results page with the cursor over the Hub By Premier Inn listing."
+  },
+  {
+    "type": "scroll",
+    "time_start": 342691.2,
+    "time_end": 344391.2,
+    "description": "User scrolls down the page.",
+    "confidence": 0.9,
+    "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results | Expedia",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "Expedia search results page."
+  },
+  {
+    "type": "hover",
+    "time_start": 347091.2,
+    "time_end": 348091.2,
+    "description": "User hovers over the Point A Hotel listing.",
+    "confidence": 0.8,
+    "interaction_target": "Point A Hotel - Paddington",
+    "cursor_position": {
+      "x": 1847,
+      "y": 483
+    },
+    "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results | Expedia",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "Expedia search results page with the cursor over the Point A Hotel listing."
+  },
+  {
+    "type": "scroll",
+    "time_start": 348091.2,
+    "time_end": 349391.2,
+    "description": "User scrolls down the page.",
+    "confidence": 0.9,
+    "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results | Expedia",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "Expedia search results page."
+  },
+  {
+    "type": "click",
+    "time_start": 351522.2,
+    "time_end": 351522.2,
+    "description": "User clicks the \"Very good 8+\" guest rating filter.",
+    "confidence": 0.9,
+    "interaction_target": "Very good 8+\"",
+    "cursor_position": {
+      "x": 659,
+      "y": 917
+    },
+    "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results | Expedia",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "Expedia search results page with the cursor clicking the \"Very good 8+\" filter."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 351522.2,
+    "time_end": 353391.2,
+    "description": "The search results update based on the selected filter.",
+    "confidence": 0.9,
+    "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results | Expedia",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "Expedia search results page updating content."
+  },
+  {
+    "type": "scroll",
+    "time_start": 354883.2,
+    "time_end": 356883.2,
+    "description": "User scrolls up the page.",
+    "confidence": 0.9,
+    "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results | Expedia",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "Expedia search results page."
+  },
+  {
+    "type": "scroll",
+    "time_start": 359883.2,
+    "time_end": 360883.2,
+    "description": "User scrolls up the page.",
+    "confidence": 0.9,
+    "page_title": "London (and vicinity), England, United Kingdom Hotel Search Results | Expedia",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "Expedia search results page."
+  },
+  {
+    "type": "navigate",
+    "time_start": 373191.2,
+    "time_end": 373891.2,
+    "description": "User navigates back to the Askable Sessions tab.",
+    "confidence": 0.9,
+    "interaction_target": "Askable Sessions",
+    "page_title": "Askable Sessions",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "Browser tab switch from Expedia to Askable Sessions."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 377741.2,
+    "time_end": 379391.2,
+    "description": "A message appears on the screen: \"Thank you for walking me through that. Are you feeling like you're done with this task, or would you like to continue?\"",
+    "confidence": 0.9,
+    "page_title": "Askable Sessions",
+    "viewport_width": 1874,
+    "viewport_height": 1106,
+    "frame_description": "Askable Sessions page showing a message overlay."
+  }
+]

@@ -1,0 +1,1334 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start": 29690.0,
+    "time_end": 29690.0,
+    "description": "Initial screen state: Instruction page on sessions.askable.com with a prompt to share the screen.",
+    "confidence": 1.0,
+    "page_title": "Askable Sessions",
+    "page_location": "https://sessions.askable.com/u/u-m0261859811459532050280c4a2",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "A dark screen with a central white box containing text instructions about sharing the screen in Google Meet."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 30990.0,
+    "time_end": 68190.0,
+    "description": "Task instructions are typed out on the screen, detailing a travel planning scenario.",
+    "confidence": 1.0,
+    "page_title": "Askable Sessions",
+    "page_location": "https://sessions.askable.com/u/u-m0261859811459532050280c4a2",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The central text box updates dynamically as a long paragraph of instructions is 'typed' out character by character."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 68590.0,
+    "time_end": 68890.0,
+    "description": "An 'Open' button appears below the task instructions.",
+    "confidence": 1.0,
+    "page_title": "Askable Sessions",
+    "page_location": "https://sessions.askable.com/u/u-m0261859811459532050280c4a2",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "A circular button with the label 'Open' and an arrow icon appears at the bottom of the instruction box."
+  },
+  {
+    "type": "hover",
+    "time_start": 75684.0,
+    "time_end": 78165.0,
+    "description": "User hovers over the 'Open' button.",
+    "confidence": 0.9,
+    "interaction_target": "Open",
+    "cursor_position": {
+      "x": 1200,
+      "y": 422
+    },
+    "page_title": "Askable Sessions",
+    "page_location": "https://sessions.askable.com/u/u-m0261859811459532050280c4a2",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor is positioned directly over the 'Open' button in the center of the screen."
+  },
+  {
+    "type": "click",
+    "time_start": 78290.0,
+    "time_end": 78290.0,
+    "description": "User clicks the 'Open' button.",
+    "confidence": 1.0,
+    "interaction_target": "Open",
+    "cursor_position": {
+      "x": 1664,
+      "y": 1035
+    },
+    "page_title": "Askable Sessions",
+    "page_location": "https://sessions.askable.com/u/u-m0261859811459532050280c4a2",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The 'Open' button is activated by a click."
+  },
+  {
+    "type": "navigate",
+    "time_start": 78290.0,
+    "time_end": 79040.0,
+    "description": "The browser navigates to google.com.",
+    "confidence": 1.0,
+    "page_title": "Google",
+    "page_location": "https://www.google.com/",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The screen transitions from the Askable instruction page to the Google homepage."
+  },
+  {
+    "type": "hover",
+    "time_start": 79015.0,
+    "time_end": 80477.0,
+    "description": "User hovers over the Google search input field.",
+    "confidence": 0.9,
+    "cursor_position": {
+      "x": 986,
+      "y": 448
+    },
+    "page_title": "Google",
+    "page_location": "https://www.google.com/",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor is positioned inside the search bar on the Google homepage."
+  },
+  {
+    "type": "input_text",
+    "time_start": 90090.0,
+    "time_end": 91490.0,
+    "description": "User types 'webjet' into the search bar.",
+    "confidence": 1.0,
+    "interaction_target": "Search",
+    "page_title": "Google",
+    "page_location": "https://www.google.com/",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The word 'webjet' appears in the Google search input field as the user types."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 90290.0,
+    "time_end": 90590.0,
+    "description": "Google search suggestions dropdown appears.",
+    "confidence": 1.0,
+    "page_title": "Google",
+    "page_location": "https://www.google.com/",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "A list of search suggestions starting with 'webjet' appears below the search bar."
+  },
+  {
+    "type": "click",
+    "time_start": 94290.0,
+    "time_end": 94290.0,
+    "description": "User initiates the search for 'webjet'.",
+    "confidence": 0.8,
+    "interaction_target": "Google Search",
+    "cursor_position": {
+      "x": 1610,
+      "y": 6
+    },
+    "page_title": "Google",
+    "page_location": "https://www.google.com/",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The search is submitted, and the page begins to transition."
+  },
+  {
+    "type": "navigate",
+    "time_start": 94290.0,
+    "time_end": 94840.0,
+    "description": "Navigation to Google search results for 'webjet'.",
+    "confidence": 1.0,
+    "page_title": "webjet - Google Search",
+    "page_location": "https://www.google.com/search?q=webjet",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The Google search results page for 'webjet' loads, showing various links and information."
+  },
+  {
+    "type": "navigate",
+    "time_start": 102207.84700000001,
+    "time_end": 102257.84700000001,
+    "description": "User switches to the 'Ankake Sessions' tab.",
+    "confidence": 1.0,
+    "interaction_target": "Ankake Sessions",
+    "page_title": "Ankake Sessions",
+    "page_location": "sessions.ankake.com/u/en-m/r0285958515955205003642",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The browser tab for 'Ankake Sessions' is selected, showing the task instructions."
+  },
+  {
+    "type": "click",
+    "time_start": 103990.0,
+    "time_end": 103990.0,
+    "description": "User clicks on the search result 'Webjet | Your go-to for going places.'",
+    "confidence": 1.0,
+    "interaction_target": "Webjet | Your go-to for going places.",
+    "cursor_position": {
+      "x": 1025,
+      "y": 626
+    },
+    "page_title": "webjet - Google Search",
+    "page_location": "https://www.google.com/search?q=webjet",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor clicks on the primary blue link for the Webjet website in the search results."
+  },
+  {
+    "type": "navigate",
+    "time_start": 103990.0,
+    "time_end": 106140.0,
+    "description": "Navigation to webjet.com.au.",
+    "confidence": 1.0,
+    "page_title": "Webjet | Your go-to for going places.",
+    "page_location": "https://www.webjet.com.au/",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The browser tab updates and the Webjet homepage begins to load."
+  },
+  {
+    "type": "hover",
+    "time_start": 104707.84700000001,
+    "time_end": 105707.84700000001,
+    "description": "User hovers over the main Webjet search result link.",
+    "confidence": 0.9,
+    "interaction_target": "Webjet | Your go-to for going places.",
+    "cursor_position": {
+      "x": 19,
+      "y": 368
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor is positioned over the first organic search result for Webjet."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 106057.84700000001,
+    "time_end": 107007.84700000001,
+    "description": "A loading spinner is displayed while the Webjet homepage content loads.",
+    "confidence": 1.0,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "A circular red loading animation is visible on a white background."
+  },
+  {
+    "type": "hover",
+    "time_start": 116807.84700000001,
+    "time_end": 118107.84700000001,
+    "description": "User hovers over the 'LEAVING FROM' input field.",
+    "confidence": 0.9,
+    "interaction_target": "LEAVING FROM",
+    "cursor_position": {
+      "x": 1563,
+      "y": 1040
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor is over the flight search widget's origin input field."
+  },
+  {
+    "type": "click",
+    "time_start": 118107.84700000001,
+    "time_end": 118107.84700000001,
+    "description": "User clicks into the 'LEAVING FROM' input field.",
+    "confidence": 1.0,
+    "interaction_target": "LEAVING FROM",
+    "cursor_position": {
+      "x": 1562,
+      "y": 1040
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The input field is focused, and a cursor appears."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 118157.84700000001,
+    "time_end": 118707.84700000001,
+    "description": "A location suggestion dropdown appears.",
+    "confidence": 1.0,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "A list of airports and cities is displayed below the 'LEAVING FROM' field."
+  },
+  {
+    "type": "input_text",
+    "time_start": 118207.84700000001,
+    "time_end": 118707.84700000001,
+    "description": "User types 'sun' into the 'LEAVING FROM' field.",
+    "confidence": 1.0,
+    "interaction_target": "LEAVING FROM",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The characters 's', 'u', 'n' appear in the input field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 118707.84700000001,
+    "time_end": 118757.84700000001,
+    "description": "The location dropdown updates to show results matching 'sun'.",
+    "confidence": 1.0,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The list of suggested locations changes to show airports related to 'sun'."
+  },
+  {
+    "type": "hover",
+    "time_start": 120207.84700000001,
+    "time_end": 120707.84700000001,
+    "description": "User hovers over the 'Sunshine Coast (MCY)' option in the dropdown.",
+    "confidence": 0.9,
+    "interaction_target": "Sunshine Coast (MCY)",
+    "cursor_position": {
+      "x": 1561,
+      "y": 1040
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The 'Sunshine Coast (MCY)' list item is highlighted under the cursor."
+  },
+  {
+    "type": "select",
+    "time_start": 120707.84700000001,
+    "time_end": 120707.84700000001,
+    "description": "User selects 'Sunshine Coast (MCY)' from the dropdown.",
+    "confidence": 1.0,
+    "interaction_target": "Sunshine Coast (MCY)",
+    "cursor_position": {
+      "x": 1561,
+      "y": 1040
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The dropdown closes and the selected location is populated in the field."
+  },
+  {
+    "type": "click",
+    "time_start": 126007.84700000001,
+    "time_end": 126007.84700000001,
+    "description": "User clicks into the 'GOING TO' input field.",
+    "confidence": 1.0,
+    "interaction_target": "GOING TO",
+    "cursor_position": {
+      "x": 1509,
+      "y": 920
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The destination input field is focused."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 126057.84700000001,
+    "time_end": 126457.84700000001,
+    "description": "A location suggestion dropdown appears for the destination field.",
+    "confidence": 1.0,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "A list of suggested destinations is displayed."
+  },
+  {
+    "type": "input_text",
+    "time_start": 126057.84700000001,
+    "time_end": 127057.84700000001,
+    "description": "User types 'lond' into the 'GOING TO' field.",
+    "confidence": 1.0,
+    "interaction_target": "GOING TO",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The characters 'l', 'o', 'n', 'd' appear in the input field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 126457.84700000001,
+    "time_end": 127057.84700000001,
+    "description": "The destination dropdown updates to show results matching 'lond'.",
+    "confidence": 1.0,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The list of suggested destinations changes to show London airports."
+  },
+  {
+    "type": "hover",
+    "time_start": 128507.84700000001,
+    "time_end": 129007.84700000001,
+    "description": "User hovers over the 'All Airports (LON)' option in the dropdown.",
+    "confidence": 0.9,
+    "interaction_target": "All Airports (LON)",
+    "cursor_position": {
+      "x": 1636,
+      "y": 442
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The 'All Airports (LON)' list item is highlighted."
+  },
+  {
+    "type": "select",
+    "time_start": 129007.84700000001,
+    "time_end": 129007.84700000001,
+    "description": "User selects 'All Airports (LON)' from the dropdown.",
+    "confidence": 1.0,
+    "interaction_target": "All Airports (LON)",
+    "cursor_position": {
+      "x": 1636,
+      "y": 442
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The dropdown closes and the destination field is populated."
+  },
+  {
+    "type": "hover",
+    "time_start": 174525.69400000002,
+    "time_end": 175025.69400000002,
+    "description": "User hovers over the Askable Sessions browser tab.",
+    "confidence": 0.9,
+    "interaction_target": "Askable Sessions",
+    "cursor_position": {
+      "x": 1509,
+      "y": 677
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The WebJet homepage is visible with the search form."
+  },
+  {
+    "type": "navigate",
+    "time_start": 175007.847,
+    "time_end": 175057.847,
+    "description": "User switches to the 'Ankake Sessions' tab.",
+    "confidence": 1.0,
+    "interaction_target": "Ankake Sessions",
+    "page_title": "Ankake Sessions",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The instructions page is shown again."
+  },
+  {
+    "type": "click",
+    "time_start": 175025.69400000002,
+    "time_end": 175025.69400000002,
+    "description": "User clicks on the Askable Sessions browser tab.",
+    "confidence": 1.0,
+    "interaction_target": "Askable Sessions",
+    "cursor_position": {
+      "x": 1509,
+      "y": 677
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor is over the Askable Sessions tab."
+  },
+  {
+    "type": "hover",
+    "time_start": 213525.69400000002,
+    "time_end": 214375.69400000002,
+    "description": "User hovers over the travel dates selection field.",
+    "confidence": 0.9,
+    "interaction_target": "Select Travel Dates",
+    "cursor_position": {
+      "x": 103,
+      "y": 868
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The flight search form is visible on the WebJet homepage."
+  },
+  {
+    "type": "click",
+    "time_start": 214375.69400000002,
+    "time_end": 214375.69400000002,
+    "description": "User clicks on the 'Select Travel Dates' input field.",
+    "confidence": 1.0,
+    "interaction_target": "Select Travel Dates",
+    "cursor_position": {
+      "x": 499,
+      "y": 922
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor is clicking the date input field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 214875.69400000002,
+    "time_end": 215325.69400000002,
+    "description": "The date picker calendar modal appears.",
+    "confidence": 1.0,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "A calendar overlay is now visible over the search form."
+  },
+  {
+    "type": "select",
+    "time_start": 217825.69400000002,
+    "time_end": 217825.69400000002,
+    "description": "User selects March 1st in the date picker.",
+    "confidence": 1.0,
+    "interaction_target": "1",
+    "cursor_position": null,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The user clicks on the number 1 in the March 2026 calendar."
+  },
+  {
+    "type": "select",
+    "time_start": 227375.69400000002,
+    "time_end": 227375.69400000002,
+    "description": "User selects March 22nd in the date picker.",
+    "confidence": 1.0,
+    "interaction_target": "22",
+    "cursor_position": {
+      "x": 602,
+      "y": 1040
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The user clicks on the number 22 in the March 2026 calendar."
+  },
+  {
+    "type": "click",
+    "time_start": 228275.69400000002,
+    "time_end": 228275.69400000002,
+    "description": "User clicks the 'Done' button in the date picker.",
+    "confidence": 1.0,
+    "interaction_target": "Done",
+    "cursor_position": {
+      "x": 911,
+      "y": 712
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor is over the 'Done' button at the bottom of the calendar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 230175.69400000002,
+    "time_end": 230625.69400000002,
+    "description": "The date picker modal closes.",
+    "confidence": 1.0,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The calendar overlay disappears, returning focus to the search form."
+  },
+  {
+    "type": "hover",
+    "time_start": 231025.69400000002,
+    "time_end": 231825.69400000002,
+    "description": "User hovers over the search button.",
+    "confidence": 0.9,
+    "interaction_target": "Search Flights",
+    "cursor_position": {
+      "x": 1413,
+      "y": 955
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The search form is filled out and ready for submission."
+  },
+  {
+    "type": "click",
+    "time_start": 231825.69400000002,
+    "time_end": 231825.69400000002,
+    "description": "User clicks the 'Search Flights' button.",
+    "confidence": 1.0,
+    "interaction_target": "Search Flights",
+    "cursor_position": null,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor is clicking the purple search button."
+  },
+  {
+    "type": "navigate",
+    "time_start": 231825.69400000002,
+    "time_end": 249875.69400000002,
+    "description": "The page navigates to the flight search results page.",
+    "confidence": 1.0,
+    "page_title": "Flight Search",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "A loading screen with an airplane animation is shown, followed by the results list."
+  },
+  {
+    "type": "scroll",
+    "time_start": 252675.69400000002,
+    "time_end": 253675.69400000002,
+    "description": "User scrolls up on the search results page.",
+    "confidence": 0.9,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The list of flight results is moving vertically."
+  },
+  {
+    "type": "input_text",
+    "time_start": 316361.38800000004,
+    "time_end": 341861.38800000004,
+    "description": "User types 'Yes, please go ahead' into the text area on the Askable sessions page.",
+    "confidence": 0.9,
+    "interaction_target": "Yes, please go ahead",
+    "page_title": "Askable Sessions",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "A dark screen with the text 'i hear you. What are you going to do next?' and a text area where the user is typing."
+  },
+  {
+    "type": "click",
+    "time_start": 342761.38800000004,
+    "time_end": 342761.38800000004,
+    "description": "User clicks on the 'Flight Search' browser tab.",
+    "confidence": 1.0,
+    "interaction_target": "Flight Search",
+    "cursor_position": {
+      "x": 1610,
+      "y": 6
+    },
+    "page_title": "Askable Sessions",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The browser window showing the Askable sessions page with the cursor clicking on the 'Flight Search' tab."
+  },
+  {
+    "type": "navigate",
+    "time_start": 342761.38800000004,
+    "time_end": 343561.38800000004,
+    "description": "Browser switches to the Webjet search results page.",
+    "confidence": 1.0,
+    "page_title": "Flight Search",
+    "page_location": "https://services.webjet.com.au/air-auto/flights/search/Adults=1&TravelClass=Economy&IsCategory=International&IsOneWay=False&ReturnDate=2026-03-22&DepartureDate=2026-03-01&Origin=MCY&Destination=LON",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The screen updates to show flight search results on the Webjet website."
+  },
+  {
+    "type": "scroll",
+    "time_start": 344361.38800000004,
+    "time_end": 349861.38800000004,
+    "description": "User scrolls down the flight search results page.",
+    "confidence": 0.9,
+    "page_title": "Flight Search",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The flight search results page is being scrolled vertically."
+  },
+  {
+    "type": "click",
+    "time_start": 351161.38800000004,
+    "time_end": 351161.38800000004,
+    "description": "User clicks the browser's back button.",
+    "confidence": 1.0,
+    "cursor_position": null,
+    "page_title": "Flight Search",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor is over the browser's back button at the top left of the window."
+  },
+  {
+    "type": "navigate",
+    "time_start": 351161.38800000004,
+    "time_end": 351461.38800000004,
+    "description": "Browser returns to the Webjet home page.",
+    "confidence": 1.0,
+    "page_title": "Webjet | Your go-to for flights, hotels, holiday packages & more",
+    "page_location": "https://www.webjet.com.au/",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The Webjet home page loads, showing the flight search form."
+  },
+  {
+    "type": "click",
+    "time_start": 353461.38800000004,
+    "time_end": 353461.38800000004,
+    "description": "User clicks on the 'Leaving from' input field.",
+    "confidence": 1.0,
+    "interaction_target": "Leaving from",
+    "cursor_position": null,
+    "page_title": "Webjet | Your go-to for flights, hotels, holiday packages & more",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor clicks inside the 'Leaving from' text input box."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 353461.38800000004,
+    "time_end": 353761.38800000004,
+    "description": "A dropdown menu with recent searches and popular airports appears.",
+    "confidence": 0.9,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "A list of airport suggestions appears below the 'Leaving from' field."
+  },
+  {
+    "type": "input_text",
+    "time_start": 354661.38800000004,
+    "time_end": 357561.38800000004,
+    "description": "User types 'bris' into the 'Leaving from' field.",
+    "confidence": 0.9,
+    "interaction_target": "Leaving from",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The text 'bris' appears in the 'Leaving from' input field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 355261.38800000004,
+    "time_end": 357561.38800000004,
+    "description": "Autocomplete suggestions update as the user types.",
+    "confidence": 0.8,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The dropdown list updates to show airports matching 'bris'."
+  },
+  {
+    "type": "select",
+    "time_start": 357861.38800000004,
+    "time_end": 357861.38800000004,
+    "description": "User selects 'Brisbane (BNE)' from the suggestions.",
+    "confidence": 1.0,
+    "interaction_target": "Brisbane (BNE)",
+    "cursor_position": {
+      "x": 1610,
+      "y": 6
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor clicks on the 'Brisbane (BNE)' item in the dropdown list."
+  },
+  {
+    "type": "click",
+    "time_start": 360161.38800000004,
+    "time_end": 360161.38800000004,
+    "description": "User clicks on the 'Going to' input field.",
+    "confidence": 1.0,
+    "interaction_target": "Going to",
+    "cursor_position": {
+      "x": 1610,
+      "y": 6
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor clicks inside the 'Going to' text input box."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 360161.38800000004,
+    "time_end": 360461.38800000004,
+    "description": "A dropdown menu appears for the 'Going to' field.",
+    "confidence": 0.9,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "A list of destination suggestions appears below the 'Going to' field."
+  },
+  {
+    "type": "hover",
+    "time_start": 360461.38800000004,
+    "time_end": 372861.38800000004,
+    "description": "User hovers over destination suggestions.",
+    "confidence": 0.7,
+    "cursor_position": {
+      "x": 1610,
+      "y": 6
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor moves over various items in the destination dropdown list."
+  },
+  {
+    "type": "click",
+    "time_start": 372861.38800000004,
+    "time_end": 372861.38800000004,
+    "description": "User clicks the 'Going to' field again.",
+    "confidence": 0.9,
+    "interaction_target": "Going to",
+    "cursor_position": {
+      "x": 491,
+      "y": 523
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor clicks on the 'Going to' input field."
+  },
+  {
+    "type": "input_text",
+    "time_start": 378461.38800000004,
+    "time_end": 379861.38800000004,
+    "description": "User types 'lon' into the 'Going to' field.",
+    "confidence": 0.9,
+    "interaction_target": "Going to",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The text 'lon' appears in the 'Going to' input field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 378861.38800000004,
+    "time_end": 379861.38800000004,
+    "description": "Autocomplete suggestions for 'lon' appear.",
+    "confidence": 0.8,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The dropdown list updates to show airports matching 'lon'."
+  },
+  {
+    "type": "select",
+    "time_start": 381561.38800000004,
+    "time_end": 381561.38800000004,
+    "description": "User selects 'London, United Kingdom - All Airports (LON)' from the list.",
+    "confidence": 1.0,
+    "interaction_target": "London, United Kingdom - All Airports (LON)",
+    "cursor_position": null,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor clicks on the 'London, United Kingdom - All Airports (LON)' item in the dropdown list."
+  },
+  {
+    "type": "click",
+    "time_start": 384661.38800000004,
+    "time_end": 384661.38800000004,
+    "description": "User clicks on the 'Select Travel Dates' field.",
+    "confidence": 1.0,
+    "interaction_target": "Select Travel Dates",
+    "cursor_position": null,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor clicks on the date selection field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 384661.38800000004,
+    "time_end": 384961.38800000004,
+    "description": "The date picker calendar appears.",
+    "confidence": 0.9,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "A calendar modal opens on the screen."
+  },
+  {
+    "type": "select",
+    "time_start": 386661.38800000004,
+    "time_end": 386661.38800000004,
+    "description": "User selects March 1st as the departure date.",
+    "confidence": 1.0,
+    "interaction_target": "1",
+    "cursor_position": null,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor clicks on the number '1' in the March section of the calendar."
+  },
+  {
+    "type": "select",
+    "time_start": 391461.38800000004,
+    "time_end": 391461.38800000004,
+    "description": "User selects March 22nd as the return date.",
+    "confidence": 1.0,
+    "interaction_target": "22",
+    "cursor_position": {
+      "x": 36,
+      "y": 169
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor clicks on the number '22' in the March section of the calendar."
+  },
+  {
+    "type": "click",
+    "time_start": 392961.38800000004,
+    "time_end": 392961.38800000004,
+    "description": "User clicks the 'Done' button on the date picker.",
+    "confidence": 1.0,
+    "interaction_target": "Done",
+    "cursor_position": {
+      "x": 448,
+      "y": 1016
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor clicks on the 'Done' button at the bottom of the calendar modal."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 392961.38800000004,
+    "time_end": 393261.38800000004,
+    "description": "The date picker calendar closes.",
+    "confidence": 0.9,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The calendar modal disappears from the screen."
+  },
+  {
+    "type": "hover",
+    "time_start": 394924.23500000004,
+    "time_end": 396529.23500000004,
+    "description": "User hovers over the 'Search Flights' button before initiating the search.",
+    "confidence": 0.85,
+    "interaction_target": "Search Flights",
+    "cursor_position": {
+      "x": 742,
+      "y": 504
+    },
+    "page_title": "Webjet | Your go-to for flights, hotels, holiday packages & more",
+    "page_location": "https://www.webjet.com.au/",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The flight search form with the cursor positioned over the purple 'Search Flights' button."
+  },
+  {
+    "type": "click",
+    "time_start": 396561.38800000004,
+    "time_end": 396561.38800000004,
+    "description": "User clicks the 'Search Flights' button.",
+    "confidence": 1.0,
+    "interaction_target": "Search Flights",
+    "cursor_position": {
+      "x": 448,
+      "y": 1016
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor clicks on the large 'Search Flights' button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 396529.23500000004,
+    "time_end": 398079.23500000004,
+    "description": "A loading spinner appears on the 'Search Flights' button.",
+    "confidence": 0.9,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The search button shows an active loading state."
+  },
+  {
+    "type": "navigate",
+    "time_start": 398079.23500000004,
+    "time_end": 428829.23500000004,
+    "description": "The page navigates from the homepage to the flight search results page.",
+    "confidence": 0.95,
+    "page_title": "Flight Search",
+    "page_location": "https://services.webjet.com.au/flights/search/",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The browser transitions from the homepage to a loading screen for flight results."
+  },
+  {
+    "type": "hover",
+    "time_start": 431536.23500000004,
+    "time_end": 433168.23500000004,
+    "description": "User hovers over the 'FASTEST' sorting tab in the search results header.",
+    "confidence": 0.8,
+    "interaction_target": "FASTEST",
+    "cursor_position": {
+      "x": 1478,
+      "y": 953
+    },
+    "page_title": "Flight Search",
+    "page_location": "https://services.webjet.com.au/flights/search/",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The flight search results page showing various flight options and sorting tabs."
+  },
+  {
+    "type": "scroll",
+    "time_start": 444189.23500000004,
+    "time_end": 445189.23500000004,
+    "description": "User scrolls up the search results page.",
+    "confidence": 0.8,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The list of flight results moves vertically as the user scrolls."
+  },
+  {
+    "type": "hover",
+    "time_start": 452783.23500000004,
+    "time_end": 454550.23500000004,
+    "description": "User hovers over the '1 more flight option' link for a flight result.",
+    "confidence": 0.8,
+    "interaction_target": "1 more flight option",
+    "cursor_position": {
+      "x": 332,
+      "y": 550
+    },
+    "page_title": "Flight Search",
+    "page_location": "https://services.webjet.com.au/flights/search/",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The cursor is positioned over a text link within a flight result card."
+  },
+  {
+    "type": "hover",
+    "time_start": 480697.08200000005,
+    "time_end": 483197.08200000005,
+    "description": "User hovers over the Qatar Airways flight result card.",
+    "confidence": 0.8,
+    "interaction_target": "Qatar Airways",
+    "cursor_position": null,
+    "page_title": "Brisbane to London (Return) | Webjet",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "Flight search results page showing various airline options with Qatar Airways at the top."
+  },
+  {
+    "type": "hover",
+    "time_start": 507197.08200000005,
+    "time_end": 509697.08200000005,
+    "description": "User hovers over the 'Stops' filter section in the sidebar.",
+    "confidence": 0.8,
+    "interaction_target": "Stops",
+    "cursor_position": null,
+    "page_title": "Brisbane to London (Return) | Webjet",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "Left sidebar of the flight search page showing filter categories like 'Stops' and 'Airlines'."
+  },
+  {
+    "type": "hover",
+    "time_start": 540114.082,
+    "time_end": 540998.082,
+    "description": "User hovers over the 'View Details' button for the Qatar Airways flight.",
+    "confidence": 0.9,
+    "interaction_target": "View Details",
+    "cursor_position": {
+      "x": 1478,
+      "y": 541
+    },
+    "page_title": "Brisbane to London (Return) | Webjet",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "Flight result card for Qatar Airways with the cursor positioned over the 'View Details' button."
+  },
+  {
+    "type": "click",
+    "time_start": 541508.082,
+    "time_end": 541597.082,
+    "description": "User clicks the '1 Stop' checkbox in the sidebar filters.",
+    "confidence": 0.9,
+    "interaction_target": "1 Stop",
+    "cursor_position": {
+      "x": 120,
+      "y": 332
+    },
+    "page_title": "Brisbane to London (Return) | Webjet",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The 'Stops' filter section in the sidebar with the cursor clicking the '1 Stop' option."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 541597.082,
+    "time_end": 542997.082,
+    "description": "The flight results list updates to show only 1-stop flights.",
+    "confidence": 0.9,
+    "page_title": "Brisbane to London (Return) | Webjet",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The flight results area refreshing with a loading indicator."
+  },
+  {
+    "type": "scroll",
+    "time_start": 543689.082,
+    "time_end": 544689.082,
+    "description": "User scrolls up the page.",
+    "confidence": 0.9,
+    "page_title": "Brisbane to London (Return) | Webjet",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The flight results page moving upwards as the user scrolls."
+  },
+  {
+    "type": "click",
+    "time_start": 546314.929,
+    "time_end": 546314.929,
+    "description": "User clicks on the Webjet logo in the header.",
+    "confidence": 0.9,
+    "interaction_target": "Webjet logo",
+    "cursor_position": {
+      "x": 1220,
+      "y": 1001
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "Flight search results page with cursor over the Webjet logo."
+  },
+  {
+    "type": "navigate",
+    "time_start": 546314.929,
+    "time_end": 548914.929,
+    "description": "Navigation to the Webjet homepage.",
+    "confidence": 1.0,
+    "page_title": "Webjet | Your go-to for flights, hotels, holiday packages & more",
+    "page_location": "https://www.webjet.com.au/",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The Webjet homepage loads with a large hero image of a beach."
+  },
+  {
+    "type": "click",
+    "time_start": 548914.929,
+    "time_end": 548914.929,
+    "description": "User clicks on the 'Leaving from' input field.",
+    "confidence": 0.9,
+    "interaction_target": "Leaving from",
+    "cursor_position": null,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "Webjet homepage search form."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 548914.929,
+    "time_end": 549514.929,
+    "description": "A dropdown menu with recent searches appears below the 'Leaving from' field.",
+    "confidence": 0.9,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "Search form with a dropdown menu visible."
+  },
+  {
+    "type": "hover",
+    "time_start": 549614.929,
+    "time_end": 550314.929,
+    "description": "User hovers over the 'Brisbane - London' option in the recent searches list.",
+    "confidence": 0.8,
+    "interaction_target": "Brisbane - London",
+    "cursor_position": null,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "Dropdown menu with 'Brisbane - London' highlighted."
+  },
+  {
+    "type": "select",
+    "time_start": 550314.929,
+    "time_end": 550314.929,
+    "description": "User selects 'Brisbane - London' from the recent searches list.",
+    "confidence": 0.9,
+    "interaction_target": "Brisbane - London",
+    "cursor_position": null,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "Search form populated with Brisbane and London."
+  },
+  {
+    "type": "click",
+    "time_start": 554314.929,
+    "time_end": 554314.929,
+    "description": "User clicks on the 'Dates' field.",
+    "confidence": 0.9,
+    "interaction_target": "Select Travel Dates",
+    "cursor_position": {
+      "x": 259,
+      "y": 980
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "Search form with cursor over the dates field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 554314.929,
+    "time_end": 554414.929,
+    "description": "The date picker calendar appears.",
+    "confidence": 0.9,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "Date picker calendar overlay visible on the homepage."
+  },
+  {
+    "type": "click",
+    "time_start": 555314.929,
+    "time_end": 555314.929,
+    "description": "User clicks the next month arrow in the date picker.",
+    "confidence": 0.9,
+    "interaction_target": "Next Month",
+    "cursor_position": {
+      "x": 259,
+      "y": 980
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "Date picker calendar showing current months."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 555314.929,
+    "time_end": 555514.929,
+    "description": "The calendar updates to show March and April 2026.",
+    "confidence": 0.9,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "Date picker calendar showing March and April 2026."
+  },
+  {
+    "type": "click",
+    "time_start": 556414.929,
+    "time_end": 556414.929,
+    "description": "User clicks on March 4th to select it as the departure date.",
+    "confidence": 0.9,
+    "interaction_target": "4",
+    "cursor_position": {
+      "x": 1460,
+      "y": 896
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "Date picker calendar with March 4th selected."
+  },
+  {
+    "type": "click",
+    "time_start": 569164.929,
+    "time_end": 569164.929,
+    "description": "User clicks the 'Done' button in the date picker.",
+    "confidence": 0.9,
+    "interaction_target": "Done",
+    "cursor_position": {
+      "x": 1610,
+      "y": 6
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "Date picker calendar with cursor over the 'Done' button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 569164.929,
+    "time_end": 569314.929,
+    "description": "The date picker calendar closes.",
+    "confidence": 0.9,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "Webjet homepage with the search form updated with selected dates."
+  },
+  {
+    "type": "click",
+    "time_start": 580164.929,
+    "time_end": 580164.929,
+    "description": "User clicks the 'Search Flights' button.",
+    "confidence": 0.9,
+    "interaction_target": "Search Flights",
+    "cursor_position": {
+      "x": 1104,
+      "y": 561
+    },
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "Webjet homepage with cursor over the 'Search Flights' button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 580164.929,
+    "time_end": 581114.929,
+    "description": "A loading screen appears while flight results are being fetched.",
+    "confidence": 0.9,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "Loading screen with a red plane icon and 'Brisbane to London' text."
+  },
+  {
+    "type": "navigate",
+    "time_start": 581114.929,
+    "time_end": 610114.929,
+    "description": "Navigation to the flight search results page for the selected dates.",
+    "confidence": 1.0,
+    "page_title": "Webjet | Flight Search",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "Flight search results page for Brisbane to London, March 4 to March 25."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 608032.7760000001,
+    "time_end": 611082.7760000001,
+    "description": "A loading animation with a plane flying between Brisbane and London is displayed while search results are being fetched.",
+    "confidence": 0.9,
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "A loading screen for Webjet showing a flight path from Brisbane to London with a red plane icon moving along a dotted line."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 611082.7760000001,
+    "time_end": 611082.7760000001,
+    "description": "The flight search results for Brisbane to London finish loading and are displayed on the screen.",
+    "confidence": 0.9,
+    "page_title": "Flight Search",
+    "page_location": "https://services.webjet.com.au/flights/select/search/flights?adults=1&children=0&infants=0&travelClass=Economy&isCategory=international&flightType=Return&isMulti=0&itinerary=BNE-LHR-LON-LON-20241104-20250325&isCity=0",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The Webjet flight search results page showing various flight options from Brisbane to London, with a filter sidebar on the left."
+  },
+  {
+    "type": "hover",
+    "time_start": 611842.7760000001,
+    "time_end": 613847.7760000001,
+    "description": "The user hovers the cursor over the 'Stops' filter section in the left sidebar.",
+    "confidence": 0.8,
+    "interaction_target": "Stops",
+    "cursor_position": {
+      "x": 171,
+      "y": 317
+    },
+    "page_title": "Flight Search",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The search results page with the cursor positioned over the 'Stops' filter options on the left side of the screen."
+  },
+  {
+    "type": "scroll",
+    "time_start": 615189.7760000001,
+    "time_end": 617189.7760000001,
+    "description": "The user scrolls down the page to view more flight results.",
+    "confidence": 0.9,
+    "page_title": "Flight Search",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The flight search results page as the user scrolls down, revealing more airline options and prices."
+  },
+  {
+    "type": "scroll",
+    "time_start": 630689.7760000001,
+    "time_end": 631689.7760000001,
+    "description": "The user scrolls further down the page to continue browsing flight results.",
+    "confidence": 0.9,
+    "page_title": "Flight Search",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The search results page continuing to scroll down through the list of available flights."
+  },
+  {
+    "type": "hover",
+    "time_start": 632510.7760000001,
+    "time_end": 634448.7760000001,
+    "description": "The user hovers the cursor over the 'View Details' button of a flight result.",
+    "confidence": 0.8,
+    "interaction_target": "View Details",
+    "cursor_position": {
+      "x": 1373,
+      "y": 820
+    },
+    "page_title": "Flight Search",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The search results page with the cursor hovering over a 'View Details' button on a flight result card."
+  },
+  {
+    "type": "hover",
+    "time_start": 683944.7760000001,
+    "time_end": 685507.7760000001,
+    "description": "The user hovers the cursor over the 'Virgin Australia' airline filter in the left sidebar.",
+    "confidence": 0.8,
+    "interaction_target": "Virgin Australia",
+    "cursor_position": {
+      "x": 190,
+      "y": 699
+    },
+    "page_title": "Flight Search",
+    "viewport_width": 1790,
+    "viewport_height": 1158,
+    "frame_description": "The search results page with the cursor positioned over the 'Virgin Australia' checkbox in the airline filter section on the left."
+  }
+]

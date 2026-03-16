@@ -1,0 +1,2821 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start": 230769.0,
+    "time_end": 230769.0,
+    "description": "Initial screen state: Black background with white text instructions for screen sharing.",
+    "confidence": 1.0,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "A black screen with the text 'Please click the screen sharing button that appears, and choose the option to share this window.' is visible."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 231819.0,
+    "time_end": 274269.0,
+    "description": "Task instructions are displayed on the screen, detailing a scenario involving exploring a prototype with new filtering features during a lunch break.",
+    "confidence": 1.0,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The screen shows a dark background with a long paragraph of white text describing the user's task and expectations for the session."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 274919.0,
+    "time_end": 274919.0,
+    "description": "An 'Open' button appears in the center of the screen.",
+    "confidence": 1.0,
+    "interaction_target": "Open",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "A small 'Open' button with an icon is now visible in the center of the dark screen."
+  },
+  {
+    "type": "click",
+    "time_start": 276169.0,
+    "time_end": 276169.0,
+    "description": "User clicks the 'Open' button to launch the prototype.",
+    "confidence": 1.0,
+    "interaction_target": "Open",
+    "cursor_position": {
+      "x": 177,
+      "y": 906
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is positioned over the 'Open' button at the moment of the click."
+  },
+  {
+    "type": "navigate",
+    "time_start": 276869.0,
+    "time_end": 278519.0,
+    "description": "The application navigates to the 'Explore' page, showing various task and session cards.",
+    "confidence": 1.0,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The screen transitions from black to white, then displays a mobile app interface titled 'Explore' with several cards for tasks and surveys."
+  },
+  {
+    "type": "hover",
+    "time_start": 278969.0,
+    "time_end": 281369.0,
+    "description": "User hovers over the 'All Interview' card ($40).",
+    "confidence": 0.9,
+    "interaction_target": "All Interview",
+    "cursor_position": {
+      "x": 1935,
+      "y": 892
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is stationary over a pink card labeled 'All Interview' with a $40 reward."
+  },
+  {
+    "type": "scroll",
+    "time_start": 282569.0,
+    "time_end": 284069.0,
+    "description": "User scrolls down the 'Explore' page to see more task listings.",
+    "confidence": 1.0,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The list of cards on the 'Explore' page moves upwards as the user scrolls down."
+  },
+  {
+    "type": "hover",
+    "time_start": 284269.0,
+    "time_end": 286169.0,
+    "description": "User hovers over the 'Diary Study' card ($40).",
+    "confidence": 0.9,
+    "interaction_target": "Diary Study",
+    "cursor_position": {
+      "x": 744,
+      "y": 67
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is stationary over an orange card labeled 'Diary Study' with a $40 reward."
+  },
+  {
+    "type": "scroll",
+    "time_start": 287469.0,
+    "time_end": 288769.0,
+    "description": "User scrolls further down the 'Explore' page.",
+    "confidence": 1.0,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The page content moves upwards as the user scrolls down."
+  },
+  {
+    "type": "hover",
+    "time_start": 289369.0,
+    "time_end": 290269.0,
+    "description": "User hovers over the 'Video Call' card ($75).",
+    "confidence": 0.8,
+    "interaction_target": "Video Call",
+    "cursor_position": {
+      "x": 910,
+      "y": 74
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over a pink card labeled 'Video Call' with a $75 reward."
+  },
+  {
+    "type": "hover",
+    "time_start": 293069.0,
+    "time_end": 294369.0,
+    "description": "User hovers over the 'All Interview' card ($40).",
+    "confidence": 0.9,
+    "interaction_target": "All Interview",
+    "cursor_position": {
+      "x": 290,
+      "y": 799
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is stationary over a pink card labeled 'All Interview' with a $40 reward."
+  },
+  {
+    "type": "scroll",
+    "time_start": 299269.0,
+    "time_end": 300769.0,
+    "description": "User scrolls up the 'Explore' page.",
+    "confidence": 1.0,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The page content moves downwards as the user scrolls up."
+  },
+  {
+    "type": "hover",
+    "time_start": 302269.0,
+    "time_end": 304269.0,
+    "description": "User hovers over the 'Survey' card ($15).",
+    "confidence": 0.9,
+    "interaction_target": "Survey",
+    "cursor_position": {
+      "x": 1103,
+      "y": 545
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is stationary over a yellow card labeled 'Survey' with a $15 reward."
+  },
+  {
+    "type": "scroll",
+    "time_start": 306769.0,
+    "time_end": 308362.0,
+    "description": "User scrolls up to the top of the 'Explore' page.",
+    "confidence": 1.0,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The page content moves downwards as the user scrolls up, returning towards the top of the list."
+  },
+  {
+    "type": "scroll",
+    "time_start": 312762.3333333333,
+    "time_end": 313762.3333333333,
+    "description": "User scrolls right again to browse more tasks.",
+    "confidence": 0.8,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The user is viewing the middle section of the horizontal task list."
+  },
+  {
+    "type": "scroll",
+    "time_start": 316762.3333333333,
+    "time_end": 319262.3333333333,
+    "description": "User scrolls right to the end of the horizontal task list.",
+    "confidence": 0.8,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The user reaches the end of the 'Short tasks & surveys' horizontal list."
+  },
+  {
+    "type": "click",
+    "time_start": 323662.3333333333,
+    "time_end": 323662.3333333333,
+    "description": "User clicks on the filter icon in the top right corner of the Explore page.",
+    "confidence": 0.9,
+    "interaction_target": "filter icon",
+    "cursor_position": {
+      "x": 1872,
+      "y": 759
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The user's touch point is visible over the filter icon in the header."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 328062.3333333333,
+    "time_end": 328362.3333333333,
+    "description": "The 'Filter Opportunities' modal slides up from the bottom of the screen.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "A modal titled 'Filter Opportunities' covers the lower half of the screen."
+  },
+  {
+    "type": "scroll",
+    "time_start": 332262.3333333333,
+    "time_end": 333762.3333333333,
+    "description": "User scrolls down within the filter modal to view more options.",
+    "confidence": 0.8,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The content within the 'Filter Opportunities' modal is moving upwards."
+  },
+  {
+    "type": "select",
+    "time_start": 332462.3333333333,
+    "time_end": 332462.3333333333,
+    "description": "User selects the '10-30 min' duration filter.",
+    "confidence": 0.9,
+    "interaction_target": "10-30 min",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The '10-30 min' chip changes state to indicate selection."
+  },
+  {
+    "type": "drag",
+    "time_start": 342262.3333333333,
+    "time_end": 343762.3333333333,
+    "description": "User drags the right handle of the pay rate slider to adjust the minimum pay filter.",
+    "confidence": 0.9,
+    "interaction_target": "PAY RATE slider",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The slider handle moves as the user drags it across the track."
+  },
+  {
+    "type": "select",
+    "time_start": 345362.3333333333,
+    "time_end": 345362.3333333333,
+    "description": "User clicks on the 'Under 10 min' duration chip.",
+    "confidence": 0.9,
+    "interaction_target": "Under 10 min",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The user taps the 'Under 10 min' chip."
+  },
+  {
+    "type": "scroll",
+    "time_start": 347262.3333333333,
+    "time_end": 348262.3333333333,
+    "description": "User scrolls down in the filter modal.",
+    "confidence": 0.8,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The modal content scrolls to reveal the 'ADVANCED OPTIONS' section."
+  },
+  {
+    "type": "click",
+    "time_start": 349662.3333333333,
+    "time_end": 349662.3333333333,
+    "description": "User clicks on the 'ADVANCED OPTIONS' header to expand the section.",
+    "confidence": 0.9,
+    "interaction_target": "ADVANCED OPTIONS",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The user taps the 'ADVANCED OPTIONS' expandable header."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 350262.3333333333,
+    "time_end": 350862.3333333333,
+    "description": "The 'ADVANCED OPTIONS' section expands, revealing more filter criteria.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "New filter options appear below the 'ADVANCED OPTIONS' header."
+  },
+  {
+    "type": "scroll",
+    "time_start": 355262.3333333333,
+    "time_end": 356762.3333333333,
+    "description": "User scrolls within the expanded filter modal.",
+    "confidence": 0.8,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The user is browsing the advanced filter options."
+  },
+  {
+    "type": "select",
+    "time_start": 356062.3333333333,
+    "time_end": 356062.3333333333,
+    "description": "User selects the 'Mobile Only' device filter.",
+    "confidence": 0.9,
+    "interaction_target": "Mobile Only",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The radio button for 'Mobile Only' is selected."
+  },
+  {
+    "type": "select",
+    "time_start": 357662.3333333333,
+    "time_end": 357662.3333333333,
+    "description": "User selects the 'Under 10 min' duration filter.",
+    "confidence": 0.9,
+    "interaction_target": "Under 10 min",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'Under 10 min' chip is selected."
+  },
+  {
+    "type": "scroll",
+    "time_start": 362762.3333333333,
+    "time_end": 364762.3333333333,
+    "description": "User scrolls up in the filter modal.",
+    "confidence": 0.8,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The modal content scrolls downwards to show the top sections."
+  },
+  {
+    "type": "select",
+    "time_start": 366962.3333333333,
+    "time_end": 366962.3333333333,
+    "description": "User selects 'AI Interview' from the task type list.",
+    "confidence": 0.9,
+    "interaction_target": "AI Interview",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'AI Interview' chip is highlighted."
+  },
+  {
+    "type": "scroll",
+    "time_start": 370762.3333333333,
+    "time_end": 373262.3333333333,
+    "description": "User scrolls down in the filter modal.",
+    "confidence": 0.8,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The modal content scrolls to show the duration section."
+  },
+  {
+    "type": "select",
+    "time_start": 372462.3333333333,
+    "time_end": 372462.3333333333,
+    "description": "User selects the '10-30 min' duration filter.",
+    "confidence": 0.9,
+    "interaction_target": "10-30 min",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The '10-30 min' chip is selected."
+  },
+  {
+    "type": "select",
+    "time_start": 376962.3333333333,
+    "time_end": 376962.3333333333,
+    "description": "User clicks the '10-30 min' duration filter again to deselect it.",
+    "confidence": 0.9,
+    "interaction_target": "10-30 min",
+    "cursor_position": {
+      "x": 1795,
+      "y": 698
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The '10-30 min' chip returns to its unselected state."
+  },
+  {
+    "type": "drag",
+    "time_start": 379762.3333333333,
+    "time_end": 380862.3333333333,
+    "description": "User drags the pay rate slider handle again.",
+    "confidence": 0.9,
+    "interaction_target": "PAY RATE slider",
+    "cursor_position": {
+      "x": 1140,
+      "y": 107
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The slider handle is moved to a new position."
+  },
+  {
+    "type": "click",
+    "time_start": 443699.0,
+    "time_end": 443699.0,
+    "description": "Click on the 'Save these preferences' toggle switch.",
+    "confidence": 0.95,
+    "interaction_target": "Save these preferences",
+    "cursor_position": {
+      "x": 1184,
+      "y": 376
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The user is viewing the Explore page with several session cards. The cursor is positioned over the toggle switch at the bottom of the AI Interview card."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 443699.0,
+    "time_end": 444199.0,
+    "description": "The 'Save these preferences' toggle switch turns on (changes from grey to blue).",
+    "confidence": 0.98,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The toggle switch animation completes, settling into the 'on' state."
+  },
+  {
+    "type": "hover",
+    "time_start": 445949.0,
+    "time_end": 446499.0,
+    "description": "Hover over the 'Save these preferences' toggle switch.",
+    "confidence": 0.9,
+    "interaction_target": "Save these preferences",
+    "cursor_position": {
+      "x": 1721,
+      "y": 103
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is positioned over the blue toggle switch on the AI Interview card."
+  },
+  {
+    "type": "scroll",
+    "time_start": 449099.0,
+    "time_end": 449799.0,
+    "description": "Horizontal scroll of the top filter bar.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The filter chips at the top (View, Survey, Video Call, etc.) are sliding to the left."
+  },
+  {
+    "type": "hover",
+    "time_start": 452799.0,
+    "time_end": 453799.0,
+    "description": "Hover over the 'Video Call' session card.",
+    "confidence": 0.9,
+    "interaction_target": "Video Call",
+    "cursor_position": {
+      "x": 1854,
+      "y": 700
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is stationary over the purple Video Call card."
+  },
+  {
+    "type": "scroll",
+    "time_start": 453849.0,
+    "time_end": 454549.0,
+    "description": "Horizontal scroll of the top filter bar.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The filter bar is being panned horizontally."
+  },
+  {
+    "type": "scroll",
+    "time_start": 456299.0,
+    "time_end": 457799.0,
+    "description": "Vertical scroll of the session list.",
+    "confidence": 0.95,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The session cards are moving vertically on the screen."
+  },
+  {
+    "type": "hover",
+    "time_start": 457899.0,
+    "time_end": 458999.0,
+    "description": "Hover over the 'AI Interview' session card.",
+    "confidence": 0.9,
+    "interaction_target": "AI Interview",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the pink AI Interview card."
+  },
+  {
+    "type": "hover",
+    "time_start": 459099.0,
+    "time_end": 460199.0,
+    "description": "Hover over the 'Save these preferences' toggle switch.",
+    "confidence": 0.9,
+    "interaction_target": "Save these preferences",
+    "cursor_position": {
+      "x": 1894,
+      "y": 954
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is positioned over the active toggle switch."
+  },
+  {
+    "type": "scroll",
+    "time_start": 460269.0,
+    "time_end": 461269.0,
+    "description": "Vertical scroll of the session list.",
+    "confidence": 0.95,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The page content is scrolling upwards."
+  },
+  {
+    "type": "hover",
+    "time_start": 461399.0,
+    "time_end": 464699.0,
+    "description": "Hover over a 'Survey' session card.",
+    "confidence": 0.9,
+    "interaction_target": "Survey",
+    "cursor_position": {
+      "x": 1894,
+      "y": 954
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is stationary over a Survey card."
+  },
+  {
+    "type": "hover",
+    "time_start": 467899.0,
+    "time_end": 468499.0,
+    "description": "Hover over the 'Save these preferences' toggle switch.",
+    "confidence": 0.85,
+    "interaction_target": "Save these preferences",
+    "cursor_position": {
+      "x": 1698,
+      "y": 818
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the toggle switch."
+  },
+  {
+    "type": "hover",
+    "time_start": 468599.0,
+    "time_end": 470299.0,
+    "description": "Hover over a 'Survey' session card.",
+    "confidence": 0.9,
+    "interaction_target": "Survey",
+    "cursor_position": {
+      "x": 1698,
+      "y": 1016
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over a Survey card."
+  },
+  {
+    "type": "hover",
+    "time_start": 474799.0,
+    "time_end": 478999.0,
+    "description": "Hover over the 'Video Call' session card.",
+    "confidence": 0.9,
+    "interaction_target": "Video Call",
+    "cursor_position": {
+      "x": 1698,
+      "y": 1016
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the purple Video Call card."
+  },
+  {
+    "type": "hover",
+    "time_start": 479099.0,
+    "time_end": 481099.0,
+    "description": "Hover over the 'Save these preferences' toggle switch.",
+    "confidence": 0.9,
+    "interaction_target": "Save these preferences",
+    "cursor_position": {
+      "x": 1640,
+      "y": 689
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the toggle switch."
+  },
+  {
+    "type": "hover",
+    "time_start": 481149.0,
+    "time_end": 483299.0,
+    "description": "Hover over a 'Survey' session card.",
+    "confidence": 0.9,
+    "interaction_target": "Survey",
+    "cursor_position": {
+      "x": 1060,
+      "y": 220
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over a Survey card."
+  },
+  {
+    "type": "click",
+    "time_start": 483399.0,
+    "time_end": 483399.0,
+    "description": "Click on the filter icon at the top right.",
+    "confidence": 0.95,
+    "cursor_position": {
+      "x": 1060,
+      "y": 220
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is positioned over the filter icon (three horizontal lines with dots)."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 483399.0,
+    "time_end": 484799.0,
+    "description": "The 'Filter Opportunities' modal slides up from the bottom of the screen.",
+    "confidence": 0.98,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "A modal overlay is now visible, covering the bottom half of the screen with various filter options like Task Type, Duration, and Pay Rate."
+  },
+  {
+    "type": "hover",
+    "time_start": 485049.0,
+    "time_end": 485699.0,
+    "description": "Hover over the 'Survey' task type chip in the filter modal.",
+    "confidence": 0.85,
+    "interaction_target": "Survey",
+    "cursor_position": {
+      "x": 856,
+      "y": 564
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the Survey chip in the modal."
+  },
+  {
+    "type": "hover",
+    "time_start": 485749.0,
+    "time_end": 489149.0,
+    "description": "Hover over the 'Apply Filters' button.",
+    "confidence": 0.9,
+    "interaction_target": "Apply Filters",
+    "cursor_position": {
+      "x": 856,
+      "y": 454
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is positioned over the blue Apply Filters button."
+  },
+  {
+    "type": "hover",
+    "time_start": 489199.0,
+    "time_end": 489649.0,
+    "description": "Hover over the 'Clear All' button in the filter modal.",
+    "confidence": 0.85,
+    "interaction_target": "Clear All",
+    "cursor_position": {
+      "x": 856,
+      "y": 417
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the Clear All link at the top right of the modal content."
+  },
+  {
+    "type": "click",
+    "time_start": 489699.0,
+    "time_end": 489699.0,
+    "description": "Click on the 'X' close button of the filter modal.",
+    "confidence": 0.95,
+    "cursor_position": {
+      "x": 1060,
+      "y": 218
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the 'X' icon at the top right of the modal."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 489699.0,
+    "time_end": 492399.0,
+    "description": "The 'Filter Opportunities' modal closes and disappears.",
+    "confidence": 0.98,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The modal slides down and the full Explore page is visible again."
+  },
+  {
+    "type": "hover",
+    "time_start": 493699.0,
+    "time_end": 495049.0,
+    "description": "Hover over the 'AI Interview' session card.",
+    "confidence": 0.9,
+    "interaction_target": "AI Interview",
+    "cursor_position": {
+      "x": 744,
+      "y": 297
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the pink AI Interview card."
+  },
+  {
+    "type": "hover",
+    "time_start": 495099.0,
+    "time_end": 496799.0,
+    "description": "Hover over the 'Save these preferences' toggle switch.",
+    "confidence": 0.9,
+    "interaction_target": "Save these preferences",
+    "cursor_position": {
+      "x": 744,
+      "y": 244
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the toggle switch."
+  },
+  {
+    "type": "hover",
+    "time_start": 499099.0,
+    "time_end": 500499.0,
+    "description": "Hover over the 'Save these preferences' toggle switch.",
+    "confidence": 0.85,
+    "interaction_target": "Save these preferences",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the toggle switch."
+  },
+  {
+    "type": "hover",
+    "time_start": 501649.0,
+    "time_end": 503649.0,
+    "description": "Hover over the 'AI Interview' session card.",
+    "confidence": 0.9,
+    "interaction_target": "AI Interview",
+    "cursor_position": {
+      "x": 1050,
+      "y": 392
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the pink AI Interview card."
+  },
+  {
+    "type": "hover",
+    "time_start": 507299.0,
+    "time_end": 508999.0,
+    "description": "Hover over the 'AI Interview' session card.",
+    "confidence": 0.85,
+    "interaction_target": "AI Interview",
+    "cursor_position": {
+      "x": 873,
+      "y": 829
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the pink AI Interview card."
+  },
+  {
+    "type": "hover",
+    "time_start": 509099.0,
+    "time_end": 510799.0,
+    "description": "Hover over the 'Save these preferences' toggle switch.",
+    "confidence": 0.9,
+    "interaction_target": "Save these preferences",
+    "cursor_position": {
+      "x": 1060,
+      "y": 220
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the toggle switch."
+  },
+  {
+    "type": "scroll",
+    "time_start": 512269.0,
+    "time_end": 514769.0,
+    "description": "Vertical scroll of the session list.",
+    "confidence": 0.95,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The session cards are moving vertically."
+  },
+  {
+    "type": "hover",
+    "time_start": 512299.0,
+    "time_end": 512899.0,
+    "description": "Hover over the 'Video Call' session card.",
+    "confidence": 0.8,
+    "interaction_target": "Video Call",
+    "cursor_position": {
+      "x": 817,
+      "y": 47
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the Video Call card as the page scrolls."
+  },
+  {
+    "type": "hover",
+    "time_start": 516142.3333333333,
+    "time_end": 517142.3333333333,
+    "description": "User hovers over the survey card titled 'People who bought food on a delivery app recently'.",
+    "confidence": 0.9,
+    "interaction_target": "People who bought food on a delivery app recently",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The Explore page is visible, showing a horizontal list of short tasks and surveys."
+  },
+  {
+    "type": "hover",
+    "time_start": 515699.0,
+    "time_end": 517999.0,
+    "description": "Hover over a 'Survey' session card.",
+    "confidence": 0.9,
+    "interaction_target": "Survey",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over a Survey card."
+  },
+  {
+    "type": "scroll",
+    "time_start": 517142.3333333333,
+    "time_end": 525642.3333333333,
+    "description": "User scrolls horizontally to the right through the 'Short tasks & surveys' section.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The user is browsing through the horizontal carousel of survey and task cards."
+  },
+  {
+    "type": "hover",
+    "time_start": 519642.3333333333,
+    "time_end": 520642.3333333333,
+    "description": "User hovers over the AI interview card titled 'Test a new budgeting app interface and give feedback'.",
+    "confidence": 0.9,
+    "interaction_target": "Test a new budgeting app interface and give feedback",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "A red AI interview card about a budgeting app is visible in the carousel."
+  },
+  {
+    "type": "scroll",
+    "time_start": 523769.0,
+    "time_end": 525269.0,
+    "description": "Vertical scroll of the session list.",
+    "confidence": 0.95,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The content is scrolling vertically."
+  },
+  {
+    "type": "hover",
+    "time_start": 525642.3333333333,
+    "time_end": 527142.3333333333,
+    "description": "User hovers over the survey card titled 'Review online grocery shopping experience'.",
+    "confidence": 0.9,
+    "interaction_target": "Review online grocery shopping experience",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "A blue survey card about online grocery shopping is visible at the end of the carousel."
+  },
+  {
+    "type": "scroll",
+    "time_start": 527142.3333333333,
+    "time_end": 537142.3333333333,
+    "description": "User scrolls vertically down the Explore page.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The page scrolls down, revealing the 'Sessions to schedule' section with larger cards."
+  },
+  {
+    "type": "hover",
+    "time_start": 529642.3333333333,
+    "time_end": 530642.3333333333,
+    "description": "User hovers over the diary study card titled 'Test some new train journey interactions'.",
+    "confidence": 0.9,
+    "interaction_target": "Test some new train journey interactions",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "An orange card for a diary study about train journeys is visible."
+  },
+  {
+    "type": "hover",
+    "time_start": 531642.3333333333,
+    "time_end": 532642.3333333333,
+    "description": "User hovers over the AI interview card titled 'Evaluate new AI chatbot for customer support scenarios'.",
+    "confidence": 0.9,
+    "interaction_target": "Evaluate new AI chatbot for customer support scenarios",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "A red card for an AI interview session is visible at the bottom of the screen."
+  },
+  {
+    "type": "hover",
+    "time_start": 537842.3333333333,
+    "time_end": 538442.3333333333,
+    "description": "User hovers near the 'Clear all' button.",
+    "confidence": 0.8,
+    "interaction_target": "Clear all",
+    "cursor_position": {
+      "x": 1060,
+      "y": 222
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is positioned in the top right corner of the screen."
+  },
+  {
+    "type": "scroll",
+    "time_start": 539142.3333333333,
+    "time_end": 541642.3333333333,
+    "description": "User scrolls horizontally to the right through the 'Short tasks & surveys' section.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The carousel cards move to the left."
+  },
+  {
+    "type": "hover",
+    "time_start": 543642.3333333333,
+    "time_end": 544642.3333333333,
+    "description": "User hovers over the survey card titled 'People who bought food on a delivery app recently'.",
+    "confidence": 0.9,
+    "interaction_target": "People who bought food on a delivery app recently",
+    "cursor_position": {
+      "x": 756,
+      "y": 457
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The first survey card is again in focus."
+  },
+  {
+    "type": "scroll",
+    "time_start": 544642.3333333333,
+    "time_end": 552142.3333333333,
+    "description": "User scrolls horizontally to the right through the 'Short tasks & surveys' section.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The carousel is scrolled through multiple cards."
+  },
+  {
+    "type": "hover",
+    "time_start": 548142.3333333333,
+    "time_end": 549642.3333333333,
+    "description": "User hovers over the AI interview card titled 'Test a new budgeting app interface and give feedback'.",
+    "confidence": 0.9,
+    "interaction_target": "Test a new budgeting app interface and give feedback",
+    "cursor_position": {
+      "x": 964,
+      "y": 620
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The red budgeting app card is visible during the scroll."
+  },
+  {
+    "type": "hover",
+    "time_start": 556142.3333333333,
+    "time_end": 557642.3333333333,
+    "description": "User hovers over the AI interview card titled 'Test a new budgeting app interface and give feedback'.",
+    "confidence": 0.9,
+    "interaction_target": "Test a new budgeting app interface and give feedback",
+    "cursor_position": {
+      "x": 967,
+      "y": 748
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The red card is briefly hovered as the carousel moves."
+  },
+  {
+    "type": "scroll",
+    "time_start": 559142.3333333333,
+    "time_end": 564142.3333333333,
+    "description": "User scrolls vertically down the Explore page.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The page moves up to show the sessions section."
+  },
+  {
+    "type": "scroll",
+    "time_start": 569142.3333333333,
+    "time_end": 575142.3333333333,
+    "description": "User scrolls vertically down the Explore page.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The page moves up."
+  },
+  {
+    "type": "scroll",
+    "time_start": 581142.3333333333,
+    "time_end": 587142.3333333333,
+    "description": "User scrolls vertically down the Explore page.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The page moves up."
+  },
+  {
+    "type": "hover",
+    "time_start": 584142.3333333333,
+    "time_end": 585142.3333333333,
+    "description": "User hovers over the diary study card titled 'Test some new train journey interactions'.",
+    "confidence": 0.9,
+    "interaction_target": "Test some new train journey interactions",
+    "cursor_position": {
+      "x": 1017,
+      "y": 635
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The orange diary study card is hovered."
+  },
+  {
+    "type": "hover",
+    "time_start": 588735.6666666666,
+    "time_end": 591435.6666666666,
+    "description": "User hovers over the 'Video Call' session card while reviewing the list.",
+    "confidence": 0.9,
+    "interaction_target": "Video Call",
+    "cursor_position": {
+      "x": 897,
+      "y": 394
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'Explore' page is visible with a list of sessions to schedule, including 'Video Call', 'Diary Study', and 'AI Interview'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 591435.6666666666,
+    "time_end": 591935.6666666666,
+    "description": "The 'Short tasks & surveys' section appears at the top of the screen, pushing the 'Sessions to schedule' section down.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The top of the page now includes a 'Short tasks & surveys' section with horizontal chips for different tasks."
+  },
+  {
+    "type": "hover",
+    "time_start": 591935.6666666666,
+    "time_end": 600735.6666666666,
+    "description": "User hovers over the 'AI Interview' card while reading the session details.",
+    "confidence": 0.8,
+    "interaction_target": "AI Interview",
+    "cursor_position": {
+      "x": 936,
+      "y": 691
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The user is looking at the 'AI Interview' card which offers $40 for a 10-minute session."
+  },
+  {
+    "type": "scroll",
+    "time_start": 593142.3333333333,
+    "time_end": 598735.3333333333,
+    "description": "User scrolls vertically down the Explore page.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The page moves up as the video ends."
+  },
+  {
+    "type": "scroll",
+    "time_start": 600768.6666666666,
+    "time_end": 602268.6666666666,
+    "description": "User scrolls the 'Short tasks & surveys' chips horizontally to the right.",
+    "confidence": 0.7,
+    "interaction_target": "Short tasks & surveys",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The horizontal list of task chips at the top of the screen is being scrolled."
+  },
+  {
+    "type": "scroll",
+    "time_start": 605268.6666666666,
+    "time_end": 606268.6666666666,
+    "description": "User scrolls the 'Short tasks & surveys' chips horizontally to the right again.",
+    "confidence": 0.7,
+    "interaction_target": "Short tasks & surveys",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The task chips are scrolled further to the right."
+  },
+  {
+    "type": "hover",
+    "time_start": 606268.6666666666,
+    "time_end": 609768.6666666666,
+    "description": "User hovers over the 'AI Interview' card.",
+    "confidence": 0.8,
+    "interaction_target": "AI Interview",
+    "cursor_position": null,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor remains over the AI Interview card."
+  },
+  {
+    "type": "scroll",
+    "time_start": 609768.6666666666,
+    "time_end": 611768.6666666666,
+    "description": "User scrolls the 'Short tasks & surveys' chips horizontally to the right.",
+    "confidence": 0.7,
+    "interaction_target": "Short tasks & surveys",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The task chips are scrolled again."
+  },
+  {
+    "type": "hover",
+    "time_start": 611768.6666666666,
+    "time_end": 646735.6666666666,
+    "description": "User reviews the available sessions and task chips, hovering over the 'AI Interview' card.",
+    "confidence": 0.8,
+    "interaction_target": "AI Interview",
+    "cursor_position": {
+      "x": 984,
+      "y": 845
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The user is passively reviewing the screen content."
+  },
+  {
+    "type": "click",
+    "time_start": 646735.6666666666,
+    "time_end": 646935.6666666666,
+    "description": "User clicks on the filter icon at the top right of the screen.",
+    "confidence": 0.9,
+    "interaction_target": "Filter",
+    "cursor_position": {
+      "x": 1168,
+      "y": 322
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor clicks the filter icon located next to the notification bell."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 646935.6666666666,
+    "time_end": 647235.6666666666,
+    "description": "The 'Filter Opportunities' modal slides up from the bottom of the screen.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "A modal titled 'Filter Opportunities' is now visible, covering most of the screen."
+  },
+  {
+    "type": "select",
+    "time_start": 647635.6666666666,
+    "time_end": 647885.6666666666,
+    "description": "User selects 'Diary Study' from the Task Type options in the filter modal.",
+    "confidence": 0.9,
+    "interaction_target": "Diary Study",
+    "cursor_position": {
+      "x": 790,
+      "y": 826
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'Diary Study' chip in the Task Type section is highlighted blue after being selected."
+  },
+  {
+    "type": "select",
+    "time_start": 648935.6666666666,
+    "time_end": 649585.6666666666,
+    "description": "User selects '10-30 min' in the Duration filter section.",
+    "confidence": 0.9,
+    "interaction_target": "10-30 min",
+    "cursor_position": null,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The '10-30 min' chip is selected."
+  },
+  {
+    "type": "drag",
+    "time_start": 651235.6666666666,
+    "time_end": 663035.6666666666,
+    "description": "User adjusts the Pay Rate slider, dragging the minimum value handle back and forth before settling.",
+    "confidence": 0.9,
+    "interaction_target": "Pay Rate slider",
+    "cursor_position": {
+      "x": 1025,
+      "y": 913
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The user is dragging the slider handle to adjust the minimum pay rate filter."
+  },
+  {
+    "type": "select",
+    "time_start": 663635.6666666666,
+    "time_end": 663935.6666666666,
+    "description": "User selects 'Mobile Only' under the Device filter section.",
+    "confidence": 0.9,
+    "interaction_target": "Mobile Only",
+    "cursor_position": {
+      "x": 1025,
+      "y": 913
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'Mobile Only' radio button is selected."
+  },
+  {
+    "type": "click",
+    "time_start": 664579.0,
+    "time_end": 664579.0,
+    "description": "User clicks the 'Apply Filters' button to confirm their filter selections.",
+    "confidence": 0.9,
+    "interaction_target": "Apply Filters",
+    "cursor_position": {
+      "x": 1024,
+      "y": 910
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'Filter Opportunities' modal is open over the Explore page, with various filter options visible."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 664579.0,
+    "time_end": 665079.0,
+    "description": "The filter modal closes, revealing the list of available opportunities on the Explore page.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The filter modal is disappearing, and the Explore page with study cards is becoming visible."
+  },
+  {
+    "type": "hover",
+    "time_start": 673269.0,
+    "time_end": 677269.0,
+    "description": "User hovers over the 'Survey' opportunity card, likely reading the description.",
+    "confidence": 0.7,
+    "interaction_target": "Survey",
+    "cursor_position": {
+      "x": 883,
+      "y": 363
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The Explore page is visible, showing a list of cards including 'AI Interview', 'Survey', and 'Video Call'."
+  },
+  {
+    "type": "scroll",
+    "time_start": 678769.0,
+    "time_end": 682769.0,
+    "description": "User scrolls down the list of opportunities.",
+    "confidence": 0.8,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The list of opportunities is moving vertically as the user scrolls."
+  },
+  {
+    "type": "hover",
+    "time_start": 684469.0,
+    "time_end": 685302.0,
+    "description": "User hovers over the 'Diary Study' opportunity card.",
+    "confidence": 0.7,
+    "interaction_target": "Diary Study",
+    "cursor_position": {
+      "x": 1184,
+      "y": 825
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'Diary Study' card is visible in the list."
+  },
+  {
+    "type": "scroll",
+    "time_start": 690769.0,
+    "time_end": 692269.0,
+    "description": "User scrolls further down the list of opportunities.",
+    "confidence": 0.8,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The list of opportunities continues to move vertically."
+  },
+  {
+    "type": "hover",
+    "time_start": 691269.0,
+    "time_end": 691769.0,
+    "description": "User hovers over the 'Video Call' opportunity card.",
+    "confidence": 0.7,
+    "interaction_target": "Video Call",
+    "cursor_position": {
+      "x": 928,
+      "y": 628
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'Video Call' card is visible in the list."
+  },
+  {
+    "type": "hover",
+    "time_start": 698302.0,
+    "time_end": 703635.0,
+    "description": "User hovers over the 'Survey' opportunity card again.",
+    "confidence": 0.7,
+    "interaction_target": "Survey",
+    "cursor_position": {
+      "x": 932,
+      "y": 220
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'Survey' card is visible at the top of the list."
+  },
+  {
+    "type": "hover",
+    "time_start": 706635.0,
+    "time_end": 707269.0,
+    "description": "User hovers over the 'Video Call' opportunity card.",
+    "confidence": 0.7,
+    "interaction_target": "Video Call",
+    "cursor_position": {
+      "x": 978,
+      "y": 755
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'Video Call' card is visible in the list."
+  },
+  {
+    "type": "hover",
+    "time_start": 712769.0,
+    "time_end": 732269.0,
+    "description": "User hovers over the 'Survey' opportunity card for an extended period.",
+    "confidence": 0.7,
+    "interaction_target": "Survey",
+    "cursor_position": {
+      "x": 1060,
+      "y": 220
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'Survey' card remains the focus of the user's attention."
+  },
+  {
+    "type": "hover",
+    "time_start": 738268.3333333333,
+    "time_end": 738668.3333333333,
+    "description": "Hover over the 'Save these preferences' button",
+    "confidence": 0.9,
+    "interaction_target": "Save these preferences",
+    "cursor_position": {
+      "x": 744,
+      "y": 987
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The Explore screen showing a list of research sessions to schedule."
+  },
+  {
+    "type": "hover",
+    "time_start": 747102.3333333333,
+    "time_end": 747968.3333333333,
+    "description": "Hover over the 'Video Call' session card",
+    "confidence": 0.9,
+    "interaction_target": "Video Call",
+    "cursor_position": {
+      "x": 898,
+      "y": 402
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'Video Call' session card highlighted by the cursor."
+  },
+  {
+    "type": "hover",
+    "time_start": 750268.3333333333,
+    "time_end": 751768.3333333333,
+    "description": "Hover over the 'Video Call' session card",
+    "confidence": 0.9,
+    "interaction_target": "Video Call",
+    "cursor_position": {
+      "x": 1120,
+      "y": 429
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'Video Call' session card showing details like '45 mins' and '$40'."
+  },
+  {
+    "type": "hover",
+    "time_start": 752268.3333333333,
+    "time_end": 757268.3333333333,
+    "description": "Hover over the 'Mobile Only' filter chip",
+    "confidence": 0.9,
+    "interaction_target": "Mobile Only",
+    "cursor_position": {
+      "x": 1060,
+      "y": 220
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The filter bar at the top of the session list."
+  },
+  {
+    "type": "hover",
+    "time_start": 771268.3333333333,
+    "time_end": 772068.3333333333,
+    "description": "Hover over the 'Mobile Only' filter chip",
+    "confidence": 0.9,
+    "interaction_target": "Mobile Only",
+    "cursor_position": {
+      "x": 1060,
+      "y": 220
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The filter bar with 'Mobile Only' chip visible."
+  },
+  {
+    "type": "hover",
+    "time_start": 779268.3333333333,
+    "time_end": 780068.3333333333,
+    "description": "Hover over the 'Diary Study' session card",
+    "confidence": 0.9,
+    "interaction_target": "Diary Study",
+    "cursor_position": {
+      "x": 1159,
+      "y": 779
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'Diary Study' card in the middle of the list."
+  },
+  {
+    "type": "hover",
+    "time_start": 788768.3333333333,
+    "time_end": 789568.3333333333,
+    "description": "Hover over the 'Diary Study' session card",
+    "confidence": 0.9,
+    "interaction_target": "Diary Study",
+    "cursor_position": {
+      "x": 975,
+      "y": 772
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'Diary Study' card."
+  },
+  {
+    "type": "hover",
+    "time_start": 796268.3333333333,
+    "time_end": 798068.3333333333,
+    "description": "Hover over the 'Video Call' filter chip",
+    "confidence": 0.9,
+    "interaction_target": "Video Call",
+    "cursor_position": {
+      "x": 932,
+      "y": 220
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The filter bar."
+  },
+  {
+    "type": "hover",
+    "time_start": 805768.3333333333,
+    "time_end": 807168.3333333333,
+    "description": "Hover over the 'Mobile Only' filter chip",
+    "confidence": 0.9,
+    "interaction_target": "Mobile Only",
+    "cursor_position": {
+      "x": 1060,
+      "y": 218
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The filter bar."
+  },
+  {
+    "type": "hover",
+    "time_start": 812768.3333333333,
+    "time_end": 813768.3333333333,
+    "description": "Hover over the 'Diary Study' session card",
+    "confidence": 0.9,
+    "interaction_target": "Diary Study",
+    "cursor_position": {
+      "x": 1182,
+      "y": 784
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'Diary Study' card."
+  },
+  {
+    "type": "scroll",
+    "time_start": 815515.6666666666,
+    "time_end": 816315.6666666666,
+    "description": "User scrolls down the task list.",
+    "confidence": 0.8,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The task list moves up to reveal more cards at the bottom."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 816168.3333333333,
+    "time_end": 816515.3333333333,
+    "description": "A banner appears with text 'Mobile Only Now' and '10 mins'",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The Explore screen with a new status banner visible at the top of the list."
+  },
+  {
+    "type": "hover",
+    "time_start": 816568.6666666666,
+    "time_end": 816968.6666666666,
+    "description": "User hovers over the 'Clear all' button.",
+    "confidence": 0.7,
+    "interaction_target": "Clear all",
+    "cursor_position": {
+      "x": 932,
+      "y": 220
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is near the top right of the screen, over the 'Clear all' text."
+  },
+  {
+    "type": "hover",
+    "time_start": 818768.6666666666,
+    "time_end": 820768.6666666666,
+    "description": "User hovers over the 'Diary Study' task card.",
+    "confidence": 0.8,
+    "interaction_target": "Diary Study",
+    "cursor_position": {
+      "x": 1007,
+      "y": 693
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the 'Diary Study' card again."
+  },
+  {
+    "type": "hover",
+    "time_start": 822068.6666666666,
+    "time_end": 823068.6666666666,
+    "description": "User hovers over the 'Clear all' button.",
+    "confidence": 0.7,
+    "interaction_target": "Clear all",
+    "cursor_position": {
+      "x": 1060,
+      "y": 220
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is positioned over the 'Clear all' button."
+  },
+  {
+    "type": "scroll",
+    "time_start": 823115.6666666666,
+    "time_end": 824015.6666666666,
+    "description": "User scrolls down the task list.",
+    "confidence": 0.8,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The task list moves up."
+  },
+  {
+    "type": "hover",
+    "time_start": 831468.6666666666,
+    "time_end": 832268.6666666666,
+    "description": "User hovers over the 'Clear all' button.",
+    "confidence": 0.7,
+    "interaction_target": "Clear all",
+    "cursor_position": {
+      "x": 1060,
+      "y": 220
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the 'Clear all' button."
+  },
+  {
+    "type": "hover",
+    "time_start": 840268.6666666666,
+    "time_end": 846668.6666666666,
+    "description": "User hovers over the 'Diary Study' task card.",
+    "confidence": 0.8,
+    "interaction_target": "Diary Study",
+    "cursor_position": {
+      "x": 1125,
+      "y": 404
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the 'Diary Study' card."
+  },
+  {
+    "type": "hover",
+    "time_start": 849268.6666666666,
+    "time_end": 849668.6666666666,
+    "description": "User hovers near the 'Explore' page title.",
+    "confidence": 0.7,
+    "interaction_target": "Explore",
+    "cursor_position": {
+      "x": 816,
+      "y": 119
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is at the top left of the viewport."
+  },
+  {
+    "type": "hover",
+    "time_start": 850815.6666666666,
+    "time_end": 851315.6666666666,
+    "description": "User hovers over the 'Survey' filter chip.",
+    "confidence": 0.7,
+    "interaction_target": "Survey",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the 'Survey' filter chip."
+  },
+  {
+    "type": "hover",
+    "time_start": 854315.6666666666,
+    "time_end": 855615.6666666666,
+    "description": "User hovers over the 'AI Interview' filter chip.",
+    "confidence": 0.7,
+    "interaction_target": "AI Interview",
+    "cursor_position": {
+      "x": 995,
+      "y": 220
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the 'AI Interview' filter chip."
+  },
+  {
+    "type": "click",
+    "time_start": 855615.6666666666,
+    "time_end": 855715.6666666666,
+    "description": "User clicks on the 'AI Interview' filter chip.",
+    "confidence": 0.9,
+    "interaction_target": "AI Interview",
+    "cursor_position": {
+      "x": 890,
+      "y": 221
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The user activates the 'AI Interview' filter."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 855715.6666666666,
+    "time_end": 856015.6666666666,
+    "description": "The task list updates to show only AI Interview tasks.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The list of tasks is now filtered."
+  },
+  {
+    "type": "scroll",
+    "time_start": 857268.6666666666,
+    "time_end": 858268.6666666666,
+    "description": "User scrolls down the filtered task list.",
+    "confidence": 0.8,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The filtered task list moves up."
+  },
+  {
+    "type": "hover",
+    "time_start": 859515.6666666666,
+    "time_end": 860515.6666666666,
+    "description": "User hovers over the 'Mobile Only' filter chip.",
+    "confidence": 0.7,
+    "interaction_target": "Mobile Only",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the 'Mobile Only' filter chip."
+  },
+  {
+    "type": "click",
+    "time_start": 861615.6666666666,
+    "time_end": 861715.6666666666,
+    "description": "User clicks the 'x' on the 'AI Interview' filter chip.",
+    "confidence": 0.9,
+    "interaction_target": "AI Interview",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The user removes the 'AI Interview' filter."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 861715.6666666666,
+    "time_end": 862015.6666666666,
+    "description": "The task list updates to show all available tasks.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The task list is no longer filtered."
+  },
+  {
+    "type": "hover",
+    "time_start": 863315.6666666666,
+    "time_end": 864515.6666666666,
+    "description": "User hovers over a 'Survey' task card.",
+    "confidence": 0.8,
+    "interaction_target": "Survey",
+    "cursor_position": {
+      "x": 1123,
+      "y": 472
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over a card titled 'Survey' offering $15."
+  },
+  {
+    "type": "hover",
+    "time_start": 872515.6666666666,
+    "time_end": 873515.6666666666,
+    "description": "User hovers over the 'Diary Study' task card.",
+    "confidence": 0.8,
+    "interaction_target": "Diary Study",
+    "cursor_position": {
+      "x": 816,
+      "y": 119
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the 'Diary Study' card."
+  },
+  {
+    "type": "hover",
+    "time_start": 876868.6666666666,
+    "time_end": 877268.6666666666,
+    "description": "User hovers over the 'Clear all' button.",
+    "confidence": 0.7,
+    "interaction_target": "Clear all",
+    "cursor_position": {
+      "x": 1206,
+      "y": 257
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the 'Clear all' button."
+  },
+  {
+    "type": "hover",
+    "time_start": 878268.6666666666,
+    "time_end": 879068.6666666666,
+    "description": "User hovers over the 'Diary Study' task card.",
+    "confidence": 0.8,
+    "interaction_target": "Diary Study",
+    "cursor_position": {
+      "x": 948,
+      "y": 616
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over the 'Diary Study' card."
+  },
+  {
+    "type": "scroll",
+    "time_start": 879459.0,
+    "time_end": 885609.0,
+    "description": "User scrolls down the list of opportunities on the Explore page.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'Explore' page showing various task cards like 'Diary Study' and 'AI Interview'."
+  },
+  {
+    "type": "hover",
+    "time_start": 893269.0,
+    "time_end": 894769.0,
+    "description": "User pauses to look at a survey opportunity titled 'Review online grocery shopping experience'.",
+    "confidence": 0.8,
+    "interaction_target": "Review online grocery shopping experience",
+    "cursor_position": {
+      "x": 944,
+      "y": 533
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor lingers over a blue survey card."
+  },
+  {
+    "type": "scroll",
+    "time_start": 894769.0,
+    "time_end": 895769.0,
+    "description": "User scrolls down slightly.",
+    "confidence": 0.8,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The list moves up slightly as the user scrolls."
+  },
+  {
+    "type": "hover",
+    "time_start": 896269.0,
+    "time_end": 896669.0,
+    "description": "User pauses over an 'In Person' task card titled 'Test some new train journey interactions'.",
+    "confidence": 0.8,
+    "interaction_target": "Test some new train journey interactions",
+    "cursor_position": {
+      "x": 940,
+      "y": 527
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is positioned over a light orange task card."
+  },
+  {
+    "type": "scroll",
+    "time_start": 897269.0,
+    "time_end": 899269.0,
+    "description": "User scrolls down further through the list.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The list of tasks moves rapidly upward."
+  },
+  {
+    "type": "hover",
+    "time_start": 899769.0,
+    "time_end": 901169.0,
+    "description": "User hovers over an 'AI Interview' task card titled 'Evaluate new AI chatbot for customer support scenarios'.",
+    "confidence": 0.8,
+    "interaction_target": "Evaluate new AI chatbot for customer support scenarios",
+    "cursor_position": {
+      "x": 1167,
+      "y": 338
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over a pink task card."
+  },
+  {
+    "type": "hover",
+    "time_start": 905569.0,
+    "time_end": 908769.0,
+    "description": "User hovers over a 'Video Call' task card titled 'Discuss your remote work setup and tool preferences'.",
+    "confidence": 0.9,
+    "interaction_target": "Discuss your remote work setup and tool preferences",
+    "cursor_position": {
+      "x": 753,
+      "y": 402
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is stationary over a pink task card in the middle of the screen."
+  },
+  {
+    "type": "hover",
+    "time_start": 910669.0,
+    "time_end": 913469.0,
+    "description": "User hovers over the 'Tasks' icon in the bottom navigation bar.",
+    "confidence": 0.9,
+    "interaction_target": "Tasks",
+    "cursor_position": {
+      "x": 1064,
+      "y": 985
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is at the bottom center of the screen over the navigation bar."
+  },
+  {
+    "type": "scroll",
+    "time_start": 912769.0,
+    "time_end": 917769.0,
+    "description": "User scrolls back up the list.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The task cards move downward as the user scrolls up."
+  },
+  {
+    "type": "scroll",
+    "time_start": 921769.0,
+    "time_end": 924269.0,
+    "description": "User continues scrolling up.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The user is returning toward the top of the Explore page."
+  },
+  {
+    "type": "hover",
+    "time_start": 923769.0,
+    "time_end": 926369.0,
+    "description": "User hovers over a 'Video Call' task card titled 'Anyone who has a vehicle insurance on a personal car'.",
+    "confidence": 0.8,
+    "interaction_target": "Anyone who has a vehicle insurance on a personal car",
+    "cursor_position": {
+      "x": 754,
+      "y": 421
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over a pink task card near the top of the visible list."
+  },
+  {
+    "type": "scroll",
+    "time_start": 931269.0,
+    "time_end": 933769.0,
+    "description": "User scrolls down the list.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The list moves up as the user scrolls down."
+  },
+  {
+    "type": "hover",
+    "time_start": 944269.0,
+    "time_end": 944469.0,
+    "description": "User hovers over the vehicle insurance task card.",
+    "confidence": 0.7,
+    "interaction_target": "Anyone who has a vehicle insurance on a personal car",
+    "cursor_position": {
+      "x": 746,
+      "y": 368
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is positioned over the pink task card."
+  },
+  {
+    "type": "scroll",
+    "time_start": 947769.0,
+    "time_end": 951269.0,
+    "description": "User scrolls up.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The task cards move downward."
+  },
+  {
+    "type": "scroll",
+    "time_start": 951702.3333333333,
+    "time_end": 953202.3333333333,
+    "description": "User scrolls horizontally to the right through the 'Short tasks & surveys' carousel.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The Explore page is visible, showing various research opportunities. The user is interacting with the top horizontal carousel."
+  },
+  {
+    "type": "hover",
+    "time_start": 953769.0,
+    "time_end": 955369.0,
+    "description": "User hovers over an 'AI Interview' task card titled 'Anyone who has a personal phone and/or internet'.",
+    "confidence": 0.8,
+    "interaction_target": "Anyone who has a personal phone and/or internet",
+    "cursor_position": {
+      "x": 1076,
+      "y": 450
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is over a pink task card."
+  },
+  {
+    "type": "scroll",
+    "time_start": 956002.3333333333,
+    "time_end": 957202.3333333333,
+    "description": "User scrolls horizontally to the left through the 'Short tasks & surveys' carousel.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The carousel at the top of the Explore page moves back to the left."
+  },
+  {
+    "type": "click",
+    "time_start": 958852.3333333333,
+    "time_end": 959002.3333333333,
+    "description": "User clicks on the filter icon in the top right corner of the Explore page.",
+    "confidence": 0.9,
+    "interaction_target": "Filter icon",
+    "cursor_position": {
+      "x": 1186,
+      "y": 251
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is positioned over the filter icon in the top right of the header."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 959259.0,
+    "time_end": 959709.0,
+    "description": "The 'Filter Opportunities' modal slides up from the bottom.",
+    "confidence": 1.0,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "A modal overlay appears with various filter options like 'Task Type', 'Duration', and 'Pay Rate'."
+  },
+  {
+    "type": "hover",
+    "time_start": 959709.0,
+    "time_end": 961702.0,
+    "description": "User hovers over filter options in the modal.",
+    "confidence": 0.8,
+    "cursor_position": {
+      "x": 20,
+      "y": 89
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'Filter Opportunities' modal is fully visible."
+  },
+  {
+    "type": "scroll",
+    "time_start": 960702.3333333333,
+    "time_end": 961702.3333333333,
+    "description": "User scrolls down within the 'Filter Opportunities' modal.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The content inside the filter modal moves upwards."
+  },
+  {
+    "type": "scroll",
+    "time_start": 965768.3333333333,
+    "time_end": 966768.3333333333,
+    "description": "User scrolls down further within the filter modal.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The user is browsing the bottom of the filter modal."
+  },
+  {
+    "type": "hover",
+    "time_start": 990702.3333333333,
+    "time_end": 991602.3333333333,
+    "description": "User hovers over the 'X' close button in the top right of the filter modal.",
+    "confidence": 0.8,
+    "interaction_target": "X",
+    "cursor_position": {
+      "x": 1205,
+      "y": 587
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is hovering over the close button in the modal."
+  },
+  {
+    "type": "click",
+    "time_start": 991652.3333333333,
+    "time_end": 991802.3333333333,
+    "description": "User clicks the 'X' button to close the filter modal.",
+    "confidence": 0.9,
+    "interaction_target": "X",
+    "cursor_position": {
+      "x": 1205,
+      "y": 587
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'X' button is activated."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 991802.3333333333,
+    "time_end": 992002.3333333333,
+    "description": "The filter modal closes.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The Explore page is fully visible again."
+  },
+  {
+    "type": "scroll",
+    "time_start": 992002.3333333333,
+    "time_end": 1006102.3333333333,
+    "description": "User scrolls down the Explore page.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The page content moves upwards as the user scrolls down."
+  },
+  {
+    "type": "scroll",
+    "time_start": 1018768.3333333333,
+    "time_end": 1020268.3333333333,
+    "description": "User scrolls down the Explore page.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The user is browsing task cards in the middle of the page."
+  },
+  {
+    "type": "scroll",
+    "time_start": 1023268.3333333333,
+    "time_end": 1025768.3333333333,
+    "description": "User scrolls to the bottom of the Explore page.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The user reaches the end of the list of opportunities."
+  },
+  {
+    "type": "hover",
+    "time_start": 1030502.3333333333,
+    "time_end": 1031702.3333333333,
+    "description": "User hovers over the 'AI Interview' task card.",
+    "confidence": 0.8,
+    "interaction_target": "AI Interview",
+    "cursor_position": {
+      "x": 1178,
+      "y": 599
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor lingers over a red task card labeled 'AI Interview'."
+  },
+  {
+    "type": "scroll",
+    "time_start": 1041268.6666666666,
+    "time_end": 1046768.6666666666,
+    "description": "User continues scrolling down the Explore page.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The user is scrolling through the 'Sessions to schedule' section, revealing tasks like 'Video Call' and 'In Person' journey interactions."
+  },
+  {
+    "type": "scroll",
+    "time_start": 1063768.6666666665,
+    "time_end": 1064768.6666666665,
+    "description": "User scrolls down quickly through the task list.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The task list is moving rapidly as the user scrolls towards the bottom."
+  },
+  {
+    "type": "click",
+    "time_start": 1064445.6666666665,
+    "time_end": 1064445.6666666665,
+    "description": "User clicks the filter icon in the top right of the header.",
+    "confidence": 0.9,
+    "interaction_target": "filter icon",
+    "cursor_position": {
+      "x": 1255,
+      "y": 504
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is positioned over the filter icon (three horizontal lines with dots) in the top right of the screen."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 1064545.6666666665,
+    "time_end": 1064795.6666666665,
+    "description": "The 'Filter Opportunities' modal appears on screen.",
+    "confidence": 1.0,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'Filter Opportunities' modal is open, displaying options for Task Type, Duration, Pay Rate, and Device."
+  },
+  {
+    "type": "scroll",
+    "time_start": 1081268.6666666665,
+    "time_end": 1082268.6666666665,
+    "description": "User scrolls down within the filter modal.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The content within the filter modal is moving up, revealing 'Advanced Options' like 'Time of Day Available' and 'Study Topic'."
+  },
+  {
+    "type": "click",
+    "time_start": 1081995.6666666665,
+    "time_end": 1081995.6666666665,
+    "description": "User clicks the 'X' icon to close the filter modal.",
+    "confidence": 0.8,
+    "interaction_target": "X icon",
+    "cursor_position": {
+      "x": 746,
+      "y": 208
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is near the 'X' icon at the top right of the 'Filter Opportunities' modal."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 1082045.6666666665,
+    "time_end": 1082295.6666666665,
+    "description": "The filter modal closes, returning the user to the Explore page.",
+    "confidence": 1.0,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The Explore page is visible again without the modal overlay."
+  },
+  {
+    "type": "scroll",
+    "time_start": 1084295.6666666665,
+    "time_end": 1089295.6666666665,
+    "description": "User scrolls up the Explore page.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The content moves down as the user scrolls back towards the top of the task list."
+  },
+  {
+    "type": "hover",
+    "time_start": 1102295.6666666665,
+    "time_end": 1102895.6666666665,
+    "description": "User hovers over the 'AI Interview' task card.",
+    "confidence": 0.7,
+    "interaction_target": "AI Interview card",
+    "cursor_position": null,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The cursor is stationary over the pink 'AI Interview' task card ($40 reward)."
+  },
+  {
+    "type": "click",
+    "time_start": 1102895.6666666665,
+    "time_end": 1102895.6666666665,
+    "description": "User clicks on the 'AI Interview' task card.",
+    "confidence": 0.9,
+    "interaction_target": "AI Interview card",
+    "cursor_position": null,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'AI Interview' card is highlighted as the user clicks it."
+  },
+  {
+    "type": "navigate",
+    "time_start": 1102895.6666666665,
+    "time_end": 1105295.6666666665,
+    "description": "The app navigates to the details page for the 'AI Interview' task.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The screen transitions from the Explore list to a detailed view of the 'AI Interview' task."
+  },
+  {
+    "type": "click",
+    "time_start": 1107539.0,
+    "time_end": 1107539.0,
+    "description": "User clicks the filter icon in the top right corner of the Explore page.",
+    "confidence": 1.0,
+    "interaction_target": "filter icon",
+    "cursor_position": {
+      "x": 1073,
+      "y": 344
+    },
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The Explore page showing various task and survey opportunities."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 1108639.0,
+    "time_end": 1108939.0,
+    "description": "The 'Filter Opportunities' modal appears, overlaying the Explore page content.",
+    "confidence": 1.0,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The filter modal is now visible, showing categories like Task Type, Duration, and Pay Rate."
+  },
+  {
+    "type": "select",
+    "time_start": 1127239.0,
+    "time_end": 1127589.0,
+    "description": "User selects the 'Under 10 min' duration filter.",
+    "confidence": 1.0,
+    "interaction_target": "Under 10 min",
+    "cursor_position": null,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The Duration section of the filter modal with 'Under 10 min' highlighted."
+  },
+  {
+    "type": "select",
+    "time_start": 1130439.0,
+    "time_end": 1130789.0,
+    "description": "User re-selects the 'Under 10 min' duration filter.",
+    "confidence": 1.0,
+    "interaction_target": "Under 10 min",
+    "cursor_position": null,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'Under 10 min' button is highlighted again."
+  },
+  {
+    "type": "click",
+    "time_start": 1132389.0,
+    "time_end": 1132739.0,
+    "description": "User clicks the 'Clear All' button.",
+    "confidence": 1.0,
+    "interaction_target": "Clear All",
+    "cursor_position": null,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The filter modal with all selections reset."
+  },
+  {
+    "type": "drag",
+    "time_start": 1133189.0,
+    "time_end": 1135289.0,
+    "description": "User adjusts the maximum pay rate by dragging the right slider handle.",
+    "confidence": 0.9,
+    "interaction_target": "Pay Rate slider",
+    "cursor_position": null,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The Pay Rate slider with the right handle being moved."
+  },
+  {
+    "type": "drag",
+    "time_start": 1138039.0,
+    "time_end": 1139189.0,
+    "description": "User further adjusts the minimum pay rate.",
+    "confidence": 0.9,
+    "interaction_target": "Pay Rate slider",
+    "cursor_position": null,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The Pay Rate slider with the left handle being moved again."
+  },
+  {
+    "type": "select",
+    "time_start": 1142789.0,
+    "time_end": 1143139.0,
+    "description": "User selects the 'Either' device requirement filter.",
+    "confidence": 1.0,
+    "interaction_target": "Either",
+    "cursor_position": null,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The Device section of the filter modal with 'Either' selected."
+  },
+  {
+    "type": "scroll",
+    "time_start": 1142989.0,
+    "time_end": 1143339.0,
+    "description": "User scrolls down in the filter modal.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The filter modal content shifting upwards to reveal more options."
+  },
+  {
+    "type": "drag",
+    "time_start": 1148089.0,
+    "time_end": 1149189.0,
+    "description": "User adjusts the minimum pay rate.",
+    "confidence": 0.9,
+    "interaction_target": "Pay Rate slider",
+    "cursor_position": null,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The Pay Rate slider with the left handle being moved."
+  },
+  {
+    "type": "drag",
+    "time_start": 1153839.0,
+    "time_end": 1154989.0,
+    "description": "User adjusts the minimum pay rate.",
+    "confidence": 0.9,
+    "interaction_target": "Pay Rate slider",
+    "cursor_position": null,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The Pay Rate slider with the left handle being moved."
+  },
+  {
+    "type": "drag",
+    "time_start": 1158439.0,
+    "time_end": 1159589.0,
+    "description": "User adjusts the maximum pay rate.",
+    "confidence": 0.9,
+    "interaction_target": "Pay Rate slider",
+    "cursor_position": null,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The Pay Rate slider with the right handle being moved."
+  },
+  {
+    "type": "drag",
+    "time_start": 1166039.0,
+    "time_end": 1167189.0,
+    "description": "User adjusts the minimum pay rate.",
+    "confidence": 0.9,
+    "interaction_target": "Pay Rate slider",
+    "cursor_position": null,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The Pay Rate slider with the left handle being moved."
+  },
+  {
+    "type": "drag",
+    "time_start": 1169482.3333333333,
+    "time_end": 1171132.3333333333,
+    "description": "User drags the right handle of the Pay Rate slider from $100+ to $81.",
+    "confidence": 0.9,
+    "interaction_target": "PAY RATE slider",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "Filter Opportunities modal open over Explore page. Pay rate slider visible."
+  },
+  {
+    "type": "drag",
+    "time_start": 1173282.3333333333,
+    "time_end": 1174482.3333333333,
+    "description": "User drags the right handle of the Pay Rate slider from $98 to $86.",
+    "confidence": 0.9,
+    "interaction_target": "PAY RATE slider",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "Filter Opportunities modal open over Explore page. Pay rate slider visible."
+  },
+  {
+    "type": "scroll",
+    "time_start": 1176768.3333333333,
+    "time_end": 1177768.3333333333,
+    "description": "User scrolls the duration filter chips horizontally to the right.",
+    "confidence": 0.8,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "Filter Opportunities modal, duration chips visible."
+  },
+  {
+    "type": "select",
+    "time_start": 1178139.0,
+    "time_end": 1178489.0,
+    "description": "User selects the 'Under 10 min' duration filter.",
+    "confidence": 1.0,
+    "interaction_target": "Under 10 min",
+    "cursor_position": null,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The Duration section of the filter modal with 'Under 10 min' highlighted."
+  },
+  {
+    "type": "drag",
+    "time_start": 1180332.3333333333,
+    "time_end": 1182132.3333333333,
+    "description": "User drags the left handle of the Pay Rate slider from $0 to $10.",
+    "confidence": 0.9,
+    "interaction_target": "PAY RATE slider",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "Filter Opportunities modal open over Explore page. Pay rate slider visible."
+  },
+  {
+    "type": "drag",
+    "time_start": 1185632.3333333333,
+    "time_end": 1195632.3333333333,
+    "description": "User drags the left handle of the Pay Rate slider between $0 and $20, settling at $0.",
+    "confidence": 0.9,
+    "interaction_target": "PAY RATE slider",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "Filter Opportunities modal open over Explore page. Pay rate slider visible."
+  },
+  {
+    "type": "click",
+    "time_start": 1202682.3333333333,
+    "time_end": 1202832.3333333333,
+    "description": "User clicks on the 'ADVANCED OPTIONS' header in the filter modal.",
+    "confidence": 0.9,
+    "interaction_target": "ADVANCED OPTIONS",
+    "cursor_position": null,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "Filter Opportunities modal, Advanced Options section visible."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 1202832.3333333333,
+    "time_end": 1203282.3333333333,
+    "description": "The Advanced Options section expands, showing additional filter fields.",
+    "confidence": 1.0,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "Filter Opportunities modal, Advanced Options section expanded."
+  },
+  {
+    "type": "scroll",
+    "time_start": 1203282.3333333333,
+    "time_end": 1206768.3333333333,
+    "description": "User scrolls down the filter modal content.",
+    "confidence": 0.8,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "Filter Opportunities modal, scrolling through advanced options."
+  },
+  {
+    "type": "hover",
+    "time_start": 1206768.3333333333,
+    "time_end": 1207632.3333333333,
+    "description": "User hovers over the close button (X) in the filter modal.",
+    "confidence": 0.9,
+    "interaction_target": "X",
+    "cursor_position": {
+      "x": 1192,
+      "y": 829
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "Filter Opportunities modal, close button at top right."
+  },
+  {
+    "type": "click",
+    "time_start": 1207632.3333333333,
+    "time_end": 1207732.3333333333,
+    "description": "User clicks the close button (X) in the filter modal.",
+    "confidence": 1.0,
+    "interaction_target": "X",
+    "cursor_position": {
+      "x": 1024,
+      "y": 1012
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "Filter Opportunities modal, close button at top right."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 1207732.3333333333,
+    "time_end": 1207982.3333333333,
+    "description": "The Filter Opportunities modal closes, revealing the Explore page.",
+    "confidence": 1.0,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "Explore page visible after modal closes."
+  },
+  {
+    "type": "scroll",
+    "time_start": 1209482.3333333333,
+    "time_end": 1211982.3333333333,
+    "description": "User scrolls down the list of opportunities on the Explore page.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "Explore page with list of opportunities."
+  },
+  {
+    "type": "scroll",
+    "time_start": 1250268.3333333333,
+    "time_end": 1251268.3333333333,
+    "description": "User scrolls down the Explore page.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "Explore page with list of opportunities."
+  },
+  {
+    "type": "click",
+    "time_start": 1257875.6666666665,
+    "time_end": 1257875.6666666665,
+    "description": "User clicks the filter icon in the top right corner of the Explore page.",
+    "confidence": 0.9,
+    "interaction_target": "Filter icon",
+    "cursor_position": {
+      "x": 1169,
+      "y": 781
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The Explore page with the cursor positioned over the filter icon in the top right header."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 1257975.6666666665,
+    "time_end": 1258175.6666666665,
+    "description": "The 'Filter Opportunities' modal slides up from the bottom of the screen.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "A bottom sheet modal titled 'Filter Opportunities' appears over the Explore page content."
+  },
+  {
+    "type": "hover",
+    "time_start": 1258475.6666666665,
+    "time_end": 1259575.6666666665,
+    "description": "User hovers over the 'Diary Study' task type filter option.",
+    "confidence": 0.7,
+    "interaction_target": "Diary Study",
+    "cursor_position": {
+      "x": 1024,
+      "y": 908
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The 'Filter Opportunities' modal is open, and the cursor is resting on the 'Diary Study' button."
+  },
+  {
+    "type": "click",
+    "time_start": 1273575.6666666665,
+    "time_end": 1273575.6666666665,
+    "description": "User clicks the 'X' button in the top right of the filter modal to close it.",
+    "confidence": 0.9,
+    "interaction_target": "X",
+    "cursor_position": {
+      "x": 26,
+      "y": 618
+    },
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The filter modal is visible with the cursor over the close 'X' button."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 1273625.6666666665,
+    "time_end": 1273775.6666666665,
+    "description": "The 'Filter Opportunities' modal closes, returning the user to the Explore page.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The filter modal disappears, and the main Explore page is fully visible again."
+  },
+  {
+    "type": "scroll",
+    "time_start": 1283268.6666666665,
+    "time_end": 1284768.6666666665,
+    "description": "User scrolls down the Explore page.",
+    "confidence": 0.9,
+    "page_title": "Explore",
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The Explore page content is moving upwards as the user scrolls."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 1300775.6666666665,
+    "time_end": 1300875.6666666665,
+    "description": "A dark overlay appears with a message: 'Perfect, thank you. Please close the website task and we'll continue our conversation.'",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "A dark screen with white text and an 'Open' button in the center."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 1302575.6666666665,
+    "time_end": 1302875.6666666665,
+    "description": "The screen transitions to a full-screen video view of the participant.",
+    "confidence": 0.9,
+    "viewport_width": 1948,
+    "viewport_height": 1064,
+    "frame_description": "The participant's face is visible in a full-screen video call layout."
+  }
+]
