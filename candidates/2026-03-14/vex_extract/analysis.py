@@ -23,15 +23,7 @@ logger = logging.getLogger(__name__)
 _CURSOR_SECTION = """\
 ## Cursor Tracking Data
 
-The following cursor position data was extracted from this video segment via template matching. Each line describes a time span where the cursor was stationary at a position, moved in a straight line between two positions, or was not detected. Coordinates are in pixels from the top-left of the video frame.
-
-Use this data to:
-- Confirm cursor positions when reporting click, hover, and drag events
-- Identify dwell patterns where the cursor holds position over interactive elements
-- Detect cursor movement trajectories that may be subtle in the video
-- Notice rapid back-and-forth movement suggesting cursor thrash
-
-The video is always ground truth — if cursor data conflicts with what you see, trust the video. Short "not-detected" gaps between stationary spans at the same position are tracker noise, not the cursor disappearing.
+The following cursor position data was extracted from this video segment via template matching. Each line shows a time span where the cursor was stationary or moved between positions. Coordinates are in pixels from the top-left of the video frame. Coverage is partial — the tracker only detects the cursor in some frames.
 
 ```
 {cursor_summary}
@@ -52,24 +44,15 @@ Use this data to:
 ```"""
 
 _CV_USAGE_BOTH = """\
-Use the cursor tracking and optical flow data above to:
-- Confirm cursor positions when reporting hover, click, and drag events
-- Detect scroll events that may be subtle in the video — the flow data gives precise scroll direction and timing
-- Identify hover/dwell patterns where the cursor stays stationary over interactive elements
-- Notice cursor thrash patterns from rapid movement in the cursor data
+The cursor tracking and optical flow data above supplements your video analysis. Use it to refine cursor positions on events you have already identified from the video, and to confirm scroll timing. Do not let gaps in tracking coverage influence whether you report an event — always trust what you see in the video.
 """
 
 _CV_USAGE_CURSOR_ONLY = """\
-Use the cursor tracking data above to:
-- Confirm cursor positions when reporting hover, click, and drag events
-- Identify hover/dwell patterns where the cursor stays stationary over interactive elements
-- Notice cursor thrash patterns from rapid movement in the cursor data
+The cursor tracking data above supplements your video analysis. Use it to refine cursor positions on events you have already identified from the video. Do not let gaps in tracking coverage influence whether you report an event — always trust what you see in the video.
 """
 
 _CV_USAGE_FLOW_ONLY = """\
-Use the optical flow data above to:
-- Detect scroll events that may be subtle in the video — the flow data gives precise scroll direction and timing
-- Distinguish user-initiated scrolling from static periods
+The optical flow data above supplements your video analysis. Use it to confirm scroll direction and timing for scroll events you identify in the video.
 """
 
 _GEMINI_CURSOR_SECTION = """\

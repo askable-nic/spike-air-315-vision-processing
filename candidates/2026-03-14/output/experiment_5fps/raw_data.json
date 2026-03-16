@@ -1,0 +1,658 @@
+{
+  "tracking_time_15_ms": 132360.3,
+  "tracking_time_5_ms": 88475.01758299768,
+  "trajectory_15_count": 1811,
+  "trajectory_5_count": 1017,
+  "trajectory_15_detected": 584,
+  "trajectory_5_detected": 329,
+  "quality_15": {
+    "label": "15fps baseline",
+    "total_samples": 1811,
+    "detected_samples": 584,
+    "detection_rate": 32.2,
+    "total_duration_ms": 358005.0,
+    "coverage_density_per_sec": 1.63,
+    "gap_stats": {
+      "median_ms": 133.0,
+      "p95_ms": 985.0,
+      "max_ms": 63690.0
+    },
+    "large_gaps_count": 47,
+    "large_gaps": [
+      {
+        "after_detection_idx": 43,
+        "gap_ms": 3082.0
+      },
+      {
+        "after_detection_idx": 44,
+        "gap_ms": 733.0
+      },
+      {
+        "after_detection_idx": 45,
+        "gap_ms": 828.0
+      },
+      {
+        "after_detection_idx": 49,
+        "gap_ms": 794.0
+      },
+      {
+        "after_detection_idx": 50,
+        "gap_ms": 734.0
+      },
+      {
+        "after_detection_idx": 55,
+        "gap_ms": 1667.0
+      },
+      {
+        "after_detection_idx": 58,
+        "gap_ms": 5594.0
+      },
+      {
+        "after_detection_idx": 59,
+        "gap_ms": 3154.0
+      },
+      {
+        "after_detection_idx": 60,
+        "gap_ms": 1643.0
+      },
+      {
+        "after_detection_idx": 61,
+        "gap_ms": 6502.0
+      }
+    ],
+    "long_non_detection_runs": [
+      {
+        "start_ms": 17918.0,
+        "end_ms": 23310.0,
+        "duration_ms": 5392.0
+      },
+      {
+        "start_ms": 28308.0,
+        "end_ms": 34552.0,
+        "duration_ms": 6244.0
+      },
+      {
+        "start_ms": 38630.0,
+        "end_ms": 44500.0,
+        "duration_ms": 5870.0
+      },
+      {
+        "start_ms": 47418.0,
+        "end_ms": 76572.0,
+        "duration_ms": 29154.0
+      },
+      {
+        "start_ms": 93392.0,
+        "end_ms": 104857.0,
+        "duration_ms": 11465.0
+      },
+      {
+        "start_ms": 105641.0,
+        "end_ms": 168665.0,
+        "duration_ms": 63024.0
+      },
+      {
+        "start_ms": 221772.0,
+        "end_ms": 226977.0,
+        "duration_ms": 5205.0
+      },
+      {
+        "start_ms": 233023.0,
+        "end_ms": 247878.0,
+        "duration_ms": 14855.0
+      },
+      {
+        "start_ms": 280714.0,
+        "end_ms": 289289.0,
+        "duration_ms": 8575.0
+      },
+      {
+        "start_ms": 293753.0,
+        "end_ms": 308075.0,
+        "duration_ms": 14322.0
+      }
+    ]
+  },
+  "quality_5": {
+    "label": "5fps experiment",
+    "total_samples": 1017,
+    "detected_samples": 329,
+    "detection_rate": 32.4,
+    "total_duration_ms": 358005.0,
+    "coverage_density_per_sec": 0.92,
+    "gap_stats": {
+      "median_ms": 278.0,
+      "p95_ms": 4152.0,
+      "max_ms": 63824.0
+    },
+    "large_gaps_count": 23,
+    "large_gaps": [
+      {
+        "after_detection_idx": 22,
+        "gap_ms": 3016.0
+      },
+      {
+        "after_detection_idx": 30,
+        "gap_ms": 5727.0
+      },
+      {
+        "after_detection_idx": 31,
+        "gap_ms": 3154.0
+      },
+      {
+        "after_detection_idx": 33,
+        "gap_ms": 7495.0
+      },
+      {
+        "after_detection_idx": 34,
+        "gap_ms": 2753.0
+      },
+      {
+        "after_detection_idx": 35,
+        "gap_ms": 2684.0
+      },
+      {
+        "after_detection_idx": 36,
+        "gap_ms": 4499.0
+      },
+      {
+        "after_detection_idx": 38,
+        "gap_ms": 30157.0
+      },
+      {
+        "after_detection_idx": 80,
+        "gap_ms": 11716.0
+      },
+      {
+        "after_detection_idx": 83,
+        "gap_ms": 63824.0
+      }
+    ],
+    "long_non_detection_runs": [
+      {
+        "start_ms": 17918.0,
+        "end_ms": 23178.0,
+        "duration_ms": 5260.0
+      },
+      {
+        "start_ms": 28441.0,
+        "end_ms": 35474.00000000001,
+        "duration_ms": 7033.0
+      },
+      {
+        "start_ms": 47418.0,
+        "end_ms": 76572.0,
+        "duration_ms": 29154.0
+      },
+      {
+        "start_ms": 93532.0,
+        "end_ms": 104737.00000000001,
+        "duration_ms": 11205.0
+      },
+      {
+        "start_ms": 105641.0,
+        "end_ms": 168665.0,
+        "duration_ms": 63024.0
+      },
+      {
+        "start_ms": 220320.0,
+        "end_ms": 226909.0,
+        "duration_ms": 6589.0
+      },
+      {
+        "start_ms": 233023.0,
+        "end_ms": 247878.0,
+        "duration_ms": 14855.0
+      },
+      {
+        "start_ms": 279497.0,
+        "end_ms": 289289.0,
+        "duration_ms": 9792.0
+      },
+      {
+        "start_ms": 293567.0,
+        "end_ms": 307880.0,
+        "duration_ms": 14313.0
+      },
+      {
+        "start_ms": 315340.00000000006,
+        "end_ms": 320627.0,
+        "duration_ms": 5287.0
+      }
+    ]
+  },
+  "summary_diffs": [
+    {
+      "segment": 0,
+      "lines_15fps": 26,
+      "lines_5fps": 18,
+      "summary_15fps": "2524-2591ms: moved from (218,203) to (221,492)\n2724-2940ms: moved from (221,286) to (218,624)\n3007-4140ms: moved from (218,203) to (218,209)\n4408-4741ms: moved from (218,168) to (218,166)\n4808-6813ms: stationary pos=(218,168)\n6946-7879ms: stationary pos=(218,386)\n10961-10961ms: stationary pos=(682,824)\n11694-11694ms: stationary pos=(716,759)\n12522-12769ms: stationary pos=(1239,976)\n13431-13431ms: stationary pos=(955,861)\n14225-14225ms: stationary pos=(482,763)\n14959-14959ms: stationary pos=(799,775)\n15325-15525ms: stationary pos=(603,856)\n15851-15851ms: stationary pos=(603,847)\n17518-17651ms: stationary pos=(274,871)\n17784-17784ms: stationary pos=(815,951)\n23378-23378ms: stationary pos=(1061,973)\n26532-26532ms: stationary pos=(912,809)\n28175-28175ms: stationary pos=(826,938)\n34677-34677ms: stationary pos=(682,824)\n35736-35736ms: stationary pos=(1816,194)\n36114-36114ms: stationary pos=(1782,194)\n38489-38489ms: stationary pos=(387,990)\n44632-44632ms: stationary pos=(731,987)\n45672-45672ms: stationary pos=(618,766)\n46786-47104ms: stationary pos=(603,853)",
+      "summary_5fps": "2524-4008ms: moved from (218,203) to (218,215)\n4408-6879ms: stationary pos=(218,168)\n7079-7945ms: stationary pos=(218,386)\n10961-10961ms: stationary pos=(682,824)\n12522-12722ms: stationary pos=(1239,976)\n13431-13431ms: stationary pos=(955,861)\n14158-14158ms: stationary pos=(912,809)\n15325-15325ms: stationary pos=(603,856)\n15851-15851ms: stationary pos=(603,847)\n17651-17651ms: stationary pos=(274,871)\n23378-23378ms: stationary pos=(1061,973)\n26532-26532ms: stationary pos=(912,809)\n28241-28241ms: stationary pos=(823,938)\n35736-35736ms: stationary pos=(1816,194)\n38489-38489ms: stationary pos=(387,990)\n41173-41173ms: stationary pos=(713,759)\n45672-45672ms: stationary pos=(618,766)\n46917-46917ms: stationary pos=(603,853)",
+      "identical": false
+    },
+    {
+      "segment": 1,
+      "lines_15fps": 10,
+      "lines_5fps": 9,
+      "summary_15fps": "10447-16446ms: moved from (1420,558) to (1420,619)\n16948-17446ms: stationary pos=(1420,558)\n17947-22093ms: moved from (1420,619) to (1420,798)\n22221-22484ms: moved from (1386,1019) to (1401,808)\n22812-23463ms: stationary pos=(1403,574)\n23574-23756ms: moved from (1386,1019) to (1386,1010)\n23833-24098ms: moved from (1386,1019) to (1386,1018)\n24601-26112ms: stationary pos=(1386,1018)\n26658-26658ms: stationary pos=(1386,662)\n38374-38945ms: stationary pos=(1432,302)",
+      "summary_5fps": "10447-16446ms: moved from (1420,558) to (1420,619)\n16948-17446ms: stationary pos=(1420,558)\n17947-22093ms: moved from (1420,619) to (1420,798)\n22484-22484ms: stationary pos=(1401,808)\n22941-23463ms: stationary pos=(1403,574)\n23699-24601ms: moved from (1386,1019) to (1386,1018)\n25166-25987ms: stationary pos=(1386,1019)\n26658-26658ms: stationary pos=(1386,662)\n38374-38811ms: stationary pos=(1432,302)",
+      "identical": false
+    },
+    {
+      "segment": 2,
+      "lines_15fps": 19,
+      "lines_5fps": 15,
+      "summary_15fps": "31008-31008ms: stationary pos=(624,701)\n35435-38891ms: moved from (624,560) to (624,342)\n39663-39799ms: stationary pos=(680,871)\n39964-42853ms: moved from (680,850) to (680,1031)\n43069-52117ms: moved from (624,535) to (624,793)\n52239-52353ms: stationary pos=(680,592)\n52426-53849ms: moved from (680,591) to (680,573)\n53902-56345ms: moved from (624,775) to (624,766)\n57073-57589ms: moved from (624,775) to (680,590)\n57673-59636ms: moved from (680,595) to (680,1031)\n59753-59871ms: moved from (765,221) to (624,544)\n59965-71463ms: moved from (624,581) to (624,661)\n71666-71794ms: stationary pos=(680,460)\n72131-73090ms: moved from (680,459) to (680,324)\n73268-73465ms: moved from (1355,712) to (680,248)\n78715-79199ms: stationary pos=(680,248)\n79927-80144ms: stationary pos=(624,698)\n80334-80808ms: moved from (802,393) to (955,975)\n81609-81609ms: stationary pos=(504,761)",
+      "summary_5fps": "31008-31008ms: stationary pos=(624,701)\n35435-38891ms: moved from (624,560) to (624,342)\n39663-42743ms: moved from (680,871) to (680,1025)\n43069-52117ms: moved from (624,535) to (624,793)\n52239-53849ms: moved from (680,592) to (680,573)\n53902-56345ms: moved from (624,775) to (624,766)\n57073-57589ms: moved from (624,775) to (680,589)\n57864-59636ms: moved from (680,622) to (680,1031)\n59871-71463ms: moved from (624,544) to (624,661)\n71666-72131ms: stationary pos=(680,460)\n72480-72923ms: moved from (680,457) to (680,324)\n73268-73268ms: stationary pos=(1355,712)\n78715-79199ms: stationary pos=(680,248)\n79927-80144ms: stationary pos=(624,698)\n80617-80617ms: stationary pos=(955,971)",
+      "identical": false
+    },
+    {
+      "segment": 3,
+      "lines_15fps": 42,
+      "lines_5fps": 28,
+      "summary_15fps": "39-167ms: stationary pos=(680,460)\n504-1463ms: moved from (680,459) to (680,324)\n1641-1838ms: moved from (1355,712) to (680,248)\n7088-7572ms: stationary pos=(680,248)\n8300-8517ms: stationary pos=(624,698)\n8707-9181ms: moved from (802,393) to (955,975)\n9982-10511ms: stationary pos=(504,761)\n10832-10832ms: stationary pos=(621,741)\n11817-11817ms: stationary pos=(584,839)\n17236-20675ms: moved from (1671,996) to (1671,520)\n20747-20833ms: moved from (356,268) to (977,268)\n21615-21695ms: stationary pos=(1671,517)\n21839-21971ms: moved from (409,335) to (382,498)\n22125-22365ms: stationary pos=(409,335)\n22498-22964ms: stationary pos=(909,351)\n38047-38655ms: stationary pos=(680,862)\n39482-39482ms: stationary pos=(531,406)\n40032-40032ms: stationary pos=(944,678)\n40353-40631ms: moved from (968,286) to (1671,1021)\n40952-42013ms: stationary pos=(1671,818)\n42234-42365ms: moved from (633,600) to (1671,818)\n42493-43572ms: moved from (637,581) to (1671,759)\n48978-49272ms: moved from (323,925) to (519,1021)\n49408-50905ms: stationary pos=(323,925)\n51125-51258ms: moved from (538,741) to (323,925)\n51660-51859ms: moved from (323,925) to (1671,858)\n51993-52342ms: moved from (1155,154) to (1671,720)\n52526-54285ms: moved from (1155,154) to (1671,720)\n59874-60027ms: stationary pos=(1671,720)\n60169-61220ms: stationary pos=(624,729)\n61931-62484ms: moved from (1124,974) to (860,1005)\n62671-62804ms: moved from (1287,907) to (1355,990)\n62930-63055ms: moved from (1429,756) to (1287,907)\n63302-63819ms: stationary pos=(1287,907)\n64057-64057ms: stationary pos=(1436,774)\n64316-64316ms: stationary pos=(860,750)\n68468-68620ms: moved from (860,382) to (255,382)\n68860-68927ms: moved from (1671,812) to (725,931)\n69093-69616ms: moved from (848,369) to (725,892)\n69803-69803ms: stationary pos=(851,369)\n79947-81097ms: moved from (725,870) to (725,1036)\n81233-81483ms: moved from (1671,944) to (1316,825)",
+      "summary_5fps": "39-504ms: stationary pos=(680,460)\n853-1296ms: moved from (680,457) to (680,324)\n1641-1641ms: stationary pos=(1355,712)\n7088-7572ms: stationary pos=(680,248)\n8300-8517ms: stationary pos=(624,698)\n8990-8990ms: stationary pos=(955,971)\n10118-10118ms: stationary pos=(504,761)\n17236-20491ms: moved from (1671,996) to (1671,609)\n20747-21615ms: moved from (356,268) to (1671,517)\n21839-22365ms: stationary pos=(409,335)\n22661-22893ms: stationary pos=(909,351)\n38047-38705ms: stationary pos=(680,862)\n40631-42013ms: moved from (1671,1021) to (1671,818)\n42234-42493ms: moved from (633,600) to (637,581)\n42955-43449ms: stationary pos=(1671,759)\n48978-49272ms: moved from (323,925) to (519,1021)\n49540-50773ms: stationary pos=(323,925)\n51125-51125ms: stationary pos=(538,741)\n51660-51993ms: moved from (323,925) to (1155,154)\n52342-54285ms: stationary pos=(1671,720)\n59874-61220ms: moved from (1671,720) to (624,729)\n61931-62484ms: moved from (1124,974) to (860,1005)\n62804-63819ms: moved from (1355,990) to (1287,907)\n64057-64316ms: moved from (1436,774) to (860,750)\n68468-68860ms: moved from (860,382) to (1671,812)\n69093-69093ms: stationary pos=(848,369)\n79947-80926ms: moved from (725,870) to (725,1011)\n81233-81483ms: moved from (1671,944) to (1315,824)",
+      "identical": false
+    },
+    {
+      "segment": 4,
+      "lines_15fps": 24,
+      "lines_5fps": 13,
+      "summary_15fps": "8320-9470ms: moved from (725,870) to (725,1036)\n9606-10576ms: moved from (1671,944) to (1315,824)\n10729-10825ms: moved from (1671,978) to (1315,824)\n11150-11343ms: moved from (1671,981) to (1671,1018)\n11460-11460ms: stationary pos=(1315,824)\n11845-11845ms: stationary pos=(1465,151)\n12141-12141ms: stationary pos=(1465,154)\n26709-30303ms: moved from (1671,1027) to (1671,913)\n30424-30506ms: stationary pos=(725,1039)\n30766-32555ms: moved from (725,990) to (725,627)\n32697-33267ms: moved from (1238,563) to (725,584)\n33378-33598ms: stationary pos=(1238,563)\n33708-33708ms: stationary pos=(725,560)\n39208-43126ms: moved from (725,529) to (725,136)\n67642-67642ms: stationary pos=(839,1021)\n68237-68345ms: moved from (603,856) to (713,861)\n69141-69141ms: stationary pos=(554,896)\n70839-71106ms: stationary pos=(1045,951)\n72106-72106ms: stationary pos=(1382,778)\n72989-72989ms: stationary pos=(197,410)\n73202-73202ms: stationary pos=(187,881)\n73534-73601ms: moved from (845,371) to (860,408)\n73867-75504ms: stationary pos=(860,408)\n75636-76097ms: stationary pos=(849,371)",
+      "summary_5fps": "8320-9299ms: moved from (725,870) to (725,1011)\n9606-10379ms: moved from (1671,944) to (1315,824)\n10729-11460ms: moved from (1671,978) to (1315,824)\n11845-11845ms: stationary pos=(1465,151)\n26709-30303ms: moved from (1671,1027) to (1671,913)\n30506-33267ms: moved from (725,1039) to (725,584)\n33598-33598ms: stationary pos=(1238,563)\n39351-43126ms: moved from (725,471) to (725,136)\n68237-68237ms: stationary pos=(603,856)\n70773-70973ms: stationary pos=(1045,951)\n72989-73202ms: moved from (197,410) to (187,881)\n74171-75372ms: stationary pos=(860,408)\n75636-76097ms: stationary pos=(849,371)",
+      "identical": false
+    }
+  ],
+  "cursor_comparisons": [
+    {
+      "type": "hover",
+      "time_start": 76670.0,
+      "description": "User hovers the cursor over the 'Open' button.",
+      "pos_15fps": {
+        "x": 603,
+        "y": 853
+      },
+      "pos_5fps": {
+        "x": 603,
+        "y": 853
+      },
+      "pixel_distance": 0.0,
+      "15fps_has_position": true,
+      "5fps_has_position": true,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "click",
+      "time_start": 79134.0,
+      "description": "User clicks the 'Open' button.",
+      "pos_15fps": null,
+      "pos_5fps": null,
+      "pixel_distance": null,
+      "15fps_has_position": false,
+      "5fps_has_position": false,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "click",
+      "time_start": 105010.8,
+      "description": "User clicks on the Google search bar.",
+      "pos_15fps": null,
+      "pos_5fps": null,
+      "pixel_distance": null,
+      "15fps_has_position": false,
+      "5fps_has_position": false,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "click",
+      "time_start": 105084.0,
+      "description": "User clicks into the Google search bar.",
+      "pos_15fps": null,
+      "pos_5fps": null,
+      "pixel_distance": null,
+      "15fps_has_position": false,
+      "5fps_has_position": false,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "click",
+      "time_start": 119910.8,
+      "description": "User clicks on the Expedia.com.au search result link.",
+      "pos_15fps": {
+        "x": 1403,
+        "y": 574
+      },
+      "pos_5fps": {
+        "x": 1403,
+        "y": 574
+      },
+      "pixel_distance": 0.0,
+      "15fps_has_position": true,
+      "5fps_has_position": true,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "hover",
+      "time_start": 125010.8,
+      "description": "User hovers over the 'Packages' tab.",
+      "pos_15fps": null,
+      "pos_5fps": null,
+      "pixel_distance": null,
+      "15fps_has_position": false,
+      "5fps_has_position": false,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "click",
+      "time_start": 128110.8,
+      "description": "User clicks on the 'Packages' tab.",
+      "pos_15fps": null,
+      "pos_5fps": null,
+      "pixel_distance": null,
+      "15fps_has_position": false,
+      "5fps_has_position": false,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "hover",
+      "time_start": 135660.8,
+      "description": "User hovers over the 'Going to' destination field.",
+      "pos_15fps": null,
+      "pos_5fps": null,
+      "pixel_distance": null,
+      "15fps_has_position": false,
+      "5fps_has_position": false,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "click",
+      "time_start": 142910.8,
+      "description": "User clicks on the 'Going to' field.",
+      "pos_15fps": null,
+      "pos_5fps": null,
+      "pixel_distance": null,
+      "15fps_has_position": false,
+      "5fps_has_position": false,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "hover",
+      "time_start": 145810.8,
+      "description": "User hovers over the Heathrow airport suggestion.",
+      "pos_15fps": null,
+      "pos_5fps": null,
+      "pixel_distance": null,
+      "15fps_has_position": false,
+      "5fps_has_position": false,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "select",
+      "time_start": 147660.8,
+      "description": "User selects 'London (LHR - Heathrow)' from the suggestions.",
+      "pos_15fps": null,
+      "pos_5fps": null,
+      "pixel_distance": null,
+      "15fps_has_position": false,
+      "5fps_has_position": false,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "select",
+      "time_start": 172137.6,
+      "description": "User selects the checkbox 'I only need accommodation for part of my trip'.",
+      "pos_15fps": null,
+      "pos_5fps": null,
+      "pixel_distance": null,
+      "15fps_has_position": false,
+      "5fps_has_position": false,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "click",
+      "time_start": 172910.8,
+      "description": "User clicks the 'I only need accommodation for part of my trip' checkbox.",
+      "pos_15fps": null,
+      "pos_5fps": null,
+      "pixel_distance": null,
+      "15fps_has_position": false,
+      "5fps_has_position": false,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "select",
+      "time_start": 173537.6,
+      "description": "User deselects the checkbox 'I only need accommodation for part of my trip'.",
+      "pos_15fps": null,
+      "pos_5fps": null,
+      "pixel_distance": null,
+      "15fps_has_position": false,
+      "5fps_has_position": false,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "hover",
+      "time_start": 173610.8,
+      "description": "User hovers over the 'Search' button.",
+      "pos_15fps": null,
+      "pos_5fps": null,
+      "pixel_distance": null,
+      "15fps_has_position": false,
+      "5fps_has_position": false,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "hover",
+      "time_start": 173987.6,
+      "description": "Cursor hovers over the 'Search' button.",
+      "pos_15fps": null,
+      "pos_5fps": null,
+      "pixel_distance": null,
+      "15fps_has_position": false,
+      "5fps_has_position": false,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "click",
+      "time_start": 174960.8,
+      "description": "User clicks the 'Search' button.",
+      "pos_15fps": null,
+      "pos_5fps": null,
+      "pixel_distance": null,
+      "15fps_has_position": false,
+      "5fps_has_position": false,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "click",
+      "time_start": 174987.6,
+      "description": "User clicks the 'Search' button.",
+      "pos_15fps": null,
+      "pos_5fps": null,
+      "pixel_distance": null,
+      "15fps_has_position": false,
+      "5fps_has_position": false,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "hover",
+      "time_start": 203487.6,
+      "description": "Cursor hovers over the hotel card for 'The Zetter Clerkenwell'.",
+      "pos_15fps": {
+        "x": 624,
+        "y": 560
+      },
+      "pos_5fps": {
+        "x": 624,
+        "y": 560
+      },
+      "pixel_distance": 0.0,
+      "15fps_has_position": true,
+      "5fps_has_position": true,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "hover",
+      "time_start": 206387.6,
+      "description": "Cursor hovers over the hotel card for 'The Drey - Kensington, Earl's Court'.",
+      "pos_15fps": {
+        "x": 624,
+        "y": 343
+      },
+      "pos_5fps": {
+        "x": 624,
+        "y": 342
+      },
+      "pixel_distance": 1.0,
+      "15fps_has_position": true,
+      "5fps_has_position": true,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "click",
+      "time_start": 241014.40000000002,
+      "description": "Click on 'See more' under Property class filter",
+      "pos_15fps": {
+        "x": 680,
+        "y": 324
+      },
+      "pos_5fps": {
+        "x": 680,
+        "y": 324
+      },
+      "pixel_distance": 0.0,
+      "15fps_has_position": true,
+      "5fps_has_position": true,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "hover",
+      "time_start": 246852.6,
+      "description": "Cursor hovers over the Expedia logo.",
+      "pos_15fps": {
+        "x": 680,
+        "y": 248
+      },
+      "pos_5fps": {
+        "x": 680,
+        "y": 248
+      },
+      "pixel_distance": 0.0,
+      "15fps_has_position": true,
+      "5fps_has_position": true,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "select",
+      "time_start": 247314.40000000002,
+      "description": "Select 'Very good 8+' guest rating filter",
+      "pos_15fps": {
+        "x": 680,
+        "y": 248
+      },
+      "pos_5fps": {
+        "x": 680,
+        "y": 248
+      },
+      "pixel_distance": 0.0,
+      "15fps_has_position": true,
+      "5fps_has_position": true,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "click",
+      "time_start": 248137.6,
+      "description": "User clicks the Expedia logo.",
+      "pos_15fps": {
+        "x": 624,
+        "y": 698
+      },
+      "pos_5fps": {
+        "x": 624,
+        "y": 698
+      },
+      "pixel_distance": 0.0,
+      "15fps_has_position": true,
+      "5fps_has_position": true,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "drag",
+      "time_start": 271014.4,
+      "description": "Drag price slider to AU$603",
+      "pos_15fps": {
+        "x": 680,
+        "y": 862
+      },
+      "pos_5fps": {
+        "x": 680,
+        "y": 862
+      },
+      "pixel_distance": 0.0,
+      "15fps_has_position": true,
+      "5fps_has_position": true,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "click",
+      "time_start": 288714.4,
+      "description": "Click on 'Remove all filters'",
+      "pos_15fps": {
+        "x": 323,
+        "y": 925
+      },
+      "pos_5fps": {
+        "x": 323,
+        "y": 925
+      },
+      "pixel_distance": 0.0,
+      "15fps_has_position": true,
+      "5fps_has_position": true,
+      "coverage_lost": false,
+      "coverage_gained": false
+    },
+    {
+      "type": "hover",
+      "time_start": 385258.2,
+      "description": "Hover over hotel name 'The Drey - Kensington, Earl's Court'",
+      "pos_15fps": {
+        "x": 860,
+        "y": 408
+      },
+      "pos_5fps": {
+        "x": 860,
+        "y": 408
+      },
+      "pixel_distance": 0.0,
+      "15fps_has_position": true,
+      "5fps_has_position": true,
+      "coverage_lost": false,
+      "coverage_gained": false
+    }
+  ]
+}

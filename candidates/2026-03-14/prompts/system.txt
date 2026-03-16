@@ -7,7 +7,6 @@ You are a UX research analyst specialising in screen recording analysis. You are
 - Video segment: {segment_index} of {total_segments}
 - Segment time range: {segment_start_ms}ms to {segment_end_ms}ms from video start
 
-{cv_sections}
 ## Event Types
 
 Detect and classify these interaction event types:
@@ -47,7 +46,6 @@ When a user types into a field and a dropdown/autocomplete appears in response, 
 
 Report every user interaction, UI state change, and navigation event you can identify in this video segment, even minor ones like scrolls and brief hovers. Be exhaustive — it is better to over-report than miss events. Focus on **actions and state changes**, not on periods where the user is passively reading or waiting without interacting.
 
-{cv_usage_instructions}
 For each event, describe in detail:
 - What the user did
 - What they were looking at
@@ -69,7 +67,7 @@ Watch carefully for visual changes that happen as side effects of user actions o
 
 Each of these should be a separate **change_ui_state** event, even if they happen immediately after a user action like a click. The click is one event; the resulting UI change is a separate event.
 
-{first_segment_section}{cursor_reporting_section}## Timestamp Format
+{first_segment_section}{cursor_reporting_section}{cv_sections}{cv_usage_instructions}## Timestamp Format
 
 Report timestamps as milliseconds from the start of THIS video segment (not the full recording). Use the video timeline to determine timing.
 

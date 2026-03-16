@@ -119,18 +119,33 @@ def get_video_metadata(path: Path) -> VideoMetadata:
     )
 
 
+_INTERPOLATION_FLAGS: dict[str, int] = {
+    "nearest": cv2.INTER_NEAREST,
+    "linear": cv2.INTER_LINEAR,
+    "area": cv2.INTER_AREA,
+    "cubic": cv2.INTER_CUBIC,
+}
+
+
 def extract_frames(
     path: Path,
     start_sec: float,
     end_sec: float,
     fps: float,
     scale_height: int | None = None,
+    resample: str = "linear",
 ) -> tuple[tuple[float, np.ndarray], ...]:
     """Extract frames from a video at given FPS within a time range.
 
     Uses container PTS timestamps (CAP_PROP_POS_MSEC) so that returned
     timestamps are correct even for variable-frame-rate files.
+
+    resample controls the cv2 interpolation flag used when downscaling.
+    One of: nearest, linear, area, cubic.  Default is linear for
+    backward compatibility; 'area' is preferred for cursor detection.
     """
+    interpolation = _INTERPOLATION_FLAGS.get(resample, cv2.INTER_LINEAR)
+
     cap = cv2.VideoCapture(str(path))
     if not cap.isOpened():
         raise ValueError(f"Cannot open video: {path}")
@@ -161,7 +176,7 @@ def extract_frames(
                 if scale_height is not None and frame.shape[0] != scale_height:
                     aspect = frame.shape[1] / frame.shape[0]
                     new_width = int(scale_height * aspect)
-                    frame = cv2.resize(frame, (new_width, scale_height))
+                    frame = cv2.resize(frame, (new_width, scale_height), interpolation=interpolation)
 
                 frames.append((current_ms, frame))
                 next_capture_ms = current_ms + interval_ms

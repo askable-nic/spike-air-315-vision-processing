@@ -63,8 +63,8 @@ def _rollup_detected(
                 start_ms=detections[i].timestamp_ms,
                 end_ms=detections[j - 1].timestamp_ms,
                 kind="stationary",
-                x0=round(anchor.x, 1),
-                y0=round(anchor.y, 1),
+                x0=round(anchor.x),
+                y0=round(anchor.y),
                 x1=None,
                 y1=None,
             ))
@@ -98,10 +98,10 @@ def _rollup_detected(
                 start_ms=detections[i].timestamp_ms,
                 end_ms=detections[best_k].timestamp_ms,
                 kind="moved",
-                x0=round(detections[i].x, 1),
-                y0=round(detections[i].y, 1),
-                x1=round(detections[best_k].x, 1),
-                y1=round(detections[best_k].y, 1),
+                x0=round(detections[i].x),
+                y0=round(detections[i].y),
+                x1=round(detections[best_k].x),
+                y1=round(detections[best_k].y),
             ))
             i = best_k + 1
         else:
@@ -110,8 +110,8 @@ def _rollup_detected(
                 start_ms=anchor.timestamp_ms,
                 end_ms=anchor.timestamp_ms,
                 kind="stationary",
-                x0=round(anchor.x, 1),
-                y0=round(anchor.y, 1),
+                x0=round(anchor.x),
+                y0=round(anchor.y),
                 x1=None,
                 y1=None,
             ))
@@ -145,6 +145,49 @@ def _rollup_trajectory(
             run_start = idx
 
     return tuple(spans)
+
+
+def _merge_flickering(
+    spans: tuple[_Span, ...],
+    pos_tolerance_px: float = 2.0,
+    max_gap_ms: float = 5000.0,
+) -> tuple[_Span, ...]:
+    """Merge consecutive stationary spans at the same position.
+
+    When the tracker flickers (detected → not-detected → detected) at the same
+    spot, dropping the not-detected gaps leaves adjacent stationary spans with
+    identical coordinates. This collapses them into a single span covering the
+    full time range, provided the gap between them is less than max_gap_ms.
+    """
+    if not spans:
+        return ()
+
+    merged: list[_Span] = []
+    for span in spans:
+        if (
+            merged
+            and span.kind == "stationary"
+            and merged[-1].kind == "stationary"
+            and span.x0 is not None
+            and merged[-1].x0 is not None
+            and abs(span.x0 - merged[-1].x0) <= pos_tolerance_px
+            and abs(span.y0 - merged[-1].y0) <= pos_tolerance_px
+            and span.start_ms - merged[-1].end_ms <= max_gap_ms
+        ):
+            prev = merged[-1]
+            merged[-1] = _Span(
+                start_ms=prev.start_ms,
+                end_ms=span.end_ms,
+                kind="stationary",
+                x0=prev.x0,
+                y0=prev.y0,
+                x1=None,
+                y1=None,
+            )
+        else:
+            merged.append(span)
+
+    return tuple(merged)
 
 
 # ---------------------------------------------------------------------------
@@ -231,7 +274,11 @@ def generate_cursor_summary(
         if segment.start_ms <= d.timestamp_ms <= segment.end_ms
     )
 
-    spans = _rollup_trajectory(seg_detections)
+    raw_spans = _rollup_trajectory(seg_detections)
+    # Drop not-detected spans and merge consecutive stationary spans at the same position
+    spans = _merge_flickering(
+        tuple(s for s in raw_spans if s.kind != "not-detected")
+    )
 
     lines: list[str] = []
     for span in spans:

@@ -193,12 +193,12 @@ def enrich_cursor_positions(
             if points:
                 avg_x = sum(d.x for d in points) / len(points)
                 avg_y = sum(d.y for d in points) / len(points)
-                cursor_dict = {"x": round(avg_x, 1), "y": round(avg_y, 1)}
+                cursor_dict = {"x": round(avg_x), "y": round(avg_y)}
         else:
             # Single point: closest detection within +/-500ms
             detection = _lookup_cursor_at_timestamp(cursor_trajectory, video_relative_start)
             if detection is not None:
-                cursor_dict = {"x": round(detection.x, 1), "y": round(detection.y, 1)}
+                cursor_dict = {"x": round(detection.x), "y": round(detection.y)}
 
         enriched.append(event.model_copy(update={"cursor_position": cursor_dict}))
 
