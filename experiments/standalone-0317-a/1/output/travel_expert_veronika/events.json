@@ -1,0 +1,1282 @@
+[
+  {
+    "type": "change_ui_state",
+    "time_start": 33442.0,
+    "time_end": 33442.0,
+    "description": "Initial screen state: Dark background with white text instructions for screen sharing and a small video feed of the participant in the top right corner.",
+    "confidence": 1.0,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A dark screen with the text: 'Great. To start, please click the \"Share\" button in the Meet call controls and choose to share this window.' A participant's video feed is in the top right."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 34692.0,
+    "time_end": 48292.0,
+    "description": "Scenario text appears on the screen, detailing a travel planning task from Sunshine Coast to London.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The screen remains dark, but a large block of text has appeared in the center, describing a travel planning scenario."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 71242.0,
+    "time_end": 71242.0,
+    "description": "A blue 'Open' button with an external link icon appears at the bottom center of the screen.",
+    "confidence": 1.0,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The dark scenario screen now features a prominent blue 'Open' button at the bottom."
+  },
+  {
+    "type": "click",
+    "time_start": 74942.0,
+    "time_end": 74942.0,
+    "description": "User clicks the 'Open' button to launch the browser.",
+    "confidence": 1.0,
+    "interaction_target": "Open",
+    "cursor_position": {
+      "x": 515,
+      "y": 344
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is positioned over the blue 'Open' button at the moment of the click."
+  },
+  {
+    "type": "navigate",
+    "time_start": 74942.0,
+    "time_end": 79492.0,
+    "description": "Navigation from the prompt screen to the Google homepage.",
+    "confidence": 1.0,
+    "page_title": "Google",
+    "page_location": "https://www.google.com/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The screen transitions from the dark prompt to a white Google search page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 79492.0,
+    "time_end": 79492.0,
+    "description": "Google homepage is fully loaded and visible.",
+    "confidence": 1.0,
+    "page_title": "Google",
+    "page_location": "https://www.google.com/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The Google homepage is displayed with the search bar in the center and 'Australia' at the bottom."
+  },
+  {
+    "type": "input_text",
+    "time_start": 81940.0,
+    "time_end": 89264.0,
+    "description": "User types 'Sunshine Coast to London flights' into the Google search bar.",
+    "confidence": 1.0,
+    "interaction_target": "Search",
+    "page_title": "Google",
+    "page_location": "https://www.google.com/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The text 'Sunshine Coast to London flights' appears in the Google search bar as the user types."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 81942.0,
+    "time_end": 82442.0,
+    "description": "Google autocomplete suggestions dropdown appears below the search bar.",
+    "confidence": 0.9,
+    "page_title": "Google",
+    "page_location": "https://www.google.com/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A list of search suggestions is visible beneath the active search bar."
+  },
+  {
+    "type": "navigate",
+    "time_start": 89264.0,
+    "time_end": 90982.0,
+    "description": "Navigation from the Google homepage to the search results page.",
+    "confidence": 1.0,
+    "page_title": "Sunshine Coast to London flights - Google Search",
+    "page_location": "https://www.google.com/search?q=Sunshine+Coast+to+London+flights",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The Google homepage disappears and is replaced by a page of search results."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 90982.0,
+    "time_end": 90982.0,
+    "description": "Search results page is fully loaded, showing flight options and links.",
+    "confidence": 1.0,
+    "page_title": "Sunshine Coast to London flights - Google Search",
+    "page_location": "https://www.google.com/search?q=Sunshine+Coast+to+London+flights",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The search results page is visible, featuring a 'Flights' section with various airline options."
+  },
+  {
+    "type": "hover",
+    "time_start": 91383.0,
+    "time_end": 92384.0,
+    "description": "User hovers the cursor over a search result link.",
+    "confidence": 0.8,
+    "cursor_position": {
+      "x": 974,
+      "y": 520
+    },
+    "page_title": "Sunshine Coast to London flights - Google Search",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is stationary over a link in the search results."
+  },
+  {
+    "type": "input_text",
+    "time_start": 95681.5934,
+    "time_end": 101281.5934,
+    "description": "User types the first part of the task instructions: 'I can. Imagine you're living on the Sunshine Coast in Queensland and you're planning a holiday to London. Start by telling us what you would consider first when planning a'",
+    "confidence": 1.0,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A dark screen with a central text area where instructions are being typed."
+  },
+  {
+    "type": "scroll",
+    "time_start": 96821.0,
+    "time_end": 98673.0,
+    "description": "User scrolls down the search results page.",
+    "confidence": 0.9,
+    "page_title": "Sunshine Coast to London flights - Google Search",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The page content moves upward as the user scrolls down to see more results."
+  },
+  {
+    "type": "hover",
+    "time_start": 98874.0,
+    "time_end": 100475.0,
+    "description": "User hovers the cursor over a different search result after scrolling.",
+    "confidence": 0.8,
+    "cursor_position": {
+      "x": 978,
+      "y": 626
+    },
+    "page_title": "Sunshine Coast to London flights - Google Search",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is stationary over a new set of search results further down the page."
+  },
+  {
+    "type": "navigate",
+    "time_start": 101281.5934,
+    "time_end": 101381.5934,
+    "description": "Page navigates from the task screen to the Google homepage.",
+    "confidence": 1.0,
+    "page_title": "Google",
+    "page_location": "https://www.google.com/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The Google homepage is displayed in the browser."
+  },
+  {
+    "type": "input_text",
+    "time_start": 101981.5934,
+    "time_end": 103831.5934,
+    "description": "User types 'skyscanner' into the Google search input field.",
+    "confidence": 1.0,
+    "interaction_target": "Search",
+    "page_title": "Google",
+    "page_location": "https://www.google.com/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The Google search bar contains the text 'skyscanner'."
+  },
+  {
+    "type": "hover",
+    "time_start": 101981.5934,
+    "time_end": 102781.5934,
+    "description": "Cursor hovers over the 'AI Mods' button in the Google search bar.",
+    "confidence": 0.8,
+    "interaction_target": "AI Mods",
+    "cursor_position": {
+      "x": 1079,
+      "y": 357
+    },
+    "page_title": "Google",
+    "page_location": "https://www.google.com/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is positioned over the AI Mods icon in the search bar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 102181.5934,
+    "time_end": 103831.5934,
+    "description": "Google search suggestions dropdown appears in response to typing.",
+    "confidence": 0.9,
+    "page_title": "Google",
+    "page_location": "https://www.google.com/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A list of search suggestions is visible below the Google search bar."
+  },
+  {
+    "type": "click",
+    "time_start": 106381.5934,
+    "time_end": 106381.5934,
+    "description": "User clicks on the Skyscanner search result link.",
+    "confidence": 1.0,
+    "interaction_target": "Skyscanner | Find the cheapest flights fast",
+    "cursor_position": {
+      "x": 769,
+      "y": 1034
+    },
+    "page_title": "skyscanner - Google Search",
+    "page_location": "https://www.google.com/search?q=skyscanner",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The first search result link is highlighted as it is clicked."
+  },
+  {
+    "type": "navigate",
+    "time_start": 106381.5934,
+    "time_end": 106481.5934,
+    "description": "Page begins navigating to the Skyscanner website.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A brief glimpse of the Skyscanner loading screen."
+  },
+  {
+    "type": "navigate",
+    "time_start": 106481.5934,
+    "time_end": 106781.5934,
+    "description": "Page navigates back to the task instruction screen.",
+    "confidence": 1.0,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The dark task instruction screen is visible again."
+  },
+  {
+    "type": "input_text",
+    "time_start": 106781.5934,
+    "time_end": 117331.5934,
+    "description": "User continues typing the task instructions: 'long-haul trip like this. You can approach this however you normally would. Show us where you start, what you prioritise, and how you move through the planning process. You might look at flights, explore different travel dates, compare routes and stopovers,'",
+    "confidence": 1.0,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The task instruction text continues to populate on the screen."
+  },
+  {
+    "type": "input_text",
+    "time_start": 126481.5934,
+    "time_end": 128681.5934,
+    "description": "User types the final prompt: 'Yes, please think aloud as you go. What are you looking at right now?'",
+    "confidence": 1.0,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The final block of text appears at the bottom of the instruction area."
+  },
+  {
+    "type": "navigate",
+    "time_start": 148581.5934,
+    "time_end": 148831.5934,
+    "description": "Page navigates to the Skyscanner homepage.",
+    "confidence": 1.0,
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search.",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The Skyscanner homepage is displayed."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 148831.5934,
+    "time_end": 149831.5934,
+    "description": "Skyscanner homepage finishes loading and rendering UI elements.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search.",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The Skyscanner homepage is fully loaded with all search fields visible."
+  },
+  {
+    "type": "hover",
+    "time_start": 148831.5934,
+    "time_end": 149831.5934,
+    "description": "Cursor hovers over the 'Australia' location indicator at the bottom of the page.",
+    "confidence": 0.8,
+    "interaction_target": "Australia",
+    "cursor_position": {
+      "x": 351,
+      "y": 1022
+    },
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search.",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is at the bottom left of the Skyscanner page."
+  },
+  {
+    "type": "hover",
+    "time_start": 155881.5934,
+    "time_end": 156881.5934,
+    "description": "Cursor hovers over the 'From' location input field.",
+    "confidence": 0.8,
+    "interaction_target": "Sydney (SYD)",
+    "cursor_position": {
+      "x": 264,
+      "y": 326
+    },
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search.",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is positioned over the origin airport input field."
+  },
+  {
+    "type": "click",
+    "time_start": 173771.1868,
+    "time_end": 173771.1868,
+    "description": "User clicks on the 'From' airport input field.",
+    "confidence": 0.95,
+    "interaction_target": "Sydney (SYD)",
+    "cursor_position": {
+      "x": 1305,
+      "y": 972
+    },
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search.",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The Skyscanner homepage with the flight search form visible."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 173971.1868,
+    "time_end": 173971.1868,
+    "description": "A dropdown menu with airport suggestions appears below the 'From' input field.",
+    "confidence": 0.95,
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search.",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The 'From' field is active, and a dropdown list of airports is visible."
+  },
+  {
+    "type": "input_text",
+    "time_start": 175371.1868,
+    "time_end": 176121.1868,
+    "description": "User types 'sunsh' into the 'From' input field.",
+    "confidence": 0.95,
+    "interaction_target": "Sydney (SYD)",
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search.",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user is typing in the 'From' field, and the text 'sunsh' is visible."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 175621.1868,
+    "time_end": 175621.1868,
+    "description": "The airport suggestion list updates based on the user's input.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search.",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The dropdown list shows airports matching 'sunsh', including 'Sunshine Coast (MCY)'."
+  },
+  {
+    "type": "hover",
+    "time_start": 176271.1868,
+    "time_end": 176521.1868,
+    "description": "User hovers over the 'Sunshine Coast (MCY)' suggestion.",
+    "confidence": 0.85,
+    "interaction_target": "Sunshine Coast (MCY)",
+    "cursor_position": {
+      "x": 1305,
+      "y": 972
+    },
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search.",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is positioned over the 'Sunshine Coast (MCY)' item in the dropdown."
+  },
+  {
+    "type": "select",
+    "time_start": 177321.1868,
+    "time_end": 177321.1868,
+    "description": "User selects 'Sunshine Coast (MCY)' from the airport suggestions.",
+    "confidence": 0.95,
+    "interaction_target": "Sunshine Coast (MCY)",
+    "cursor_position": {
+      "x": 1305,
+      "y": 973
+    },
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search.",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The 'From' field now contains 'Sunshine Coast (MCY)'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 177621.1868,
+    "time_end": 177621.1868,
+    "description": "A dropdown menu with search options appears below the 'To' input field.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search.",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A small dropdown menu is visible below the destination input field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 178721.1868,
+    "time_end": 180071.1868,
+    "description": "A task instruction overlay appears on the screen.",
+    "confidence": 0.95,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A dark overlay with the text 'Yes, please think aloud as you go. What are you looking at right now?' is visible."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 180121.1868,
+    "time_end": 180121.1868,
+    "description": "The task instruction overlay is dismissed.",
+    "confidence": 0.95,
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search.",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The Skyscanner homepage is visible again."
+  },
+  {
+    "type": "click",
+    "time_start": 181271.1868,
+    "time_end": 181271.1868,
+    "description": "User clicks on the 'To' airport input field.",
+    "confidence": 0.95,
+    "interaction_target": "Country, city or airport",
+    "cursor_position": {
+      "x": 988,
+      "y": 246
+    },
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search.",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is over the destination input field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 181421.1868,
+    "time_end": 181421.1868,
+    "description": "A dropdown menu with airport suggestions appears below the 'To' input field.",
+    "confidence": 0.95,
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search.",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The destination dropdown is visible."
+  },
+  {
+    "type": "input_text",
+    "time_start": 181571.1868,
+    "time_end": 182921.1868,
+    "description": "User types 'london a' into the 'To' input field.",
+    "confidence": 0.95,
+    "interaction_target": "Country, city or airport",
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search.",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user is typing 'london a' in the destination field."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 181571.1868,
+    "time_end": 181571.1868,
+    "description": "The airport suggestion list updates based on the user's input.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search.",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The dropdown shows locations matching 'london a'."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 183621.1868,
+    "time_end": 183621.1868,
+    "description": "The airport suggestion list updates to show London airports.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search.",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The dropdown shows 'London (Any)', 'London Heathrow (LHR)', etc."
+  },
+  {
+    "type": "select",
+    "time_start": 187371.1868,
+    "time_end": 187371.1868,
+    "description": "User selects 'London (Any)' from the airport suggestions.",
+    "confidence": 0.95,
+    "interaction_target": "London (Any)",
+    "cursor_position": null,
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search.",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The 'To' field now contains 'London (Any)'."
+  },
+  {
+    "type": "click",
+    "time_start": 187871.1868,
+    "time_end": 187871.1868,
+    "description": "User clicks the 'Search' button.",
+    "confidence": 0.95,
+    "interaction_target": "Search",
+    "cursor_position": {
+      "x": 1707,
+      "y": 136
+    },
+    "page_title": "Skyscanner | Millions of cheap flights. One simple search.",
+    "page_location": "https://www.skyscanner.com.au/",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is over the blue 'Search' button."
+  },
+  {
+    "type": "navigate",
+    "time_start": 187871.1868,
+    "time_end": 193271.1868,
+    "description": "Navigation from the homepage to the flight search results page.",
+    "confidence": 0.95,
+    "page_title": "Skyscanner | Sunshine Coast to London | Cheap Flights",
+    "page_location": "https://www.skyscanner.com.au/transport/flights/mcy/lond/250627/250726/?adults=1&adultsv2=1&cabinclass=economy&children=0&childrenv2=&infants=0&members_only=false&originentityid=27544008&outboundaltsenabled=false&preferdirects=false&ref=home&rtn=1",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The screen transitions from the homepage to the results page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 188921.1868,
+    "time_end": 188921.1868,
+    "description": "A loading spinner appears on the screen.",
+    "confidence": 0.95,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A white screen with a small blue loading spinner at the top center."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 189221.1868,
+    "time_end": 189221.1868,
+    "description": "Skeleton screens appear on the results page.",
+    "confidence": 0.95,
+    "page_title": "Skyscanner | Sunshine Coast to London | Cheap Flights",
+    "page_location": "https://www.skyscanner.com.au/transport/flights/mcy/lond/250627/250726/?adults=1&adultsv2=1&cabinclass=economy&children=0&childrenv2=&infants=0&members_only=false&originentityid=27544008&outboundaltsenabled=false&preferdirects=false&ref=home&rtn=1",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The results page layout is visible with grey placeholder boxes for flight details."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 193271.1868,
+    "time_end": 193271.1868,
+    "description": "The flight search results load and become visible.",
+    "confidence": 0.95,
+    "page_title": "Skyscanner | Sunshine Coast to London | Cheap Flights",
+    "page_location": "https://www.skyscanner.com.au/transport/flights/mcy/lond/250627/250726/?adults=1&adultsv2=1&cabinclass=economy&children=0&childrenv2=&infants=0&members_only=false&originentityid=27544008&outboundaltsenabled=false&preferdirects=false&ref=home&rtn=1",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The results page is populated with flight options, prices, and 'Select' buttons."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 193571.1868,
+    "time_end": 193571.1868,
+    "description": "The flight results list updates with new information.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner | Sunshine Coast to London | Cheap Flights",
+    "page_location": "https://www.skyscanner.com.au/transport/flights/mcy/lond/250627/250726/?adults=1&adultsv2=1&cabinclass=economy&children=0&childrenv2=&infants=0&members_only=false&originentityid=27544008&outboundaltsenabled=false&preferdirects=false&ref=home&rtn=1",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The list of flights refreshes."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 196521.1868,
+    "time_end": 196521.1868,
+    "description": "A 'Searching...' progress indicator appears.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner | Sunshine Coast to London | Cheap Flights",
+    "page_location": "https://www.skyscanner.com.au/transport/flights/mcy/lond/250627/250726/?adults=1&adultsv2=1&cabinclass=economy&children=0&childrenv2=&infants=0&members_only=false&originentityid=27544008&outboundaltsenabled=false&preferdirects=false&ref=home&rtn=1",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A blue bar with 'Searching [Provider]...' is visible at the top of the results."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 197771.1868,
+    "time_end": 197771.1868,
+    "description": "The flight results list updates.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner | Sunshine Coast to London | Cheap Flights",
+    "page_location": "https://www.skyscanner.com.au/transport/flights/mcy/lond/250627/250726/?adults=1&adultsv2=1&cabinclass=economy&children=0&childrenv2=&infants=0&members_only=false&originentityid=27544008&outboundaltsenabled=false&preferdirects=false&ref=home&rtn=1",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The flight results refresh."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 197921.1868,
+    "time_end": 197921.1868,
+    "description": "A sponsored flight result appears.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner | Sunshine Coast to London | Cheap Flights",
+    "page_location": "https://www.skyscanner.com.au/transport/flights/mcy/lond/250627/250726/?adults=1&adultsv2=1&cabinclass=economy&children=0&childrenv2=&infants=0&members_only=false&originentityid=27544008&outboundaltsenabled=false&preferdirects=false&ref=home&rtn=1",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A 'Book Direct with Virgin Australia' section appears above the main results."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 203271.1868,
+    "time_end": 203271.1868,
+    "description": "The flight results list updates.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner | Sunshine Coast to London | Cheap Flights",
+    "page_location": "https://www.skyscanner.com.au/transport/flights/mcy/lond/250627/250726/?adults=1&adultsv2=1&cabinclass=economy&children=0&childrenv2=&infants=0&members_only=false&originentityid=27544008&outboundaltsenabled=false&preferdirects=false&ref=home&rtn=1",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The flight results refresh."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 206921.1868,
+    "time_end": 206921.1868,
+    "description": "The flight results list updates.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner | Sunshine Coast to London | Cheap Flights",
+    "page_location": "https://www.skyscanner.com.au/transport/flights/mcy/lond/250627/250726/?adults=1&adultsv2=1&cabinclass=economy&children=0&childrenv2=&infants=0&members_only=false&originentityid=27544008&outboundaltsenabled=false&preferdirects=false&ref=home&rtn=1",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The flight results refresh."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 211571.1868,
+    "time_end": 211571.1868,
+    "description": "The flight results list updates.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner | Sunshine Coast to London | Cheap Flights",
+    "page_location": "https://www.skyscanner.com.au/transport/flights/mcy/lond/250627/250726/?adults=1&adultsv2=1&cabinclass=economy&children=0&childrenv2=&infants=0&members_only=false&originentityid=27544008&outboundaltsenabled=false&preferdirects=false&ref=home&rtn=1",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The flight results refresh."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 214921.1868,
+    "time_end": 214921.1868,
+    "description": "The flight results list updates.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner | Sunshine Coast to London | Cheap Flights",
+    "page_location": "https://www.skyscanner.com.au/transport/flights/mcy/lond/250627/250726/?adults=1&adultsv2=1&cabinclass=economy&children=0&childrenv2=&infants=0&members_only=false&originentityid=27544008&outboundaltsenabled=false&preferdirects=false&ref=home&rtn=1",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The flight results refresh."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 219271.1868,
+    "time_end": 219271.1868,
+    "description": "The flight results list updates.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner | Sunshine Coast to London | Cheap Flights",
+    "page_location": "https://www.skyscanner.com.au/transport/flights/mcy/lond/250627/250726/?adults=1&adultsv2=1&cabinclass=economy&children=0&childrenv2=&infants=0&members_only=false&originentityid=27544008&outboundaltsenabled=false&preferdirects=false&ref=home&rtn=1",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The flight results refresh."
+  },
+  {
+    "type": "hover",
+    "time_start": 222671.1868,
+    "time_end": 222821.1868,
+    "description": "User hovers over the 'Select' button for the first result.",
+    "confidence": 0.85,
+    "interaction_target": "Select",
+    "cursor_position": {
+      "x": 945,
+      "y": 825
+    },
+    "page_title": "Skyscanner | Sunshine Coast to London | Cheap Flights",
+    "page_location": "https://www.skyscanner.com.au/transport/flights/mcy/lond/250627/250726/?adults=1&adultsv2=1&cabinclass=economy&children=0&childrenv2=&infants=0&members_only=false&originentityid=27544008&outboundaltsenabled=false&preferdirects=false&ref=home&rtn=1",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is over the 'Select' button of the top flight result."
+  },
+  {
+    "type": "scroll",
+    "time_start": 222871.1868,
+    "time_end": 223521.1868,
+    "description": "User scrolls down the search results page.",
+    "confidence": 0.9,
+    "page_title": "Skyscanner | Sunshine Coast to London | Cheap Flights",
+    "page_location": "https://www.skyscanner.com.au/transport/flights/mcy/lond/250627/250726/?adults=1&adultsv2=1&cabinclass=economy&children=0&childrenv2=&infants=0&members_only=false&originentityid=27544008&outboundaltsenabled=false&preferdirects=false&ref=home&rtn=1",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The page content moves upwards as the user scrolls."
+  },
+  {
+    "type": "scroll",
+    "time_start": 232960.78019999998,
+    "time_end": 235910.78019999998,
+    "description": "Scroll down to view more flight results.",
+    "confidence": 0.9,
+    "page_title": "Sunshine Coast (MCY) - London (Any) | 1 adult, Economy",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user is scrolling through a long list of flight results on Skyscanner."
+  },
+  {
+    "type": "scroll",
+    "time_start": 235960.78019999998,
+    "time_end": 236910.78019999998,
+    "description": "Scroll back up to the top of the page.",
+    "confidence": 0.9,
+    "page_title": "Sunshine Coast (MCY) - London (Any) | 1 adult, Economy",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user scrolls up towards the top of the Skyscanner search results page."
+  },
+  {
+    "type": "click",
+    "time_start": 236960.78019999998,
+    "time_end": 237010.78019999998,
+    "description": "Click on the '2+ stops' filter checkbox.",
+    "confidence": 0.95,
+    "interaction_target": "2+ stops",
+    "cursor_position": {
+      "x": 673,
+      "y": 501
+    },
+    "page_title": "Sunshine Coast (MCY) - London (Any) | 1 adult, Economy",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user clicks a filter checkbox in the Skyscanner sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 237960.78019999998,
+    "time_end": 238410.78019999998,
+    "description": "A 'Searching...' loading overlay appears over the results.",
+    "confidence": 0.9,
+    "page_title": "Sunshine Coast (MCY) - London (Any) | 1 adult, Economy",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A semi-transparent loading overlay with the text 'Searching...' is visible on Skyscanner."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 238410.78019999998,
+    "time_end": 238510.78019999998,
+    "description": "The flight results update to show no matches found.",
+    "confidence": 0.9,
+    "page_title": "Sunshine Coast (MCY) - London (Any) | 1 adult, Economy",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "Skyscanner shows a message saying no flights match the filters, along with hotel recommendations."
+  },
+  {
+    "type": "click",
+    "time_start": 239060.78019999998,
+    "time_end": 239110.78019999998,
+    "description": "Click on the '2+ stops' filter checkbox to uncheck it.",
+    "confidence": 0.95,
+    "interaction_target": "2+ stops",
+    "cursor_position": {
+      "x": 511,
+      "y": 56
+    },
+    "page_title": "Sunshine Coast (MCY) - London (Any) | 1 adult, Economy",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user unchecks the '2+ stops' filter in the Skyscanner sidebar."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 239660.78019999998,
+    "time_end": 239760.78019999998,
+    "description": "The flight results list is restored.",
+    "confidence": 0.9,
+    "page_title": "Sunshine Coast (MCY) - London (Any) | 1 adult, Economy",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The original flight results are visible again on Skyscanner."
+  },
+  {
+    "type": "scroll",
+    "time_start": 241160.78019999998,
+    "time_end": 242210.78019999998,
+    "description": "Scroll down the flight results list.",
+    "confidence": 0.9,
+    "page_title": "Sunshine Coast (MCY) - London (Any) | 1 adult, Economy",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user scrolls down the Skyscanner results page."
+  },
+  {
+    "type": "scroll",
+    "time_start": 242260.78019999998,
+    "time_end": 245610.78019999998,
+    "description": "Scroll down to view more results.",
+    "confidence": 0.9,
+    "page_title": "Sunshine Coast (MCY) - London (Any) | 1 adult, Economy",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user continues scrolling down on Skyscanner."
+  },
+  {
+    "type": "scroll",
+    "time_start": 245660.78019999998,
+    "time_end": 246010.78019999998,
+    "description": "Scroll back up the page.",
+    "confidence": 0.9,
+    "page_title": "Sunshine Coast (MCY) - London (Any) | 1 adult, Economy",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user scrolls up on the Skyscanner results page."
+  },
+  {
+    "type": "navigate",
+    "time_start": 265910.7802,
+    "time_end": 266110.7802,
+    "description": "Navigate to the Google New Tab page.",
+    "confidence": 0.95,
+    "page_title": "New Tab",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The browser displays the Google New Tab page with search bar and shortcuts."
+  },
+  {
+    "type": "hover",
+    "time_start": 266110.7802,
+    "time_end": 266860.7802,
+    "description": "Hover over the 'Home' shortcut icon.",
+    "confidence": 0.8,
+    "interaction_target": "Home",
+    "cursor_position": {
+      "x": 1079,
+      "y": 263
+    },
+    "page_title": "New Tab",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is positioned over a shortcut icon on the Google New Tab page."
+  },
+  {
+    "type": "navigate",
+    "time_start": 266910.7802,
+    "time_end": 267260.7802,
+    "description": "Navigate to Trello.",
+    "confidence": 0.95,
+    "page_title": "Boards | Trello",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The browser loads the Trello home page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 267260.7802,
+    "time_end": 267760.7802,
+    "description": "Trello home page content starts loading.",
+    "confidence": 0.9,
+    "page_title": "Boards | Trello",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The Trello interface is visible but content is still populating."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 267760.7802,
+    "time_end": 267810.7802,
+    "description": "Workspace and boards list appear.",
+    "confidence": 0.9,
+    "page_title": "Boards | Trello",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The Trello home page shows the user's boards and workspace."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 267810.7802,
+    "time_end": 267860.7802,
+    "description": "A cookie consent banner appears.",
+    "confidence": 0.9,
+    "page_title": "Boards | Trello",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A banner regarding cookies is visible at the top of the Trello page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 267860.7802,
+    "time_end": 267960.7802,
+    "description": "A Jira integration section appears.",
+    "confidence": 0.9,
+    "page_title": "Boards | Trello",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A new section related to Jira is displayed on the Trello home page."
+  },
+  {
+    "type": "hover",
+    "time_start": 268610.7802,
+    "time_end": 270560.7802,
+    "description": "Hover over the 'New Zealand' board card.",
+    "confidence": 0.8,
+    "interaction_target": "New Zealand",
+    "cursor_position": {
+      "x": 74,
+      "y": 32
+    },
+    "page_title": "Boards | Trello",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor lingers over the 'New Zealand' board card on Trello."
+  },
+  {
+    "type": "click",
+    "time_start": 270610.7802,
+    "time_end": 270660.7802,
+    "description": "Click on the 'Japan' board card.",
+    "confidence": 0.95,
+    "interaction_target": "Japan",
+    "cursor_position": {
+      "x": 1891,
+      "y": 537
+    },
+    "page_title": "Boards | Trello",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user clicks the 'Japan' board card on the Trello home page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 270810.7802,
+    "time_end": 271510.7802,
+    "description": "The 'Japan' board starts loading.",
+    "confidence": 0.9,
+    "page_title": "Japan | Trello",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The Trello board for 'Japan' is loading, showing the background image."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 271510.7802,
+    "time_end": 271660.7802,
+    "description": "Board lists and cards appear.",
+    "confidence": 0.9,
+    "page_title": "Japan | Trello",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The content of the 'Japan' Trello board is now fully visible."
+  },
+  {
+    "type": "scroll",
+    "time_start": 272110.7802,
+    "time_end": 272560.7802,
+    "description": "Scroll horizontally to the right.",
+    "confidence": 0.9,
+    "page_title": "Japan | Trello",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user is scrolling the Trello board horizontally to the right."
+  },
+  {
+    "type": "hover",
+    "time_start": 273760.7802,
+    "time_end": 274010.7802,
+    "description": "Hover over the 'Hokkaido Shrine' card.",
+    "confidence": 0.8,
+    "interaction_target": "Hokkaido Shrine",
+    "cursor_position": null,
+    "page_title": "Japan | Trello",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor moves to a card in the 'Sapporo To Do' list on Trello."
+  },
+  {
+    "type": "hover",
+    "time_start": 278760.7802,
+    "time_end": 279110.7802,
+    "description": "Hover over the 'Lake Toyako' card.",
+    "confidence": 0.8,
+    "interaction_target": "Lake Toyako",
+    "cursor_position": null,
+    "page_title": "Japan | Trello",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is over a card in the 'Niseko To Do' list on Trello."
+  },
+  {
+    "type": "scroll",
+    "time_start": 279160.7802,
+    "time_end": 283960.7802,
+    "description": "Scroll horizontally back to the left.",
+    "confidence": 0.9,
+    "page_title": "Japan | Trello",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The user scrolls the Trello board horizontally back to the left."
+  },
+  {
+    "type": "navigate",
+    "time_start": 284010.7802,
+    "time_end": 284710.7802,
+    "description": "Navigate back to Skyscanner.",
+    "confidence": 0.95,
+    "page_title": "Sunshine Coast (MCY) - London (Any) | 1 adult, Economy",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The browser returns to the Skyscanner search results page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 284910.7802,
+    "time_end": 285160.7802,
+    "description": "Google New Tab page loads.",
+    "confidence": 0.9,
+    "page_title": "New Tab",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The Google New Tab page is fully loaded."
+  },
+  {
+    "type": "navigate",
+    "time_start": 290260.7802,
+    "time_end": 291510.7802,
+    "description": "Navigate to Booking.com.",
+    "confidence": 0.95,
+    "page_title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The browser loads the Booking.com home page."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 290500.3736,
+    "time_end": 290600.3736,
+    "description": "A 'Genius' sign-in modal appears over the homepage.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A white modal with the heading 'Genius' and a 'Sign in or register' button appears in the center of the screen."
+  },
+  {
+    "type": "hover",
+    "time_start": 290500.3736,
+    "time_end": 292800.3736,
+    "description": "Hovering over the 'Sign in or register' button in the modal.",
+    "confidence": 0.8,
+    "interaction_target": "Sign in or register",
+    "cursor_position": {
+      "x": 289,
+      "y": 363
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is positioned over the blue 'Sign in or register' button inside the modal."
+  },
+  {
+    "type": "click",
+    "time_start": 293000.3736,
+    "time_end": 293050.3736,
+    "description": "Clicking the 'X' button to close the sign-in modal.",
+    "confidence": 0.9,
+    "cursor_position": {
+      "x": 350,
+      "y": 122
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor moves to the top right of the modal and clicks the close icon."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 293050.3736,
+    "time_end": 293150.3736,
+    "description": "The sign-in modal closes.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The modal is gone, and the full Booking.com homepage is visible again."
+  },
+  {
+    "type": "click",
+    "time_start": 300450.3736,
+    "time_end": 300550.3736,
+    "description": "Clicking into the destination search field.",
+    "confidence": 0.9,
+    "interaction_target": "Cradle Mountain",
+    "cursor_position": {
+      "x": 495,
+      "y": 126
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor clicks inside the search box that currently contains 'Cradle Mountain'."
+  },
+  {
+    "type": "click",
+    "time_start": 302700.3736,
+    "time_end": 302800.3736,
+    "description": "Clicking the clear button in the destination field.",
+    "confidence": 0.9,
+    "cursor_position": {
+      "x": 1360,
+      "y": 639
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The text 'Cradle Mountain' is cleared from the search box."
+  },
+  {
+    "type": "input_text",
+    "time_start": 303850.3736,
+    "time_end": 306200.3736,
+    "description": "Typing 'london' into the destination search field.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The letters 'l', 'o', 'n', 'd', 'o', 'n' appear in the search box."
+  },
+  {
+    "type": "change_ui_state",
+    "time_start": 304650.3736,
+    "time_end": 304750.3736,
+    "description": "Autocomplete dropdown appears with location suggestions.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "A list of suggested locations appears below the search box."
+  },
+  {
+    "type": "hover",
+    "time_start": 306300.3736,
+    "time_end": 306550.3736,
+    "description": "Hovering over the 'London' suggestion in the dropdown.",
+    "confidence": 0.8,
+    "interaction_target": "London, Greater London, United Kingdom",
+    "cursor_position": {
+      "x": 1392,
+      "y": 553
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is positioned over the first item in the autocomplete list."
+  },
+  {
+    "type": "select",
+    "time_start": 306600.3736,
+    "time_end": 306700.3736,
+    "description": "Selecting 'London, Greater London, United Kingdom' from the autocomplete list.",
+    "confidence": 0.9,
+    "interaction_target": "London, Greater London, United Kingdom",
+    "cursor_position": {
+      "x": 240,
+      "y": 186
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The dropdown closes and the selected location is populated in the search box."
+  },
+  {
+    "type": "hover",
+    "time_start": 307300.3736,
+    "time_end": 307500.3736,
+    "description": "Hovering over the 'Search' button.",
+    "confidence": 0.8,
+    "interaction_target": "Search",
+    "cursor_position": {
+      "x": 480,
+      "y": 505
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is positioned over the blue 'Search' button on the right side of the search bar."
+  },
+  {
+    "type": "click",
+    "time_start": 307550.3736,
+    "time_end": 307600.3736,
+    "description": "Clicking the 'Search' button.",
+    "confidence": 0.9,
+    "interaction_target": "Search",
+    "cursor_position": {
+      "x": 480,
+      "y": 505
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The search button is activated, triggering a page load."
+  },
+  {
+    "type": "navigate",
+    "time_start": 307600.3736,
+    "time_end": 315550.3736,
+    "description": "Navigation to search results page for London.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The screen shows a loading state before displaying a list of hotel properties in London."
+  },
+  {
+    "type": "hover",
+    "time_start": 318650.3736,
+    "time_end": 319750.3736,
+    "description": "Hovering over a hotel result card.",
+    "confidence": 0.8,
+    "interaction_target": "Deluxe Two-Bedroom Vauxhall Apartment",
+    "cursor_position": {
+      "x": 796,
+      "y": 268
+    },
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The cursor is stationary over the first hotel result in the list."
+  },
+  {
+    "type": "scroll",
+    "time_start": 326400.3736,
+    "time_end": 331900.3736,
+    "description": "Scrolling down the search results page.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The page content moves vertically as the user scrolls through the list of hotels."
+  },
+  {
+    "type": "navigate",
+    "time_start": 338700.3736,
+    "time_end": 338800.3736,
+    "description": "Transition to task completion/feedback screen.",
+    "confidence": 0.9,
+    "viewport_width": 1916,
+    "viewport_height": 1082,
+    "frame_description": "The Booking.com page is replaced by a dark screen with a question from the testing platform."
+  }
+]

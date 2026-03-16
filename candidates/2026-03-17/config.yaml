@@ -1,0 +1,65 @@
+# --- Gemini API ---
+gemini:
+  api_key_env: "GEMINI_API_KEY"
+  model: "gemini-3-flash-preview"
+  temperature: 0.1
+  max_concurrent: 3
+
+# --- Cost tracking ($/token) ---
+token_costs:
+  "gemini-2.5-flash":
+    input_token_cost: 0.0000003 # $0.30 / 1M tokens
+    output_token_cost: 0.0000025 # $2.50 / 1M tokens
+  "gemini-3-flash-preview":
+    input_token_cost: 0.0000005 # $0.50 / 1M tokens
+    output_token_cost: 0.0000030 # $3.00 / 1M tokens
+
+# --- Video ---
+video:
+  target_pixels: 2073600
+  video_fps: 20
+
+# --- Segmentation ---
+segmentation:
+  max_segment_duration_ms: 75000
+  segment_overlap_ms: 5000
+
+# --- Cursor Tracking ---
+cursor:
+  tracking_base_fps: 2.0
+  tracking_peak_fps: 5.0
+  tracking_displacement_threshold_px: 30
+  tracking_active_padding_ms: 500
+  match_height: 540
+  template_scales: [0.3, 0.4, 0.5, 0.8, 1.0, 1.25, 1.5]
+  match_threshold: 0.6
+  early_exit_threshold: 0.9
+  resample_down: area
+  resample_up: nearest
+  max_interpolation_gap_ms: 500
+  smooth_window: 3
+  smooth_displacement_threshold: 10.0
+
+# --- Optical Flow ---
+flow:
+  flow_fps: 2.0
+  flow_grid_step: 20
+  flow_window_size_ms: 1000
+  flow_window_step_ms: 500
+  resolution_height: 720
+
+# --- CV Summary ---
+cv_summary:
+  summary_window_ms: 250
+
+# --- Merge & Dedup ---
+merge:
+  time_tolerance_ms: 2000
+  similarity_threshold: 0.7
+  cursor_event_types:
+    - click
+    - hover
+    - dwell
+    - cursor_thrash
+    - select
+    - drag

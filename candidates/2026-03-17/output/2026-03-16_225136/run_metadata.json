@@ -1,0 +1,162 @@
+{
+  "run_id": "2026-03-16_225136",
+  "timestamp": "2026-03-16T22:58:09.509407+00:00",
+  "config": {
+    "gemini": {
+      "api_key_env": "GEMINI_API_KEY",
+      "model": "gemini-3-flash-preview",
+      "temperature": 0.1,
+      "max_concurrent": 3
+    },
+    "video": {
+      "target_pixels": 2073600,
+      "video_fps": 20
+    },
+    "segmentation": {
+      "max_segment_duration_ms": 75000,
+      "segment_overlap_ms": 5000
+    },
+    "cursor": {
+      "tracking_base_fps": 2.0,
+      "tracking_peak_fps": 5.0,
+      "tracking_displacement_threshold_px": 30.0,
+      "tracking_active_padding_ms": 500,
+      "match_height": 540,
+      "template_scales": [
+        0.3,
+        0.4,
+        0.5,
+        0.8,
+        1.0,
+        1.25,
+        1.5
+      ],
+      "match_threshold": 0.6,
+      "early_exit_threshold": 0.9,
+      "resample_down": "area",
+      "resample_up": "nearest",
+      "static_filter_duration_ms": 3000,
+      "static_filter_tolerance_px": 1.0,
+      "max_interpolation_gap_ms": 500,
+      "smooth_window": 3,
+      "smooth_displacement_threshold": 10.0
+    },
+    "flow": {
+      "flow_fps": 2.0,
+      "flow_grid_step": 20,
+      "flow_window_size_ms": 1000,
+      "flow_window_step_ms": 500,
+      "resolution_height": 720
+    },
+    "cv_summary": {
+      "summary_window_ms": 250
+    },
+    "merge": {
+      "time_tolerance_ms": 2000,
+      "similarity_threshold": 0.7,
+      "cursor_event_types": [
+        "click",
+        "hover",
+        "dwell",
+        "cursor_thrash",
+        "select",
+        "drag"
+      ]
+    },
+    "token_costs": {
+      "gemini-2.5-flash": {
+        "input_token_cost": 3e-07,
+        "output_token_cost": 2.5e-06
+      },
+      "gemini-3-flash-preview": {
+        "input_token_cost": 5e-07,
+        "output_token_cost": 3e-06
+      }
+    }
+  },
+  "video_path": "/Users/nic/Developer/spike-air-315-vision-processing/input_data/screen_tracks/ask_create_study_brandon.mp4",
+  "video_duration_ms": 443366.667,
+  "video_dimensions": {
+    "width": 1816,
+    "height": 1142
+  },
+  "screen_track_start_offset": 484088,
+  "segments": [
+    {
+      "index": 0,
+      "start_ms": 0.0,
+      "end_ms": 78894.4445,
+      "duration_ms": 78894.4,
+      "event_count": 26,
+      "input_tokens": 96859,
+      "output_tokens": 3710,
+      "analysis_ms": 70224.0
+    },
+    {
+      "index": 1,
+      "start_ms": 68894.4445,
+      "end_ms": 152788.889,
+      "duration_ms": 83894.4,
+      "event_count": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "error": "Unterminated string starting at: line 188 column 17 (char 8046)"
+    },
+    {
+      "index": 2,
+      "start_ms": 142788.889,
+      "end_ms": 226683.3335,
+      "duration_ms": 83894.4,
+      "event_count": 60,
+      "input_tokens": 102912,
+      "output_tokens": 10145,
+      "analysis_ms": 115898.9
+    },
+    {
+      "index": 3,
+      "start_ms": 216683.3335,
+      "end_ms": 300577.778,
+      "duration_ms": 83894.4,
+      "event_count": 36,
+      "input_tokens": 102887,
+      "output_tokens": 4501,
+      "analysis_ms": 80726.1
+    },
+    {
+      "index": 4,
+      "start_ms": 290577.778,
+      "end_ms": 374472.2225,
+      "duration_ms": 83894.4,
+      "event_count": 21,
+      "input_tokens": 103027,
+      "output_tokens": 2956,
+      "analysis_ms": 60911.9
+    },
+    {
+      "index": 5,
+      "start_ms": 364472.2225,
+      "end_ms": 443366.667,
+      "duration_ms": 78894.4,
+      "event_count": 33,
+      "input_tokens": 96947,
+      "output_tokens": 4790,
+      "analysis_ms": 60203.3
+    }
+  ],
+  "cv_analysis": {
+    "cursor_detections": 907,
+    "cursor_detected": 38,
+    "flow_windows": 885
+  },
+  "events_merged": 176,
+  "events_final": 132,
+  "total_input_tokens": 502632,
+  "total_output_tokens": 26102,
+  "timing": {
+    "cursor_tracking_ms": 25017.0,
+    "optical_flow_ms": 5760.0,
+    "gemini_analysis_ms": 344467.6,
+    "total_ms": 393155.5,
+    "video_duration_ms": 443366.667
+  }
+}
