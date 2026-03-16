@@ -34,6 +34,8 @@ _SKIPPABLE = ("cursor", "flow", "segment", "prompt", "gemini", "merge")
 )
 @click.option("--no-cursor", is_flag=True, default=False, help="Skip cursor tracking entirely.")
 @click.option("--no-flow", is_flag=True, default=False, help="Skip optical flow analysis.")
+@click.option("--cursor-base-fps", type=float, default=None, help="Override cursor tracking_base_fps.")
+@click.option("--cursor-peak-fps", type=float, default=None, help="Override cursor tracking_peak_fps.")
 def cli(
     video: Path,
     offset: int,
@@ -42,6 +44,8 @@ def cli(
     skip_stages: tuple[str, ...],
     no_cursor: bool,
     no_flow: bool,
+    cursor_base_fps: float | None,
+    cursor_peak_fps: float | None,
 ) -> None:
     """Extract user interaction events from a screen recording video.
 
@@ -79,6 +83,17 @@ def cli(
     if config_path is None:
         config_path = app_root / "config.yaml"
     config = load_config(config_path)
+
+    # Apply cursor FPS overrides if provided
+    if cursor_base_fps is not None or cursor_peak_fps is not None:
+        cursor_overrides: dict = {}
+        if cursor_base_fps is not None:
+            cursor_overrides["tracking_base_fps"] = cursor_base_fps
+        if cursor_peak_fps is not None:
+            cursor_overrides["tracking_peak_fps"] = cursor_peak_fps
+        config = config.model_copy(update={
+            "cursor": config.cursor.model_copy(update=cursor_overrides),
+        })
 
     extra_skips = (("cursor",) if no_cursor else ()) + (("flow",) if no_flow else ())
     skip = frozenset(skip_stages + extra_skips)

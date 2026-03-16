@@ -1,0 +1,62 @@
+{
+  "model": "gemini-3-flash-preview",
+  "temperature": 0.1,
+  "video_fps": 20,
+  "video_metadata": {
+    "fps": 20.0
+  },
+  "video_mime_type": "video/mp4",
+  "video_bytes_size": 4350315,
+  "segment_index": 2,
+  "segment_start_ms": 143022.66286666665,
+  "segment_end_ms": 227033.99429999996,
+  "cv_summary_lines": 13,
+  "response_mime_type": "application/json",
+  "response_schema": {
+    "type": "ARRAY",
+    "items": {
+      "type": "OBJECT",
+      "properties": {
+        "thinking": {
+          "type": "STRING"
+        },
+        "type": {
+          "type": "STRING"
+        },
+        "time_start_ms": {
+          "type": "NUMBER"
+        },
+        "time_end_ms": {
+          "type": "NUMBER"
+        },
+        "description": {
+          "type": "STRING"
+        },
+        "confidence": {
+          "type": "NUMBER"
+        },
+        "interaction_target": {
+          "type": "STRING"
+        },
+        "page_title": {
+          "type": "STRING"
+        },
+        "page_location": {
+          "type": "STRING"
+        },
+        "frame_description": {
+          "type": "STRING"
+        }
+      },
+      "required": [
+        "thinking",
+        "type",
+        "time_start_ms",
+        "time_end_ms",
+        "description",
+        "confidence"
+      ]
+    }
+  },
+  "system_prompt_length": 9368
+}

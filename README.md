@@ -390,6 +390,107 @@ Disabled by default. Enable with `observe.enabled=true`.
 | `similarity_threshold` | float | `0.7` | Min description similarity to consider events duplicates |
 | `discard_context_events` | bool | `true` | Drop events detected only in context frames |
 
+## Standalone Pipeline (`candidates/2026-03-14`)
+
+A self-contained extraction pipeline in `candidates/2026-03-14/vex_extract/` that runs independently of the `vex` CLI framework above. Uses `run_standalone.py` to orchestrate runs across all 12 sessions and save results into experiment branches.
+
+### Pipeline stages
+
+```
+normalize → cursor → flow → segment → prompt → gemini → merge
+```
+
+- **normalize** — Re-encode video to consistent resolution via ffmpeg
+- **cursor** — Adaptive two-pass cursor tracking (coarse at base FPS, fine at peak FPS in active regions), with scale calibration and multi-candidate resolution
+- **flow** — Sparse optical flow analysis
+- **segment** — Split video into overlapping segments for Gemini
+- **prompt** — Render prompts with CV summaries (no API calls)
+- **gemini** — Send segments to Gemini for event detection
+- **merge** — Merge, deduplicate, and enrich events with cursor positions
+
+### Running experiments
+
+Full pipeline run across all sessions:
+
+```bash
+python run_standalone.py \
+    --candidate 2026-03-14 \
+    --branch standalone-c \
+    --iteration 1
+```
+
+Skip cursor or flow stages:
+
+```bash
+python run_standalone.py \
+    --candidate 2026-03-14 \
+    --branch standalone-b \
+    --iteration 2 \
+    --no-cursor --no-flow
+```
+
+Stop after prompt generation (no Gemini cost) with custom cursor FPS:
+
+```bash
+python run_standalone.py \
+    --candidate 2026-03-14 \
+    --branch standalone-c \
+    --iteration 2 \
+    -- --cursor-base-fps 3 --cursor-peak-fps 10 --stop-after prompt
+```
+
+Run specific sessions:
+
+```bash
+python run_standalone.py \
+    --candidate 2026-03-14 \
+    --branch standalone-c \
+    --iteration 2 \
+    --sessions travel_expert_william,opportunity_list_ben \
+    -- --stop-after prompt
+```
+
+### Comparing cursor tracking experiments
+
+`compare_cursor_experiments.py` compares cursor trajectories, per-segment cursor summaries, and event cursor enrichment between two experiment iterations. Designed for rapid iteration on cursor tracking parameters without Gemini cost.
+
+```bash
+python compare_cursor_experiments.py \
+    --base standalone-c/1 \
+    --experiment standalone-c/2
+```
+
+The report covers:
+- **Trajectory comparison** — detection counts, per-frame agreement, position drift
+- **Cursor summary diffs** — unified diffs of cursor text injected into each segment's Gemini prompt
+- **Event enrichment** — re-enriches base events with the experimental trajectory to show which events gain/lose cursor positions and how positions shift
+
+### Standalone experiment output
+
+Results are saved to `experiments/{branch}/{iteration}/output/{session_id}/`:
+
+- `events.json` — final merged events
+- `run_metadata.json` — config, timing, token usage, segment details
+- `cv/cursor_trajectory.json` — per-frame cursor detections
+- `cv/flow_windows.json` — optical flow summaries
+- `segments/segment_NNN/cursor_summary.txt` — cursor summary text injected into Gemini prompt
+- `segments/segment_NNN/flow_summary.txt` — flow summary text injected into Gemini prompt
+- `segments/segment_NNN/prompt.txt` — full rendered prompt
+
+### Standalone CLI reference
+
+Pass-through args after `--` are forwarded to `vex_extract`:
+
+| Flag | Type | Description |
+|---|---|---|
+| `--cursor-base-fps` | float | Override coarse pass FPS (default: from config.yaml) |
+| `--cursor-peak-fps` | float | Override fine pass FPS (default: from config.yaml) |
+| `--stop-after` | choice | Stop after a stage: `normalize`, `cursor`, `flow`, `segment`, `prompt`, `gemini`, `merge` |
+| `--skip` | choice (repeatable) | Skip a stage (downstream stages degrade gracefully) |
+| `--no-cursor` | flag | Skip cursor tracking |
+| `--no-flow` | flag | Skip optical flow |
+| `--config` | path | Use an alternative config YAML |
+
 ## Input Data
 
 12 sessions in `input_data/` with screen track videos, full session videos, and transcripts. Described in `input_data/manifest.json`. Input data is read-only and shared across all experiments.

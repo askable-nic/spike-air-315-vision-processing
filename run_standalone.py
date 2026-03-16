@@ -125,7 +125,12 @@ def find_run_output(candidate_output_dir: Path, stdout_text: str) -> Path | None
 
 
 def copy_results(run_dir: Path, dest_dir: Path) -> tuple[str, ...]:
-    """Copy events.json and run_metadata.json to experiment output directory."""
+    """Copy pipeline output to experiment output directory.
+
+    Copies events.json, run_metadata.json, cv/ (cursor trajectory, flow
+    windows), and per-segment summaries (cursor_summary.txt, flow_summary.txt,
+    prompt.txt).
+    """
     dest_dir.mkdir(parents=True, exist_ok=True)
     copied: list[str] = []
     for filename in ("events.json", "run_metadata.json"):
@@ -133,6 +138,31 @@ def copy_results(run_dir: Path, dest_dir: Path) -> tuple[str, ...]:
         if src.exists():
             shutil.copy2(src, dest_dir / filename)
             copied.append(filename)
+
+    # Copy CV data (cursor trajectory, flow windows)
+    cv_src = run_dir / "cv"
+    if cv_src.is_dir():
+        cv_dest = dest_dir / "cv"
+        if cv_dest.exists():
+            shutil.rmtree(cv_dest)
+        shutil.copytree(cv_src, cv_dest)
+        copied.append("cv/")
+
+    # Copy per-segment summaries and prompts
+    segments_src = run_dir / "segments"
+    if segments_src.is_dir():
+        _SEGMENT_FILES = ("cursor_summary.txt", "flow_summary.txt", "prompt.txt")
+        for seg_dir in sorted(segments_src.iterdir()):
+            if not seg_dir.is_dir():
+                continue
+            seg_dest = dest_dir / "segments" / seg_dir.name
+            seg_dest.mkdir(parents=True, exist_ok=True)
+            for fname in _SEGMENT_FILES:
+                src = seg_dir / fname
+                if src.exists():
+                    shutil.copy2(src, seg_dest / fname)
+        copied.append("segments/")
+
     return tuple(copied)
 
 
