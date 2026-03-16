@@ -29,6 +29,7 @@ class MatchResult(NamedTuple):
     y: float
     confidence: float
     template_id: str
+    scale: float
 
 
 class MatchCandidate(NamedTuple):
@@ -37,6 +38,7 @@ class MatchCandidate(NamedTuple):
     y: float
     confidence: float
     template_id: str
+    scale: float
 
 
 class _PrescaledEntry(NamedTuple):
@@ -134,6 +136,7 @@ def match_cursor_in_frame(
                 y=max_loc[1] + hotspot_y,
                 confidence=float(max_val),
                 template_id=entry.template.template_id,
+                scale=entry.scale,
             )
             best_conf = max_val
 
@@ -178,6 +181,7 @@ def match_cursor_in_frame_multi(
                 y=max_loc[1] + hotspot_y,
                 confidence=float(max_val),
                 template_id=entry.template.template_id,
+                scale=entry.scale,
             ))
             if max_val > overall_best_conf:
                 overall_best_conf = max_val
@@ -207,17 +211,98 @@ def match_cursor_in_frame_multi(
 _MATCH_HEIGHT = 360
 
 
+def _narrow_prescaled(
+    all_prescaled: tuple[_PrescaledEntry, ...],
+    template_id: str,
+    target_scale: float,
+    sorted_scales: tuple[float, ...],
+) -> tuple[_PrescaledEntry, ...]:
+    """Filter prescaled entries to same template at target scale ± 1 neighbor."""
+    try:
+        idx = sorted_scales.index(target_scale)
+    except ValueError:
+        return ()
+    neighbor_scales = frozenset(
+        sorted_scales[i] for i in range(max(0, idx - 1), min(len(sorted_scales), idx + 2))
+    )
+    return tuple(
+        e for e in all_prescaled
+        if e.template.template_id == template_id and e.scale in neighbor_scales
+    )
+
+
+def _calibrate_scales(
+    observations: tuple[tuple[float, float], ...],
+    sorted_scales: tuple[float, ...],
+    min_confident: int = 5,
+    confidence_floor: float = 0.75,
+    dominance_ratio: float = 0.5,
+) -> tuple[float, ...] | None:
+    """Analyze coarse-pass scale observations to narrow the prescaled set for fine pass.
+
+    Returns the dominant scale ± 1 neighbor from sorted_scales, or None if
+    no clear dominant scale can be determined.
+    """
+    confident = [(s, c) for s, c in observations if c >= confidence_floor]
+    if len(confident) < min_confident:
+        return None
+
+    counts: dict[float, int] = {}
+    for s, _ in confident:
+        counts[s] = counts.get(s, 0) + 1
+
+    total = len(confident)
+    ranked = sorted(counts.items(), key=lambda x: x[1], reverse=True)
+    mode_scale, mode_count = ranked[0]
+
+    dominant_scale: float | None = None
+
+    if mode_count / total >= dominance_ratio:
+        dominant_scale = mode_scale
+    elif len(ranked) >= 2:
+        second_scale, second_count = ranked[1]
+        # Check if top-2 are adjacent and together dominant
+        try:
+            idx_a = sorted_scales.index(mode_scale)
+            idx_b = sorted_scales.index(second_scale)
+        except ValueError:
+            return None
+        if abs(idx_a - idx_b) == 1 and (mode_count + second_count) / total >= dominance_ratio:
+            dominant_scale = mode_scale
+
+    if dominant_scale is None:
+        return None
+
+    try:
+        idx = sorted_scales.index(dominant_scale)
+    except ValueError:
+        return None
+
+    neighbors = tuple(
+        sorted_scales[i]
+        for i in range(max(0, idx - 1), min(len(sorted_scales), idx + 2))
+    )
+    return neighbors
+
+
 def _match_frames(
     raw_frames: tuple[tuple[float, np.ndarray], ...],
     all_prescaled: tuple[_PrescaledEntry, ...],
     config: CursorConfig,
     scale_factor: float,
-) -> list[CursorDetection]:
-    """Run template matching on a batch of frames, returning detections."""
+) -> tuple[list[CursorDetection], tuple[tuple[float, float], ...]]:
+    """Run template matching on a batch of frames, returning detections and scale observations.
+
+    Returns (detections, observations) where observations is a tuple of
+    (scale, confidence) pairs for every detected frame.
+    """
     detections: list[CursorDetection] = []
+    observations: list[tuple[float, float]] = []
     total_frames = len(raw_frames)
     log_interval = max(1, total_frames // 10)
+    sorted_scales = tuple(sorted({e.scale for e in all_prescaled}))
     last_match_id: str | None = None
+    last_match_scale: float | None = None
 
     for idx, (ts_ms, frame) in enumerate(raw_frames):
         if idx > 0 and idx % log_interval == 0:
@@ -227,11 +312,11 @@ def _match_frames(
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) if len(frame.shape) == 3 else frame
 
         match: MatchResult | None = None
-        if last_match_id is not None:
-            priority = tuple(e for e in all_prescaled if e.template.template_id == last_match_id)
-            if priority:
+        if last_match_id is not None and last_match_scale is not None:
+            narrow = _narrow_prescaled(all_prescaled, last_match_id, last_match_scale, sorted_scales)
+            if narrow:
                 match = match_cursor_in_frame(
-                    gray, priority, config.match_threshold, config.early_exit_threshold,
+                    gray, narrow, config.match_threshold, config.early_exit_threshold,
                 )
 
         if match is None:
@@ -241,6 +326,8 @@ def _match_frames(
 
         if match is not None:
             last_match_id = match.template_id
+            last_match_scale = match.scale
+            observations.append((match.scale, match.confidence))
             detections.append(CursorDetection(
                 timestamp_ms=ts_ms,
                 x=round(match.x * scale_factor),
@@ -251,6 +338,7 @@ def _match_frames(
             ))
         else:
             last_match_id = None
+            last_match_scale = None
             detections.append(CursorDetection(
                 timestamp_ms=ts_ms,
                 x=0.0,
@@ -260,7 +348,7 @@ def _match_frames(
                 detected=False,
             ))
 
-    return detections
+    return detections, tuple(observations)
 
 
 def _match_frames_multi(
@@ -273,6 +361,9 @@ def _match_frames_multi(
     results: list[tuple[float, tuple[MatchCandidate, ...]]] = []
     total_frames = len(raw_frames)
     log_interval = max(1, total_frames // 10)
+    sorted_scales = tuple(sorted({e.scale for e in all_prescaled}))
+    last_match_id: str | None = None
+    last_match_scale: float | None = None
 
     for idx, (ts_ms, frame) in enumerate(raw_frames):
         if idx > 0 and idx % log_interval == 0:
@@ -283,10 +374,34 @@ def _match_frames_multi(
             )
 
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) if len(frame.shape) == 3 else frame
-        candidates = match_cursor_in_frame_multi(
-            gray, all_prescaled, config.match_threshold,
-            confidence_range, config.early_exit_threshold,
-        )
+
+        candidates: tuple[MatchCandidate, ...] = ()
+        if last_match_id is not None and last_match_scale is not None:
+            narrow = _narrow_prescaled(all_prescaled, last_match_id, last_match_scale, sorted_scales)
+            if narrow:
+                candidates = match_cursor_in_frame_multi(
+                    gray, narrow, config.match_threshold,
+                    confidence_range, config.early_exit_threshold,
+                )
+                # Only trust narrow if we got a single confident match (early-exit quality)
+                if not (len(candidates) == 1 and candidates[0].confidence >= config.early_exit_threshold):
+                    candidates = match_cursor_in_frame_multi(
+                        gray, all_prescaled, config.match_threshold,
+                        confidence_range, config.early_exit_threshold,
+                    )
+        else:
+            candidates = match_cursor_in_frame_multi(
+                gray, all_prescaled, config.match_threshold,
+                confidence_range, config.early_exit_threshold,
+            )
+
+        if len(candidates) == 1:
+            last_match_id = candidates[0].template_id
+            last_match_scale = candidates[0].scale
+        else:
+            last_match_id = None
+            last_match_scale = None
+
         results.append((ts_ms, candidates))
 
     return results
@@ -600,7 +715,19 @@ def track_cursor(
         "  Cursor: pass 1 — matching %d frames at %.1f FPS against %d templates x %d scales at %dp...",
         len(coarse_frames), config.tracking_base_fps, len(templates), len(config.template_scales), match_height,
     )
-    coarse_detections = _match_frames(coarse_frames, all_prescaled, config, scale_factor)
+    coarse_detections, coarse_observations = _match_frames(coarse_frames, all_prescaled, config, scale_factor)
+
+    # --- Scale calibration ---
+    calibrated_scales = _calibrate_scales(coarse_observations, tuple(sorted(config.template_scales)))
+    if calibrated_scales is not None:
+        fine_prescaled = _prescale_templates(
+            templates, calibrated_scales,
+            resample_down=config.resample_down, resample_up=config.resample_up,
+        )
+        logger.info("  Cursor: calibrated to scales %s from coarse pass", calibrated_scales)
+    else:
+        fine_prescaled = all_prescaled
+        logger.info("  Cursor: scale calibration inconclusive, using all scales")
 
     # --- Identify active regions ---
     active_regions = _identify_active_regions(
@@ -631,7 +758,7 @@ def track_cursor(
                     len(region_frames), config.tracking_peak_fps, region_start, region_end,
                 )
                 fine_candidates.extend(
-                    _match_frames_multi(region_frames, all_prescaled, config, confidence_range)
+                    _match_frames_multi(region_frames, fine_prescaled, config, confidence_range)
                 )
 
         # Merge: wrap coarse detections as single-candidate entries
@@ -642,6 +769,7 @@ def track_cursor(
                     all_candidates.append((d.timestamp_ms, (MatchCandidate(
                         x=d.x / scale_factor, y=d.y / scale_factor,
                         confidence=d.confidence, template_id=d.template_id,
+                        scale=0.0,
                     ),)))
                 else:
                     all_candidates.append((d.timestamp_ms, ()))
@@ -671,7 +799,8 @@ def track_cursor(
                     "  Cursor: pass 2 — %d frames at %.1f FPS [%.0fms-%.0fms]",
                     len(region_frames), config.tracking_peak_fps, region_start, region_end,
                 )
-                fine_detections.extend(_match_frames(region_frames, all_prescaled, config, scale_factor))
+                fine_dets, _ = _match_frames(region_frames, fine_prescaled, config, scale_factor)
+                fine_detections.extend(fine_dets)
 
         merged: list[CursorDetection] = [d for d in coarse_detections if not _in_active_region(d.timestamp_ms)]
         merged.extend(fine_detections)
